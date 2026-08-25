@@ -1,0 +1,18 @@
+<map id="src/viewer/plane/cubemap_catalog.h" name="src/viewer/plane/cubemap_catalog.h">
+<area shape="rect" id="Node000001" title="Discovery and validation of packaged six&#45;file cubemap sets." alt="" coords="192,5,365,46"/>
+<area shape="rect" id="Node000002" href="$cubemap__catalog_8cpp.html" title=" " alt="" coords="5,94,179,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,55,136,96,133,91,224,51"/>
+<area shape="rect" id="Node000003" href="$plane__scene__renderer_8h.html" title="OpenGL resources and draw passes for the centered F&#45;16 simulation." alt="" coords="203,94,354,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="280,59,281,95,276,93,277,64"/>
+<area shape="rect" id="Node000005" href="$plane__scene__widget_8h.html" title="Interactive OpenGL chase/orbit view for the centered Plane simulation." alt="" coords="316,183,468,223"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="328,52,351,71,369,93,380,115,388,139,394,183,389,181,382,140,375,117,364,95,347,75,327,58"/>
+<area shape="rect" id="Node000004" href="$plane__scene__renderer_8cpp.html" title=" " alt="" coords="140,183,292,223"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="258,146,232,184,228,180,254,149"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="317,142,369,182,364,182,316,147"/>
+<area shape="rect" id="Node000006" href="$plane__scene__widget_8cpp.html" title=" " alt="" coords="128,271,280,312"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="338,230,247,273,246,268,333,231"/>
+<area shape="rect" id="Node000007" href="$plane__scene__widget__terrain_8cpp.html" title="DTED worker lifecycle, patch recentering, and aircraft&#45;relative placement." alt="" coords="304,271,480,312"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="394,237,394,273,390,269,390,241"/>
+<area shape="rect" id="Node000008" href="$plane__view__workspace_8cpp.html" title=" " alt="" coords="504,271,656,312"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="449,228,540,271,535,271,448,233"/>
+</map>

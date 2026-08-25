@@ -1,0 +1,9 @@
+<map id="PlaneViewWorkspace::fitToData" name="PlaneViewWorkspace::fitToData">
+<area shape="rect" id="Node000001" title="Performs the fit to data operation." alt="" coords="5,71,154,111"/>
+<area shape="rect" id="Node000002" href="$class_lar_viewport_page_events.html#a164311e5482111d8e3b6829decbb28ca" title="Notifies observers about diagnostic raised." alt="" coords="221,5,382,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,68,217,50,213,52,152,73"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#a225e8a3370fbcc87a300691e277eb58d" title="Notifies observers about diagnostic raised." alt="" coords="202,71,401,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,88,189,90,184,92,154,94"/>
+<area shape="rect" id="Node000004" href="$class_lar_viewport_page_events.html#a3a9288b3ed1ad0e04608a5f92d51577d" title="Performs the frame rendered operation." alt="" coords="221,136,382,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="151,109,218,130,213,132,151,115"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="GridLarView::effectiveCameraBearing" name="GridLarView::effectiveCameraBearing">
+<area shape="rect" id="Node000001" title="Returns the current effective camera bearing." alt="" coords="454,72,650,113"/>
+<area shape="rect" id="Node000002" href="$class_grid_lar_view.html#a0131ca37942fa814168cf7703b646791" title="Performs the draw grid operation." alt="" coords="235,5,387,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="478,67,405,45,368,34,368,29,407,40,483,67"/>
+<area shape="rect" id="Node000004" href="$class_grid_lar_view.html#a97e92179162a4e62f100af8904e50aac" title="Performs the draw in zone operation." alt="" coords="227,55,395,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="436,81,396,79,395,74,441,81"/>
+<area shape="rect" id="Node000005" href="$class_grid_lar_view.html#a478fc1a6990055abee855b88770557c1" title="Performs the draw markers operation." alt="" coords="223,104,398,130"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="436,105,399,111,399,105,441,104"/>
+<area shape="rect" id="Node000006" href="$class_grid_lar_view.html#ab8204bf37fd85f6e47385ab20547fc25" title="Performs the draw navigation operation." alt="" coords="216,153,406,179"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="481,118,407,145,368,155,367,150,405,140,476,119"/>
+<area shape="rect" id="Node000003" href="$class_grid_lar_view.html#aae172329db02631d16199f0e2a3cbd81" title="Performs the paint event operation." alt="" coords="5,80,168,106"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="235,37,217,45,120,82,117,77,215,40,240,34"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="209,80,169,86,167,81,214,78"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="205,106,168,104,168,99,210,105"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="235,149,215,145,119,109,120,104,217,140,241,149"/>
+</map>

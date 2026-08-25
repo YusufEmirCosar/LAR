@@ -1,0 +1,22 @@
+<map id="DirectApplicationRuntime::pause" name="DirectApplicationRuntime::pause">
+<area shape="rect" id="Node000001" title="Returns the current pause." alt="" coords="5,128,175,169"/>
+<area shape="rect" id="Node000002" href="$class_i_application_runtime.html#a8a335e653e0be8326f22b4d50759f8f7" title="Documents the accept command operation." alt="" coords="243,5,382,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,126,164,91,221,57,238,51,234,54,224,61,167,96,120,130"/>
+<area shape="rect" id="Node000003" href="$class_i_application_runtime.html#a96c2d9a354915e79319f34abeffdecc8" title="Notifies observers about command finished." alt="" coords="243,71,382,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,125,230,111,226,114,172,130"/>
+<area shape="rect" id="Node000004" href="$class_playback_service.html#a47a80df925710325cfb936e63b18983c" title="Notifies observers about is loaded." alt="" coords="223,136,402,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="174,146,209,147,205,149,176,151"/>
+<area shape="rect" id="Node000006" href="$class_playback_service.html#a8ab54ec4491afe77956ae9b2263451ed" title="Pauses the current operation." alt="" coords="231,185,394,210"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="175,164,239,180,234,182,175,170"/>
+<area shape="rect" id="Node000010" href="$class_i_application_runtime.html#a01f646d011f811a4eb6b1ac3faae60ec" title="Documents the reject command operation." alt="" coords="243,235,382,275"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="125,167,224,221,238,229,233,228,221,225,124,172"/>
+<area shape="rect" id="Node000005" href="$class_i_session_reader.html#af00a0907067a1e6a74d1ad64d911a22b" title="Returns whether a fully validated session is loaded." alt="" coords="454,128,614,153"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="402,142,441,143,436,144,403,148"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="497,126,490,119,494,109,509,103,534,101,561,104,577,113,571,113,560,109,534,106,511,108,498,113,495,118,502,128"/>
+<area shape="rect" id="Node000007" href="$class_playback_service.html#a5e54c6eb7adf0f7fbdfbd5f403ec5d7d" title="Notifies observers about playing changed." alt="" coords="450,177,618,218"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="394,195,437,197,432,198,394,200"/>
+<area shape="rect" id="Node000009" href="$class_i_playback_clock.html#a997a42bd4efe05e9d2bcbee7550e35cb" title="Stops future ticks." alt="" coords="461,242,607,268"/>
+<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="365,208,470,238,464,238,365,214"/>
+<area shape="rect" id="Node000008" href="$class_playback_service.html#a87e882d8178053a7315b5b54b461fa27" title="Reports whether playing is true." alt="" coords="666,185,847,210"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="618,195,653,197,648,198,619,200"/>
+</map>

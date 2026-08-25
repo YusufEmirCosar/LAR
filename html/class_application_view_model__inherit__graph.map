@@ -1,0 +1,5 @@
+<map id="ApplicationViewModel" name="ApplicationViewModel">
+<area shape="rect" id="Node000001" title="Main&#45;thread projection of state, metrics, mode, and playback status." alt="" coords="5,79,155,105"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="45,5,115,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,45,83,79,77,78,78,48"/>
+</map>

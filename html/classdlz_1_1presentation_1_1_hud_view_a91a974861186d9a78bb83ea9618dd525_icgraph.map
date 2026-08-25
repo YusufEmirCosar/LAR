@@ -1,0 +1,22 @@
+<map id="dlz::presentation::HudView::clearFrame" name="dlz::presentation::HudView::clearFrame">
+<area shape="rect" id="Node000001" title="Performs the clear frame operation." alt="" coords="797,92,945,133"/>
+<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a365b1bab1d7695e1ed8db3023413ca24" title="Clears the external telemetry cache and any externally&#45;driven frame." alt="" coords="555,48,749,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="780,98,750,95,750,90,785,98"/>
+<area shape="rect" id="Node000006" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a622f9724a812e8564fa34383c26240be" title="Documents the rebuild operation." alt="" coords="574,128,730,169"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="780,127,731,138,730,133,785,126"/>
+<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a62b897bc1b688767b8b9a2e463bf6ae9" title="Publishes the latest atomic three&#45;field UDP/replay telemetry." alt="" coords="279,5,500,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="537,55,498,49,498,44,543,54"/>
+<area shape="rect" id="Node000004" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a0218f554ab3f899caca9baed2c8be0c1" title="Selects UDP/replay input or local slider calculation mode." alt="" coords="291,71,488,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="537,83,489,88,488,83,542,82"/>
+<area shape="rect" id="Node000005" href="$classdlz_1_1presentation_1_1_hud_workspace.html#aec685012fec2dfb24231b60b8836444b" title="Constructs this object." alt="" coords="11,128,218,169"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="273,116,216,130,214,125,278,114"/>
+<area shape="poly" id="edge11_Node000006_Node000003" title=" " alt="" coords="559,120,553,118,538,104,529,89,520,75,505,61,483,49,483,44,509,57,524,71,533,86,542,100,557,114,564,121"/>
+<area shape="poly" id="edge12_Node000006_Node000004" title=" " alt="" coords="556,128,486,115,486,109,561,128"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="557,151,219,151,219,146,559,146"/>
+<area shape="rect" id="Node000007" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a33bf0345b5e07d56f8af527bc50cadf7" title="Notifies observers about diagnostic raised." alt="" coords="5,217,224,258"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="618,178,567,214,538,229,508,240,435,255,361,261,289,261,224,256,224,251,289,255,361,256,435,250,506,235,536,224,565,209,613,179"/>
+<area shape="rect" id="Node000008" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a0fc4d8836facedbfb974f790999b8031" title="Documents the rebuild from controls operation." alt="" coords="272,185,507,226"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="561,168,486,187,485,182,556,169"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="271,182,215,172,215,167,277,181"/>
+<area shape="poly" id="edge9_Node000008_Node000007" title=" " alt="" coords="254,222,224,228,224,222,259,221"/>
+</map>

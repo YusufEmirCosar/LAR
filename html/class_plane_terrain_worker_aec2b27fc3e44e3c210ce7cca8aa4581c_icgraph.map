@@ -1,0 +1,15 @@
+<map id="PlaneTerrainWorker::patchReady" name="PlaneTerrainWorker::patchReady">
+<area shape="rect" id="Node000001" title=" " alt="" coords="877,9,1011,50"/>
+<area shape="rect" id="Node000002" href="$class_plane_terrain_worker.html#ab215b14a4ab72ff79e0890675d809388" title=" " alt="" coords="694,9,829,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="858,39,829,41,829,36,864,39"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#a5c8242aec92b08254db217286a0b9194" title=" " alt="" coords="251,39,456,79"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="868,54,829,64,730,74,631,76,456,71,456,65,631,71,730,68,828,59,863,55"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="844,18,879,21,873,21,844,23"/>
+<area shape="rect" id="Node000003" href="$class_plane_terrain_worker.html#af174c292a17d4d1f48b87699052b7fce" title=" " alt="" coords="504,9,646,50"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="676,30,647,32,646,27,681,29"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="486,41,457,48,456,43,492,41"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a605af179df470891b8fa7b2433ce23cc" title="Enables DTED terrain, retaining flat ground as an unavailable/loading fallback." alt="" coords="5,5,203,46"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="233,44,203,42,203,36,238,43"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#a4af14d7382c36b30361f6903425d2d57" title="Notifies tests and controls when terrain preparation changes readiness." alt="" coords="16,71,192,111"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="233,75,193,82,192,77,238,74"/>
+</map>

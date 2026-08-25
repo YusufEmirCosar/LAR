@@ -1,0 +1,99 @@
+cmake_minimum_required(VERSION 3.24)
+
+project(DynamicLarSystem VERSION 1.0.0 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+option(LAR_WARNINGS_AS_ERRORS "Treat project warnings as errors" OFF)
+option(LAR_ENABLE_STRICT_CONVERSIONS
+    "Enable conversion, sign-conversion, and shadow warnings" OFF)
+option(LAR_ENABLE_HARDENING "Enable supported compiler/linker hardening" ON)
+option(LAR_ENABLE_ASAN "Enable AddressSanitizer" OFF)
+option(LAR_ENABLE_UBSAN "Enable UndefinedBehaviorSanitizer" OFF)
+option(LAR_ENABLE_TSAN "Enable ThreadSanitizer" OFF)
+option(LAR_ENABLE_COVERAGE "Enable GCC/gcov coverage instrumentation" OFF)
+option(LAR_ENABLE_MUTATION "Enable Mull mutation instrumentation" OFF)
+option(LAR_BUILD_FUZZERS "Build parser fuzz targets" OFF)
+set(LAR_DTED0_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/assets/DTED0" CACHE PATH
+    "Development DTED0 root used by Plane terrain (not copied into build outputs)")
+set(LAR_DTED0_WATER_MASK "${CMAKE_CURRENT_SOURCE_DIR}/assets/water/dted0_water_mask.bin"
+    CACHE FILEPATH "DTED0-aligned water-mask pack used by Plane terrain")
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+include(LarWarnings)
+include(LarSanitizers)
+include(LarCoverage)
+include(LarMutation)
+include(LarHardening)
+include(LarFuzzing)
+include(LarMapAssets)
+include(LarPlaneAssets)
+include(LarSbom)
+
+lar_configure_project_options()
+lar_configure_sanitizers()
+lar_configure_coverage()
+lar_configure_mutation()
+lar_configure_hardening()
+lar_detect_libfuzzer()
+lar_configure_map_assets()
+
+find_package(Qt6 6.10.3 REQUIRED COMPONENTS
+    Core
+    Concurrent
+    Gui
+    Network
+    Widgets
+    OpenGLWidgets
+    Test
+)
+lar_configure_sbom()
+
+enable_testing()
+include("${PROJECT_SOURCE_DIR}/src/viewer/map/CMakeLists.txt")
+include("${PROJECT_SOURCE_DIR}/tools/CMakeLists.txt")
+include("${PROJECT_SOURCE_DIR}/src/domain/CMakeLists.txt")
+include("${PROJECT_SOURCE_DIR}/src/application/CMakeLists.txt")
+include("${PROJECT_SOURCE_DIR}/src/infrastructure/CMakeLists.txt")
+include("${PROJECT_SOURCE_DIR}/src/viewer/CMakeLists.txt")
+include("${PROJECT_SOURCE_DIR}/tests/CMakeLists.txt")
+
+lar_apply_project_defaults()
+include(LarQualityTargets)
+
+file(COPY maps DESTINATION "${CMAKE_BINARY_DIR}")
+
+install(TARGETS lar-viewer lar-test-sender
+    BUNDLE DESTINATION .
+    RUNTIME DESTINATION bin
+)
+install(FILES
+    "${LAR_MAP_ASSET_FILE}"
+    "${LAR_MAP_MANIFEST_FILE}"
+    DESTINATION bin
+)
+install(FILES
+    assets/models/f16_3.glb
+    DESTINATION bin/assets/models
+)
+install(FILES
+    "${LAR_DTED0_WATER_MASK}"
+    DESTINATION bin/assets/water
+)
+install(DIRECTORY
+    assets/cubemaps/
+    DESTINATION bin/assets/cubemaps
+    FILES_MATCHING PATTERN "*.png"
+)
+install(FILES
+    maps/full-state.json
+    maps/dlz-inputs.json
+    maps/full-state-dlz.json
+    DESTINATION share/lar-area-display/maps
+)

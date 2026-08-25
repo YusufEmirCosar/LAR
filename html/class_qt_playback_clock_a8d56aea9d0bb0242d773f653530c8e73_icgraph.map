@@ -1,0 +1,9 @@
+<map id="QtPlaybackClock::scheduleNext" name="QtPlaybackClock::scheduleNext">
+<area shape="rect" id="Node000001" title="Performs the schedule next operation." alt="" coords="474,42,685,68"/>
+<area shape="rect" id="Node000002" href="$class_qt_playback_clock.html#a699cbba6c54e17c2fbab223af5cc985b" title="Constructs this object." alt="" coords="227,5,426,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="456,41,426,40,427,35,461,41"/>
+<area shape="rect" id="Node000004" href="$class_qt_playback_clock.html#a595d69d186416de3543899c291f32c5c" title="Starts the current operation." alt="" coords="248,70,405,96"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="461,68,406,77,405,72,456,69"/>
+<area shape="rect" id="Node000003" href="$class_playback_runtime_worker.html#a2e519d508aa9f4865f5a27d945b62ce7" title="Constructs this object." alt="" coords="5,5,179,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="208,26,180,28,179,23,214,25"/>
+</map>

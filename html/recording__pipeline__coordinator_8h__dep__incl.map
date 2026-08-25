@@ -1,0 +1,7 @@
+<map id="src/application/recording_pipeline_coordinator.h" name="src/application/recording_pipeline_coordinator.h">
+<area shape="rect" id="Node000001" title="Drain&#45;and&#45;persist policy for the asynchronous recording pipeline." alt="" coords="105,5,268,46"/>
+<area shape="rect" id="Node000002" href="$recording__pipeline__coordinator_8cpp.html" title=" " alt="" coords="5,102,173,142"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,56,111,103,107,99,153,58"/>
+<area shape="rect" id="Node000003" href="$recording__runtime__worker_8cpp.html" title=" " alt="" coords="197,94,373,150"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,54,259,94,254,93,217,59"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="PlaybackTimeFormatter::format" name="PlaybackTimeFormatter::format">
+<area shape="rect" id="Node000001" title="Performs the format operation." alt="" coords="5,5,166,46"/>
+<area shape="rect" id="Node000002" href="$class_session_timestamp.html#a9e69c8185d47045ab21667be1a2976f7" title="Returns the exact integer representation used for ordering and storage." alt="" coords="214,13,427,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,23,200,25,195,26,166,28"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="QtPlaybackClock" name="QtPlaybackClock">
+<area shape="rect" id="Node000001" title="Precise Qt timer that supplies fixed&#45;rate playback ticks." alt="" coords="5,153,129,178"/>
+<area shape="rect" id="Node000002" href="$class_i_playback_clock.html" title="Emits playback ticks at the frame rate selected by replay policy." alt="" coords="10,79,124,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,118,70,153,64,151,65,122"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="32,5,102,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="68,44,70,79,64,78,66,49"/>
+</map>

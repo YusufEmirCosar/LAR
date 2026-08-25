@@ -1,0 +1,5 @@
+<map id="EarthLarView::zoomAnchorForWheel" name="EarthLarView::zoomAnchorForWheel">
+<area shape="rect" id="Node000001" title="Performs the zoom Anchor For Wheel operation." alt="" coords="5,5,186,46"/>
+<area shape="rect" id="Node000002" href="$class_earth_camera_policy.html#aa9550082d9b5fe7202b2a8e5fc7bf920" title="Performs the zoom Anchor operation." alt="" coords="234,5,376,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,23,221,25,215,26,186,28"/>
+</map>

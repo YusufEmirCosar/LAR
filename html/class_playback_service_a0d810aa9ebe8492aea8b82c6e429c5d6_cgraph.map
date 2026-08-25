@@ -1,0 +1,5 @@
+<map id="PlaybackService::positionChanged" name="PlaybackService::positionChanged">
+<area shape="rect" id="Node000001" title="Notifies observers about position changed." alt="" coords="5,5,178,46"/>
+<area shape="rect" id="Node000002" href="$class_playback_service.html#a77bbc3e3d72ff59d00b75a0d13816491" title="Returns the current position." alt="" coords="226,13,398,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,23,213,25,208,26,178,28"/>
+</map>

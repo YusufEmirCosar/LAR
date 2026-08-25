@@ -1,0 +1,7 @@
+<map id="dlz::presentation::HudView::setFrame" name="dlz::presentation::HudView::setFrame">
+<area shape="rect" id="Node000001" title="Sets frame." alt="" coords="5,39,143,79"/>
+<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_hud_view.html#a411cd997a2257b6a4ab95ea6ac3119fb" title="Returns the current displayed range nm." alt="" coords="191,5,387,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,46,178,42,173,44,144,51"/>
+<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_view.html#a1d3b8abd2f82714a28a4517891f91bd2" title="Documents the hud state operation." alt="" coords="222,71,356,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="143,67,209,78,204,79,143,72"/>
+</map>

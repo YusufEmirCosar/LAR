@@ -1,0 +1,7 @@
+<map id="LarZoneRenderState" name="LarZoneRenderState">
+<area shape="rect" id="Node000001" title="Camera uniforms and periodic&#45;copy range for one zone draw." alt="" coords="122,117,264,143"/>
+<area shape="rect" id="Node000002" href="$structlar_1_1map_1_1_sphere_projection_parameters.html" title="Compensated single&#45;precision inputs for stable sphere projection." alt="" coords="5,5,181,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,55,184,116,179,117,121,59"/>
+<area shape="rect" id="Node000003" href="$structlar_1_1map_1_1_world_copy_range.html" title="Inclusive periodic world&#45;copy indices visible in a flat viewport." alt="" coords="205,13,384,38"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="289,52,281,75,267,95,250,109,230,119,229,114,247,104,263,91,276,73,285,55"/>
+</map>

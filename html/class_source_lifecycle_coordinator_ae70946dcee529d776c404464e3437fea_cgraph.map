@@ -1,0 +1,23 @@
+<map id="SourceLifecycleCoordinator::accept" name="SourceLifecycleCoordinator::accept">
+<area shape="rect" id="Node000001" title="Performs the accept operation." alt="" coords="5,71,187,111"/>
+<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#aff8945a0254ab41539be69279477197a" title="Performs the accepts operation." alt="" coords="235,5,416,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,68,239,49,235,52,171,73"/>
+<area shape="rect" id="Node000003" href="$class_source_lifecycle_coordinator.html#ad34fbe86cb6fe96f56d3d00d4d587a39" title="Sets state." alt="" coords="235,71,416,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,88,222,90,217,92,188,94"/>
+<area shape="rect" id="Node000006" href="$class_source_lifecycle_coordinator.html#a69c66e72c1376f3ebd16d87791c99644" title="Performs the transition to operation." alt="" coords="235,136,416,177"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="170,109,239,130,234,132,170,115"/>
+<area shape="rect" id="Node000004" href="$class_source_lifecycle_coordinator.html#af8c4c5b43ccda3fdf84ed7b6931094bf" title="Notifies observers about lifecycle state changed." alt="" coords="471,15,652,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="413,68,461,59,456,60,414,73"/>
+<area shape="rect" id="Node000005" href="$class_source_lifecycle_coordinator.html#aa255c75c16a3452923516e76766ae9c9" title="Returns the current state." alt="" coords="723,44,904,85"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="416,83,709,69,705,71,417,89"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="653,43,710,52,705,52,653,48"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="767,42,764,34,772,25,788,19,814,17,841,20,858,29,853,28,839,25,813,23,789,25,775,29,769,35,771,45"/>
+<area shape="rect" id="Node000007" href="$class_source_lifecycle_coordinator.html#a17ce5b778f5c25dcf667c451910501ec" title="Notifies observers about error raised." alt="" coords="471,133,652,174"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="416,153,458,155,453,155,417,158"/>
+<area shape="rect" id="Node000008" href="$class_mode_coordinator.html#a37cbbd4b6fa9daef34624ad223228853" title="Performs the transition to operation." alt="" coords="464,198,659,224"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="417,175,491,194,486,194,416,180"/>
+<area shape="rect" id="Node000009" href="$class_mode_coordinator.html#ade9dc078e2f2c1b79e974dee43230e88" title="Notifies observers about mode changed." alt="" coords="707,173,920,198"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="659,199,689,198,694,198,660,204"/>
+<area shape="rect" id="Node000010" href="$class_mode_coordinator.html#a1f9654679d28b6d686a3d6530bd345bb" title="Performs the mode String operation." alt="" coords="716,222,911,248"/>
+<area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="660,218,704,224,698,224,660,223"/>
+</map>

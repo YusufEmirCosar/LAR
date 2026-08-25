@@ -1,0 +1,14 @@
+<map id="src/application/ip_access_policy_service.h" name="src/application/ip_access_policy_service.h">
+<area shape="rect" id="Node000001" title="Application use case for loading sender access policies through a port." alt="" coords="104,5,275,46"/>
+<area shape="rect" id="Node000002" href="$ip__access__policy__repository_8h.html" title="Storage&#45;independent input port for validated IP access policies." alt="" coords="97,94,282,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,44,192,79,187,78,188,49"/>
+<area shape="rect" id="Node000003" href="$ip__access__policy_8h.html" title="Bounded, exact&#45;match UDP sender address policy." alt="" coords="62,183,208,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="179,133,157,171,153,168,175,137"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="206,271,272,297"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="201,133,223,182,238,257,233,255,218,183,199,138"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,271,94,297"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="116,223,75,263,72,258,111,225"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="117,271,168,297"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="139,222,143,257,138,255,135,226"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="161,221,213,261,208,262,160,226"/>
+</map>

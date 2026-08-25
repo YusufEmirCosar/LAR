@@ -1,0 +1,22 @@
+<map id="GridGeometryBuilder::gridStep" name="GridGeometryBuilder::gridStep">
+<area shape="rect" id="Node000001" title="Performs the grid step operation." alt="" coords="923,122,1065,162"/>
+<area shape="rect" id="Node000002" href="$namespaceanonymous__namespace_02plane__surface__projection_8cpp_03.html#a285234d119924c7804ae99b043e1b51e" title=" " alt="" coords="697,81,875,137"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="905,128,875,126,875,120,910,128"/>
+<area shape="rect" id="Node000015" href="$class_grid_lar_view.html#a0131ca37942fa814168cf7703b646791" title="Performs the draw grid operation." alt="" coords="710,161,862,187"/>
+<area shape="poly" id="edge9_Node000001_Node000015" title=" " alt="" coords="910,155,863,165,862,160,905,156"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="818,66,806,62,786,60,768,61,756,66,750,73,750,82,746,79,746,71,753,62,767,56,786,54,808,57,823,67"/>
+<area shape="rect" id="Node000003" href="$class_plane_surface_projection.html#a2cd80e85be0eabb53064a21778d7eab8" title="Projects all available target/LAR data around the aircraft origin." alt="" coords="490,88,647,129"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="679,109,647,111,647,106,685,109"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#ae1cb2d702c2bbbd9c54bc1707cc90d52" title="Performs the refresh surface state operation." alt="" coords="259,88,439,129"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="472,109,440,111,439,106,477,108"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#ac41abb6eb0add39b310a73d3e27d7478" title="Performs the clear scene operation." alt="" coords="5,5,211,31"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="294,82,210,46,172,34,171,29,212,41,299,80"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#a7cb14c31a868d84d81a36418888be91c" title="Loads a user&#45;selected .gltf or .glb model." alt="" coords="8,55,208,96"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="240,95,208,92,208,87,246,93"/>
+<area shape="rect" id="Node000013" href="$class_plane_scene_widget.html#a6387f9c3b66f950945e37e615318d0e1" title="Sets scene state." alt="" coords="10,120,206,161"/>
+<area shape="poly" id="edge7_Node000004_Node000013" title=" " alt="" coords="241,124,207,130,205,125,246,122"/>
+<area shape="rect" id="Node000008" href="$class_plane_scene_widget.html#a4af14d7382c36b30361f6903425d2d57" title="Notifies tests and controls when terrain preparation changes readiness." alt="" coords="20,186,196,226"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="295,136,212,175,178,188,176,183,210,170,290,137"/>
+<area shape="rect" id="Node000016" href="$class_grid_lar_view.html#aae172329db02631d16199f0e2a3cbd81" title="Performs the paint event operation." alt="" coords="487,161,649,187"/>
+<area shape="poly" id="edge10_Node000015_Node000016" title=" " alt="" coords="692,174,650,177,650,172,697,174"/>
+</map>

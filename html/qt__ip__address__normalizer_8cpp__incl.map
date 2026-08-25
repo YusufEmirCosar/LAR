@@ -1,0 +1,9 @@
+<map id="src/infrastructure/network/qt_ip_address_normalizer.cpp" name="src/infrastructure/network/qt_ip_address_normalizer.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="36,5,192,61"/>
+<area shape="rect" id="Node000002" href="$qt__ip__address__normalizer_8h.html" title="Canonicalization helper for exact IPv4 and IPv6 policy matching." alt="" coords="22,109,205,150"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,59,116,94,111,93,113,64"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,198,113,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="102,149,78,186,74,183,98,151"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="137,198,202,223"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="129,148,155,185,150,185,126,152"/>
+</map>

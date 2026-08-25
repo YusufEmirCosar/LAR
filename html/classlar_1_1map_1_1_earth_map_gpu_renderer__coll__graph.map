@@ -1,0 +1,15 @@
+<map id="lar::map::EarthMapGpuRenderer" name="lar::map::EarthMapGpuRenderer">
+<area shape="rect" id="Node000001" title="Uploads immutable map meshes and renders Mercator or globe geometry." alt="" coords="894,63,1104,88"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="596,5,732,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="748,26,871,45,943,62,938,62,870,50,748,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="555,55,773,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="789,73,897,75,891,76,789,78"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="588,120,740,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="755,123,870,101,937,89,942,89,871,106,756,128"/>
+<area shape="rect" id="Node000005" href="$structlar_1_1map_1_1_map_mesh.html" title="Geographic vertices plus projection&#45;specific fill and border indices." alt="" coords="351,128,484,154"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="499,138,590,141,585,141,499,143"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="29,80,161,106"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="177,99,327,120,357,127,352,127,326,125,177,104"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,175,185,200"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="200,194,263,193,326,183,363,169,394,155,399,154,366,174,327,188,263,198,200,199"/>
+</map>

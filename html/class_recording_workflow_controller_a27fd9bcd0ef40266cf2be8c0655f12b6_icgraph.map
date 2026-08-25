@@ -1,0 +1,7 @@
+<map id="RecordingWorkflowController::prepareToClose" name="RecordingWorkflowController::prepareToClose">
+<area shape="rect" id="Node000001" title="Returns false only when an active&#45;session close was cancelled." alt="" coords="458,5,648,46"/>
+<area shape="rect" id="Node000002" href="$class_main_window.html#a05fb9d72c044aa3bb7d187b994704e2f" title="Performs the close event operation." alt="" coords="241,13,410,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="440,26,410,28,410,23,445,26"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a1f7d2c56410fc1bfa135bb907d43313f" title="Returns the current main window." alt="" coords="5,13,193,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="222,26,193,28,193,23,227,25"/>
+</map>

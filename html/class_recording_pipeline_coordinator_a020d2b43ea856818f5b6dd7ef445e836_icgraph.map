@@ -1,0 +1,54 @@
+<map id="RecordingPipelineCoordinator::recordingStateChanged" name="RecordingPipelineCoordinator::recordingStateChanged">
+<area shape="rect" id="Node000001" title="Notifies observers about recording state changed." alt="" coords="1200,423,1393,463"/>
+<area shape="rect" id="Node000002" href="$class_recording_runtime_worker.html#a20f5f9aa9890afcfdaffae9ebe29d987" title="Documents the initialize operation." alt="" coords="480,381,650,422"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1182,438,650,409,650,404,1187,435"/>
+<area shape="rect" id="Node000016" href="$class_recording_pipeline_coordinator.html#a420c9204c99578c8f0d63a0639c39588" title="Documents the publish state operation." alt="" coords="959,368,1152,409"/>
+<area shape="poly" id="edge27_Node000001_Node000016" title=" " alt="" coords="1186,419,1148,412,1148,407,1192,418"/>
+<area shape="rect" id="Node000003" href="$class_recording_runtime_worker.html#aacd8a9f67ff011851f1c871a8792f023" title="Documents the append recording batch operation." alt="" coords="250,316,420,357"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="474,378,410,360,409,355,479,376"/>
+<area shape="rect" id="Node000004" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,349,202,390"/>
+<area shape="poly" id="edge25_Node000002_Node000004" title=" " alt="" coords="528,371,479,336,450,319,419,307,373,295,336,293,298,297,250,307,191,326,142,351,138,347,189,321,249,302,297,292,335,287,374,290,421,302,452,314,482,331,533,370"/>
+<area shape="rect" id="Node000005" href="$class_recording_runtime_worker.html#a154cf912563f9f470f74e3a435f62d33" title="Documents the discard recording operation." alt="" coords="250,5,420,46"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="555,365,541,302,515,221,497,178,475,136,449,96,418,61,404,49,403,44,422,57,453,93,480,133,502,175,520,219,546,301,560,367"/>
+<area shape="rect" id="Node000006" href="$class_recording_runtime_worker.html#aa76cc0185ae0de8655ed2bec919c0d7b" title="Documents the pause recording operation." alt="" coords="250,381,420,422"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="462,403,421,404,420,399,467,401"/>
+<area shape="rect" id="Node000007" href="$class_recording_runtime_worker.html#a7b606cadc9e93783b990e48399a68e96" title="Notifies observers about persistence finished." alt="" coords="250,447,420,487"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="474,428,410,448,408,444,479,425"/>
+<area shape="rect" id="Node000008" href="$class_recording_runtime_worker.html#aa95e5c13c8f695fd05b3228cd1027b4d" title="Documents the recording input drained operation." alt="" coords="250,512,420,553"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="522,433,477,468,421,501,395,514,392,509,419,497,474,463,527,430"/>
+<area shape="rect" id="Node000009" href="$class_recording_runtime_worker.html#acda38c2fee67b6c7194a3e99de2f73fb" title="Documents the recording input failed operation." alt="" coords="250,577,420,618"/>
+<area shape="poly" id="edge12_Node000002_Node000009" title=" " alt="" coords="543,433,492,501,459,536,422,567,400,579,397,575,418,562,455,532,488,498,539,436"/>
+<area shape="rect" id="Node000010" href="$class_recording_runtime_worker.html#a936496b85d48a45d4211d2f2c42165bf" title="Documents the reset recording operation." alt="" coords="250,643,420,683"/>
+<area shape="poly" id="edge14_Node000002_Node000010" title=" " alt="" coords="552,434,532,481,504,533,467,585,422,632,402,644,400,640,418,628,463,582,499,530,527,479,548,438"/>
+<area shape="rect" id="Node000011" href="$class_recording_runtime_worker.html#ab5898c2bcc5e584125a29144c3c69182" title="Documents the resume recording operation." alt="" coords="250,71,420,111"/>
+<area shape="poly" id="edge16_Node000002_Node000011" title=" " alt="" coords="551,366,534,315,506,250,468,184,445,154,418,126,403,115,402,109,422,122,449,150,472,181,511,248,539,313,557,367"/>
+<area shape="rect" id="Node000012" href="$class_recording_runtime_worker.html#a61213bbf2bcc9fda683e78384a9ec15f" title="Documents the snapshot recording operation." alt="" coords="250,136,420,177"/>
+<area shape="poly" id="edge18_Node000002_Node000012" title=" " alt="" coords="546,367,525,328,497,281,461,233,418,192,401,180,400,175,422,188,465,230,501,278,530,326,551,368"/>
+<area shape="rect" id="Node000013" href="$class_recording_runtime_worker.html#a9188ede54293648e6d7ed0d0d3f9c3f0" title="Documents the start recording operation." alt="" coords="250,757,420,798"/>
+<area shape="poly" id="edge20_Node000002_Node000013" title=" " alt="" coords="546,434,509,507,471,591,458,633,454,669,446,704,437,722,422,741,399,759,396,754,418,737,432,719,441,702,449,668,453,632,465,589,505,504,542,437"/>
+<area shape="rect" id="Node000014" href="$class_recording_runtime_worker.html#a30457a2f16339425b56245e6e331c59b" title="Documents the recording runtime worker operation." alt="" coords="10,728,197,769"/>
+<area shape="poly" id="edge26_Node000002_Node000014" title=" " alt="" coords="548,434,470,591,459,622,453,649,444,673,422,697,383,715,326,728,197,745,197,740,325,723,381,710,418,693,439,670,448,647,454,621,466,589,543,438"/>
+<area shape="rect" id="Node000015" href="$class_recording_runtime_worker.html#a3466b3bc436b3d805eebfcf40a5275dc" title="Documents the stop recording operation." alt="" coords="250,201,420,242"/>
+<area shape="poly" id="edge23_Node000002_Node000015" title=" " alt="" coords="534,370,484,317,418,263,389,245,388,240,422,258,487,313,539,370"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="232,352,204,358,201,353,236,349"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="253,57,252,61,221,95,194,134,171,174,153,216,126,293,112,349,106,348,121,291,148,214,167,172,189,131,216,92,248,57,256,53"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="232,389,203,386,201,381,236,386"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="264,441,249,436,151,393,151,388,251,431,269,440"/>
+<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="257,505,248,501,211,475,176,445,124,393,123,388,179,442,214,471,251,497,262,504"/>
+<area shape="poly" id="edge13_Node000009_Node000004" title=" " alt="" coords="254,570,248,566,202,524,164,475,133,428,115,393,115,388,138,426,168,472,206,520,251,562,259,569"/>
+<area shape="poly" id="edge15_Node000010_Node000004" title=" " alt="" coords="252,634,248,632,220,603,195,572,154,504,126,440,111,393,111,388,131,438,159,501,199,569,224,600,251,628,258,634"/>
+<area shape="poly" id="edge17_Node000011_Node000004" title=" " alt="" coords="254,122,251,126,225,152,201,182,161,245,132,304,114,350,109,348,127,302,156,242,197,178,221,149,248,122,257,117"/>
+<area shape="poly" id="edge19_Node000012_Node000004" title=" " alt="" coords="255,187,251,192,208,230,170,274,119,350,114,348,166,271,204,227,248,188,259,183"/>
+<area shape="poly" id="edge21_Node000013_Node000004" title=" " alt="" coords="294,747,270,724,247,697,197,612,157,525,127,447,111,393,111,388,132,445,162,523,202,610,252,693,274,721,299,748"/>
+<area shape="poly" id="edge22_Node000013_Node000014" title=" " alt="" coords="231,765,197,763,197,757,237,765"/>
+<area shape="poly" id="edge24_Node000015_Node000004" title=" " alt="" coords="268,251,251,263,184,308,131,351,127,347,181,304,248,258,272,247"/>
+<area shape="rect" id="Node000017" href="$class_recording_pipeline_coordinator.html#a6d3a6226b2bda44c1f3e75ed96a203d2" title="Documents the discard recording operation." alt="" coords="713,123,907,163"/>
+<area shape="poly" id="edge28_Node000016_Node000017" title=" " alt="" coords="1020,357,831,166,833,161,1025,357"/>
+<area shape="rect" id="Node000018" href="$class_recording_pipeline_coordinator.html#a1c0bcb6d083f48bf5b8c991f684ef287" title="Constructs this object." alt="" coords="709,343,911,383"/>
+<area shape="poly" id="edge30_Node000016_Node000018" title=" " alt="" coords="941,377,912,376,911,371,946,376"/>
+<area shape="rect" id="Node000019" href="$class_recording_pipeline_coordinator.html#a61aee7a56b9997f21e15b4f93c886bdd" title="Performs the start recording operation." alt="" coords="468,601,661,642"/>
+<area shape="poly" id="edge32_Node000016_Node000019" title=" " alt="" coords="999,415,611,603,609,598,994,417"/>
+<area shape="poly" id="edge29_Node000017_Node000005" title=" " alt="" coords="707,120,421,49,420,44,712,117"/>
+<area shape="poly" id="edge31_Node000018_Node000002" title=" " alt="" coords="692,382,651,391,649,386,697,380"/>
+<area shape="poly" id="edge33_Node000019_Node000013" title=" " alt="" coords="533,651,482,698,421,741,388,759,386,754,419,737,479,694,528,653"/>
+</map>

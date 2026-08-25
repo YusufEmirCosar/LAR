@@ -1,0 +1,15 @@
+<map id="src/viewer/hud/dlz_presentation_controller.cpp" name="src/viewer/hud/dlz_presentation_controller.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="231,5,415,46"/>
+<area shape="rect" id="Node000002" href="$dlz__presentation__controller_8h.html" title="Stateful filtering and cue&#45;timing policy for DLZ presentation." alt="" coords="78,94,261,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="286,48,219,88,216,84,290,45"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="286,102,360,127"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="324,44,325,87,321,85,322,49"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="384,102,441,127"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="344,44,392,91,387,91,343,49"/>
+<area shape="rect" id="Node000003" href="$dlz__types_8h.html" title="Dedicated Dynamic Launch Zone domain values." alt="" coords="5,190,161,216"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="148,137,107,181,103,178,152,133"/>
+<area shape="rect" id="Node000004" href="$dlz__range__scale_8h.html" title="Range&#45;axis mapping and hysteretic scale&#45;selection policy." alt="" coords="184,183,328,223"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="190,133,229,171,223,172,189,138"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="231,271,282,297"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="258,222,259,257,254,254,254,226"/>
+</map>

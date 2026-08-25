@@ -1,0 +1,11 @@
+<map id="dlz::presentation::ControlPanel::setInputMode" name="dlz::presentation::ControlPanel::setInputMode">
+<area shape="rect" id="Node000001" title="Applies the active input source and switches the visible input page." alt="" coords="506,63,689,103"/>
+<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_control_panel.html#ad2c9070616837a5a5e9fe9f492655e5e" title="Constructs this object." alt="" coords="270,5,449,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="493,59,447,49,447,44,498,58"/>
+<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_workspace.html#aec685012fec2dfb24231b60b8836444b" title="Constructs this object." alt="" coords="5,63,213,103"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="489,85,213,86,213,80,492,81"/>
+<area shape="rect" id="Node000004" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a0218f554ab3f899caca9baed2c8be0c1" title="Selects UDP/replay input or local slider calculation mode." alt="" coords="261,120,458,161"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="498,107,447,122,446,117,493,108"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="252,51,202,65,200,59,257,49"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="250,116,201,107,201,101,255,116"/>
+</map>

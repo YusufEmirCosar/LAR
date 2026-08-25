@@ -1,0 +1,42 @@
+<map id="MetricsService::recordPacketProcessed" name="MetricsService::recordPacketProcessed">
+<area shape="rect" id="Node000001" title="Performs the record packet processed operation." alt="" coords="1313,199,1507,239"/>
+<area shape="rect" id="Node000002" href="$class_online_capture_service.html#a3c4e8a61d4c9b55e8196958501960661" title="Notifies observers about on datagram received." alt="" coords="1110,199,1265,239"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1295,219,1266,222,1266,217,1300,219"/>
+<area shape="rect" id="Node000003" href="$class_online_capture_service.html#a8725ea73f2df8c2f52990bdf40c5cbac" title="Notifies observers about capture error." alt="" coords="914,199,1062,239"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1092,229,1063,231,1062,225,1097,228"/>
+<area shape="rect" id="Node000015" href="$class_online_capture_service.html#a2267027a463ecd9968ec13caf8e50bfd" title="Constructs this object." alt="" coords="699,256,855,297"/>
+<area shape="poly" id="edge25_Node000002_Node000015" title=" " alt="" coords="1096,244,1062,254,955,268,856,276,855,270,954,263,1062,249,1101,243"/>
+<area shape="poly" id="edge22_Node000003_Node000002" title=" " alt="" coords="1077,208,1112,210,1107,211,1078,213"/>
+<area shape="rect" id="Node000004" href="$class_direct_application_runtime.html#af7dfb47a5a42b53c0a26e62c480d9362" title="Constructs this object." alt="" coords="688,141,866,182"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="896,195,854,185,854,180,901,195"/>
+<area shape="rect" id="Node000005" href="$class_network_runtime_worker.html#ab205ae635f436a648d5eaa40dbc7e343" title="Documents the initialize operation." alt="" coords="480,228,640,269"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="896,226,641,246,640,240,901,224"/>
+<area shape="poly" id="edge23_Node000003_Node000015" title=" " alt="" coords="896,244,855,258,853,253,901,243"/>
+<area shape="rect" id="Node000006" href="$class_network_runtime_worker.html#a9b85de138d6dd9abeea70713b26d518a" title="Documents the drain recording input operation." alt="" coords="261,113,421,154"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="511,220,431,175,394,157,394,152,433,170,516,219"/>
+<area shape="rect" id="Node000007" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,260,202,301"/>
+<area shape="poly" id="edge20_Node000005_Node000007" title=" " alt="" coords="471,225,432,219,340,209,301,211,250,219,192,238,142,262,139,258,190,233,249,214,300,205,341,204,432,214,477,223"/>
+<area shape="rect" id="Node000008" href="$class_network_runtime_worker.html#a2f6218bf40e47b9fb46652d032847cec" title="Processes load mapping." alt="" coords="261,48,421,89"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="535,215,491,159,462,130,430,104,410,92,409,87,434,100,466,126,495,156,540,215"/>
+<area shape="rect" id="Node000009" href="$class_network_runtime_worker.html#a2bacdaac67e03622c47eea38ae754ffb" title="Documents the network runtime worker operation." alt="" coords="15,20,192,61"/>
+<area shape="poly" id="edge21_Node000005_Node000009" title=" " alt="" coords="547,212,532,171,508,122,474,75,454,55,431,39,401,25,369,16,302,8,237,12,180,22,177,17,237,7,302,3,370,10,403,20,433,34,457,51,478,71,512,119,537,169,552,214"/>
+<area shape="rect" id="Node000010" href="$class_network_runtime_worker.html#a90f703c0d11093fbada9ea1b175d21b2" title="Documents the reset metrics operation." alt="" coords="261,228,421,269"/>
+<area shape="poly" id="edge10_Node000005_Node000010" title=" " alt="" coords="462,249,422,251,421,246,467,248"/>
+<area shape="rect" id="Node000011" href="$class_network_runtime_worker.html#aff0d368eb53fb10fb674825954b4f641" title="Sets ip access policy." alt="" coords="261,293,421,334"/>
+<area shape="poly" id="edge12_Node000005_Node000011" title=" " alt="" coords="473,275,413,295,411,290,478,273"/>
+<area shape="rect" id="Node000012" href="$class_network_runtime_worker.html#a9bd551a822c9820da3db8290fea6b935" title="Sets recording input enabled." alt="" coords="250,359,432,399"/>
+<area shape="poly" id="edge14_Node000005_Node000012" title=" " alt="" coords="527,278,483,316,433,348,407,361,405,356,431,344,480,311,522,281"/>
+<area shape="rect" id="Node000013" href="$class_network_runtime_worker.html#ab2ac6dbbcb521bcf8299f894d66b89f3" title="Documents the start online operation." alt="" coords="261,424,421,465"/>
+<area shape="poly" id="edge16_Node000005_Node000013" title=" " alt="" coords="543,280,498,349,468,383,434,413,412,426,410,421,430,409,464,379,494,345,538,283"/>
+<area shape="rect" id="Node000014" href="$class_network_runtime_worker.html#aa45b815af6fc6f8f9095d75072552941" title="Documents the stop online operation." alt="" coords="261,489,421,530"/>
+<area shape="poly" id="edge18_Node000005_Node000014" title=" " alt="" coords="550,281,534,328,509,380,476,433,434,479,414,491,413,486,430,474,472,429,505,377,529,326,546,285"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="270,163,251,175,184,219,131,262,127,258,181,215,248,170,274,159"/>
+<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="256,98,251,104,208,142,170,185,119,261,114,258,166,182,204,138,248,100,260,95"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="243,59,193,53,191,49,247,56"/>
+<area shape="poly" id="edge11_Node000010_Node000007" title=" " alt="" coords="243,263,203,270,201,265,247,260"/>
+<area shape="poly" id="edge13_Node000011_Node000007" title=" " alt="" coords="243,302,203,297,201,292,247,299"/>
+<area shape="poly" id="edge15_Node000012_Node000007" title=" " alt="" coords="265,353,249,348,149,304,149,299,251,343,270,352"/>
+<area shape="poly" id="edge17_Node000013_Node000007" title=" " alt="" coords="258,417,248,413,210,387,175,357,123,304,123,299,179,353,213,383,251,409,263,417"/>
+<area shape="poly" id="edge19_Node000014_Node000007" title=" " alt="" coords="254,481,248,479,202,436,163,387,133,340,115,304,115,299,138,337,168,384,206,432,251,474,260,482"/>
+<area shape="poly" id="edge24_Node000015_Node000005" title=" " alt="" coords="681,265,641,262,641,256,686,264"/>
+</map>

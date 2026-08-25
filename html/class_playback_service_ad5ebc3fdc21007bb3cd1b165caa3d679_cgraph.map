@@ -1,0 +1,59 @@
+<map id="PlaybackService::resetToFirstFrame" name="PlaybackService::resetToFirstFrame">
+<area shape="rect" id="Node000001" title="Returns the current reset to first frame." alt="" coords="5,200,176,240"/>
+<area shape="rect" id="Node000002" href="$class_i_session_reader.html#af00a0907067a1e6a74d1ad64d911a22b" title="Returns whether a fully validated session is loaded." alt="" coords="1451,166,1611,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,197,182,144,229,112,283,80,342,50,405,25,471,9,538,3,1015,3,1087,7,1159,20,1229,39,1296,62,1413,112,1497,158,1492,158,1410,117,1294,67,1227,44,1158,25,1086,13,1015,8,538,8,472,14,407,31,344,55,285,84,232,116,185,148,118,201"/>
+<area shape="rect" id="Node000003" href="$class_playback_service.html#a0d810aa9ebe8492aea8b82c6e429c5d6" title="Notifies observers about position changed." alt="" coords="1445,670,1617,711"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="98,238,144,358,182,440,231,526,291,607,325,643,362,674,401,701,444,721,489,734,538,739,1015,739,1126,735,1238,727,1427,707,1432,706,1238,732,1126,741,1015,744,538,744,488,739,442,726,399,706,358,679,321,647,286,610,226,528,177,443,139,360,98,243"/>
+<area shape="rect" id="Node000005" href="$class_playback_service.html#a6907e4156a3ae1452f1a574208e36e07" title="Performs the publish replay frame operation." alt="" coords="224,330,392,371"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="126,238,261,321,257,323,127,244"/>
+<area shape="rect" id="Node000011" href="$class_i_session_reader.html#aa1a35e313d682f385331d31187968151" title="Returns the bounded number of indexed records." alt="" coords="1434,239,1628,265"/>
+<area shape="poly" id="edge40_Node000001_Node000011" title=" " alt="" coords="139,197,215,168,313,138,424,114,481,107,538,104,1015,104,1119,102,1201,104,1240,109,1280,118,1325,134,1376,156,1391,167,1401,178,1410,190,1424,202,1480,233,1475,233,1421,206,1406,194,1397,182,1388,171,1373,161,1323,139,1279,123,1239,114,1201,109,1119,108,1015,109,538,109,482,112,425,119,314,143,216,173,142,201"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="1490,165,1483,157,1488,147,1504,141,1531,139,1561,142,1578,152,1572,151,1560,147,1531,144,1505,147,1491,151,1488,157,1496,166"/>
+<area shape="rect" id="Node000004" href="$class_playback_service.html#a77bbc3e3d72ff59d00b75a0d13816491" title="Returns the current position." alt="" coords="1688,678,1860,704"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="1618,688,1675,691,1669,691,1618,693"/>
+<area shape="rect" id="Node000006" href="$class_playback_service.html#a48014a7e0b93ca7827e9bb45043576e1" title="Performs the fail playback operation." alt="" coords="440,474,638,500"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="330,369,380,411,441,452,473,468,468,469,439,457,377,415,330,374"/>
+<area shape="rect" id="Node000026" href="$class_playback_service.html#a4c63a7b8f0f625f9c097a34b3ac96a0a" title="Performs the publish frame operation." alt="" coords="930,194,1098,235"/>
+<area shape="poly" id="edge38_Node000005_Node000026" title=" " alt="" coords="392,332,916,231,913,236,393,337"/>
+<area shape="rect" id="Node000028" href="$class_playback_service.html#a99bc6118f2cdd47328fd91ec448a04f0" title="Performs the records processed operation." alt="" coords="454,358,624,399"/>
+<area shape="poly" id="edge39_Node000005_Node000028" title=" " alt="" coords="392,358,441,366,436,367,393,363"/>
+<area shape="rect" id="Node000007" href="$class_playback_service.html#a71ed12f065ed4adb407e86b106e2721b" title="Notifies observers about playback error." alt="" coords="686,334,866,375"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="575,471,733,385,738,383,577,476"/>
+<area shape="rect" id="Node000015" href="$class_playback_service.html#a5e54c6eb7adf0f7fbdfbd5f403ec5d7d" title="Notifies observers about playing changed." alt="" coords="1447,528,1615,568"/>
+<area shape="poly" id="edge36_Node000006_Node000015" title=" " alt="" coords="639,490,1433,540,1430,544,639,495"/>
+<area shape="rect" id="Node000017" href="$class_i_playback_clock.html#a997a42bd4efe05e9d2bcbee7550e35cb" title="Stops future ticks." alt="" coords="1458,611,1604,637"/>
+<area shape="poly" id="edge37_Node000006_Node000017" title=" " alt="" coords="591,497,835,556,997,588,1162,612,1310,622,1445,626,1440,626,1310,627,1162,617,996,593,834,561,590,503"/>
+<area shape="poly" id="edge35_Node000007_Node000001" title=" " alt="" coords="683,337,638,329,191,242,191,236,639,324,689,336"/>
+<area shape="poly" id="edge33_Node000007_Node000005" title=" " alt="" coords="683,349,638,349,440,349,409,350,407,345,440,344,638,344,689,348"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="726,374,570,467,567,462,722,377"/>
+<area shape="rect" id="Node000008" href="$class_playback_service.html#aeedd44d8b679909701b8c597496e1257" title="Finds frame before." alt="" coords="1176,309,1361,350"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="866,347,1163,334,1158,336,866,353"/>
+<area shape="rect" id="Node000009" href="$class_playback_service.html#ae6ad329266b83c6a08dcb8aa86ece738" title="Reads timestamp." alt="" coords="1422,424,1640,450"/>
+<area shape="poly" id="edge34_Node000007_Node000009" title=" " alt="" coords="866,362,1410,423,1405,425,866,367"/>
+<area shape="rect" id="Node000012" href="$class_playback_service.html#a9a341b7a275a1e1f18bb1e89a582736c" title="Performs the finish playback operation." alt="" coords="1162,576,1374,602"/>
+<area shape="poly" id="edge15_Node000007_Node000012" title=" " alt="" coords="800,373,851,416,915,459,989,495,1066,526,1203,572,1197,572,1064,531,987,500,912,464,848,420,799,378"/>
+<area shape="rect" id="Node000018" href="$class_playback_service.html#ab222dc3c3901449380e63a7efedc1444" title="Performs the on clock tick operation." alt="" coords="914,423,1114,449"/>
+<area shape="poly" id="edge19_Node000007_Node000018" title=" " alt="" coords="834,373,915,401,958,418,953,418,913,407,834,378"/>
+<area shape="rect" id="Node000024" href="$class_playback_service.html#a60a9c28fcb46d8f18bb8a1694e404717" title="Performs the publish decoded frame operation." alt="" coords="1184,194,1352,235"/>
+<area shape="poly" id="edge26_Node000007_Node000024" title=" " alt="" coords="850,331,1181,239,1176,241,851,336"/>
+<area shape="poly" id="edge29_Node000007_Node000026" title=" " alt="" coords="803,332,912,255,947,240,942,243,915,260,806,336"/>
+<area shape="poly" id="edge10_Node000008_Node000002" title=" " alt="" coords="1345,306,1373,289,1389,267,1395,245,1402,222,1421,201,1434,195,1439,193,1424,205,1407,225,1400,247,1393,270,1376,293,1348,311"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="1320,348,1486,418,1481,418,1319,353"/>
+<area shape="poly" id="edge13_Node000008_Node000011" title=" " alt="" coords="1339,306,1473,269,1468,270,1341,311"/>
+<area shape="poly" id="edge12_Node000009_Node000006" title=" " alt="" coords="1419,444,1114,464,654,485,654,479,1114,459,1425,443"/>
+<area shape="poly" id="edge14_Node000011_Node000011" title=" " alt="" coords="1490,238,1483,231,1488,221,1504,215,1531,213,1561,215,1578,225,1572,225,1560,220,1531,218,1505,220,1491,225,1488,230,1496,239"/>
+<area shape="poly" id="edge17_Node000012_Node000003" title=" " alt="" coords="1304,600,1423,647,1463,665,1458,664,1421,652,1303,605"/>
+<area shape="poly" id="edge16_Node000012_Node000015" title=" " alt="" coords="1354,573,1429,564,1434,563,1355,578"/>
+<area shape="poly" id="edge18_Node000012_Node000017" title=" " alt="" coords="1371,600,1445,612,1440,612,1370,605"/>
+<area shape="poly" id="edge22_Node000018_Node000002" title=" " alt="" coords="1024,420,1077,360,1116,325,1161,295,1191,281,1219,274,1268,269,1317,265,1343,257,1373,244,1387,234,1396,223,1406,211,1421,200,1434,197,1439,195,1424,205,1409,215,1400,226,1391,238,1376,249,1345,263,1317,270,1268,274,1220,279,1193,286,1163,300,1120,329,1081,364,1027,425"/>
+<area shape="poly" id="edge23_Node000018_Node000003" title=" " alt="" coords="1023,447,1044,482,1074,527,1115,574,1163,612,1228,643,1298,665,1366,678,1432,688,1426,688,1366,683,1296,670,1226,648,1161,617,1111,578,1070,530,1039,485,1021,452"/>
+<area shape="poly" id="edge24_Node000018_Node000005" title=" " alt="" coords="911,444,813,448,694,446,566,436,439,413,396,399,358,381,358,376,398,394,441,408,566,430,694,441,813,443,916,442"/>
+<area shape="poly" id="edge20_Node000018_Node000008" title=" " alt="" coords="1041,420,1161,366,1191,356,1196,355,1163,370,1043,425"/>
+<area shape="poly" id="edge25_Node000018_Node000011" title=" " alt="" coords="1114,424,1240,401,1308,383,1373,359,1410,340,1445,317,1501,276,1506,274,1448,322,1413,345,1375,364,1310,388,1241,406,1115,429"/>
+<area shape="poly" id="edge21_Node000018_Node000012" title=" " alt="" coords="1038,447,1234,568,1229,568,1036,452"/>
+<area shape="poly" id="edge27_Node000024_Node000002" title=" " alt="" coords="1352,201,1438,191,1433,192,1354,206"/>
+<area shape="poly" id="edge28_Node000024_Node000011" title=" " alt="" coords="1353,224,1424,236,1418,237,1353,229"/>
+<area shape="poly" id="edge30_Node000026_Node000002" title=" " alt="" coords="1044,191,1097,161,1128,147,1161,136,1203,129,1247,125,1332,130,1411,143,1477,161,1472,161,1410,148,1332,135,1247,131,1204,134,1163,141,1130,152,1099,166,1046,196"/>
+<area shape="poly" id="edge32_Node000026_Node000011" title=" " alt="" coords="1096,191,1158,180,1228,172,1302,171,1375,180,1489,233,1484,233,1374,185,1302,176,1228,177,1158,185,1098,196"/>
+<area shape="poly" id="edge31_Node000026_Node000024" title=" " alt="" coords="1098,212,1171,214,1166,215,1099,217"/>
+</map>

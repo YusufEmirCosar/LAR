@@ -1,0 +1,11 @@
+<map id="ViewportControls::turnWithPlaneRequested" name="ViewportControls::turnWithPlaneRequested">
+<area shape="rect" id="Node000001" title="Notifies observers about turn with plane requested." alt="" coords="5,27,184,68"/>
+<area shape="rect" id="Node000002" href="$class_viewport_controls.html#a4b8d7cd9bbbccd7677f533e758b7b82a" title="Performs the event filter operation." alt="" coords="232,5,422,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,34,219,31,213,33,185,39"/>
+<area shape="rect" id="Node000003" href="$class_viewport_controls.html#a07924252523b386bf9c13ae946d23eec" title="Performs the update turn with plane presentation operation." alt="" coords="237,55,417,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,56,224,62,218,63,184,61"/>
+<area shape="rect" id="Node000004" href="$class_viewport_controls.html#abac26473bd0041dad1c7b1de3af0760b" title="Returns the current camera tracking mode." alt="" coords="473,22,645,62"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="417,60,460,56,455,57,418,65"/>
+<area shape="rect" id="Node000005" href="$class_viewport_controls.html#aafab89dc15841a9a23878137464b3f22" title="Returns the current turn with plane." alt="" coords="470,87,648,128"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="418,85,457,93,452,93,418,91"/>
+</map>

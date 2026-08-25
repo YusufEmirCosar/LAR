@@ -1,0 +1,9 @@
+<map id="SourceLifecycleCoordinator::play" name="SourceLifecycleCoordinator::play">
+<area shape="rect" id="Node000001" title="Plays the current operation." alt="" coords="5,27,187,68"/>
+<area shape="rect" id="Node000002" href="$class_i_playback_runtime.html#ad3ed6047071aa7ffc0194091c8cc347f" title="Starts or resumes clock&#45;driven playback." alt="" coords="245,5,406,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,33,232,30,227,31,187,39"/>
+<area shape="rect" id="Node000003" href="$class_source_lifecycle_coordinator.html#acdf83d7d75370c38dd81dcb69898ee8f" title="Performs the report rejected command operation." alt="" coords="235,55,416,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,56,222,62,217,63,187,61"/>
+<area shape="rect" id="Node000004" href="$class_source_lifecycle_coordinator.html#a17ce5b778f5c25dcf667c451910501ec" title="Notifies observers about error raised." alt="" coords="464,55,645,96"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="416,73,451,75,446,76,416,78"/>
+</map>

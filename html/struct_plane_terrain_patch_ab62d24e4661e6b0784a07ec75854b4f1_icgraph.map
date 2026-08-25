@@ -1,0 +1,44 @@
+<map id="PlaneTerrainPatch::empty" name="PlaneTerrainPatch::empty">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1820,224,1955,265"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#abe802663afdff5d56c7bba1c6b07dc1c" title=" " alt="" coords="960,40,1153,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1853,212,1816,184,1771,157,1691,128,1607,105,1521,88,1437,76,1280,63,1153,60,1153,55,1280,57,1438,70,1522,83,1608,100,1692,123,1773,153,1819,179,1858,214"/>
+<area shape="rect" id="Node000011" href="$class_plane_terrain_gpu_layer.html#a77bc7ab9b2af508a30c1db45819e9be9" title=" " alt="" coords="1623,191,1772,231"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1802,230,1772,227,1772,221,1807,230"/>
+<area shape="rect" id="Node000019" href="$class_plane_scene_widget.html#a5ccafd57daed1a34921b0d86400e59c0" title="Returns whether an immutable terrain patch is ready for GPU upload." alt="" coords="1398,313,1575,354"/>
+<area shape="poly" id="edge23_Node000001_Node000019" title=" " alt="" coords="1847,273,1811,295,1773,311,1723,323,1671,331,1575,338,1575,333,1671,326,1722,318,1771,306,1809,290,1842,274"/>
+<area shape="rect" id="Node000020" href="$class_plane_terrain_gpu_layer.html#acc14fd6629009b5a49dccce06071aafa" title=" " alt="" coords="1623,256,1772,297"/>
+<area shape="poly" id="edge25_Node000001_Node000020" title=" " alt="" coords="1807,258,1772,266,1772,261,1802,259"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#a5c8242aec92b08254db217286a0b9194" title=" " alt="" coords="706,5,912,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="941,45,912,43,912,37,947,44"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a4af14d7382c36b30361f6903425d2d57" title="Notifies tests and controls when terrain preparation changes readiness." alt="" coords="482,75,658,115"/>
+<area shape="poly" id="edge9_Node000002_Node000005" title=" " alt="" coords="942,77,659,98,658,93,947,75"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#a605af179df470891b8fa7b2433ce23cc" title="Enables DTED terrain, retaining flat ground as an unavailable/loading fallback." alt="" coords="5,47,203,87"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="690,35,204,64,203,59,692,30"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="719,52,644,77,642,72,724,50"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="673,78,962,59,957,61,674,83"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#ae2f382ca1fbf358e3801503ca8a607e8" title=" " alt="" coords="251,75,434,115"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="464,105,435,106,434,101,469,103"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="233,84,204,81,202,76,238,81"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="449,83,484,85,479,87,450,89"/>
+<area shape="poly" id="edge15_Node000011_Node000011" title=" " alt="" coords="1727,175,1717,172,1697,169,1679,171,1669,176,1664,182,1666,192,1661,188,1659,181,1665,172,1678,166,1697,164,1718,166,1732,176"/>
+<area shape="rect" id="Node000012" href="$class_plane_scene_renderer.html#a303eb0d904256d05666662ac14a59539" title="Draws the current operation." alt="" coords="984,177,1128,218"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="1607,186,1574,182,1470,163,1388,153,1306,152,1201,162,1122,179,1121,174,1201,156,1306,146,1388,147,1471,158,1575,176,1613,186"/>
+<area shape="rect" id="Node000015" href="$class_plane_terrain_gpu_layer.html#a3861dd3b0b6946e8a4b1005d3ed1a85f" title=" " alt="" coords="1400,191,1573,231"/>
+<area shape="poly" id="edge16_Node000011_Node000015" title=" " alt="" coords="1604,211,1574,214,1574,208,1609,211"/>
+<area shape="rect" id="Node000013" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title="Performs the operator= operation." alt="" coords="737,171,881,211"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="966,196,882,196,881,190,971,195"/>
+<area shape="rect" id="Node000014" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title="Performs the paint gl operation." alt="" coords="716,236,902,261"/>
+<area shape="poly" id="edge13_Node000012_Node000014" title=" " alt="" coords="971,215,876,238,875,232,966,216"/>
+<area shape="poly" id="edge14_Node000014_Node000005" title=" " alt="" coords="718,229,705,225,668,201,635,172,587,118,588,113,638,168,671,196,708,221,723,230"/>
+<area shape="poly" id="edge19_Node000015_Node000012" title=" " alt="" coords="1393,187,1350,182,1292,178,1234,179,1129,189,1129,183,1233,174,1292,173,1351,176,1398,187"/>
+<area shape="rect" id="Node000016" href="$class_plane_terrain_gpu_layer.html#a00a4a4f28dc43bec53d297a36031da14" title=" " alt="" coords="1201,191,1350,231"/>
+<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="1381,211,1351,214,1351,208,1387,211"/>
+<area shape="rect" id="Node000017" href="$class_plane_terrain_gpu_layer.html#a148a59a028ca3ca6ca94dba7fd91e5bd" title=" " alt="" coords="1201,256,1350,297"/>
+<area shape="poly" id="edge20_Node000015_Node000017" title=" " alt="" coords="1407,236,1344,258,1343,253,1402,237"/>
+<area shape="poly" id="edge18_Node000016_Node000012" title=" " alt="" coords="1183,206,1129,205,1129,199,1188,205"/>
+<area shape="poly" id="edge21_Node000017_Node000012" title=" " alt="" coords="1200,250,1115,221,1116,216,1205,250"/>
+<area shape="rect" id="Node000018" href="$class_plane_terrain_gpu_layer.html#ab7dca4bb30afb023808ed3f8d0de936c" title=" " alt="" coords="982,256,1131,297"/>
+<area shape="poly" id="edge22_Node000017_Node000018" title=" " alt="" coords="1183,276,1132,279,1132,274,1188,276"/>
+<area shape="poly" id="edge24_Node000019_Node000014" title=" " alt="" coords="1380,339,1292,342,1185,339,1071,329,959,311,891,289,835,264,836,259,893,284,960,306,1072,324,1185,334,1292,337,1385,339"/>
+<area shape="poly" id="edge26_Node000020_Node000017" title=" " alt="" coords="1604,276,1351,279,1351,274,1609,276"/>
+</map>

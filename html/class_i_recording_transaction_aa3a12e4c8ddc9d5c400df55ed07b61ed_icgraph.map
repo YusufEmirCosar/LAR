@@ -1,0 +1,17 @@
+<map id="IRecordingTransaction::append" name="IRecordingTransaction::append">
+<area shape="rect" id="Node000001" title="Appends one non&#45;decreasing session&#45;relative timestamp and raw packet." alt="" coords="933,39,1085,79"/>
+<area shape="rect" id="Node000002" href="$class_recording_service.html#afe7401dfa1084a3e3d7dbdbd49a8fabb" title="Performs the record packets operation." alt="" coords="716,39,885,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="914,59,885,62,885,56,920,59"/>
+<area shape="rect" id="Node000003" href="$class_recording_pipeline_coordinator.html#a5d4adf65fededc39ef5242805e7eeffb" title="Documents the append recording batch operation." alt="" coords="475,5,668,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="699,45,669,42,669,37,704,44"/>
+<area shape="rect" id="Node000006" href="$class_recording_service.html#a31789e1b2374ce87e9e61d253dca1613" title="Performs the record packet operation." alt="" coords="488,71,656,111"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="699,73,657,82,656,77,704,72"/>
+<area shape="rect" id="Node000004" href="$class_recording_runtime_worker.html#aacd8a9f67ff011851f1c871a8792f023" title="Documents the append recording batch operation." alt="" coords="253,5,424,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="457,26,425,28,424,23,462,25"/>
+<area shape="rect" id="Node000005" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,5,202,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="235,27,203,28,202,23,240,25"/>
+<area shape="rect" id="Node000007" href="$class_direct_application_runtime.html#af7dfb47a5a42b53c0a26e62c480d9362" title="Constructs this object." alt="" coords="250,71,427,111"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="469,91,428,94,427,88,475,91"/>
+<area shape="rect" id="Node000008" href="$class_recording_service.html#a2f7614308dddf893f521332000651127" title="Performs the record packet operation." alt="" coords="254,136,422,177"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="485,116,414,138,413,133,480,116"/>
+</map>

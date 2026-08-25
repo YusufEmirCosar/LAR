@@ -1,0 +1,20 @@
+<map id="PlaneSceneRenderer::setTerrainPlacement" name="PlaneSceneRenderer::setTerrainPlacement">
+<area shape="rect" id="Node000001" title="Positions the stable terrain anchor relative to the current aircraft." alt="" coords="975,105,1123,146"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title="Performs the operator= operation." alt="" coords="765,72,909,113"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="957,112,910,106,910,101,962,112"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#acac2e8aea3714d15692458953db3f092" title=" " alt="" coords="747,137,927,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="962,139,928,147,927,141,957,139"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#abe802663afdff5d56c7bba1c6b07dc1c" title=" " alt="" coords="505,75,698,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="741,133,681,119,681,113,747,133"/>
+<area shape="rect" id="Node000007" href="$class_plane_scene_widget.html#a4af14d7382c36b30361f6903425d2d57" title="Notifies tests and controls when terrain preparation changes readiness." alt="" coords="16,75,192,115"/>
+<area shape="poly" id="edge10_Node000003_Node000007" title=" " alt="" coords="731,151,192,105,192,100,733,146"/>
+<area shape="rect" id="Node000012" href="$class_plane_scene_widget.html#a6387f9c3b66f950945e37e615318d0e1" title="Sets scene state." alt="" coords="504,195,699,235"/>
+<area shape="poly" id="edge9_Node000003_Node000012" title=" " alt="" coords="739,182,688,197,688,191,734,183"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a5c8242aec92b08254db217286a0b9194" title=" " alt="" coords="251,5,456,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="509,70,429,49,429,44,514,69"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="489,105,193,105,192,99,491,100"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#a605af179df470891b8fa7b2433ce23cc" title="Enables DTED terrain, retaining flat ground as an unavailable/loading fallback." alt="" coords="5,5,203,46"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="233,27,204,28,202,23,238,25"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="261,52,181,77,179,72,265,49"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="208,85,506,85,504,90,208,90"/>
+</map>

@@ -1,0 +1,24 @@
+<map id="DirectApplicationRuntime::resetMetrics" name="DirectApplicationRuntime::resetMetrics">
+<area shape="rect" id="Node000001" title="Returns the current reset metrics." alt="" coords="5,136,175,177"/>
+<area shape="rect" id="Node000002" href="$class_i_application_runtime.html#a8a335e653e0be8326f22b4d50759f8f7" title="Documents the accept command operation." alt="" coords="238,5,376,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,134,162,96,221,57,236,51,232,55,224,61,165,100,117,138"/>
+<area shape="rect" id="Node000003" href="$class_i_application_runtime.html#a96c2d9a354915e79319f34abeffdecc8" title="Notifies observers about command finished." alt="" coords="238,71,376,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="159,133,226,114,221,118,161,138"/>
+<area shape="rect" id="Node000004" href="$class_direct_application_runtime.html#a45c705e39721f21e749240d70c8011de" title="Performs the publish metrics operation." alt="" coords="223,136,392,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="174,154,210,155,205,158,176,159"/>
+<area shape="rect" id="Node000007" href="$class_i_application_runtime.html#a01f646d011f811a4eb6b1ac3faae60ec" title="Documents the reject command operation." alt="" coords="238,201,376,242"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="160,175,226,196,221,198,160,180"/>
+<area shape="rect" id="Node000008" href="$class_metrics_service.html#ae3bb70de1fac1695b18701f84e503dfa" title="Resets the current operation." alt="" coords="235,266,380,292"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="115,175,164,214,224,251,241,260,235,260,221,256,161,218,114,180"/>
+<area shape="rect" id="Node000005" href="$class_i_application_runtime.html#ad897dded4a7d21af1d0317367f77fbe0" title="Notifies observers about metrics changed." alt="" coords="472,85,611,126"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="391,136,460,123,455,125,393,141"/>
+<area shape="rect" id="Node000006" href="$class_metrics_service.html#ad393cdd0b8dc542a85e70b3ef8b7ec06" title="Returns the current total processed packets." alt="" coords="440,151,643,191"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="392,159,427,163,422,164,393,164"/>
+<area shape="rect" id="Node000009" href="$class_metrics_service.html#a38b9b66f0d81d4478059a3b1fa661835" title="Notifies observers about processed count changed." alt="" coords="454,244,630,285"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="380,272,441,270,435,271,380,277"/>
+<area shape="rect" id="Node000010" href="$class_metrics_service.html#a719a6906f0dd2d5a37ccc5d795276011" title="Notifies observers about rate changed." alt="" coords="446,309,637,334"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="380,289,455,305,450,305,380,295"/>
+<area shape="rect" id="Node000011" href="$class_metrics_service.html#accc6abd355d89dfaeababda380c68af4" title="Calculates rate." alt="" coords="691,309,888,334"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="637,328,679,331,673,331,637,333"/>
+<area shape="poly" id="edge11_Node000011_Node000010" title=" " alt="" coords="688,313,652,315,652,310,694,313"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="src/viewer/viewport/lar_parametric_zone_gpu_layer.h" name="src/viewer/viewport/lar_parametric_zone_gpu_layer.h">
+<area shape="rect" id="Node000001" title="Reusable&#45;topology GPU path for regular LAR zones." alt="" coords="479,5,621,61"/>
+<area shape="rect" id="Node000002" href="$earth__lar__view_8h.html" title="Mercator/sphere LAR page combining map, zones, and marker overlays." alt="" coords="402,116,536,157"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="521,72,486,119,483,114,517,75"/>
+<area shape="rect" id="Node000008" href="$lar__parametric__zone__gpu__layer_8cpp.html" title=" " alt="" coords="560,109,703,165"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="582,71,612,109,607,108,580,76"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title=" " alt="" coords="5,220,186,246"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,161,144,222,143,217,386,156"/>
+<area shape="rect" id="Node000004" href="$earth__lar__view_8cpp.html" title=" " alt="" coords="210,213,344,253"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="417,164,318,215,316,210,412,165"/>
+<area shape="rect" id="Node000005" href="$earth__lar__view__interaction_8cpp.html" title=" " alt="" coords="368,213,570,253"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="471,171,471,214,467,211,467,175"/>
+<area shape="rect" id="Node000006" href="$earth__lar__view__rendering_8cpp.html" title=" " alt="" coords="593,213,787,253"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="530,161,646,212,641,212,529,166"/>
+<area shape="rect" id="Node000007" href="$lar__viewport_8cpp.html" title=" " alt="" coords="811,213,945,253"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="540,159,549,162,619,178,674,188,800,210,813,215,808,215,799,215,673,193,618,183,548,167,539,165"/>
+</map>

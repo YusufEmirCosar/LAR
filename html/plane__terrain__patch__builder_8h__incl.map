@@ -1,0 +1,55 @@
+<map id="src/viewer/plane/plane_terrain_patch_builder.h" name="src/viewer/plane/plane_terrain_patch_builder.h">
+<area shape="rect" id="Node000001" title="Bounded DTED0 sampling and indexed local terrain&#45;mesh construction." alt="" coords="259,5,417,46"/>
+<area shape="rect" id="Node000002" href="$plane__terrain__patch_8h.html" title="Immutable CPU terrain mesh and bounded build request for Plane mode." alt="" coords="99,271,228,312"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="328,45,187,260,183,257,323,48"/>
+<area shape="rect" id="Node000009" href="$dted__mosaic__sampler_8h.html" title="Bilinear DTED0 surface sampler with bounded terrain and water&#45;mask caches." alt="" coords="558,94,692,135"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="403,44,547,88,543,90,404,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="141,368,229,393"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="170,310,181,353,176,352,167,315"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="904,368,970,393"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="229,295,497,317,668,335,841,357,892,369,886,369,840,363,668,340,496,322,229,300"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="335,449,400,474"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="149,310,137,334,127,356,123,379,131,399,143,409,161,418,210,434,323,455,317,456,209,439,159,423,140,413,127,402,118,379,121,355,132,331,146,314"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,368,66,393"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="133,315,68,361,64,357,136,310"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="405,368,474,393"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="227,310,393,362,388,365,226,315"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="559,449,616,474"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="201,310,289,353,394,398,473,425,547,449,541,449,472,431,392,403,287,358,201,315"/>
+<area shape="poly" id="edge32_Node000009_Node000004" title=" " alt="" coords="674,133,724,155,779,186,835,224,886,270,913,311,931,354,926,352,909,313,881,273,832,228,776,190,721,160,674,138"/>
+<area shape="poly" id="edge33_Node000009_Node000005" title=" " alt="" coords="555,128,500,150,472,165,447,185,423,212,405,244,392,278,382,313,371,380,369,435,364,431,366,380,377,312,386,276,400,242,419,209,443,181,469,161,498,145,560,126"/>
+<area shape="poly" id="edge35_Node000009_Node000007" title=" " alt="" coords="555,131,512,152,491,166,474,184,452,225,441,271,438,315,439,353,434,350,432,315,436,270,447,223,469,181,488,162,510,147,560,128"/>
+<area shape="rect" id="Node000010" href="$dted__tile__source_8h.html" title="Deterministic DTED0 tile addressing without scanning the source tree." alt="" coords="903,183,1032,223"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="692,130,891,181,885,182,692,135"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="909,449,975,474"/>
+<area shape="poly" id="edge36_Node000009_Node000014" title=" " alt="" coords="692,114,786,118,892,128,941,137,986,148,1021,163,1045,181,1068,208,1074,224,1076,243,1071,268,1059,301,1007,402,992,423,973,441,971,436,988,419,1003,399,1054,299,1066,267,1070,243,1069,225,1063,211,1042,185,1019,167,984,153,940,142,891,134,786,123,693,119"/>
+<area shape="rect" id="Node000015" href="$dted__water__mask__source_8h.html" title="Validated indexed access to the compact global DTED0 water&#45;mask pack." alt="" coords="484,183,640,223"/>
+<area shape="poly" id="edge20_Node000009_Node000015" title=" " alt="" coords="613,133,587,172,583,168,609,137"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="664,190,711,216"/>
+<area shape="poly" id="edge34_Node000009_Node000017" title=" " alt="" coords="640,133,673,178,667,177,638,138"/>
+<area shape="poly" id="edge18_Node000010_Node000004" title=" " alt="" coords="966,222,944,354,939,351,962,225"/>
+<area shape="rect" id="Node000011" href="$dted__cell__reader_8h.html" title="Bounded parser for DTED Level&#45;0 UHL, profile, elevation, and checksum records." alt="" coords="701,271,829,312"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="924,223,826,267,824,262,919,225"/>
+<area shape="poly" id="edge19_Node000010_Node000014" title=" " alt="" coords="975,222,984,257,991,302,993,352,985,402,965,438,962,434,980,400,988,352,986,303,979,258,972,226"/>
+<area shape="poly" id="edge16_Node000011_Node000004" title=" " alt="" coords="804,310,902,360,896,360,803,315"/>
+<area shape="poly" id="edge17_Node000011_Node000007" title=" " alt="" coords="703,310,489,369,488,363,698,311"/>
+<area shape="rect" id="Node000012" href="$dted__cell_8h.html" title="Immutable in&#45;memory representation of one degree&#45;aligned DTED0 cell." alt="" coords="701,360,829,401"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="767,311,767,346,763,343,763,315"/>
+<area shape="poly" id="edge13_Node000012_Node000005" title=" " alt="" coords="703,395,415,453,415,448,697,394"/>
+<area shape="poly" id="edge15_Node000012_Node000008" title=" " alt="" coords="723,401,629,445,628,439,718,402"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="678,449,750,474"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="755,400,732,438,729,433,750,402"/>
+<area shape="poly" id="edge14_Node000012_Node000014" title=" " alt="" coords="810,399,904,442,898,442,809,404"/>
+<area shape="poly" id="edge29_Node000015_Node000004" title=" " alt="" coords="641,219,768,249,842,269,868,288,890,310,924,355,919,354,886,313,864,292,840,274,767,254,641,225"/>
+<area shape="poly" id="edge30_Node000015_Node000005" title=" " alt="" coords="534,222,463,281,426,319,395,361,380,398,372,435,368,432,375,396,391,359,422,315,460,277,530,225"/>
+<area shape="poly" id="edge31_Node000015_Node000008" title=" " alt="" coords="555,222,539,272,538,317,547,361,561,402,576,436,571,434,556,404,542,363,533,317,534,271,551,226"/>
+<area shape="rect" id="Node000016" href="$dted__water__mask_8h.html" title="Immutable DTED0&#45;post&#45;aligned water classification for one degree cell." alt="" coords="549,271,677,312"/>
+<area shape="poly" id="edge21_Node000015_Node000016" title=" " alt="" coords="575,221,596,258,591,257,573,226"/>
+<area shape="poly" id="edge23_Node000016_Node000004" title=" " alt="" coords="678,307,689,309,788,332,886,357,894,362,889,362,884,363,787,337,688,315,677,312"/>
+<area shape="poly" id="edge25_Node000016_Node000005" title=" " alt="" coords="595,311,548,357,488,403,411,444,409,439,485,398,544,353,591,314"/>
+<area shape="poly" id="edge26_Node000016_Node000007" title=" " alt="" coords="576,312,478,363,476,358,571,313"/>
+<area shape="poly" id="edge28_Node000016_Node000008" title=" " alt="" coords="612,311,594,435,589,432,608,314"/>
+<area shape="poly" id="edge22_Node000016_Node000012" title=" " alt="" coords="648,310,720,353,715,352,647,315"/>
+<area shape="poly" id="edge24_Node000016_Node000013" title=" " alt="" coords="626,310,702,436,696,434,623,314"/>
+<area shape="poly" id="edge27_Node000016_Node000014" title=" " alt="" coords="677,308,778,336,842,358,890,395,926,437,921,435,886,399,840,362,776,341,677,313"/>
+</map>

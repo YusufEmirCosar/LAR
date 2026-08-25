@@ -1,0 +1,7 @@
+<map id="ThreadedApplicationRuntime::networkMetricsResetRequested" name="ThreadedApplicationRuntime::networkMetricsResetRequested">
+<area shape="rect" id="Node000001" title="Notifies observers about network metrics reset requested." alt="" coords="250,39,466,79"/>
+<area shape="rect" id="Node000002" href="$class_threaded_application_runtime.html#ac6e7b751a32335e1dbdc7482589308f8" title="Returns the current reset metrics." alt="" coords="9,5,198,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,43,198,41,198,35,236,42"/>
+<area shape="rect" id="Node000003" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,71,202,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="231,75,202,81,202,76,237,74"/>
+</map>

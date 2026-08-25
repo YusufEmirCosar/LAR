@@ -1,0 +1,5 @@
+<map id="lar::map::EarthMapWidget::rotation" name="lar::map::EarthMapWidget::rotation">
+<area shape="rect" id="Node000001" title="Performs the rotation operation." alt="" coords="5,5,179,46"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_camera.html#a60419fa91a41c629757c2a3a4cf9ac74" title="Performs the sphere Center operation." alt="" coords="227,5,374,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,23,214,25,209,26,179,28"/>
+</map>

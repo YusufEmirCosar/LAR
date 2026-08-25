@@ -1,0 +1,9 @@
+<map id="OnlineCaptureService::start" name="OnlineCaptureService::start">
+<area shape="rect" id="Node000001" title="Starts the current operation." alt="" coords="467,39,615,79"/>
+<area shape="rect" id="Node000002" href="$class_direct_application_runtime.html#a3900df6d8690bde96be460868b718f25" title="Performs the start online operation." alt="" coords="250,5,419,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="449,45,419,42,419,37,454,45"/>
+<area shape="rect" id="Node000003" href="$class_network_runtime_worker.html#ab2ac6dbbcb521bcf8299f894d66b89f3" title="Documents the start online operation." alt="" coords="254,71,414,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="455,72,415,81,415,76,449,73"/>
+<area shape="rect" id="Node000004" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,71,202,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="236,91,202,94,202,88,241,91"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="DtedMosaicSampler::waterMaskFor" name="DtedMosaicSampler::waterMaskFor">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,153,103"/>
+<area shape="rect" id="Node000002" href="$class_dted_mosaic_sampler.html#af5cecb3e8f506952cd45ba9a3ce00de3" title=" " alt="" coords="205,5,352,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,60,193,50,189,52,153,65"/>
+<area shape="rect" id="Node000003" href="$class_dted_water_mask_source.html#a665cf609ebaa3d8106a50ca382565bae" title=" " alt="" coords="405,63,561,103"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,80,391,81,389,85,153,86"/>
+<area shape="rect" id="Node000004" href="$class_dted_water_mask_source.html#ac07551ceb7c152fb0ddfc05a20608537" title="Loads and verifies one cell whose dimensions must match its DTED cell." alt="" coords="201,120,357,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,101,194,115,188,116,152,107"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="353,117,391,109,396,108,354,122"/>
+<area shape="rect" id="Node000005" href="$class_dted_water_mask_source.html#a4de4dfc1a376696367b58fdb9f5338dd" title=" " alt="" coords="405,128,561,169"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="358,141,393,145,387,145,358,146"/>
+</map>

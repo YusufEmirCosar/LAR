@@ -1,0 +1,37 @@
+<map id="LarSessionReader::loadFile" name="LarSessionReader::loadFile">
+<area shape="rect" id="Node000001" title="Loads file." alt="" coords="5,194,187,220"/>
+<area shape="rect" id="Node000002" href="$class_lar_session_reader.html#af63512c571a1dad969b763210a21928c" title="Closes the current operation." alt="" coords="256,169,424,194"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,195,243,191,239,193,188,200"/>
+<area shape="rect" id="Node000003" href="$class_lar_session_reader.html#a98ee5c9e9784df0c20c39d08182da41e" title="Parses stream." alt="" coords="235,218,445,244"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,213,222,218,217,220,188,219"/>
+<area shape="rect" id="Node000004" href="$class_packet_mapping.html#ac955ded5162ee66319787462e129c407" title="Decodes the legacy Plane/Target fields without exposing DLZ telemetry." alt="" coords="532,66,693,92"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="427,215,443,205,455,193,461,181,466,155,472,128,479,115,491,102,520,89,515,92,495,106,483,118,477,130,472,156,466,183,459,196,447,209,429,220"/>
+<area shape="rect" id="Node000007" href="$class_session_timestamp.html#a32022c7bea4a6476c0af9a5641a8a80f" title="Creates a timestamp from the unsigned representation stored by LAR1." alt="" coords="510,181,715,222"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="445,217,497,214,492,215,446,222"/>
+<area shape="rect" id="Node000010" href="$class_json_mapping_repository.html#add89ca1802d56959d87408c174e80a35" title="Loads json." alt="" coords="532,116,693,157"/>
+<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="416,215,444,205,458,196,467,187,477,177,492,167,520,158,515,160,494,172,480,181,471,190,461,200,446,209,418,220"/>
+<area shape="rect" id="Node000014" href="$class_lar_session_reader.html#a98b8ba5d1d8bc7061c8d57df1b37b199" title="Returns the current mapping." alt="" coords="520,246,705,272"/>
+<area shape="poly" id="edge15_Node000003_Node000014" title=" " alt="" coords="445,239,507,248,502,248,446,244"/>
+<area shape="rect" id="Node000015" href="$class_packet_mapping.html#a1d87d03af0581d6aec1e8c293f0c3464" title="Returns the smallest datagram size accepted by decode()." alt="" coords="493,296,732,321"/>
+<area shape="poly" id="edge16_Node000003_Node000015" title=" " alt="" coords="375,242,494,282,525,292,519,292,492,287,375,247"/>
+<area shape="rect" id="Node000016" href="$class_session_timestamp.html#aeb247cf8e65e75c49239bfefb1fe72b8" title="Returns the canonical zero value." alt="" coords="530,369,696,394"/>
+<area shape="poly" id="edge17_Node000003_Node000016" title=" " alt="" coords="359,242,418,284,494,331,561,363,556,363,492,336,415,289,358,247"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="567,65,559,58,564,48,583,42,613,40,647,42,665,52,660,52,646,48,613,45,584,47,568,52,564,57,573,66"/>
+<area shape="rect" id="Node000005" href="$class_packet_mapping.html#a37e8ae3c0071d0ed32f9075347e51cf1" title="Returns the StateField mask covered by this mapping." alt="" coords="802,5,972,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="682,63,789,44,784,46,683,68"/>
+<area shape="rect" id="Node000006" href="$class_packet_mapping.html#ad1917abe7193f42eb04c4bc08cfdb309" title="Returns whether all bindings form a complete non&#45;overlapping schema." alt="" coords="808,70,966,96"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="693,78,795,81,790,82,694,83"/>
+<area shape="rect" id="Node000008" href="$class_session_timestamp.html#a9e69c8185d47045ab21667be1a2976f7" title="Returns the exact integer representation used for ordering and storage." alt="" coords="780,218,994,244"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="716,210,768,218,762,218,716,215"/>
+<area shape="rect" id="Node000009" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="793,312,981,353"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="703,220,733,231,795,265,850,303,844,302,793,269,731,236,703,225"/>
+<area shape="poly" id="edge13_Node000010_Node000006" title=" " alt="" coords="693,118,805,99,800,100,694,123"/>
+<area shape="rect" id="Node000011" href="$class_state_field.html#a9cffd8d88606764c6cde9724071891f7" title="Returns the canonical mapping&#45;oriented name for id." alt="" coords="805,120,969,145"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="693,133,792,133,787,134,694,138"/>
+<area shape="rect" id="Node000013" href="$class_state_field.html#a58fa1690232a70168208952818c6d061" title="Resolves a JSON mapping name/index pair to an Id, or &#45;1." alt="" coords="822,169,952,194"/>
+<area shape="poly" id="edge14_Node000010_Node000013" title=" " alt="" coords="694,147,809,168,804,169,694,152"/>
+<area shape="rect" id="Node000012" href="$class_state_field.html#a518ff6ce6f1e93a5135e7274e2db7359" title="Returns the canonical descriptor, or null for an invalid ID." alt="" coords="1042,120,1187,145"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="969,130,1029,132,1023,133,970,135"/>
+<area shape="poly" id="edge18_Node000016_Node000009" title=" " alt="" coords="688,366,775,352,780,352,689,371"/>
+<area shape="poly" id="edge19_Node000016_Node000016" title=" " alt="" coords="567,368,559,360,564,350,583,344,613,342,647,345,665,355,660,355,646,350,613,347,584,350,568,354,564,360,572,369"/>
+</map>

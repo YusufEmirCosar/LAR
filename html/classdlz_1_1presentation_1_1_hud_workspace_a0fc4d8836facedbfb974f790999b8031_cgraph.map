@@ -1,0 +1,48 @@
+<map id="dlz::presentation::HudWorkspace::rebuildFromControls" name="dlz::presentation::HudWorkspace::rebuildFromControls">
+<area shape="rect" id="Node000001" title="Documents the rebuild from controls operation." alt="" coords="5,197,241,238"/>
+<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_control_panel.html#a4612716beec462828b0827fa7ad9664e" title="Documents the inputs operation." alt="" coords="777,5,917,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,195,312,136,401,104,492,76,634,48,764,32,760,35,635,53,494,82,403,109,314,141,172,199"/>
+<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a622f9724a812e8564fa34383c26240be" title="Documents the rebuild operation." alt="" coords="289,287,445,327"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,236,297,279,293,282,181,241"/>
+<area shape="rect" id="Node000004" href="$classdlz_1_1_scenario_adapter.html#a74b77d4b2f7fb4a7957fb00dc7379890" title="Builds geometry and a guarded solution without partially updating frame." alt="" coords="536,183,678,223"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="414,284,546,228,542,232,417,289"/>
+<area shape="rect" id="Node000008" href="$classdlz_1_1presentation_1_1_presentation_controller.html#a43321c3aad465649153fe0c5101816b2" title="Clears the current operation." alt="" coords="996,319,1146,375"/>
+<area shape="poly" id="edge11_Node000003_Node000008" title=" " alt="" coords="445,309,982,340,978,344,446,314"/>
+<area shape="rect" id="Node000009" href="$classdlz_1_1presentation_1_1_presentation_controller.html#abcb0380e5c09132aa112a1ab05585eaf" title="Resets the current operation." alt="" coords="1217,287,1367,343"/>
+<area shape="poly" id="edge23_Node000003_Node000009" title=" " alt="" coords="445,301,493,299,831,295,1169,304,1204,308,1199,309,1169,310,831,300,493,304,446,306"/>
+<area shape="rect" id="Node000010" href="$classdlz_1_1presentation_1_1_hud_view.html#a91a974861186d9a78bb83ea9618dd525" title="Performs the clear frame operation." alt="" coords="534,369,681,410"/>
+<area shape="poly" id="edge13_Node000003_Node000010" title=" " alt="" coords="427,325,494,348,533,363,527,364,492,354,427,331"/>
+<area shape="rect" id="Node000011" href="$classdlz_1_1presentation_1_1_hud_workspace.html#afb799959b6a1f5055a960535a31071b1" title="Documents the present operation." alt="" coords="526,445,688,486"/>
+<area shape="poly" id="edge14_Node000003_Node000011" title=" " alt="" coords="387,325,434,372,494,419,529,439,523,439,492,424,430,376,386,330"/>
+<area shape="rect" id="Node000019" href="$classdlz_1_1presentation_1_1_hud_view.html#aa3f0a4a7ea8f7b890777c4a538c515f4" title="Replaces the frame with a persistent invalid&#45;input message." alt="" coords="543,511,671,551"/>
+<area shape="poly" id="edge24_Node000003_Node000019" title=" " alt="" coords="377,325,395,363,420,409,453,456,495,496,531,516,525,516,491,500,449,459,415,412,390,366,375,330"/>
+<area shape="rect" id="Node000020" href="$classdlz_1_1presentation_1_1_control_panel.html#a48cb3dd0aa0897e9f25bd6275da211dc" title="Sets geometry readout." alt="" coords="493,91,721,131"/>
+<area shape="poly" id="edge25_Node000003_Node000020" title=" " alt="" coords="382,284,428,229,458,198,491,169,547,137,542,141,495,173,462,202,432,233,386,288"/>
+<area shape="rect" id="Node000005" href="$namespacedlz.html#a4adc2092cab295d405b7976d68f2f02d" title="Derives finite range, rates, angles, and altitude separation." alt="" coords="769,168,925,193"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="678,194,756,188,751,190,679,199"/>
+<area shape="rect" id="Node000006" href="$namespacedlz.html#ad537dc96fce26dc838eb397357fe99cb" title="Evaluates the exact toy equations without applying the ordering guard." alt="" coords="995,157,1146,182"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="678,206,794,210,860,208,924,203,1015,186,1010,188,925,208,860,214,794,215,679,211"/>
+<area shape="rect" id="Node000007" href="$namespacedlz.html#a79a38fda3371b9c11ec3818d24e7df8b" title="Produces an ordered, finite launch&#45;zone solution for supported inputs." alt="" coords="808,94,886,120"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="650,180,768,129,796,121,791,124,770,133,653,184"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="809,167,803,159,807,149,822,143,847,141,874,144,890,153,884,153,873,149,847,146,823,148,811,153,808,158,815,168"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="1034,156,1027,148,1031,138,1046,132,1071,130,1098,133,1113,142,1108,142,1096,138,1071,135,1047,138,1035,142,1032,148,1039,157"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="886,115,1010,152,1005,153,886,120"/>
+<area shape="poly" id="edge10_Node000007_Node000007" title=" " alt="" coords="809,93,803,86,807,76,822,70,847,68,874,70,890,79,884,80,873,75,847,73,823,75,811,80,808,85,815,94"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="1146,334,1204,328,1199,329,1147,339"/>
+<area shape="rect" id="Node000012" href="$classdlz_1_1presentation_1_1_presentation_controller.html#ae48824d760b9680a8001c8cf0bd17e14" title="Returns the current displayed range nm." alt="" coords="772,530,922,586"/>
+<area shape="poly" id="edge15_Node000011_Node000012" title=" " alt="" coords="685,484,722,497,779,523,774,523,720,501,685,489"/>
+<area shape="rect" id="Node000013" href="$classdlz_1_1presentation_1_1_hud_view.html#aa1ba72893d7d4f7544e1a4aca5295a79" title="Sets frame." alt="" coords="778,609,916,650"/>
+<area shape="poly" id="edge16_Node000011_Node000013" title=" " alt="" coords="688,477,723,497,742,522,749,547,755,571,771,596,774,601,769,599,767,599,750,574,743,548,737,524,720,501,688,483"/>
+<area shape="rect" id="Node000016" href="$classdlz_1_1presentation_1_1_presentation_controller.html#a4e5a02e5deef2efd39e72a477526eeaf" title="Documents the state operation." alt="" coords="772,370,922,426"/>
+<area shape="poly" id="edge19_Node000011_Node000016" title=" " alt="" coords="681,442,759,422,754,424,682,447"/>
+<area shape="rect" id="Node000017" href="$classdlz_1_1presentation_1_1_presentation_controller.html#a3970ebda1f3966fbd83baf9cc85ab30e" title="Performs the update operation." alt="" coords="772,450,922,506"/>
+<area shape="poly" id="edge20_Node000011_Node000017" title=" " alt="" coords="688,467,759,473,754,474,688,472"/>
+<area shape="rect" id="Node000014" href="$classdlz_1_1presentation_1_1_hud_view.html#a411cd997a2257b6a4ab95ea6ac3119fb" title="Returns the current displayed range nm." alt="" coords="973,641,1169,682"/>
+<area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="916,637,960,646,955,645,916,642"/>
+<area shape="rect" id="Node000015" href="$classdlz_1_1presentation_1_1_hud_view.html#a1d3b8abd2f82714a28a4517891f91bd2" title="Documents the hud state operation." alt="" coords="1004,576,1138,617"/>
+<area shape="poly" id="edge18_Node000013_Node000015" title=" " alt="" coords="916,617,986,609,991,608,916,622"/>
+<area shape="poly" id="edge21_Node000017_Node000008" title=" " alt="" coords="903,447,923,435,1011,384,1016,382,926,440,905,452"/>
+<area shape="rect" id="Node000018" href="$classdlz_1_1presentation_1_1_presentation_controller.html#a1c2f4dbe3c7c69d8107b4b98848f8f4f" title="Performs the update shoot presentation operation." alt="" coords="983,450,1158,506"/>
+<area shape="poly" id="edge22_Node000017_Node000018" title=" " alt="" coords="922,475,970,477,965,478,923,480"/>
+<area shape="poly" id="edge26_Node000020_Node000002" title=" " alt="" coords="665,88,775,50,771,53,668,92"/>
+</map>

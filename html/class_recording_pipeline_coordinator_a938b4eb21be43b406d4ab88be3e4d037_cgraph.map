@@ -1,0 +1,27 @@
+<map id="RecordingPipelineCoordinator::shutdown" name="RecordingPipelineCoordinator::shutdown">
+<area shape="rect" id="Node000001" title="Controls the shutdown operation." alt="" coords="5,140,199,181"/>
+<area shape="rect" id="Node000002" href="$class_recording_service.html#a4849870db94fac0b6e060909e7332915" title="Cancels the transaction and returns to Idle." alt="" coords="247,140,417,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,158,233,159,228,162,200,163"/>
+<area shape="rect" id="Node000003" href="$class_i_recording_transaction.html#a9898d19f4c6616e90655bda5185867ef" title="Cancels and releases the active transaction." alt="" coords="480,5,632,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="354,137,403,97,464,57,480,51,475,54,466,61,406,102,358,141"/>
+<area shape="rect" id="Node000004" href="$class_i_recording_transaction.html#a5134c9e1404a9d77a0078d78218a069a" title="Returns whether begin() succeeded and the transaction is not cancelled." alt="" coords="480,95,632,135"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="417,141,467,132,462,134,418,146"/>
+<area shape="rect" id="Node000005" href="$class_recording_service.html#ace58f8325f4a0ea630c71b0a1aa9ddc8" title="Notifies observers about record count changed." alt="" coords="472,184,640,225"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="417,174,459,184,453,185,418,180"/>
+<area shape="rect" id="Node000006" href="$class_recording_service.html#a5f8da97e34dd808d9f5819e0a02af42f" title="Sets state." alt="" coords="465,249,646,274"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="364,178,412,207,466,234,487,244,482,244,464,239,409,212,364,184"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="514,93,511,85,518,76,533,70,556,68,580,70,596,79,591,79,579,76,556,73,534,75,521,80,517,86,518,95"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="514,182,511,174,518,165,533,159,556,157,580,160,596,168,591,168,579,165,556,163,534,165,521,169,517,175,518,185"/>
+<area shape="rect" id="Node000007" href="$class_recording_service.html#a26fbbe76f509ced7c5d86231d2cbdfc3" title="Reports whether paused is true." alt="" coords="935,193,1122,218"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="622,246,645,234,659,220,667,204,676,188,693,174,730,160,769,153,808,151,848,153,921,167,983,187,977,187,920,172,847,159,808,156,769,158,731,165,696,179,680,191,672,206,664,223,648,238,623,251"/>
+<area shape="rect" id="Node000008" href="$class_recording_service.html#a9e5faab16b85d3ddc1c95f67cc72d642" title="Reports whether recording is true." alt="" coords="928,246,1129,272"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="647,261,694,262,880,262,914,263,909,264,880,267,694,267,647,266"/>
+<area shape="rect" id="Node000009" href="$class_recording_service.html#ad78c4b9e8ae3320196e181369a6123ea" title="Notifies observers about recording state changed." alt="" coords="694,212,880,253"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="646,248,681,246,676,246,647,253"/>
+<area shape="rect" id="Node000010" href="$class_recording_service.html#ac724bb3c7302c41ba74c9b686e8c1641" title="Returns the current state." alt="" coords="706,352,868,377"/>
+<area shape="poly" id="edge14_Node000006_Node000010" title=" " alt="" coords="588,272,745,345,739,345,586,278"/>
+<area shape="poly" id="edge11_Node000009_Node000007" title=" " alt="" coords="880,219,922,217,917,218,881,225"/>
+<area shape="poly" id="edge12_Node000009_Node000008" title=" " alt="" coords="880,240,915,246,909,246,880,245"/>
+<area shape="poly" id="edge13_Node000009_Node000009" title=" " alt="" coords="744,210,741,202,748,193,764,187,787,185,812,188,828,197,823,196,811,193,787,191,765,193,752,197,746,203,748,213"/>
+<area shape="poly" id="edge15_Node000010_Node000010" title=" " alt="" coords="748,350,741,343,746,333,761,327,787,325,815,328,831,337,826,336,814,333,787,330,762,332,749,337,746,342,753,352"/>
+</map>

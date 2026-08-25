@@ -1,0 +1,30 @@
+<map id="src/viewer/viewport/viewport_camera_controller.cpp" name="src/viewer/viewport/viewport_camera_controller.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="388,5,596,46"/>
+<area shape="rect" id="Node000002" href="$viewport__camera__controller_8h.html" title="Shared tracking policy independent of any viewport renderer." alt="" coords="337,94,502,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="478,45,448,84,444,80,473,48"/>
+<area shape="rect" id="Node000009" href="$statefield_8h.html" title="Stable identifiers and access helpers for every scalar state field." alt="" coords="144,102,275,127"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="425,48,264,99,262,94,429,45"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="527,102,601,127"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="509,44,547,90,542,89,507,49"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="624,102,682,127"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="529,44,620,94,615,94,528,49"/>
+<area shape="rect" id="Node000003" href="$state_8h.html" title="Canonical in&#45;memory aircraft, target, and LAR state structures." alt="" coords="258,183,366,208"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,134,342,176,339,171,391,136"/>
+<area shape="rect" id="Node000005" href="$lar__camera_8h.html" title="Shared viewport presentation and tracking mode enumerations." alt="" coords="389,183,528,208"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="431,133,448,169,443,168,428,137"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="551,183,630,208"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="463,133,553,176,548,176,462,138"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="184,183,234,208"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="365,136,250,182,248,177,370,134"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="654,183,751,208"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="491,133,647,178,642,178,490,138"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="341,256,429,282"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="325,206,365,246,359,245,323,211"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="449,208,410,248,407,243,444,210"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="225,125,287,173,281,173,224,130"/>
+<area shape="poly" id="edge12_Node000009_Node000007" title=" " alt="" coords="211,125,212,168,207,166,208,130"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="95,183,160,208"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="199,126,153,174,149,170,195,129"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="5,183,72,208"/>
+<area shape="poly" id="edge13_Node000009_Node000011" title=" " alt="" coords="182,130,80,178,77,174,184,125"/>
+</map>

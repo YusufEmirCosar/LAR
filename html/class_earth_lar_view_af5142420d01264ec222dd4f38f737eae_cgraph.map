@@ -1,0 +1,28 @@
+<map id="EarthLarView::clearState" name="EarthLarView::clearState">
+<area shape="rect" id="Node000001" title="Performs the clear state operation." alt="" coords="5,132,172,157"/>
+<area shape="rect" id="Node000002" href="$class_earth_lar_view.html#a06afbcf99381269bfad19f5a49b0a397" title="Performs the mark fallback geometry dirty operation." alt="" coords="227,67,412,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,128,222,110,218,113,144,133"/>
+<area shape="rect" id="Node000009" href="$class_earth_lar_view.html#ab9d964f4773a72905409c4040414aedb" title="Performs the refresh overlays operation." alt="" coords="220,132,419,157"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="172,142,206,143,201,145,173,147"/>
+<area shape="rect" id="Node000010" href="$class_earth_lar_view.html#af5e18056f0670a984d3218fe68b64c95" title="Performs the update zone backend operation." alt="" coords="232,181,407,222"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="143,155,222,176,217,178,143,160"/>
+<area shape="rect" id="Node000003" href="$class_earth_overlay_coordinator.html#a21299d7ff2250ab203ea6e9db1765334" title="Performs the mark dirty operation." alt="" coords="482,13,647,54"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="412,64,470,54,465,56,413,69"/>
+<area shape="rect" id="Node000004" href="$class_earth_lar_view.html#a07f6e850546cab4c80f9cda34444f565" title="Performs the request overlay preparation operation." alt="" coords="467,79,662,119"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="412,89,454,93,449,94,413,94"/>
+<area shape="rect" id="Node000005" href="$classlar_1_1map_1_1_earth_map_widget.html#a59f43f7b7adc4e0aab4cd7467709479f" title="Maps camera." alt="" coords="710,5,884,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="630,76,713,52,718,50,632,81"/>
+<area shape="rect" id="Node000006" href="$class_earth_overlay_coordinator.html#aedf8cc2051f858c3b4f1b1dd7701d978" title="Performs the request operation." alt="" coords="715,95,879,135"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="663,103,702,108,697,109,663,108"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="755,93,753,85,760,76,774,70,797,68,821,70,837,79,832,79,820,76,797,73,776,75,763,80,758,86,760,95"/>
+<area shape="rect" id="Node000007" href="$class_viewport_preparation_worker.html#a94eb1c1152292149a523977b8b19489b" title="Submits the current operation." alt="" coords="932,95,1111,135"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="879,112,919,115,913,115,880,118"/>
+<area shape="rect" id="Node000011" href="$class_earth_overlay_coordinator.html#acf6d7a0dfb5788336999360128122102" title="Sets fallback enabled." alt="" coords="482,168,647,209"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="407,194,470,193,464,194,408,200"/>
+<area shape="rect" id="Node000013" href="$class_lar_parametric_zone_gpu_layer.html#af62066059f03cab224ef90f79f7340d3" title="Sets zones." alt="" coords="471,233,658,274"/>
+<area shape="poly" id="edge12_Node000010_Node000013" title=" " alt="" coords="408,218,458,231,453,231,407,223"/>
+<area shape="rect" id="Node000012" href="$struct_lar_zone_mesh.html#a1488f156c2b7278aee0cf91aee91ed3b" title="Clears the current operation." alt="" coords="729,176,865,201"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="647,186,716,188,710,189,647,191"/>
+<area shape="rect" id="Node000014" href="$class_lar_geodesic_geometry.html#acc9da0b8c5204bff4c0a184ef3a0332d" title="Performs the positive angular span operation." alt="" coords="721,233,873,274"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="659,251,708,254,703,254,659,256"/>
+</map>

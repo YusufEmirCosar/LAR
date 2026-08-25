@@ -1,0 +1,48 @@
+<map id="OnlineWorkflowController::requestWhitelist" name="OnlineWorkflowController::requestWhitelist">
+<area shape="rect" id="Node000001" title="Performs the request whitelist operation." alt="" coords="5,104,174,145"/>
+<area shape="rect" id="Node000002" href="$class_i_viewer_file_dialog.html#ab7abb3ea3700a65298fd8bc5557e3bd8" title="Performs the choose Whitelist Path operation." alt="" coords="235,5,376,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,101,221,57,239,50,235,54,223,61,132,105"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#a7277913bba1cf333db294edafd9fce31" title="Reports whether online capture is currently listening." alt="" coords="238,71,374,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,109,224,102,220,106,175,114"/>
+<area shape="rect" id="Node000004" href="$class_application_facade.html#a49e7d78b35420d6ceb0cc678b915070b" title="Loads an IP access policy from a file and submits it for installation." alt="" coords="238,136,374,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="173,134,224,143,220,145,175,139"/>
+<area shape="rect" id="Node000022" href="$class_online_workflow_controller.html#ad18e4077e06b9a96cff93d2c2510b89c" title="Publishes the current policy view." alt="" coords="222,337,390,378"/>
+<area shape="poly" id="edge22_Node000001_Node000022" title=" " alt="" coords="111,143,278,325,273,327,109,147"/>
+<area shape="rect" id="Node000005" href="$class_ip_access_policy_service.html#a94b35449174bc24086b9c346d5997bec" title="Documents the load operation." alt="" coords="444,8,600,49"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="367,133,388,121,403,107,412,94,421,80,436,65,456,55,452,58,440,69,425,83,416,97,407,111,392,125,370,138"/>
+<area shape="rect" id="Node000007" href="$class_application_facade.html#aaa8bd95ed38e7f855835042c17db3338" title="Stores and emits a human&#45;readable operation error." alt="" coords="902,84,1038,125"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="374,147,654,120,888,107,883,109,655,126,375,152"/>
+<area shape="rect" id="Node000011" href="$class_application_facade.html#aef90a981dc98a6d8d92e8d2d911f74aa" title="Requests installation of an IP access policy." alt="" coords="454,207,590,247"/>
+<area shape="poly" id="edge11_Node000004_Node000011" title=" " alt="" coords="370,174,446,201,441,202,370,180"/>
+<area shape="rect" id="Node000006" href="$class_i_ip_access_policy_repository.html#a03effbed2044b54a4e4eac2156299fe6" title="Loads one policy without modifying policy on failure." alt="" coords="654,8,834,49"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="600,26,641,27,636,29,602,31"/>
+<area shape="rect" id="Node000008" href="$class_application_facade.html#a5935c712453aca17ae956f9c34d1d5b2" title="Reports an operation or runtime error to observers." alt="" coords="1112,52,1249,93"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1038,91,1100,84,1095,86,1039,97"/>
+<area shape="rect" id="Node000009" href="$class_application_view_model.html#a8b45470f469030969b5321be7b4c0e6c" title="Sets last error." alt="" coords="1106,117,1255,158"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="1038,112,1094,123,1088,124,1038,118"/>
+<area shape="poly" id="edge8_Node000008_Node000008" title=" " alt="" coords="1143,50,1141,42,1147,33,1161,27,1181,25,1202,28,1216,37,1211,36,1201,33,1181,31,1162,33,1151,37,1146,43,1148,53"/>
+<area shape="rect" id="Node000010" href="$class_application_view_model.html#a4dd5f7090efa0ade330398531a7f3f97" title="Notifies observers about error occurred." alt="" coords="1303,117,1453,158"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="1255,135,1291,137,1285,138,1256,140"/>
+<area shape="poly" id="edge20_Node000011_Node000007" title=" " alt="" coords="557,204,602,180,653,159,713,142,775,128,889,112,884,114,776,133,715,147,655,164,604,185,560,209"/>
+<area shape="rect" id="Node000012" href="$class_application_facade.html#a1dc41e6d7b7418d3b79087b7d24cbe1e" title="Applies the result of an asynchronous mapping&#45;load request." alt="" coords="676,173,812,214"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="590,214,663,205,658,207,591,219"/>
+<area shape="rect" id="Node000018" href="$class_request_result_gate.html#ad451fae2b3f234002925884a113ae060" title="Opens a dispatch window in which a direct runtime may reply synchronously." alt="" coords="672,239,816,279"/>
+<area shape="poly" id="edge17_Node000011_Node000018" title=" " alt="" coords="590,234,659,246,654,247,591,239"/>
+<area shape="rect" id="Node000019" href="$class_request_result_gate.html#a35b04ea0a99c2e3167645896514e09d4" title="Correlates the accepted dispatch with any buffered synchronous result." alt="" coords="672,304,816,345"/>
+<area shape="poly" id="edge18_Node000011_Node000019" title=" " alt="" coords="564,245,655,289,674,298,668,298,653,293,563,251"/>
+<area shape="rect" id="Node000021" href="$class_i_mapping_capture_runtime.html#abc79bbee4346110a76390e3f6fbef7c7" title="Atomically applies a sender access policy to the active transport." alt="" coords="659,369,829,410"/>
+<area shape="poly" id="edge21_Node000011_Node000021" title=" " alt="" coords="540,245,590,299,621,328,656,354,667,363,662,362,653,359,618,332,586,303,539,250"/>
+<area shape="poly" id="edge15_Node000012_Node000007" title=" " alt="" coords="794,170,881,135,897,132,902,130,883,140,796,175"/>
+<area shape="rect" id="Node000013" href="$class_application_facade.html#a0cb4dd92e5b47566047b9a726971e7f1" title="Reports successful loading of a packet mapping." alt="" coords="902,173,1038,214"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="812,191,889,193,883,194,813,196"/>
+<area shape="rect" id="Node000016" href="$class_application_view_model.html#a4a3e33ab5db50a0e26e124bf9225eeba" title="Sets status text." alt="" coords="895,239,1044,279"/>
+<area shape="poly" id="edge16_Node000012_Node000016" title=" " alt="" coords="812,211,885,234,880,234,812,216"/>
+<area shape="poly" id="edge14_Node000013_Node000013" title=" " alt="" coords="930,171,928,163,934,154,949,149,970,147,993,149,1008,158,1003,158,991,154,970,152,950,154,938,159,933,164,935,174"/>
+<area shape="rect" id="Node000020" href="$struct_runtime_request_id.html#a1f28818442dba1abd5f4aabca4987e23" title="Reports whether valid is true." alt="" coords="882,312,1058,337"/>
+<area shape="poly" id="edge19_Node000019_Node000020" title=" " alt="" coords="816,322,869,324,863,325,817,327"/>
+<area shape="rect" id="Node000023" href="$class_online_workflow_controller.html#a2a44f7f5543eba86c8bdb538849cc0d3" title="Notifies observers about policy view changed." alt="" coords="438,337,606,378"/>
+<area shape="poly" id="edge23_Node000022_Node000023" title=" " alt="" coords="390,364,425,366,420,367,391,369"/>
+<area shape="poly" id="edge25_Node000023_Node000022" title=" " alt="" coords="435,349,406,351,405,346,440,348"/>
+<area shape="rect" id="Node000024" href="$class_online_workflow_controller.html#a7d138d69b5b5daf31b30af3c47c1dd89" title="Returns the current active policy." alt="" coords="660,435,828,475"/>
+<area shape="poly" id="edge24_Node000023_Node000024" title=" " alt="" coords="564,376,655,419,674,429,668,428,653,424,563,381"/>
+</map>

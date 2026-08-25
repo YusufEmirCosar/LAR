@@ -1,0 +1,9 @@
+<map id="SessionTimestamp::fromSeconds" name="SessionTimestamp::fromSeconds">
+<area shape="rect" id="Node000001" title="Converts finite, non&#45;negative seconds using nearest&#45;millisecond rounding." alt="" coords="5,55,224,80"/>
+<area shape="rect" id="Node000002" href="$class_session_timestamp.html#a9e69c8185d47045ab21667be1a2976f7" title="Returns the exact integer representation used for ordering and storage." alt="" coords="272,5,485,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,51,293,33,288,36,188,57"/>
+<area shape="rect" id="Node000003" href="$class_session_timestamp.html#a0bddee95b762c9aad1966e479de333ac" title="Returns the timestamp in seconds for UI and rate calculations." alt="" coords="283,55,474,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="224,65,270,67,265,68,225,70"/>
+<area shape="rect" id="Node000004" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="284,104,472,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="177,78,272,100,267,102,177,84"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="lar::map::EarthMapWidget::activeZoom" name="lar::map::EarthMapWidget::activeZoom">
+<area shape="rect" id="Node000001" title="Returns the current active zoom." alt="" coords="5,5,179,46"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_camera.html#af1180ca3e71cd054c36d62bc35755d68" title="Returns the current active zoom." alt="" coords="227,5,374,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,23,214,25,209,26,179,28"/>
+</map>

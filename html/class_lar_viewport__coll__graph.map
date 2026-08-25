@@ -1,0 +1,31 @@
+<map id="LarViewport" name="LarViewport">
+<area shape="rect" id="Node000001" title="Stable viewport boundary for Grid, Mercator, and Sphere modes." alt="" coords="905,227,996,253"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="340,11,412,37"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="426,13,520,4,578,3,640,6,704,14,767,30,828,54,883,88,912,120,932,159,944,197,950,228,945,225,939,198,927,161,908,123,880,92,826,58,766,35,703,19,640,11,578,8,520,9,428,18"/>
+<area shape="rect" id="Node000010" href="$class_viewport_content_switch.html" title="Accessible LAR/Plane/DLZ content selector owned by the host." alt="" coords="566,82,724,108"/>
+<area shape="poly" id="edge11_Node000010_Node000002" title=" " alt="" coords="427,31,535,56,609,81,603,82,533,62,428,37"/>
+<area shape="rect" id="Node000003" href="$struct_lar_scene_state.html" title="Plane, target, field availability, and scene&#45;presence flag." alt="" coords="592,174,699,200"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="714,189,795,198,882,214,918,227,913,227,881,219,794,203,714,194"/>
+<area shape="rect" id="Node000004" href="$struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft." alt="" coords="349,97,404,122"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="418,101,474,100,505,103,535,110,564,122,591,139,633,174,628,174,588,143,562,127,533,115,504,108,474,105,420,107"/>
+<area shape="rect" id="Node000011" href="$class_viewport_camera_controller.html" title="Selects stable plane/target anchors from the available state fields." alt="" coords="558,229,732,254"/>
+<area shape="poly" id="edge13_Node000011_Node000004" title=" " alt="" coords="418,119,485,143,515,156,536,169,545,180,548,191,552,201,560,210,589,228,583,228,556,214,547,203,543,193,540,183,532,173,513,161,483,148,418,125"/>
+<area shape="rect" id="Node000005" href="$struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters." alt="" coords="348,202,405,228"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="420,208,594,192,589,194,421,213"/>
+<area shape="poly" id="edge14_Node000011_Node000005" title=" " alt="" coords="420,227,475,239,560,246,555,247,475,245,420,232"/>
+<area shape="rect" id="Node000006" href="$class_viewport_frame_counter.html" title="Aggregates page render notifications into displayable metrics." alt="" coords="568,282,723,308"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="738,289,809,282,881,267,921,255,926,253,882,273,809,287,739,294"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="342,330,411,356"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="426,336,534,322,597,309,602,308,534,327,427,342"/>
+<area shape="rect" id="Node000008" href="$class_i_lar_viewport_page.html" title="Common contract implemented by every viewport presentation page." alt="" coords="314,387,438,413"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="454,411,514,418,584,422,659,421,732,412,777,403,812,394,844,379,880,352,902,328,920,301,942,255,947,252,924,303,906,331,883,356,846,383,814,399,778,408,733,417,659,426,584,427,514,423,453,416"/>
+<area shape="rect" id="Node000009" href="$class_i_earth_lar_viewport_page.html" title="Extra availability and mode operations required by Earth pages." alt="" coords="568,333,723,358"/>
+<area shape="poly" id="edge9_Node000009_Node000008" title=" " alt="" coords="453,382,576,359,581,359,454,387"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="738,347,810,339,846,330,880,316,899,302,916,285,940,255,944,252,920,289,903,306,883,320,848,335,811,345,738,353"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="737,109,811,132,848,147,883,166,918,196,943,228,938,226,914,199,880,171,846,152,809,137,737,114"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="748,239,907,240,902,241,748,244"/>
+<area shape="rect" id="Node000012" href="$struct_viewport_camera_state.html" title="Renderer&#45;neutral camera anchor and bearing snapshot." alt="" coords="302,281,451,306"/>
+<area shape="poly" id="edge15_Node000011_Node000012" title=" " alt="" coords="466,282,533,271,607,254,601,256,535,277,467,288"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="5,281,159,306"/>
+<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="174,291,303,292,299,295,175,296"/>
+</map>

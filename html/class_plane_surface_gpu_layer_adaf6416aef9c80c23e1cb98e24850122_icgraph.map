@@ -1,0 +1,7 @@
+<map id="PlaneSurfaceGpuLayer::PlaneSurfaceGpuLayer" name="PlaneSurfaceGpuLayer::PlaneSurfaceGpuLayer">
+<area shape="rect" id="Node000001" title="Constructs this object." alt="" coords="217,39,380,79"/>
+<area shape="rect" id="Node000002" href="$class_plane_surface_gpu_layer.html#a085ca7434c23b58de2efff80b504e81f" title="Performs the operator= operation." alt="" coords="9,5,165,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,44,165,41,165,35,204,43"/>
+<area shape="rect" id="Node000003" href="$class_plane_surface_gpu_layer.html#a8173d48abdfc2939e32c6cfdcdc0c44e" title="Constructs this object." alt="" coords="5,71,169,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,74,170,81,169,76,204,73"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="LarNavigationOverlay::paintEvent" name="LarNavigationOverlay::paintEvent">
+<area shape="rect" id="Node000001" title="Performs the paint event operation." alt="" coords="5,39,152,79"/>
+<area shape="rect" id="Node000002" href="$class_grid_geometry_builder.html#a29c9548ab95e74716899cd206e6cf8a0" title="Performs the format Distance operation." alt="" coords="200,5,342,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,44,187,40,182,41,153,49"/>
+<area shape="rect" id="Node000003" href="$class_grid_geometry_builder.html#a568c517c2c303160d792f3cfb0ad5d19" title="Performs the scale bar distance operation." alt="" coords="200,71,342,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,69,187,76,182,77,152,74"/>
+</map>

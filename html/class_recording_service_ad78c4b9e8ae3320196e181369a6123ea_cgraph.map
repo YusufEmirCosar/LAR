@@ -1,0 +1,8 @@
+<map id="RecordingService::recordingStateChanged" name="RecordingService::recordingStateChanged">
+<area shape="rect" id="Node000001" title="Notifies observers about recording state changed." alt="" coords="5,29,191,70"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="53,28,50,19,58,10,74,5,98,3,124,5,141,13,136,14,123,10,98,8,75,10,61,15,56,21,58,29"/>
+<area shape="rect" id="Node000002" href="$class_recording_service.html#a26fbbe76f509ced7c5d86231d2cbdfc3" title="Reports whether paused is true." alt="" coords="246,12,432,37"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,37,233,35,228,36,192,43"/>
+<area shape="rect" id="Node000003" href="$class_recording_service.html#a9e5faab16b85d3ddc1c95f67cc72d642" title="Reports whether recording is true." alt="" coords="239,61,440,86"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,56,226,62,220,62,191,62"/>
+</map>

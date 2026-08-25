@@ -1,0 +1,42 @@
+<map id="PlaneSceneRenderer::draw" name="PlaneSceneRenderer::draw">
+<area shape="rect" id="Node000001" title="Draws the current operation." alt="" coords="5,223,150,264"/>
+<area shape="rect" id="Node000002" href="$class_plane_terrain_gpu_layer.html#a00a4a4f28dc43bec53d297a36031da14" title=" " alt="" coords="201,93,350,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,221,142,183,196,144,209,139,205,143,199,149,145,187,102,225"/>
+<area shape="rect" id="Node000003" href="$class_plane_terrain_gpu_layer.html#a3861dd3b0b6946e8a4b1005d3ed1a85f" title=" " alt="" coords="401,67,574,108"/>
+<area shape="poly" id="edge18_Node000001_Node000003" title=" " alt="" coords="84,222,100,188,123,148,156,109,175,92,197,79,245,62,296,55,346,55,396,63,391,65,346,61,296,60,246,67,199,83,178,96,159,113,128,151,104,191,89,224"/>
+<area shape="rect" id="Node000004" href="$class_plane_terrain_gpu_layer.html#a77bc7ab9b2af508a30c1db45819e9be9" title=" " alt="" coords="622,43,772,84"/>
+<area shape="poly" id="edge17_Node000001_Node000004" title=" " alt="" coords="82,222,95,183,118,134,151,86,172,65,196,48,249,25,304,11,362,4,419,3,475,8,528,15,621,38,616,40,527,21,475,13,419,9,362,9,305,16,250,30,199,53,176,69,155,89,123,137,100,185,87,224"/>
+<area shape="rect" id="Node000006" href="$class_plane_surface_gpu_layer.html#a0a2ed450fdbdfe01e6528b9da15ccca7" title="Draws the current operation." alt="" coords="198,223,353,264"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="149,241,184,242,180,245,151,246"/>
+<area shape="rect" id="Node000009" href="$class_plane_terrain_gpu_layer.html#a148a59a028ca3ca6ca94dba7fd91e5bd" title=" " alt="" coords="201,158,350,199"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="140,221,199,202,195,206,143,225"/>
+<area shape="rect" id="Node000012" href="$class_plane_scene_renderer.html#aaf9bbf71a092003809ff4ba881c79f2f" title="Performs the draw aircraft operation." alt="" coords="203,289,348,329"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="141,262,199,282,194,284,142,267"/>
+<area shape="rect" id="Node000014" href="$class_plane_scene_renderer.html#a6664f72deaa7d5079630798ade017c97" title="Performs the draw skybox operation." alt="" coords="203,354,348,395"/>
+<area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="100,262,145,300,199,339,210,346,205,347,196,343,142,304,100,267"/>
+<area shape="rect" id="Node000015" href="$class_plane_scene_renderer.html#a2fd41eb9a3f22cc1bf389ebd7e669064" title="Performs the upload model operation." alt="" coords="203,419,348,460"/>
+<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="90,262,133,331,164,370,199,404,207,411,201,411,196,408,160,374,129,334,89,267"/>
+<area shape="rect" id="Node000018" href="$class_plane_scene_renderer.html#a242bd529fb0a8699df1aedfa3a76a323" title="Performs the upload skybox operation." alt="" coords="203,485,348,525"/>
+<area shape="poly" id="edge22_Node000001_Node000018" title=" " alt="" coords="85,262,101,306,124,361,157,419,177,446,200,470,205,476,200,475,196,474,173,449,152,422,119,363,96,308,84,267"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="349,102,388,99,383,101,352,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="574,75,610,73,605,75,576,80"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="661,42,659,33,665,24,678,19,697,17,718,19,732,28,726,28,716,24,697,22,679,24,668,29,664,35,666,44"/>
+<area shape="rect" id="Node000005" href="$struct_plane_terrain_patch.html#ab62d24e4661e6b0784a07ec75854b4f1" title=" " alt="" coords="820,73,955,113"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="772,73,807,80,802,81,772,78"/>
+<area shape="rect" id="Node000007" href="$class_plane_surface_gpu_layer.html#a972e1bf9e132cd6176f4a85947e64378" title="Performs the draw shape operation." alt="" coords="410,198,565,239"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="353,232,397,228,392,231,355,237"/>
+<area shape="rect" id="Node000008" href="$class_plane_surface_gpu_layer.html#a1bcf8f57da73d25059060fad462947c6" title="Performs the draw zone operation." alt="" coords="410,263,565,304"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="353,256,397,266,392,267,354,261"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="324,155,352,143,400,119,419,113,414,116,402,123,354,147,327,160"/>
+<area shape="rect" id="Node000010" href="$class_plane_terrain_gpu_layer.html#acc14fd6629009b5a49dccce06071aafa" title=" " alt="" coords="413,133,562,173"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="350,167,400,163,395,165,352,172"/>
+<area shape="poly" id="edge12_Node000010_Node000005" title=" " alt="" coords="562,139,807,104,802,107,563,144"/>
+<area shape="rect" id="Node000011" href="$struct_plane_terrain_patch.html#ad06f3421baca38e8c5287cba0592be46" title=" " alt="" coords="629,158,765,199"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="562,159,617,168,612,169,563,165"/>
+<area shape="rect" id="Node000013" href="$class_plane_scene_renderer.html#a65ab44234d48b4d77ae4a107b0a64c0f" title="Performs the draw mesh operation." alt="" coords="416,329,560,369"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="347,320,403,332,397,333,348,325"/>
+<area shape="rect" id="Node000016" href="$struct_plane_model_mesh.html#ada14130db0049dc0de9a4ce382447426" title="Reports whether the model mesh has no renderable geometry." alt="" coords="405,423,570,449"/>
+<area shape="poly" id="edge20_Node000015_Node000016" title=" " alt="" coords="347,436,392,437,387,438,348,441"/>
+<area shape="rect" id="Node000017" href="$class_plane_scene_renderer.html#a44ca4c2f5d7f37f1d8e0015af9568865" title="Performs the upload interleaved operation." alt="" coords="416,473,560,513"/>
+<area shape="poly" id="edge21_Node000015_Node000017" title=" " alt="" coords="348,455,403,471,398,471,347,460"/>
+</map>

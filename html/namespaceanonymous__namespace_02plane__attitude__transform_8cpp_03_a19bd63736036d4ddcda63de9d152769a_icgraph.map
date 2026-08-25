@@ -1,0 +1,17 @@
+<map id="anonymous_namespace{plane_attitude_transform::cpp}::available" name="anonymous_namespace{plane_attitude_transform::cpp}::available">
+<area shape="rect" id="Node000001" title=" " alt="" coords="896,63,1064,118"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="1013,47,1001,44,980,41,961,43,949,48,943,54,942,64,938,60,938,52,946,44,960,38,980,36,1003,39,1018,48"/>
+<area shape="rect" id="Node000002" href="$namespaceanonymous__namespace_02plane__attitude__transform_8cpp_03.html#a5d1ab459ae90a9a0cd3bc496bc8977bb" title=" " alt="" coords="679,29,848,85"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="878,75,848,73,848,68,883,75"/>
+<area shape="rect" id="Node000003" href="$class_plane_attitude_transform.html#a240aba5fd8e565acd6ad793458bea067" title="Converts yaw, pitch, and roll to an intrinsic aircraft rotation." alt="" coords="473,70,631,111"/>
+<area shape="poly" id="edge9_Node000001_Node000003" title=" " alt="" coords="877,96,848,100,679,100,632,98,632,93,679,95,848,95,883,96"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="796,14,784,10,763,8,745,10,733,15,727,21,727,31,722,27,722,19,730,10,744,5,764,3,786,5,801,15"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="667,73,632,81,632,75,661,73"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="585,54,574,51,552,49,532,51,520,55,515,61,517,71,513,68,510,60,517,51,531,46,552,44,575,46,590,55"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title="Performs the paint gl operation." alt="" coords="235,48,420,74"/>
+<area shape="poly" id="edge6_Node000003_Node000004" title=" " alt="" coords="455,78,420,76,420,71,460,78"/>
+<area shape="rect" id="Node000013" href="$class_plane_scene_widget.html#a6387f9c3b66f950945e37e615318d0e1" title="Sets scene state." alt="" coords="230,98,425,139"/>
+<area shape="poly" id="edge8_Node000003_Node000013" title=" " alt="" coords="460,102,426,109,425,104,455,103"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a4af14d7382c36b30361f6903425d2d57" title="Notifies tests and controls when terrain preparation changes readiness." alt="" coords="5,41,182,82"/>
+<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="217,62,183,64,182,59,222,60"/>
+</map>

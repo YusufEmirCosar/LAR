@@ -1,0 +1,11 @@
+<map id="DtedWaterMaskReadResult" name="DtedWaterMaskReadResult">
+<area shape="rect" id="Node000001" title="Value&#45;or&#45;diagnostic result for one bounded mask&#45;cell load." alt="" coords="32,310,216,336"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="46,199,201,239"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,253,126,311,121,309,122,257"/>
+<area shape="rect" id="Node000003" href="$struct_dted_water_mask_cell.html" title="Water flags ordered as DTED longitude profiles from south to north." alt="" coords="54,102,193,128"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="125,141,126,199,121,198,122,145"/>
+<area shape="rect" id="Node000004" href="$struct_dted_cell_key.html" title="Integer south&#45;west origin used to address one DTED cell." alt="" coords="5,5,101,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="71,41,117,101,112,102,71,46"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="124,5,267,31"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="176,46,135,103,131,100,179,41"/>
+</map>

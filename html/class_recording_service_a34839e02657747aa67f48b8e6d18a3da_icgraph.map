@@ -1,0 +1,13 @@
+<map id="RecordingService::startRecording" name="RecordingService::startRecording">
+<area shape="rect" id="Node000001" title="Performs the start recording operation." alt="" coords="709,46,927,72"/>
+<area shape="rect" id="Node000002" href="$class_direct_application_runtime.html#a104614f54065ed6ac6ef3fb52c8db875" title="Performs the start recording operation." alt="" coords="480,5,649,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="698,44,650,39,650,34,703,43"/>
+<area shape="rect" id="Node000003" href="$class_recording_pipeline_coordinator.html#a61aee7a56b9997f21e15b4f93c886bdd" title="Performs the start recording operation." alt="" coords="468,71,661,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="699,74,662,81,662,76,693,75"/>
+<area shape="rect" id="Node000004" href="$class_recording_runtime_worker.html#a9188ede54293648e6d7ed0d0d3f9c3f0" title="Documents the start recording operation." alt="" coords="250,71,420,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="450,91,421,94,420,88,455,91"/>
+<area shape="rect" id="Node000005" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,37,202,78"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="231,77,202,75,202,69,237,76"/>
+<area shape="rect" id="Node000006" href="$class_recording_runtime_worker.html#a30457a2f16339425b56245e6e331c59b" title="Documents the recording runtime worker operation." alt="" coords="10,103,197,143"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="232,105,197,113,197,107,237,104"/>
+</map>

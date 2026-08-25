@@ -1,0 +1,34 @@
+<map id="src/application/application_view_model.h" name="src/application/application_view_model.h">
+<area shape="rect" id="Node000001" title="Observable presentation state published to MainWindow." alt="" coords="925,5,1096,46"/>
+<area shape="rect" id="Node000002" href="$application__facade_8h.html" title="Main&#45;thread command facade consumed by the Qt presentation layer." alt="" coords="497,94,668,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="907,48,669,98,668,93,912,47"/>
+<area shape="rect" id="Node000007" href="$offline__panel_8cpp.html" title=" " alt="" coords="5,183,168,223"/>
+<area shape="poly" id="edge16_Node000001_Node000007" title=" " alt="" coords="907,36,712,60,599,77,486,97,302,141,150,185,148,180,300,135,485,91,598,71,712,55,912,35"/>
+<area shape="rect" id="Node000011" href="$application__view__model_8cpp.html" title=" " alt="" coords="832,94,1003,135"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="981,56,940,96,937,91,976,58"/>
+<area shape="rect" id="Node000012" href="$source__lifecycle__coordinator_8h.html" title="Single&#45;owner state machine for online and playback source lifecycles." alt="" coords="1026,94,1184,135"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="1044,54,1086,94,1081,93,1042,59"/>
+<area shape="rect" id="Node000014" href="$metrics__panel_8cpp.html" title=" " alt="" coords="1208,94,1378,135"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="1090,48,1232,93,1226,93,1089,54"/>
+<area shape="rect" id="Node000015" href="$values__panel_8cpp.html" title=" " alt="" coords="1402,94,1568,135"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="1112,41,1391,91,1405,96,1399,96,1390,97,1111,47"/>
+<area shape="rect" id="Node000003" href="$application__facade_8cpp.html" title=" " alt="" coords="1089,183,1260,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="683,125,867,149,1078,180,1091,185,1086,185,1077,185,867,154,683,130"/>
+<area shape="rect" id="Node000004" href="$src_2viewer_2main_8cpp.html" title=" " alt="" coords="136,271,274,297"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="479,124,409,134,336,146,273,163,249,173,232,185,218,205,211,228,207,272,202,270,205,227,213,202,229,181,246,168,271,158,335,141,409,129,484,122"/>
+<area shape="rect" id="Node000005" href="$mainwindow_8h.html" title="Top&#45;level Qt Widgets composition and ApplicationFacade bindings." alt="" coords="242,190,408,216"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="512,139,362,192,361,187,507,141"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="481,135,187,185,169,189,167,184,186,180,482,130"/>
+<area shape="rect" id="Node000008" href="$online__panel_8cpp.html" title=" " alt="" coords="432,183,594,223"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="560,146,530,184,527,180,555,148"/>
+<area shape="rect" id="Node000009" href="$online__workflow__controller_8cpp.html" title=" " alt="" coords="617,183,820,223"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="627,141,690,183,685,182,625,146"/>
+<area shape="rect" id="Node000010" href="$recording__workflow__controller_8cpp.html" title=" " alt="" coords="844,183,1065,223"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="683,136,873,182,867,182,682,141"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="297,224,225,273,222,268,292,225"/>
+<area shape="rect" id="Node000006" href="$mainwindow_8cpp.html" title=" " alt="" coords="299,271,479,297"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="346,226,382,272,377,270,343,230"/>
+<area shape="poly" id="edge13_Node000012_Node000003" title=" " alt="" coords="1131,144,1161,183,1156,181,1129,149"/>
+<area shape="rect" id="Node000013" href="$source__lifecycle__coordinator_8cpp.html" title=" " alt="" coords="1285,183,1456,223"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="1180,137,1313,182,1307,182,1179,142"/>
+</map>

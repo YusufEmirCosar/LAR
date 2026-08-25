@@ -1,0 +1,6 @@
+<map id="PlaybackService::recordCount" name="PlaybackService::recordCount">
+<area shape="rect" id="Node000001" title="Returns the current record count." alt="" coords="5,29,204,55"/>
+<area shape="rect" id="Node000002" href="$class_i_session_reader.html#aa1a35e313d682f385331d31187968151" title="Returns the bounded number of indexed records." alt="" coords="252,29,445,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,40,239,42,233,42,204,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="308,28,300,21,305,11,321,5,348,3,379,5,395,15,390,15,377,11,348,8,322,10,308,15,305,20,313,30"/>
+</map>

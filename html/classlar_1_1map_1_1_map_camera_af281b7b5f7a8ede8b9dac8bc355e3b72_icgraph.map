@@ -1,0 +1,66 @@
+<map id="lar::map::MapCamera::presentation" name="lar::map::MapCamera::presentation">
+<area shape="rect" id="Node000001" title="Returns the current presentation." alt="" coords="1461,209,1609,250"/>
+<area shape="rect" id="Node000002" href="$class_lar_zone_mesh_builder.html#aeae61a0b50e2824ca5cb7b32318e8ec1" title="Performs the build operation." alt="" coords="1238,45,1379,86"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1491,200,1338,89,1339,84,1496,201"/>
+<area shape="rect" id="Node000008" href="$classlar_1_1map_1_1_earth_map_gpu_renderer.html#a65462bb317eb2830b4c15398dba167d9" title="Draws the current operation." alt="" coords="1204,176,1413,217"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="1443,217,1414,214,1414,209,1449,217"/>
+<area shape="rect" id="Node000020" href="$classlar_1_1map_1_1_earth_map_widget.html#a86b09d5aed7447ce3fc3c81f1bd44560" title="Maps presentation." alt="" coords="1222,241,1395,282"/>
+<area shape="poly" id="edge22_Node000001_Node000020" title=" " alt="" coords="1443,243,1396,252,1395,247,1449,242"/>
+<area shape="rect" id="Node000030" href="$classlar_1_1map_1_1_map_camera.html#a3c66e809939e9859f95fd776c4a68bfa" title="Sets presentation." alt="" coords="1235,307,1382,347"/>
+<area shape="poly" id="edge36_Node000001_Node000030" title=" " alt="" coords="1488,257,1414,296,1381,309,1380,303,1412,291,1483,258"/>
+<area shape="rect" id="Node000003" href="$class_viewport_preparation_worker.html#a70c6d90f31a6ec89cf2be630b2579331" title="Performs the process latest operation." alt="" coords="962,9,1141,50"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1220,54,1142,45,1141,40,1226,53"/>
+<area shape="rect" id="Node000004" href="$class_viewport_preparation_worker.html#ad377d90c3d519cc10d42bd97d6e26e00" title="Notifies observers about mesh ready." alt="" coords="715,5,895,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="944,37,895,38,894,33,949,36"/>
+<area shape="rect" id="Node000007" href="$class_viewport_preparation_worker.html#a05843486134e53d3c3ca6e89d23526b0" title="Constructs this object." alt="" coords="711,71,899,111"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="949,55,890,73,889,68,954,53"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="909,16,964,19,959,20,910,21"/>
+<area shape="rect" id="Node000005" href="$class_earth_overlay_coordinator.html#aa2ee2cbd2b9e9873d7ef7cc460c62527" title="Constructs this object." alt="" coords="239,71,411,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="697,33,584,45,459,62,406,72,404,68,459,56,583,40,702,31"/>
+<area shape="rect" id="Node000006" href="$class_earth_lar_view.html#a7eb84ed5ba23f7d30ed5ac72308d4448" title="Constructs this object." alt="" coords="5,226,191,252"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="279,123,121,228,118,224,280,117"/>
+<area shape="rect" id="Node000009" href="$classlar_1_1map_1_1_earth_map_gpu_renderer.html#a69950dc44cc3b2d48bb59cfd06eaebc6" title="Prohibits assignment of OpenGL resource ownership." alt="" coords="947,81,1156,122"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="1242,170,1155,138,1120,125,1120,120,1157,132,1247,170"/>
+<area shape="rect" id="Node000010" href="$classlar_1_1map_1_1_earth_map_widget.html#a4d23293f76082ff3ae3ae088d6b2326a" title="Performs the paint gl operation." alt="" coords="965,212,1138,253"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="1186,214,1139,223,1138,218,1191,213"/>
+<area shape="rect" id="Node000011" href="$class_earth_lar_view.html#a1b46625580e1e14ca09c5caf781135f3" title="Performs the paint gl operation." alt="" coords="729,250,881,276"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="947,246,882,256,881,251,952,244"/>
+<area shape="rect" id="Node000016" href="$classlar_1_1map_1_1_earth_map_widget.html#ae9d2dda90bd17821bbf89aa5316874b6" title="Notifies observers about renderer ready." alt="" coords="718,136,892,177"/>
+<area shape="poly" id="edge17_Node000010_Node000016" title=" " alt="" coords="966,207,873,180,873,175,971,207"/>
+<area shape="rect" id="Node000012" href="$class_earth_lar_view.html#a31a878a0e62a405d4a6b4632b5b22641" title="Maps unavailable." alt="" coords="461,252,661,277"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="711,264,662,266,661,261,716,263"/>
+<area shape="poly" id="edge13_Node000012_Node000006" title=" " alt="" coords="444,260,191,247,191,241,447,256"/>
+<area shape="rect" id="Node000015" href="$class_earth_lar_view.html#a9b66c1d8318ccb38b32ca0bfecfab5b1" title="Performs the install map asset operation." alt="" coords="242,301,408,342"/>
+<area shape="poly" id="edge14_Node000012_Node000015" title=" " alt="" coords="524,284,460,303,409,315,408,310,458,298,529,282"/>
+<area shape="poly" id="edge15_Node000015_Node000006" title=" " alt="" coords="251,297,136,255,136,250,255,294"/>
+<area shape="poly" id="edge16_Node000015_Node000012" title=" " alt="" coords="382,294,458,274,463,275,458,277,460,279,383,299"/>
+<area shape="rect" id="Node000017" href="$classlar_1_1map_1_1_earth_map_widget.html#a03b90d20759cc6ec3f10b0efccf4c588" title="Performs the initialize gl operation." alt="" coords="474,71,648,111"/>
+<area shape="poly" id="edge18_Node000016_Node000017" title=" " alt="" coords="701,139,613,115,612,109,706,138"/>
+<area shape="rect" id="Node000019" href="$classlar_1_1map_1_1_earth_map_widget.html#a9b79744bb30edf19770851af9961c93d" title="Sets map mesh." alt="" coords="474,136,648,177"/>
+<area shape="poly" id="edge20_Node000016_Node000019" title=" " alt="" coords="700,157,649,159,648,154,705,156"/>
+<area shape="poly" id="edge19_Node000017_Node000016" title=" " alt="" coords="663,107,756,135,751,136,663,112"/>
+<area shape="poly" id="edge21_Node000019_Node000015" title=" " alt="" coords="520,185,357,303,354,299,515,187"/>
+<area shape="rect" id="Node000021" href="$classlar_1_1map_1_1_earth_map_widget.html#a4c33b711ba5998afe3f26cc65dd2d9fb" title="Performs the mouse move event operation." alt="" coords="965,147,1138,187"/>
+<area shape="poly" id="edge23_Node000020_Node000021" title=" " alt="" coords="1219,235,1203,231,1155,203,1124,191,1125,185,1157,198,1205,226,1224,236"/>
+<area shape="rect" id="Node000022" href="$classlar_1_1map_1_1_earth_map_widget.html#abbd4908aee727f405614ca12891ca3c0" title="Sets rotation." alt="" coords="965,291,1138,331"/>
+<area shape="poly" id="edge25_Node000020_Node000022" title=" " alt="" coords="1209,281,1139,297,1138,292,1204,282"/>
+<area shape="poly" id="edge24_Node000021_Node000016" title=" " alt="" coords="946,163,893,163,892,157,952,162"/>
+<area shape="rect" id="Node000023" href="$class_earth_lar_view.html#aed49eebc05015a48136f531d1234ce78" title="Performs the apply tracked camera operation." alt="" coords="712,351,898,391"/>
+<area shape="poly" id="edge26_Node000022_Node000023" title=" " alt="" coords="953,335,892,353,891,347,947,336"/>
+<area shape="rect" id="Node000024" href="$class_earth_lar_view.html#a0e809f583a4542f2eccc32c4c62ed51d" title="Performs the fit to data operation." alt="" coords="481,301,641,326"/>
+<area shape="poly" id="edge32_Node000022_Node000024" title=" " alt="" coords="947,312,642,316,642,311,952,311"/>
+<area shape="rect" id="Node000029" href="$class_earth_lar_view.html#a3cf85e639e99f53d5412b538f4178168" title="Performs the rotate sphere operation." alt="" coords="714,201,896,226"/>
+<area shape="poly" id="edge33_Node000022_Node000029" title=" " alt="" coords="985,284,945,267,922,253,898,240,867,230,867,224,900,235,924,248,948,262,990,284"/>
+<area shape="poly" id="edge29_Node000023_Node000012" title=" " alt="" coords="759,342,714,316,662,291,631,280,631,275,664,286,717,311,765,342"/>
+<area shape="poly" id="edge28_Node000023_Node000015" title=" " alt="" coords="694,363,459,342,409,336,408,330,459,336,699,361"/>
+<area shape="poly" id="edge27_Node000023_Node000024" title=" " alt="" coords="698,347,619,330,619,324,703,346"/>
+<area shape="rect" id="Node000026" href="$class_earth_lar_view.html#a3efadef82b9eddeee72b63a5352e6a66" title="Sets camera state." alt="" coords="460,402,662,428"/>
+<area shape="poly" id="edge30_Node000023_Node000026" title=" " alt="" coords="700,390,637,404,636,399,694,391"/>
+<area shape="rect" id="Node000027" href="$class_earth_lar_view.html#aef92f959470406de4057c89fa40cbb14" title="Sets lar view mode." alt="" coords="459,452,663,477"/>
+<area shape="poly" id="edge31_Node000023_Node000027" title=" " alt="" coords="756,398,711,423,664,443,629,454,628,448,662,438,709,418,751,400"/>
+<area shape="poly" id="edge34_Node000029_Node000006" title=" " alt="" coords="698,219,239,235,192,237,190,232,239,230,700,214"/>
+<area shape="poly" id="edge35_Node000029_Node000012" title=" " alt="" coords="722,231,627,253,626,248,727,229"/>
+<area shape="rect" id="Node000031" href="$classlar_1_1map_1_1_earth_map_widget.html#a30e26a4787bcf8a7c06ff7fed5362d62" title="Sets map presentation." alt="" coords="965,389,1138,430"/>
+<area shape="poly" id="edge37_Node000030_Node000031" title=" " alt="" coords="1231,352,1118,391,1117,386,1226,353"/>
+<area shape="poly" id="edge38_Node000031_Node000027" title=" " alt="" coords="952,421,664,456,664,450,947,421"/>
+</map>

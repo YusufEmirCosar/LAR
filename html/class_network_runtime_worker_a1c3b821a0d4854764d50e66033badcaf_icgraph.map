@@ -1,0 +1,48 @@
+<map id="NetworkRuntimeWorker::recordingBatchReady" name="NetworkRuntimeWorker::recordingBatchReady">
+<area shape="rect" id="Node000001" title="Notifies observers about recording batch ready." alt="" coords="1355,108,1516,149"/>
+<area shape="rect" id="Node000002" href="$class_network_runtime_worker.html#a0c4c5c644ab0d0b10fb617a032b9028a" title="Documents the flush recording batch operation." alt="" coords="1147,191,1307,231"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1371,154,1282,193,1280,188,1366,156"/>
+<area shape="rect" id="Node000004" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,277,202,318"/>
+<area shape="poly" id="edge31_Node000001_Node000004" title=" " alt="" coords="1371,102,1302,77,1214,50,1117,29,1067,23,1018,20,559,20,468,15,396,8,362,9,328,16,292,29,251,52,222,75,196,103,174,134,155,167,128,229,113,278,107,276,123,227,151,164,170,131,192,100,218,71,248,48,290,24,327,11,362,4,396,3,469,10,559,15,1018,15,1068,17,1118,24,1216,45,1304,72,1376,102"/>
+<area shape="rect" id="Node000003" href="$class_network_runtime_worker.html#a57b22292b329457197beaa3c4bfb0c27" title="Documents the acknowledge recording batch operation." alt="" coords="688,55,887,95"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1193,180,1150,146,1098,116,1046,99,991,87,888,77,887,72,992,82,1047,94,1100,111,1153,142,1198,180"/>
+<area shape="rect" id="Node000005" href="$class_network_runtime_worker.html#a9b85de138d6dd9abeea70713b26d518a" title="Documents the drain recording input operation." alt="" coords="261,220,421,261"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="1183,238,1143,261,1100,275,1006,291,911,300,815,302,721,298,552,281,422,260,421,255,552,276,722,293,815,296,910,295,1006,286,1098,270,1141,256,1178,240"/>
+<area shape="rect" id="Node000006" href="$class_network_runtime_worker.html#ab205ae635f436a648d5eaa40dbc7e343" title="Documents the initialize operation." alt="" coords="480,335,640,375"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="1201,241,1156,285,1129,304,1100,319,1041,339,979,354,916,364,853,369,737,372,641,367,641,361,737,366,853,364,915,358,978,348,1039,334,1098,314,1126,299,1153,281,1196,244"/>
+<area shape="rect" id="Node000011" href="$class_network_runtime_worker.html#a9bd551a822c9820da3db8290fea6b935" title="Sets recording input enabled." alt="" coords="250,596,432,637"/>
+<area shape="poly" id="edge29_Node000002_Node000011" title=" " alt="" coords="1208,243,1163,307,1134,338,1101,365,1017,416,927,461,835,498,743,530,571,577,433,605,432,600,569,572,741,525,833,493,925,456,1014,412,1097,361,1130,334,1159,303,1204,246"/>
+<area shape="rect" id="Node000013" href="$class_network_runtime_worker.html#aa45b815af6fc6f8f9095d75072552941" title="Documents the stop online operation." alt="" coords="261,105,421,146"/>
+<area shape="poly" id="edge30_Node000002_Node000013" title=" " alt="" coords="1129,188,1099,184,909,158,720,142,551,133,422,129,420,124,551,128,720,137,910,153,1099,179,1134,188"/>
+<area shape="rect" id="Node000014" href="$class_network_runtime_worker.html#af844ac867ef3c41104e1c6a97c3ca160" title="Documents the queue recording packet operation." alt="" coords="935,220,1099,261"/>
+<area shape="poly" id="edge23_Node000002_Node000014" title=" " alt="" coords="1129,225,1100,232,1099,226,1134,224"/>
+<area shape="rect" id="Node000015" href="$class_network_runtime_worker.html#adef27a16fa22d1f223a450a7360a646a" title="Documents the runtime error operation." alt="" coords="707,169,868,210"/>
+<area shape="poly" id="edge28_Node000002_Node000015" title=" " alt="" coords="1129,207,868,196,868,191,1134,206"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="673,53,579,43,469,42,413,47,357,57,302,73,251,96,224,114,201,135,161,186,132,237,115,278,110,276,128,235,157,183,197,132,221,109,248,91,300,68,355,52,412,42,469,37,579,38,677,51"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="244,265,192,279,189,275,248,262"/>
+<area shape="poly" id="edge21_Node000006_Node000004" title=" " alt="" coords="467,331,432,326,312,311,203,303,201,298,313,306,432,320,472,330"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="496,327,479,319,454,300,431,281,397,264,397,259,433,277,458,295,481,314,502,327"/>
+<area shape="rect" id="Node000007" href="$class_network_runtime_worker.html#a2f6218bf40e47b9fb46652d032847cec" title="Processes load mapping." alt="" coords="261,531,421,571"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="543,387,498,455,468,490,434,520,412,533,410,528,430,516,464,486,494,452,538,390"/>
+<area shape="rect" id="Node000008" href="$class_network_runtime_worker.html#a2bacdaac67e03622c47eea38ae754ffb" title="Documents the network runtime worker operation." alt="" coords="15,592,192,633"/>
+<area shape="poly" id="edge22_Node000006_Node000008" title=" " alt="" coords="557,389,548,451,526,523,510,560,490,594,464,625,433,651,398,668,360,677,321,679,282,676,207,659,147,636,148,631,209,654,282,671,321,674,360,672,396,663,431,646,461,621,485,591,506,557,521,521,543,450,554,393"/>
+<area shape="rect" id="Node000009" href="$class_network_runtime_worker.html#a90f703c0d11093fbada9ea1b175d21b2" title="Documents the reset metrics operation." alt="" coords="261,335,421,375"/>
+<area shape="poly" id="edge11_Node000006_Node000009" title=" " alt="" coords="462,356,422,358,421,353,467,354"/>
+<area shape="rect" id="Node000010" href="$class_network_runtime_worker.html#aff0d368eb53fb10fb674825954b4f641" title="Sets ip access policy." alt="" coords="261,400,421,441"/>
+<area shape="poly" id="edge13_Node000006_Node000010" title=" " alt="" coords="473,381,413,402,411,397,478,379"/>
+<area shape="poly" id="edge15_Node000006_Node000011" title=" " alt="" coords="542,387,482,496,463,544,453,564,434,585,415,598,412,593,430,581,448,561,458,542,478,494,537,391"/>
+<area shape="rect" id="Node000012" href="$class_network_runtime_worker.html#ab2ac6dbbcb521bcf8299f894d66b89f3" title="Documents the start online operation." alt="" coords="261,465,421,506"/>
+<area shape="poly" id="edge17_Node000006_Node000012" title=" " alt="" coords="527,385,483,422,433,455,407,467,405,462,431,450,480,418,522,387"/>
+<area shape="poly" id="edge19_Node000006_Node000013" title=" " alt="" coords="530,323,430,210,366,149,366,144,434,207,535,323"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="254,523,248,520,199,471,160,415,130,361,113,321,113,316,135,359,164,412,203,467,251,516,259,523"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="243,577,186,594,184,589,248,575"/>
+<area shape="poly" id="edge12_Node000009_Node000004" title=" " alt="" coords="243,333,191,321,190,316,248,331"/>
+<area shape="poly" id="edge14_Node000010_Node000004" title=" " alt="" coords="262,394,248,389,186,355,135,321,134,316,189,350,251,385,267,393"/>
+<area shape="poly" id="edge16_Node000011_Node000004" title=" " alt="" coords="252,587,248,585,218,554,192,519,151,443,123,372,109,321,110,316,128,370,155,441,196,516,222,550,251,581,258,588"/>
+<area shape="poly" id="edge18_Node000012_Node000004" title=" " alt="" coords="256,458,248,455,207,422,170,386,119,321,119,316,174,382,211,418,251,450,262,458"/>
+<area shape="poly" id="edge20_Node000013_Node000004" title=" " alt="" coords="268,155,251,167,214,194,179,224,125,278,121,275,175,220,210,190,248,162,271,151"/>
+<area shape="poly" id="edge24_Node000014_Node000006" title=" " alt="" coords="917,266,642,338,640,333,922,263"/>
+<area shape="poly" id="edge25_Node000014_Node000015" title=" " alt="" coords="917,219,869,210,868,205,922,219"/>
+<area shape="poly" id="edge27_Node000015_Node000004" title=" " alt="" coords="689,180,597,176,486,176,367,186,308,196,250,211,216,224,184,242,132,279,128,275,181,237,214,220,249,206,307,191,366,181,486,170,598,170,694,178"/>
+<area shape="poly" id="edge26_Node000015_Node000006" title=" " alt="" coords="706,218,690,231,657,256,626,284,579,337,576,332,622,281,653,252,687,226,711,216"/>
+</map>

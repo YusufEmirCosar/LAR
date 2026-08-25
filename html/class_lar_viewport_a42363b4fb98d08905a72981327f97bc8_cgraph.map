@@ -1,0 +1,28 @@
+<map id="LarViewport::setState" name="LarViewport::setState">
+<area shape="rect" id="Node000001" title="Sets state." alt="" coords="5,262,153,288"/>
+<area shape="rect" id="Node000002" href="$class_lar_viewport.html#a807c3e87a98fe3f06bf1f0a6c33b15eb" title="Documents the distribute camera state operation." alt="" coords="201,95,398,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,260,257,142,258,147,100,264"/>
+<area shape="rect" id="Node000005" href="$class_lar_viewport.html#a5fe350d4690e98f30f203a685e9875ef" title="Documents the fit to data operation." alt="" coords="224,233,375,258"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="152,263,211,256,206,259,154,268"/>
+<area shape="rect" id="Node000009" href="$class_viewport_camera_controller.html#a3a961e773ec644aece00e150cc47616c" title="Sets scene." alt="" coords="212,283,386,323"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="152,282,200,289,195,291,153,287"/>
+<area shape="rect" id="Node000012" href="$class_i_lar_viewport_page.html#a20580de17fae7d4c87c00a6cd9854771" title="Sets scene state." alt="" coords="206,372,393,413"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="106,286,248,363,244,366,105,291"/>
+<area shape="rect" id="Node000003" href="$class_i_lar_viewport_page.html#a4a83609a08e6e23898c3e592421a11b5" title="Sets camera state." alt="" coords="446,29,642,70"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="377,92,453,73,448,76,379,96"/>
+<area shape="rect" id="Node000004" href="$class_viewport_camera_controller.html#a1ae2d70894db28fff6474920cdbd7d65" title="Returns the current state." alt="" coords="457,95,631,135"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="398,112,444,114,439,116,399,118"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="500,28,498,19,505,10,521,5,544,3,569,5,586,13,581,14,568,10,544,8,522,10,508,15,503,21,505,30"/>
+<area shape="rect" id="Node000006" href="$class_lar_viewport.html#a87f5ac3cf9e88e1603eb618760909944" title="Documents the active page operation." alt="" coords="462,160,626,185"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="336,230,445,194,473,189,468,191,447,199,338,235"/>
+<area shape="rect" id="Node000007" href="$class_i_lar_viewport_page.html#a98c5c87b1594f4507168a28780959406" title="Performs the fit to data operation." alt="" coords="452,233,637,258"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="375,243,439,245,434,246,376,248"/>
+<area shape="rect" id="Node000008" href="$class_i_lar_viewport_page.html#a5bacb9c4b9fc42c6d3c772a5fca5d2f7" title="Returns the current widget." alt="" coords="459,282,629,308"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="367,256,465,278,459,279,367,262"/>
+<area shape="poly" id="edge8_Node000007_Node000007" title=" " alt="" coords="505,232,498,224,502,214,518,208,544,206,573,209,589,218,583,218,571,214,544,211,519,214,506,218,503,224,510,233"/>
+<area shape="rect" id="Node000010" href="$class_viewport_camera_controller.html#a7eb6ee5ba8b24367e895638c6c98c63f" title="Performs the refresh operation." alt="" coords="457,332,631,373"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="387,318,444,332,439,332,387,323"/>
+<area shape="rect" id="Node000011" href="$class_viewport_camera_controller.html#abc947546a2318609e939ba25c027f8e8" title="Reports whether fields is true." alt="" coords="690,332,865,373"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="631,350,678,352,672,352,632,355"/>
+<area shape="poly" id="edge14_Node000012_Node000012" title=" " alt="" coords="258,370,256,362,262,353,277,347,299,345,323,348,339,357,334,356,322,353,299,351,278,353,266,357,261,363,263,373"/>
+</map>

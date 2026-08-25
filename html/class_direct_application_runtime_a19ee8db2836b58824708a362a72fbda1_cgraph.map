@@ -1,0 +1,30 @@
+<map id="DirectApplicationRuntime::publishRecordingState" name="DirectApplicationRuntime::publishRecordingState">
+<area shape="rect" id="Node000001" title="Performs the publish recording state operation." alt="" coords="5,104,175,145"/>
+<area shape="rect" id="Node000002" href="$class_recording_service.html#a26fbbe76f509ced7c5d86231d2cbdfc3" title="Reports whether paused is true." alt="" coords="230,5,416,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,102,164,70,222,40,242,34,237,37,224,45,167,74,120,106"/>
+<area shape="rect" id="Node000003" href="$class_recording_service.html#a9e5faab16b85d3ddc1c95f67cc72d642" title="Reports whether recording is true." alt="" coords="223,55,424,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,102,255,83,251,86,176,106"/>
+<area shape="rect" id="Node000004" href="$class_recording_service.html#a3e8ee8ae7d46725ba613419695ec7ed0" title="Returns the current record count." alt="" coords="239,104,408,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="175,122,226,124,221,126,176,127"/>
+<area shape="rect" id="Node000006" href="$class_recording_service.html#ac36c5351de37045fc101da63a991399d" title="Returns the elapsed time between the first and last saved packets." alt="" coords="231,170,416,210"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="165,143,236,164,231,166,165,148"/>
+<area shape="rect" id="Node000012" href="$class_i_application_runtime.html#abfc82e2a4cfef4760d066bd8a57e1931" title="Notifies observers about recording state changed." alt="" coords="241,235,406,276"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="115,143,164,182,224,220,240,229,234,229,221,224,161,186,114,148"/>
+<area shape="rect" id="Node000005" href="$class_i_recording_transaction.html#a03d1e2b5362d3f20fb1c3b87206939d5" title="Returns the number of records committed to the active transaction." alt="" coords="491,104,643,145"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="408,122,478,124,473,125,408,127"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="522,103,519,94,527,85,543,80,567,78,593,80,611,89,605,89,592,85,567,83,544,85,530,90,524,96,526,105"/>
+<area shape="rect" id="Node000007" href="$class_session_timestamp.html#abdcdc65dfb0177686e5c9065caf4932f" title="Clamps signed milliseconds to the supported closed interval." alt="" coords="472,170,662,210"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="416,188,459,190,454,190,417,193"/>
+<area shape="rect" id="Node000011" href="$class_session_timestamp.html#aeb247cf8e65e75c49239bfefb1fe72b8" title="Returns the canonical zero value." alt="" coords="734,251,900,276"/>
+<area shape="poly" id="edge15_Node000006_Node000011" title=" " alt="" coords="415,208,472,220,601,238,721,254,716,254,600,243,472,225,415,214"/>
+<area shape="rect" id="Node000008" href="$class_session_timestamp.html#afcb01ba58c3c29059a2ea8f70f829056" title="Returns the largest timestamp accepted by the application domain." alt="" coords="718,76,916,102"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="634,167,661,155,685,136,709,119,741,108,747,106,712,123,688,141,664,159,636,172"/>
+<area shape="rect" id="Node000009" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="972,119,1160,160"/>
+<area shape="poly" id="edge11_Node000007_Node000009" title=" " alt="" coords="662,169,710,162,837,150,959,144,953,145,838,155,711,167,663,175"/>
+<area shape="rect" id="Node000010" href="$class_session_timestamp.html#a9e69c8185d47045ab21667be1a2976f7" title="Returns the exact integer representation used for ordering and storage." alt="" coords="710,177,924,203"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="662,188,697,190,692,190,663,193"/>
+<area shape="poly" id="edge12_Node000007_Node000011" title=" " alt="" coords="639,208,758,246,753,246,638,214"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="884,100,959,117,954,117,884,105"/>
+<area shape="poly" id="edge13_Node000011_Node000009" title=" " alt="" coords="848,248,922,213,1012,168,1017,167,925,218,850,253"/>
+<area shape="poly" id="edge14_Node000011_Node000011" title=" " alt="" coords="776,249,768,242,773,232,789,226,817,224,848,227,865,237,859,236,847,232,817,229,791,231,776,236,773,241,781,251"/>
+</map>

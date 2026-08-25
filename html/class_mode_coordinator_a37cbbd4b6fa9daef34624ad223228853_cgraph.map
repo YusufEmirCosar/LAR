@@ -1,0 +1,7 @@
+<map id="ModeCoordinator::transitionTo" name="ModeCoordinator::transitionTo">
+<area shape="rect" id="Node000001" title="Performs the transition to operation." alt="" coords="5,31,201,56"/>
+<area shape="rect" id="Node000002" href="$class_mode_coordinator.html#ade9dc078e2f2c1b79e974dee43230e88" title="Notifies observers about mode changed." alt="" coords="249,5,461,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,31,236,30,230,31,201,36"/>
+<area shape="rect" id="Node000003" href="$class_mode_coordinator.html#a1f9654679d28b6d686a3d6530bd345bb" title="Performs the mode String operation." alt="" coords="258,55,452,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,50,245,57,240,57,201,55"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="ApplicationFacade::setPlaybackRate" name="ApplicationFacade::setPlaybackRate">
+<area shape="rect" id="Node000001" title="Sets the offline playback speed." alt="" coords="5,160,142,201"/>
+<area shape="rect" id="Node000002" href="$class_application_facade.html#aaa8bd95ed38e7f855835042c17db3338" title="Stores and emits a human&#45;readable operation error." alt="" coords="240,95,376,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,159,227,137,222,140,143,164"/>
+<area shape="rect" id="Node000006" href="$class_application_view_model.html#aaf7a0323361e76135308b0bb16f91d1a" title="Sets playback rate." alt="" coords="233,160,382,201"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="142,178,220,179,215,181,142,183"/>
+<area shape="rect" id="Node000008" href="$class_i_playback_runtime.html#a18384bfd40f409e86dd9289dddb73ebc" title="Changes the finite positive playback speed multiplier." alt="" coords="190,225,426,250"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="142,197,190,210,229,221,224,221,189,215,142,202"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#a5935c712453aca17ae956f9c34d1d5b2" title="Reports an operation or runtime error to observers." alt="" coords="488,29,624,70"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="375,95,475,71,470,72,377,100"/>
+<area shape="rect" id="Node000004" href="$class_application_view_model.html#a8b45470f469030969b5321be7b4c0e6c" title="Sets last error." alt="" coords="482,95,631,135"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="376,112,468,114,463,116,377,118"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="517,28,515,19,522,10,535,5,556,3,578,5,593,14,588,14,577,10,556,8,537,10,525,15,521,20,522,30"/>
+<area shape="rect" id="Node000005" href="$class_application_view_model.html#a4dd5f7090efa0ade330398531a7f3f97" title="Notifies observers about error occurred." alt="" coords="686,95,836,135"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="631,112,673,115,668,115,631,118"/>
+<area shape="rect" id="Node000007" href="$class_application_view_model.html#a4c61af3271c6850d139f8277914d5c14" title="Notifies observers about playback state changed." alt="" coords="474,160,638,201"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="383,178,461,180,455,181,383,183"/>
+</map>

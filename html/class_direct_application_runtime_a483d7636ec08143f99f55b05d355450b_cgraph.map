@@ -1,0 +1,11 @@
+<map id="DirectApplicationRuntime::setPlaybackRepeat" name="DirectApplicationRuntime::setPlaybackRepeat">
+<area shape="rect" id="Node000001" title="Sets playback repeat." alt="" coords="5,104,175,145"/>
+<area shape="rect" id="Node000002" href="$class_i_application_runtime.html#a8a335e653e0be8326f22b4d50759f8f7" title="Documents the accept command operation." alt="" coords="247,5,386,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,101,222,57,242,51,238,53,224,61,132,106"/>
+<area shape="rect" id="Node000003" href="$class_i_application_runtime.html#a96c2d9a354915e79319f34abeffdecc8" title="Notifies observers about command finished." alt="" coords="247,71,386,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,109,234,102,229,105,176,114"/>
+<area shape="rect" id="Node000004" href="$class_i_application_runtime.html#a01f646d011f811a4eb6b1ac3faae60ec" title="Documents the reject command operation." alt="" coords="247,136,386,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="175,134,234,144,229,145,175,139"/>
+<area shape="rect" id="Node000005" href="$class_playback_service.html#ac59f4a1dffa3bdeee9880b82c4b5f516" title="Sets repeat." alt="" coords="223,201,410,226"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="130,143,224,186,247,196,242,196,222,191,129,148"/>
+</map>

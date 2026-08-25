@@ -1,0 +1,26 @@
+<map id="RecordingPipelineCoordinator::resumeRecording" name="RecordingPipelineCoordinator::resumeRecording">
+<area shape="rect" id="Node000001" title="Documents the resume recording operation." alt="" coords="5,104,199,145"/>
+<area shape="rect" id="Node000002" href="$class_recording_pipeline_coordinator.html#a42d64115ff6cf47c38dc42f8e158098e" title="Notifies observers about command finished." alt="" coords="247,5,440,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,101,246,57,268,50,263,53,248,61,147,106"/>
+<area shape="rect" id="Node000003" href="$class_recording_pipeline_coordinator.html#a4bd84318c4dc811958dd7016b3f6b769" title="Documents the recording input enabled operation." alt="" coords="247,71,440,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,108,234,105,229,108,200,113"/>
+<area shape="rect" id="Node000004" href="$class_recording_service.html#ad8f89c817a62c6b36078429f23eaa382" title="Performs the resume recording operation." alt="" coords="256,136,431,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="199,135,243,142,237,143,199,140"/>
+<area shape="rect" id="Node000010" href="$class_recording_service.html#ac724bb3c7302c41ba74c9b686e8c1641" title="Returns the current state." alt="" coords="778,218,940,244"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="141,143,191,166,247,186,386,212,526,226,656,232,765,234,760,235,656,237,526,232,385,217,246,191,189,171,140,148"/>
+<area shape="rect" id="Node000005" href="$class_i_recording_clock.html#ae84877176911dcbb538060eab8de1c44" title="Returns the current point in the process&#45;wide monotonic clock." alt="" coords="488,94,718,120"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="431,137,519,123,514,124,432,142"/>
+<area shape="rect" id="Node000006" href="$class_recording_service.html#a5f8da97e34dd808d9f5819e0a02af42f" title="Sets state." alt="" coords="512,144,694,169"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="431,154,500,156,494,157,432,159"/>
+<area shape="rect" id="Node000007" href="$class_recording_service.html#a26fbbe76f509ced7c5d86231d2cbdfc3" title="Reports whether paused is true." alt="" coords="1007,60,1194,85"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="693,143,717,130,727,120,733,109,739,86,745,62,753,51,765,41,801,24,840,15,880,13,920,15,995,30,1058,53,1052,53,994,35,919,20,880,18,841,21,803,29,768,45,757,54,750,64,744,87,738,111,731,123,720,134,695,148"/>
+<area shape="rect" id="Node000008" href="$class_recording_service.html#a9e5faab16b85d3ddc1c95f67cc72d642" title="Reports whether recording is true." alt="" coords="1000,113,1201,138"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="694,148,987,132,981,133,694,153"/>
+<area shape="rect" id="Node000009" href="$class_recording_service.html#ad78c4b9e8ae3320196e181369a6123ea" title="Notifies observers about recording state changed." alt="" coords="766,79,952,119"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="669,140,718,130,754,124,760,123,719,135,670,146"/>
+<area shape="poly" id="edge12_Node000006_Node000010" title=" " alt="" coords="650,167,800,213,795,213,649,172"/>
+<area shape="poly" id="edge9_Node000009_Node000007" title=" " alt="" coords="952,86,994,84,989,85,953,91"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="952,107,987,113,981,113,952,112"/>
+<area shape="poly" id="edge11_Node000009_Node000009" title=" " alt="" coords="814,77,811,69,819,60,835,54,859,52,885,54,902,63,897,63,884,60,859,57,836,59,822,64,817,70,819,79"/>
+<area shape="poly" id="edge13_Node000010_Node000010" title=" " alt="" coords="819,217,811,210,816,200,832,194,859,192,889,194,905,204,900,203,888,199,859,197,833,199,820,204,817,209,824,219"/>
+</map>

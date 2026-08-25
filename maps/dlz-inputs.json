@@ -1,0 +1,5 @@
+[
+  {"name": "dlz_range_nm", "index": 0, "offset": 0, "size": 8},
+  {"name": "dlz_aspect_deg", "index": 0, "offset": 8, "size": 8},
+  {"name": "dlz_altitude_ft", "index": 0, "offset": 16, "size": 8}
+]

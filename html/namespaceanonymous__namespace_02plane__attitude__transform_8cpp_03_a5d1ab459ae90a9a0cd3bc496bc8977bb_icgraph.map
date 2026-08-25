@@ -1,0 +1,20 @@
+<map id="anonymous_namespace{plane_attitude_transform::cpp}::finiteAngle" name="anonymous_namespace{plane_attitude_transform::cpp}::finiteAngle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1154,95,1322,151"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="1270,80,1259,76,1238,74,1220,76,1208,80,1202,87,1201,97,1197,93,1197,85,1205,76,1218,70,1238,69,1261,71,1276,81"/>
+<area shape="rect" id="Node000002" href="$class_plane_attitude_transform.html#a240aba5fd8e565acd6ad793458bea067" title="Converts yaw, pitch, and roll to an intrinsic aircraft rotation." alt="" coords="948,103,1106,143"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="1136,123,1107,126,1107,120,1141,123"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="1060,87,1048,84,1027,81,1007,83,995,88,990,94,992,104,987,100,985,93,991,84,1006,78,1027,76,1050,78,1065,88"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title="Performs the paint gl operation." alt="" coords="714,82,900,108"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="929,111,900,110,900,104,935,111"/>
+<area shape="rect" id="Node000012" href="$class_plane_scene_widget.html#a6387f9c3b66f950945e37e615318d0e1" title="Sets scene state." alt="" coords="5,100,201,141"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="932,126,249,126,201,125,201,120,249,120,932,121"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#a4af14d7382c36b30361f6903425d2d57" title="Notifies tests and controls when terrain preparation changes readiness." alt="" coords="490,71,666,111"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="696,93,667,95,667,90,701,93"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#abe802663afdff5d56c7bba1c6b07dc1c" title=" " alt="" coords="249,5,442,46"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="472,71,394,49,394,44,478,71"/>
+<area shape="rect" id="Node000008" href="$class_plane_scene_widget.html#ae2f382ca1fbf358e3801503ca8a607e8" title=" " alt="" coords="254,71,437,111"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="472,100,438,102,438,97,478,100"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="457,45,532,70,526,70,456,51"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="453,79,492,82,487,82,453,85"/>
+<area shape="poly" id="edge9_Node000008_Node000012" title=" " alt="" coords="236,104,202,111,201,106,241,103"/>
+</map>

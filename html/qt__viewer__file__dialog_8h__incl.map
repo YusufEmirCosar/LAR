@@ -1,0 +1,7 @@
+<map id="src/viewer/dialogs/qt_viewer_file_dialog.h" name="src/viewer/dialogs/qt_viewer_file_dialog.h">
+<area shape="rect" id="Node000001" title="Qt Widgets adapter for mapping, policy, and session file selection." alt="" coords="5,5,163,46"/>
+<area shape="rect" id="Node000002" href="$viewer__file__dialog_8h.html" title="Presentation port for selecting viewer input files." alt="" coords="11,94,157,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,44,87,79,81,78,83,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="51,183,117,208"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="86,133,87,168,81,166,82,137"/>
+</map>

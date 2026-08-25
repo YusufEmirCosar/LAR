@@ -1,0 +1,11 @@
+<map id="lar::map::MapAssetReadResult" name="lar::map::MapAssetReadResult">
+<area shape="rect" id="Node000001" title="Parsed immutable mesh or a categorized diagnostic." alt="" coords="59,351,263,377"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="85,239,237,280"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,294,163,352,158,350,159,297"/>
+<area shape="rect" id="Node000003" href="$structlar_1_1map_1_1_map_mesh.html" title="Geographic vertices plus projection&#45;specific fill and border indices." alt="" coords="94,143,228,168"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="162,181,163,240,158,238,159,186"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,5,138,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="88,41,155,141,150,143,87,47"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="162,5,341,31"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="242,42,224,82,199,120,177,144,173,140,195,117,219,79,239,47"/>
+</map>

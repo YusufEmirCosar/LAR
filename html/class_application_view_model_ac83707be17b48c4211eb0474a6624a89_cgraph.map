@@ -1,0 +1,5 @@
+<map id="ApplicationViewModel::setProcessedPacketCount" name="ApplicationViewModel::setProcessedPacketCount">
+<area shape="rect" id="Node000001" title="Sets processed packet count." alt="" coords="5,5,191,46"/>
+<area shape="rect" id="Node000002" href="$class_application_view_model.html#a4ede6b79e944d298b52a981a8afe896d" title="Notifies observers about metrics changed." alt="" coords="239,5,388,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,23,226,25,221,26,191,28"/>
+</map>

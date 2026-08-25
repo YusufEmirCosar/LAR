@@ -1,0 +1,15 @@
+<map id="canonicalIpAddress" name="canonicalIpAddress">
+<area shape="rect" id="Node000001" title="Returns the stable exact&#45;match key shared by policy loading and UDP input." alt="" coords="480,63,615,88"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="583,48,572,44,548,41,525,43,514,48,511,53,517,63,512,61,506,54,510,44,524,38,548,36,573,39,588,48"/>
+<area shape="rect" id="Node000002" href="$qt__ip__address__normalizer_8cpp.html#aa8008d9eca219b92a42a1338cef8939c" title="Reports whether canonical Ip Address is true." alt="" coords="270,5,405,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="481,58,431,46,389,34,389,29,433,41,487,58"/>
+<area shape="rect" id="Node000003" href="$class_qt_ip_access_policy_repository.html#aee15a88b3c3fe7400ce56a569ec3c33a" title="Parses text." alt="" coords="243,55,432,96"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="462,76,433,78,432,73,467,75"/>
+<area shape="rect" id="Node000005" href="$class_qt_udp_datagram_source.html#aa820ca3974584a3afe1a6965ae680d7e" title="Reads pending datagrams." alt="" coords="255,144,420,185"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="504,94,388,146,387,141,499,95"/>
+<area shape="rect" id="Node000004" href="$class_qt_ip_access_policy_repository.html#a06b0f61bc81a9e2d177fc7da97df63fd" title="Performs the load operation." alt="" coords="5,55,195,96"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="224,76,196,78,195,73,229,75"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="370,129,359,125,337,123,317,125,305,130,301,136,302,145,298,142,296,135,302,126,316,120,337,118,360,120,375,129"/>
+<area shape="rect" id="Node000006" href="$class_qt_udp_datagram_source.html#a93be5747953f5864643a3614e6e54480" title="Starts the current operation." alt="" coords="21,144,179,185"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="237,165,179,167,179,162,242,165"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="ApplicationFacade::applyResult" name="ApplicationFacade::applyResult">
+<area shape="rect" id="Node000001" title="Applies the result of an asynchronous IP&#45;policy change." alt="" coords="5,63,142,103"/>
+<area shape="rect" id="Node000002" href="$class_application_facade.html#a4abe2ef76bb372f2f39b5fd9793f6211" title="Reports completion of an IP access&#45;policy change." alt="" coords="190,29,395,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,70,177,67,172,69,143,75"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#aaa8bd95ed38e7f855835042c17db3338" title="Stores and emits a human&#45;readable operation error." alt="" coords="224,95,360,135"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="142,90,211,102,206,104,142,96"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="251,28,249,19,256,10,270,5,292,3,316,5,332,14,326,14,315,10,292,8,272,10,259,15,254,21,256,30"/>
+<area shape="rect" id="Node000004" href="$class_application_facade.html#a5935c712453aca17ae956f9c34d1d5b2" title="Reports an operation or runtime error to observers." alt="" coords="450,61,586,102"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="361,102,437,94,431,94,361,108"/>
+<area shape="rect" id="Node000005" href="$class_application_view_model.html#a8b45470f469030969b5321be7b4c0e6c" title="Sets last error." alt="" coords="443,127,592,167"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="361,122,430,134,425,134,361,127"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="480,59,478,51,484,42,498,37,518,35,539,37,553,46,548,45,538,42,518,40,499,42,488,47,483,52,485,62"/>
+<area shape="rect" id="Node000006" href="$class_application_view_model.html#a4dd5f7090efa0ade330398531a7f3f97" title="Notifies observers about error occurred." alt="" coords="640,127,790,167"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="593,144,628,147,622,147,593,150"/>
+</map>

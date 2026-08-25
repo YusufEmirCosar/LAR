@@ -1,0 +1,19 @@
+<map id="src/viewer/hud/dlz_range_scale.h" name="src/viewer/hud/dlz_range_scale.h">
+<area shape="rect" id="Node000001" title="Range&#45;axis mapping and hysteretic scale&#45;selection policy." alt="" coords="291,5,418,46"/>
+<area shape="rect" id="Node000002" href="$dlz__hud__renderer_8cpp.html" title=" " alt="" coords="119,94,246,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="300,55,223,96,220,91,304,52"/>
+<area shape="rect" id="Node000003" href="$dlz__presentation__controller_8h.html" title="Stateful filtering and cue&#45;timing policy for DLZ presentation." alt="" coords="270,94,440,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="356,59,357,95,352,92,353,64"/>
+<area shape="rect" id="Node000009" href="$dlz__range__scale_8cpp.html" title=" " alt="" coords="463,94,590,135"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="408,51,491,93,485,94,407,56"/>
+<area shape="rect" id="Node000004" href="$dlz__hud__workspace_8h.html" title="Coordinator joining DLZ controls, domain calculations, and HUD timing." alt="" coords="199,183,329,223"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="326,144,286,184,283,180,321,147"/>
+<area shape="rect" id="Node000008" href="$dlz__presentation__controller_8cpp.html" title=" " alt="" coords="354,183,537,223"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="387,143,428,183,422,182,385,148"/>
+<area shape="rect" id="Node000005" href="$dlz__hud__workspace_8cpp.html" title=" " alt="" coords="5,271,150,312"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="211,230,121,273,119,268,205,231"/>
+<area shape="rect" id="Node000006" href="$mainwindow_8cpp.html" title=" " alt="" coords="174,279,354,304"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="266,237,266,280,262,277,262,241"/>
+<area shape="rect" id="Node000007" href="$lar__viewport_8cpp.html" title=" " alt="" coords="378,271,513,312"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="320,228,407,271,402,271,319,233"/>
+</map>

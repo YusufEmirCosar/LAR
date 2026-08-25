@@ -1,0 +1,20 @@
+<map id="src/viewer/terrain/dted_water_mask.h" name="src/viewer/terrain/dted_water_mask.h">
+<area shape="rect" id="Node000001" title="Immutable DTED0&#45;post&#45;aligned water classification for one degree cell." alt="" coords="68,5,207,46"/>
+<area shape="rect" id="Node000002" href="$dted__water__mask__source_8h.html" title="Validated indexed access to the compact global DTED0 water&#45;mask pack." alt="" coords="45,94,230,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,59,140,94,135,93,137,64"/>
+<area shape="rect" id="Node000003" href="$plane__scene__widget__terrain_8cpp.html" title="DTED worker lifecycle, patch recentering, and aircraft&#45;relative placement." alt="" coords="80,449,257,489"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="81,146,63,163,47,184,20,242,12,268,8,293,9,318,15,343,41,399,67,427,101,447,96,449,64,431,37,402,10,345,4,318,3,293,7,267,15,240,42,181,59,159,84,141"/>
+<area shape="rect" id="Node000004" href="$dted__mosaic__sampler_8h.html" title="Bilinear DTED0 surface sampler with bounded terrain and water&#45;mask caches." alt="" coords="57,183,219,223"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="138,148,140,183,135,182,137,153"/>
+<area shape="rect" id="Node000010" href="$dted__water__mask__source_8cpp.html" title=" " alt="" coords="243,183,443,223"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="198,138,299,181,294,183,199,144"/>
+<area shape="rect" id="Node000005" href="$plane__terrain__patch__builder_8h.html" title="Bounded DTED0 sampling and indexed local terrain&#45;mesh construction." alt="" coords="59,271,217,312"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="139,236,140,271,135,270,137,241"/>
+<area shape="rect" id="Node000009" href="$dted__mosaic__sampler_8cpp.html" title=" " alt="" coords="242,271,418,312"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="195,227,289,270,284,272,195,233"/>
+<area shape="rect" id="Node000006" href="$plane__terrain__patch__builder_8cpp.html" title=" " alt="" coords="52,360,224,401"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="139,325,140,360,135,359,137,330"/>
+<area shape="rect" id="Node000007" href="$plane__terrain__worker_8h.html" title="Latest&#45;only dedicated CPU worker for DTED terrain patch preparation." alt="" coords="247,360,399,401"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="194,316,284,359,279,360,193,322"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="278,408,204,451,202,446,272,409"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="RequestResultGate::receive" name="RequestResultGate::receive">
+<area shape="rect" id="Node000001" title="Offers one typed result to the gate." alt="" coords="5,5,150,46"/>
+<area shape="rect" id="Node000002" href="$struct_runtime_request_id.html#a1f28818442dba1abd5f4aabca4987e23" title="Reports whether valid is true." alt="" coords="198,13,374,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,23,185,25,179,26,150,28"/>
+</map>

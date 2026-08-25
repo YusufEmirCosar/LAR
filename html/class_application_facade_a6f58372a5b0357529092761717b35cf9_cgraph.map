@@ -1,0 +1,6 @@
+<map id="ApplicationFacade::recordingOperationPending" name="ApplicationFacade::recordingOperationPending">
+<area shape="rect" id="Node000001" title="Reports whether a recording persistence operation is pending." alt="" coords="5,22,183,62"/>
+<area shape="rect" id="Node000002" href="$recording__operation__state_8h.html#a434844ed2cfed8091ef202b256cd2024" title="Reports whether recording operation pending is true." alt="" coords="231,29,424,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,40,218,42,213,42,183,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="288,28,281,21,286,11,301,5,327,3,356,5,372,15,367,14,354,11,327,8,303,10,289,15,286,20,293,30"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="DtedCell::valid" name="DtedCell::valid">
+<area shape="rect" id="Node000001" title="Returns true when dimensions and storage form a bounded usable Level&#45;0 cell." alt="" coords="801,46,908,72"/>
+<area shape="rect" id="Node000002" href="$struct_dted_cell.html#a8ec96e10bbea9712838e31faa44fe41f" title="Returns one decoded elevation in metres, excluding the DTED no&#45;data sentinel." alt="" coords="620,46,753,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="782,59,753,62,753,56,788,59"/>
+<area shape="rect" id="Node000003" href="$class_dted_mosaic_sampler.html#a979486212673f318cd0c4502b79d5343" title=" " alt="" coords="425,39,572,79"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="602,59,573,62,573,56,607,59"/>
+<area shape="rect" id="Node000004" href="$class_dted_mosaic_sampler.html#a9cad4de48229805ca1ee5dd471ecfd5e" title=" " alt="" coords="225,5,372,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="407,44,373,41,373,35,412,44"/>
+<area shape="rect" id="Node000005" href="$class_dted_mosaic_sampler.html#a183de02a1c9073c02648bc71022ba406" title="Samples a sea&#45;level water surface while retaining source depth for coloring." alt="" coords="221,71,377,111"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="412,73,378,81,377,76,407,74"/>
+<area shape="rect" id="Node000006" href="$class_plane_terrain_patch_builder.html#ae255d8ff063838ad44e241f3cc826c69" title="Samples and triangulates one request, returning null when local terrain is absent." alt="" coords="5,71,173,111"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="203,91,173,94,173,88,208,91"/>
+</map>

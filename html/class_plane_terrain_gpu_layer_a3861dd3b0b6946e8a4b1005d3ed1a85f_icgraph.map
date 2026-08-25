@@ -1,0 +1,19 @@
+<map id="PlaneTerrainGpuLayer::hasRenderableGeometry" name="PlaneTerrainGpuLayer::hasRenderableGeometry">
+<area shape="rect" id="Node000001" title=" " alt="" coords="858,63,1031,103"/>
+<area shape="rect" id="Node000002" href="$class_plane_terrain_gpu_layer.html#a00a4a4f28dc43bec53d297a36031da14" title=" " alt="" coords="660,5,810,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="850,58,810,49,810,43,856,58"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_renderer.html#a303eb0d904256d05666662ac14a59539" title="Draws the current operation." alt="" coords="466,59,610,99"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="840,82,610,82,610,77,845,82"/>
+<area shape="rect" id="Node000015" href="$class_plane_terrain_gpu_layer.html#a148a59a028ca3ca6ca94dba7fd91e5bd" title=" " alt="" coords="660,120,810,161"/>
+<area shape="poly" id="edge7_Node000001_Node000015" title=" " alt="" coords="856,108,811,122,810,117,850,108"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="648,49,611,62,610,57,643,50"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title="Performs the operator= operation." alt="" coords="250,31,394,71"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="447,68,395,63,395,58,452,67"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title="Performs the paint gl operation." alt="" coords="230,96,415,121"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="447,91,416,98,415,93,452,91"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#a4af14d7382c36b30361f6903425d2d57" title="Notifies tests and controls when terrain preparation changes readiness." alt="" coords="5,88,182,129"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="211,109,182,111,182,106,217,108"/>
+<area shape="poly" id="edge8_Node000015_Node000003" title=" " alt="" coords="650,115,605,102,605,97,656,115"/>
+<area shape="rect" id="Node000016" href="$class_plane_terrain_gpu_layer.html#ab7dca4bb30afb023808ed3f8d0de936c" title=" " alt="" coords="463,124,612,165"/>
+<area shape="poly" id="edge9_Node000015_Node000016" title=" " alt="" coords="642,142,613,145,613,140,648,142"/>
+</map>

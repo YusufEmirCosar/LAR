@@ -1,0 +1,27 @@
+<map id="EarthOverlayCoordinator::EarthOverlayCoordinator" name="EarthOverlayCoordinator::EarthOverlayCoordinator">
+<area shape="rect" id="Node000001" title="Constructs this object." alt="" coords="5,88,178,129"/>
+<area shape="rect" id="Node000002" href="$class_earth_overlay_coordinator.html#a9ea8f83160e4bef2a40fccd8294604df" title="Performs the complete operation." alt="" coords="233,55,398,96"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,94,220,89,215,91,179,98"/>
+<area shape="rect" id="Node000005" href="$class_viewport_preparation_worker.html#ad377d90c3d519cc10d42bd97d6e26e00" title="Notifies observers about mesh ready." alt="" coords="226,120,405,161"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="177,119,213,125,208,127,178,124"/>
+<area shape="rect" id="Node000003" href="$struct_lar_zone_mesh.html#a9527b635a503edee14d7c1eb492c52a0" title="Reports whether the zone mesh has no renderable geometry." alt="" coords="470,5,615,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="397,52,476,34,471,36,399,57"/>
+<area shape="rect" id="Node000004" href="$class_earth_overlay_coordinator.html#a99b84134c021f7b7840060dffc05563f" title="Notifies observers about mesh available." alt="" coords="460,55,625,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="397,82,448,84,442,85,398,87"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="457,68,413,69,412,64,463,66"/>
+<area shape="rect" id="Node000006" href="$class_viewport_preparation_worker.html#a70c6d90f31a6ec89cf2be630b2579331" title="Performs the process latest operation." alt="" coords="453,120,632,161"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="405,147,440,149,435,150,406,152"/>
+<area shape="poly" id="edge13_Node000006_Node000005" title=" " alt="" coords="450,133,421,134,420,129,455,131"/>
+<area shape="rect" id="Node000007" href="$class_lar_zone_mesh_builder.html#aeae61a0b50e2824ca5cb7b32318e8ec1" title="Performs the build operation." alt="" coords="680,120,821,161"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="633,138,667,141,662,141,633,143"/>
+<area shape="rect" id="Node000008" href="$class_lar_zone_mesh_assembler.html#a2e8e92ba01d94bd5d4f6ded460bebf52" title="Performs the append operation." alt="" coords="869,6,1031,46"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="776,118,818,87,867,56,875,54,880,53,870,60,821,91,779,122"/>
+<area shape="rect" id="Node000012" href="$struct_lar_zone_mesh.html#a1488f156c2b7278aee0cf91aee91ed3b" title="Clears the current operation." alt="" coords="882,71,1018,96"/>
+<area shape="poly" id="edge9_Node000007_Node000012" title=" " alt="" coords="821,118,886,102,891,100,822,123"/>
+<area shape="rect" id="Node000013" href="$classlar_1_1map_1_1_map_camera.html#af281b7b5f7a8ede8b9dac8bc355e3b72" title="Returns the current presentation." alt="" coords="876,120,1024,161"/>
+<area shape="poly" id="edge10_Node000007_Node000013" title=" " alt="" coords="821,138,863,141,858,141,821,143"/>
+<area shape="rect" id="Node000014" href="$class_geodesic_zone_sampler.html#a3b238e9b4105132eff53432a2d213e25" title="Performs the sample operation." alt="" coords="873,186,1026,226"/>
+<area shape="poly" id="edge11_Node000007_Node000014" title=" " alt="" coords="815,159,874,181,869,180,814,164"/>
+<area shape="rect" id="Node000017" href="$class_lar_zone_input_validator.html#a6b122729b48ca9995d79faaf3dc4c447" title="Performs the validate operation." alt="" coords="876,251,1024,292"/>
+<area shape="poly" id="edge12_Node000007_Node000017" title=" " alt="" coords="774,159,817,197,870,236,881,244,876,243,867,240,814,202,772,164"/>
+</map>

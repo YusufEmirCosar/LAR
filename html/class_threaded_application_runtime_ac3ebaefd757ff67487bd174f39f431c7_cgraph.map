@@ -1,0 +1,9 @@
+<map id="ThreadedApplicationRuntime::snapshotRecording" name="ThreadedApplicationRuntime::snapshotRecording">
+<area shape="rect" id="Node000001" title="Performs the snapshot recording operation." alt="" coords="5,71,194,111"/>
+<area shape="rect" id="Node000002" href="$class_i_application_runtime.html#a8a335e653e0be8326f22b4d50759f8f7" title="Documents the accept command operation." alt="" coords="273,5,411,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,68,260,47,255,50,178,73"/>
+<area shape="rect" id="Node000003" href="$class_threaded_application_runtime.html#af469d29360d6c38f8d22585bb05fd134" title="Notifies observers about recording snapshot requested." alt="" coords="242,71,442,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,88,229,90,223,92,195,94"/>
+<area shape="rect" id="Node000004" href="$class_i_application_runtime.html#a01f646d011f811a4eb6b1ac3faae60ec" title="Documents the reject command operation." alt="" coords="273,136,411,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="178,109,260,133,255,134,177,115"/>
+</map>

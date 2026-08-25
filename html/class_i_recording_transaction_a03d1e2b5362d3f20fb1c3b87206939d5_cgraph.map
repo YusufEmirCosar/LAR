@@ -1,0 +1,4 @@
+<map id="IRecordingTransaction::recordCount" name="IRecordingTransaction::recordCount">
+<area shape="rect" id="Node000001" title="Returns the number of records committed to the active transaction." alt="" coords="5,29,158,70"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="52,28,50,19,55,11,66,5,82,3,98,5,110,14,104,14,97,10,81,8,67,10,59,14,56,20,57,29"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="PlaybackRuntimeWorker::sessionClosed" name="PlaybackRuntimeWorker::sessionClosed">
+<area shape="rect" id="Node000001" title="Documents the session closed operation." alt="" coords="463,35,628,75"/>
+<area shape="rect" id="Node000002" href="$class_playback_runtime_worker.html#a636b6a005df22431861b5f751bbc25c6" title="Documents the close session operation." alt="" coords="250,5,415,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="445,42,415,40,416,34,450,42"/>
+<area shape="rect" id="Node000003" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,35,202,75"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="445,57,415,60,250,60,202,60,202,54,250,55,415,55,450,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="232,39,203,45,202,40,237,38"/>
+</map>

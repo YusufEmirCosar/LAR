@@ -1,0 +1,11 @@
+<map id="RecordingService::completeRecording" name="RecordingService::completeRecording">
+<area shape="rect" id="Node000001" title="Performs the complete recording operation." alt="" coords="709,39,895,79"/>
+<area shape="rect" id="Node000002" href="$class_recording_pipeline_coordinator.html#a8f8fe0a915a94ddb4b1b98452b5b748b" title="Notifies observers about persistence finished." alt="" coords="468,5,661,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="691,44,662,42,662,37,697,44"/>
+<area shape="rect" id="Node000005" href="$class_direct_application_runtime.html#ab1947fbce095c7e2578a91d60b62bd2e" title="Performs the stop recording operation." alt="" coords="480,71,649,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="697,73,650,82,649,77,691,74"/>
+<area shape="rect" id="Node000003" href="$class_recording_runtime_worker.html#a7b606cadc9e93783b990e48399a68e96" title="Notifies observers about persistence finished." alt="" coords="250,5,420,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="450,26,421,28,420,23,455,25"/>
+<area shape="rect" id="Node000004" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,5,202,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="231,26,203,28,202,23,236,25"/>
+</map>

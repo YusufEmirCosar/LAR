@@ -1,0 +1,9 @@
+<map id="DecodedState" name="DecodedState">
+<area shape="rect" id="Node000001" title="One validated mapped frame and its field&#45;availability mask." alt="" coords="60,102,165,128"/>
+<area shape="rect" id="Node000002" href="$struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft." alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="46,42,70,76,97,101,92,102,66,80,44,47"/>
+<area shape="rect" id="Node000003" href="$struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters." alt="" coords="84,5,141,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="115,45,115,102,110,101,110,48"/>
+<area shape="rect" id="Node000004" href="$structdlz_1_1_telemetry_inputs.html" title="The three packet/replay inputs consumed by the DLZ workspace." alt="" coords="166,5,305,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="210,40,161,80,130,104,127,99,158,76,205,42"/>
+</map>

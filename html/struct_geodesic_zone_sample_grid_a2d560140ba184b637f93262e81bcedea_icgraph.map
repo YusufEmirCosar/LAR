@@ -1,0 +1,17 @@
+<map id="GeodesicZoneSampleGrid::point" name="GeodesicZoneSampleGrid::point">
+<area shape="rect" id="Node000001" title="Performs the point operation." alt="" coords="893,53,1066,94"/>
+<area shape="rect" id="Node000002" href="$class_lar_zone_mesh_assembler.html#a2e8e92ba01d94bd5d4f6ded460bebf52" title="Performs the append operation." alt="" coords="669,5,832,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="875,52,832,45,832,40,880,52"/>
+<area shape="rect" id="Node000009" href="$namespaceanonymous__namespace_02lar__zone__mesh__assembler_8cpp_03.html#a74e04698c560c505b3148a4dffa5fab2" title=" " alt="" coords="656,94,845,150"/>
+<area shape="poly" id="edge7_Node000001_Node000009" title=" " alt="" coords="880,95,845,105,845,99,875,95"/>
+<area shape="rect" id="Node000003" href="$class_lar_zone_mesh_builder.html#aeae61a0b50e2824ca5cb7b32318e8ec1" title="Performs the build operation." alt="" coords="468,5,608,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="651,26,609,28,609,23,656,25"/>
+<area shape="rect" id="Node000004" href="$class_viewport_preparation_worker.html#a70c6d90f31a6ec89cf2be630b2579331" title="Performs the process latest operation." alt="" coords="241,5,420,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="450,26,421,28,420,23,455,25"/>
+<area shape="rect" id="Node000005" href="$class_viewport_preparation_worker.html#ad377d90c3d519cc10d42bd97d6e26e00" title="Notifies observers about mesh ready." alt="" coords="9,5,189,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="223,35,190,37,189,32,228,34"/>
+<area shape="rect" id="Node000008" href="$class_viewport_preparation_worker.html#a05843486134e53d3c3ca6e89d23526b0" title="Constructs this object." alt="" coords="5,71,193,111"/>
+<area shape="poly" id="edge6_Node000004_Node000008" title=" " alt="" coords="239,52,175,73,173,67,244,50"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="204,14,243,16,238,18,205,19"/>
+<area shape="poly" id="edge8_Node000009_Node000009" title=" " alt="" coords="783,79,771,75,750,72,732,74,720,79,714,85,713,95,709,92,709,83,717,75,731,69,751,67,773,70,788,79"/>
+</map>

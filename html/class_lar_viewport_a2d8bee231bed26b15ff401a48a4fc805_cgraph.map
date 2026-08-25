@@ -1,0 +1,5 @@
+<map id="LarViewport::turnWithPlane" name="LarViewport::turnWithPlane">
+<area shape="rect" id="Node000001" title="Returns the current turn with plane." alt="" coords="5,13,186,38"/>
+<area shape="rect" id="Node000002" href="$class_viewport_camera_controller.html#a5744eb53de3954e143c70855ccd65793" title="Returns the current turn with plane." alt="" coords="234,5,408,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,23,220,25,215,26,186,28"/>
+</map>

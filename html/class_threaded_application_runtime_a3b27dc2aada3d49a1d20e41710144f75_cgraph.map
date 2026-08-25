@@ -1,0 +1,35 @@
+<map id="ThreadedApplicationRuntime::~ThreadedApplicationRuntime" name="ThreadedApplicationRuntime::~ThreadedApplicationRuntime">
+<area shape="rect" id="Node000001" title="Returns the current threaded application runtime." alt="" coords="5,125,210,166"/>
+<area shape="rect" id="Node000002" href="$class_threaded_application_runtime.html#a18941be28148ca73cbe92d5db6f680a8" title="Shuts down the threaded runtime." alt="" coords="258,125,446,166"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,143,244,145,239,147,211,148"/>
+<area shape="rect" id="Node000003" href="$class_network_runtime_worker.html#a27cd5217467c360a9a67144db4fd0fcc" title="Controls the shutdown operation." alt="" coords="504,12,664,53"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="394,122,529,59,524,61,396,127"/>
+<area shape="rect" id="Node000006" href="$class_persistence_runtime_worker.html#a3d9a3b378831e9914a818652c1500e28" title="Shuts down the persistence worker." alt="" coords="494,92,674,133"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="446,130,481,127,476,128,447,135"/>
+<area shape="rect" id="Node000007" href="$class_playback_runtime_worker.html#a7924d317947660f1786467874714b667" title="Controls the shutdown operation." alt="" coords="502,157,667,198"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="446,156,488,164,483,165,447,161"/>
+<area shape="rect" id="Node000017" href="$class_recording_runtime_worker.html#acf662a2212a21238b112893150af97c0" title="Controls the shutdown operation." alt="" coords="499,251,669,291"/>
+<area shape="poly" id="edge14_Node000002_Node000017" title=" " alt="" coords="392,164,534,243,529,243,391,169"/>
+<area shape="rect" id="Node000004" href="$class_online_capture_service.html#a83f0c681c704f9161662b0b4c2898d9b" title="Stops the current operation." alt="" coords="751,5,899,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="664,27,738,27,733,29,665,33"/>
+<area shape="rect" id="Node000005" href="$class_i_datagram_source.html#a31de927568c9387b1e8084fe5411812d" title="Closes the transport; repeated calls are safe." alt="" coords="984,6,1140,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="899,21,971,21,966,22,900,26"/>
+<area shape="rect" id="Node000008" href="$class_playback_service.html#a43fa0623a8507f5354bf5537f6619668" title="Performs the close session operation." alt="" coords="722,116,928,141"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="667,158,747,144,741,145,668,163"/>
+<area shape="rect" id="Node000015" href="$class_playback_metrics.html#a4b373b7c7a485fbf6e4e41fbf6ca409e" title="Shuts down metrics and stops the rate timer." alt="" coords="734,165,916,190"/>
+<area shape="poly" id="edge12_Node000007_Node000015" title=" " alt="" coords="667,175,721,177,716,178,668,180"/>
+<area shape="rect" id="Node000016" href="$class_playback_publication_throttle.html#a0192d4f6c9cd2f963f990a6b3e635457" title="Stops the current operation." alt="" coords="733,215,917,255"/>
+<area shape="poly" id="edge13_Node000007_Node000016" title=" " alt="" coords="668,195,725,211,720,211,667,200"/>
+<area shape="rect" id="Node000009" href="$class_i_session_reader.html#ac3309b61387f2bd803b08a3c9e64b475" title="Releases the current source and returns the reader to its empty state." alt="" coords="985,56,1138,81"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="878,112,991,86,996,85,880,117"/>
+<area shape="rect" id="Node000010" href="$class_playback_service.html#a5e54c6eb7adf0f7fbdfbd5f403ec5d7d" title="Notifies observers about playing changed." alt="" coords="978,105,1146,146"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="928,125,965,126,959,127,928,130"/>
+<area shape="rect" id="Node000012" href="$class_playback_service.html#a0d810aa9ebe8492aea8b82c6e429c5d6" title="Notifies observers about position changed." alt="" coords="976,171,1148,211"/>
+<area shape="poly" id="edge10_Node000008_Node000012" title=" " alt="" coords="886,139,928,150,979,166,974,166,927,155,885,144"/>
+<area shape="rect" id="Node000014" href="$class_i_playback_clock.html#a997a42bd4efe05e9d2bcbee7550e35cb" title="Stops future ticks." alt="" coords="989,236,1135,261"/>
+<area shape="poly" id="edge11_Node000008_Node000014" title=" " alt="" coords="908,139,929,150,946,168,954,186,962,204,977,221,986,229,981,228,974,225,957,207,949,188,942,171,926,154,907,144"/>
+<area shape="rect" id="Node000018" href="$class_recording_pipeline_coordinator.html#a938b4eb21be43b406d4ab88be3e4d037" title="Controls the shutdown operation." alt="" coords="728,281,922,322"/>
+<area shape="poly" id="edge15_Node000017_Node000018" title=" " alt="" coords="670,279,715,287,710,287,670,285"/>
+<area shape="rect" id="Node000019" href="$class_recording_service.html#a4849870db94fac0b6e060909e7332915" title="Cancels the transaction and returns to Idle." alt="" coords="977,285,1147,326"/>
+<area shape="poly" id="edge16_Node000018_Node000019" title=" " alt="" coords="922,301,964,304,959,304,922,306"/>
+</map>

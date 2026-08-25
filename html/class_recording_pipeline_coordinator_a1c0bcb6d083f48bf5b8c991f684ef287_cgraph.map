@@ -1,0 +1,61 @@
+<map id="RecordingPipelineCoordinator::RecordingPipelineCoordinator" name="RecordingPipelineCoordinator::RecordingPipelineCoordinator">
+<area shape="rect" id="Node000001" title="Constructs this object." alt="" coords="5,391,207,432"/>
+<area shape="rect" id="Node000002" href="$class_recording_pipeline_coordinator.html#a420c9204c99578c8f0d63a0639c39588" title="Documents the publish state operation." alt="" coords="255,346,448,387"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,391,241,386,237,388,208,395"/>
+<area shape="rect" id="Node000014" href="$class_recording_service.html#ace58f8325f4a0ea630c71b0a1aa9ddc8" title="Notifies observers about record count changed." alt="" coords="267,435,436,476"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="207,427,255,437,250,439,208,432"/>
+<area shape="rect" id="Node000015" href="$class_recording_service.html#af232df78a124fbd7d435380d671d49f4" title="Notifies observers about recording error." alt="" coords="259,194,444,235"/>
+<area shape="poly" id="edge20_Node000001_Node000015" title=" " alt="" coords="131,389,313,242,312,247,135,393"/>
+<area shape="rect" id="Node000017" href="$class_recording_service.html#ad78c4b9e8ae3320196e181369a6123ea" title="Notifies observers about recording state changed." alt="" coords="787,62,973,103"/>
+<area shape="poly" id="edge36_Node000001_Node000017" title=" " alt="" coords="110,390,127,341,155,277,197,211,223,181,253,156,314,120,381,94,450,75,521,64,590,58,657,57,775,66,770,68,657,63,590,64,521,69,451,81,382,99,317,125,256,160,227,185,201,214,160,280,132,343,115,392"/>
+<area shape="rect" id="Node000021" href="$class_recording_pipeline_coordinator.html#a4bd84318c4dc811958dd7016b3f6b769" title="Documents the recording input enabled operation." alt="" coords="255,501,448,541"/>
+<area shape="poly" id="edge35_Node000001_Node000021" title=" " alt="" coords="145,430,256,485,275,495,270,495,254,490,144,435"/>
+<area shape="rect" id="Node000022" href="$class_recording_pipeline_coordinator.html#aad6edb44e0e0ac9e7b0c6933d9b2f28a" title="Documents the runtime error operation." alt="" coords="255,566,448,607"/>
+<area shape="poly" id="edge37_Node000001_Node000022" title=" " alt="" coords="125,430,180,490,216,522,256,551,268,559,263,559,253,555,213,526,176,493,123,435"/>
+<area shape="rect" id="Node000003" href="$class_recording_service.html#a26fbbe76f509ced7c5d86231d2cbdfc3" title="Reports whether paused is true." alt="" coords="1065,69,1252,95"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="448,346,791,280,1002,237,1015,223,1022,209,1026,177,1030,145,1037,128,1050,112,1066,104,1071,101,1053,116,1041,131,1035,146,1031,178,1027,210,1019,226,1005,242,792,286,449,351"/>
+<area shape="rect" id="Node000004" href="$class_recording_service.html#a9e5faab16b85d3ddc1c95f67cc72d642" title="Reports whether recording is true." alt="" coords="1058,127,1259,152"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="448,370,588,375,750,375,828,372,899,365,959,354,1003,339,1028,322,1052,302,1092,255,1123,206,1144,168,1148,165,1128,209,1097,258,1056,306,1032,327,1005,343,960,359,900,370,828,377,750,381,588,381,449,375"/>
+<area shape="rect" id="Node000005" href="$class_recording_service.html#a3e8ee8ae7d46725ba613419695ec7ed0" title="Returns the current record count." alt="" coords="518,538,686,579"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="431,384,450,398,463,413,470,429,475,460,479,490,486,504,498,519,509,530,504,529,494,523,481,507,474,491,469,461,465,431,458,416,446,402,431,390"/>
+<area shape="rect" id="Node000007" href="$class_recording_service.html#ac36c5351de37045fc101da63a991399d" title="Returns the elapsed time between the first and last saved packets." alt="" coords="510,403,695,444"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="443,385,498,399,493,400,443,390"/>
+<area shape="rect" id="Node000013" href="$class_recording_pipeline_coordinator.html#a020d2b43ea856818f5b6dd7ef445e836" title="Notifies observers about recording state changed." alt="" coords="506,469,699,509"/>
+<area shape="poly" id="edge17_Node000002_Node000013" title=" " alt="" coords="426,384,450,397,465,412,474,426,483,440,498,453,508,462,503,461,494,458,479,444,470,429,461,415,446,402,425,390"/>
+<area shape="rect" id="Node000006" href="$class_i_recording_transaction.html#a03d1e2b5362d3f20fb1c3b87206939d5" title="Returns the number of records committed to the active transaction." alt="" coords="804,543,956,584"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="687,557,791,562,786,562,687,563"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="829,541,826,533,834,524,852,519,880,517,910,519,929,528,924,527,909,524,880,522,853,524,837,529,831,535,833,544"/>
+<area shape="rect" id="Node000008" href="$class_session_timestamp.html#abdcdc65dfb0177686e5c9065caf4932f" title="Clamps signed milliseconds to the supported closed interval." alt="" coords="785,454,975,495"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="695,438,772,454,767,454,695,443"/>
+<area shape="rect" id="Node000012" href="$class_session_timestamp.html#aeb247cf8e65e75c49239bfefb1fe72b8" title="Returns the canonical zero value." alt="" coords="1075,397,1242,423"/>
+<area shape="poly" id="edge16_Node000007_Node000012" title=" " alt="" coords="695,419,1062,412,1057,413,695,424"/>
+<area shape="rect" id="Node000009" href="$class_session_timestamp.html#afcb01ba58c3c29059a2ea8f70f829056" title="Returns the largest timestamp accepted by the application domain." alt="" coords="1059,499,1258,524"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="976,484,1047,496,1041,496,976,490"/>
+<area shape="rect" id="Node000010" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="1313,415,1501,456"/>
+<area shape="poly" id="edge12_Node000008_Node000010" title=" " alt="" coords="975,465,1300,443,1295,444,976,470"/>
+<area shape="rect" id="Node000011" href="$class_session_timestamp.html#a9e69c8185d47045ab21667be1a2976f7" title="Returns the exact integer representation used for ordering and storage." alt="" coords="1052,548,1265,574"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="970,493,1005,505,1029,520,1053,535,1072,544,1067,543,1051,539,1026,525,1002,510,970,498"/>
+<area shape="poly" id="edge13_Node000008_Node000012" title=" " alt="" coords="971,451,1082,428,1087,427,972,456"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="1204,496,1264,477,1322,462,1327,461,1266,482,1205,501"/>
+<area shape="poly" id="edge14_Node000012_Node000010" title=" " alt="" coords="1242,416,1300,424,1295,425,1242,421"/>
+<area shape="poly" id="edge15_Node000012_Node000012" title=" " alt="" coords="1117,396,1109,389,1114,379,1131,373,1158,371,1189,374,1206,383,1201,383,1188,379,1158,376,1132,378,1118,383,1114,388,1122,398"/>
+<area shape="poly" id="edge19_Node000014_Node000014" title=" " alt="" coords="305,434,303,425,311,416,327,411,351,409,378,411,395,419,390,420,377,416,351,414,328,416,314,421,308,426,310,436"/>
+<area shape="poly" id="edge21_Node000015_Node000015" title=" " alt="" coords="305,193,303,184,311,175,327,169,351,167,378,170,395,178,390,179,377,175,351,173,328,174,314,179,308,185,310,194"/>
+<area shape="rect" id="Node000016" href="$class_recording_service.html#a5f8da97e34dd808d9f5819e0a02af42f" title="Sets state." alt="" coords="512,125,693,151"/>
+<area shape="poly" id="edge22_Node000015_Node000016" title=" " alt="" coords="420,191,495,168,545,155,540,157,497,173,422,196"/>
+<area shape="rect" id="Node000018" href="$class_recording_service.html#ac724bb3c7302c41ba74c9b686e8c1641" title="Returns the current state." alt="" coords="799,201,961,227"/>
+<area shape="poly" id="edge31_Node000015_Node000018" title=" " alt="" coords="444,212,786,213,782,216,445,217"/>
+<area shape="rect" id="Node000019" href="$class_recording_service.html#a92e22198dc632de37f055bfb0ab14889" title="Documents the timestamp for operation." alt="" coords="496,227,708,252"/>
+<area shape="poly" id="edge32_Node000015_Node000019" title=" " alt="" coords="444,221,483,226,478,228,445,226"/>
+<area shape="poly" id="edge23_Node000016_Node000003" title=" " alt="" coords="614,123,671,71,711,44,755,24,823,7,879,4,934,11,1004,24,1064,40,1118,63,1113,63,1062,45,1003,29,934,16,878,9,824,12,757,29,714,49,674,76,617,127"/>
+<area shape="poly" id="edge24_Node000016_Node000004" title=" " alt="" coords="693,136,1045,138,1040,141,693,141"/>
+<area shape="poly" id="edge25_Node000016_Node000017" title=" " alt="" coords="669,122,775,103,770,105,671,127"/>
+<area shape="poly" id="edge29_Node000016_Node000018" title=" " alt="" coords="652,149,818,196,813,197,652,154"/>
+<area shape="poly" id="edge26_Node000017_Node000003" title=" " alt="" coords="973,80,1052,82,1047,83,974,85"/>
+<area shape="poly" id="edge27_Node000017_Node000004" title=" " alt="" coords="973,99,1080,123,1075,123,973,104"/>
+<area shape="poly" id="edge28_Node000017_Node000017" title=" " alt="" coords="828,60,826,52,834,43,852,37,880,35,910,38,929,46,924,47,909,43,880,41,853,43,837,47,831,53,833,62"/>
+<area shape="poly" id="edge30_Node000018_Node000018" title=" " alt="" coords="834,201,825,193,831,183,849,177,880,175,915,178,933,188,928,188,914,183,880,180,850,182,834,187,831,192,839,201"/>
+<area shape="rect" id="Node000020" href="$class_session_timestamp.html#a59bee783a1170ffe8f4e7d323ef5d477" title="Converts monotonic nanoseconds using nearest&#45;millisecond rounding." alt="" coords="756,303,1004,328"/>
+<area shape="poly" id="edge33_Node000019_Node000020" title=" " alt="" coords="652,250,818,298,813,299,652,256"/>
+<area shape="poly" id="edge34_Node000020_Node000010" title=" " alt="" coords="1004,316,1132,329,1200,341,1266,358,1317,379,1365,407,1359,407,1315,384,1264,363,1199,346,1131,334,1004,321"/>
+</map>

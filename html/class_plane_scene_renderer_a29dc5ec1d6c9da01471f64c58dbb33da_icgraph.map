@@ -1,0 +1,27 @@
+<map id="PlaneSceneRenderer::setModel" name="PlaneSceneRenderer::setModel">
+<area shape="rect" id="Node000001" title="Sets model." alt="" coords="1222,228,1366,269"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#aa6cccb6ef7357cd1ef6c3760d183c15d" title="Performs the initialize gl operation." alt="" coords="970,185,1174,210"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1204,228,1131,214,1132,209,1209,229"/>
+<area shape="rect" id="Node000008" href="$class_plane_scene_widget.html#a7cb14c31a868d84d81a36418888be91c" title="Loads a user&#45;selected .gltf or .glb model." alt="" coords="254,185,453,226"/>
+<area shape="poly" id="edge14_Node000001_Node000008" title=" " alt="" coords="1206,247,453,213,453,207,1207,242"/>
+<area shape="rect" id="Node000011" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title="Performs the operator= operation." alt="" coords="1000,285,1144,326"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="1209,270,1145,290,1144,284,1204,271"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#a4af14d7382c36b30361f6903425d2d57" title="Notifies tests and controls when terrain preparation changes readiness." alt="" coords="745,92,922,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1017,179,892,136,893,131,1022,179"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#abe802663afdff5d56c7bba1c6b07dc1c" title=" " alt="" coords="504,5,697,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="737,86,639,49,639,44,742,86"/>
+<area shape="rect" id="Node000007" href="$class_plane_scene_widget.html#ae2f382ca1fbf358e3801503ca8a607e8" title=" " alt="" coords="509,120,692,161"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="728,134,693,141,692,135,733,133"/>
+<area shape="poly" id="edge7_Node000004_Node000003" title=" " alt="" coords="695,49,797,91,792,92,695,54"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a5c8242aec92b08254db217286a0b9194" title=" " alt="" coords="251,5,456,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="485,26,457,28,456,23,491,25"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="464,47,504,55,747,98,742,100,504,60,465,52"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#a605af179df470891b8fa7b2433ce23cc" title="Enables DTED terrain, retaining flat ground as an unavailable/loading fallback." alt="" coords="5,35,203,75"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="233,41,205,46,202,41,237,38"/>
+<area shape="poly" id="edge13_Node000007_Node000003" title=" " alt="" coords="708,116,748,114,743,115,709,121"/>
+<area shape="poly" id="edge12_Node000007_Node000006" title=" " alt="" coords="493,117,456,111,203,71,203,65,456,106,498,116"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="504,166,434,187,432,182,509,164"/>
+<area shape="rect" id="Node000010" href="$class_plane_scene_widget.html#a6387f9c3b66f950945e37e615318d0e1" title="Sets scene state." alt="" coords="256,120,451,161"/>
+<area shape="poly" id="edge11_Node000007_Node000010" title=" " alt="" coords="491,141,452,143,451,138,496,140"/>
+<area shape="poly" id="edge10_Node000008_Node000002" title=" " alt="" coords="468,202,971,197,968,201,469,207"/>
+</map>

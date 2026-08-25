@@ -1,0 +1,12 @@
+<map id="DtedMosaicSampler::SamplePosition" name="DtedMosaicSampler::SamplePosition">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,310,153,351"/>
+<area shape="rect" id="Node000002" href="$struct_dted_cell_key.html" title="Integer south&#45;west origin used to address one DTED cell." alt="" coords="10,5,105,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,46,80,310,75,310,57,47"/>
+<area shape="rect" id="Node000004" href="$struct_dted_cell.html" title="Decoded DTED0 elevations stored as longitude profiles from south to north." alt="" coords="135,102,207,128"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="83,38,159,100,154,103,83,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="95,199,247,239"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,251,97,312,93,308,142,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="172,141,174,199,168,198,170,145"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="129,5,272,31"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="193,43,177,102,172,100,191,48"/>
+</map>

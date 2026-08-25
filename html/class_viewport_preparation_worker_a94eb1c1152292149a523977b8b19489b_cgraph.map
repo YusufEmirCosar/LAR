@@ -1,0 +1,5 @@
+<map id="ViewportPreparationWorker::submit" name="ViewportPreparationWorker::submit">
+<area shape="rect" id="Node000001" title="Submits the current operation." alt="" coords="5,5,185,46"/>
+<area shape="rect" id="Node000002" href="$class_viewport_preparation_worker.html#a0cd67140363a9ea0c52348543e447ae4" title="Posts one coalesced, argument&#45;free worker wake&#45;up." alt="" coords="233,5,412,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,23,220,25,214,26,185,28"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="PlaneTerrainPatch::vertexCount" name="PlaneTerrainPatch::vertexCount">
+<area shape="rect" id="Node000001" title=" " alt="" coords="831,67,966,107"/>
+<area shape="rect" id="Node000002" href="$class_plane_terrain_gpu_layer.html#acc14fd6629009b5a49dccce06071aafa" title=" " alt="" coords="633,67,783,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="813,87,783,90,783,84,818,87"/>
+<area shape="rect" id="Node000003" href="$class_plane_terrain_gpu_layer.html#a148a59a028ca3ca6ca94dba7fd91e5bd" title=" " alt="" coords="436,67,585,107"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="615,87,586,90,586,84,621,87"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_renderer.html#a303eb0d904256d05666662ac14a59539" title="Draws the current operation." alt="" coords="241,33,386,74"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="418,72,386,69,386,63,424,72"/>
+<area shape="rect" id="Node000016" href="$class_plane_terrain_gpu_layer.html#ab7dca4bb30afb023808ed3f8d0de936c" title=" " alt="" coords="239,99,388,139"/>
+<area shape="poly" id="edge6_Node000003_Node000016" title=" " alt="" coords="423,101,389,110,388,104,418,102"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title="Performs the operator= operation." alt="" coords="26,5,170,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="223,43,171,38,170,32,228,41"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title="Performs the paint gl operation." alt="" coords="5,70,191,96"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="223,66,192,73,191,68,228,65"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="LarZoneMesh" name="LarZoneMesh">
+<area shape="rect" id="Node000001" title="Dynamic vertices/indices for zone fills and outlines." alt="" coords="201,163,302,189"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,138,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,41,138,88,194,137,231,163,226,162,191,141,135,91,91,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="162,5,341,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="254,45,254,163,249,161,249,48"/>
+<area shape="rect" id="Node000004" href="$struct_lar_zone_draw_range.html" title="Contiguous range inside the shared zone index buffer." alt="" coords="366,5,503,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="415,41,367,90,308,141,273,165,271,160,305,137,363,87,410,44"/>
+</map>

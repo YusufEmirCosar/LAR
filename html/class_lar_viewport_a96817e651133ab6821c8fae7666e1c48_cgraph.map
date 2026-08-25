@@ -1,0 +1,28 @@
+<map id="LarViewport::setCameraTrackingMode" name="LarViewport::setCameraTrackingMode">
+<area shape="rect" id="Node000001" title="Sets camera tracking mode." alt="" coords="5,210,250,236"/>
+<area shape="rect" id="Node000002" href="$class_lar_viewport.html#aaf5e02f74d9b5aeed866afbbd6f1f474" title="Notifies observers about camera tracking mode changed." alt="" coords="301,23,492,63"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,208,202,145,247,107,296,74,311,68,307,72,299,79,250,112,206,149,143,211"/>
+<area shape="rect" id="Node000003" href="$class_lar_viewport.html#a807c3e87a98fe3f06bf1f0a6c33b15eb" title="Documents the distribute camera state operation." alt="" coords="298,88,495,129"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,207,297,145,330,133,325,136,299,149,159,212"/>
+<area shape="rect" id="Node000006" href="$class_viewport_camera_controller.html#a9e3cc645dfd2ecdc4976d6e3ad2ad339" title="Returns the current mode." alt="" coords="554,167,728,207"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="185,207,297,188,423,181,541,183,536,184,423,186,298,194,187,212"/>
+<area shape="rect" id="Node000007" href="$class_viewport_camera_controller.html#a30f4dd0b23a8f7436d1b4485b3fde401" title="Sets mode." alt="" coords="309,203,484,243"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="249,220,296,222,291,224,251,226"/>
+<area shape="rect" id="Node000010" href="$class_viewport_camera_controller.html#af04356f113a618aa04cf3648c4a20ae3" title="Sets turn with plane." alt="" coords="309,268,484,309"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="183,234,297,262,293,265,183,239"/>
+<area shape="rect" id="Node000011" href="$class_viewport_camera_controller.html#a5744eb53de3954e143c70855ccd65793" title="Returns the current turn with plane." alt="" coords="309,333,484,374"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="149,234,215,274,299,318,317,327,312,327,297,323,213,279,149,239"/>
+<area shape="rect" id="Node000012" href="$class_lar_viewport.html#a2064c54b453d342479cfca19188b5365" title="Notifies observers about turn with plane changed." alt="" coords="306,399,486,439"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="140,234,203,305,249,347,299,383,311,392,306,391,296,388,245,351,199,308,138,239"/>
+<area shape="rect" id="Node000004" href="$class_i_lar_viewport_page.html#a4a83609a08e6e23898c3e592421a11b5" title="Sets camera state." alt="" coords="543,29,739,70"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="483,85,541,73,537,75,485,90"/>
+<area shape="rect" id="Node000005" href="$class_viewport_camera_controller.html#a1ae2d70894db28fff6474920cdbd7d65" title="Returns the current state." alt="" coords="554,95,728,135"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="495,108,541,111,536,113,496,114"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="597,28,595,19,602,10,618,5,641,3,666,5,683,13,678,14,665,10,641,8,619,10,605,15,600,21,602,30"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="483,208,541,201,536,203,485,213"/>
+<area shape="rect" id="Node000008" href="$class_viewport_camera_controller.html#a7eb6ee5ba8b24367e895638c6c98c63f" title="Performs the refresh operation." alt="" coords="554,244,728,285"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="484,235,541,247,536,247,484,240"/>
+<area shape="rect" id="Node000009" href="$class_viewport_camera_controller.html#abc947546a2318609e939ba25c027f8e8" title="Reports whether fields is true." alt="" coords="787,244,962,285"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="728,262,775,264,769,265,729,267"/>
+<area shape="poly" id="edge12_Node000010_Node000008" title=" " alt="" coords="484,277,541,274,536,275,485,282"/>
+</map>

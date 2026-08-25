@@ -1,0 +1,30 @@
+<map id="src/domain/packet_mapping.h" name="src/domain/packet_mapping.h">
+<area shape="rect" id="Node000001" title="Immutable mapping between packet byte ranges and domain state fields." alt="" coords="362,5,557,31"/>
+<area shape="rect" id="Node000002" href="$state_8h.html" title="Canonical in&#45;memory aircraft, target, and LAR state structures." alt="" coords="259,153,366,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="437,30,402,54,368,81,344,110,326,141,323,137,340,107,364,77,399,49,432,33"/>
+<area shape="rect" id="Node000004" href="$statefield_8h.html" title="Stable identifiers and access helpers for every scalar state field." alt="" coords="136,79,268,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="413,33,261,77,260,72,418,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,153,71,178"/>
+<area shape="poly" id="edge15_Node000001_Node000005" title=" " alt="" coords="359,23,306,30,245,41,184,57,126,81,87,110,57,143,53,139,83,106,123,77,182,52,244,35,305,25,363,21"/>
+<area shape="rect" id="Node000008" href="$decoded__state_8h.html" title="Atomic decoded Plane/Target/DLZ state published by runtime paths." alt="" coords="378,79,541,105"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="461,29,462,65,457,62,458,33"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="620,153,698,178"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="480,29,554,77,637,143,631,142,551,81,479,34"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="616,79,705,105"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="494,29,615,73,609,74,493,34"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="730,79,799,105"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="513,29,718,78,712,79,513,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="403,226,492,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="336,176,414,219,408,219,335,181"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="221,103,284,144,279,144,220,108"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="173,108,81,148,78,144,175,103"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="94,153,144,178"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="190,104,146,144,143,140,186,107"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="169,153,235,178"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="203,103,204,138,200,136,201,107"/>
+<area shape="poly" id="edge10_Node000008_Node000002" title=" " alt="" coords="437,104,352,148,350,143,432,106"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="494,102,523,116,548,133,564,154,565,167,560,180,537,205,507,223,505,218,533,201,556,177,560,166,559,156,545,137,520,120,494,108"/>
+<area shape="rect" id="Node000009" href="$dlz__types_8h.html" title="Dedicated Dynamic Launch Zone domain values." alt="" coords="391,153,546,178"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="462,103,467,139,463,136,459,107"/>
+<area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="494,103,614,147,608,147,493,108"/>
+</map>

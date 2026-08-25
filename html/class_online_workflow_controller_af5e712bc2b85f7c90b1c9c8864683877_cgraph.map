@@ -1,0 +1,18 @@
+<map id="OnlineWorkflowController::OnlineWorkflowController" name="OnlineWorkflowController::OnlineWorkflowController">
+<area shape="rect" id="Node000001" title="Constructs this object." alt="" coords="5,113,182,154"/>
+<area shape="rect" id="Node000002" href="$class_online_workflow_controller.html#a7d138d69b5b5daf31b30af3c47c1dd89" title="Returns the current active policy." alt="" coords="699,105,868,146"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,111,160,64,193,41,229,24,297,8,368,3,439,7,508,19,573,36,634,56,731,98,726,98,632,61,572,41,507,24,438,13,368,8,298,13,231,29,195,46,163,69,114,115"/>
+<area shape="rect" id="Node000003" href="$class_ip_access_policy.html#a78a84c573b930f04bf0b6e8a7ec51909" title="Documents the addresses operation." alt="" coords="242,39,422,65"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,110,229,75,259,68,254,71,231,80,142,115"/>
+<area shape="rect" id="Node000004" href="$class_application_facade.html#a4abe2ef76bb372f2f39b5fd9793f6211" title="Reports completion of an IP access&#45;policy change." alt="" coords="230,113,435,154"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="181,131,217,132,212,134,183,136"/>
+<area shape="rect" id="Node000005" href="$class_ip_access_policy.html#a771de5ea54903cd08e3d2460a40b20db" title="Documents the mode operation." alt="" coords="256,178,408,204"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="181,152,263,173,258,175,181,157"/>
+<area shape="rect" id="Node000006" href="$class_online_workflow_controller.html#ad18e4077e06b9a96cff93d2c2510b89c" title="Publishes the current policy view." alt="" coords="248,228,416,268"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="125,152,174,183,231,214,246,222,240,222,229,218,171,188,124,157"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="288,111,286,103,293,94,309,88,332,86,358,89,374,97,369,98,356,94,332,92,310,94,296,98,291,104,293,113"/>
+<area shape="rect" id="Node000007" href="$class_online_workflow_controller.html#a2a44f7f5543eba86c8bdb538849cc0d3" title="Notifies observers about policy view changed." alt="" coords="483,228,651,268"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="417,254,470,257,465,257,417,259"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="604,225,730,154,735,153,606,230"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="480,239,432,242,432,236,485,239"/>
+</map>

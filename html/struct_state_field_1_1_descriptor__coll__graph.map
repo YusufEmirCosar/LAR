@@ -1,0 +1,5 @@
+<map id="StateField::Descriptor" name="StateField::Descriptor">
+<area shape="rect" id="Node000001" title="Immutable metadata and access functions for one scalar field." alt="" coords="5,122,154,148"/>
+<area shape="rect" id="Node000002" href="$struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft." alt="" coords="52,5,107,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,45,82,122,77,121,77,48"/>
+</map>

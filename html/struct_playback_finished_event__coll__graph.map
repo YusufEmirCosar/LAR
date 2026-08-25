@@ -1,0 +1,5 @@
+<map id="PlaybackFinishedEvent" name="PlaybackFinishedEvent">
+<area shape="rect" id="Node000001" title="Announces natural non&#45;repeating completion for the active playback epoch." alt="" coords="5,102,164,128"/>
+<area shape="rect" id="Node000002" href="$struct_runtime_source_epoch.html" title="Identifies one activation generation of an online or playback source." alt="" coords="10,5,159,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,45,87,102,82,101,82,48"/>
+</map>

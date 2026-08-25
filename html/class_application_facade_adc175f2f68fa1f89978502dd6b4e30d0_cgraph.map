@@ -1,0 +1,14 @@
+<map id="ApplicationFacade::setPlaybackRepeat" name="ApplicationFacade::setPlaybackRepeat">
+<area shape="rect" id="Node000001" title="Enables or disables automatic playback repeat." alt="" coords="5,95,142,135"/>
+<area shape="rect" id="Node000002" href="$class_application_facade.html#aaa8bd95ed38e7f855835042c17db3338" title="Stores and emits a human&#45;readable operation error." alt="" coords="226,61,362,102"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,102,213,93,208,95,143,107"/>
+<area shape="rect" id="Node000006" href="$class_i_playback_runtime.html#a9c2490d9d5ed5396c3a0bab0dcb4b136" title="Enables or disables automatic replay restart at the final record." alt="" coords="190,127,398,167"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="142,122,177,129,172,130,142,128"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#a5935c712453aca17ae956f9c34d1d5b2" title="Reports an operation or runtime error to observers." alt="" coords="452,29,589,70"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="362,69,440,61,435,62,363,75"/>
+<area shape="rect" id="Node000004" href="$class_application_view_model.html#a8b45470f469030969b5321be7b4c0e6c" title="Sets last error." alt="" coords="446,95,595,135"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="362,89,433,102,428,102,362,94"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="483,27,481,19,487,10,501,5,521,3,542,5,556,14,551,14,541,10,521,8,502,10,491,15,486,20,488,30"/>
+<area shape="rect" id="Node000005" href="$class_application_view_model.html#a4dd5f7090efa0ade330398531a7f3f97" title="Notifies observers about error occurred." alt="" coords="643,95,793,135"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="595,112,631,115,625,115,596,118"/>
+</map>

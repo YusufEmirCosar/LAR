@@ -1,0 +1,12 @@
+<map id="SessionTimestamp::seconds" name="SessionTimestamp::seconds">
+<area shape="rect" id="Node000001" title="Returns the timestamp in seconds for UI and rate calculations." alt="" coords="927,29,1117,55"/>
+<area shape="rect" id="Node000002" href="$class_session_timestamp.html#a3b89f5c5b41fecf2c72a5586a1398f8a" title="Converts finite, non&#45;negative seconds using nearest&#45;millisecond rounding." alt="" coords="660,29,879,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="908,42,879,45,879,40,914,42"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#a742c4ec566e2367fbf2739826d23b75c" title="Seeks playback using a position expressed in seconds." alt="" coords="448,29,612,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="642,42,613,45,613,40,647,42"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="566,14,555,10,530,8,507,10,495,15,492,20,499,30,494,28,487,21,491,11,506,5,530,3,557,5,571,15"/>
+<area shape="rect" id="Node000004" href="$class_offline_panel.html#ae7d8cf55ec83f71fca8d8ccd47b4aeae" title="Constructs this object." alt="" coords="229,29,400,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="430,42,401,45,400,40,435,42"/>
+<area shape="rect" id="Node000005" href="$class_main_window.html#a0531fa9a3d2a53bacd3923ea4d4cef5a" title="Builds sidebar." alt="" coords="5,29,181,55"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="211,42,181,45,181,40,216,42"/>
+</map>

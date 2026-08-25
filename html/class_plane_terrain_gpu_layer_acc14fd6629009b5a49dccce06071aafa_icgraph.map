@@ -1,0 +1,15 @@
+<map id="PlaneTerrainGpuLayer::uploadPending" name="PlaneTerrainGpuLayer::uploadPending">
+<area shape="rect" id="Node000001" title=" " alt="" coords="858,67,1007,107"/>
+<area shape="rect" id="Node000002" href="$class_plane_terrain_gpu_layer.html#a148a59a028ca3ca6ca94dba7fd91e5bd" title=" " alt="" coords="660,67,810,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="840,87,810,90,810,84,845,87"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_renderer.html#a303eb0d904256d05666662ac14a59539" title="Draws the current operation." alt="" coords="466,33,610,74"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="643,72,610,69,610,63,648,72"/>
+<area shape="rect" id="Node000015" href="$class_plane_terrain_gpu_layer.html#ab7dca4bb30afb023808ed3f8d0de936c" title=" " alt="" coords="463,99,612,139"/>
+<area shape="poly" id="edge6_Node000002_Node000015" title=" " alt="" coords="648,101,613,110,612,104,642,102"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title="Performs the operator= operation." alt="" coords="250,5,394,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="447,43,395,38,395,32,452,42"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title="Performs the paint gl operation." alt="" coords="230,70,415,96"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="447,66,416,73,415,68,452,65"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#a4af14d7382c36b30361f6903425d2d57" title="Notifies tests and controls when terrain preparation changes readiness." alt="" coords="5,63,182,103"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="211,83,182,86,182,80,217,83"/>
+</map>

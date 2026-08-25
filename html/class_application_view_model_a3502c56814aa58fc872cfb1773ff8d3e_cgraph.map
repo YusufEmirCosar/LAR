@@ -1,0 +1,8 @@
+<map id="ApplicationViewModel::setMode" name="ApplicationViewModel::setMode">
+<area shape="rect" id="Node000001" title="Sets mode." alt="" coords="5,5,155,46"/>
+<area shape="rect" id="Node000002" href="$class_application_view_model.html#a5b032baa57b9d0f4719a51645287046a" title="Performs the mode operation." alt="" coords="400,5,549,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,20,203,19,352,19,387,22,382,23,352,24,203,24,155,25"/>
+<area shape="rect" id="Node000003" href="$class_application_view_model.html#ade9c8b044dea65240a63a3c7c5654b3e" title="Returns the mode changed." alt="" coords="203,33,352,74"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,34,190,41,185,41,155,39"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="352,40,382,39,387,38,353,46"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="ViewportFrameCounter::totalFrames" name="ViewportFrameCounter::totalFrames">
+<area shape="rect" id="Node000001" title="Returns the current total frames." alt="" coords="929,55,1084,96"/>
+<area shape="rect" id="Node000002" href="$class_viewport_frame_counter.html#a97edcf6d4d065ca1b9d1307d4a394051" title="Notifies observers about total frame count changed." alt="" coords="702,55,881,96"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="910,76,881,78,881,73,916,75"/>
+<area shape="rect" id="Node000003" href="$class_lar_viewport.html#a045b81df3d8d90ee257ea57ddc298ccb" title="Constructs this object." alt="" coords="487,5,654,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="694,51,623,34,623,29,699,51"/>
+<area shape="rect" id="Node000004" href="$class_viewport_frame_counter.html#a96b5c09dfd8ad2ec2f02500c019fd766" title="Performs the record frame operation." alt="" coords="493,55,648,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="684,76,649,78,649,73,690,75"/>
+<area shape="rect" id="Node000005" href="$class_viewport_frame_counter.html#ab6276e5c9f992ec8e96e1264a0182ce5" title="Performs the reset total count operation." alt="" coords="493,120,648,161"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="709,100,643,122,642,117,704,101"/>
+<area shape="rect" id="Node000006" href="$class_lar_viewport.html#abd0a22e7d45f07ce73574c3a58673f5c" title="Documents the reset total frame count operation." alt="" coords="247,120,439,161"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="475,141,439,143,439,138,480,141"/>
+<area shape="rect" id="Node000007" href="$class_main_window.html#a04eadf0167a2fc3881f298ebb465cfb2" title="Performs the connect facade operation." alt="" coords="5,128,199,154"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="228,141,199,143,199,138,233,141"/>
+</map>

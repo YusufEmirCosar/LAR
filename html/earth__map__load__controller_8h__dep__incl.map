@@ -1,0 +1,17 @@
+<map id="src/viewer/viewport/earth_map_load_controller.h" name="src/viewer/viewport/earth_map_load_controller.h">
+<area shape="rect" id="Node000001" title="Revision&#45;safe asynchronous lifecycle for packaged map loading." alt="" coords="471,5,658,46"/>
+<area shape="rect" id="Node000002" href="$earth__lar__view_8h.html" title="Mercator/sphere LAR page combining map, zones, and marker overlays." alt="" coords="402,94,536,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="534,56,492,96,489,91,529,58"/>
+<area shape="rect" id="Node000008" href="$earth__map__load__controller_8cpp.html" title=" " alt="" coords="560,94,762,135"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="599,54,642,94,637,93,597,59"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title=" " alt="" coords="5,190,186,216"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,137,149,192,148,187,386,132"/>
+<area shape="rect" id="Node000004" href="$earth__lar__view_8cpp.html" title=" " alt="" coords="210,183,344,223"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="414,141,321,185,319,180,409,142"/>
+<area shape="rect" id="Node000005" href="$earth__lar__view__interaction_8cpp.html" title=" " alt="" coords="368,183,570,223"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="471,148,471,184,467,181,467,152"/>
+<area shape="rect" id="Node000006" href="$earth__lar__view__rendering_8cpp.html" title=" " alt="" coords="593,183,787,223"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="534,138,642,182,637,182,533,143"/>
+<area shape="rect" id="Node000007" href="$lar__viewport_8cpp.html" title=" " alt="" coords="811,183,945,223"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="551,132,800,180,813,185,808,185,799,185,551,138"/>
+</map>

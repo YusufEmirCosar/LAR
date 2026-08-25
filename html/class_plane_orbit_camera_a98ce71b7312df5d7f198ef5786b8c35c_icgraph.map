@@ -1,0 +1,9 @@
+<map id="PlaneOrbitCamera::setGroundConstrained" name="PlaneOrbitCamera::setGroundConstrained">
+<area shape="rect" id="Node000001" title="Sets ground constrained." alt="" coords="461,39,657,79"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#add548b9b553b3f516b66838dc06e9918" title="Sets surface visible." alt="" coords="210,5,413,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="443,44,413,42,413,37,448,44"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#a605af179df470891b8fa7b2433ce23cc" title="Enables DTED terrain, retaining flat ground as an unavailable/loading fallback." alt="" coords="213,71,410,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="448,73,411,81,410,76,443,74"/>
+<area shape="rect" id="Node000003" href="$class_plane_view_workspace.html#a1a5bc74de39609b1805c211ae7b67006" title="Constructs this object." alt="" coords="5,5,162,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="191,26,163,28,162,23,197,25"/>
+</map>

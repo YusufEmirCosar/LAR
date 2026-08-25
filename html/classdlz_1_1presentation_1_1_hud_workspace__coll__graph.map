@@ -1,0 +1,43 @@
+<map id="dlz::presentation::HudWorkspace" name="dlz::presentation::HudWorkspace">
+<area shape="rect" id="Node000001" title="Hosted HUD page containing the DLZ canvas and its control binding." alt="" coords="771,210,897,251"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="197,43,269,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="282,39,377,17,435,8,498,3,563,5,628,13,691,32,749,62,767,77,783,95,807,135,822,176,831,211,826,209,817,178,802,138,778,98,763,81,746,66,689,37,627,19,563,10,498,9,436,13,378,22,285,43"/>
+<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_view.html" title="Lightweight QWidget that paints the latest immutable DLZ frame." alt="" coords="462,136,587,176"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="283,66,352,85,426,110,483,134,477,136,424,115,351,90,285,71"/>
+<area shape="rect" id="Node000007" href="$classdlz_1_1presentation_1_1_control_panel.html" title="Small interactive control surface for the mandatory toy model." alt="" coords="462,64,587,104"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="284,59,463,77,459,80,285,64"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="601,157,674,166,748,183,802,209,797,210,746,188,673,171,603,162"/>
+<area shape="rect" id="Node000004" href="$classdlz_1_1presentation_1_1_hud_renderer.html" title="Draws only the DLZ range staple and its required readouts." alt="" coords="170,112,296,152"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="310,136,463,149,459,153,312,141"/>
+<area shape="rect" id="Node000005" href="$structdlz_1_1_solution.html" title="Ordered launch&#45;zone ranges and presentation cues produced by solve()." alt="" coords="186,390,280,416"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="292,385,305,376,314,362,316,349,319,334,329,320,342,311,355,307,379,307,402,307,412,303,423,295,435,274,436,253,437,229,447,204,462,188,482,175,479,179,465,192,451,207,442,230,442,253,440,275,427,298,415,308,403,312,379,313,356,313,344,316,333,323,324,336,321,350,319,364,309,379,296,389"/>
+<area shape="rect" id="Node000010" href="$structdlz_1_1_scenario_frame.html" title="Complete, internally consistent domain frame produced from scenario inputs." alt="" coords="457,546,591,572"/>
+<area shape="poly" id="edge19_Node000010_Node000005" title=" " alt="" coords="282,419,352,450,426,489,508,545,503,546,424,493,349,455,282,425"/>
+<area shape="rect" id="Node000017" href="$classdlz_1_1presentation_1_1_presentation_controller.html" title="Owns filtering, scale selection, and shoot&#45;cue timing." alt="" coords="449,324,599,364"/>
+<area shape="poly" id="edge23_Node000017_Node000005" title=" " alt="" coords="294,393,424,371,461,364,456,366,426,376,296,398"/>
+<area shape="rect" id="Node000006" href="$structdlz_1_1_hud_state.html" title="Filtered and scaled values ready for stateless HUD rendering." alt="" coords="182,202,284,228"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="297,200,424,174,463,168,459,170,426,179,300,204"/>
+<area shape="poly" id="edge22_Node000017_Node000006" title=" " alt="" coords="298,218,364,234,397,247,427,266,436,277,440,287,443,298,451,308,471,323,466,324,447,311,439,300,435,289,431,279,423,270,394,252,362,239,299,223"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="601,87,676,101,713,114,749,131,772,148,792,169,823,210,817,210,788,172,768,152,746,136,711,119,674,106,603,92"/>
+<area shape="rect" id="Node000008" href="$structdlz_1_1_scenario_inputs.html" title="Minimal editable values accepted from the local DLZ control panel." alt="" coords="458,218,591,244"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="606,228,773,230,769,232,607,233"/>
+<area shape="rect" id="Node000009" href="$structdlz_1_1_telemetry_inputs.html" title="The three packet/replay inputs consumed by the DLZ workspace." alt="" coords="454,271,594,297"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="608,276,677,269,747,257,777,251,772,253,748,262,677,274,610,281"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="555,534,645,464,697,416,745,365,789,304,820,253,824,250,794,307,749,369,701,420,648,468,558,539"/>
+<area shape="rect" id="Node000011" href="$structdlz_1_1_shooter_state.html" title="Shooter kinematics consumed by geometry and solver functions." alt="" coords="172,651,294,677"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="309,657,367,647,424,629,472,600,507,573,512,571,475,605,426,634,368,652,310,662"/>
+<area shape="rect" id="Node000012" href="$structdlz_1_1_vec3.html" title="Cartesian vector in the coordinate system documented by its owning state." alt="" coords="5,687,82,713"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="96,688,173,674,169,677,97,693"/>
+<area shape="rect" id="Node000013" href="$structdlz_1_1_target_state.html" title="Target kinematics and defensive loading consumed by the DLZ model." alt="" coords="176,719,290,745"/>
+<area shape="poly" id="edge15_Node000013_Node000012" title=" " alt="" coords="75,719,106,733,141,738,178,740,173,741,141,743,105,738,74,724"/>
+<area shape="poly" id="edge14_Node000010_Node000013" title=" " alt="" coords="304,723,365,709,395,698,424,682,454,656,480,626,514,574,519,571,485,629,458,660,426,687,398,702,366,714,305,728"/>
+<area shape="rect" id="Node000014" href="$structdlz_1_1_atmosphere.html" title="Atmospheric values used to convert Mach to velocity." alt="" coords="175,493,291,518"/>
+<area shape="poly" id="edge16_Node000010_Node000014" title=" " alt="" coords="306,512,426,532,474,545,469,546,424,537,307,518"/>
+<area shape="rect" id="Node000015" href="$structdlz_1_1_weapon_model.html" title="Tunable constants for the intentionally simplified teaching model." alt="" coords="169,546,297,572"/>
+<area shape="poly" id="edge17_Node000010_Node000015" title=" " alt="" coords="312,556,459,558,454,560,313,561"/>
+<area shape="rect" id="Node000016" href="$structdlz_1_1_geometry.html" title="Derived relative engagement geometry in explicit aviation units." alt="" coords="181,599,284,625"/>
+<area shape="poly" id="edge18_Node000010_Node000016" title=" " alt="" coords="300,603,424,585,484,571,479,573,426,590,301,609"/>
+<area shape="poly" id="edge20_Node000001_Node000017" title=" " alt="" coords="614,337,681,326,746,303,784,278,813,253,817,250,787,282,749,308,682,331,616,342"/>
+<area shape="rect" id="Node000018" href="$classdlz_1_1presentation_1_1_range_scale_controller.html" title="Stateful directional&#45;crossing scale selector." alt="" coords="159,325,307,366"/>
+<area shape="poly" id="edge21_Node000017_Node000018" title=" " alt="" coords="322,343,451,343,446,346,323,348"/>
+</map>

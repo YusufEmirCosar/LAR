@@ -1,0 +1,7 @@
+<map id="ViewportFrameCounter::resetTotalCount" name="ViewportFrameCounter::resetTotalCount">
+<area shape="rect" id="Node000001" title="Performs the reset total count operation." alt="" coords="5,5,161,46"/>
+<area shape="rect" id="Node000002" href="$class_viewport_frame_counter.html#a97edcf6d4d065ca1b9d1307d4a394051" title="Notifies observers about total frame count changed." alt="" coords="209,5,387,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,23,196,25,190,26,161,28"/>
+<area shape="rect" id="Node000003" href="$class_viewport_frame_counter.html#a2fbcb1fdc2b482b8cbaac032a291cb59" title="Returns the current total frames." alt="" coords="435,5,590,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,23,422,26,417,26,387,28"/>
+</map>

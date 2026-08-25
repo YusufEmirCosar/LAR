@@ -1,0 +1,9 @@
+<map id="SourceLifecycleCoordinator::accept" name="SourceLifecycleCoordinator::accept">
+<area shape="rect" id="Node000001" title="Performs the accept operation." alt="" coords="5,39,187,79"/>
+<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#aff8945a0254ab41539be69279477197a" title="Performs the accepts operation." alt="" coords="235,5,416,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,43,222,40,217,42,188,48"/>
+<area shape="rect" id="Node000003" href="$class_application_view_model.html#a31fc7f34eb731e986f5bda4f60699c7a" title="Sets playback position." alt="" coords="251,71,400,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,69,238,78,232,79,187,74"/>
+<area shape="rect" id="Node000004" href="$class_application_view_model.html#a4c61af3271c6850d139f8277914d5c14" title="Notifies observers about playback state changed." alt="" coords="464,71,628,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="400,88,451,91,446,91,401,94"/>
+</map>

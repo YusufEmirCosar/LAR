@@ -1,0 +1,11 @@
+<map id="IPlaybackRuntime::play" name="IPlaybackRuntime::play">
+<area shape="rect" id="Node000001" title="Starts or resumes clock&#45;driven playback." alt="" coords="886,13,1046,38"/>
+<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#a2800806856eec2dcb0d7f9b22b7cbfb8" title="Plays the current operation." alt="" coords="656,5,838,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="867,26,838,28,838,23,873,26"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#a53d5ac15bbe712808b35cc2ca8e5ec14" title="Starts or resumes offline playback." alt="" coords="448,13,608,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="638,26,609,28,609,23,643,26"/>
+<area shape="rect" id="Node000004" href="$class_offline_panel.html#ae7d8cf55ec83f71fca8d8ccd47b4aeae" title="Constructs this object." alt="" coords="229,13,400,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="430,26,401,28,401,23,435,26"/>
+<area shape="rect" id="Node000005" href="$class_main_window.html#a0531fa9a3d2a53bacd3923ea4d4cef5a" title="Builds sidebar." alt="" coords="5,13,181,38"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="211,26,181,28,181,23,216,25"/>
+</map>

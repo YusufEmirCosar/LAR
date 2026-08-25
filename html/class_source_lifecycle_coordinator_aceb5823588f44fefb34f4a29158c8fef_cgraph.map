@@ -1,0 +1,29 @@
+<map id="SourceLifecycleCoordinator::accept" name="SourceLifecycleCoordinator::accept">
+<area shape="rect" id="Node000001" title="Performs the accept operation." alt="" coords="5,136,187,177"/>
+<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#aff8945a0254ab41539be69279477197a" title="Performs the accepts operation." alt="" coords="235,5,416,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,134,171,95,233,57,250,51,246,54,236,61,174,100,124,137"/>
+<area shape="rect" id="Node000003" href="$class_source_lifecycle_coordinator.html#a188b559c409aa63acd2e62f2a8d70f25" title="Notifies observers about online state changed." alt="" coords="235,71,416,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,133,239,114,235,118,171,138"/>
+<area shape="rect" id="Node000004" href="$class_source_lifecycle_coordinator.html#ad34fbe86cb6fe96f56d3d00d4d587a39" title="Sets state." alt="" coords="235,136,416,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,154,222,155,217,158,188,159"/>
+<area shape="rect" id="Node000007" href="$class_application_view_model.html#a4a3e33ab5db50a0e26e124bf9225eeba" title="Sets status text." alt="" coords="251,201,400,242"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="169,175,239,195,234,198,170,180"/>
+<area shape="rect" id="Node000009" href="$class_source_lifecycle_coordinator.html#a69c66e72c1376f3ebd16d87791c99644" title="Performs the transition to operation." alt="" coords="235,267,416,307"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="123,174,174,213,236,251,251,260,245,260,233,256,171,217,122,180"/>
+<area shape="rect" id="Node000005" href="$class_source_lifecycle_coordinator.html#af8c4c5b43ccda3fdf84ed7b6931094bf" title="Notifies observers about lifecycle state changed." alt="" coords="471,83,652,123"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="415,133,458,126,453,128,417,138"/>
+<area shape="rect" id="Node000006" href="$class_source_lifecycle_coordinator.html#aa255c75c16a3452923516e76766ae9c9" title="Returns the current state." alt="" coords="723,112,904,153"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="416,149,709,136,705,139,417,155"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="653,111,710,120,705,120,653,116"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="767,110,764,102,772,93,788,87,814,85,841,88,858,96,853,96,839,93,813,91,789,93,775,97,769,103,771,113"/>
+<area shape="rect" id="Node000008" href="$class_application_view_model.html#a3b64c6107fe4eb693bbf7aa9adf20089" title="Notifies observers about status changed." alt="" coords="487,201,636,242"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="400,219,474,221,469,222,401,224"/>
+<area shape="rect" id="Node000010" href="$class_source_lifecycle_coordinator.html#a17ce5b778f5c25dcf667c451910501ec" title="Notifies observers about error raised." alt="" coords="471,267,652,307"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="416,284,458,287,453,287,417,290"/>
+<area shape="rect" id="Node000011" href="$class_mode_coordinator.html#a37cbbd4b6fa9daef34624ad223228853" title="Performs the transition to operation." alt="" coords="464,332,659,357"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="412,305,494,327,488,327,411,311"/>
+<area shape="rect" id="Node000012" href="$class_mode_coordinator.html#ade9dc078e2f2c1b79e974dee43230e88" title="Notifies observers about mode changed." alt="" coords="707,306,920,332"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="659,332,689,331,694,331,660,337"/>
+<area shape="rect" id="Node000013" href="$class_mode_coordinator.html#a1f9654679d28b6d686a3d6530bd345bb" title="Performs the mode String operation." alt="" coords="716,356,911,381"/>
+<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="660,351,704,358,698,358,660,356"/>
+</map>

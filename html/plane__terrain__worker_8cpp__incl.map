@@ -1,0 +1,49 @@
+<map id="src/viewer/plane/plane_terrain_worker.cpp" name="src/viewer/plane/plane_terrain_worker.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="581,5,732,46"/>
+<area shape="rect" id="Node000002" href="$plane__terrain__worker_8h.html" title="Latest&#45;only dedicated CPU worker for DTED terrain patch preparation." alt="" coords="451,94,580,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="623,48,561,88,559,84,627,45"/>
+<area shape="rect" id="Node000023" title=" " alt="" coords="604,102,710,127"/>
+<area shape="poly" id="edge26_Node000001_Node000023" title=" " alt="" coords="658,44,659,87,654,85,655,49"/>
+<area shape="rect" id="Node000024" title=" " alt="" coords="735,102,787,127"/>
+<area shape="poly" id="edge27_Node000001_Node000024" title=" " alt="" coords="681,44,738,92,732,92,680,49"/>
+<area shape="rect" id="Node000003" href="$plane__terrain__patch__builder_8h.html" title="Bounded DTED0 sampling and indexed local terrain&#45;mesh construction." alt="" coords="254,183,412,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="472,137,389,178,386,174,476,134"/>
+<area shape="rect" id="Node000020" title=" " alt="" coords="436,190,504,216"/>
+<area shape="poly" id="edge23_Node000002_Node000020" title=" " alt="" coords="507,133,485,178,481,175,503,137"/>
+<area shape="rect" id="Node000021" title=" " alt="" coords="528,190,597,216"/>
+<area shape="poly" id="edge24_Node000002_Node000021" title=" " alt="" coords="527,133,551,177,546,176,525,138"/>
+<area shape="rect" id="Node000022" title=" " alt="" coords="621,190,682,216"/>
+<area shape="poly" id="edge25_Node000002_Node000022" title=" " alt="" coords="547,133,622,181,617,182,546,138"/>
+<area shape="rect" id="Node000004" href="$plane__terrain__patch_8h.html" title="Immutable CPU terrain mesh and bounded build request for Plane mode." alt="" coords="92,360,222,401"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="316,223,189,351,185,347,311,225"/>
+<area shape="rect" id="Node000011" href="$dted__mosaic__sampler_8h.html" title="Bilinear DTED0 surface sampler with bounded terrain and water&#45;mask caches." alt="" coords="412,271,545,312"/>
+<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="366,221,435,263,430,264,366,227"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="98,449,186,474"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="155,399,149,435,145,432,151,403"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="496,449,562,474"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="222,395,233,398,483,449,479,453,232,403,222,401"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="377,449,441,474"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="220,399,364,445,359,446,219,404"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="211,449,271,474"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="179,399,220,438,214,438,177,404"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="5,449,74,474"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="130,401,72,442,69,437,125,401"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="295,449,352,474"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="199,399,287,441,282,442,198,404"/>
+<area shape="poly" id="edge18_Node000011_Node000006" title=" " alt="" coords="498,310,517,333,530,359,537,397,535,435,531,431,531,398,525,361,512,335,497,315"/>
+<area shape="poly" id="edge19_Node000011_Node000007" title=" " alt="" coords="486,310,494,354,493,379,486,402,469,425,448,443,445,438,465,421,481,399,488,378,489,354,483,315"/>
+<area shape="poly" id="edge21_Node000011_Node000009" title=" " alt="" coords="409,297,324,306,227,318,139,337,105,348,81,362,67,377,57,396,45,434,40,432,52,393,63,374,78,358,103,344,138,331,226,313,324,301,414,296"/>
+<area shape="rect" id="Node000012" href="$dted__tile__source_8h.html" title="Deterministic DTED0 tile addressing without scanning the source tree." alt="" coords="597,360,725,401"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="520,310,609,353,603,353,519,315"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="678,449,745,474"/>
+<area shape="poly" id="edge22_Node000011_Node000016" title=" " alt="" coords="545,298,659,320,708,337,726,347,739,358,747,377,746,398,730,438,727,434,741,397,742,378,735,362,723,351,706,342,657,326,545,304"/>
+<area shape="rect" id="Node000017" href="$dted__water__mask__source_8h.html" title="Validated indexed access to the compact global DTED0 water&#45;mask pack." alt="" coords="245,360,402,401"/>
+<area shape="poly" id="edge14_Node000011_Node000017" title=" " alt="" coords="446,312,373,355,370,350,441,314"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="426,368,472,393"/>
+<area shape="poly" id="edge20_Node000011_Node000019" title=" " alt="" coords="474,311,460,355,456,351,469,314"/>
+<area shape="poly" id="edge12_Node000012_Node000006" title=" " alt="" coords="630,401,563,443,561,438,625,402"/>
+<area shape="poly" id="edge13_Node000012_Node000016" title=" " alt="" coords="675,399,698,436,693,434,672,403"/>
+<area shape="poly" id="edge15_Node000017_Node000006" title=" " alt="" coords="375,399,486,443,481,443,374,404"/>
+<area shape="poly" id="edge16_Node000017_Node000007" title=" " alt="" coords="346,399,387,438,382,437,344,404"/>
+<area shape="poly" id="edge17_Node000017_Node000010" title=" " alt="" coords="325,399,326,435,321,432,322,403"/>
+</map>

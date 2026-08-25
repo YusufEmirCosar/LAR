@@ -1,0 +1,9 @@
+<map id="ViewportControls::setCameraTrackingMode" name="ViewportControls::setCameraTrackingMode">
+<area shape="rect" id="Node000001" title="Sets camera tracking mode." alt="" coords="5,39,199,79"/>
+<area shape="rect" id="Node000002" href="$class_viewport_controls.html#a07924252523b386bf9c13ae946d23eec" title="Performs the update turn with plane presentation operation." alt="" coords="247,39,427,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,56,234,59,229,59,199,62"/>
+<area shape="rect" id="Node000003" href="$class_viewport_controls.html#abac26473bd0041dad1c7b1de3af0760b" title="Returns the current camera tracking mode." alt="" coords="478,5,650,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="427,43,465,40,460,41,428,48"/>
+<area shape="rect" id="Node000004" href="$class_viewport_controls.html#aafab89dc15841a9a23878137464b3f22" title="Returns the current turn with plane." alt="" coords="475,71,653,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="428,69,462,76,457,76,428,74"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="LarViewportPageEvents::diagnosticRaised" name="LarViewportPageEvents::diagnosticRaised">
+<area shape="rect" id="Node000001" title="Notifies observers about diagnostic raised." alt="" coords="239,27,400,68"/>
+<area shape="rect" id="Node000002" href="$class_earth_lar_view.html#a7eb84ed5ba23f7d30ed5ac72308d4448" title="Constructs this object." alt="" coords="5,5,191,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,35,191,33,191,28,226,34"/>
+<area shape="rect" id="Node000003" href="$class_plane_view_workspace.html#ab40cdad77d90c3523d2f051c9c76b4b1" title="Performs the fit to data operation." alt="" coords="24,55,172,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="221,60,173,69,172,63,226,59"/>
+</map>

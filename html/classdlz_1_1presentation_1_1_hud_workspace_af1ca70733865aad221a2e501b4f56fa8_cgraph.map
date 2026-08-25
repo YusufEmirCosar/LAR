@@ -1,0 +1,23 @@
+<map id="dlz::presentation::HudWorkspace::tick" name="dlz::presentation::HudWorkspace::tick">
+<area shape="rect" id="Node000001" title="Documents the tick operation." alt="" coords="5,121,145,162"/>
+<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_hud_workspace.html#afb799959b6a1f5055a960535a31071b1" title="Documents the present operation." alt="" coords="193,121,354,162"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,139,179,140,175,143,146,144"/>
+<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_presentation_controller.html#ae48824d760b9680a8001c8cf0bd17e14" title="Returns the current displayed range nm." alt="" coords="402,5,552,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="312,118,412,67,408,70,315,123"/>
+<area shape="rect" id="Node000004" href="$classdlz_1_1presentation_1_1_hud_view.html#aa1ba72893d7d4f7544e1a4aca5295a79" title="Sets frame." alt="" coords="408,85,546,126"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="353,124,396,119,391,121,355,129"/>
+<area shape="rect" id="Node000007" href="$classdlz_1_1presentation_1_1_presentation_controller.html#a4e5a02e5deef2efd39e72a477526eeaf" title="Documents the state operation." alt="" coords="402,149,552,205"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="354,153,389,161,384,162,354,158"/>
+<area shape="rect" id="Node000008" href="$classdlz_1_1presentation_1_1_presentation_controller.html#a3970ebda1f3966fbd83baf9cc85ab30e" title="Performs the update operation." alt="" coords="402,229,552,285"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="309,159,403,215,412,222,407,221,401,219,308,164"/>
+<area shape="rect" id="Node000005" href="$classdlz_1_1presentation_1_1_hud_view.html#a411cd997a2257b6a4ab95ea6ac3119fb" title="Returns the current displayed range nm." alt="" coords="600,40,797,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="546,89,588,82,583,84,547,94"/>
+<area shape="rect" id="Node000006" href="$classdlz_1_1presentation_1_1_hud_view.html#a1d3b8abd2f82714a28a4517891f91bd2" title="Documents the hud state operation." alt="" coords="631,105,766,146"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="546,109,619,117,613,118,547,114"/>
+<area shape="rect" id="Node000009" href="$classdlz_1_1presentation_1_1_presentation_controller.html#a43321c3aad465649153fe0c5101816b2" title="Clears the current operation." alt="" coords="623,209,774,265"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="552,248,610,245,605,246,553,253"/>
+<area shape="rect" id="Node000011" href="$classdlz_1_1presentation_1_1_presentation_controller.html#a1c2f4dbe3c7c69d8107b4b98848f8f4f" title="Performs the update shoot presentation operation." alt="" coords="611,289,786,345"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="553,275,599,290,593,289,552,280"/>
+<area shape="rect" id="Node000010" href="$classdlz_1_1presentation_1_1_presentation_controller.html#abcb0380e5c09132aa112a1ab05585eaf" title="Resets the current operation." alt="" coords="845,209,995,265"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="774,235,832,237,826,237,774,240"/>
+</map>

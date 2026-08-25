@@ -1,0 +1,5 @@
+<map id="PlaybackService::playingChanged" name="PlaybackService::playingChanged">
+<area shape="rect" id="Node000001" title="Notifies observers about playing changed." alt="" coords="5,5,174,46"/>
+<area shape="rect" id="Node000002" href="$class_playback_service.html#a87e882d8178053a7315b5b54b461fa27" title="Reports whether playing is true." alt="" coords="222,13,402,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,23,209,25,203,26,174,28"/>
+</map>

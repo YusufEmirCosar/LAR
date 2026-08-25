@@ -1,0 +1,26 @@
+<map id="src/viewer/viewport/earth_map_load_controller.cpp" name="src/viewer/viewport/earth_map_load_controller.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="572,5,774,46"/>
+<area shape="rect" id="Node000002" href="$earth__map__load__controller_8h.html" title="Revision&#45;safe asynchronous lifecycle for packaged map loading." alt="" coords="433,94,588,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="634,48,562,89,559,84,638,45"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="611,102,735,127"/>
+<area shape="poly" id="edge11_Node000001_Node000014" title=" " alt="" coords="675,44,675,87,671,85,671,49"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="759,102,811,127"/>
+<area shape="poly" id="edge12_Node000001_Node000015" title=" " alt="" coords="699,44,760,92,755,92,698,49"/>
+<area shape="rect" id="Node000003" href="$map__asset__source_8h.html" title="Source port for loading an immutable compiled world&#45;map mesh." alt="" coords="268,183,424,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="471,136,398,177,396,173,475,134"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="428,360,496,386"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="504,133,490,183,475,271,466,346,462,343,470,271,485,182,501,137"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="500,190,616,216"/>
+<area shape="poly" id="edge8_Node000002_Node000012" title=" " alt="" coords="522,133,547,177,542,176,520,138"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="641,190,710,216"/>
+<area shape="poly" id="edge9_Node000002_Node000013" title=" " alt="" coords="548,133,642,182,636,183,547,138"/>
+<area shape="rect" id="Node000004" href="$map__asset__reader_8h.html" title="Bounded, integrity&#45;checking parser for packaged .larmap bytes." alt="" coords="268,271,424,312"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="348,222,349,257,344,254,345,226"/>
+<area shape="rect" id="Node000005" href="$map__mesh_8h.html" title="CPU&#45;side vertex/index representation shared by tools and renderer." alt="" coords="5,360,173,386"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="284,314,144,358,142,352,280,311"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="196,360,315,386"/>
+<area shape="poly" id="edge5_Node000004_Node000009" title=" " alt="" coords="326,311,282,352,280,347,321,313"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="339,360,404,386"/>
+<area shape="poly" id="edge6_Node000004_Node000010" title=" " alt="" coords="354,310,365,346,361,344,351,315"/>
+<area shape="poly" id="edge7_Node000004_Node000011" title=" " alt="" coords="376,310,435,351,429,351,374,315"/>
+</map>

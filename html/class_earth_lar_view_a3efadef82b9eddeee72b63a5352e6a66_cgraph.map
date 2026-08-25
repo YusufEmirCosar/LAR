@@ -1,0 +1,48 @@
+<map id="EarthLarView::setCameraState" name="EarthLarView::setCameraState">
+<area shape="rect" id="Node000001" title="Sets camera state." alt="" coords="5,405,208,430"/>
+<area shape="rect" id="Node000002" href="$class_earth_lar_view.html#aed49eebc05015a48136f531d1234ce78" title="Performs the apply tracked camera operation." alt="" coords="263,201,448,242"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,402,315,249,317,254,126,406"/>
+<area shape="rect" id="Node000021" href="$class_earth_lar_view.html#a06afbcf99381269bfad19f5a49b0a397" title="Performs the mark fallback geometry dirty operation." alt="" coords="263,397,448,438"/>
+<area shape="poly" id="edge16_Node000001_Node000021" title=" " alt="" coords="208,415,250,417,245,419,209,420"/>
+<area shape="rect" id="Node000028" href="$class_earth_lar_view.html#ab9d964f4773a72905409c4040414aedb" title="Performs the refresh overlays operation." alt="" coords="256,462,455,488"/>
+<area shape="poly" id="edge23_Node000001_Node000028" title=" " alt="" coords="166,428,284,457,279,459,165,434"/>
+<area shape="rect" id="Node000003" href="$class_earth_camera_policy.html#aa6783e89fe7c2d1fb7301d00ab27eef4" title="Performs the bearing degrees operation." alt="" coords="530,5,672,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="368,199,421,130,459,91,501,57,517,50,513,53,505,61,462,95,425,134,372,203"/>
+<area shape="rect" id="Node000004" href="$classlar_1_1map_1_1_map_projection.html#a69e03472280955558ba20627406488e6" title="Projects latitude." alt="" coords="521,71,680,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="382,199,436,161,502,122,520,116,515,119,504,127,439,165,385,203"/>
+<area shape="rect" id="Node000005" href="$classlar_1_1map_1_1_earth_map_widget.html#ac0623eea3763d9876a34a0f3b481f16d" title="Sets camera bearing." alt="" coords="514,136,687,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="433,198,509,180,505,183,436,203"/>
+<area shape="rect" id="Node000008" href="$classlar_1_1map_1_1_earth_map_widget.html#af3483414e1295716301143b7e289e23f" title="Sets flat center." alt="" coords="514,201,687,242"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="448,219,501,221,496,223,449,224"/>
+<area shape="rect" id="Node000016" href="$classlar_1_1map_1_1_earth_map_widget.html#abbd4908aee727f405614ca12891ca3c0" title="Sets rotation." alt="" coords="514,267,687,307"/>
+<area shape="poly" id="edge10_Node000002_Node000016" title=" " alt="" coords="434,240,510,261,504,263,435,245"/>
+<area shape="rect" id="Node000020" href="$class_earth_camera_policy.html#a972bc169b7b6f815fd517a53f6fc5c99" title="Documents the tracked coordinate operation." alt="" coords="530,332,672,373"/>
+<area shape="poly" id="edge15_Node000002_Node000020" title=" " alt="" coords="384,240,439,278,504,317,520,326,515,326,502,321,436,283,383,245"/>
+<area shape="rect" id="Node000006" href="$classlar_1_1map_1_1_map_camera.html#a4804b3630b6e40a5bd3d994d0c8d6e81" title="Sets bearing degrees." alt="" coords="759,136,907,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="687,154,746,156,741,157,688,159"/>
+<area shape="rect" id="Node000007" href="$classlar_1_1map_1_1_map_camera.html#a389f10f6e626bdf8fc1b53294643c788" title="Returns the current bearing degrees." alt="" coords="984,136,1131,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="906,154,971,156,965,157,907,159"/>
+<area shape="rect" id="Node000009" href="$classlar_1_1map_1_1_map_camera.html#af86e2114c29690cc5ef7d345c4a67a9c" title="Sets mercator center." alt="" coords="759,201,907,242"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="687,219,746,221,741,222,688,224"/>
+<area shape="rect" id="Node000010" href="$classlar_1_1map_1_1_map_camera.html#a7b051361862a20132feef31029587881" title="Performs the constrain mercator center operation." alt="" coords="971,201,1144,242"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="906,219,958,221,953,222,907,224"/>
+<area shape="rect" id="Node000017" href="$classlar_1_1map_1_1_earth_map_widget.html#a86b09d5aed7447ce3fc3c81f1bd44560" title="Maps presentation." alt="" coords="746,267,920,307"/>
+<area shape="poly" id="edge11_Node000016_Node000017" title=" " alt="" coords="687,284,733,286,728,288,688,290"/>
+<area shape="rect" id="Node000019" href="$classlar_1_1map_1_1_map_camera.html#a77395219a86be47b2fe891af4be700ce" title="Sets sphere center." alt="" coords="759,332,907,373"/>
+<area shape="poly" id="edge13_Node000016_Node000019" title=" " alt="" coords="675,305,747,327,741,328,675,311"/>
+<area shape="rect" id="Node000018" href="$classlar_1_1map_1_1_map_camera.html#af281b7b5f7a8ede8b9dac8bc355e3b72" title="Returns the current presentation." alt="" coords="984,267,1131,307"/>
+<area shape="poly" id="edge12_Node000017_Node000018" title=" " alt="" coords="920,284,971,287,966,287,920,290"/>
+<area shape="rect" id="Node000014" href="$classlar_1_1map_1_1_map_projection.html#ae51b77201c9b343a098d386577f31c0c" title="Performs the wrap longitude operation." alt="" coords="978,332,1137,373"/>
+<area shape="poly" id="edge14_Node000019_Node000014" title=" " alt="" coords="907,350,965,352,959,353,907,355"/>
+<area shape="rect" id="Node000022" href="$class_earth_overlay_coordinator.html#a21299d7ff2250ab203ea6e9db1765334" title="Performs the mark dirty operation." alt="" coords="518,397,683,438"/>
+<area shape="poly" id="edge17_Node000021_Node000022" title=" " alt="" coords="448,415,506,417,501,418,449,420"/>
+<area shape="rect" id="Node000023" href="$class_earth_lar_view.html#a07f6e850546cab4c80f9cda34444f565" title="Performs the request overlay preparation operation." alt="" coords="503,463,698,503"/>
+<area shape="poly" id="edge18_Node000021_Node000023" title=" " alt="" coords="435,436,510,458,504,458,434,441"/>
+<area shape="rect" id="Node000024" href="$classlar_1_1map_1_1_earth_map_widget.html#a59f43f7b7adc4e0aab4cd7467709479f" title="Maps camera." alt="" coords="746,429,920,470"/>
+<area shape="poly" id="edge19_Node000023_Node000024" title=" " alt="" coords="698,466,728,465,734,464,699,472"/>
+<area shape="rect" id="Node000025" href="$class_earth_overlay_coordinator.html#aedf8cc2051f858c3b4f1b1dd7701d978" title="Performs the request operation." alt="" coords="751,519,915,559"/>
+<area shape="poly" id="edge20_Node000023_Node000025" title=" " alt="" coords="688,501,738,516,733,515,687,507"/>
+<area shape="poly" id="edge21_Node000025_Node000025" title=" " alt="" coords="791,516,789,509,796,500,810,494,833,492,857,494,873,503,868,503,856,500,833,497,812,499,799,504,794,510,795,520"/>
+<area shape="rect" id="Node000026" href="$class_viewport_preparation_worker.html#a94eb1c1152292149a523977b8b19489b" title="Submits the current operation." alt="" coords="968,519,1147,559"/>
+<area shape="poly" id="edge22_Node000025_Node000026" title=" " alt="" coords="916,536,955,539,949,539,916,542"/>
+</map>

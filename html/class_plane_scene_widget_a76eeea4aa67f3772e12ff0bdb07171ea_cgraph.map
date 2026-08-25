@@ -1,0 +1,5 @@
+<map id="PlaneSceneWidget::wheelEvent" name="PlaneSceneWidget::wheelEvent">
+<area shape="rect" id="Node000001" title="Performs the wheel event operation." alt="" coords="5,5,214,31"/>
+<area shape="rect" id="Node000002" href="$class_plane_orbit_camera.html#a6316d90e5690d89b67a69e1c6e11be06" title="Performs the zoom operation." alt="" coords="262,5,430,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,16,249,18,243,18,214,21"/>
+</map>

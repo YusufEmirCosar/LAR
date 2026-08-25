@@ -1,0 +1,13 @@
+<map id="IApplicationRuntime::playbackPositionChanged" name="IApplicationRuntime::playbackPositionChanged">
+<area shape="rect" id="Node000001" title="Notifies observers about playback position changed." alt="" coords="618,71,799,111"/>
+<area shape="rect" id="Node000002" href="$class_direct_application_runtime.html#af7dfb47a5a42b53c0a26e62c480d9362" title="Constructs this object." alt="" coords="384,5,561,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="615,66,548,49,549,44,620,66"/>
+<area shape="rect" id="Node000003" href="$class_source_lifecycle_coordinator.html#a8a284b25c663c1d8c55f7cdad5633d3d" title="Constructs this object." alt="" coords="378,71,567,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="601,91,567,94,567,88,606,91"/>
+<area shape="rect" id="Node000006" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="374,136,570,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="620,116,549,138,548,133,615,116"/>
+<area shape="rect" id="Node000004" href="$class_application_facade.html#acc84de76e45ecc6539751a18ab2ab19d" title="Creates the main&#45;thread application facade." alt="" coords="190,71,326,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="360,91,326,94,326,88,365,91"/>
+<area shape="rect" id="Node000005" href="$class_application_facade.html#a32410f883b62e33c853d2f6996cf8685" title="Creates the application facade with IP access&#45;policy file support." alt="" coords="5,71,142,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="172,92,143,94,142,88,177,90"/>
+</map>

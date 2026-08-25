@@ -1,0 +1,11 @@
+<map id="JsonMappingRepository::loadJson" name="JsonMappingRepository::loadJson">
+<area shape="rect" id="Node000001" title="Loads json." alt="" coords="5,47,167,88"/>
+<area shape="rect" id="Node000002" href="$class_state_field.html#a9cffd8d88606764c6cde9724071891f7" title="Returns the canonical mapping&#45;oriented name for id." alt="" coords="215,5,379,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,46,226,34,221,36,168,51"/>
+<area shape="rect" id="Node000004" href="$class_packet_mapping.html#ad1917abe7193f42eb04c4bc08cfdb309" title="Returns whether all bindings form a complete non&#45;overlapping schema." alt="" coords="218,55,376,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="167,65,205,67,200,68,168,70"/>
+<area shape="rect" id="Node000005" href="$class_state_field.html#a58fa1690232a70168208952818c6d061" title="Resolves a JSON mapping name/index pair to an Id, or &#45;1." alt="" coords="232,104,362,130"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="167,84,226,100,221,100,167,89"/>
+<area shape="rect" id="Node000003" href="$class_state_field.html#a518ff6ce6f1e93a5135e7274e2db7359" title="Returns the canonical descriptor, or null for an invalid ID." alt="" coords="427,5,572,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="379,16,414,18,409,19,380,21"/>
+</map>

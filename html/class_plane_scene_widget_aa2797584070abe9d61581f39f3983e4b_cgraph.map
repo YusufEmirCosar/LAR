@@ -1,0 +1,9 @@
+<map id="PlaneSceneWidget::cleanupGL" name="PlaneSceneWidget::cleanupGL">
+<area shape="rect" id="Node000001" title="Performs the cleanup gl operation." alt="" coords="5,46,208,72"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_renderer.html#a512c506995494e591bca4e196ac85127" title="Cleanups the current operation." alt="" coords="256,39,400,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,56,243,59,238,59,208,62"/>
+<area shape="rect" id="Node000003" href="$class_plane_surface_gpu_layer.html#a6649e0596c335b7ad1e08fd46bb17a74" title="Cleanups the current operation." alt="" coords="448,5,603,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="400,44,430,42,436,41,401,50"/>
+<area shape="rect" id="Node000004" href="$class_plane_terrain_gpu_layer.html#ab1280353c664db1033eb6da292576567" title=" " alt="" coords="451,71,600,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="400,68,438,76,433,76,400,73"/>
+</map>

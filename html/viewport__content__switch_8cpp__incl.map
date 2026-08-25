@@ -1,0 +1,17 @@
+<map id="src/viewer/viewport/viewport_content_switch.cpp" name="src/viewer/viewport/viewport_content_switch.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="348,5,542,46"/>
+<area shape="rect" id="Node000002" href="$viewport__content__switch_8h.html" title="Accessible three&#45;way widget for selecting viewport content." alt="" coords="76,94,241,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="378,48,239,92,238,87,382,45"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="265,102,370,127"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="419,45,349,95,346,90,414,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="394,102,497,127"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="447,44,448,88,443,85,444,49"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="521,102,620,127"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="474,44,544,93,538,92,473,49"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="644,102,756,127"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="503,44,653,96,647,96,503,49"/>
+<area shape="rect" id="Node000003" href="$viewport__content__mode_8h.html" title="Top&#45;level selection between geographic LAR, Plane, and DLZ content." alt="" coords="5,183,171,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="145,134,115,172,112,169,140,137"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="194,190,267,216"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="176,133,214,178,208,178,174,138"/>
+</map>

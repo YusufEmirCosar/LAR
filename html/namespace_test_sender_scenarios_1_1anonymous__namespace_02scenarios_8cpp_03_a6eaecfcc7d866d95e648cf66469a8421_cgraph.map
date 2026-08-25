@@ -1,0 +1,16 @@
+<map id="TestSenderScenarios::anonymous_namespace{scenarios::cpp}::initializeCommon" name="TestSenderScenarios::anonymous_namespace{scenarios::cpp}::initializeCommon">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,176,100"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="41,28,44,18,54,10,69,5,91,3,116,5,133,15,128,16,114,11,90,8,70,10,56,15,49,21,46,30"/>
+<area shape="rect" id="Node000002" href="$namespace_test_sender_scenarios_1_1anonymous__namespace_02scenarios_8cpp_03.html#a9a4479f8f0a79b7957821a981f492be6" title=" " alt="" coords="224,37,454,92"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="176,62,210,64,205,65,176,67"/>
+<area shape="poly" id="edge9_Node000002_Node000002" title=" " alt="" coords="291,35,291,26,300,18,316,12,339,10,365,13,382,22,377,22,364,18,339,15,317,17,303,22,296,28,295,38"/>
+<area shape="rect" id="Node000003" href="$namespace_test_sender_scenarios_1_1anonymous__namespace_02scenarios_8cpp_03.html#a316c9848a512778bed947c57c6565fc9" title=" " alt="" coords="502,37,722,92"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="454,62,489,65,484,65,455,67"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="564,35,564,26,573,18,589,12,612,10,639,13,656,22,651,22,637,18,612,15,590,17,575,22,569,28,568,38"/>
+<area shape="rect" id="Node000004" href="$namespace_test_sender_scenarios_1_1anonymous__namespace_02scenarios_8cpp_03.html#a5f70bf1660ecee02411dd17e5a6e45d1" title=" " alt="" coords="770,37,958,92"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="723,62,757,65,752,65,723,67"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="817,35,817,26,825,18,841,12,864,10,890,13,907,22,902,22,888,18,864,15,842,17,828,22,822,28,821,38"/>
+<area shape="rect" id="Node000005" href="$namespace_test_sender_scenarios_1_1anonymous__namespace_02scenarios_8cpp_03.html#a70c0bf52dc00906b213b9c8d1d154a8c" title=" " alt="" coords="1006,37,1212,92"/>
+<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="958,62,993,65,987,65,958,67"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="1062,35,1062,26,1070,18,1086,12,1109,10,1135,13,1152,22,1146,22,1133,18,1109,15,1087,17,1073,22,1066,28,1066,38"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="NetworkRuntimeWorker::acknowledgeRecordingBatch" name="NetworkRuntimeWorker::acknowledgeRecordingBatch">
+<area shape="rect" id="Node000001" title="Documents the acknowledge recording batch operation." alt="" coords="5,43,204,83"/>
+<area shape="rect" id="Node000002" href="$class_network_runtime_worker.html#a0c4c5c644ab0d0b10fb617a032b9028a" title="Documents the flush recording batch operation." alt="" coords="252,13,412,54"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,48,239,45,234,47,204,53"/>
+<area shape="rect" id="Node000004" href="$class_network_runtime_worker.html#a73c65d04ea22263b33d7e9ae085f07b4" title="Documents the report drain if complete operation." alt="" coords="460,71,620,111"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="204,67,446,83,443,87,204,72"/>
+<area shape="rect" id="Node000003" href="$class_network_runtime_worker.html#a1c3b821a0d4854764d50e66033badcaf" title="Notifies observers about recording batch ready." alt="" coords="460,5,620,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="412,28,447,29,442,30,412,33"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="408,52,452,66,446,66,408,57"/>
+<area shape="rect" id="Node000005" href="$class_network_runtime_worker.html#a1bf3bc56f2b410563717af2b777fa72f" title="Documents the recording input drained operation." alt="" coords="668,37,829,78"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="620,76,650,73,655,73,621,81"/>
+<area shape="rect" id="Node000006" href="$class_network_runtime_worker.html#a1c147c23bce9c0775c519fcf44a4689c" title="Documents the recording input failed operation." alt="" coords="668,103,829,143"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="621,101,655,108,650,108,620,106"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="GridCameraTransform::clear" name="GridCameraTransform::clear">
+<area shape="rect" id="Node000001" title="Clears the current operation." alt="" coords="219,5,369,46"/>
+<area shape="rect" id="Node000002" href="$class_grid_lar_view.html#a5548a63de69f33f0162e4ada7b5c00ff" title="Performs the clear scene operation." alt="" coords="5,13,171,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,26,171,28,171,23,205,25"/>
+</map>

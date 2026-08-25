@@ -1,0 +1,194 @@
+{
+  "version": 5,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 24,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "LAR_ENABLE_HARDENING": "ON"
+      }
+    },
+    {
+      "name": "dev",
+      "displayName": "Developer debug build",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/build-dev",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Release",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/build-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "ci",
+      "displayName": "CI strict build",
+      "inherits": "release",
+      "binaryDir": "${sourceDir}/build-ci",
+      "cacheVariables": {
+        "LAR_WARNINGS_AS_ERRORS": "ON",
+        "LAR_ENABLE_STRICT_CONVERSIONS": "ON"
+      }
+    },
+    {
+      "name": "ci-gcc",
+      "displayName": "CI GCC warnings-as-errors",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/build-ci-gcc",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_COMPILER": "g++",
+        "LAR_WARNINGS_AS_ERRORS": "ON",
+        "LAR_ENABLE_STRICT_CONVERSIONS": "ON"
+      }
+    },
+    {
+      "name": "ci-clang",
+      "displayName": "CI Clang warnings-as-errors",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/build-ci-clang",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "LAR_WARNINGS_AS_ERRORS": "ON",
+        "LAR_ENABLE_STRICT_CONVERSIONS": "ON"
+      }
+    },
+    {
+      "name": "asan-ubsan",
+      "displayName": "Address and undefined-behavior sanitizers",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/build-asan-ubsan",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "LAR_WARNINGS_AS_ERRORS": "ON",
+        "LAR_ENABLE_STRICT_CONVERSIONS": "ON",
+        "LAR_ENABLE_ASAN": "ON",
+        "LAR_ENABLE_UBSAN": "ON"
+      }
+    },
+    {
+      "name": "tsan",
+      "displayName": "Thread sanitizer",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/build-tsan",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "LAR_WARNINGS_AS_ERRORS": "ON",
+        "LAR_ENABLE_STRICT_CONVERSIONS": "ON",
+        "LAR_ENABLE_TSAN": "ON"
+      }
+    },
+    {
+      "name": "coverage",
+      "displayName": "GCC coverage",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/build-coverage",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_COMPILER": "g++",
+        "LAR_WARNINGS_AS_ERRORS": "ON",
+        "LAR_ENABLE_STRICT_CONVERSIONS": "ON",
+        "LAR_ENABLE_COVERAGE": "ON",
+        "LAR_ENABLE_HARDENING": "OFF"
+      }
+    },
+    {
+      "name": "fuzz",
+      "displayName": "Clang parser fuzzers",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/build-fuzz",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "LAR_BUILD_FUZZERS": "ON",
+        "LAR_ENABLE_HARDENING": "OFF"
+      }
+    },
+    {
+      "name": "mutation",
+      "displayName": "Clang/Mull mutation analysis",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/build-mutation",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "LAR_WARNINGS_AS_ERRORS": "ON",
+        "LAR_ENABLE_MUTATION": "ON",
+        "LAR_ENABLE_HARDENING": "OFF"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "dev", "configurePreset": "dev" },
+    { "name": "release", "configurePreset": "release" },
+    { "name": "ci", "configurePreset": "ci" },
+    { "name": "ci-gcc", "configurePreset": "ci-gcc" },
+    { "name": "ci-clang", "configurePreset": "ci-clang" },
+    { "name": "asan-ubsan", "configurePreset": "asan-ubsan" },
+    { "name": "tsan", "configurePreset": "tsan" },
+    { "name": "coverage", "configurePreset": "coverage" },
+    { "name": "fuzz", "configurePreset": "fuzz" },
+    { "name": "mutation", "configurePreset": "mutation" }
+  ],
+  "testPresets": [
+    {
+      "name": "dev",
+      "configurePreset": "dev",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "release",
+      "configurePreset": "release",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "ci",
+      "configurePreset": "ci",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "ci-gcc",
+      "configurePreset": "ci-gcc",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "ci-clang",
+      "configurePreset": "ci-clang",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "asan-ubsan",
+      "configurePreset": "asan-ubsan",
+      "filter": { "exclude": { "label": "network|gpu|slow" } },
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "tsan",
+      "configurePreset": "tsan",
+      "filter": { "include": { "label": "contract|concurrency" } },
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "coverage",
+      "configurePreset": "coverage",
+      "filter": { "exclude": { "label": "network|gpu|slow" } },
+      "output": { "outputOnFailure": true }
+    }
+  ]
+}

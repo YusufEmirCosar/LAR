@@ -1,0 +1,18 @@
+<map id="dlz::ScenarioFrame" name="dlz::ScenarioFrame">
+<area shape="rect" id="Node000001" title="Complete, internally consistent domain frame produced from scenario inputs." alt="" coords="411,165,545,191"/>
+<area shape="rect" id="Node000002" href="$structdlz_1_1_shooter_state.html" title="Shooter kinematics consumed by geometry and solver functions." alt="" coords="162,20,284,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="299,46,345,61,388,82,414,101,437,123,470,165,465,164,433,127,410,105,386,87,343,66,300,51"/>
+<area shape="rect" id="Node000003" href="$structdlz_1_1_vec3.html" title="Cartesian vector in the coordinate system documented by its owning state." alt="" coords="5,52,82,78"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,53,163,42,159,46,98,57"/>
+<area shape="rect" id="Node000004" href="$structdlz_1_1_target_state.html" title="Target kinematics and defensive loading consumed by the DLZ model." alt="" coords="166,86,280,112"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="72,84,106,100,136,105,168,106,164,109,135,110,105,105,74,89"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="294,107,341,117,388,130,424,146,457,165,452,164,422,150,386,135,340,122,295,112"/>
+<area shape="rect" id="Node000005" href="$structdlz_1_1_atmosphere.html" title="Atmospheric values used to convert Mach to velocity." alt="" coords="165,138,281,164"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="296,156,413,170,408,172,297,162"/>
+<area shape="rect" id="Node000006" href="$structdlz_1_1_weapon_model.html" title="Tunable constants for the intentionally simplified teaching model." alt="" coords="159,192,287,218"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="302,200,387,193,417,191,412,192,387,198,303,205"/>
+<area shape="rect" id="Node000007" href="$structdlz_1_1_geometry.html" title="Derived relative engagement geometry in explicit aviation units." alt="" coords="171,245,274,271"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="290,250,338,241,386,228,425,209,456,192,461,190,427,214,388,233,339,247,291,255"/>
+<area shape="rect" id="Node000008" href="$structdlz_1_1_solution.html" title="Ordered launch&#45;zone ranges and presentation cues produced by solve()." alt="" coords="176,298,270,324"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="285,305,336,295,386,275,412,256,435,232,466,193,471,190,439,236,415,260,388,279,337,300,286,310"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="GridLarView::beginFreeMovement" name="GridLarView::beginFreeMovement">
+<area shape="rect" id="Node000001" title="Performs the begin free movement operation." alt="" coords="5,13,224,38"/>
+<area shape="rect" id="Node000002" href="$class_lar_viewport_page_events.html#af90e234fa20dba1671c2afa4f2530e7b" title="Notifies observers about free movement requested." alt="" coords="272,5,447,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,23,259,26,253,26,224,28"/>
+</map>

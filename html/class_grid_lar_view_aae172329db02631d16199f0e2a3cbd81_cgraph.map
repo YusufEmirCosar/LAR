@@ -1,0 +1,89 @@
+<map id="GridLarView::paintEvent" name="GridLarView::paintEvent">
+<area shape="rect" id="Node000001" title="Performs the paint event operation." alt="" coords="5,578,168,604"/>
+<area shape="rect" id="Node000002" href="$class_grid_lar_view.html#a0131ca37942fa814168cf7703b646791" title="Performs the draw grid operation." alt="" coords="235,332,387,357"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,576,288,366,287,371,102,579"/>
+<area shape="rect" id="Node000018" href="$class_grid_lar_view.html#ac6b64960dc9ba786f2561b8d57fa5473" title="Performs the draw in range operation." alt="" coords="222,553,400,578"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="166,580,209,576,205,579,169,584"/>
+<area shape="rect" id="Node000027" href="$class_grid_lar_view.html#a97e92179162a4e62f100af8904e50aac" title="Performs the draw in zone operation." alt="" coords="227,602,395,628"/>
+<area shape="poly" id="edge32_Node000001_Node000027" title=" " alt="" coords="167,597,213,603,209,606,169,602"/>
+<area shape="rect" id="Node000030" href="$class_grid_lar_view.html#a478fc1a6990055abee855b88770557c1" title="Performs the draw markers operation." alt="" coords="223,500,398,525"/>
+<area shape="poly" id="edge41_Node000001_Node000030" title=" " alt="" coords="118,575,215,538,249,528,245,532,217,543,121,580"/>
+<area shape="rect" id="Node000032" href="$class_grid_lar_view.html#ab8204bf37fd85f6e47385ab20547fc25" title="Performs the draw navigation operation." alt="" coords="216,668,406,693"/>
+<area shape="poly" id="edge47_Node000001_Node000032" title=" " alt="" coords="121,602,264,660,260,663,121,607"/>
+<area shape="rect" id="Node000035" href="$class_lar_viewport_page_events.html#a3a9288b3ed1ad0e04608a5f92d51577d" title="Performs the frame rendered operation." alt="" coords="230,717,392,758"/>
+<area shape="poly" id="edge52_Node000001_Node000035" title=" " alt="" coords="99,602,149,651,181,679,217,703,227,710,222,711,214,708,178,683,145,655,100,607"/>
+<area shape="rect" id="Node000003" href="$class_grid_lar_view.html#ac4b85b8a5689947d0572ad3f7183cedf" title="Returns the current effective camera bearing." alt="" coords="454,676,650,717"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="323,355,365,411,388,447,408,486,418,513,422,537,424,580,430,620,440,640,456,661,460,667,455,666,452,665,435,643,425,622,419,581,417,538,413,514,404,488,384,450,361,414,323,360"/>
+<area shape="rect" id="Node000005" href="$class_grid_geometry_builder.html#a417656e926c4add2f4e8efea3808d976" title="Performs the grid step operation." alt="" coords="481,5,623,46"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="312,331,326,280,352,207,371,167,394,127,421,90,452,57,469,47,465,52,456,61,425,93,398,130,376,169,357,209,331,282,317,332"/>
+<area shape="rect" id="Node000006" href="$class_grid_camera_transform.html#a5c309b8303e68cdcb52942d0def75837" title="Reports whether location is true." alt="" coords="477,431,627,471"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="334,355,390,385,455,417,471,424,466,426,453,421,387,390,335,360"/>
+<area shape="rect" id="Node000007" href="$class_grid_camera_transform.html#a030058dbc2d5aeed3b86af90850952c1" title="Reports whether origin is true." alt="" coords="477,71,627,111"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="315,330,332,290,361,234,401,175,425,147,452,122,465,116,462,120,456,126,429,150,405,178,365,237,336,292,319,332"/>
+<area shape="rect" id="Node000008" href="$class_grid_camera_transform.html#aef4ffafab0a658c3e517cab3288ee128" title="Performs the location operation." alt="" coords="477,136,627,177"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="319,330,370,263,408,222,452,187,465,182,462,186,456,192,412,226,374,266,323,333"/>
+<area shape="rect" id="Node000009" href="$class_grid_camera_transform.html#a0670ed7a35f5a3c30dd005a96991114c" title="Returns the current origin latitude." alt="" coords="477,201,627,242"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="328,329,383,292,453,253,471,246,467,250,455,257,386,297,332,333"/>
+<area shape="rect" id="Node000010" href="$class_grid_camera_transform.html#a71055750275ba24428d991a45771599b" title="Returns the current origin longitude." alt="" coords="477,267,627,307"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="367,329,464,307,460,310,370,333"/>
+<area shape="rect" id="Node000011" href="$class_grid_camera_transform.html#a4353043a6dfaa1043d7e53ddcebaab75" title="Returns the current scale." alt="" coords="477,611,627,651"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="322,355,363,411,408,486,421,518,427,546,436,570,456,596,466,605,461,606,452,600,431,573,422,547,416,520,404,488,358,414,322,360"/>
+<area shape="rect" id="Node000012" href="$class_grid_lar_view.html#a66985caa041cdfe27af48c72a9504731" title="Performs the screen To World operation." alt="" coords="459,332,645,357"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="386,342,446,343,441,346,388,347"/>
+<area shape="rect" id="Node000015" href="$class_grid_lar_view.html#aa84f5104306fd1d2cd57a4a97e0e388d" title="Performs the world To Screen operation." alt="" coords="459,496,645,521"/>
+<area shape="poly" id="edge14_Node000002_Node000015" title=" " alt="" coords="322,355,376,416,413,451,455,481,470,489,465,490,453,485,410,455,372,420,322,360"/>
+<area shape="rect" id="Node000004" href="$class_grid_camera_transform.html#a898e3154489ba8f8179c49e2bd1e91c2" title="Returns the current bearing radians." alt="" coords="706,541,856,582"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="629,673,649,661,664,644,672,627,680,610,697,592,701,592,705,589,700,596,685,613,677,630,669,647,652,665,631,678"/>
+<area shape="rect" id="Node000013" href="$class_grid_camera_transform.html#a81e73cbdb80c656209a0c97d278d7d98" title="Performs the screen To World operation." alt="" coords="706,324,856,365"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="645,342,693,343,688,345,646,347"/>
+<area shape="rect" id="Node000014" href="$class_lar_projection.html#a1b77ea2a03beaab374b64d6ee78fb2b5" title="Performs the screen To World operation." alt="" coords="912,332,1103,357"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="856,342,899,343,894,345,858,347"/>
+<area shape="rect" id="Node000016" href="$class_grid_camera_transform.html#a7fa86e11dac9ebc8ef9d98a8645addf5" title="Performs the world To Screen operation." alt="" coords="706,411,856,451"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="608,493,649,480,717,456,712,459,651,486,611,497"/>
+<area shape="rect" id="Node000017" href="$class_lar_projection.html#a6f3e1ed27e51b9fee5f2ecf314fb5ebc" title="Performs the world To Screen operation." alt="" coords="912,418,1103,444"/>
+<area shape="poly" id="edge16_Node000016_Node000017" title=" " alt="" coords="856,428,899,430,894,432,858,434"/>
+<area shape="poly" id="edge21_Node000018_Node000006" title=" " alt="" coords="373,550,405,535,419,523,428,509,437,495,452,481,465,476,461,479,456,485,441,498,432,512,423,526,407,540,377,554"/>
+<area shape="poly" id="edge22_Node000018_Node000011" title=" " alt="" coords="365,577,407,587,467,605,462,607,405,592,366,582"/>
+<area shape="poly" id="edge31_Node000018_Node000015" title=" " alt="" coords="367,550,482,524,478,527,369,555"/>
+<area shape="rect" id="Node000019" href="$class_grid_lar_view.html#acc958e5b14a7b40706c683aeb9972667" title="Performs the geographic To Camera World operation." alt="" coords="464,545,641,586"/>
+<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="399,563,450,564,446,567,401,568"/>
+<area shape="rect" id="Node000022" href="$class_lar_zone_input_validator.html#a6b122729b48ca9995d79faaf3dc4c447" title="Performs the validate operation." alt="" coords="478,741,626,782"/>
+<area shape="poly" id="edge23_Node000018_Node000022" title=" " alt="" coords="390,576,408,588,422,605,430,623,433,658,436,693,443,710,456,726,468,738,462,737,452,730,438,712,431,694,428,659,425,624,418,608,404,592,391,582"/>
+<area shape="rect" id="Node000020" href="$class_grid_camera_transform.html#a3b422c89481e9e716be856509ee145e2" title="Performs the geographic To World operation." alt="" coords="706,476,856,517"/>
+<area shape="poly" id="edge19_Node000019_Node000020" title=" " alt="" coords="621,542,699,520,694,523,623,547"/>
+<area shape="rect" id="Node000021" href="$class_lar_projection.html#a4e2dca65a4cdc72bf5aa871c00eda908" title="Performs the geographic To Plane World operation." alt="" coords="923,476,1092,517"/>
+<area shape="poly" id="edge20_Node000020_Node000021" title=" " alt="" coords="856,494,910,496,905,497,857,499"/>
+<area shape="rect" id="Node000023" href="$namespaceanonymous__namespace_02lar__zone__input__validator_8cpp_03.html#a9cf3c81e8f44f4a8cbbc82ecbfc662bb" title=" " alt="" coords="698,630,864,686"/>
+<area shape="poly" id="edge24_Node000022_Node000023" title=" " alt="" coords="620,738,649,726,673,711,697,695,704,694,709,692,700,700,676,716,652,731,622,743"/>
+<area shape="rect" id="Node000024" href="$class_lar_geodesic_geometry.html#acc9da0b8c5204bff4c0a184ef3a0332d" title="Performs the positive angular span operation." alt="" coords="705,917,857,958"/>
+<area shape="poly" id="edge26_Node000022_Node000024" title=" " alt="" coords="626,776,652,793,664,807,672,822,677,849,683,877,689,890,700,904,703,909,698,907,696,908,685,893,678,879,672,851,666,823,660,810,649,797,626,782"/>
+<area shape="rect" id="Node000025" href="$namespaceanonymous__namespace_02lar__zone__input__validator_8cpp_03.html#abd9d990ceda17a2a2379e0266a48f86a" title=" " alt="" coords="698,734,864,790"/>
+<area shape="poly" id="edge27_Node000022_Node000025" title=" " alt="" coords="626,759,686,761,680,762,627,764"/>
+<area shape="rect" id="Node000026" href="$namespaceanonymous__namespace_02lar__zone__input__validator_8cpp_03.html#a6ff93d6f9fbab40e7cc2568b8f8948cf" title=" " alt="" coords="698,838,864,894"/>
+<area shape="poly" id="edge29_Node000022_Node000026" title=" " alt="" coords="619,780,651,793,722,830,717,830,649,797,619,785"/>
+<area shape="poly" id="edge25_Node000023_Node000023" title=" " alt="" coords="737,628,737,619,745,611,760,605,781,603,805,606,821,615,816,615,803,611,781,608,761,610,748,615,742,621,741,631"/>
+<area shape="poly" id="edge28_Node000025_Node000025" title=" " alt="" coords="737,732,737,723,745,715,760,709,781,707,805,710,821,719,816,719,803,715,781,712,761,714,748,719,742,725,741,735"/>
+<area shape="poly" id="edge30_Node000026_Node000026" title=" " alt="" coords="737,836,737,827,745,819,760,813,781,811,805,814,821,823,816,823,803,819,781,816,761,818,748,823,742,829,741,839"/>
+<area shape="poly" id="edge33_Node000027_Node000003" title=" " alt="" coords="351,626,478,670,473,672,352,631"/>
+<area shape="poly" id="edge35_Node000027_Node000006" title=" " alt="" coords="388,600,404,589,416,577,422,564,428,537,433,509,440,495,452,481,465,474,461,478,456,485,445,498,438,511,433,538,427,566,420,580,408,593,391,604"/>
+<area shape="poly" id="edge40_Node000027_Node000015" title=" " alt="" coords="383,599,405,589,419,575,428,561,437,546,452,531,467,526,463,529,456,536,441,549,432,564,423,579,407,593,386,604"/>
+<area shape="poly" id="edge34_Node000027_Node000019" title=" " alt="" coords="376,599,450,585,446,588,379,604"/>
+<area shape="poly" id="edge39_Node000027_Node000022" title=" " alt="" coords="358,626,384,637,408,653,424,672,432,691,440,709,456,726,468,736,462,736,452,730,435,712,427,693,420,675,404,657,382,642,359,631"/>
+<area shape="rect" id="Node000028" href="$class_lar_geometry_builder.html#a70af2f358de7aaaa536c7a94862e85c8" title="Performs the in Zone Wedge Polygon operation." alt="" coords="474,807,630,847"/>
+<area shape="poly" id="edge36_Node000027_Node000028" title=" " alt="" coords="364,626,388,637,408,653,421,671,428,690,432,725,436,759,443,775,456,792,464,801,459,800,452,796,438,778,431,760,427,725,423,691,417,674,404,657,385,642,365,631"/>
+<area shape="poly" id="edge37_Node000028_Node000024" title=" " alt="" coords="626,845,652,858,667,870,676,881,686,892,700,903,708,911,703,910,697,908,682,896,672,885,663,874,649,863,625,851"/>
+<area shape="rect" id="Node000029" href="$class_lar_geometry_builder.html#af3f17182c32a24a4983ff584069185a3" title="Performs the radial Point operation." alt="" coords="713,983,849,1023"/>
+<area shape="poly" id="edge38_Node000028_Node000029" title=" " alt="" coords="631,844,652,858,664,872,671,886,677,914,683,941,689,954,700,968,705,974,700,973,696,972,685,957,678,943,672,915,666,888,660,875,649,862,630,849"/>
+<area shape="poly" id="edge42_Node000030_Node000003" title=" " alt="" coords="383,523,408,538,421,554,428,570,433,601,437,632,444,646,456,661,461,667,456,667,452,665,439,649,432,633,428,602,423,571,416,557,404,542,383,528"/>
+<area shape="poly" id="edge45_Node000030_Node000006" title=" " alt="" coords="363,497,464,472,460,476,366,501"/>
+<area shape="poly" id="edge46_Node000030_Node000015" title=" " alt="" coords="398,508,445,509,441,511,400,513"/>
+<area shape="poly" id="edge43_Node000030_Node000019" title=" " alt="" coords="372,523,451,542,446,544,373,528"/>
+<area shape="rect" id="Node000031" href="$class_grid_lar_view.html#ae881ceb85eb6ba46e090b0df190cc265" title="Reports whether fields is true." alt="" coords="474,381,630,406"/>
+<area shape="poly" id="edge44_Node000030_Node000031" title=" " alt="" coords="327,497,381,457,453,417,475,410,471,413,455,421,384,462,330,501"/>
+<area shape="poly" id="edge48_Node000032_Node000003" title=" " alt="" coords="406,684,441,688,436,690,407,689"/>
+<area shape="poly" id="edge50_Node000032_Node000011" title=" " alt="" coords="376,664,464,648,459,651,378,669"/>
+<area shape="rect" id="Node000033" href="$class_grid_geometry_builder.html#a29c9548ab95e74716899cd206e6cf8a0" title="Performs the format Distance operation." alt="" coords="481,872,623,913"/>
+<area shape="poly" id="edge49_Node000032_Node000033" title=" " alt="" coords="389,691,408,704,423,723,431,743,433,782,435,820,442,838,456,857,470,870,465,869,452,861,437,841,430,821,428,782,426,744,418,726,404,708,389,696"/>
+<area shape="rect" id="Node000034" href="$class_grid_geometry_builder.html#a568c517c2c303160d792f3cfb0ad5d19" title="Performs the scale bar distance operation." alt="" coords="481,937,623,978"/>
+<area shape="poly" id="edge51_Node000032_Node000034" title=" " alt="" coords="390,691,408,704,427,732,436,759,437,787,434,814,430,842,431,869,438,895,456,923,470,937,465,935,452,926,433,898,426,869,425,841,428,814,431,787,431,760,423,734,404,708,390,696"/>
+</map>

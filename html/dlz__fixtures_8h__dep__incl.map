@@ -1,0 +1,5 @@
+<map id="src/viewer/hud/dlz_fixtures.h" name="src/viewer/hud/dlz_fixtures.h">
+<area shape="rect" id="Node000001" title="Named deterministic DLZ scenarios exposed by the HUD controls." alt="" coords="5,5,133,46"/>
+<area shape="rect" id="Node000002" href="$dlz__fixtures_8cpp.html" title=" " alt="" coords="5,94,133,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,60,72,94,66,93,67,64"/>
+</map>

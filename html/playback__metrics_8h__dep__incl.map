@@ -1,0 +1,7 @@
+<map id="src/infrastructure/runtime/playback_metrics.h" name="src/infrastructure/runtime/playback_metrics.h">
+<area shape="rect" id="Node000001" title="Throughput accounting for records published during playback." alt="" coords="118,5,303,46"/>
+<area shape="rect" id="Node000002" href="$playback__metrics_8cpp.html" title=" " alt="" coords="5,102,205,142"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,55,128,103,125,99,175,57"/>
+<area shape="rect" id="Node000003" href="$playback__runtime__worker_8cpp.html" title=" " alt="" coords="228,94,403,150"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="244,54,288,94,282,93,242,59"/>
+</map>

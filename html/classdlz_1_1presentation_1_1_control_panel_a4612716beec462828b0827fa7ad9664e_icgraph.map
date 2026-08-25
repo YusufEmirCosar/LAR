@@ -1,0 +1,24 @@
+<map id="dlz::presentation::ControlPanel::inputs" name="dlz::presentation::ControlPanel::inputs">
+<area shape="rect" id="Node000001" title="Documents the inputs operation." alt="" coords="1038,120,1177,161"/>
+<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a0fc4d8836facedbfb974f790999b8031" title="Documents the rebuild from controls operation." alt="" coords="272,5,507,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1020,116,989,111,861,87,731,67,508,40,507,35,732,62,862,82,990,106,1026,116"/>
+<area shape="rect" id="Node000005" href="$classdlz_1_1presentation_1_1_control_panel.html#a48cb3dd0aa0897e9f25bd6275da211dc" title="Sets geometry readout." alt="" coords="761,120,990,161"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1020,141,990,143,990,138,1025,140"/>
+<area shape="rect" id="Node000009" href="$classdlz_1_1presentation_1_1_control_panel.html#a6083a49f63ded26f1db223113517c2c7" title="Sets inputs." alt="" coords="555,239,713,279"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="1025,163,990,175,714,243,713,238,989,170,1020,164"/>
+<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a33bf0345b5e07d56f8af527bc50cadf7" title="Notifies observers about diagnostic raised." alt="" coords="5,35,224,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="254,41,225,46,223,41,259,39"/>
+<area shape="rect" id="Node000004" href="$classdlz_1_1presentation_1_1_hud_workspace.html#aec685012fec2dfb24231b60b8836444b" title="Constructs this object." alt="" coords="11,205,218,246"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="344,57,273,110,144,207,141,203,270,106,348,54"/>
+<area shape="rect" id="Node000006" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a622f9724a812e8564fa34383c26240be" title="Documents the rebuild operation." alt="" coords="556,120,712,161"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="743,141,713,143,713,138,748,140"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="588,112,506,67,462,49,462,44,508,62,593,111"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="539,116,506,111,359,87,225,69,224,64,360,81,508,106,544,116"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="539,165,508,175,356,200,219,218,218,212,356,195,506,170,544,164"/>
+<area shape="rect" id="Node000007" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a62b897bc1b688767b8b9a2e463bf6ae9" title="Publishes the latest atomic three&#45;field UDP/replay telemetry." alt="" coords="279,120,500,161"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="538,141,500,143,500,138,543,140"/>
+<area shape="rect" id="Node000008" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a0218f554ab3f899caca9baed2c8be0c1" title="Selects UDP/replay input or local slider calculation mode." alt="" coords="291,235,488,275"/>
+<area shape="poly" id="edge10_Node000006_Node000008" title=" " alt="" coords="593,168,508,219,463,237,461,232,506,214,588,170"/>
+<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="273,243,219,239,219,234,278,242"/>
+<area shape="poly" id="edge13_Node000009_Node000004" title=" " alt="" coords="542,282,507,290,389,301,337,299,271,290,209,272,156,249,157,244,211,267,272,284,337,294,389,296,507,284,537,282"/>
+</map>

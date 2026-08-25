@@ -1,0 +1,5 @@
+<map id="GridLarView::panFreeCamera" name="GridLarView::panFreeCamera">
+<area shape="rect" id="Node000001" title="Performs the pan free camera operation." alt="" coords="259,5,452,31"/>
+<area shape="rect" id="Node000002" href="$class_grid_lar_view.html#ad60126a00828b72ab4d2b3574ec27026" title="Performs the mouse move event operation." alt="" coords="5,5,211,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="240,18,211,21,211,16,245,18"/>
+</map>

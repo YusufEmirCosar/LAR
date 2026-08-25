@@ -1,0 +1,5 @@
+<map id="SourceLifecycleCoordinator::seek" name="SourceLifecycleCoordinator::seek">
+<area shape="rect" id="Node000001" title="Performs the seek operation." alt="" coords="218,5,399,46"/>
+<area shape="rect" id="Node000002" href="$class_application_facade.html#ac90e5132dde669fb84215b399795fb1c" title="Seeks playback to an exact session timestamp." alt="" coords="5,13,170,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,26,170,28,170,23,205,25"/>
+</map>

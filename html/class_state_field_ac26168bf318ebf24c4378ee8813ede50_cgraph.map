@@ -1,0 +1,5 @@
+<map id="StateField::presentationName" name="StateField::presentationName">
+<area shape="rect" id="Node000001" title="Returns the stable short label used by field&#45;value views." alt="" coords="5,5,200,31"/>
+<area shape="rect" id="Node000002" href="$class_state_field.html#a518ff6ce6f1e93a5135e7274e2db7359" title="Returns the canonical descriptor, or null for an invalid ID." alt="" coords="248,5,393,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,16,235,18,229,18,200,21"/>
+</map>

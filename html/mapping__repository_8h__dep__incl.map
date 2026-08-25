@@ -1,0 +1,28 @@
+<map id="src/application/ports/mapping_repository.h" name="src/application/ports/mapping_repository.h">
+<area shape="rect" id="Node000001" title="Port for loading and validating packet&#45;mapping definitions." alt="" coords="706,5,854,46"/>
+<area shape="rect" id="Node000002" href="$direct__application__runtime_8h.html" title="Synchronous IApplicationRuntime implementation for tests/embedding." alt="" coords="270,102,421,142"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="688,47,422,107,421,102,693,45"/>
+<area shape="rect" id="Node000004" href="$json__mapping__repository_8h.html" title="JSON implementation of the packet&#45;mapping repository port." alt="" coords="701,94,859,150"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="782,59,782,95,778,92,778,63"/>
+<area shape="rect" id="Node000012" href="$network__runtime__worker_8h.html" title="Network&#45;thread worker for mapping, capture, metrics, and batching." alt="" coords="1246,94,1415,150"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="869,39,1248,106,1243,107,869,45"/>
+<area shape="rect" id="Node000003" href="$direct__application__runtime_8cpp.html" title=" " alt="" coords="5,205,171,246"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="283,150,139,207,137,202,281,146"/>
+<area shape="rect" id="Node000005" href="$json__mapping__repository_8cpp.html" title=" " alt="" coords="194,198,352,253"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="683,138,535,165,365,200,353,203,352,198,363,195,534,160,688,137"/>
+<area shape="rect" id="Node000006" href="$network__runtime__worker_8cpp.html" title=" " alt="" coords="1246,198,1415,253"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="875,133,1043,159,1235,195,1249,200,1243,200,1234,200,1043,164,875,138"/>
+<area shape="rect" id="Node000007" href="$lar__session__reader_8cpp.html" title=" " alt="" coords="376,198,517,253"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="689,150,529,200,518,204,517,198,527,195,683,151"/>
+<area shape="rect" id="Node000008" href="$lar__session__writer_8cpp.html" title=" " alt="" coords="540,198,681,253"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="724,157,657,200,655,195,719,159"/>
+<area shape="rect" id="Node000009" href="$custom__sender_8cpp.html" title=" " alt="" coords="704,205,856,246"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="782,163,782,207,778,203,778,167"/>
+<area shape="rect" id="Node000010" href="$src_2testsender_2main_8cpp.html" title=" " alt="" coords="879,213,1041,238"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="842,155,941,212,936,212,841,160"/>
+<area shape="rect" id="Node000011" href="$scenario__tests_8cpp.html" title=" " alt="" coords="1065,205,1223,246"/>
+<area shape="poly" id="edge10_Node000004_Node000011" title=" " alt="" coords="874,146,1054,195,1080,205,1075,204,1053,200,874,151"/>
+<area shape="poly" id="edge12_Node000012_Node000006" title=" " alt="" coords="1333,163,1333,199,1329,195,1329,167"/>
+<area shape="rect" id="Node000013" href="$threaded__application__runtime_8cpp.html" title=" " alt="" coords="1439,198,1630,253"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="1399,154,1482,197,1477,197,1398,159"/>
+</map>

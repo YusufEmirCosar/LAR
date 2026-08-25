@@ -1,0 +1,42 @@
+<map id="src/viewer/viewport/lar_zone_mesh_assembler.h" name="src/viewer/viewport/lar_zone_mesh_assembler.h">
+<area shape="rect" id="Node000001" title="Bounded conversion from geodesic samples to indexed GPU geometry." alt="" coords="514,5,704,46"/>
+<area shape="rect" id="Node000002" href="$map__camera_8h.html" title="Projection&#45;independent Earth map camera model and hit testing." alt="" coords="256,190,434,216"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="582,45,378,184,375,179,578,48"/>
+<area shape="rect" id="Node000008" href="$geodesic__zone__sampler_8h.html" title="Bounded adaptive sampling of validated geographic LAR zones." alt="" coords="525,94,694,135"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="611,44,612,80,607,77,608,49"/>
+<area shape="rect" id="Node000017" href="$lar__zone__mesh_8h.html" title="CPU mesh and draw&#45;range representation for LAR zones." alt="" coords="982,94,1112,135"/>
+<area shape="poly" id="edge18_Node000001_Node000017" title=" " alt="" coords="705,43,969,97,964,98,705,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="301,279,390,304"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="347,214,348,264,343,262,344,218"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="413,279,475,304"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="360,214,422,269,416,268,358,219"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,279,75,304"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="287,218,195,242,87,274,84,275,80,271,86,269,194,237,292,215"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="98,279,166,304"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="313,218,180,274,177,275,174,270,178,269,317,215"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="190,279,276,304"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="332,215,262,271,259,267,327,218"/>
+<area shape="poly" id="edge8_Node000008_Node000002" title=" " alt="" coords="547,136,398,187,396,182,552,134"/>
+<area shape="rect" id="Node000009" href="$lar__zone__input__validator_8h.html" title="Projection&#45;neutral validation and normalization of LAR zone inputs." alt="" coords="629,183,787,223"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="632,133,677,173,672,172,631,138"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="679,360,737,386"/>
+<area shape="poly" id="edge17_Node000008_Node000013" title=" " alt="" coords="593,134,565,172,539,217,530,241,527,266,529,289,540,310,565,335,597,352,632,362,666,370,661,370,630,367,595,357,562,339,535,314,524,290,521,265,525,240,534,215,561,169,589,137"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="878,190,943,216"/>
+<area shape="poly" id="edge16_Node000008_Node000016" title=" " alt="" coords="678,133,866,188,861,189,678,138"/>
+<area shape="rect" id="Node000010" href="$state_8h.html" title="Canonical in&#45;memory aircraft, target, and LAR state structures." alt="" coords="800,279,907,304"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="742,221,823,271,817,270,740,226"/>
+<area shape="rect" id="Node000012" href="$lar__geodesic__geometry_8h.html" title="Spherical destination&#45;point and arc tessellation utilities." alt="" coords="640,271,776,312"/>
+<area shape="poly" id="edge12_Node000009_Node000012" title=" " alt="" coords="710,222,710,257,706,254,706,226"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="932,279,1010,304"/>
+<area shape="poly" id="edge14_Node000009_Node000014" title=" " alt="" coords="772,221,920,269,927,273,921,273,918,274,772,227"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="550,279,616,304"/>
+<area shape="poly" id="edge15_Node000009_Node000015" title=" " alt="" coords="682,223,614,272,611,267,677,225"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="973,360,1062,386"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="879,302,981,353,976,353,878,308"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="710,311,710,346,706,343,706,314"/>
+<area shape="poly" id="edge22_Node000017_Node000011" title=" " alt="" coords="1102,133,1135,153,1160,181,1166,203,1160,224,1138,265,1109,300,1078,330,1048,353,1047,348,1074,326,1105,297,1133,262,1155,222,1160,203,1155,184,1131,157,1101,138"/>
+<area shape="poly" id="edge21_Node000017_Node000013" title=" " alt="" coords="1052,133,1058,172,1059,220,1049,270,1038,293,1023,314,1004,328,976,339,903,356,823,366,753,372,752,367,822,361,902,351,974,334,1001,323,1019,310,1034,291,1044,268,1053,219,1053,172,1049,137"/>
+<area shape="poly" id="edge19_Node000017_Node000016" title=" " alt="" coords="1018,134,943,184,941,179,1013,136"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="1084,190,1145,216"/>
+<area shape="poly" id="edge20_Node000017_Node000018" title=" " alt="" coords="1063,133,1099,179,1094,177,1061,138"/>
+</map>

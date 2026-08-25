@@ -1,0 +1,5 @@
+<map id="RuntimeFailure" name="RuntimeFailure">
+<area shape="rect" id="Node000001" title="Diagnostic associated with an optional request and source epoch." alt="" coords="16,102,125,128"/>
+<area shape="rect" id="Node000002" href="$struct_runtime_request_id.html" title="Correlates an accepted command with exactly one typed completion." alt="" coords="5,5,136,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,45,73,102,68,101,68,48"/>
+</map>

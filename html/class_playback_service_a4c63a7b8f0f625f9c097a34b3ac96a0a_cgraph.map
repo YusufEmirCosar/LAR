@@ -1,0 +1,18 @@
+<map id="PlaybackService::publishFrame" name="PlaybackService::publishFrame">
+<area shape="rect" id="Node000001" title="Performs the publish frame operation." alt="" coords="5,108,174,149"/>
+<area shape="rect" id="Node000002" href="$class_i_session_reader.html#af00a0907067a1e6a74d1ad64d911a22b" title="Returns whether a fully validated session is loaded." alt="" coords="460,29,620,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,106,170,83,221,65,278,53,336,45,447,40,442,42,337,50,279,58,222,70,172,88,128,110"/>
+<area shape="rect" id="Node000003" href="$class_playback_service.html#a60a9c28fcb46d8f18bb8a1694e404717" title="Performs the publish decoded frame operation." alt="" coords="223,79,392,120"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="173,115,210,112,205,114,175,120"/>
+<area shape="rect" id="Node000005" href="$class_i_session_reader.html#aa1a35e313d682f385331d31187968151" title="Returns the bounded number of indexed records." alt="" coords="444,152,637,178"/>
+<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="174,133,429,154,427,158,174,138"/>
+<area shape="rect" id="Node000006" href="$class_i_session_reader.html#ae21515b905a069ec3615e9a38ae41a97" title="Decodes the timestamp and domain state at index." alt="" coords="222,219,393,244"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="135,147,267,210,263,213,134,152"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="501,28,494,21,499,11,514,5,540,3,569,5,585,15,579,15,567,11,540,8,515,10,502,15,499,20,506,30"/>
+<area shape="poly" id="edge5_Node000003_Node000002" title=" " alt="" coords="391,76,440,64,472,58,467,60,442,69,392,81"/>
+<area shape="rect" id="Node000004" href="$class_playback_service.html#a1ff3c2f581cf152d1db0bcef7fcd0e95" title="Notifies observers about frame ready." alt="" coords="441,79,639,104"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="391,94,428,95,423,96,392,99"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="382,118,479,147,474,147,382,123"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="501,151,494,143,499,134,514,127,540,125,569,128,585,138,579,137,567,133,540,131,515,133,502,137,499,143,506,152"/>
+<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="271,217,264,210,268,200,283,194,307,192,334,195,349,204,344,204,333,200,307,197,284,199,272,204,269,209,276,219"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="registerRuntimeMessageTypes" name="registerRuntimeMessageTypes">
+<area shape="rect" id="Node000001" title="Registers the complete queued&#45;delivery protocol exactly once per process." alt="" coords="250,46,451,72"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="392,32,380,27,350,25,324,27,310,32,307,37,314,47,309,45,302,38,306,28,323,22,350,20,381,22,398,32"/>
+<area shape="rect" id="Node000002" href="$class_direct_application_runtime.html#af7dfb47a5a42b53c0a26e62c480d9362" title="Constructs this object." alt="" coords="15,5,192,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,44,193,40,193,35,238,43"/>
+<area shape="rect" id="Node000003" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,71,202,111"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="232,74,203,81,202,76,237,74"/>
+</map>

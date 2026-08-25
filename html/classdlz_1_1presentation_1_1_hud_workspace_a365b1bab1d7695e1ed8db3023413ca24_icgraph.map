@@ -1,0 +1,9 @@
+<map id="dlz::presentation::HudWorkspace::clearExternalInputs" name="dlz::presentation::HudWorkspace::clearExternalInputs">
+<area shape="rect" id="Node000001" title="Clears the external telemetry cache and any externally&#45;driven frame." alt="" coords="529,31,723,87"/>
+<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a62b897bc1b688767b8b9a2e463bf6ae9" title="Publishes the latest atomic three&#45;field UDP/replay telemetry." alt="" coords="261,5,481,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="511,44,482,43,482,37,516,44"/>
+<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a0218f554ab3f899caca9baed2c8be0c1" title="Selects UDP/replay input or local slider calculation mode." alt="" coords="272,71,470,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="516,73,470,81,470,76,511,73"/>
+<area shape="rect" id="Node000004" href="$classdlz_1_1presentation_1_1_hud_workspace.html#aec685012fec2dfb24231b60b8836444b" title="Constructs this object." alt="" coords="5,71,213,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="254,91,213,94,213,88,259,91"/>
+</map>

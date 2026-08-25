@@ -1,0 +1,5 @@
+# Qt's macOS queued-signal transport uses runtime synchronization that the
+# system ThreadSanitizer cannot observe inside the prebuilt QtCore binary.
+# Limit the suppression to copying registered metatype arguments at that
+# boundary; races in application frames remain reportable.
+race:QtPrivate::QMetaTypeForType

@@ -1,0 +1,19 @@
+<map id="lar::map::EarthMapGpuRenderer::cacheProgramInputs" name="lar::map::EarthMapGpuRenderer::cacheProgramInputs">
+<area shape="rect" id="Node000001" title="Performs the cache program inputs operation." alt="" coords="990,92,1199,133"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_earth_map_gpu_renderer.html#a70151916241dc630c60f5a2c205e21cb" title="Initializes the current operation." alt="" coords="732,63,942,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="971,99,942,98,942,93,977,99"/>
+<area shape="rect" id="Node000012" href="$classlar_1_1map_1_1_earth_map_gpu_renderer.html#a69950dc44cc3b2d48bb59cfd06eaebc6" title="Prohibits assignment of OpenGL resource ownership." alt="" coords="475,120,684,161"/>
+<area shape="poly" id="edge9_Node000001_Node000012" title=" " alt="" coords="977,119,685,138,685,132,972,119"/>
+<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_earth_map_widget.html#a03b90d20759cc6ec3f10b0efccf4c588" title="Performs the initialize gl operation." alt="" coords="493,55,666,96"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="714,80,667,81,667,76,719,80"/>
+<area shape="poly" id="edge8_Node000002_Node000012" title=" " alt="" coords="730,107,675,122,674,117,725,108"/>
+<area shape="rect" id="Node000004" href="$class_earth_lar_view.html#aaa9a8e4888267fe11efb7cf45b928c9e" title="Performs the initialize gl operation." alt="" coords="255,5,426,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="475,51,397,34,397,29,480,51"/>
+<area shape="rect" id="Node000010" href="$classlar_1_1map_1_1_earth_map_widget.html#ae9d2dda90bd17821bbf89aa5316874b6" title="Notifies observers about renderer ready." alt="" coords="254,55,427,96"/>
+<area shape="poly" id="edge5_Node000003_Node000010" title=" " alt="" coords="475,85,428,87,427,82,480,84"/>
+<area shape="rect" id="Node000005" href="$class_earth_lar_view.html#a31a878a0e62a405d4a6b4632b5b22641" title="Maps unavailable." alt="" coords="5,5,206,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="237,19,207,21,206,16,242,17"/>
+<area shape="poly" id="edge6_Node000010_Node000003" title=" " alt="" coords="442,64,495,66,490,67,443,69"/>
+<area shape="rect" id="Node000011" href="$classlar_1_1map_1_1_earth_map_widget.html#a9b79744bb30edf19770851af9961c93d" title="Sets map mesh." alt="" coords="19,55,192,96"/>
+<area shape="poly" id="edge7_Node000010_Node000011" title=" " alt="" coords="236,76,193,78,192,73,241,75"/>
+</map>

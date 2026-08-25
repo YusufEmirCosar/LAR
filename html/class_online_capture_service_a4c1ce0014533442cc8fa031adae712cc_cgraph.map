@@ -1,0 +1,5 @@
+<map id="OnlineCaptureService::port" name="OnlineCaptureService::port">
+<area shape="rect" id="Node000001" title="Returns the current port." alt="" coords="5,5,154,46"/>
+<area shape="rect" id="Node000002" href="$class_i_datagram_source.html#a84f085ba76eeb9935bd263d20198a902" title="Returns the bound port, or zero when no transport is active." alt="" coords="202,13,384,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,23,189,25,183,26,154,28"/>
+</map>

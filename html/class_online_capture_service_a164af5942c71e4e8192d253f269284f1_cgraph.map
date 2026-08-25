@@ -1,0 +1,5 @@
+<map id="OnlineCaptureService::publishLatestState" name="OnlineCaptureService::publishLatestState">
+<area shape="rect" id="Node000001" title="Performs the publish latest state operation." alt="" coords="5,5,154,46"/>
+<area shape="rect" id="Node000002" href="$class_online_capture_service.html#a00be781b5ee4622fe3edecc5ca0a3194" title="Notifies observers about state received." alt="" coords="202,5,350,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,23,189,25,183,26,154,28"/>
+</map>

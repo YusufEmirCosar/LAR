@@ -1,0 +1,11 @@
+<map id="src/viewer/plane/plane_terrain_patch_builder.h" name="src/viewer/plane/plane_terrain_patch_builder.h">
+<area shape="rect" id="Node000001" title="Bounded DTED0 sampling and indexed local terrain&#45;mesh construction." alt="" coords="104,5,263,46"/>
+<area shape="rect" id="Node000002" href="$plane__terrain__patch__builder_8cpp.html" title=" " alt="" coords="5,94,178,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,59,114,95,110,92,153,55"/>
+<area shape="rect" id="Node000003" href="$plane__terrain__worker_8h.html" title="Latest&#45;only dedicated CPU worker for DTED terrain patch preparation." alt="" coords="201,94,352,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="216,54,258,93,253,94,215,59"/>
+<area shape="rect" id="Node000004" href="$plane__scene__widget__terrain_8cpp.html" title="DTED worker lifecycle, patch recentering, and aircraft&#45;relative placement." alt="" coords="94,183,270,223"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="247,144,205,184,202,180,242,146"/>
+<area shape="rect" id="Node000005" href="$plane__terrain__worker_8cpp.html" title=" " alt="" coords="294,183,446,223"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="310,143,352,183,346,182,308,148"/>
+</map>

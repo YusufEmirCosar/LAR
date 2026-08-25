@@ -1,0 +1,30 @@
+<map id="src/viewer/plane/plane_terrain_gpu_layer.h" name="src/viewer/plane/plane_terrain_gpu_layer.h">
+<area shape="rect" id="Node000001" title="Context&#45;owned upload and draw pass for immutable DTED terrain patches." alt="" coords="668,5,820,46"/>
+<area shape="rect" id="Node000002" href="$plane__terrain__patch_8h.html" title="Immutable CPU terrain mesh and bounded build request for Plane mode." alt="" coords="262,94,392,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="666,43,408,99,407,94,671,42"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="462,183,530,208"/>
+<area shape="poly" id="edge13_Node000001_Node000007" title=" " alt="" coords="666,37,562,61,517,77,501,86,490,96,482,112,481,131,487,170,483,167,475,131,477,111,486,92,498,82,515,72,560,56,671,36"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="500,102,588,127"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="701,46,587,98,585,93,696,47"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="612,102,727,127"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="730,45,691,92,688,88,725,48"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="751,102,887,127"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="762,44,801,91,796,89,760,49"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="912,102,1097,127"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="804,44,956,96,950,96,803,49"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1121,102,1207,127"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="821,35,956,58,1110,91,1120,97,1115,96,1109,97,955,63,820,40"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1231,102,1297,127"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="820,29,1004,49,1112,67,1220,91,1227,96,1222,95,1218,97,1111,72,1003,54,820,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,183,94,208"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="263,137,107,181,106,175,261,131"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="118,183,184,208"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="286,135,193,178,191,173,280,136"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="208,183,272,208"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="308,134,266,174,263,170,303,136"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="297,183,357,208"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="329,133,329,169,325,166,325,137"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="370,133,459,176,454,176,369,138"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="381,183,438,208"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="348,133,388,172,383,171,346,138"/>
+</map>

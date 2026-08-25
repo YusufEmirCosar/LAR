@@ -1,0 +1,34 @@
+<map id="ApplicationFacade::setIpAccessPolicy" name="ApplicationFacade::setIpAccessPolicy">
+<area shape="rect" id="Node000001" title="Requests installation of an IP access policy." alt="" coords="5,277,142,318"/>
+<area shape="rect" id="Node000002" href="$class_application_facade.html#a1dc41e6d7b7418d3b79087b7d24cbe1e" title="Applies the result of an asynchronous mapping&#45;load request." alt="" coords="206,153,342,194"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,275,188,219,225,200,221,204,191,224,107,279"/>
+<area shape="rect" id="Node000006" href="$class_application_facade.html#aaa8bd95ed38e7f855835042c17db3338" title="Stores and emits a human&#45;readable operation error." alt="" coords="427,223,563,263"/>
+<area shape="poly" id="edge16_Node000001_Node000006" title=" " alt="" coords="140,274,189,263,305,249,414,244,409,246,306,254,190,268,142,279"/>
+<area shape="rect" id="Node000012" href="$class_request_result_gate.html#ad451fae2b3f234002925884a113ae060" title="Opens a dispatch window in which a direct runtime may reply synchronously." alt="" coords="202,277,346,318"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="141,295,189,296,184,299,143,300"/>
+<area shape="rect" id="Node000013" href="$class_request_result_gate.html#a35b04ea0a99c2e3167645896514e09d4" title="Correlates the accepted dispatch with any buffered synchronous result." alt="" coords="202,343,346,383"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="138,316,198,336,193,338,138,321"/>
+<area shape="rect" id="Node000015" href="$class_i_mapping_capture_runtime.html#abc79bbee4346110a76390e3f6fbef7c7" title="Atomically applies a sender access policy to the active transport." alt="" coords="190,408,359,449"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="96,316,139,355,191,393,203,401,198,401,188,397,135,359,95,321"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#a0cb4dd92e5b47566047b9a726971e7f1" title="Reports successful loading of a packet mapping." alt="" coords="427,71,563,111"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="329,150,427,116,422,119,332,155"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="342,192,416,217,411,218,342,197"/>
+<area shape="rect" id="Node000010" href="$class_application_view_model.html#a4a3e33ab5db50a0e26e124bf9225eeba" title="Sets status text." alt="" coords="420,148,570,189"/>
+<area shape="poly" id="edge11_Node000002_Node000010" title=" " alt="" coords="342,169,408,169,403,172,344,175"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="455,69,453,61,460,52,474,46,495,44,518,46,533,55,528,55,517,52,495,49,475,51,463,56,458,62,460,71"/>
+<area shape="rect" id="Node000004" href="$class_application_facade.html#a22237ba254d2b73c0d6ee14376a0aee9" title="Returns the number of fields in the active packet mapping." alt="" coords="638,71,774,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="563,88,625,90,620,92,564,94"/>
+<area shape="rect" id="Node000005" href="$class_application_facade.html#a1c17c18edd6c30bb9e2bf63bf449153a" title="Returns the minimum packet size required by the active mapping." alt="" coords="635,5,777,46"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="562,68,626,50,621,52,564,73"/>
+<area shape="rect" id="Node000007" href="$class_application_facade.html#a5935c712453aca17ae956f9c34d1d5b2" title="Reports an operation or runtime error to observers." alt="" coords="638,225,774,266"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="563,241,625,244,619,245,564,246"/>
+<area shape="rect" id="Node000008" href="$class_application_view_model.html#a8b45470f469030969b5321be7b4c0e6c" title="Sets last error." alt="" coords="631,291,781,331"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="561,261,629,285,624,286,561,267"/>
+<area shape="poly" id="edge8_Node000007_Node000007" title=" " alt="" coords="669,223,667,215,673,206,686,201,706,199,728,201,742,210,736,210,726,206,706,204,687,206,676,211,672,216,673,226"/>
+<area shape="rect" id="Node000009" href="$class_application_view_model.html#a4dd5f7090efa0ade330398531a7f3f97" title="Notifies observers about error occurred." alt="" coords="829,291,978,331"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="781,308,816,311,811,311,781,314"/>
+<area shape="rect" id="Node000011" href="$class_application_view_model.html#a3b64c6107fe4eb693bbf7aa9adf20089" title="Notifies observers about status changed." alt="" coords="631,136,781,177"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="570,161,619,161,613,162,571,167"/>
+<area shape="rect" id="Node000014" href="$struct_runtime_request_id.html#a1f28818442dba1abd5f4aabca4987e23" title="Reports whether valid is true." alt="" coords="407,350,583,376"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="347,360,394,363,389,363,347,366"/>
+</map>

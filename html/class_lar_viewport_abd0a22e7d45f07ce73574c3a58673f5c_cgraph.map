@@ -1,0 +1,9 @@
+<map id="LarViewport::resetTotalFrameCount" name="LarViewport::resetTotalFrameCount">
+<area shape="rect" id="Node000001" title="Documents the reset total frame count operation." alt="" coords="5,5,198,46"/>
+<area shape="rect" id="Node000002" href="$class_viewport_frame_counter.html#ab6276e5c9f992ec8e96e1264a0182ce5" title="Performs the reset total count operation." alt="" coords="246,5,401,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,23,233,25,227,26,198,28"/>
+<area shape="rect" id="Node000003" href="$class_viewport_frame_counter.html#a97edcf6d4d065ca1b9d1307d4a394051" title="Notifies observers about total frame count changed." alt="" coords="449,5,627,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="401,23,436,26,431,26,401,28"/>
+<area shape="rect" id="Node000004" href="$class_viewport_frame_counter.html#a2fbcb1fdc2b482b8cbaac032a291cb59" title="Returns the current total frames." alt="" coords="675,5,831,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="628,23,663,26,657,26,628,28"/>
+</map>

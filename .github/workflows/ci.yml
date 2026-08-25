@@ -1,0 +1,239 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  QT_VERSION: '6.11.2'
+
+jobs:
+  dependency-scan:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Qt
+        uses: jurplel/install-qt-action@48d3ad6db93f3627c8ee7a0454bc6f3744f7e730 # v4.3.1
+        with:
+          version: ${{ env.QT_VERSION }}
+          cache: true
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build
+      - run: cmake --preset ci-clang
+      - run: cmake --build build-ci-clang --target generate-sbom
+      - name: Scan generated SPDX dependency inventory
+        uses: google/osv-scanner-action/osv-scanner-action@06b2ab4348248b456ee06c9e953637f55e03504f # v2.5.0
+        with:
+          scan-args: |-
+            --sbom=./build-ci-clang/lar-sbom.spdx.json
+
+  repository-gates:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Qt
+        uses: jurplel/install-qt-action@48d3ad6db93f3627c8ee7a0454bc6f3744f7e730 # v4.3.1
+        with:
+          version: ${{ env.QT_VERSION }}
+          cache: true
+      - name: Install analysis tools
+        run: >-
+          sudo apt-get update && sudo apt-get install -y
+          ninja-build clang clang-format clang-tidy doxygen libgl1-mesa-dev
+      - name: Configure Clang compile database
+        run: cmake --preset ci-clang
+      - name: Repository checks
+        run: >-
+          cmake --build build-ci-clang
+          --target check-format check-architecture check-doc-links
+          check-doc-coverage check-doc-quality check-docs
+          --parallel 3
+      - name: Static analysis
+        run: cmake --build build-ci-clang --target check-tidy --parallel 1
+
+  strict-build:
+    name: Strict ${{ matrix.compiler }}
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - compiler: GCC
+            preset: ci-gcc
+          - compiler: Clang
+            preset: ci-clang
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Qt
+        uses: jurplel/install-qt-action@48d3ad6db93f3627c8ee7a0454bc6f3744f7e730 # v4.3.1
+        with:
+          version: ${{ env.QT_VERSION }}
+          cache: true
+      - name: Install build dependencies
+        run: >-
+          sudo apt-get update && sudo apt-get install -y
+          ninja-build clang g++ libgl1-mesa-dev
+      - name: Configure
+        run: cmake --preset ${{ matrix.preset }}
+      - name: Build
+        run: cmake --build --preset ${{ matrix.preset }} --parallel 4
+      - name: Deterministic tests
+        run: >-
+          ctest --preset ${{ matrix.preset }} --parallel 4
+          --exclude-regex '(lar-earth-view-gpu-tests|lar-plane-view-gpu-tests)'
+      - name: Installed-layout smoke
+        run: >-
+          cmake --build build-${{ matrix.preset }}
+          --target check-install-layout --parallel 2
+
+  asan-ubsan:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Qt
+        uses: jurplel/install-qt-action@48d3ad6db93f3627c8ee7a0454bc6f3744f7e730 # v4.3.1
+        with:
+          version: ${{ env.QT_VERSION }}
+          cache: true
+      - name: Install build dependencies
+        run: >-
+          sudo apt-get update && sudo apt-get install -y
+          ninja-build clang libgl1-mesa-dev
+      - run: cmake --preset asan-ubsan
+      - run: cmake --build --preset asan-ubsan --parallel 4
+      - run: ctest --preset asan-ubsan --parallel 2
+
+  tsan-contracts:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Qt
+        uses: jurplel/install-qt-action@48d3ad6db93f3627c8ee7a0454bc6f3744f7e730 # v4.3.1
+        with:
+          version: ${{ env.QT_VERSION }}
+          cache: true
+      - name: Install build dependencies
+        run: >-
+          sudo apt-get update && sudo apt-get install -y
+          ninja-build clang libgl1-mesa-dev
+      - run: cmake --preset tsan
+      - run: cmake --build --preset tsan --parallel 4
+      - run: ctest --preset tsan --parallel 1
+
+  fuzz-smoke:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Qt
+        uses: jurplel/install-qt-action@48d3ad6db93f3627c8ee7a0454bc6f3744f7e730 # v4.3.1
+        with:
+          version: ${{ env.QT_VERSION }}
+          cache: true
+      - name: Install build dependencies
+        run: >-
+          sudo apt-get update && sudo apt-get install -y
+          ninja-build clang libgl1-mesa-dev
+      - run: cmake --preset fuzz
+      - run: cmake --build --preset fuzz --parallel 4
+      - name: Run deterministic fuzz smoke budgets
+        run: >-
+          for target in lar-map-reader-fuzz lar-map-source-fuzz
+          lar-mapping-repository-fuzz lar-packet-decoder-fuzz
+          lar-session-reader-fuzz lar-ip-policy-fuzz lar-dlz-solver-fuzz;
+          do ./build-fuzz/$target tests/fuzz/corpus
+          -runs=2000 -max_total_time=30;
+          done
+
+  coverage:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Qt
+        uses: jurplel/install-qt-action@48d3ad6db93f3627c8ee7a0454bc6f3744f7e730 # v4.3.1
+        with:
+          version: ${{ env.QT_VERSION }}
+          cache: true
+      - name: Install coverage dependencies
+        run: >-
+          sudo apt-get update && sudo apt-get install -y
+          ninja-build g++ gcovr libgl1-mesa-dev
+      - run: cmake --preset coverage
+      - run: cmake --build --preset coverage --parallel 4
+      - run: cmake --build build-coverage --target coverage-report
+
+  software-gpu:
+    runs-on: ubuntu-24.04
+    env:
+      LIBGL_ALWAYS_SOFTWARE: '1'
+      LAR_RUN_MAP_GPU_TESTS: '1'
+      LAR_RUN_PLANE_GPU_TESTS: '1'
+      QT_OPENGL: software
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Qt
+        uses: jurplel/install-qt-action@48d3ad6db93f3627c8ee7a0454bc6f3744f7e730 # v4.3.1
+        with:
+          version: ${{ env.QT_VERSION }}
+          cache: true
+      - name: Install Mesa and Xvfb
+        run: >-
+          sudo apt-get update && sudo apt-get install -y
+          ninja-build g++ xvfb libgl1-mesa-dev libgl1-mesa-dri
+      - run: cmake --preset ci-gcc
+      - run: >-
+          cmake --build --preset ci-gcc --parallel 4
+          --target lar-earth-view-gpu-tests lar-plane-view-gpu-tests larviewer-tests
+      - run: >-
+          xvfb-run -a ctest --test-dir build-ci-gcc --output-on-failure
+          -R '^(lar-earth-view-gpu-tests|lar-plane-view-gpu-tests|larviewer-tests)$'
+
+  macos:
+    runs-on: macos-15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Qt
+        uses: jurplel/install-qt-action@48d3ad6db93f3627c8ee7a0454bc6f3744f7e730 # v4.3.1
+        with:
+          version: ${{ env.QT_VERSION }}
+          cache: true
+      - run: brew install ninja
+      - run: cmake --preset ci-clang
+      - run: cmake --build --preset ci-clang --parallel 4
+      - run: >-
+          ctest --preset ci-clang --parallel 2
+          --exclude-regex '(lar-earth-view-gpu-tests|lar-plane-view-gpu-tests)'
+      - run: >-
+          cmake --build build-ci-clang
+          --target check-install-layout --parallel 2

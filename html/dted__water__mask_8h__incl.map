@@ -1,0 +1,21 @@
+<map id="src/viewer/terrain/dted_water_mask.h" name="src/viewer/terrain/dted_water_mask.h">
+<area shape="rect" id="Node000001" title="Immutable DTED0&#45;post&#45;aligned water classification for one degree cell." alt="" coords="206,5,346,46"/>
+<area shape="rect" id="Node000002" href="$dted__cell_8h.html" title="Immutable in&#45;memory representation of one degree&#45;aligned DTED0 cell." alt="" coords="111,94,239,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,45,211,86,208,82,251,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,183,78,208"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="204,40,145,61,115,76,89,96,75,112,64,131,50,169,45,167,59,129,70,109,85,92,112,72,143,56,208,36"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="111,183,175,208"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="204,36,177,45,148,57,122,73,101,95,95,114,99,133,109,152,123,172,117,171,104,155,94,135,90,113,97,93,119,69,146,52,175,40,208,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="203,183,269,208"/>
+<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="274,45,253,135,245,169,241,166,248,134,270,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="296,183,353,208"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="284,44,319,168,314,167,280,48"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="365,102,430,127"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="304,44,371,92,365,92,303,49"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="454,102,522,127"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="326,44,444,92,448,95,443,95,442,96,325,49"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="144,136,76,177,74,172,139,135"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="169,134,155,170,151,166,165,137"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="191,133,220,170,215,170,189,137"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="213,133,291,175,285,175,211,138"/>
+</map>

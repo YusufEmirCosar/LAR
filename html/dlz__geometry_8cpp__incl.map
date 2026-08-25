@@ -1,0 +1,17 @@
+<map id="src/domain/dlz/dlz_geometry.cpp" name="src/domain/dlz/dlz_geometry.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="410,5,537,46"/>
+<area shape="rect" id="Node000002" href="$dlz__geometry_8h.html" title="Pure derivation of engagement geometry from shooter and target state." alt="" coords="130,94,305,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="407,48,273,91,271,86,412,46"/>
+<area shape="rect" id="Node000006" href="$dlz__units_8h.html" title="Compile&#45;time conversion constants used by the DLZ domain." alt="" coords="330,94,481,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="459,45,427,84,424,80,455,48"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="506,94,580,120"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="492,44,525,83,520,82,490,49"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="604,94,661,120"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="514,44,597,87,592,87,513,49"/>
+<area shape="rect" id="Node000003" href="$dlz__types_8h.html" title="Dedicated Dynamic Launch Zone domain values." alt="" coords="5,168,161,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="197,120,120,162,118,158,192,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="185,168,250,193"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="220,118,220,153,215,150,216,122"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="274,168,340,193"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="234,118,283,158,277,158,232,123"/>
+</map>

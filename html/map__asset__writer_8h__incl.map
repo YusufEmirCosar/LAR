@@ -1,0 +1,13 @@
+<map id="tools/map_asset/map_asset_writer.h" name="tools/map_asset/map_asset_writer.h">
+<area shape="rect" id="Node000001" title="Serializer for binary map assets and JSON manifests." alt="" coords="120,5,267,46"/>
+<area shape="rect" id="Node000002" href="$map__mesh_8h.html" title="CPU&#45;side vertex/index representation shared by tools and renderer." alt="" coords="40,94,208,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,45,147,84,143,80,174,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="232,94,297,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="212,44,246,82,240,82,210,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,168,70,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,120,65,160,62,156,107,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="94,168,154,193"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="126,118,127,153,122,151,122,122"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="178,168,236,193"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="139,118,184,157,179,158,137,123"/>
+</map>

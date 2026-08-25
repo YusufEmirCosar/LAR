@@ -1,0 +1,69 @@
+<map id="LarGeodesicGeometry::positiveAngularSpan" name="LarGeodesicGeometry::positiveAngularSpan">
+<area shape="rect" id="Node000001" title="Performs the positive angular span operation." alt="" coords="984,225,1135,266"/>
+<area shape="rect" id="Node000002" href="$class_earth_camera_policy.html#afa5417a6c7c21c60b1c31c1be4ed6e81" title="Documents the fit coordinates operation." alt="" coords="771,88,913,129"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1013,217,934,167,879,132,879,127,937,162,1018,217"/>
+<area shape="rect" id="Node000010" href="$class_lar_geometry_builder.html#a70af2f358de7aaaa536c7a94862e85c8" title="Performs the in Zone Wedge Polygon operation." alt="" coords="764,257,920,298"/>
+<area shape="poly" id="edge5_Node000001_Node000010" title=" " alt="" coords="966,260,921,269,919,264,971,258"/>
+<area shape="rect" id="Node000013" href="$class_lar_parametric_zone_gpu_layer.html#af62066059f03cab224ef90f79f7340d3" title="Sets zones." alt="" coords="748,176,936,217"/>
+<area shape="poly" id="edge8_Node000001_Node000013" title=" " alt="" coords="966,226,935,220,934,215,972,225"/>
+<area shape="rect" id="Node000022" href="$class_lar_zone_input_validator.html#a6b122729b48ca9995d79faaf3dc4c447" title="Performs the validate operation." alt="" coords="768,343,916,383"/>
+<area shape="poly" id="edge20_Node000001_Node000022" title=" " alt="" coords="1009,273,883,344,881,340,1004,275"/>
+<area shape="rect" id="Node000003" href="$class_earth_lar_view.html#a0e809f583a4542f2eccc32c4c62ed51d" title="Performs the fit to data operation." alt="" coords="532,33,692,58"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="753,86,662,62,662,57,758,84"/>
+<area shape="rect" id="Node000004" href="$class_earth_lar_view.html#a9a9aee7b2b2925d098198a5b6c3d5e31" title="Performs the mouse double click event operation." alt="" coords="279,5,466,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="513,39,468,36,466,31,518,36"/>
+<area shape="rect" id="Node000005" href="$class_earth_lar_view.html#a31a878a0e62a405d4a6b4632b5b22641" title="Maps unavailable." alt="" coords="14,70,214,96"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="262,52,177,72,174,67,266,48"/>
+<area shape="rect" id="Node000011" href="$class_grid_lar_view.html#a97e92179162a4e62f100af8904e50aac" title="Performs the draw in zone operation." alt="" coords="528,269,696,294"/>
+<area shape="poly" id="edge6_Node000010_Node000011" title=" " alt="" coords="747,280,697,283,696,278,752,278"/>
+<area shape="rect" id="Node000012" href="$class_grid_lar_view.html#aae172329db02631d16199f0e2a3cbd81" title="Performs the paint event operation." alt="" coords="292,318,454,344"/>
+<area shape="poly" id="edge7_Node000011_Node000012" title=" " alt="" coords="529,300,440,320,438,315,533,297"/>
+<area shape="rect" id="Node000014" href="$class_earth_lar_view.html#af5e18056f0670a984d3218fe68b64c95" title="Performs the update zone backend operation." alt="" coords="524,168,699,209"/>
+<area shape="poly" id="edge9_Node000013_Node000014" title=" " alt="" coords="730,193,700,194,699,189,735,192"/>
+<area shape="poly" id="edge15_Node000014_Node000005" title=" " alt="" coords="569,159,525,133,474,111,408,95,340,85,216,80,213,75,341,80,409,90,476,106,528,129,574,158"/>
+<area shape="rect" id="Node000015" href="$class_earth_lar_view.html#af5142420d01264ec222dd4f38f737eae" title="Performs the clear state operation." alt="" coords="290,170,456,196"/>
+<area shape="poly" id="edge10_Node000014_Node000015" title=" " alt="" coords="506,187,458,187,456,182,511,185"/>
+<area shape="rect" id="Node000018" href="$class_earth_lar_view.html#aaa9a8e4888267fe11efb7cf45b928c9e" title="Performs the initialize gl operation." alt="" coords="287,121,458,146"/>
+<area shape="poly" id="edge13_Node000014_Node000018" title=" " alt="" coords="506,166,433,150,432,145,511,164"/>
+<area shape="rect" id="Node000019" href="$class_earth_lar_view.html#aef92f959470406de4057c89fa40cbb14" title="Sets lar view mode." alt="" coords="271,269,475,294"/>
+<area shape="poly" id="edge16_Node000014_Node000019" title=" " alt="" coords="560,218,521,241,476,260,442,271,439,266,474,255,519,236,564,215"/>
+<area shape="rect" id="Node000021" href="$class_earth_lar_view.html#ab51a5945c37144dc54cc70219d97d5d7" title="Sets state." alt="" coords="295,220,451,245"/>
+<area shape="poly" id="edge18_Node000014_Node000021" title=" " alt="" coords="506,209,448,221,445,216,511,206"/>
+<area shape="rect" id="Node000016" href="$class_earth_lar_view.html#a4b140ea70c5516564e40b7f390d1599c" title="Performs the clear scene operation." alt="" coords="28,170,200,196"/>
+<area shape="poly" id="edge11_Node000015_Node000016" title=" " alt="" coords="272,185,202,185,199,181,276,181"/>
+<area shape="rect" id="Node000017" href="$class_earth_lar_view.html#ae31d62da8f683c8248c901915ebf246b" title="Sets scene state." alt="" coords="17,220,211,245"/>
+<area shape="poly" id="edge12_Node000015_Node000017" title=" " alt="" coords="285,201,187,221,184,217,289,197"/>
+<area shape="poly" id="edge14_Node000018_Node000005" title=" " alt="" coords="287,119,184,99,182,94,291,116"/>
+<area shape="rect" id="Node000020" href="$class_earth_lar_view.html#a8b2e659fc16224bb78ef2b7b7eed1323" title="Sets earth view mode." alt="" coords="5,269,223,294"/>
+<area shape="poly" id="edge17_Node000019_Node000020" title=" " alt="" coords="253,283,224,284,222,279,257,280"/>
+<area shape="poly" id="edge19_Node000021_Node000017" title=" " alt="" coords="277,234,212,235,210,230,281,231"/>
+<area shape="poly" id="edge28_Node000022_Node000011" title=" " alt="" coords="777,337,699,308,666,298,666,292,701,303,783,336"/>
+<area shape="rect" id="Node000023" href="$class_lar_zone_mesh_builder.html#aeae61a0b50e2824ca5cb7b32318e8ec1" title="Performs the build operation." alt="" coords="542,368,682,409"/>
+<area shape="poly" id="edge21_Node000022_Node000023" title=" " alt="" coords="750,374,683,383,682,378,755,372"/>
+<area shape="rect" id="Node000028" href="$class_grid_lar_view.html#ac6b64960dc9ba786f2561b8d57fa5473" title="Performs the draw in range operation." alt="" coords="523,318,700,344"/>
+<area shape="poly" id="edge26_Node000022_Node000028" title=" " alt="" coords="751,351,701,346,701,341,756,350"/>
+<area shape="rect" id="Node000029" href="$class_grid_lar_view.html#a85e7b9f7b96a4ba88aa1dacbfd940438" title="Performs the fit to data operation." alt="" coords="535,437,688,462"/>
+<area shape="poly" id="edge29_Node000022_Node000029" title=" " alt="" coords="780,389,701,423,656,439,654,434,699,418,775,391"/>
+<area shape="rect" id="Node000031" href="$class_plane_surface_projection.html#a2cd80e85be0eabb53064a21778d7eab8" title="Projects all available target/LAR data around the aircraft origin." alt="" coords="533,491,690,531"/>
+<area shape="poly" id="edge31_Node000022_Node000031" title=" " alt="" coords="810,393,760,437,702,477,672,492,669,488,699,473,757,433,805,395"/>
+<area shape="rect" id="Node000024" href="$class_viewport_preparation_worker.html#a70c6d90f31a6ec89cf2be630b2579331" title="Performs the process latest operation." alt="" coords="283,368,462,409"/>
+<area shape="poly" id="edge22_Node000023_Node000024" title=" " alt="" coords="524,389,464,391,462,386,529,387"/>
+<area shape="rect" id="Node000025" href="$class_viewport_preparation_worker.html#ad377d90c3d519cc10d42bd97d6e26e00" title="Notifies observers about mesh ready." alt="" coords="24,343,204,383"/>
+<area shape="poly" id="edge23_Node000024_Node000025" title=" " alt="" coords="265,388,205,383,203,378,270,386"/>
+<area shape="rect" id="Node000027" href="$class_viewport_preparation_worker.html#a05843486134e53d3c3ca6e89d23526b0" title="Constructs this object." alt="" coords="20,408,208,449"/>
+<area shape="poly" id="edge25_Node000024_Node000027" title=" " alt="" coords="266,406,209,416,207,411,270,403"/>
+<area shape="poly" id="edge24_Node000025_Node000024" title=" " alt="" coords="218,362,285,370,280,372,220,367"/>
+<area shape="poly" id="edge27_Node000028_Node000012" title=" " alt="" coords="505,332,455,334,454,328,510,330"/>
+<area shape="rect" id="Node000030" href="$class_grid_lar_view.html#a4f3cf6974788ff076be19de0fa0bac8e" title="Performs the mouse double click event operation." alt="" coords="283,433,463,474"/>
+<area shape="poly" id="edge30_Node000029_Node000030" title=" " alt="" coords="517,452,464,455,463,450,522,450"/>
+<area shape="rect" id="Node000032" href="$class_plane_scene_widget.html#ae1cb2d702c2bbbd9c54bc1707cc90d52" title="Performs the refresh surface state operation." alt="" coords="283,523,463,563"/>
+<area shape="poly" id="edge32_Node000031_Node000032" title=" " alt="" coords="515,524,464,533,463,528,520,523"/>
+<area shape="rect" id="Node000033" href="$class_plane_scene_widget.html#ac41abb6eb0add39b310a73d3e27d7478" title="Performs the clear scene operation." alt="" coords="11,473,217,498"/>
+<area shape="poly" id="edge33_Node000032_Node000033" title=" " alt="" coords="265,521,176,502,175,496,270,518"/>
+<area shape="rect" id="Node000034" href="$class_plane_scene_widget.html#a7cb14c31a868d84d81a36418888be91c" title="Loads a user&#45;selected .gltf or .glb model." alt="" coords="14,523,214,563"/>
+<area shape="poly" id="edge34_Node000032_Node000034" title=" " alt="" coords="265,544,215,546,214,540,270,542"/>
+<area shape="rect" id="Node000041" href="$class_plane_scene_widget.html#a6387f9c3b66f950945e37e615318d0e1" title="Sets scene state." alt="" coords="16,588,212,629"/>
+<area shape="poly" id="edge35_Node000032_Node000041" title=" " alt="" coords="272,569,198,590,197,585,277,567"/>
+<area shape="rect" id="Node000036" href="$class_plane_scene_widget.html#a4af14d7382c36b30361f6903425d2d57" title="Notifies tests and controls when terrain preparation changes readiness." alt="" coords="26,653,202,694"/>
+<area shape="poly" id="edge36_Node000032_Node000036" title=" " alt="" coords="335,572,283,610,224,643,193,655,191,650,222,638,280,605,330,574"/>
+</map>

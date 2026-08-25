@@ -1,0 +1,8 @@
+<map id="EarthOverlayCoordinator::request" name="EarthOverlayCoordinator::request">
+<area shape="rect" id="Node000001" title="Performs the request operation." alt="" coords="5,29,170,70"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="46,28,44,19,51,10,65,5,88,3,111,5,127,13,122,14,110,10,87,8,67,10,54,15,49,21,51,29"/>
+<area shape="rect" id="Node000002" href="$class_viewport_preparation_worker.html#a94eb1c1152292149a523977b8b19489b" title="Submits the current operation." alt="" coords="218,29,397,70"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="170,47,205,49,199,50,170,52"/>
+<area shape="rect" id="Node000003" href="$class_viewport_preparation_worker.html#a0cd67140363a9ea0c52348543e447ae4" title="Posts one coalesced, argument&#45;free worker wake&#45;up." alt="" coords="445,29,624,70"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="397,47,432,50,427,50,398,52"/>
+</map>

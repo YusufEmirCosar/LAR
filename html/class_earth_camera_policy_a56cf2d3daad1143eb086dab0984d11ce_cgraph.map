@@ -1,0 +1,11 @@
+<map id="EarthCameraPolicy::navigationMetersPerPixel" name="EarthCameraPolicy::navigationMetersPerPixel">
+<area shape="rect" id="Node000001" title="Performs the navigation meters per pixel operation." alt="" coords="5,39,175,79"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_projection.html#a04a41c2e9368101130aa74b16f7ba3cb" title="Obtains unproject." alt="" coords="223,5,382,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,43,210,40,205,41,175,48"/>
+<area shape="rect" id="Node000004" href="$classlar_1_1map_1_1_map_projection.html#ae51b77201c9b343a098d386577f31c0c" title="Performs the wrap longitude operation." alt="" coords="223,71,382,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="175,69,210,76,205,77,175,74"/>
+<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_map_projection.html#ab5e58081b188d83d89e07c4f0b0a6d72" title="Performs the unproject latitude operation." alt="" coords="430,5,589,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="382,23,417,25,412,26,382,28"/>
+<area shape="rect" id="Node000005" href="$classlar_1_1map_1_1_map_projection.html#a07314ffecd55c0529f331a1aa41a8107" title="Performs the wrap periodic operation." alt="" coords="430,71,589,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="382,88,417,91,412,91,382,94"/>
+</map>

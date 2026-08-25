@@ -1,0 +1,41 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,186,55,212"/>
+<area shape="rect" id="Node000002" href="$custom__sender_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="103,186,152,212"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,197,89,197,85,201,57,201"/>
+<area shape="poly" id="edge16_Node000002_Node000002" title=" " alt="" coords="109,186,106,177,108,168,116,162,127,160,140,162,147,171,142,171,137,167,127,165,118,167,113,171,112,177,115,186"/>
+<area shape="rect" id="Node000003" href="$class_packet_mapping.html#a37e8ae3c0071d0ed32f9075347e51cf1" title="Returns the StateField mask covered by this mapping." alt="" coords="226,5,397,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="129,185,151,124,171,88,198,57,214,48,211,52,202,61,175,91,155,126,134,187"/>
+<area shape="rect" id="Node000004" href="$class_packet_mapping.html#a2759cc7125955e898eff73f7532c5050" title="Encodes mapped legacy fields into a zero&#45;filled datagram." alt="" coords="231,136,392,161"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="151,190,249,164,246,168,154,195"/>
+<area shape="rect" id="Node000009" href="$namespace_custom_scenario.html#a77fdc157110ae120056b62a30e3e6b0e" title=" " alt="" coords="225,261,398,286"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="152,206,266,253,262,256,152,211"/>
+<area shape="rect" id="Node000010" href="$class_json_mapping_repository.html#a9bcf02eab8f15de96d75ef38e0456525" title="Loads file." alt="" coords="231,71,392,111"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="135,184,161,152,199,121,219,112,215,116,201,125,165,156,140,187"/>
+<area shape="rect" id="Node000014" href="$namespace_custom_scenario.html#a092f413c05baef70a8efab75c9b2be54" title=" " alt="" coords="200,334,423,360"/>
+<area shape="poly" id="edge17_Node000002_Node000014" title=" " alt="" coords="136,210,162,253,181,276,202,297,226,313,254,328,248,328,223,318,198,301,177,280,158,256,135,215"/>
+<area shape="rect" id="Node000015" href="$namespace_custom_scenario.html#a89ff4dd19ccadb4d9968be5c52092691" title=" " alt="" coords="229,408,394,433"/>
+<area shape="poly" id="edge19_Node000002_Node000015" title=" " alt="" coords="131,210,140,243,152,285,173,331,202,370,222,387,247,402,242,401,219,391,198,374,168,333,147,287,135,245,130,215"/>
+<area shape="rect" id="Node000016" href="$class_state_validator.html#a1a89a626574779010785568b4fd81d99" title="Validates only legacy fields whose bits are set in availableFields." alt="" coords="474,212,630,237"/>
+<area shape="poly" id="edge21_Node000002_Node000016" title=" " alt="" coords="152,198,460,217,458,221,153,203"/>
+<area shape="rect" id="Node000005" href="$class_packet_mapping.html#ad1917abe7193f42eb04c4bc08cfdb309" title="Returns whether all bindings form a complete non&#45;overlapping schema." alt="" coords="684,112,842,137"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="392,141,671,128,666,131,393,147"/>
+<area shape="rect" id="Node000006" href="$class_state_field.html#aef3dfc4418848efa5769202f760e1e44" title="Reads a trusted legacy field ID; invalid IDs return zero." alt="" coords="492,162,612,188"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="392,155,479,166,474,168,393,160"/>
+<area shape="rect" id="Node000007" href="$class_state_field.html#a2dfc080fa7c4d91049a450951893646c" title="Explicit optional access for callers handling untrusted field IDs." alt="" coords="695,161,830,186"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="611,172,682,174,677,175,612,177"/>
+<area shape="rect" id="Node000008" href="$class_state_field.html#a518ff6ce6f1e93a5135e7274e2db7359" title="Returns the canonical descriptor, or null for an invalid ID." alt="" coords="893,161,1038,186"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="830,171,880,173,875,174,831,176"/>
+<area shape="poly" id="edge9_Node000009_Node000009" title=" " alt="" coords="280,260,275,252,278,243,291,236,312,234,334,237,347,246,342,246,332,242,312,239,292,241,282,246,280,252,285,261"/>
+<area shape="rect" id="Node000011" href="$class_json_mapping_repository.html#add89ca1802d56959d87408c174e80a35" title="Loads json." alt="" coords="471,47,633,87"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="392,80,458,75,453,78,394,85"/>
+<area shape="poly" id="edge14_Node000011_Node000005" title=" " alt="" coords="629,85,701,106,696,107,629,91"/>
+<area shape="rect" id="Node000012" href="$class_state_field.html#a9cffd8d88606764c6cde9724071891f7" title="Returns the canonical mapping&#45;oriented name for id." alt="" coords="681,62,845,88"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="633,67,668,71,663,72,634,73"/>
+<area shape="rect" id="Node000013" href="$class_state_field.html#a58fa1690232a70168208952818c6d061" title="Resolves a JSON mapping name/index pair to an Id, or &#45;1." alt="" coords="698,13,828,38"/>
+<area shape="poly" id="edge15_Node000011_Node000013" title=" " alt="" coords="632,49,685,40,681,42,634,54"/>
+<area shape="poly" id="edge13_Node000012_Node000008" title=" " alt="" coords="817,86,846,97,894,122,937,152,931,151,891,127,844,101,817,91"/>
+<area shape="poly" id="edge18_Node000014_Node000014" title=" " alt="" coords="280,333,275,326,278,316,291,310,312,308,334,310,347,319,342,319,332,315,312,313,292,315,282,319,280,325,285,335"/>
+<area shape="poly" id="edge20_Node000015_Node000015" title=" " alt="" coords="280,406,275,399,278,389,291,383,312,381,334,383,347,393,342,392,332,388,312,386,292,388,282,393,280,398,285,408"/>
+<area shape="poly" id="edge23_Node000016_Node000007" title=" " alt="" coords="608,208,694,190,689,191,609,213"/>
+<area shape="poly" id="edge22_Node000016_Node000008" title=" " alt="" coords="629,218,732,210,845,196,896,190,891,191,845,202,733,215,630,223"/>
+</map>

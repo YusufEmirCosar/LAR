@@ -1,0 +1,7 @@
+<map id="QtUdpDatagramSource" name="QtUdpDatagramSource">
+<area shape="rect" id="Node000001" title="Binds a UDP port and drains all pending datagrams asynchronously." alt="" coords="5,153,163,178"/>
+<area shape="rect" id="Node000002" href="$class_i_datagram_source.html" title="Emits complete datagrams without exposing a concrete socket API." alt="" coords="22,79,146,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,118,86,153,82,151,82,122"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="49,5,119,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,44,87,79,81,78,83,49"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="dlz::presentation::rangeToY" name="dlz::presentation::rangeToY">
+<area shape="rect" id="Node000001" title="Performs the range to y operation." alt="" coords="855,29,980,70"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="945,13,935,10,917,8,901,10,891,14,887,20,888,30,884,27,882,19,887,10,899,5,917,3,937,5,950,14"/>
+<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_hud_renderer.html#af95ba48541d17a3dd1246ea446dce26c" title="Draws the current operation." alt="" coords="672,29,807,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="837,50,807,52,807,47,842,50"/>
+<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_view.html#a5b51201b52af68e500d1286bced3601a" title="Performs the paint event operation." alt="" coords="480,29,624,70"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="654,50,625,52,625,47,659,50"/>
+<area shape="rect" id="Node000004" href="$classdlz_1_1presentation_1_1_hud_view.html#a9e418e04071dc33ce39162200dd1a373" title="Performs the frame rendered operation." alt="" coords="261,29,432,70"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="462,59,433,61,433,56,467,59"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="448,38,482,41,477,41,448,43"/>
+<area shape="rect" id="Node000005" href="$classdlz_1_1presentation_1_1_hud_workspace.html#aec685012fec2dfb24231b60b8836444b" title="Constructs this object." alt="" coords="5,29,213,70"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="242,50,213,52,213,47,248,50"/>
+</map>

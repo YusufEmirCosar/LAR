@@ -1,0 +1,13 @@
+<map id="DtedTileSource::keyForRadians" name="DtedTileSource::keyForRadians">
+<area shape="rect" id="Node000001" title=" " alt="" coords="803,46,1010,72"/>
+<area shape="rect" id="Node000002" href="$class_dted_mosaic_sampler.html#a6846daac445cde1ec6c433644309a5bd" title=" " alt="" coords="607,39,755,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="784,59,755,62,755,56,790,59"/>
+<area shape="rect" id="Node000003" href="$class_dted_mosaic_sampler.html#a9cad4de48229805ca1ee5dd471ecfd5e" title=" " alt="" coords="408,5,555,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="589,44,555,41,555,35,595,44"/>
+<area shape="rect" id="Node000004" href="$class_dted_mosaic_sampler.html#a183de02a1c9073c02648bc71022ba406" title="Samples a sea&#45;level water surface while retaining source depth for coloring." alt="" coords="403,71,559,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="594,73,560,81,559,76,589,74"/>
+<area shape="rect" id="Node000005" href="$class_plane_terrain_patch_builder.html#ae255d8ff063838ad44e241f3cc826c69" title="Samples and triangulates one request, returning null when local terrain is absent." alt="" coords="188,71,355,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="385,91,355,94,355,88,390,91"/>
+<area shape="rect" id="Node000006" href="$class_plane_terrain_worker.html#ab215b14a4ab72ff79e0890675d809388" title=" " alt="" coords="5,71,140,111"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="170,91,140,94,140,88,175,91"/>
+</map>

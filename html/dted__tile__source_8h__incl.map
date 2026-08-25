@@ -1,0 +1,21 @@
+<map id="src/viewer/terrain/dted_tile_source.h" name="src/viewer/terrain/dted_tile_source.h">
+<area shape="rect" id="Node000001" title="Deterministic DTED0 tile addressing without scanning the source tree." alt="" coords="292,5,423,46"/>
+<area shape="rect" id="Node000002" href="$dted__cell__reader_8h.html" title="Bounded parser for DTED Level&#45;0 UHL, profile, elevation, and checksum records." alt="" coords="192,94,320,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="337,45,292,86,289,82,332,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="327,271,393,297"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="367,44,381,79,393,123,400,174,395,224,379,260,375,256,390,223,394,174,388,124,376,81,365,49"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="314,190,380,216"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="358,45,351,175,346,173,354,48"/>
+<area shape="rect" id="Node000003" href="$dted__cell_8h.html" title="Immutable in&#45;memory representation of one degree&#45;aligned DTED0 cell." alt="" coords="69,183,198,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="226,137,175,176,172,171,230,134"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="277,133,326,179,321,179,276,138"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="222,190,290,216"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="258,133,259,176,254,174,255,137"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,271,78,297"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="113,223,69,263,66,259,108,225"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="101,271,166,297"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="135,222,136,257,131,255,132,226"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="191,221,315,265,310,267,190,227"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="190,271,248,297"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="156,221,197,260,192,261,154,226"/>
+</map>

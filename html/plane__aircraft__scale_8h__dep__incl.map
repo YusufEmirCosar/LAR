@@ -1,0 +1,30 @@
+<map id="src/viewer/plane/plane_aircraft_scale.h" name="src/viewer/plane/plane_aircraft_scale.h">
+<area shape="rect" id="Node000001" title="Uses the normalized F&#45;16 mesh as Plane mode&#39;s fixed metric reference." alt="" coords="119,5,270,46"/>
+<area shape="rect" id="Node000002" href="$plane__aircraft__scale_8cpp.html" title=" " alt="" coords="5,94,157,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,58,109,95,105,92,158,53"/>
+<area shape="rect" id="Node000003" href="$plane__scene__widget_8cpp.html" title=" " alt="" coords="319,449,470,489"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,59,197,202,197,293,201,320,211,345,227,368,247,388,295,422,344,448,339,448,292,426,244,392,223,371,207,348,196,322,192,293,192,202,193,64"/>
+<area shape="rect" id="Node000004" href="$plane__surface__state_8h.html" title="Projection&#45;ready local ground, target, and LAR values for Plane mode." alt="" coords="348,94,499,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="260,49,374,92,369,95,261,54"/>
+<area shape="rect" id="Node000005" href="$plane__scene__widget_8h.html" title="Interactive OpenGL chase/orbit view for the centered Plane simulation." alt="" coords="495,360,646,401"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="440,146,457,182,479,248,489,277,507,311,527,336,550,360,545,359,523,340,503,313,484,279,474,250,452,184,438,151"/>
+<area shape="rect" id="Node000008" href="$plane__surface__gpu__layer_8h.html" title="Context&#45;owned flat ground, metric grid, target, and LAR renderer." alt="" coords="520,183,671,223"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="476,139,559,182,554,183,476,145"/>
+<area shape="rect" id="Node000012" href="$plane__surface__projection_8h.html" title="Pure geographic&#45;to&#45;local projection and scale policy for Plane mode." alt="" coords="291,183,442,223"/>
+<area shape="poly" id="edge13_Node000004_Node000012" title=" " alt="" coords="404,146,381,184,377,180,401,150"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="519,407,435,451,433,446,514,409"/>
+<area shape="rect" id="Node000006" href="$plane__scene__widget__terrain_8cpp.html" title="DTED worker lifecycle, patch recentering, and aircraft&#45;relative placement." alt="" coords="670,449,846,489"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="628,405,718,448,713,448,626,410"/>
+<area shape="rect" id="Node000007" href="$plane__view__workspace_8cpp.html" title=" " alt="" coords="495,449,646,489"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="572,414,572,450,568,447,568,418"/>
+<area shape="rect" id="Node000009" href="$plane__scene__renderer_8h.html" title="OpenGL resources and draw passes for the centered F&#45;16 simulation." alt="" coords="699,271,850,312"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="650,228,737,271,731,271,650,233"/>
+<area shape="rect" id="Node000011" href="$plane__surface__gpu__layer_8cpp.html" title=" " alt="" coords="516,271,675,312"/>
+<area shape="poly" id="edge12_Node000008_Node000011" title=" " alt="" coords="597,237,598,272,593,269,594,241"/>
+<area shape="poly" id="edge11_Node000009_Node000005" title=" " alt="" coords="717,318,618,362,616,357,712,319"/>
+<area shape="rect" id="Node000010" href="$plane__scene__renderer_8cpp.html" title=" " alt="" coords="699,360,850,401"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="776,326,776,361,772,358,773,330"/>
+<area shape="poly" id="edge14_Node000012_Node000003" title=" " alt="" coords="390,234,406,271,414,320,413,370,401,450,397,447,408,370,408,321,401,272,388,239"/>
+<area shape="rect" id="Node000013" href="$plane__surface__projection_8cpp.html" title=" " alt="" coords="232,271,391,312"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="348,235,326,273,322,269,344,239"/>
+</map>

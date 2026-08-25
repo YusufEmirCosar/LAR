@@ -1,0 +1,10 @@
+<map id="LarViewport::fitToData" name="LarViewport::fitToData">
+<area shape="rect" id="Node000001" title="Documents the fit to data operation." alt="" coords="5,79,157,104"/>
+<area shape="rect" id="Node000002" href="$class_lar_viewport.html#a87f5ac3cf9e88e1603eb618760909944" title="Documents the active page operation." alt="" coords="216,5,379,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,76,204,40,228,35,223,37,206,45,114,80"/>
+<area shape="rect" id="Node000003" href="$class_i_lar_viewport_page.html#a98c5c87b1594f4507168a28780959406" title="Performs the fit to data operation." alt="" coords="205,79,390,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,89,191,91,186,92,157,94"/>
+<area shape="rect" id="Node000004" href="$class_i_lar_viewport_page.html#a5bacb9c4b9fc42c6d3c772a5fca5d2f7" title="Returns the current widget." alt="" coords="212,128,382,154"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="141,102,225,123,220,125,140,108"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="261,78,254,70,259,60,273,54,297,52,324,55,339,64,333,64,322,60,297,57,274,59,262,64,260,69,266,79"/>
+</map>

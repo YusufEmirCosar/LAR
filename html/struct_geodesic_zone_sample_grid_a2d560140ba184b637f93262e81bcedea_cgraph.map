@@ -1,0 +1,5 @@
+<map id="GeodesicZoneSampleGrid::point" name="GeodesicZoneSampleGrid::point">
+<area shape="rect" id="Node000001" title="Performs the point operation." alt="" coords="5,5,179,46"/>
+<area shape="rect" id="Node000002" href="$struct_geodesic_zone_sample_grid.html#ab08e60ca83ede0bb9bf12a18711594e4" title="Documents the column count operation." alt="" coords="227,5,400,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,23,214,25,208,26,179,28"/>
+</map>

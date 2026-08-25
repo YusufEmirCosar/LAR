@@ -1,0 +1,208 @@
+# 4. Presentation Widgets Target
+qt_add_library(lar-presentation-widgets STATIC
+    src/viewer/dialogs/recording_file_dialog.h
+    src/viewer/dialogs/qt_recording_file_dialog.h
+    src/viewer/dialogs/qt_recording_file_dialog.cpp
+    src/viewer/dialogs/viewer_file_dialog.h
+    src/viewer/dialogs/qt_viewer_file_dialog.h
+    src/viewer/dialogs/qt_viewer_file_dialog.cpp
+    src/viewer/workflows/recording_workflow_controller.h
+    src/viewer/workflows/recording_workflow_controller.cpp
+    src/viewer/workflows/online_workflow_controller.h
+    src/viewer/workflows/online_workflow_controller.cpp
+    src/viewer/panels/values_panel.h
+    src/viewer/panels/values_panel.cpp
+    src/viewer/panels/metrics_panel.h
+    src/viewer/panels/metrics_panel.cpp
+    src/viewer/panels/offline_panel.h
+    src/viewer/panels/offline_panel.cpp
+    src/viewer/panels/online_panel.h
+    src/viewer/panels/online_panel.cpp
+    src/viewer/grid_geometry_builder.h
+    src/viewer/grid_geometry_builder.cpp
+    src/viewer/lar_projection.h
+    src/viewer/lar_projection.cpp
+    src/viewer/lar_geometry_builder.h
+    src/viewer/lar_geometry_builder.cpp
+    src/viewer/terrain/dted_cell.h
+    src/viewer/terrain/dted_cell_reader.h
+    src/viewer/terrain/dted_cell_reader.cpp
+    src/viewer/terrain/dted_tile_source.h
+    src/viewer/terrain/dted_tile_source.cpp
+    src/viewer/terrain/dted_mosaic_sampler.h
+    src/viewer/terrain/dted_mosaic_sampler.cpp
+    src/viewer/terrain/dted_water_mask.h
+    src/viewer/terrain/dted_water_mask_source.h
+    src/viewer/terrain/dted_water_mask_source.cpp
+    src/viewer/lar_camera.h
+    src/viewer/lar_geodesic_geometry.h
+    src/viewer/lar_geodesic_geometry.cpp
+    src/viewer/viewport/lar_zone_mesh.h
+    src/viewer/viewport/lar_zone_mesh_limits.h
+    src/viewer/viewport/lar_scene_state.h
+    src/viewer/viewport/lar_viewport_page.h
+    src/viewer/viewport/grid_lar_view.h
+    src/viewer/viewport/grid_lar_view.cpp
+    src/viewer/viewport/grid_camera_transform.h
+    src/viewer/viewport/grid_camera_transform.cpp
+    src/viewer/viewport/lar_zone_input_validator.h
+    src/viewer/viewport/lar_zone_input_validator.cpp
+    src/viewer/viewport/geodesic_zone_sampler.h
+    src/viewer/viewport/geodesic_zone_sampler.cpp
+    src/viewer/viewport/lar_zone_mesh_assembler.h
+    src/viewer/viewport/lar_zone_mesh_assembler.cpp
+    src/viewer/viewport/lar_zone_mesh_builder.h
+    src/viewer/viewport/lar_zone_mesh_builder.cpp
+    src/viewer/viewport/viewport_preparation_worker.h
+    src/viewer/viewport/viewport_preparation_worker.cpp
+    src/viewer/viewport/lar_zone_gpu_layer.h
+    src/viewer/viewport/lar_zone_gpu_layer.cpp
+    src/viewer/viewport/lar_parametric_zone_gpu_layer.h
+    src/viewer/viewport/lar_parametric_zone_gpu_layer.cpp
+    src/viewer/viewport/lar_marker_layer.h
+    src/viewer/viewport/lar_marker_layer.cpp
+    src/viewer/viewport/lar_view_fit.h
+    src/viewer/viewport/lar_view_fit.cpp
+    src/viewer/viewport/viewport_camera_controller.h
+    src/viewer/viewport/viewport_camera_controller.cpp
+    src/viewer/viewport/viewport_controls.h
+    src/viewer/viewport/viewport_controls.cpp
+    src/viewer/viewport/lar_navigation_overlay.h
+    src/viewer/viewport/lar_navigation_overlay.cpp
+    src/viewer/viewport/earth_lar_view.h
+    src/viewer/viewport/earth_lar_view.cpp
+    src/viewer/viewport/earth_lar_view_interaction.cpp
+    src/viewer/viewport/earth_lar_view_rendering.cpp
+    src/viewer/viewport/earth_camera_policy.h
+    src/viewer/viewport/earth_camera_policy.cpp
+    src/viewer/viewport/earth_map_load_controller.h
+    src/viewer/viewport/earth_map_load_controller.cpp
+    src/viewer/viewport/earth_overlay_coordinator.h
+    src/viewer/viewport/earth_overlay_coordinator.cpp
+    src/viewer/viewport_frame_counter.h
+    src/viewer/viewport_frame_counter.cpp
+    src/viewer/statevalueformatter.h
+    src/viewer/statevalueformatter.cpp
+    src/viewer/playbacktimeformatter.h
+    src/viewer/playbacktimeformatter.cpp
+    src/viewer/playback_timeline_mapper.h
+    src/viewer/playback_timeline_mapper.cpp
+    src/viewer/viewport/lar_viewport.h
+    src/viewer/viewport/lar_viewport.cpp
+    src/viewer/viewport/viewport_content_mode.h
+    src/viewer/viewport/viewport_content_switch.h
+    src/viewer/viewport/viewport_content_switch.cpp
+    src/viewer/plane/plane_attitude_transform.h
+    src/viewer/plane/plane_attitude_transform.cpp
+    src/viewer/plane/plane_orbit_camera.h
+    src/viewer/plane/plane_orbit_camera.cpp
+    src/viewer/plane/plane_aircraft_scale.h
+    src/viewer/plane/plane_aircraft_scale.cpp
+    src/viewer/plane/plane_surface_state.h
+    src/viewer/plane/plane_surface_projection.h
+    src/viewer/plane/plane_surface_projection.cpp
+    src/viewer/plane/plane_surface_shaders.h
+    src/viewer/plane/plane_surface_gpu_layer.h
+    src/viewer/plane/plane_surface_gpu_layer.cpp
+    src/viewer/plane/plane_terrain_patch.h
+    src/viewer/plane/plane_terrain_patch_builder.h
+    src/viewer/plane/plane_terrain_patch_builder.cpp
+    src/viewer/plane/plane_terrain_worker.h
+    src/viewer/plane/plane_terrain_worker.cpp
+    src/viewer/plane/plane_terrain_shaders.h
+    src/viewer/plane/plane_terrain_gpu_layer.h
+    src/viewer/plane/plane_terrain_gpu_layer.cpp
+    src/viewer/plane/plane_model_mesh.h
+    src/viewer/plane/glb_resource_limits.h
+    src/viewer/plane/glb_resource_reader.h
+    src/viewer/plane/glb_resource_reader.cpp
+    src/viewer/plane/glb_model_reader.h
+    src/viewer/plane/glb_model_reader.cpp
+    src/viewer/plane/glb_texture_reader.h
+    src/viewer/plane/glb_texture_reader.cpp
+    src/viewer/plane/cubemap_catalog.h
+    src/viewer/plane/cubemap_catalog.cpp
+    src/viewer/plane/plane_shaders.h
+    src/viewer/plane/plane_scene_renderer.h
+    src/viewer/plane/plane_scene_renderer.cpp
+    src/viewer/plane/plane_scene_widget.h
+    src/viewer/plane/plane_scene_widget.cpp
+    src/viewer/plane/plane_scene_widget_terrain.cpp
+    src/viewer/plane/plane_view_workspace.h
+    src/viewer/plane/plane_view_workspace.cpp
+    src/viewer/hud/dlz_range_scale.h
+    src/viewer/hud/dlz_range_scale.cpp
+    src/viewer/hud/dlz_presentation_controller.h
+    src/viewer/hud/dlz_presentation_controller.cpp
+    src/viewer/hud/dlz_fixtures.h
+    src/viewer/hud/dlz_fixtures.cpp
+    src/viewer/hud/dlz_hud_renderer.h
+    src/viewer/hud/dlz_hud_renderer.cpp
+    src/viewer/hud/dlz_hud_view.h
+    src/viewer/hud/dlz_hud_view.cpp
+    src/viewer/hud/dlz_control_panel.h
+    src/viewer/hud/dlz_control_panel.cpp
+    src/viewer/hud/dlz_hud_workspace.h
+    src/viewer/hud/dlz_hud_workspace.cpp
+    src/viewer/mainwindow.h
+    src/viewer/mainwindow.cpp
+)
+target_include_directories(lar-presentation-widgets PUBLIC src)
+target_compile_definitions(lar-presentation-widgets PRIVATE
+    "LAR_DTED0_SOURCE_DIR=\"${LAR_DTED0_ROOT}\""
+    "LAR_DTED0_WATER_MASK_SOURCE_FILE=\"${LAR_DTED0_WATER_MASK}\""
+)
+target_link_libraries(lar-presentation-widgets
+    PUBLIC
+        lar-application
+        lar-domain
+        lar-map-format
+        lar-map-rendering
+        Qt6::Concurrent
+        Qt6::Widgets
+        Qt6::OpenGLWidgets
+)
+
+lar_define_map_asset_target()
+
+# Executables
+qt_add_executable(lar-viewer MACOSX_BUNDLE
+    src/viewer/main.cpp
+    assets/ui/icons/icons.qrc
+)
+target_link_libraries(lar-viewer PRIVATE lar-presentation-widgets lar-infrastructure-qt lar-application lar-domain Qt6::Widgets)
+lar_copy_map_package(lar-viewer)
+lar_copy_plane_assets(lar-viewer)
+
+qt_add_executable(lar-test-sender
+    src/testsender/main.cpp
+    src/testsender/scenarios.h
+    src/testsender/scenarios.cpp
+)
+target_link_libraries(lar-test-sender PRIVATE
+    lar-infrastructure-qt
+    lar-domain
+    Qt6::Core
+    Qt6::Network
+)
+
+qt_add_executable(lar-custom-test-sender
+    src/testsender/custom_sender.cpp
+)
+target_link_libraries(lar-custom-test-sender PRIVATE
+    lar-infrastructure-qt
+    lar-domain
+    Qt6::Core
+    Qt6::Network
+)
+
+qt_add_executable(lar-testsender-scenario-tests
+    src/testsender/scenario_tests.cpp
+    src/testsender/scenarios.h
+    src/testsender/scenarios.cpp
+)
+target_link_libraries(lar-testsender-scenario-tests PRIVATE
+    lar-infrastructure-qt
+    lar-domain
+    Qt6::Core
+)

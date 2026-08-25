@@ -1,0 +1,132 @@
+# LAR Packet Monitor project specification
+
+## Purpose and status
+
+LAR Packet Monitor is a desktop visualization and recording tool for mapped UDP
+telemetry. It displays aircraft and target state in Grid, Earth, Plane, and DLZ
+views; records the accepted datagrams in the `LAR1` format; and replays a saved
+session deterministically. It is an engineering and teaching application, not a
+certified flight, navigation, fire-control, or weapon-employment system.
+
+This document defines the maintained product contract. Detailed implementation
+and verification information lives in the [documentation hub](docs/README.md).
+
+## Functional requirements
+
+### Input and online operation
+
+- The application shall load a bounded JSON mapping before accepting telemetry.
+- Each accepted mapping entry shall identify a registered state field, an array
+  index where applicable, a packet byte offset, and either a four-byte IEEE-754
+  float or eight-byte IEEE-754 double representation.
+- The UDP source shall support allow-all and exact-address whitelist policies.
+  Neither policy constitutes authentication; deployments shall apply the
+  controls in the [threat model](docs/THREAT_MODEL.md).
+- A datagram shall update visible state only after mapping decode and domain
+  validation both succeed. Fields absent from the mapping shall remain
+  explicitly unavailable.
+- Online publication shall be coalesced so rendering speed does not determine
+  packet-ingestion throughput.
+
+### Recording and playback
+
+- Recording shall preserve the canonical mapping and the exact accepted UDP
+  datagram boundaries in the versioned `LAR1` stream.
+- Recording timestamps shall use active recording time; paused intervals shall
+  not advance them, and adjacent records may have equal timestamps.
+- A snapshot shall represent an immutable file prefix. Saving shall use atomic
+  replacement and preserve an existing destination if commit fails.
+- There is no product maximum for records per session. Capacity is governed by
+  available storage, the `LAR1` byte layout, the supported duration, and the
+  signed 64-bit application index range. The reader shall not retain one index
+  entry per record: it keeps one checkpoint per 4,096 records and a single
+  4,096-record location page.
+- Playback shall use exact millisecond timestamps, logarithmic record selection,
+  and decode at most the selected record on each presentation tick.
+
+### Visualization
+
+- Packet latitude/longitude and attitude values use radians; distances and
+  altitudes use metres unless the protocol reference states otherwise.
+- Earth-zone boundaries shall use geodesic construction. The adaptive renderer's
+  projected curve-error target is 0.65 pixel.
+- The fixed-topology parametric GPU path may be selected only when its projected
+  topology and float-coordinate error fit the same pixel budget. Numerically
+  sensitive, polar, or extreme-zoom cases shall fall back to camera-relative,
+  adaptively sampled CPU geometry.
+- GPU resources shall be created, used, and destroyed only while their owning
+  OpenGL context is current.
+- The DLZ view shall remain clearly identified as a deterministic fictional
+  teaching model.
+
+### User-selected Plane assets
+
+- The Plane view may load glTF 2.0 JSON (`.gltf`) or binary (`.glb`) models from
+  a supported mesh/material/texture subset.
+- External buffer and image paths shall be relative regular files canonically
+  contained below the selected model directory. Absolute paths, traversal,
+  query/fragment syntax, NULs, and symlinks are rejected.
+- Resource accounting shall be transactional and apply the exact CPU/GPU
+  budgets documented in the [threat model](docs/THREAT_MODEL.md). A failed load
+  shall retain the previously active model.
+
+## Architecture and lifecycle requirements
+
+Source dependencies shall point inward:
+
+```text
+viewer/presentation -> application -> domain
+infrastructure ------> application -> domain
+tools/map_asset --------------------> map-format boundary
+```
+
+The direct and threaded runtimes shall implement the same command acceptance
+and typed completion protocol. Threaded-runtime public operations are confined
+to the runtime affinity thread. Shutdown shall synchronously stop workers, move
+their QObject trees back to the runtime thread, join all worker threads, and
+destroy the workers explicitly; worker lifetime shall not depend on deferred
+deletion after a thread event loop exits.
+
+Untrusted parsers shall validate the complete candidate before publishing it.
+Mutable recording and persistence operations shall be transactional. Resource
+limits belong beside the relevant parser or rendering boundary and require
+adversarial tests.
+
+## Dependency and packaging requirements
+
+- Build requirements are CMake 3.24+, C++17, and Qt 6.10.3 or newer with Core,
+  Concurrent, Gui, Network, Widgets, OpenGL, OpenGLWidgets, and Test as used by
+  the configured targets.
+- Release CI is pinned to Qt 6.11.2. Changing that pin requires strict,
+  sanitizer, GPU, installation, and dependency-scan evidence.
+- The installed SPDX 2.3 SBOM shall identify the application, each directly
+  used Qt module, the platform plugin, PNG/JPEG image handlers, and the C++
+  runtime, including exact versions, package URLs where defined, and dependency
+  relationships.
+- Only the PNG and JPEG image formats required by the glTF contract may be
+  selected for user model textures.
+
+## Security and operational constraints
+
+The application does not authenticate UDP telemetry or cryptographically sign
+session files. A source whitelist is routing policy, not identity proof. Use an
+authenticated tunnel or isolated trusted network when telemetry integrity
+matters, and treat `.lar`, mapping, glTF, map, terrain, and image data as
+untrusted inputs. See the [threat model](docs/THREAT_MODEL.md) for assets,
+boundaries, abuse cases, mitigations, residual risks, and release review rules.
+
+## Acceptance criteria
+
+A release candidate is acceptable only when:
+
+1. GCC, Clang, and AppleClang jobs configured for the release compile with
+   warnings-as-errors and strict conversion diagnostics.
+2. Deterministic tests, architecture checks, documentation semantic/link/API
+   gates, ASan/UBSan, TSan contracts, native GPU accuracy tests, installation
+   smoke, and the SPDX dependency scan pass as specified in
+   [Quality gates](docs/QUALITY_GATES.md).
+3. Parser resource limits, session paging, runtime teardown, and extreme-zoom
+   fallback retain explicit regression tests.
+4. Known residual risks are documented here or in the threat model and are not
+   contradicted by the UI or deployment guidance.
+

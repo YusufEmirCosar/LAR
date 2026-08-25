@@ -1,0 +1,15 @@
+<map id="ViewportPreparationWorker" name="ViewportPreparationWorker">
+<area shape="rect" id="Node000001" title="Builds CPU fallback meshes away from QWidget and GUI event handling." alt="" coords="244,199,423,224"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,102,75,128"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,129,297,196,294,200,89,135"/>
+<area shape="rect" id="Node000003" href="$struct_viewport_preparation_request.html" title="Immutable request consumed by the dedicated viewport thread." alt="" coords="98,102,286,128"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,134,278,172,317,199,311,198,276,177,221,139"/>
+<area shape="rect" id="Node000004" href="$struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters." alt="" coords="99,5,157,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="146,42,186,101,181,102,144,47"/>
+<area shape="rect" id="Node000005" href="$classlar_1_1map_1_1_map_camera.html" title="Stores camera state and performs projection, pan, zoom, and picking." alt="" coords="181,5,328,31"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="240,42,202,103,198,100,236,46"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="309,102,462,128"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="374,140,342,200,338,196,369,143"/>
+<area shape="rect" id="Node000007" href="$class_lar_zone_mesh_builder.html" title="Converts validated LAR parameters into clipped render geometry." alt="" coords="486,102,626,128"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="536,137,510,160,481,177,446,191,410,201,409,195,445,186,479,172,507,155,531,139"/>
+</map>

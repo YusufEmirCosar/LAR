@@ -1,0 +1,5 @@
+<map id="EarthLarView::isMapLoaded" name="EarthLarView::isMapLoaded">
+<area shape="rect" id="Node000001" title="Notifies observers about is map loaded." alt="" coords="5,13,190,38"/>
+<area shape="rect" id="Node000002" href="$class_earth_map_load_controller.html#a4d55b3f08207d762bee6edc564366475" title="Reports whether is loaded is true." alt="" coords="238,5,399,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,23,225,25,219,26,190,28"/>
+</map>

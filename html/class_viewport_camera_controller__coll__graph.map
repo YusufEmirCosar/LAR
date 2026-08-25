@@ -1,0 +1,11 @@
+<map id="ViewportCameraController" name="ViewportCameraController">
+<area shape="rect" id="Node000001" title="Selects stable plane/target anchors from the available state fields." alt="" coords="33,199,208,224"/>
+<area shape="rect" id="Node000002" href="$struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft." alt="" coords="5,102,60,128"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="41,140,60,173,75,186,94,198,88,199,72,190,56,176,39,145"/>
+<area shape="rect" id="Node000003" href="$struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters." alt="" coords="92,102,149,128"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="123,141,123,199,118,197,118,145"/>
+<area shape="rect" id="Node000004" href="$struct_viewport_camera_state.html" title="Renderer&#45;neutral camera anchor and bearing snapshot." alt="" coords="174,102,323,128"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="229,138,186,177,146,201,144,196,183,173,224,140"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="172,5,325,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="250,44,251,102,246,100,247,48"/>
+</map>

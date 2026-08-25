@@ -1,0 +1,25 @@
+<map id="IApplicationRuntime::recordingStateChanged" name="IApplicationRuntime::recordingStateChanged">
+<area shape="rect" id="Node000001" title="Notifies observers about recording state changed." alt="" coords="475,235,640,275"/>
+<area shape="rect" id="Node000002" href="$class_application_facade.html#acc84de76e45ecc6539751a18ab2ab19d" title="Creates the main&#45;thread application facade." alt="" coords="261,72,397,113"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="513,226,359,116,360,111,518,225"/>
+<area shape="rect" id="Node000004" href="$class_direct_application_runtime.html#a19ee8db2836b58824708a362a72fbda1" title="Performs the publish recording state operation." alt="" coords="244,235,414,275"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="457,256,415,258,413,252,462,254"/>
+<area shape="rect" id="Node000012" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="231,300,427,341"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="467,281,404,302,402,297,472,279"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#a32410f883b62e33c853d2f6996cf8685" title="Creates the application facade with IP access&#45;policy file support." alt="" coords="26,5,162,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="243,70,164,48,162,42,248,67"/>
+<area shape="rect" id="Node000005" href="$class_direct_application_runtime.html#af7dfb47a5a42b53c0a26e62c480d9362" title="Constructs this object." alt="" coords="5,71,183,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="296,224,246,175,181,127,159,115,158,109,184,122,249,171,301,223"/>
+<area shape="rect" id="Node000006" href="$class_direct_application_runtime.html#af389f3329701a1e9a0dc615e1cf6f4f6" title="Returns the current discard recording." alt="" coords="9,136,179,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="267,229,182,192,152,180,151,175,184,187,272,227"/>
+<area shape="rect" id="Node000007" href="$class_direct_application_runtime.html#a0a1133b6c3a5c4db37757cac568a10a9" title="Returns the current pause recording." alt="" coords="9,201,179,242"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="226,242,180,236,178,231,231,240"/>
+<area shape="rect" id="Node000008" href="$class_direct_application_runtime.html#a2647f59807f6e7f289c098338260eb1e" title="Returns the current reset recording." alt="" coords="9,267,179,307"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="226,270,180,278,178,273,231,267"/>
+<area shape="rect" id="Node000009" href="$class_direct_application_runtime.html#a49c1e4acd34c5a54c0f1454c306010b9" title="Returns the current resume recording." alt="" coords="9,332,179,373"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="244,283,232,291,208,306,184,321,157,334,154,329,181,317,205,301,229,286,248,280"/>
+<area shape="rect" id="Node000010" href="$class_direct_application_runtime.html#a104614f54065ed6ac6ef3fb52c8db875" title="Performs the start recording operation." alt="" coords="9,397,179,438"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="234,286,233,290,215,313,209,337,202,361,185,386,166,399,163,395,181,382,198,359,204,335,211,311,229,286,238,282"/>
+<area shape="rect" id="Node000011" href="$class_direct_application_runtime.html#ab1947fbce095c7e2578a91d60b62bd2e" title="Performs the stop recording operation." alt="" coords="9,463,179,503"/>
+<area shape="poly" id="edge10_Node000004_Node000011" title=" " alt="" coords="236,283,233,290,218,310,211,329,209,369,207,409,200,430,185,451,169,464,166,460,181,448,195,428,202,408,204,369,206,328,213,307,229,287,232,287"/>
+</map>

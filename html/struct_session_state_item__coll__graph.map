@@ -1,0 +1,13 @@
+<map id="SessionStateItem" name="SessionStateItem">
+<area shape="rect" id="Node000001" title="One decoded session record and its relative timestamp." alt="" coords="120,199,246,224"/>
+<area shape="rect" id="Node000002" href="$struct_decoded_state.html" title="One validated mapped frame and its field&#45;availability mask." alt="" coords="60,102,165,128"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,138,177,198,171,198,129,142"/>
+<area shape="rect" id="Node000003" href="$struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft." alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="45,42,70,76,97,101,92,102,66,80,45,48"/>
+<area shape="rect" id="Node000004" href="$struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters." alt="" coords="84,5,141,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="114,44,115,102,110,101,111,49"/>
+<area shape="rect" id="Node000005" href="$structdlz_1_1_telemetry_inputs.html" title="The three packet/replay inputs consumed by the DLZ workspace." alt="" coords="166,5,305,31"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="205,43,161,80,130,103,127,99,158,76,209,39"/>
+<area shape="rect" id="Node000006" href="$class_session_timestamp.html" title="Exact, bounded, non&#45;negative session&#45;relative time in milliseconds." alt="" coords="188,102,322,128"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="239,139,194,200,191,196,234,141"/>
+</map>

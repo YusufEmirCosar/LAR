@@ -1,0 +1,16 @@
+<map id="ApplicationFacade::play" name="ApplicationFacade::play">
+<area shape="rect" id="Node000001" title="Starts or resumes offline playback." alt="" coords="883,79,1043,104"/>
+<area shape="rect" id="Node000002" href="$class_offline_panel.html#ae7d8cf55ec83f71fca8d8ccd47b4aeae" title="Constructs this object." alt="" coords="663,79,835,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="864,92,835,94,835,89,870,91"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a0531fa9a3d2a53bacd3923ea4d4cef5a" title="Builds sidebar." alt="" coords="440,79,615,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="645,92,616,94,616,89,651,91"/>
+<area shape="rect" id="Node000004" href="$class_main_window.html#ad0b383c67dd28a5a887d91d581ff175c" title="Initializes the current operation." alt="" coords="241,53,392,79"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="422,79,392,78,392,73,427,79"/>
+<area shape="rect" id="Node000007" href="$class_main_window.html#a1f7d2c56410fc1bfa135bb907d43313f" title="Returns the current main window." alt="" coords="5,104,193,130"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="424,100,193,114,193,109,425,95"/>
+<area shape="rect" id="Node000005" href="$class_main_window.html#a06a83ed89605f080686d28119228d695" title="Constructs this object." alt="" coords="9,5,189,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="237,50,161,34,161,29,242,48"/>
+<area shape="rect" id="Node000006" href="$class_main_window.html#a8d8ba8d3381c75661f34865d3d30ef07" title="Constructs this object." alt="" coords="9,55,189,80"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="223,67,189,70,189,64,228,66"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="246,83,158,106,157,101,241,84"/>
+</map>

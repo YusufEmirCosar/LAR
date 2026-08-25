@@ -1,0 +1,38 @@
+<map id="PlaneTerrainWorker::processLatest" name="PlaneTerrainWorker::processLatest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,136,140,177"/>
+<area shape="rect" id="Node000002" href="$class_plane_terrain_patch_builder.html#ae255d8ff063838ad44e241f3cc826c69" title="Samples and triangulates one request, returning null when local terrain is absent." alt="" coords="188,71,355,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,133,195,115,191,119,138,138"/>
+<area shape="rect" id="Node000025" href="$class_plane_terrain_worker.html#aec2b27fc3e44e3c210ce7cca8aa4581c" title=" " alt="" coords="204,136,338,177"/>
+<area shape="poly" id="edge18_Node000001_Node000025" title=" " alt="" coords="139,162,191,164,186,167,141,167"/>
+<area shape="rect" id="Node000003" href="$class_lar_geodesic_geometry.html#ab0e974e1e3b2af5df57bf159a357b143" title="Performs the destination operation." alt="" coords="406,5,557,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="338,68,401,50,397,53,340,73"/>
+<area shape="rect" id="Node000005" href="$class_dted_mosaic_sampler.html#aa772d2e928fe4a6f100a9b10bd629507" title=" " alt="" coords="408,71,555,111"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="354,88,394,90,389,92,356,94"/>
+<area shape="rect" id="Node000006" href="$class_dted_mosaic_sampler.html#a183de02a1c9073c02648bc71022ba406" title="Samples a sea&#45;level water surface while retaining source depth for coloring." alt="" coords="403,136,559,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="339,109,402,130,396,132,339,115"/>
+<area shape="rect" id="Node000004" href="$class_lar_geodesic_geometry.html#ae3ba4dbef8641441c270e58e3363dba5" title="Performs the wrap longitude operation." alt="" coords="607,5,759,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="557,23,595,25,590,26,558,28"/>
+<area shape="rect" id="Node000007" href="$class_dted_mosaic_sampler.html#a979486212673f318cd0c4502b79d5343" title=" " alt="" coords="609,71,757,111"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="545,133,606,116,601,118,547,138"/>
+<area shape="rect" id="Node000012" href="$class_dted_mosaic_sampler.html#a6846daac445cde1ec6c433644309a5bd" title=" " alt="" coords="609,136,757,177"/>
+<area shape="poly" id="edge9_Node000006_Node000012" title=" " alt="" coords="559,154,596,156,591,157,560,159"/>
+<area shape="rect" id="Node000021" href="$class_dted_mosaic_sampler.html#a40027ca52e95cc5b753e0abe1527884a" title=" " alt="" coords="609,269,757,310"/>
+<area shape="poly" id="edge13_Node000006_Node000021" title=" " alt="" coords="514,175,641,260,636,261,513,180"/>
+<area shape="rect" id="Node000008" href="$struct_dted_cell.html#a8ec96e10bbea9712838e31faa44fe41f" title="Returns one decoded elevation in metres, excluding the DTED no&#45;data sentinel." alt="" coords="844,21,976,46"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="756,69,806,56,842,50,837,52,807,62,758,74"/>
+<area shape="rect" id="Node000010" href="$struct_dted_water_mask_cell.html#ad18245b3fba51cc7be45dafdcaaaba9c" title="Returns a post classification, or no value for invalid coordinates/data." alt="" coords="837,71,984,111"/>
+<area shape="poly" id="edge8_Node000007_Node000010" title=" " alt="" coords="757,88,824,90,819,92,758,94"/>
+<area shape="rect" id="Node000013" href="$class_dted_mosaic_sampler.html#a44929b88aa05b416734a507b31424551" title=" " alt="" coords="837,136,984,177"/>
+<area shape="poly" id="edge10_Node000012_Node000013" title=" " alt="" coords="757,154,824,156,818,157,758,159"/>
+<area shape="rect" id="Node000019" href="$class_dted_tile_source.html#a0fdda0cc9f7560a9fbf5f48b25dddd2c" title=" " alt="" coords="807,201,1014,226"/>
+<area shape="poly" id="edge12_Node000012_Node000019" title=" " alt="" coords="757,173,807,186,842,197,837,197,806,191,757,178"/>
+<area shape="rect" id="Node000014" href="$class_dted_mosaic_sampler.html#af5cecb3e8f506952cd45ba9a3ce00de3" title=" " alt="" coords="1066,227,1214,267"/>
+<area shape="poly" id="edge11_Node000013_Node000014" title=" " alt="" coords="983,175,1015,186,1087,220,1082,219,1013,191,983,180"/>
+<area shape="poly" id="edge14_Node000021_Node000014" title=" " alt="" coords="757,280,1054,255,1049,256,757,286"/>
+<area shape="rect" id="Node000022" href="$class_dted_water_mask_source.html#a665cf609ebaa3d8106a50ca382565bae" title=" " alt="" coords="1062,313,1218,354"/>
+<area shape="poly" id="edge15_Node000021_Node000022" title=" " alt="" coords="757,294,1049,325,1044,325,757,299"/>
+<area shape="rect" id="Node000023" href="$class_dted_water_mask_source.html#ac07551ceb7c152fb0ddfc05a20608537" title="Loads and verifies one cell whose dimensions must match its DTED cell." alt="" coords="832,352,988,393"/>
+<area shape="poly" id="edge16_Node000021_Node000023" title=" " alt="" coords="741,308,840,346,835,346,741,313"/>
+<area shape="poly" id="edge17_Node000023_Node000022" title=" " alt="" coords="988,357,1044,350,1050,349,989,362"/>
+<area shape="poly" id="edge19_Node000025_Node000001" title=" " alt="" coords="201,149,156,150,154,145,206,146"/>
+</map>

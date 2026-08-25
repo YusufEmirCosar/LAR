@@ -1,0 +1,5 @@
+<map id="TestSenderScenarios::anonymous_namespace{scenarios.cpp}::DlzScenarioDefinition" name="TestSenderScenarios::anonymous_namespace{scenarios.cpp}::DlzScenarioDefinition">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,122,195,193"/>
+<area shape="rect" id="Node000002" href="$structdlz_1_1_telemetry_inputs.html" title="The three packet/replay inputs consumed by the DLZ workspace." alt="" coords="30,5,170,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,45,103,122,97,121,98,49"/>
+</map>

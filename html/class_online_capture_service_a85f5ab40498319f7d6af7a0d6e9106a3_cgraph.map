@@ -1,0 +1,7 @@
+<map id="OnlineCaptureService::setMapping" name="OnlineCaptureService::setMapping">
+<area shape="rect" id="Node000001" title="Sets mapping." alt="" coords="5,35,154,75"/>
+<area shape="rect" id="Node000002" href="$class_online_capture_service.html#a54aad4455ac5f90670c88775c77f10d9" title="Returns the current mapping." alt="" coords="223,5,371,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,42,210,37,205,38,155,48"/>
+<area shape="rect" id="Node000003" href="$class_i_packet_decoder.html#aaa81cc7fc83d8da4f3390aeae366e0fd" title="Atomically replaces the immutable mapping used by later decode calls." alt="" coords="202,70,392,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,62,189,69,184,69,154,67"/>
+</map>

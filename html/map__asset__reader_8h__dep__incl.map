@@ -1,0 +1,30 @@
+<map id="src/viewer/map/map_asset_reader.h" name="src/viewer/map/map_asset_reader.h">
+<area shape="rect" id="Node000001" title="Bounded, integrity&#45;checking parser for packaged .larmap bytes." alt="" coords="679,5,818,46"/>
+<area shape="rect" id="Node000002" href="$map__asset__reader_8cpp.html" title=" " alt="" coords="515,94,654,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="700,52,623,96,620,91,695,55"/>
+<area shape="rect" id="Node000003" href="$map__asset__source_8h.html" title="Source port for loading an immutable compiled world&#45;map mesh." alt="" coords="679,94,818,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="750,59,751,95,746,92,747,64"/>
+<area shape="rect" id="Node000006" href="$packaged__map__asset__source_8cpp.html" title=" " alt="" coords="887,271,1058,312"/>
+<area shape="poly" id="edge15_Node000001_Node000006" title=" " alt="" coords="800,51,839,75,879,105,917,140,949,181,961,204,968,228,974,272,970,269,963,229,956,206,945,184,913,144,875,109,836,79,800,57"/>
+<area shape="rect" id="Node000004" href="$packaged__map__asset__source_8h.html" title="Loader for the compiled map and manifest beside an executable." alt="" coords="765,183,935,223"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="784,142,830,183,824,182,782,148"/>
+<area shape="rect" id="Node000007" href="$earth__lar__view_8h.html" title="Mercator/sphere LAR page combining map, zones, and marker overlays." alt="" coords="436,271,570,312"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="661,140,587,166,543,185,528,204,518,228,507,273,503,269,513,226,524,202,540,181,586,161,666,138"/>
+<area shape="rect" id="Node000012" href="$earth__map__load__controller_8h.html" title="Revision&#45;safe asynchronous lifecycle for packaged map loading." alt="" coords="554,183,741,223"/>
+<area shape="poly" id="edge12_Node000003_Node000012" title=" " alt="" coords="716,144,671,185,669,180,712,146"/>
+<area shape="rect" id="Node000005" href="$mainwindow_8cpp.html" title=" " alt="" coords="765,368,945,393"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="853,237,857,368,853,365,849,241"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="891,230,947,271,942,270,889,235"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="586,310,808,367,803,367,585,316"/>
+<area shape="rect" id="Node000008" href="$earth__lar__view_8cpp.html" title=" " alt="" coords="5,360,140,401"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="421,310,152,363,141,365,140,360,151,357,420,305"/>
+<area shape="rect" id="Node000009" href="$earth__lar__view__interaction_8cpp.html" title=" " alt="" coords="164,360,365,401"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="437,317,320,362,318,357,432,318"/>
+<area shape="rect" id="Node000010" href="$earth__lar__view__rendering_8cpp.html" title=" " alt="" coords="389,360,583,401"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="498,326,492,361,488,358,494,329"/>
+<area shape="rect" id="Node000011" href="$lar__viewport_8cpp.html" title=" " alt="" coords="607,360,741,401"/>
+<area shape="poly" id="edge11_Node000007_Node000011" title=" " alt="" coords="556,317,638,360,633,359,555,322"/>
+<area shape="poly" id="edge13_Node000012_Node000007" title=" " alt="" coords="604,231,537,273,535,268,599,232"/>
+<area shape="rect" id="Node000013" href="$earth__map__load__controller_8cpp.html" title=" " alt="" coords="594,271,796,312"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="667,235,687,272,682,270,664,239"/>
+</map>

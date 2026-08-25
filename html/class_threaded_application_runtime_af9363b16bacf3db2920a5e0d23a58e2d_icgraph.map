@@ -1,0 +1,7 @@
+<map id="ThreadedApplicationRuntime::recordingResetRequested" name="ThreadedApplicationRuntime::recordingResetRequested">
+<area shape="rect" id="Node000001" title="Notifies observers about recording reset requested." alt="" coords="250,39,438,79"/>
+<area shape="rect" id="Node000002" href="$class_threaded_application_runtime.html#a05835e8cc7ec2794973c56fc165e8b97" title="Returns the current reset recording." alt="" coords="9,5,198,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,44,198,41,198,36,237,43"/>
+<area shape="rect" id="Node000003" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,71,202,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,74,203,81,202,75,237,73"/>
+</map>

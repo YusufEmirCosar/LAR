@@ -1,0 +1,7 @@
+<map id="OnlineStopResult" name="OnlineStopResult">
+<area shape="rect" id="Node000001" title="Completion payload for deactivation of an online source epoch." alt="" coords="90,102,214,128"/>
+<area shape="rect" id="Node000002" href="$struct_runtime_request_id.html" title="Correlates an accepted command with exactly one typed completion." alt="" coords="5,5,136,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,41,144,101,139,102,90,45"/>
+<area shape="rect" id="Node000003" href="$struct_runtime_source_epoch.html" title="Identifies one activation generation of an online or playback source." alt="" coords="160,5,309,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,42,164,103,161,99,212,43"/>
+</map>

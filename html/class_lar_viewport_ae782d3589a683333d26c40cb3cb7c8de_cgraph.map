@@ -1,0 +1,15 @@
+<map id="LarViewport::clearState" name="LarViewport::clearState">
+<area shape="rect" id="Node000001" title="Documents the clear state operation." alt="" coords="5,87,163,112"/>
+<area shape="rect" id="Node000002" href="$class_i_lar_viewport_page.html#a603f882a5b662c86d67474ccfe37bfd8" title="Performs the clear scene operation." alt="" coords="211,29,408,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,84,243,58,239,61,139,89"/>
+<area shape="rect" id="Node000003" href="$class_viewport_camera_controller.html#a54aa83b5b7e7a5a0427106c60e752864" title="Performs the clear scene operation." alt="" coords="222,79,396,120"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="163,97,209,98,204,101,164,102"/>
+<area shape="rect" id="Node000004" href="$class_lar_viewport.html#a807c3e87a98fe3f06bf1f0a6c33b15eb" title="Documents the distribute camera state operation." alt="" coords="211,144,408,185"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="131,110,224,138,220,141,131,116"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="271,29,265,21,269,11,284,5,309,3,337,5,352,14,347,15,335,10,309,8,285,10,273,15,270,20,277,29"/>
+<area shape="rect" id="Node000005" href="$class_i_lar_viewport_page.html#a4a83609a08e6e23898c3e592421a11b5" title="Sets camera state." alt="" coords="456,111,652,152"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="408,149,443,147,438,147,409,154"/>
+<area shape="rect" id="Node000006" href="$class_viewport_camera_controller.html#a1ae2d70894db28fff6474920cdbd7d65" title="Returns the current state." alt="" coords="467,176,641,217"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="409,175,454,183,449,183,408,180"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="508,109,506,101,513,92,530,87,554,85,581,87,598,96,593,95,579,92,554,90,531,92,516,97,511,102,513,112"/>
+</map>

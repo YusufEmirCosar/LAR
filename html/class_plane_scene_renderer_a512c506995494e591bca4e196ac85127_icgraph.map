@@ -1,0 +1,23 @@
+<map id="PlaneSceneRenderer::cleanup" name="PlaneSceneRenderer::cleanup">
+<area shape="rect" id="Node000001" title="Cleanups the current operation." alt="" coords="974,63,1118,103"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#aa2797584070abe9d61581f39f3983e4b" title="Performs the cleanup gl operation." alt="" coords="723,13,926,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="956,60,925,54,879,42,879,36,926,48,962,60"/>
+<area shape="rect" id="Node000013" href="$class_plane_scene_renderer.html#ad16b6570f8c335cb73f8eab20eab1095" title="Initializes the current operation." alt="" coords="752,63,897,103"/>
+<area shape="poly" id="edge9_Node000001_Node000013" title=" " alt="" coords="956,83,897,86,897,80,961,83"/>
+<area shape="rect" id="Node000014" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title="Performs the operator= operation." alt="" coords="501,120,645,161"/>
+<area shape="poly" id="edge12_Node000001_Node000014" title=" " alt="" coords="964,107,926,118,777,135,646,142,646,137,776,130,925,112,958,108"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#aa6cccb6ef7357cd1ef6c3760d183c15d" title="Performs the initialize gl operation." alt="" coords="471,70,675,96"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="753,42,633,72,632,67,747,43"/>
+<area shape="rect" id="Node000012" href="$class_plane_scene_widget.html#ad5163938936197437fa5dc7ab058bdc1" title="Returns the current plane scene widget." alt="" coords="503,5,643,46"/>
+<area shape="poly" id="edge8_Node000002_Node000012" title=" " alt="" coords="705,26,644,28,643,23,710,25"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#a4af14d7382c36b30361f6903425d2d57" title="Notifies tests and controls when terrain preparation changes readiness." alt="" coords="247,63,423,103"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="453,83,424,86,423,80,458,83"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#abe802663afdff5d56c7bba1c6b07dc1c" title=" " alt="" coords="5,29,199,70"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="229,78,188,73,188,68,234,77"/>
+<area shape="rect" id="Node000008" href="$class_plane_scene_widget.html#ae2f382ca1fbf358e3801503ca8a607e8" title=" " alt="" coords="10,95,194,135"/>
+<area shape="poly" id="edge6_Node000004_Node000008" title=" " alt="" coords="229,107,195,114,194,109,234,106"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="214,54,252,62,246,63,214,59"/>
+<area shape="poly" id="edge7_Node000008_Node000004" title=" " alt="" coords="206,89,249,86,244,87,207,94"/>
+<area shape="poly" id="edge10_Node000013_Node000003" title=" " alt="" coords="734,83,676,86,676,80,740,83"/>
+<area shape="poly" id="edge11_Node000013_Node000014" title=" " alt="" coords="740,103,646,127,645,121,734,103"/>
+</map>

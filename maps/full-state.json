@@ -1,0 +1,23 @@
+[
+  {"name": "location", "index": 1, "offset": 0, "size": 8},
+  {"name": "location", "index": 0, "offset": 8, "size": 8},
+  {"name": "iz_pos", "index": 0, "offset": 16, "size": 8},
+  {"name": "iz_r1", "index": 0, "offset": 24, "size": 8},
+  {"name": "euler", "index": 0, "offset": 32, "size": 8},
+  {"name": "ir_pos", "index": 1, "offset": 40, "size": 8},
+  {"name": "iz_theta2", "index": 0, "offset": 48, "size": 8},
+  {"name": "velocity", "index": 2, "offset": 56, "size": 8},
+  {"name": "iz_pos", "index": 1, "offset": 64, "size": 8},
+  {"name": "location", "index": 2, "offset": 72, "size": 8},
+  {"name": "ir_r", "index": 0, "offset": 80, "size": 8},
+  {"name": "euler", "index": 2, "offset": 88, "size": 8},
+  {"name": "ir_pos", "index": 0, "offset": 96, "size": 8},
+  {"name": "velocity", "index": 0, "offset": 104, "size": 8},
+  {"name": "iz_r2", "index": 0, "offset": 112, "size": 8},
+  {"name": "iz_pos", "index": 2, "offset": 120, "size": 8},
+  {"name": "euler", "index": 1, "offset": 128, "size": 8},
+  {"name": "time", "index": 0, "offset": 136, "size": 8},
+  {"name": "velocity", "index": 1, "offset": 144, "size": 8},
+  {"name": "iz_theta1", "index": 0, "offset": 152, "size": 8},
+  {"name": "ir_pos", "index": 2, "offset": 160, "size": 8}
+]

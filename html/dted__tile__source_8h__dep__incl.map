@@ -1,0 +1,19 @@
+<map id="src/viewer/terrain/dted_tile_source.h" name="src/viewer/terrain/dted_tile_source.h">
+<area shape="rect" id="Node000001" title="Deterministic DTED0 tile addressing without scanning the source tree." alt="" coords="302,5,433,46"/>
+<area shape="rect" id="Node000002" href="$dted__mosaic__sampler_8h.html" title="Bilinear DTED0 surface sampler with bounded terrain and water&#45;mask caches." alt="" coords="198,94,361,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="335,59,301,95,298,92,339,55"/>
+<area shape="rect" id="Node000009" href="$dted__tile__source_8cpp.html" title=" " alt="" coords="384,94,530,135"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="399,54,439,93,434,94,398,60"/>
+<area shape="rect" id="Node000003" href="$plane__terrain__patch__builder_8h.html" title="Bounded DTED0 sampling and indexed local terrain&#45;mesh construction." alt="" coords="104,183,263,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="244,147,207,184,203,180,248,143"/>
+<area shape="rect" id="Node000008" href="$dted__mosaic__sampler_8cpp.html" title=" " alt="" coords="287,183,464,223"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="313,143,356,182,351,182,312,148"/>
+<area shape="rect" id="Node000004" href="$plane__terrain__patch__builder_8cpp.html" title=" " alt="" coords="5,271,178,312"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="150,236,114,273,110,269,153,232"/>
+<area shape="rect" id="Node000005" href="$plane__terrain__worker_8h.html" title="Latest&#45;only dedicated CPU worker for DTED terrain patch preparation." alt="" coords="201,271,352,312"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="216,231,258,271,253,271,215,237"/>
+<area shape="rect" id="Node000006" href="$plane__scene__widget__terrain_8cpp.html" title="DTED worker lifecycle, patch recentering, and aircraft&#45;relative placement." alt="" coords="94,360,270,401"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="247,322,205,362,202,357,242,324"/>
+<area shape="rect" id="Node000007" href="$plane__terrain__worker_8cpp.html" title=" " alt="" coords="294,360,446,401"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="310,320,352,360,346,359,308,325"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="src/infrastructure/session/file_session_snapshot.h" name="src/infrastructure/session/file_session_snapshot.h">
+<area shape="rect" id="Node000001" title="Immutable file&#45;backed recording snapshot implementation." alt="" coords="192,5,336,61"/>
+<area shape="rect" id="Node000002" href="$session__snapshot_8h.html" title="Type&#45;erased immutable snapshot shared with persistence workers." alt="" coords="62,109,227,150"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,60,183,101,179,97,227,63"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="225,198,290,223"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="265,60,261,183,256,181,261,63"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="302,116,354,142"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="284,59,314,104,309,103,282,64"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,198,94,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="123,149,77,190,74,185,118,151"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="173,148,231,188,225,189,171,153"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="118,198,186,223"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="148,148,152,183,147,181,144,152"/>
+</map>

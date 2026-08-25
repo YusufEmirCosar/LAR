@@ -1,0 +1,7 @@
+<map id="RecordingService::timestampFor" name="RecordingService::timestampFor">
+<area shape="rect" id="Node000001" title="Documents the timestamp for operation." alt="" coords="5,13,218,38"/>
+<area shape="rect" id="Node000002" href="$class_session_timestamp.html#a59bee783a1170ffe8f4e7d323ef5d477" title="Converts monotonic nanoseconds using nearest&#45;millisecond rounding." alt="" coords="266,13,513,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,23,253,26,247,26,218,28"/>
+<area shape="rect" id="Node000003" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="561,5,749,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="513,23,548,26,543,26,513,28"/>
+</map>

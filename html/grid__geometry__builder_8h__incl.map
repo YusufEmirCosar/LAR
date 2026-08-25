@@ -1,0 +1,9 @@
+<map id="src/viewer/grid_geometry_builder.h" name="src/viewer/grid_geometry_builder.h">
+<area shape="rect" id="Node000001" title="Adaptive grid spacing, line geometry, and distance&#45;label helpers." alt="" coords="52,5,220,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,78,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,46,69,86,66,82,110,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="102,94,171,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,44,139,80,134,77,134,48"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="196,94,261,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="160,44,205,83,200,84,158,49"/>
+</map>

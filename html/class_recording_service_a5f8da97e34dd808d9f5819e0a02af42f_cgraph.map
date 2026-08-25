@@ -1,0 +1,15 @@
+<map id="RecordingService::setState" name="RecordingService::setState">
+<area shape="rect" id="Node000001" title="Sets state." alt="" coords="5,91,187,117"/>
+<area shape="rect" id="Node000002" href="$class_recording_service.html#a26fbbe76f509ced7c5d86231d2cbdfc3" title="Reports whether paused is true." alt="" coords="476,35,662,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,89,163,50,197,31,234,16,270,8,308,4,382,5,452,15,513,30,507,31,451,20,382,11,308,10,271,13,235,21,199,35,165,55,114,93"/>
+<area shape="rect" id="Node000003" href="$class_recording_service.html#a9e5faab16b85d3ddc1c95f67cc72d642" title="Reports whether recording is true." alt="" coords="468,89,669,114"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,103,235,104,420,104,455,106,450,106,420,109,235,109,188,109"/>
+<area shape="rect" id="Node000004" href="$class_recording_service.html#ad78c4b9e8ae3320196e181369a6123ea" title="Notifies observers about recording state changed." alt="" coords="235,54,420,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,90,222,87,217,90,188,95"/>
+<area shape="rect" id="Node000005" href="$class_recording_service.html#ac724bb3c7302c41ba74c9b686e8c1641" title="Returns the current state." alt="" coords="247,194,408,220"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="128,115,284,185,280,189,127,120"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="420,62,462,59,457,61,421,67"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="420,82,455,88,450,89,421,88"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="284,53,282,44,289,35,304,30,327,28,352,30,369,39,363,39,351,35,327,33,305,35,292,40,287,46,289,55"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="289,193,281,185,286,175,302,169,327,167,356,170,371,180,366,179,354,175,327,173,303,175,290,179,287,185,294,194"/>
+</map>

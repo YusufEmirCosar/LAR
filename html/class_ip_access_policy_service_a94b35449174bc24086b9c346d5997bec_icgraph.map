@@ -1,0 +1,11 @@
+<map id="IpAccessPolicyService::load" name="IpAccessPolicyService::load">
+<area shape="rect" id="Node000001" title="Documents the load operation." alt="" coords="847,5,1003,46"/>
+<area shape="rect" id="Node000002" href="$class_application_facade.html#a49e7d78b35420d6ceb0cc678b915070b" title="Loads an IP access policy from a file and submits it for installation." alt="" coords="662,5,799,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="828,26,799,28,799,23,834,26"/>
+<area shape="rect" id="Node000003" href="$class_online_workflow_controller.html#ada3a5443fb8f57a792731b415b5cce15" title="Performs the request whitelist operation." alt="" coords="446,5,614,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="644,26,615,28,615,23,649,26"/>
+<area shape="rect" id="Node000004" href="$class_online_panel.html#a718a7f2c79b67e00d58efdbeedbd3ad8" title="Constructs this object." alt="" coords="229,13,398,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="427,26,399,28,399,23,433,26"/>
+<area shape="rect" id="Node000005" href="$class_main_window.html#a0531fa9a3d2a53bacd3923ea4d4cef5a" title="Builds sidebar." alt="" coords="5,13,181,38"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="211,26,181,28,181,23,216,25"/>
+</map>

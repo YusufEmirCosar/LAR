@@ -1,0 +1,175 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "DynamicLarSystem-@PROJECT_VERSION@",
+  "documentNamespace": "https://lar-area-display.invalid/spdx/@PROJECT_VERSION@/@CMAKE_SYSTEM_NAME@-@CMAKE_SYSTEM_PROCESSOR@",
+  "creationInfo": {
+    "created": "1970-01-01T00:00:00Z",
+    "creators": [
+      "Tool: CMake-@CMAKE_VERSION@",
+      "Organization: LAR Packet Monitor maintainers"
+    ],
+    "comment": "Reproducible configure-time inventory of linked runtime modules and the explicitly permitted Qt platform/image-handler surface. Release attestation may replace the timestamp and add deployed-file hashes."
+  },
+  "documentDescribes": ["SPDXRef-Package-LAR"],
+  "packages": [
+    {
+      "name": "DynamicLarSystem",
+      "SPDXID": "SPDXRef-Package-LAR",
+      "versionInfo": "@PROJECT_VERSION@",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [{"referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:generic/dynamic-lar-system@@PROJECT_VERSION@"}]
+    },
+    {
+      "name": "Qt6Core",
+      "SPDXID": "SPDXRef-Package-Qt6Core",
+      "versionInfo": "@Qt6_VERSION@",
+      "supplier": "Organization: The Qt Company",
+      "downloadLocation": "https://download.qt.io/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {"referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:generic/qt/qtbase@@Qt6_VERSION@?component=qt6core"},
+        {"referenceCategory": "SECURITY", "referenceType": "cpe23Type", "referenceLocator": "cpe:2.3:a:qt:qt:@Qt6_VERSION@:*:*:*:*:*:*:*"}
+      ]
+    },
+    {
+      "name": "Qt6Concurrent",
+      "SPDXID": "SPDXRef-Package-Qt6Concurrent",
+      "versionInfo": "@Qt6_VERSION@",
+      "supplier": "Organization: The Qt Company",
+      "downloadLocation": "https://download.qt.io/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [{"referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:generic/qt/qtbase@@Qt6_VERSION@?component=qt6concurrent"}]
+    },
+    {
+      "name": "Qt6Gui",
+      "SPDXID": "SPDXRef-Package-Qt6Gui",
+      "versionInfo": "@Qt6_VERSION@",
+      "supplier": "Organization: The Qt Company",
+      "downloadLocation": "https://download.qt.io/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [{"referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:generic/qt/qtbase@@Qt6_VERSION@?component=qt6gui"}]
+    },
+    {
+      "name": "Qt6Network",
+      "SPDXID": "SPDXRef-Package-Qt6Network",
+      "versionInfo": "@Qt6_VERSION@",
+      "supplier": "Organization: The Qt Company",
+      "downloadLocation": "https://download.qt.io/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [{"referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:generic/qt/qtbase@@Qt6_VERSION@?component=qt6network"}]
+    },
+    {
+      "name": "Qt6Widgets",
+      "SPDXID": "SPDXRef-Package-Qt6Widgets",
+      "versionInfo": "@Qt6_VERSION@",
+      "supplier": "Organization: The Qt Company",
+      "downloadLocation": "https://download.qt.io/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [{"referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:generic/qt/qtbase@@Qt6_VERSION@?component=qt6widgets"}]
+    },
+    {
+      "name": "Qt6OpenGL",
+      "SPDXID": "SPDXRef-Package-Qt6OpenGL",
+      "versionInfo": "@Qt6_VERSION@",
+      "supplier": "Organization: The Qt Company",
+      "downloadLocation": "https://download.qt.io/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [{"referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:generic/qt/qtbase@@Qt6_VERSION@?component=qt6opengl"}]
+    },
+    {
+      "name": "Qt6OpenGLWidgets",
+      "SPDXID": "SPDXRef-Package-Qt6OpenGLWidgets",
+      "versionInfo": "@Qt6_VERSION@",
+      "supplier": "Organization: The Qt Company",
+      "downloadLocation": "https://download.qt.io/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [{"referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:generic/qt/qtbase@@Qt6_VERSION@?component=qt6openglwidgets"}]
+    },
+    {
+      "name": "Qt6PlatformPlugin-@LAR_QT_PLATFORM_PLUGIN@",
+      "SPDXID": "SPDXRef-Package-Qt6PlatformPlugin",
+      "versionInfo": "@Qt6_VERSION@",
+      "supplier": "Organization: The Qt Company",
+      "downloadLocation": "https://download.qt.io/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [{"referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:generic/qt/qtbase@@Qt6_VERSION@?component=@LAR_QT_PLATFORM_PLUGIN@"}]
+    },
+    {
+      "name": "Qt6ImageHandler-png",
+      "SPDXID": "SPDXRef-Package-Qt6ImageHandlerPng",
+      "versionInfo": "@Qt6_VERSION@",
+      "supplier": "Organization: The Qt Company",
+      "downloadLocation": "https://download.qt.io/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [{"referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:generic/qt/qtbase@@Qt6_VERSION@?component=image-handler-png"}]
+    },
+    {
+      "name": "Qt6ImageHandler-jpeg",
+      "SPDXID": "SPDXRef-Package-Qt6ImageHandlerJpeg",
+      "versionInfo": "@Qt6_VERSION@",
+      "supplier": "Organization: The Qt Company",
+      "downloadLocation": "https://download.qt.io/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [{"referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:generic/qt/qtbase@@Qt6_VERSION@?component=image-handler-jpeg"}]
+    },
+    {
+      "name": "@CMAKE_CXX_COMPILER_ID@ C++ runtime",
+      "SPDXID": "SPDXRef-Package-CxxRuntime",
+      "versionInfo": "@CMAKE_CXX_COMPILER_VERSION@",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ],
+  "relationships": [
+    {"spdxElementId": "SPDXRef-Package-LAR", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-Qt6Core"},
+    {"spdxElementId": "SPDXRef-Package-LAR", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-Qt6Concurrent"},
+    {"spdxElementId": "SPDXRef-Package-LAR", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-Qt6Gui"},
+    {"spdxElementId": "SPDXRef-Package-LAR", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-Qt6Network"},
+    {"spdxElementId": "SPDXRef-Package-LAR", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-Qt6Widgets"},
+    {"spdxElementId": "SPDXRef-Package-LAR", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-Qt6OpenGL"},
+    {"spdxElementId": "SPDXRef-Package-LAR", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-Qt6OpenGLWidgets"},
+    {"spdxElementId": "SPDXRef-Package-LAR", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-Qt6PlatformPlugin"},
+    {"spdxElementId": "SPDXRef-Package-LAR", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-Qt6ImageHandlerPng"},
+    {"spdxElementId": "SPDXRef-Package-LAR", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-Qt6ImageHandlerJpeg"},
+    {"spdxElementId": "SPDXRef-Package-LAR", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-CxxRuntime"}
+  ]
+}

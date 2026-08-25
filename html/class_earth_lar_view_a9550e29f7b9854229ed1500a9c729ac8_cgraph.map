@@ -1,0 +1,7 @@
+<map id="EarthLarView::mousePressEvent" name="EarthLarView::mousePressEvent">
+<area shape="rect" id="Node000001" title="Performs the mouse press event operation." alt="" coords="5,39,186,79"/>
+<area shape="rect" id="Node000002" href="$class_earth_lar_view.html#a8746ff3cfe718a3c9cfcfaa64f7bf3b1" title="Notifies observers about free movement requested." alt="" coords="234,5,424,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,44,221,41,216,42,187,49"/>
+<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_earth_map_widget.html#a843f7973596d1233ac8192742fa788b6" title="Performs the mouse press event operation." alt="" coords="242,71,416,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,69,229,77,224,77,186,74"/>
+</map>

@@ -1,0 +1,39 @@
+<map id="PlaybackService::loadData" name="PlaybackService::loadData">
+<area shape="rect" id="Node000001" title="Loads data." alt="" coords="5,203,185,228"/>
+<area shape="rect" id="Node000002" href="$class_i_session_reader.html#ac3309b61387f2bd803b08a3c9e64b475" title="Releases the current source and returns the reader to its empty state." alt="" coords="496,5,649,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,200,159,154,194,128,231,105,294,78,359,57,482,30,478,33,360,62,296,83,234,110,197,132,162,158,111,204"/>
+<area shape="rect" id="Node000003" href="$class_playback_service.html#a43fa0623a8507f5354bf5537f6619668" title="Performs the close session operation." alt="" coords="233,120,438,146"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,200,283,149,280,153,136,204"/>
+<area shape="rect" id="Node000006" href="$class_playback_service.html#a0d810aa9ebe8492aea8b82c6e429c5d6" title="Notifies observers about position changed." alt="" coords="486,170,658,210"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="184,208,472,193,469,198,186,213"/>
+<area shape="rect" id="Node000009" href="$class_i_session_reader.html#aea6ff0e278cdceb65d74515c1142b36c" title="Validates and indexes a session from in&#45;memory data." alt="" coords="248,228,422,254"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="184,222,235,229,230,231,186,228"/>
+<area shape="rect" id="Node000010" href="$class_playback_service.html#a4c63a7b8f0f625f9c097a34b3ac96a0a" title="Performs the publish frame operation." alt="" coords="251,284,420,325"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="132,226,266,277,262,280,132,232"/>
+<area shape="rect" id="Node000014" href="$class_i_session_reader.html#aa1a35e313d682f385331d31187968151" title="Returns the bounded number of indexed records." alt="" coords="709,365,902,391"/>
+<area shape="poly" id="edge22_Node000001_Node000014" title=" " alt="" coords="109,226,162,277,234,335,300,380,354,413,410,438,487,460,534,470,572,473,610,470,658,460,691,448,722,432,773,401,779,400,725,437,693,453,659,465,611,476,572,479,534,475,485,465,409,443,351,417,298,384,231,339,159,281,109,231"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="356,117,424,75,485,41,506,35,502,38,487,46,427,80,359,121"/>
+<area shape="rect" id="Node000004" href="$class_playback_service.html#a5e54c6eb7adf0f7fbdfbd5f403ec5d7d" title="Notifies observers about playing changed." alt="" coords="488,55,656,96"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="390,117,475,98,470,101,393,122"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="391,144,473,165,468,166,392,149"/>
+<area shape="rect" id="Node000008" href="$class_i_playback_clock.html#a997a42bd4efe05e9d2bcbee7550e35cb" title="Stops future ticks." alt="" coords="499,120,645,146"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="438,130,486,132,481,134,439,135"/>
+<area shape="rect" id="Node000005" href="$class_playback_service.html#a87e882d8178053a7315b5b54b461fa27" title="Reports whether playing is true." alt="" coords="715,63,896,88"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="656,73,702,75,697,76,657,78"/>
+<area shape="rect" id="Node000007" href="$class_playback_service.html#a77bbc3e3d72ff59d00b75a0d13816491" title="Returns the current position." alt="" coords="719,169,892,195"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="658,185,707,185,701,186,659,190"/>
+<area shape="rect" id="Node000011" href="$class_i_session_reader.html#af00a0907067a1e6a74d1ad64d911a22b" title="Returns whether a fully validated session is loaded." alt="" coords="725,243,886,268"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="419,282,486,270,602,259,712,256,707,257,602,264,486,275,421,287"/>
+<area shape="rect" id="Node000012" href="$class_playback_service.html#a60a9c28fcb46d8f18bb8a1694e404717" title="Performs the publish decoded frame operation." alt="" coords="488,284,656,325"/>
+<area shape="poly" id="edge14_Node000010_Node000012" title=" " alt="" coords="419,302,475,304,470,305,420,307"/>
+<area shape="poly" id="edge21_Node000010_Node000014" title=" " alt="" coords="420,321,486,334,696,365,691,367,486,339,420,327"/>
+<area shape="rect" id="Node000015" href="$class_i_session_reader.html#ae21515b905a069ec3615e9a38ae41a97" title="Decodes the timestamp and domain state at index." alt="" coords="486,424,658,450"/>
+<area shape="poly" id="edge19_Node000010_Node000015" title=" " alt="" coords="375,323,537,416,532,417,373,328"/>
+<area shape="poly" id="edge13_Node000011_Node000011" title=" " alt="" coords="766,242,759,234,764,224,780,218,806,216,834,219,850,228,845,228,833,224,805,221,781,223,767,228,765,233,772,243"/>
+<area shape="poly" id="edge16_Node000012_Node000011" title=" " alt="" coords="656,284,729,271,724,273,657,290"/>
+<area shape="rect" id="Node000013" href="$class_playback_service.html#a1ff3c2f581cf152d1db0bcef7fcd0e95" title="Notifies observers about frame ready." alt="" coords="706,292,905,318"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="656,302,693,304,688,305,657,307"/>
+<area shape="poly" id="edge17_Node000012_Node000014" title=" " alt="" coords="639,323,750,360,745,360,639,328"/>
+<area shape="poly" id="edge18_Node000014_Node000014" title=" " alt="" coords="766,364,759,357,764,347,780,341,806,339,834,341,850,351,845,350,833,347,805,344,781,346,767,351,765,356,771,366"/>
+<area shape="poly" id="edge20_Node000015_Node000015" title=" " alt="" coords="533,423,526,415,530,406,546,399,572,397,601,400,617,410,611,409,599,405,572,403,547,405,534,409,531,415,538,425"/>
+</map>

@@ -1,0 +1,47 @@
+<map id="RecordingWorkflowController::requestSnapshot" name="RecordingWorkflowController::requestSnapshot">
+<area shape="rect" id="Node000001" title="Performs the request snapshot operation." alt="" coords="5,90,196,130"/>
+<area shape="rect" id="Node000002" href="$class_i_recording_file_dialog.html#adf6230f3523ad9ca4d60d3c6b7e55190" title="Empty means cancellation and must have no application side effect." alt="" coords="244,32,386,73"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,87,230,74,226,78,180,91"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#a6f58372a5b0357529092761717b35cf9" title="Reports whether a recording persistence operation is pending." alt="" coords="438,38,615,78"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="195,102,386,82,425,78,420,80,386,87,197,107"/>
+<area shape="rect" id="Node000005" href="$class_application_facade.html#a42f5497c396fac20046b6c11bc55ea1b" title="Saves a snapshot of the active recording without finalizing it." alt="" coords="247,198,383,238"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="143,128,261,189,257,192,143,134"/>
+<area shape="rect" id="Node000004" href="$recording__operation__state_8h.html#a434844ed2cfed8091ef202b256cd2024" title="Reports whether recording operation pending is true." alt="" coords="677,29,871,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="615,50,664,49,659,50,617,55"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="735,29,728,21,733,11,748,5,774,3,802,5,818,14,812,15,801,10,774,8,750,10,737,15,734,20,741,29"/>
+<area shape="poly" id="edge20_Node000005_Node000003" title=" " alt="" coords="329,196,371,143,400,114,432,89,445,84,441,87,436,94,404,118,375,147,333,199"/>
+<area shape="rect" id="Node000006" href="$class_application_facade.html#a1dc41e6d7b7418d3b79087b7d24cbe1e" title="Applies the result of an asynchronous mapping&#45;load request." alt="" coords="458,168,595,209"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="383,206,446,199,441,201,384,211"/>
+<area shape="rect" id="Node000010" href="$class_application_facade.html#aaa8bd95ed38e7f855835042c17db3338" title="Stores and emits a human&#45;readable operation error." alt="" coords="706,246,842,286"/>
+<area shape="poly" id="edge21_Node000005_Node000010" title=" " alt="" coords="383,223,692,256,688,259,384,228"/>
+<area shape="rect" id="Node000016" href="$class_request_result_gate.html#ad451fae2b3f234002925884a113ae060" title="Opens a dispatch window in which a direct runtime may reply synchronously." alt="" coords="454,283,599,324"/>
+<area shape="poly" id="edge17_Node000005_Node000016" title=" " alt="" coords="367,236,462,276,457,277,367,242"/>
+<area shape="rect" id="Node000017" href="$class_request_result_gate.html#a35b04ea0a99c2e3167645896514e09d4" title="Correlates the accepted dispatch with any buffered synchronous result." alt="" coords="454,348,599,389"/>
+<area shape="poly" id="edge18_Node000005_Node000017" title=" " alt="" coords="333,237,377,285,405,311,435,333,447,342,441,341,433,338,402,315,373,289,332,242"/>
+<area shape="rect" id="Node000019" href="$class_application_facade.html#a7d75e45694f828216756933ee1707a67" title="Updates and publishes the recording&#45;operation state." alt="" coords="434,418,619,458"/>
+<area shape="poly" id="edge22_Node000005_Node000019" title=" " alt="" coords="326,236,367,315,398,360,436,399,450,411,444,409,432,403,394,363,362,318,323,241"/>
+<area shape="rect" id="Node000021" href="$class_i_recording_runtime.html#a2f771c3ca3310079c7c45d0a12a22e04" title="Persists an immutable point&#45;in&#45;time snapshot without stopping capture." alt="" coords="456,103,597,144"/>
+<area shape="poly" id="edge25_Node000005_Node000021" title=" " alt="" coords="352,195,433,154,453,149,448,151,435,159,355,200"/>
+<area shape="rect" id="Node000007" href="$class_application_facade.html#a0cb4dd92e5b47566047b9a726971e7f1" title="Reports successful loading of a packet mapping." alt="" coords="706,103,842,144"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="594,168,693,144,688,146,596,173"/>
+<area shape="poly" id="edge11_Node000006_Node000010" title=" " alt="" coords="594,207,695,240,690,241,594,212"/>
+<area shape="rect" id="Node000014" href="$class_application_view_model.html#a4a3e33ab5db50a0e26e124bf9225eeba" title="Sets status text." alt="" coords="699,168,849,209"/>
+<area shape="poly" id="edge15_Node000006_Node000014" title=" " alt="" coords="594,186,687,188,681,190,595,191"/>
+<area shape="poly" id="edge9_Node000007_Node000007" title=" " alt="" coords="731,101,729,93,736,84,751,79,774,77,799,79,815,87,810,88,797,84,774,82,752,84,739,88,734,94,736,104"/>
+<area shape="rect" id="Node000008" href="$class_application_facade.html#a22237ba254d2b73c0d6ee14376a0aee9" title="Returns the number of fields in the active packet mapping." alt="" coords="935,103,1072,144"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="842,121,922,123,917,124,843,126"/>
+<area shape="rect" id="Node000009" href="$class_application_facade.html#a1c17c18edd6c30bb9e2bf63bf449153a" title="Returns the minimum packet size required by the active mapping." alt="" coords="933,38,1074,78"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="842,102,920,82,915,83,844,107"/>
+<area shape="rect" id="Node000011" href="$class_application_facade.html#a5935c712453aca17ae956f9c34d1d5b2" title="Reports an operation or runtime error to observers." alt="" coords="935,258,1072,298"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="843,267,923,274,917,274,843,272"/>
+<area shape="rect" id="Node000012" href="$class_application_view_model.html#a8b45470f469030969b5321be7b4c0e6c" title="Sets last error." alt="" coords="929,323,1078,364"/>
+<area shape="poly" id="edge14_Node000010_Node000012" title=" " alt="" coords="837,284,929,318,924,318,836,290"/>
+<area shape="poly" id="edge13_Node000011_Node000011" title=" " alt="" coords="960,256,958,248,965,239,980,233,1003,231,1028,234,1044,242,1039,242,1027,239,1003,236,981,238,968,243,963,249,965,259"/>
+<area shape="rect" id="Node000015" href="$class_application_view_model.html#a3b64c6107fe4eb693bbf7aa9adf20089" title="Notifies observers about status changed." alt="" coords="929,168,1078,209"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="849,186,915,188,910,189,849,191"/>
+<area shape="rect" id="Node000018" href="$struct_runtime_request_id.html#a1f28818442dba1abd5f4aabca4987e23" title="Reports whether valid is true." alt="" coords="686,352,862,378"/>
+<area shape="poly" id="edge19_Node000017_Node000018" title=" " alt="" coords="599,365,673,366,668,367,600,370"/>
+<area shape="rect" id="Node000020" href="$class_application_facade.html#ad8fd175d53d1e7696bfac7d07e23f0da" title="Reports a change in the recording&#45;operation state." alt="" coords="667,426,881,466"/>
+<area shape="poly" id="edge23_Node000019_Node000020" title=" " alt="" coords="620,439,654,442,649,442,620,444"/>
+<area shape="poly" id="edge24_Node000020_Node000020" title=" " alt="" coords="731,424,729,416,736,407,751,401,774,399,799,402,815,411,810,410,797,407,774,404,752,406,739,411,734,417,736,427"/>
+</map>

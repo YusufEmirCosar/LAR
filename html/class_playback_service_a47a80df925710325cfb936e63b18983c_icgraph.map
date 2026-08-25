@@ -1,0 +1,24 @@
+<map id="PlaybackService::isLoaded" name="PlaybackService::isLoaded">
+<area shape="rect" id="Node000001" title="Notifies observers about is loaded." alt="" coords="467,242,646,268"/>
+<area shape="rect" id="Node000002" href="$class_direct_application_runtime.html#ae4844382f8df6a08c95a63b462aa57ea" title="Returns the current pause." alt="" coords="250,5,419,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="540,227,521,192,494,147,459,101,417,61,400,49,399,44,421,57,463,98,498,144,526,189,546,229"/>
+<area shape="rect" id="Node000003" href="$class_playback_runtime_worker.html#a6b6daac9a4b5330614426cac8c2c7c30" title="Controls the pause operation." alt="" coords="252,71,417,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="532,230,483,180,452,152,418,127,396,115,396,109,420,122,455,147,487,176,538,230"/>
+<area shape="rect" id="Node000005" href="$class_direct_application_runtime.html#aeab4ff787f9ccff8703c73edf9af3e9f" title="Returns the current play." alt="" coords="250,136,419,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="513,236,418,192,390,180,389,175,420,187,518,234"/>
+<area shape="rect" id="Node000006" href="$class_playback_runtime_worker.html#a59e6f63a8a2fd5d154305ccac9ba9090" title="Controls the play operation." alt="" coords="252,201,417,242"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="449,240,418,237,417,231,454,239"/>
+<area shape="rect" id="Node000007" href="$class_direct_application_runtime.html#a7f3b3c1dc2b603efbe122ee209a3161f" title="Performs the seek operation." alt="" coords="250,267,419,307"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="449,271,420,277,419,272,454,269"/>
+<area shape="rect" id="Node000008" href="$class_playback_runtime_worker.html#aa43b9d9d22a45ccfb709b024ec39c239" title="Documents the seek operation." alt="" coords="252,332,417,373"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="517,274,420,321,390,334,388,329,418,317,512,276"/>
+<area shape="rect" id="Node000009" href="$class_direct_application_runtime.html#ae0f452bf0b866e973cb62a7a4101cbe8" title="Returns the current stop." alt="" coords="250,397,419,438"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="537,278,487,334,455,362,420,387,397,399,395,394,418,382,451,357,483,330,532,281"/>
+<area shape="rect" id="Node000010" href="$class_playback_runtime_worker.html#a068f75300a31e5a915f5c33b62499336" title="Controls the stop operation." alt="" coords="252,463,417,503"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="545,280,526,320,498,365,463,411,421,452,400,465,398,460,417,448,459,408,493,362,521,317,541,283"/>
+<area shape="rect" id="Node000004" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,267,202,307"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="256,121,251,126,210,161,173,199,121,268,116,265,169,196,206,157,248,122,260,117"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="244,248,179,268,177,264,248,245"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="243,328,178,311,178,305,248,326"/>
+<area shape="poly" id="edge12_Node000010_Node000004" title=" " alt="" coords="255,454,248,452,206,417,169,378,118,310,119,305,173,375,210,413,251,448,260,455"/>
+</map>

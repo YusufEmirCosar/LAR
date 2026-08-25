@@ -1,0 +1,16 @@
+<map id="SourceLifecycleCoordinator::accept" name="SourceLifecycleCoordinator::accept">
+<area shape="rect" id="Node000001" title="Performs the accept operation." alt="" coords="5,136,187,177"/>
+<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#aff8945a0254ab41539be69279477197a" title="Performs the accepts operation." alt="" coords="253,5,434,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,134,171,95,233,57,252,51,248,54,236,61,174,99,123,137"/>
+<area shape="rect" id="Node000003" href="$class_source_lifecycle_coordinator.html#a03ee0165d404f201e2544db08284fea0" title="Notifies observers about processed packet count changed." alt="" coords="235,71,452,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,133,251,114,247,117,177,138"/>
+<area shape="rect" id="Node000004" href="$class_source_lifecycle_coordinator.html#a9eb44038d562196d53733a865d5589f3" title="Notifies observers about processed packet rate changed." alt="" coords="238,136,448,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,154,225,155,220,157,188,159"/>
+<area shape="rect" id="Node000005" href="$class_application_view_model.html#ac83707be17b48c4211eb0474a6624a89" title="Sets processed packet count." alt="" coords="251,201,436,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="176,175,251,196,246,198,176,180"/>
+<area shape="rect" id="Node000007" href="$class_application_view_model.html#ae8e01bb7447a1a94c7bf4f16641c939c" title="Sets processed packet rate." alt="" coords="254,267,432,307"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="122,175,174,213,236,251,253,261,247,260,233,256,171,218,121,180"/>
+<area shape="rect" id="Node000006" href="$class_application_view_model.html#a4ede6b79e944d298b52a981a8afe896d" title="Notifies observers about metrics changed." alt="" coords="500,235,649,275"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="436,232,487,242,482,242,436,238"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="433,272,482,268,488,267,433,277"/>
+</map>

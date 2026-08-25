@@ -1,0 +1,58 @@
+<map id="SourceLifecycleCoordinator::rejectDispatch" name="SourceLifecycleCoordinator::rejectDispatch">
+<area shape="rect" id="Node000001" title="Performs the reject dispatch operation." alt="" coords="1576,324,1757,365"/>
+<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#af43f2b65f8774e1acccf82ec28a3397c" title="Returns the current begin close playback." alt="" coords="658,353,840,394"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1558,349,840,373,840,368,1563,347"/>
+<area shape="rect" id="Node000018" href="$class_source_lifecycle_coordinator.html#a608bc622a76c4b5b965a252234e888e5" title="Returns the current begin load playback." alt="" coords="1346,237,1528,278"/>
+<area shape="poly" id="edge12_Node000001_Node000018" title=" " alt="" coords="1593,318,1493,281,1493,276,1599,318"/>
+<area shape="rect" id="Node000021" href="$class_source_lifecycle_coordinator.html#ad926d0a983376f3b09cb2a1b237a70cc" title="Returns the current begin start online." alt="" coords="658,419,840,459"/>
+<area shape="poly" id="edge32_Node000001_Node000021" title=" " alt="" coords="1563,355,1528,362,840,433,840,427,1527,356,1558,356"/>
+<area shape="rect" id="Node000022" href="$class_source_lifecycle_coordinator.html#aa4662a449eeafb24036a56622528c705" title="Returns the current begin stop online." alt="" coords="658,27,840,67"/>
+<area shape="poly" id="edge33_Node000001_Node000022" title=" " alt="" coords="1634,312,1587,269,1558,247,1526,228,1437,188,1343,154,1248,126,1153,104,978,72,840,56,840,51,979,67,1154,98,1249,121,1345,149,1439,183,1529,223,1561,242,1590,265,1639,313"/>
+<area shape="rect" id="Node000003" href="$class_source_lifecycle_coordinator.html#ac59a84185f8ff93b63c68d9972de9113" title="Returns the current close session." alt="" coords="429,303,610,343"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="641,350,611,346,611,340,646,350"/>
+<area shape="rect" id="Node000011" href="$class_source_lifecycle_coordinator.html#ad289bae443fa45b277710f239bf5652e" title="Performs the handle operation." alt="" coords="429,448,610,489"/>
+<area shape="poly" id="edge5_Node000002_Node000011" title=" " alt="" coords="678,399,659,409,567,450,565,445,657,405,673,401"/>
+<area shape="rect" id="Node000012" href="$class_source_lifecycle_coordinator.html#aa10eb11bdb8fea7dfe07f238c6611a21" title="Loads session." alt="" coords="429,27,610,67"/>
+<area shape="poly" id="edge6_Node000002_Node000012" title=" " alt="" coords="661,344,656,342,627,310,601,274,562,196,536,123,524,70,526,66,541,121,567,194,606,271,631,307,660,338,666,345"/>
+<area shape="rect" id="Node000015" href="$class_source_lifecycle_coordinator.html#ad0e12423ba037917169cd328304bc18f" title="Performs the start online operation." alt="" coords="429,368,610,409"/>
+<area shape="poly" id="edge9_Node000002_Node000015" title=" " alt="" coords="640,381,611,385,610,380,646,380"/>
+<area shape="rect" id="Node000004" href="$class_application_facade.html#af2159b78216b76510ac308930db095e8" title="Closes the active offline session." alt="" coords="245,303,381,343"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="411,324,382,326,381,320,416,322"/>
+<area shape="rect" id="Node000005" href="$class_main_window.html#a9199a9a25ddc8a3987df7e62baa3e751" title="Performs the switch mode operation." alt="" coords="14,310,188,336"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="226,324,189,326,188,320,231,322"/>
+<area shape="rect" id="Node000013" href="$class_application_facade.html#a764732ca1f481749552e15e5ca92b570" title="Requests loading and indexing of an offline session file." alt="" coords="245,27,381,67"/>
+<area shape="poly" id="edge7_Node000012_Node000013" title=" " alt="" coords="411,48,383,49,381,45,416,46"/>
+<area shape="rect" id="Node000014" href="$class_main_window.html#af55141c0fa7ee8db51b03707324f8df6" title="Performs the choose lar path operation." alt="" coords="5,34,197,60"/>
+<area shape="poly" id="edge8_Node000013_Node000014" title=" " alt="" coords="227,49,198,49,196,45,231,45"/>
+<area shape="rect" id="Node000016" href="$class_application_facade.html#aebeaaf2506cc79e55b67e45e9acb9540" title="Requests the start of online packet capture." alt="" coords="245,368,381,409"/>
+<area shape="poly" id="edge10_Node000015_Node000016" title=" " alt="" coords="411,389,382,391,381,386,416,388"/>
+<area shape="rect" id="Node000017" href="$class_online_panel.html#a718a7f2c79b67e00d58efdbeedbd3ad8" title="Constructs this object." alt="" coords="16,375,186,401"/>
+<area shape="poly" id="edge11_Node000016_Node000017" title=" " alt="" coords="227,389,187,391,186,386,232,387"/>
+<area shape="poly" id="edge31_Node000018_Node000012" title=" " alt="" coords="1383,229,1287,181,1154,120,1000,61,920,37,839,18,789,10,749,8,659,18,598,28,596,24,658,12,749,3,789,5,840,12,921,31,1002,56,1156,115,1289,176,1388,230"/>
+<area shape="rect" id="Node000019" href="$class_source_lifecycle_coordinator.html#a92e4dcfa7138ea6a8c54e78d2198b850" title="Performs the advance intent operation." alt="" coords="1117,269,1298,310"/>
+<area shape="poly" id="edge13_Node000018_Node000019" title=" " alt="" coords="1328,273,1299,280,1298,274,1334,272"/>
+<area shape="poly" id="edge30_Node000019_Node000011" title=" " alt="" coords="1182,321,1133,372,1103,396,1070,416,1013,442,953,461,890,474,828,482,710,487,611,482,611,477,710,481,828,477,890,469,951,455,1011,437,1068,411,1099,391,1129,368,1177,323"/>
+<area shape="rect" id="Node000020" href="$class_source_lifecycle_coordinator.html#a5fe8ac3946fc99edecf8f2d8ca6070c3" title="Performs the handle operation." alt="" coords="888,172,1069,213"/>
+<area shape="poly" id="edge14_Node000019_Node000020" title=" " alt="" coords="1148,262,1068,228,1037,216,1038,211,1070,223,1153,263"/>
+<area shape="rect" id="Node000035" href="$class_source_lifecycle_coordinator.html#aca7c03cf83288fd02c8c2ec13bb8fd2b" title="Performs the handle operation." alt="" coords="888,237,1069,278"/>
+<area shape="poly" id="edge28_Node000019_Node000035" title=" " alt="" coords="1099,275,1069,273,1069,268,1104,275"/>
+<area shape="rect" id="Node000036" href="$class_source_lifecycle_coordinator.html#acce1a988120c5c5d1bb18056b02f9b88" title="Performs the handle operation." alt="" coords="888,303,1069,343"/>
+<area shape="poly" id="edge29_Node000019_Node000036" title=" " alt="" coords="1099,305,1070,312,1069,307,1104,305"/>
+<area shape="poly" id="edge15_Node000020_Node000002" title=" " alt="" coords="894,220,890,228,878,241,872,255,866,283,861,312,854,327,841,342,824,355,822,350,838,338,849,325,856,311,861,282,866,254,874,239,886,224,890,223"/>
+<area shape="poly" id="edge16_Node000020_Node000018" title=" " alt="" coords="1084,205,1349,245,1343,245,1084,210"/>
+<area shape="poly" id="edge17_Node000020_Node000021" title=" " alt="" coords="893,221,890,227,874,250,867,271,866,316,865,361,858,384,842,407,826,420,824,416,838,404,853,382,860,360,861,316,862,271,870,247,886,224,888,224"/>
+<area shape="poly" id="edge20_Node000020_Node000022" title=" " alt="" coords="932,162,889,128,838,95,785,71,785,65,841,90,892,124,937,162"/>
+<area shape="rect" id="Node000030" href="$class_source_lifecycle_coordinator.html#ace0e008f26d26cff9af3463128254077" title="Performs the receive operation." alt="" coords="658,223,840,263"/>
+<area shape="poly" id="edge24_Node000020_Node000030" title=" " alt="" coords="870,216,841,226,839,220,875,215"/>
+<area shape="rect" id="Node000032" href="$class_source_lifecycle_coordinator.html#afb419f7fb0d0b7348b786cd6ed7edb23" title="Performs the receive operation." alt="" coords="658,288,840,329"/>
+<area shape="poly" id="edge25_Node000020_Node000032" title=" " alt="" coords="900,219,889,228,875,240,866,252,856,264,841,277,817,290,815,285,838,273,852,261,862,249,871,236,886,223,895,221"/>
+<area shape="rect" id="Node000033" href="$class_source_lifecycle_coordinator.html#a0b590ff484b4a5b5d96851d3063696d9" title="Performs the receive operation." alt="" coords="658,92,840,133"/>
+<area shape="poly" id="edge26_Node000020_Node000033" title=" " alt="" coords="901,167,810,136,810,131,907,166"/>
+<area shape="rect" id="Node000034" href="$class_source_lifecycle_coordinator.html#ab761919c892fb1bec843355c3d7a929f" title="Performs the receive operation." alt="" coords="658,157,840,198"/>
+<area shape="poly" id="edge27_Node000020_Node000034" title=" " alt="" coords="870,186,840,186,840,181,875,185"/>
+<area shape="poly" id="edge19_Node000021_Node000015" title=" " alt="" coords="641,416,611,411,611,406,646,416"/>
+<area shape="poly" id="edge18_Node000021_Node000019" title=" " alt="" coords="855,414,959,387,1068,352,1165,311,1170,310,1070,357,960,392,856,419"/>
+<area shape="poly" id="edge22_Node000022_Node000012" title=" " alt="" coords="640,48,611,50,610,44,645,46"/>
+<area shape="poly" id="edge23_Node000022_Node000015" title=" " alt="" coords="663,76,660,82,639,117,631,150,632,184,637,217,642,251,643,286,634,321,612,357,597,370,595,365,608,353,629,319,637,285,637,252,632,218,627,184,626,150,634,115,656,79,659,79"/>
+<area shape="poly" id="edge21_Node000022_Node000020" title=" " alt="" coords="852,73,919,123,966,172,961,171,915,127,851,78"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="src/viewer/hud/dlz_hud_view.cpp" name="src/viewer/hud/dlz_hud_view.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="210,5,337,46"/>
+<area shape="rect" id="Node000002" href="$dlz__hud__view_8h.html" title="Widget that owns the current render&#45;ready DLZ HUD frame." alt="" coords="144,94,278,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="261,45,236,83,232,80,258,48"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="302,102,374,127"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="289,44,323,89,317,89,288,49"/>
+<area shape="rect" id="Node000003" href="$dlz__types_8h.html" title="Dedicated Dynamic Launch Zone domain values." alt="" coords="5,271,161,297"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="181,137,159,159,134,184,111,221,95,258,90,255,107,219,130,181,155,155,185,134"/>
+<area shape="rect" id="Node000004" href="$dlz__hud__renderer_8h.html" title="Stateless painter for launch&#45;zone symbology and diagnostic states." alt="" coords="144,183,278,223"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="212,133,213,168,209,166,210,137"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="302,190,374,216"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="240,133,310,181,305,182,239,138"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="182,223,117,265,114,261,177,224"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="185,271,253,297"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="215,222,219,257,214,254,211,226"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="277,271,342,297"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="236,221,285,261,280,261,235,226"/>
+</map>

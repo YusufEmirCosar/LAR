@@ -1,0 +1,5 @@
+<map id="dlz::TargetState" name="dlz::TargetState">
+<area shape="rect" id="Node000001" title="Target kinematics and defensive loading consumed by the DLZ model." alt="" coords="5,122,119,148"/>
+<area shape="rect" id="Node000002" href="$structdlz_1_1_vec3.html" title="Cartesian vector in the coordinate system documented by its owning state." alt="" coords="24,5,100,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,46,65,122,59,122,60,48"/>
+</map>

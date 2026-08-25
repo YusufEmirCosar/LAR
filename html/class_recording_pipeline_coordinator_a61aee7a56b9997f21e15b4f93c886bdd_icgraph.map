@@ -1,0 +1,9 @@
+<map id="RecordingPipelineCoordinator::startRecording" name="RecordingPipelineCoordinator::startRecording">
+<area shape="rect" id="Node000001" title="Performs the start recording operation." alt="" coords="468,39,661,79"/>
+<area shape="rect" id="Node000002" href="$class_recording_runtime_worker.html#a9188ede54293648e6d7ed0d0d3f9c3f0" title="Documents the start recording operation." alt="" coords="250,39,420,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="450,59,421,62,420,56,455,59"/>
+<area shape="rect" id="Node000003" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,5,202,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="231,45,202,43,202,37,237,44"/>
+<area shape="rect" id="Node000004" href="$class_recording_runtime_worker.html#a30457a2f16339425b56245e6e331c59b" title="Documents the recording runtime worker operation." alt="" coords="10,71,197,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="232,73,197,81,197,75,237,72"/>
+</map>

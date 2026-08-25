@@ -1,0 +1,16 @@
+<map id="DtedMosaicSampler::evictIfNeeded" name="DtedMosaicSampler::evictIfNeeded">
+<area shape="rect" id="Node000001" title=" " alt="" coords="816,39,963,79"/>
+<area shape="rect" id="Node000002" href="$class_dted_mosaic_sampler.html#a44929b88aa05b416734a507b31424551" title=" " alt="" coords="620,8,768,49"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="798,45,768,43,768,37,803,45"/>
+<area shape="rect" id="Node000019" href="$class_dted_mosaic_sampler.html#a40027ca52e95cc5b753e0abe1527884a" title=" " alt="" coords="425,71,572,111"/>
+<area shape="poly" id="edge6_Node000001_Node000019" title=" " alt="" coords="803,66,573,88,572,82,797,66"/>
+<area shape="rect" id="Node000003" href="$class_dted_mosaic_sampler.html#a6846daac445cde1ec6c433644309a5bd" title=" " alt="" coords="425,5,572,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="602,27,573,29,573,24,607,27"/>
+<area shape="rect" id="Node000004" href="$class_dted_mosaic_sampler.html#a9cad4de48229805ca1ee5dd471ecfd5e" title=" " alt="" coords="225,5,372,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="407,26,373,28,372,23,412,25"/>
+<area shape="rect" id="Node000005" href="$class_dted_mosaic_sampler.html#a183de02a1c9073c02648bc71022ba406" title="Samples a sea&#45;level water surface while retaining source depth for coloring." alt="" coords="221,71,377,111"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="423,51,364,73,363,67,418,52"/>
+<area shape="rect" id="Node000006" href="$class_plane_terrain_patch_builder.html#ae255d8ff063838ad44e241f3cc826c69" title="Samples and triangulates one request, returning null when local terrain is absent." alt="" coords="5,71,173,111"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="203,91,173,94,173,88,208,91"/>
+<area shape="poly" id="edge7_Node000019_Node000005" title=" " alt="" coords="406,91,377,94,377,88,412,91"/>
+</map>

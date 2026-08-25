@@ -1,0 +1,62 @@
+<map id="lar::map::MapProjection::wrapPeriodic" name="lar::map::MapProjection::wrapPeriodic">
+<area shape="rect" id="Node000001" title="Performs the wrap periodic operation." alt="" coords="1390,485,1550,526"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_projection.html#ae51b77201c9b343a098d386577f31c0c" title="Performs the wrap longitude operation." alt="" coords="1183,485,1342,526"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1372,506,1343,508,1342,503,1378,505"/>
+<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_earth_map_widget.html#a4c33b711ba5998afe3f26cc65dd2d9fb" title="Performs the mouse move event operation." alt="" coords="729,73,903,114"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1246,470,1202,383,1171,333,1133,287,1068,231,996,183,926,145,868,117,868,112,928,140,998,178,1071,227,1137,284,1175,330,1207,381,1251,472"/>
+<area shape="rect" id="Node000013" href="$class_earth_camera_policy.html#a56cf2d3daad1143eb086dab0984d11ce" title="Performs the navigation meters per pixel operation." alt="" coords="963,428,1132,469"/>
+<area shape="poly" id="edge7_Node000002_Node000013" title=" " alt="" coords="1167,481,1126,472,1126,466,1172,481"/>
+<area shape="rect" id="Node000015" href="$classlar_1_1map_1_1_map_camera.html#acd6f80d79badd22c058d5f60efc95f83" title="Performs the normalize mercator center operation." alt="" coords="960,297,1135,338"/>
+<area shape="poly" id="edge12_Node000002_Node000015" title=" " alt="" coords="1224,474,1071,341,1073,336,1229,475"/>
+<area shape="rect" id="Node000034" href="$classlar_1_1map_1_1_map_camera.html#a98cd5c4ee2f031a6163d0e70e8ae5d5b" title="Projects geo to screen." alt="" coords="974,608,1121,649"/>
+<area shape="poly" id="edge21_Node000002_Node000034" title=" " alt="" coords="1227,535,1184,568,1136,597,1109,610,1108,605,1134,593,1181,564,1222,537"/>
+<area shape="rect" id="Node000036" href="$class_earth_lar_view.html#a3cf85e639e99f53d5412b538f4178168" title="Performs the rotate sphere operation." alt="" coords="489,493,670,518"/>
+<area shape="poly" id="edge24_Node000002_Node000036" title=" " alt="" coords="1165,507,671,508,671,503,1170,504"/>
+<area shape="rect" id="Node000037" href="$classlar_1_1map_1_1_map_camera.html#a77395219a86be47b2fe891af4be700ce" title="Sets sphere center." alt="" coords="974,543,1121,583"/>
+<area shape="poly" id="edge27_Node000002_Node000037" title=" " alt="" coords="1172,530,1122,546,1121,541,1167,531"/>
+<area shape="rect" id="Node000039" href="$classlar_1_1map_1_1_map_camera.html#a7aabb6e20c98fe3d66f31b1b4214bb47" title="Performs the sphere coordinate at operation." alt="" coords="974,673,1121,714"/>
+<area shape="poly" id="edge34_Node000002_Node000039" title=" " alt="" coords="1244,538,1199,602,1170,634,1137,662,1115,675,1113,670,1133,658,1166,630,1195,599,1239,540"/>
+<area shape="rect" id="Node000004" href="$classlar_1_1map_1_1_earth_map_widget.html#ae9d2dda90bd17821bbf89aa5316874b6" title="Notifies observers about renderer ready." alt="" coords="252,139,426,179"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="767,66,723,44,672,27,620,15,578,9,538,12,488,27,446,50,409,80,379,112,357,140,352,137,375,109,405,76,443,45,486,22,537,6,578,3,621,10,673,22,725,39,773,65"/>
+<area shape="rect" id="Node000005" href="$classlar_1_1map_1_1_earth_map_widget.html#a03b90d20759cc6ec3f10b0efccf4c588" title="Performs the initialize gl operation." alt="" coords="11,139,185,179"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="235,169,187,170,184,165,239,166"/>
+<area shape="rect" id="Node000012" href="$classlar_1_1map_1_1_earth_map_widget.html#a9b79744bb30edf19770851af9961c93d" title="Sets map mesh." alt="" coords="11,204,185,245"/>
+<area shape="poly" id="edge6_Node000004_Node000012" title=" " alt="" coords="245,186,177,205,174,201,249,182"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="199,148,254,149,249,152,201,152"/>
+<area shape="rect" id="Node000014" href="$class_earth_lar_view.html#afbedf41801d7006bf600605acf911655" title="Returns the current navigation meters per pixel." alt="" coords="496,428,663,469"/>
+<area shape="poly" id="edge8_Node000013_Node000014" title=" " alt="" coords="944,449,664,451,663,446,950,447"/>
+<area shape="rect" id="Node000008" href="$class_earth_lar_view.html#a7eb84ed5ba23f7d30ed5ac72308d4448" title="Constructs this object." alt="" coords="5,486,191,512"/>
+<area shape="poly" id="edge9_Node000014_Node000008" title=" " alt="" coords="479,454,365,463,239,476,166,488,164,483,238,471,365,458,483,452"/>
+<area shape="rect" id="Node000007" href="$class_earth_lar_view.html#a31a878a0e62a405d4a6b4632b5b22641" title="Maps unavailable." alt="" coords="239,486,439,512"/>
+<area shape="poly" id="edge10_Node000014_Node000007" title=" " alt="" coords="479,470,404,488,402,483,484,468"/>
+<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="221,500,192,501,190,496,226,498"/>
+<area shape="rect" id="Node000016" href="$classlar_1_1map_1_1_map_camera.html#a7b051361862a20132feef31029587881" title="Performs the constrain mercator center operation." alt="" coords="730,232,902,273"/>
+<area shape="poly" id="edge13_Node000015_Node000016" title=" " alt="" coords="956,293,891,276,891,271,961,292"/>
+<area shape="rect" id="Node000017" href="$classlar_1_1map_1_1_map_camera.html#acd23099c7849ccb9ec979566ba7c533d" title="Performs the pan mercator operation." alt="" coords="506,363,653,403"/>
+<area shape="poly" id="edge14_Node000016_Node000017" title=" " alt="" coords="779,281,730,319,674,352,646,364,644,360,671,347,727,314,774,283"/>
+<area shape="rect" id="Node000019" href="$classlar_1_1map_1_1_earth_map_widget.html#a8ceba2b357c8213e6723222bb5876389" title="Performs the resize gl operation." alt="" coords="493,297,666,338"/>
+<area shape="poly" id="edge15_Node000016_Node000019" title=" " alt="" coords="723,278,657,299,655,294,728,276"/>
+<area shape="rect" id="Node000020" href="$classlar_1_1map_1_1_map_camera.html#af86e2114c29690cc5ef7d345c4a67a9c" title="Sets mercator center." alt="" coords="506,36,653,77"/>
+<area shape="poly" id="edge17_Node000016_Node000020" title=" " alt="" coords="790,219,741,155,708,121,671,92,650,80,650,74,674,87,711,117,745,152,796,219"/>
+<area shape="rect" id="Node000028" href="$classlar_1_1map_1_1_map_camera.html#a94c9f729666b559c81ec99dd316919a8" title="Sets mercator world bounds." alt="" coords="492,101,667,142"/>
+<area shape="poly" id="edge18_Node000016_Node000028" title=" " alt="" coords="774,222,727,190,671,157,645,145,644,140,674,152,730,186,779,222"/>
+<area shape="rect" id="Node000030" href="$classlar_1_1map_1_1_map_camera.html#a90b04c6402f57d212b0d56789e29b210" title="Sets mercator zoom." alt="" coords="506,167,653,207"/>
+<area shape="poly" id="edge19_Node000016_Node000030" title=" " alt="" coords="723,228,654,210,653,205,728,227"/>
+<area shape="rect" id="Node000032" href="$classlar_1_1map_1_1_map_camera.html#a73dba35502c2b8c46caab2b5c2963ff3" title="Performs the zoom at operation." alt="" coords="506,232,653,273"/>
+<area shape="poly" id="edge20_Node000016_Node000032" title=" " alt="" coords="712,253,654,255,653,250,717,251"/>
+<area shape="poly" id="edge16_Node000019_Node000004" title=" " alt="" coords="496,291,486,286,448,261,413,233,360,182,360,177,416,229,451,257,488,282,501,290"/>
+<area shape="rect" id="Node000035" href="$namespaceanonymous__namespace_02geodesic__zone__sampler_8cpp_03.html#a317d32d8927904290fd9ed80539470c8" title=" " alt="" coords="720,631,912,687"/>
+<area shape="poly" id="edge22_Node000034_Node000035" title=" " alt="" coords="961,640,912,649,912,643,956,640"/>
+<area shape="poly" id="edge23_Node000035_Node000035" title=" " alt="" coords="851,616,839,612,816,610,796,612,782,616,776,623,775,632,771,629,771,621,779,612,794,606,816,604,840,607,857,617"/>
+<area shape="poly" id="edge25_Node000036_Node000008" title=" " alt="" coords="474,521,439,527,339,532,238,527,161,515,160,510,239,522,339,527,439,522,479,520"/>
+<area shape="poly" id="edge26_Node000036_Node000007" title=" " alt="" coords="471,503,440,504,439,499,476,502"/>
+<area shape="rect" id="Node000038" href="$classlar_1_1map_1_1_earth_map_widget.html#abbd4908aee727f405614ca12891ca3c0" title="Sets rotation." alt="" coords="729,543,903,583"/>
+<area shape="poly" id="edge28_Node000037_Node000038" title=" " alt="" coords="955,563,903,566,903,560,961,563"/>
+<area shape="poly" id="edge33_Node000038_Node000036" title=" " alt="" coords="712,539,636,522,636,516,717,538"/>
+<area shape="rect" id="Node000022" href="$class_earth_lar_view.html#aed49eebc05015a48136f531d1234ce78" title="Performs the apply tracked camera operation." alt="" coords="487,543,672,583"/>
+<area shape="poly" id="edge29_Node000038_Node000022" title=" " alt="" coords="711,563,673,566,673,560,716,563"/>
+<area shape="rect" id="Node000023" href="$class_earth_lar_view.html#a0e809f583a4542f2eccc32c4c62ed51d" title="Performs the fit to data operation." alt="" coords="259,597,419,622"/>
+<area shape="poly" id="edge32_Node000038_Node000023" title=" " alt="" coords="716,587,673,597,539,609,420,613,419,607,539,604,672,592,721,586"/>
+<area shape="poly" id="edge31_Node000022_Node000007" title=" " alt="" coords="483,538,390,515,390,510,488,537"/>
+<area shape="poly" id="edge30_Node000022_Node000023" title=" " alt="" coords="469,584,410,599,408,593,475,583"/>
+</map>

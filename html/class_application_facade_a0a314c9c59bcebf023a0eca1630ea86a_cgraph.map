@@ -1,0 +1,22 @@
+<map id="ApplicationFacade::resetProcessedPacketCount" name="ApplicationFacade::resetProcessedPacketCount">
+<area shape="rect" id="Node000001" title="Resets the processed&#45;packet metrics." alt="" coords="5,165,194,206"/>
+<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#a9c4e26e83b782c3f5f2406f2c5ec809d" title="Performs the reset metrics operation." alt="" coords="242,165,423,206"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,183,228,185,224,187,195,188"/>
+<area shape="rect" id="Node000003" href="$class_source_lifecycle_coordinator.html#a03ee0165d404f201e2544db08284fea0" title="Notifies observers about processed packet count changed." alt="" coords="471,5,688,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="349,163,399,110,433,82,470,57,486,51,481,54,472,61,436,86,403,114,352,167"/>
+<area shape="rect" id="Node000004" href="$class_source_lifecycle_coordinator.html#a9eb44038d562196d53733a865d5589f3" title="Notifies observers about processed packet rate changed." alt="" coords="474,71,685,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="376,162,470,122,495,116,490,118,472,127,378,167"/>
+<area shape="rect" id="Node000005" href="$class_source_lifecycle_coordinator.html#acdf83d7d75370c38dd81dcb69898ee8f" title="Performs the report rejected command operation." alt="" coords="489,136,670,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="423,172,476,168,471,170,424,178"/>
+<area shape="rect" id="Node000007" href="$class_i_metrics_runtime.html#a9356d5008a90900c816bdb359af87fd4" title="Resets metrics owned by the currently active state source." alt="" coords="481,201,678,226"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="423,193,468,200,463,201,424,199"/>
+<area shape="rect" id="Node000008" href="$class_application_view_model.html#ac83707be17b48c4211eb0474a6624a89" title="Sets processed packet count." alt="" coords="487,251,672,291"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="385,204,472,236,494,246,489,246,470,242,385,209"/>
+<area shape="rect" id="Node000010" href="$class_application_view_model.html#ae8e01bb7447a1a94c7bf4f16641c939c" title="Sets processed packet rate." alt="" coords="490,316,669,357"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="353,204,405,253,438,278,472,301,487,310,482,309,470,305,434,283,402,257,352,209"/>
+<area shape="rect" id="Node000006" href="$class_source_lifecycle_coordinator.html#a17ce5b778f5c25dcf667c451910501ec" title="Notifies observers about error raised." alt="" coords="736,136,918,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="670,154,723,156,718,157,671,159"/>
+<area shape="rect" id="Node000009" href="$class_application_view_model.html#a4ede6b79e944d298b52a981a8afe896d" title="Notifies observers about metrics changed." alt="" coords="752,283,902,323"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="673,280,739,291,734,291,673,286"/>
+<area shape="poly" id="edge10_Node000010_Node000009" title=" " alt="" coords="669,322,734,315,740,315,670,327"/>
+</map>

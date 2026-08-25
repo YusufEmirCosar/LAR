@@ -1,0 +1,5 @@
+<map id="QtSessionPersistence::save" name="QtSessionPersistence::save">
+<area shape="rect" id="Node000001" title="Saves the current operation." alt="" coords="5,5,157,46"/>
+<area shape="rect" id="Node000002" href="$class_i_session_snapshot.html#a69a3cd324e711de4ecda8a050f20e27c" title="Writes exactly this immutable snapshot to an already&#45;open device." alt="" coords="205,13,382,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,23,192,25,186,26,157,28"/>
+</map>

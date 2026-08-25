@@ -1,0 +1,7 @@
+<map id="SessionTimestamp::fromMilliseconds" name="SessionTimestamp::fromMilliseconds">
+<area shape="rect" id="Node000001" title="Creates a timestamp from signed milliseconds when it is in range." alt="" coords="5,35,245,60"/>
+<area shape="rect" id="Node000002" href="$class_session_timestamp.html#a9e69c8185d47045ab21667be1a2976f7" title="Returns the exact integer representation used for ordering and storage." alt="" coords="293,5,506,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,32,280,31,275,32,246,37"/>
+<area shape="rect" id="Node000003" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="305,55,494,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="245,57,292,64,287,64,245,62"/>
+</map>

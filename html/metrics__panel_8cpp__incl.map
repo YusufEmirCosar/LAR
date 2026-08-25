@@ -1,0 +1,51 @@
+<map id="src/viewer/panels/metrics_panel.cpp" name="src/viewer/panels/metrics_panel.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="664,5,834,46"/>
+<area shape="rect" id="Node000002" href="$metrics__panel_8h.html" title="Telemetry counters and frame&#45;rate controls for the main window." alt="" coords="193,94,342,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="661,44,358,100,356,94,665,40"/>
+<area shape="rect" id="Node000004" href="$application__view__model_8h.html" title="Observable presentation state published to MainWindow." alt="" coords="462,94,612,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="698,48,600,90,598,85,703,45"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="636,102,750,127"/>
+<area shape="poly" id="edge24_Node000001_Node000019" title=" " alt="" coords="738,45,710,91,707,87,734,48"/>
+<area shape="rect" id="Node000020" title=" " alt="" coords="774,102,836,127"/>
+<area shape="poly" id="edge25_Node000001_Node000020" title=" " alt="" coords="762,44,792,89,786,88,761,49"/>
+<area shape="rect" id="Node000021" title=" " alt="" coords="860,102,960,127"/>
+<area shape="poly" id="edge26_Node000001_Node000021" title=" " alt="" coords="786,44,877,94,872,94,785,49"/>
+<area shape="rect" id="Node000022" title=" " alt="" coords="984,102,1087,127"/>
+<area shape="poly" id="edge27_Node000001_Node000022" title=" " alt="" coords="814,44,983,96,978,97,814,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="69,190,138,216"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,137,141,185,138,180,232,133"/>
+<area shape="rect" id="Node000005" href="$mode__coordinator_8h.html" title="Legal application modes and validated workflow transitions." alt="" coords="369,190,569,216"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="524,134,489,180,486,176,519,137"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="484,279,553,304"/>
+<area shape="poly" id="edge22_Node000004_Node000006" title=" " alt="" coords="555,133,570,152,581,175,587,199,583,224,568,250,548,271,545,266,564,247,578,222,582,200,576,177,565,155,553,138"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="394,279,459,304"/>
+<area shape="poly" id="edge23_Node000004_Node000007" title=" " alt="" coords="459,125,434,134,405,146,380,162,359,184,354,195,353,205,361,227,378,249,399,270,394,269,374,252,356,230,348,206,349,193,355,181,376,158,403,141,432,129,464,122"/>
+<area shape="rect" id="Node000008" href="$session__timestamp_8h.html" title="Exact validated session&#45;relative timestamp value object." alt="" coords="161,183,294,223"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="464,137,310,182,308,177,469,134"/>
+<area shape="rect" id="Node000015" href="$decoded__state_8h.html" title="Atomic decoded Plane/Target/DLZ state published by runtime paths." alt="" coords="694,190,857,216"/>
+<area shape="poly" id="edge14_Node000004_Node000015" title=" " alt="" coords="591,133,730,184,725,185,591,138"/>
+<area shape="rect" id="Node000017" href="$state_8h.html" title="Canonical in&#45;memory aircraft, target, and LAR state structures." alt="" coords="576,279,684,304"/>
+<area shape="poly" id="edge20_Node000004_Node000017" title=" " alt="" coords="561,133,584,155,603,181,620,223,629,264,624,262,615,225,599,184,580,158,560,138"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="938,279,1016,304"/>
+<area shape="poly" id="edge21_Node000004_Node000018" title=" " alt="" coords="611,129,625,132,695,142,751,145,805,154,836,164,870,180,898,199,923,221,962,267,957,266,920,225,895,203,868,185,834,169,804,159,751,150,695,147,624,137,612,135"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="477,214,507,266,501,265,475,219"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="465,215,441,267,437,263,461,218"/>
+<area shape="rect" id="Node000009" href="$session__limits_8h.html" title="Shared resource and duration bounds for the LAR1 session format." alt="" coords="15,271,147,312"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="192,226,128,265,125,261,196,222"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="586,360,674,386"/>
+<area shape="poly" id="edge11_Node000008_Node000012" title=" " alt="" coords="260,221,332,269,357,291,383,310,431,329,481,344,574,365,568,365,479,349,429,334,381,314,354,295,329,273,258,226"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="171,279,228,304"/>
+<area shape="poly" id="edge12_Node000008_Node000013" title=" " alt="" coords="223,222,210,266,206,263,219,226"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="252,279,318,304"/>
+<area shape="poly" id="edge13_Node000008_Node000014" title=" " alt="" coords="241,221,271,266,266,266,240,226"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="90,360,162,386"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="93,310,114,346,109,346,91,315"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="5,360,66,386"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="72,311,52,348,48,345,67,314"/>
+<area shape="poly" id="edge19_Node000015_Node000012" title=" " alt="" coords="770,215,740,261,697,314,658,352,655,347,694,310,735,258,765,218"/>
+<area shape="rect" id="Node000016" href="$dlz__types_8h.html" title="Dedicated Dynamic Launch Zone domain values." alt="" coords="758,279,913,304"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="785,214,821,267,816,265,783,219"/>
+<area shape="poly" id="edge16_Node000015_Node000017" title=" " alt="" coords="758,215,665,273,663,268,753,217"/>
+<area shape="poly" id="edge18_Node000015_Node000018" title=" " alt="" coords="804,214,937,272,932,272,803,219"/>
+<area shape="poly" id="edge17_Node000017_Node000012" title=" " alt="" coords="632,303,632,346,628,342,628,307"/>
+</map>

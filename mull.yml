@@ -1,0 +1,13 @@
+quiet: true
+strict: true
+includeNotCovered: false
+includePaths:
+  - ".*/src/domain/.*"
+  - ".*/src/application/.*"
+excludePaths:
+  - ".*/build-.*/.*"
+  - ".*/tests/.*"
+  - ".*/mocs_compilation.cpp"
+parallelization:
+  workers: 4
+  executionWorkers: 4

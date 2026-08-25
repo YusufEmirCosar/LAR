@@ -1,0 +1,106 @@
+<map id="IPlaybackClock::stop" name="IPlaybackClock::stop">
+<area shape="rect" id="Node000001" title="Stops future ticks." alt="" coords="2014,674,2160,700"/>
+<area shape="rect" id="Node000002" href="$class_playback_service.html#a43fa0623a8507f5354bf5537f6619668" title="Performs the close session operation." alt="" coords="740,212,946,237"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2071,659,2014,558,1969,491,1915,422,1851,357,1816,329,1779,304,1740,283,1699,267,1657,257,1612,254,1347,254,1132,248,947,236,946,230,1133,242,1347,248,1612,248,1657,252,1701,262,1742,278,1782,299,1819,325,1855,354,1919,418,1973,488,2018,555,2076,661"/>
+<area shape="rect" id="Node000015" href="$class_playback_service.html#a48014a7e0b93ca7827e9bb45043576e1" title="Performs the fail playback operation." alt="" coords="1768,674,1966,700"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="1996,687,1966,690,1966,684,2001,687"/>
+<area shape="rect" id="Node000026" href="$class_playback_service.html#a1c9bd9d7acda7f60331a3fa673f638ca" title="Stops the current operation." alt="" coords="517,780,669,805"/>
+<area shape="poly" id="edge66_Node000001_Node000026" title=" " alt="" coords="2042,705,1960,737,1855,768,1735,793,1673,800,1612,803,1092,803,670,797,669,792,1093,798,1612,798,1673,795,1734,787,1854,763,1959,732,2037,706"/>
+<area shape="rect" id="Node000038" href="$class_playback_service.html#a9a341b7a275a1e1f18bb1e89a582736c" title="Performs the finish playback operation." alt="" coords="1242,497,1454,522"/>
+<area shape="poly" id="edge60_Node000001_Node000038" title=" " alt="" coords="2012,670,1405,526,1406,520,2018,669"/>
+<area shape="rect" id="Node000039" href="$class_playback_service.html#a8ab54ec4491afe77956ae9b2263451ed" title="Pauses the current operation." alt="" coords="1786,845,1948,870"/>
+<area shape="poly" id="edge63_Node000001_Node000039" title=" " alt="" coords="2070,712,2027,768,1999,796,1968,821,1942,836,1915,847,1914,842,1940,831,1964,817,1995,792,2023,764,2066,714"/>
+<area shape="rect" id="Node000003" href="$class_direct_application_runtime.html#a5b75cc05f1860ac2b742a0ea6cb2a586" title="Returns the current close session." alt="" coords="508,5,678,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="822,198,769,131,732,94,691,61,670,49,669,44,694,57,736,90,773,128,827,198"/>
+<area shape="rect" id="Node000004" href="$class_playback_runtime_worker.html#a636b6a005df22431861b5f751bbc25c6" title="Documents the close session operation." alt="" coords="269,273,434,314"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="822,247,767,300,732,324,693,342,655,351,616,355,537,351,464,336,405,317,404,312,465,331,537,346,615,350,654,346,691,336,729,319,764,296,818,251"/>
+<area shape="rect" id="Node000006" href="$class_playback_service.html#ae7c7f4dd2aebbcff98e671461c6128ca" title="Loads data." alt="" coords="504,237,683,262"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="722,238,684,243,682,238,727,235"/>
+<area shape="rect" id="Node000007" href="$class_playback_runtime_worker.html#a367f82bc2fd32e66a5de05577314cf6f" title="Processes load session." alt="" coords="269,208,434,249"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="723,225,494,227,436,228,434,223,494,222,727,222"/>
+<area shape="rect" id="Node000009" href="$class_playback_service.html#a2c4237196c25831f4cc11cf99590220d" title="Loads session." alt="" coords="494,136,692,161"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="781,207,639,164,638,159,786,206"/>
+<area shape="rect" id="Node000011" href="$class_direct_application_runtime.html#ad1f581119a38e9c0f28e2c1c45e24b5a" title="Shuts down the direct runtime." alt="" coords="508,287,678,327"/>
+<area shape="poly" id="edge12_Node000002_Node000011" title=" " alt="" coords="786,244,693,278,660,288,657,284,691,272,790,241"/>
+<area shape="rect" id="Node000012" href="$class_playback_runtime_worker.html#a7924d317947660f1786467874714b667" title="Controls the shutdown operation." alt="" coords="510,71,676,111"/>
+<area shape="poly" id="edge13_Node000002_Node000012" title=" " alt="" coords="811,202,758,165,691,125,667,115,666,109,694,121,761,160,816,201"/>
+<area shape="rect" id="Node000005" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="9,535,206,575"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="312,326,260,378,183,464,127,536,122,533,179,461,256,374,315,322"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="261,260,260,264,242,284,222,314,182,391,119,535,115,533,177,389,218,311,238,281,256,260,264,255"/>
+<area shape="rect" id="Node000008" href="$class_playback_runtime_worker.html#a2e8822489adfd719ca6778573f37f0f6" title="Documents the playback runtime worker operation." alt="" coords="17,269,198,310"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="252,255,193,271,190,267,256,251"/>
+<area shape="poly" id="edge11_Node000009_Node000007" title=" " alt="" coords="534,168,495,183,416,210,413,205,493,178,538,165"/>
+<area shape="rect" id="Node000010" href="$class_direct_application_runtime.html#adefa4cd7115cd8b0d83fbb1274079dd7" title="Loads session." alt="" coords="267,132,436,173"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="476,152,438,153,436,149,481,149"/>
+<area shape="rect" id="Node000013" href="$class_threaded_application_runtime.html#a18941be28148ca73cbe92d5db6f680a8" title="Shuts down the threaded runtime." alt="" coords="258,67,446,107"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="493,91,448,91,445,86,497,88"/>
+<area shape="rect" id="Node000014" href="$class_threaded_application_runtime.html#a3b27dc2aada3d49a1d20e41710144f75" title="Returns the current threaded application runtime." alt="" coords="5,67,210,107"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="240,89,212,89,208,85,244,85"/>
+<area shape="rect" id="Node000016" href="$class_playback_service.html#a71ed12f065ed4adb407e86b106e2721b" title="Notifies observers about playback error." alt="" coords="753,553,933,594"/>
+<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="1749,687,1412,664,1203,643,993,616,894,597,894,592,994,611,1203,638,1412,659,1755,687"/>
+<area shape="rect" id="Node000028" href="$class_playback_service.html#a6907e4156a3ae1452f1a574208e36e07" title="Performs the publish replay frame operation." alt="" coords="1264,416,1432,457"/>
+<area shape="poly" id="edge42_Node000015_Node000028" title=" " alt="" coords="1830,665,1718,601,1546,520,1402,460,1403,454,1548,515,1721,597,1835,666"/>
+<area shape="rect" id="Node000034" href="$class_playback_service.html#ae6ad329266b83c6a08dcb8aa86ece738" title="Reads timestamp." alt="" coords="1502,612,1720,637"/>
+<area shape="poly" id="edge52_Node000015_Node000034" title=" " alt="" coords="1794,670,1666,640,1667,635,1799,670"/>
+<area shape="rect" id="Node000036" href="$class_playback_service.html#a93fec01bf69f305705feb7e6a63d45b9" title="Performs the seek operation." alt="" coords="1016,737,1172,762"/>
+<area shape="poly" id="edge59_Node000015_Node000036" title=" " alt="" coords="1799,703,1720,720,1568,736,1417,745,1172,752,1172,747,1416,740,1568,731,1719,715,1794,704"/>
+<area shape="poly" id="edge19_Node000016_Node000015" title=" " alt="" coords="948,580,994,587,1213,615,1431,638,1777,673,1772,674,1431,643,1213,620,993,592,948,585"/>
+<area shape="rect" id="Node000017" href="$class_direct_application_runtime.html#af7dfb47a5a42b53c0a26e62c480d9362" title="Constructs this object." alt="" coords="504,561,682,602"/>
+<area shape="poly" id="edge18_Node000016_Node000017" title=" " alt="" coords="735,578,683,581,682,576,740,576"/>
+<area shape="rect" id="Node000018" href="$class_playback_runtime_worker.html#afc6e5a3749eb10821c8c3fca1eedcef7" title="Documents the initialize operation." alt="" coords="510,496,676,537"/>
+<area shape="poly" id="edge20_Node000016_Node000018" title=" " alt="" coords="735,550,677,538,676,533,741,549"/>
+<area shape="poly" id="edge39_Node000016_Node000026" title=" " alt="" coords="809,604,611,782,608,777,804,605"/>
+<area shape="poly" id="edge21_Node000018_Node000004" title=" " alt="" coords="566,483,504,400,471,360,444,334,416,317,415,312,448,330,475,357,508,397,571,483"/>
+<area shape="poly" id="edge37_Node000018_Node000005" title=" " alt="" coords="493,496,441,490,381,485,319,486,258,494,198,512,147,536,144,532,196,508,257,488,318,480,381,480,441,485,498,494"/>
+<area shape="poly" id="edge22_Node000018_Node000007" title=" " alt="" coords="570,482,497,351,444,264,427,252,426,246,448,260,502,348,576,482"/>
+<area shape="poly" id="edge38_Node000018_Node000008" title=" " alt="" coords="564,484,513,430,480,402,445,379,352,353,196,313,194,308,353,347,447,374,484,398,517,426,569,484"/>
+<area shape="rect" id="Node000019" href="$class_playback_runtime_worker.html#a6b6daac9a4b5330614426cac8c2c7c30" title="Controls the pause operation." alt="" coords="269,895,434,935"/>
+<area shape="poly" id="edge23_Node000018_Node000019" title=" " alt="" coords="501,543,496,551,481,572,471,593,462,634,464,674,472,715,480,756,483,797,474,840,463,862,448,883,434,896,431,892,444,880,459,859,469,838,477,797,475,756,467,716,459,675,457,633,466,591,477,570,492,548,497,547"/>
+<area shape="rect" id="Node000020" href="$class_playback_runtime_worker.html#a59e6f63a8a2fd5d154305ccac9ba9090" title="Controls the play operation." alt="" coords="269,388,434,429"/>
+<area shape="poly" id="edge25_Node000018_Node000020" title=" " alt="" coords="533,490,445,449,405,432,404,427,447,445,538,488"/>
+<area shape="rect" id="Node000021" href="$class_playback_runtime_worker.html#a2ecdfbcc61ce14f5d18238e0ffab9cc3" title="Documents the reset metrics operation." alt="" coords="269,503,434,543"/>
+<area shape="poly" id="edge27_Node000018_Node000021" title=" " alt="" coords="493,520,436,523,434,518,497,518"/>
+<area shape="rect" id="Node000022" href="$class_playback_runtime_worker.html#aa43b9d9d22a45ccfb709b024ec39c239" title="Documents the seek operation." alt="" coords="269,699,434,739"/>
+<area shape="poly" id="edge29_Node000018_Node000022" title=" " alt="" coords="500,544,496,551,483,568,476,584,473,618,469,652,461,670,448,688,431,700,428,696,444,684,457,667,464,651,467,617,471,583,478,565,492,548,496,548"/>
+<area shape="rect" id="Node000023" href="$class_playback_runtime_worker.html#a21dffe98615fdafca4469c98df9e8da3" title="Sets playback rate." alt="" coords="269,568,434,609"/>
+<area shape="poly" id="edge31_Node000018_Node000023" title=" " alt="" coords="506,543,424,570,421,565,511,540"/>
+<area shape="rect" id="Node000024" href="$class_playback_runtime_worker.html#ac7f75990ff7d4effdd87318ef12e7f91" title="Sets playback repeat." alt="" coords="269,633,434,674"/>
+<area shape="poly" id="edge33_Node000018_Node000024" title=" " alt="" coords="499,546,496,552,480,569,472,586,464,604,448,622,427,635,425,630,444,618,460,601,467,584,476,566,492,548,503,543"/>
+<area shape="rect" id="Node000025" href="$class_playback_runtime_worker.html#a068f75300a31e5a915f5c33b62499336" title="Controls the stop operation." alt="" coords="269,764,434,805"/>
+<area shape="poly" id="edge35_Node000018_Node000025" title=" " alt="" coords="500,544,496,551,479,576,472,601,470,625,472,650,474,675,473,701,466,727,448,753,432,766,430,761,444,749,461,724,468,700,469,675,467,650,465,625,466,600,474,574,492,548,496,547"/>
+<area shape="poly" id="edge24_Node000019_Node000005" title=" " alt="" coords="260,885,256,884,222,847,194,806,170,763,151,718,124,636,112,579,113,573,129,635,156,716,175,760,199,804,227,844,260,880,265,887"/>
+<area shape="poly" id="edge26_Node000020_Node000005" title=" " alt="" coords="279,437,259,449,190,494,135,536,131,533,187,490,256,445,283,433"/>
+<area shape="poly" id="edge28_Node000021_Node000005" title=" " alt="" coords="252,537,207,544,205,540,256,534"/>
+<area shape="poly" id="edge30_Node000022_Node000005" title=" " alt="" coords="266,692,256,688,217,662,181,632,128,578,128,573,185,628,221,657,259,683,272,691"/>
+<area shape="poly" id="edge32_Node000023_Node000005" title=" " alt="" coords="251,576,207,571,205,566,256,574"/>
+<area shape="poly" id="edge34_Node000024_Node000005" title=" " alt="" coords="274,628,257,623,154,578,154,573,259,618,279,627"/>
+<area shape="poly" id="edge36_Node000025_Node000005" title=" " alt="" coords="263,757,256,753,209,710,169,662,138,615,119,579,119,573,143,612,174,658,213,707,259,749,269,756"/>
+<area shape="poly" id="edge41_Node000026_Node000025" title=" " alt="" coords="499,790,435,790,435,784,505,789"/>
+<area shape="rect" id="Node000027" href="$class_direct_application_runtime.html#ae0f452bf0b866e973cb62a7a4101cbe8" title="Returns the current stop." alt="" coords="267,829,436,870"/>
+<area shape="poly" id="edge40_Node000026_Node000027" title=" " alt="" coords="519,810,437,832,436,827,524,809"/>
+<area shape="poly" id="edge47_Node000028_Node000016" title=" " alt="" coords="1246,416,1188,413,1122,414,1056,425,1025,435,995,449,978,465,970,483,963,503,948,524,924,541,899,555,896,550,921,537,944,520,958,500,965,481,974,462,992,445,1023,430,1055,420,1122,409,1188,408,1251,415"/>
+<area shape="rect" id="Node000029" href="$class_playback_service.html#ab222dc3c3901449380e63a7efedc1444" title="Performs the on clock tick operation." alt="" coords="994,460,1194,485"/>
+<area shape="poly" id="edge43_Node000028_Node000029" title=" " alt="" coords="1246,451,1190,461,1189,456,1251,450"/>
+<area shape="rect" id="Node000031" href="$class_playback_service.html#ad5ebc3fdc21007bb3cd1b165caa3d679" title="Returns the current reset to first frame." alt="" coords="1009,344,1179,385"/>
+<area shape="poly" id="edge48_Node000028_Node000031" title=" " alt="" coords="1256,411,1169,388,1168,383,1262,411"/>
+<area shape="poly" id="edge44_Node000029_Node000016" title=" " alt="" coords="1030,491,995,507,887,555,885,550,993,502,1035,489"/>
+<area shape="rect" id="Node000030" href="$class_playback_service.html#ac7ab3a370aabb6e88527fe42e366e11e" title="Constructs this object." alt="" coords="752,469,934,510"/>
+<area shape="poly" id="edge45_Node000029_Node000030" title=" " alt="" coords="975,481,935,486,933,481,981,480"/>
+<area shape="poly" id="edge46_Node000030_Node000018" title=" " alt="" coords="734,502,677,510,675,505,739,500"/>
+<area shape="poly" id="edge51_Node000031_Node000016" title=" " alt="" coords="1008,391,996,405,984,419,977,433,972,462,966,492,959,507,948,523,927,541,903,555,901,550,924,537,944,520,955,505,961,490,966,461,972,432,979,416,992,401,1004,394"/>
+<area shape="rect" id="Node000032" href="$class_playback_service.html#aa2d6dc38313787cd0fc136dcc159faca" title="Plays the current operation." alt="" coords="767,378,919,404"/>
+<area shape="poly" id="edge49_Node000031_Node000032" title=" " alt="" coords="991,376,920,385,919,380,996,374"/>
+<area shape="poly" id="edge50_Node000032_Node000020" title=" " alt="" coords="750,396,435,408,434,403,754,392"/>
+<area shape="poly" id="edge58_Node000034_Node000016" title=" " alt="" coords="1484,617,933,582,933,577,1489,615"/>
+<area shape="rect" id="Node000035" href="$class_playback_service.html#aeedd44d8b679909701b8c597496e1257" title="Finds frame before." alt="" coords="1256,547,1441,587"/>
+<area shape="poly" id="edge53_Node000034_Node000035" title=" " alt="" coords="1531,608,1441,590,1441,585,1537,608"/>
+<area shape="poly" id="edge55_Node000035_Node000016" title=" " alt="" coords="1238,569,934,575,933,570,1243,568"/>
+<area shape="poly" id="edge54_Node000035_Node000029" title=" " alt="" coords="1258,541,1241,537,1124,488,1124,483,1243,533,1263,541"/>
+<area shape="poly" id="edge56_Node000035_Node000036" title=" " alt="" coords="1308,596,1115,739,1113,734,1303,598"/>
+<area shape="poly" id="edge57_Node000036_Node000022" title=" " alt="" coords="1000,748,435,725,435,720,1002,744"/>
+<area shape="poly" id="edge62_Node000038_Node000016" title=" " alt="" coords="1224,524,994,555,934,563,932,558,993,550,1229,523"/>
+<area shape="poly" id="edge61_Node000038_Node000029" title=" " alt="" coords="1238,494,1186,488,1186,483,1243,494"/>
+<area shape="poly" id="edge65_Node000039_Node000019" title=" " alt="" coords="1801,874,1720,892,1535,914,1350,918,842,918,435,918,435,912,842,912,1349,912,1535,908,1719,887,1796,875"/>
+<area shape="rect" id="Node000040" href="$class_direct_application_runtime.html#ae4844382f8df6a08c95a63b462aa57ea" title="Returns the current pause." alt="" coords="1526,837,1696,878"/>
+<area shape="poly" id="edge64_Node000039_Node000040" title=" " alt="" coords="1767,858,1696,860,1696,855,1772,858"/>
+</map>

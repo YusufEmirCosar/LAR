@@ -1,0 +1,10 @@
+<map id="QtIpAccessPolicyRepository::load" name="QtIpAccessPolicyRepository::load">
+<area shape="rect" id="Node000001" title="Performs the load operation." alt="" coords="5,51,195,92"/>
+<area shape="rect" id="Node000002" href="$class_qt_ip_access_policy_repository.html#aee15a88b3c3fe7400ce56a569ec3c33a" title="Parses text." alt="" coords="243,51,432,92"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,69,230,71,224,72,195,74"/>
+<area shape="rect" id="Node000003" href="$qt__ip__address__normalizer_8cpp.html#a354a4fa14cb86712651a806de8372f12" title="Returns the stable exact&#45;match key shared by policy loading and UDP input." alt="" coords="500,29,635,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="432,57,487,52,482,53,433,62"/>
+<area shape="rect" id="Node000004" href="$class_ip_access_policy.html#a18edfb85bfc206f96b6f7b932f637cd9" title="Constructs this object." alt="" coords="480,79,655,120"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="433,80,467,87,462,87,432,86"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="529,28,522,21,526,11,542,5,568,3,596,5,612,15,606,14,594,10,568,8,543,10,530,15,527,20,534,30"/>
+</map>

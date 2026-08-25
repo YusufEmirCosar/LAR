@@ -1,0 +1,11 @@
+<map id="LarGeodesicGeometry::arc" name="LarGeodesicGeometry::arc">
+<area shape="rect" id="Node000001" title="Documents the arc operation." alt="" coords="888,13,1065,38"/>
+<area shape="rect" id="Node000002" href="$class_earth_camera_policy.html#afa5417a6c7c21c60b1c31c1be4ed6e81" title="Documents the fit coordinates operation." alt="" coords="697,5,840,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="870,26,840,28,840,23,875,26"/>
+<area shape="rect" id="Node000003" href="$class_earth_lar_view.html#a0e809f583a4542f2eccc32c4c62ed51d" title="Performs the fit to data operation." alt="" coords="489,13,649,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="679,26,650,28,650,23,684,26"/>
+<area shape="rect" id="Node000004" href="$class_earth_lar_view.html#a9a9aee7b2b2925d098198a5b6c3d5e31" title="Performs the mouse double click event operation." alt="" coords="254,5,441,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="471,26,442,28,441,23,476,26"/>
+<area shape="rect" id="Node000005" href="$class_earth_lar_view.html#a31a878a0e62a405d4a6b4632b5b22641" title="Maps unavailable." alt="" coords="5,13,206,38"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="235,26,206,28,206,23,241,26"/>
+</map>

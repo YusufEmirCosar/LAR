@@ -1,0 +1,5 @@
+<map id="lar::map::MapCamera::clampMercatorCenterY" name="lar::map::MapCamera::clampMercatorCenterY">
+<area shape="rect" id="Node000001" title="Performs the clamp mercator center y operation." alt="" coords="5,5,169,46"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_camera.html#a7079b884e2e9dead87376cbd91f8f774" title="Performs the mercator viewport operation." alt="" coords="217,5,364,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,23,204,25,199,26,169,28"/>
+</map>

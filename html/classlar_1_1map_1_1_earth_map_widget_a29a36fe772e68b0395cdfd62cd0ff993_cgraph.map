@@ -1,0 +1,15 @@
+<map id="lar::map::EarthMapWidget::setFlatWorldBounds" name="lar::map::EarthMapWidget::setFlatWorldBounds">
+<area shape="rect" id="Node000001" title="Sets flat world bounds." alt="" coords="5,39,179,79"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_camera.html#a94c9f729666b559c81ec99dd316919a8" title="Sets mercator world bounds." alt="" coords="227,39,402,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,56,214,59,208,59,179,62"/>
+<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_map_camera.html#a7b051361862a20132feef31029587881" title="Performs the constrain mercator center operation." alt="" coords="450,39,622,79"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="402,56,437,59,432,59,402,62"/>
+<area shape="rect" id="Node000004" href="$classlar_1_1map_1_1_map_camera.html#a699e33e0cbd4dca626c0dfff694efced" title="Performs the clamp mercator center y operation." alt="" coords="676,5,840,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="623,43,658,41,664,40,623,49"/>
+<area shape="rect" id="Node000006" href="$classlar_1_1map_1_1_map_camera.html#acd6f80d79badd22c058d5f60efc95f83" title="Performs the normalize mercator center operation." alt="" coords="670,71,846,111"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="623,69,657,76,652,76,623,74"/>
+<area shape="rect" id="Node000005" href="$classlar_1_1map_1_1_map_camera.html#a7079b884e2e9dead87376cbd91f8f774" title="Performs the mercator viewport operation." alt="" coords="900,5,1047,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="840,23,887,26,881,26,840,28"/>
+<area shape="rect" id="Node000007" href="$classlar_1_1map_1_1_map_projection.html#ae51b77201c9b343a098d386577f31c0c" title="Performs the wrap longitude operation." alt="" coords="894,71,1053,111"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="846,88,881,91,875,91,846,94"/>
+</map>
