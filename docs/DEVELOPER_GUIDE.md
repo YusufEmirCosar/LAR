@@ -166,7 +166,7 @@ one float uniform, because that reintroduces close-zoom replay jitter.
   Extend reader validation and tests before relying on another glTF feature.
 - A cubemap set must use one shared filename prefix with `_rt`, `_lf`, `_up`,
   `_dn`, `_ft`, and `_bk` suffixes. All six images must have the same square
-  dimensions. Preserve sortable prefixes so Change Skybox remains
+  dimensions. Preserve sortable prefixes so the Skybox action remains
   deterministic.
 - Keep telemetry/model axis conversion in `PlaneAttitudeTransform` and orbit
   math in `PlaneOrbitCamera`; neither belongs in widget event handlers.

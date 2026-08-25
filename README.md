@@ -316,29 +316,31 @@ from behind and above while applying the current yaw, pitch, and roll
 telemetry. The aircraft stays at the scene origin; this is an attitude and
 orientation visualization, not a translational flight simulator.
 
-The aircraft is surrounded by the selected cubemap. The lower-right **Change
-Skybox** button advances through every valid packaged six-face set and wraps
-back to the first set.
+The aircraft is surrounded by the selected cubemap. The **Skybox** button in
+the lower-right display box advances through every valid packaged six-face set
+and wraps back to the first set.
 
-The lower-right **Surface: Off/On** toggle adds an opaque local tactical plane
-beneath the aircraft. It projects available target, in-range, and in-zone data
-relative to the aircraft onto east/north metric axes and draws them over a
-quantized square grid. Minor grid lines, stronger five-cell lines, origin axes,
-and the current cell size are shown together. In this metric view the F-16 is
-the fixed scale reference: its unchanged normalized nose-to-tail extent
-represents 15 m, so the ground, target, grid, and LAR zones expand to their
-corresponding metric sizes around it. The aircraft therefore keeps the same
-visible size when the surface is toggled. Available aircraft altitude places
-the ground at its exact metric distance below the aircraft, with ground bounds
-and grid spacing expanding for a usable high-altitude view.
+The checkable **Target** button in that box adds an opaque local tactical plane
+beneath the aircraft and turns green while active. It projects available
+target, in-range, and in-zone data relative to the aircraft onto east/north
+metric axes and draws them over a quantized square grid. Minor grid lines,
+stronger five-cell lines, origin axes, and the current cell size are shown
+together. In this metric view the F-16 is the fixed scale reference: its
+unchanged normalized nose-to-tail extent represents 15 m, so the ground,
+target, grid, and LAR zones expand to their corresponding metric sizes around
+it. The aircraft therefore keeps the same visible size when the surface is
+toggled. Available aircraft altitude places the ground at its exact metric
+distance below the aircraft, with ground bounds and grid spacing expanding for
+a usable high-altitude view.
 
-The adjacent **Terrain DT0: Off/On** toggle replaces only that opaque flat
-ground with a nearby DTED elevation mesh. DT0 is the startup source. Use
-**Upload DTED Folder** to select DTED Level 1 or Level 2, then choose a folder
-whose cells use `{e|w}DDD/{n|s}DD.dt1` or `.dt2`; the validated folder becomes
-the source for the current session without being copied. The format prompt and
-folder picker can both be cancelled without changing the active source. An
-invalid folder also leaves the current source and patch intact.
+The adjacent checkable **Terrain** button replaces only that opaque flat ground
+with a nearby DTED elevation mesh and turns green while active. DT0 is the
+startup source. Use **DTED Folder** in the lower-left **Upload** box to select
+DTED Level 1 or Level 2, then choose a folder whose cells use
+`{e|w}DDD/{n|s}DD.dt1` or `.dt2`; the validated folder becomes the source for
+the current session without being copied. The format prompt and folder picker
+can both be cancelled without changing the active source. An invalid folder
+also leaves the current source and patch intact.
 
 DTED horizontal coordinates remain WGS84, elevations are interpreted as metres
 above the tile's declared mean-sea-level datum, and the aircraft stays at the
@@ -390,8 +392,8 @@ default chase distance. There is currently no cockpit POV.
 The model and cubemap files live under `assets/models` and `assets/cubemaps`.
 Plane mode renders validated `TEXCOORD_0` UVs and PNG/JPEG base-color textures
 from the packaged GLB or a user-uploaded `.gltf`/`.glb` model. The packaged
-F-16 remains the default; use **Upload Jet Model** in the Plane controls to
-replace it for the current session. **Upload DTED Folder** similarly selects an
+F-16 remains the default; use **Jet Model** in the lower-left **Upload** box to
+replace it for the current session. **DTED Folder** similarly selects an
 external DT1/DT2 tree for the session; restarting restores normal DT0 source
 discovery.
 They and the compact generated water mask are copied beside every executable

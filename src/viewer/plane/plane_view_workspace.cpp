@@ -5,16 +5,18 @@
 
 #include <QCoreApplication>
 #include <QFileDialog>
+#include <QFrame>
+#include <QGroupBox>
 #include <QGuiApplication>
 #include <QInputDialog>
 #include <QLabel>
 #include <QMouseEvent>
 #include <QPushButton>
 #include <QResizeEvent>
+#include <QVBoxLayout>
 #include <QWheelEvent>
 
 #include <algorithm>
-#include <array>
 
 PlaneViewWorkspace::PlaneViewWorkspace(QString packageDirectory, QWidget *parent)
     : QWidget(parent) {
@@ -33,59 +35,105 @@ PlaneViewWorkspace::PlaneViewWorkspace(QString packageDirectory, QWidget *parent
             QStringLiteral("background:#111923;color:#dce8e3;font-weight:600;"));
     }
 
-    m_uploadModelButton = new QPushButton(QStringLiteral("Upload Jet Model"), this);
+    m_uploadPanel = new QGroupBox(this);
+    m_uploadPanel->setObjectName(QStringLiteral("planeUploadPanel"));
+    m_uploadPanel->setAccessibleName(QStringLiteral("Upload controls"));
+    auto *uploadLayout = new QVBoxLayout(m_uploadPanel);
+    uploadLayout->setContentsMargins(4, 4, 4, 4);
+    uploadLayout->setSpacing(0);
+
+    auto *uploadHeader = new QLabel(QStringLiteral("Upload"), m_uploadPanel);
+    uploadHeader->setObjectName(QStringLiteral("planeUploadHeader"));
+    uploadHeader->setAlignment(Qt::AlignCenter);
+    uploadLayout->addWidget(uploadHeader);
+
+    m_uploadModelButton = new QPushButton(QStringLiteral("Jet Model"), m_uploadPanel);
     m_uploadModelButton->setObjectName(QStringLiteral("planeUploadModelButton"));
     m_uploadModelButton->setAccessibleName(QStringLiteral("Upload jet model"));
     m_uploadModelButton->setToolTip(QStringLiteral("Load a .gltf or .glb jet model"));
 
-    m_uploadTerrainButton = new QPushButton(QStringLiteral("Upload DTED Folder"), this);
+    m_uploadTerrainButton = new QPushButton(QStringLiteral("DTED Folder"), m_uploadPanel);
     m_uploadTerrainButton->setObjectName(QStringLiteral("planeUploadTerrainButton"));
     m_uploadTerrainButton->setAccessibleName(QStringLiteral("Upload DTED terrain folder"));
     m_uploadTerrainButton->setToolTip(
         QStringLiteral("Use a DTED Level 1 or Level 2 folder for this session"));
+    uploadLayout->addWidget(m_uploadModelButton);
+    uploadLayout->addWidget(m_uploadTerrainButton);
 
-    m_surfaceButton = new QPushButton(QStringLiteral("Surface: Off"), this);
+    m_displayPanel = new QFrame(this);
+    m_displayPanel->setObjectName(QStringLiteral("planeDisplayPanel"));
+    auto *displayLayout = new QVBoxLayout(m_displayPanel);
+    displayLayout->setContentsMargins(4, 4, 4, 4);
+    displayLayout->setSpacing(0);
+
+    m_terrainButton = new QPushButton(QStringLiteral("Terrain"), m_displayPanel);
+    m_terrainButton->setObjectName(QStringLiteral("planeTerrainButton"));
+    m_terrainButton->setCheckable(true);
+    m_terrainButton->setAccessibleName(QStringLiteral("Toggle DTED terrain"));
+
+    m_surfaceButton = new QPushButton(QStringLiteral("Target"), m_displayPanel);
     m_surfaceButton->setObjectName(QStringLiteral("planeSurfaceButton"));
     m_surfaceButton->setCheckable(true);
     m_surfaceButton->setAccessibleName(QStringLiteral("Toggle tactical surface"));
     m_surfaceButton->setToolTip(
         QStringLiteral("Show or hide the metric ground, target, and LAR areas"));
 
-    m_terrainButton = new QPushButton(QStringLiteral("Terrain: Off"), this);
-    m_terrainButton->setObjectName(QStringLiteral("planeTerrainButton"));
-    m_terrainButton->setCheckable(true);
-    m_terrainButton->setAccessibleName(QStringLiteral("Toggle DTED terrain"));
-
-    m_changeSkyboxButton = new QPushButton(QStringLiteral("Change Skybox"), this);
+    m_changeSkyboxButton = new QPushButton(QStringLiteral("Skybox"), m_displayPanel);
     m_changeSkyboxButton->setObjectName(QStringLiteral("planeChangeSkyboxButton"));
-    const QString controlStyle = QStringLiteral(R"(
-        QPushButton#planeUploadModelButton, QPushButton#planeUploadTerrainButton,
-        QPushButton#planeChangeSkyboxButton,
-        QPushButton#planeSurfaceButton, QPushButton#planeTerrainButton {
-            min-height: 28px;
-            padding: 3px 12px;
+    m_changeSkyboxButton->setAccessibleName(QStringLiteral("Change skybox"));
+    m_changeSkyboxButton->setToolTip(QStringLiteral("Change to the next available skybox"));
+    displayLayout->addWidget(m_terrainButton);
+    displayLayout->addWidget(m_surfaceButton);
+    displayLayout->addWidget(m_changeSkyboxButton);
+
+    setStyleSheet(QStringLiteral(R"(
+        QGroupBox#planeUploadPanel, QFrame#planeDisplayPanel {
             background: rgba(245, 248, 246, 232);
+            border: 1px solid #bdc8c1;
+            border-radius: 8px;
+        }
+        QGroupBox#planeUploadPanel {
+            margin: 0;
+            padding: 0;
+        }
+        QLabel#planeUploadHeader {
+            min-height: 24px;
+            background: transparent;
+            border: 0;
             color: #263c31;
-            border: 1px solid #789087;
-            border-radius: 7px;
+            font-weight: 600;
         }
-        QPushButton#planeUploadModelButton:hover, QPushButton#planeUploadTerrainButton:hover,
-        QPushButton#planeChangeSkyboxButton:hover,
-        QPushButton#planeSurfaceButton:hover, QPushButton#planeTerrainButton:hover {
-            background: #c9e6d8;
+        QGroupBox#planeUploadPanel QPushButton,
+        QFrame#planeDisplayPanel QPushButton {
+            min-width: 82px;
+            min-height: 24px;
+            padding: 2px 7px;
+            background: #ffffff;
+            color: #263c31;
+            border: 1px solid #bfc8c2;
+            border-radius: 0;
+        }
+        QGroupBox#planeUploadPanel QPushButton:hover,
+        QFrame#planeDisplayPanel QPushButton:hover {
+            background: #f1f5f2;
             color: #154b3a;
+            border-color: #789087;
         }
-        QPushButton#planeSurfaceButton:checked, QPushButton#planeTerrainButton:checked {
-            background: #2f745d;
-            border-color: #c9e6d8;
-            color: white;
+        QFrame#planeDisplayPanel QPushButton:checked {
+            background: #dfece6;
+            border-color: #357461;
+            color: #154b3a;
+            font-weight: 600;
         }
-    )");
-    m_uploadModelButton->setStyleSheet(controlStyle);
-    m_uploadTerrainButton->setStyleSheet(controlStyle);
-    m_terrainButton->setStyleSheet(controlStyle);
-    m_surfaceButton->setStyleSheet(controlStyle);
-    m_changeSkyboxButton->setStyleSheet(controlStyle);
+        QPushButton#planeUploadModelButton, QPushButton#planeTerrainButton {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        QPushButton#planeUploadTerrainButton, QPushButton#planeChangeSkyboxButton {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    )"));
 
     connect(m_uploadModelButton, &QPushButton::clicked, this, [this] {
         const QString path = QFileDialog::getOpenFileName(
@@ -114,11 +162,8 @@ PlaneViewWorkspace::PlaneViewWorkspace(QString packageDirectory, QWidget *parent
             m_sceneWidget->loadTerrainFromDirectory(path, level);
         }
     });
-    connect(m_surfaceButton, &QPushButton::toggled, this, [this](bool visible) {
-        m_surfaceButton->setText(visible ? QStringLiteral("Surface: On")
-                                         : QStringLiteral("Surface: Off"));
-        m_sceneWidget->setSurfaceVisible(visible);
-    });
+    connect(m_surfaceButton, &QPushButton::toggled, this,
+            [this](bool visible) { m_sceneWidget->setSurfaceVisible(visible); });
     connect(m_terrainButton, &QPushButton::toggled, this, [this](bool visible) {
         m_sceneWidget->setTerrainVisible(visible);
         refreshTerrainControls();
@@ -152,18 +197,12 @@ void PlaneViewWorkspace::refreshTerrainControls() {
     const bool available = m_sceneWidget->terrainAvailable();
     m_terrainButton->setEnabled(available);
     if (!available) {
-        m_terrainButton->setText(QStringLiteral("Terrain: N/A"));
         m_terrainButton->setToolTip(
             QStringLiteral("No DTED0 root was found; upload a DT1/DT2 folder to enable terrain"));
         return;
     }
-    const int level = dtedLevelNumber(m_sceneWidget->terrainLevel());
-    m_terrainButton->setText(
-        QStringLiteral("Terrain DT%1: %2")
-            .arg(level)
-            .arg(m_sceneWidget->terrainVisible() ? QStringLiteral("On") : QStringLiteral("Off")));
     m_terrainButton->setToolTip(
-        QStringLiteral("Render the nearby aircraft area from the active %1 source")
+        QStringLiteral("Show or hide the nearby aircraft area from the active %1 source")
             .arg(dtedLevelDisplayName(m_sceneWidget->terrainLevel())));
 }
 
@@ -193,39 +232,19 @@ void PlaneViewWorkspace::resizeEvent(QResizeEvent *event) {
         m_openGlFallback->show();
     }
     constexpr int ViewportMargin = 18;
-    constexpr int ControlGap = 8;
-    m_uploadModelButton->adjustSize();
-    m_uploadTerrainButton->adjustSize();
-    m_terrainButton->adjustSize();
-    m_surfaceButton->adjustSize();
-    m_changeSkyboxButton->adjustSize();
-    const int controlHeight = std::max({m_uploadModelButton->height(),
-                                        m_uploadTerrainButton->height(), m_terrainButton->height(),
-                                        m_surfaceButton->height(), m_changeSkyboxButton->height()});
-    int controlsY = std::max(0, height() - controlHeight - ViewportMargin);
-    int rightEdge = std::max(0, width() - ViewportMargin);
-    const std::array<QPushButton *, 5> controls{m_changeSkyboxButton, m_surfaceButton,
-                                                m_terrainButton, m_uploadTerrainButton,
-                                                m_uploadModelButton};
-    for (QPushButton *button : controls) {
-        if (rightEdge < width() - ViewportMargin && rightEdge - button->width() < ViewportMargin) {
-            rightEdge = std::max(0, width() - ViewportMargin);
-            controlsY = std::max(0, controlsY - controlHeight - ControlGap);
-        }
-        const int buttonX = std::max(0, rightEdge - button->width());
-        button->setGeometry(buttonX, controlsY, button->width(), button->height());
-        rightEdge = buttonX - ControlGap;
-    }
+    m_uploadPanel->adjustSize();
+    m_displayPanel->adjustSize();
+    m_uploadPanel->move(ViewportMargin,
+                        std::max(0, height() - m_uploadPanel->height() - ViewportMargin));
+    m_displayPanel->move(std::max(0, width() - m_displayPanel->width() - ViewportMargin),
+                         std::max(0, height() - m_displayPanel->height() - ViewportMargin));
     if (m_openGlFallback != nullptr) {
         m_openGlFallback->raise();
     } else {
         m_sceneWidget->raise();
     }
-    m_surfaceButton->raise();
-    m_terrainButton->raise();
-    m_changeSkyboxButton->raise();
-    m_uploadTerrainButton->raise();
-    m_uploadModelButton->raise();
+    m_uploadPanel->raise();
+    m_displayPanel->raise();
 }
 
 void PlaneViewWorkspace::forwardEvent(QEvent &event) {

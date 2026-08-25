@@ -224,7 +224,7 @@ Resource limits live in `lar_zone_mesh_limits.h` and
 
 | Component | Important operations | Responsibility |
 | --- | --- | --- |
-| `PlaneViewWorkspace` | Scene/page contract, event forwarding, model/terrain upload actions | Plane-mode host, model and DT1/DT2 folder controls, and lower-right terrain/surface/skybox controls |
+| `PlaneViewWorkspace` | Scene/page contract, event forwarding, model/terrain upload actions | Plane-mode host with lower-left Upload and lower-right terrain/target/skybox control boxes |
 | `PlaneSceneWidget` | `setSceneState`, `loadModelFromFile`, `loadTerrainFromDirectory`, `setSurfaceVisible`, `selectNextSkybox`, `resetCamera` | OpenGL widget, packaged/user model loading, session terrain-source switching, orbit input, diagnostics, frame signals |
 | `PlaneSceneRenderer` | Model/skybox/surface install, `initialize`, `draw`, `cleanup` | Context-thread GPU lifecycle and ordered scene composition |
 | `GlbModelReader` | `readFile` | Bounded `.gltf`/`.glb` mesh/UV parsing, data-URI or local-resource loading, node transform flattening, material extraction, normalized mesh output |

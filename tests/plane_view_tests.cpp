@@ -22,10 +22,13 @@
 #include <QDir>
 #include <QFile>
 #include <QFileInfo>
+#include <QFrame>
+#include <QGroupBox>
 #include <QInputDialog>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QLabel>
 #include <QPushButton>
 #include <QTemporaryDir>
 #include <QTemporaryFile>
@@ -1105,26 +1108,46 @@ void PlaneViewTests::workspaceCyclesSkyboxFromLowerRight() {
         workspace.findChild<QPushButton *>(QStringLiteral("planeUploadTerrainButton"));
     auto *surfaceButton = workspace.findChild<QPushButton *>(QStringLiteral("planeSurfaceButton"));
     auto *terrainButton = workspace.findChild<QPushButton *>(QStringLiteral("planeTerrainButton"));
+    auto *uploadPanel = workspace.findChild<QGroupBox *>(QStringLiteral("planeUploadPanel"));
+    auto *uploadHeader = workspace.findChild<QLabel *>(QStringLiteral("planeUploadHeader"));
+    auto *displayPanel = workspace.findChild<QFrame *>(QStringLiteral("planeDisplayPanel"));
     QVERIFY(changeButton);
     QVERIFY(uploadButton);
     QVERIFY(uploadTerrainButton);
     QVERIFY(surfaceButton);
     QVERIFY(terrainButton);
-    QCOMPARE(uploadButton->text(), QStringLiteral("Upload Jet Model"));
-    QCOMPARE(uploadTerrainButton->text(), QStringLiteral("Upload DTED Folder"));
-    const auto workspaceButtons =
-        workspace.findChildren<QPushButton *>(QString(), Qt::FindDirectChildrenOnly);
+    QVERIFY(uploadPanel);
+    QVERIFY(uploadHeader);
+    QVERIFY(displayPanel);
+    QCOMPARE(uploadHeader->text(), QStringLiteral("Upload"));
+    QCOMPARE(uploadHeader->alignment(), Qt::AlignCenter);
+    QCOMPARE(uploadButton->text(), QStringLiteral("Jet Model"));
+    QCOMPARE(uploadTerrainButton->text(), QStringLiteral("DTED Folder"));
+    QCOMPARE(terrainButton->text(), QStringLiteral("Terrain"));
+    QCOMPARE(surfaceButton->text(), QStringLiteral("Target"));
+    QCOMPARE(changeButton->text(), QStringLiteral("Skybox"));
+    QCOMPARE(uploadButton->parentWidget(), uploadPanel);
+    QCOMPARE(uploadTerrainButton->parentWidget(), uploadPanel);
+    QCOMPARE(terrainButton->parentWidget(), displayPanel);
+    QCOMPARE(surfaceButton->parentWidget(), displayPanel);
+    QCOMPARE(changeButton->parentWidget(), displayPanel);
+    QCOMPARE(uploadHeader->parentWidget(), uploadPanel);
+    QVERIFY(std::abs(uploadHeader->geometry().center().x() - uploadPanel->rect().center().x()) <=
+            1);
+    QVERIFY(uploadHeader->geometry().bottom() < uploadButton->geometry().top());
+    const auto workspaceButtons = workspace.findChildren<QPushButton *>();
     QCOMPARE(workspaceButtons.size(), 5);
-    QVERIFY(changeButton->x() >= workspace.width() - changeButton->width() - 20);
-    QVERIFY(changeButton->y() >= workspace.height() - changeButton->height() - 20);
-    QVERIFY(surfaceButton->x() < changeButton->x());
-    QCOMPARE(surfaceButton->y(), changeButton->y());
-    QVERIFY(terrainButton->x() < surfaceButton->x());
-    QCOMPARE(terrainButton->y(), changeButton->y());
-    QVERIFY(uploadTerrainButton->x() < terrainButton->x());
-    QCOMPARE(uploadTerrainButton->y(), changeButton->y());
+    QVERIFY(uploadPanel->x() <= 20);
+    QVERIFY(uploadPanel->y() >= workspace.height() - uploadPanel->height() - 20);
+    QVERIFY(displayPanel->x() >= workspace.width() - displayPanel->width() - 20);
+    QVERIFY(displayPanel->y() >= workspace.height() - displayPanel->height() - 20);
+    QVERIFY(uploadButton->y() < uploadTerrainButton->y());
+    QVERIFY(terrainButton->y() < surfaceButton->y());
+    QVERIFY(surfaceButton->y() < changeButton->y());
     QVERIFY(terrainButton->isEnabled());
-    QCOMPARE(terrainButton->text(), QStringLiteral("Terrain DT0: Off"));
+    QVERIFY(terrainButton->isCheckable());
+    QVERIFY(surfaceButton->isCheckable());
+    QVERIFY(!changeButton->isCheckable());
     bool formatPromptShown = false;
     QTimer::singleShot(0, &workspace, [&formatPromptShown] {
         auto *dialog = qobject_cast<QInputDialog *>(QApplication::activeModalWidget());
@@ -1142,15 +1165,21 @@ void PlaneViewTests::workspaceCyclesSkyboxFromLowerRight() {
     QVERIFY(
         dted_test_fixture::writeCell(level1Directory.path(), DtedLevel::Level1, {35, 39}, 1, 1600));
     QVERIFY(scene->loadTerrainFromDirectory(level1Directory.path(), DtedLevel::Level1));
-    QCOMPARE(terrainButton->text(), QStringLiteral("Terrain DT1: Off"));
+    QCOMPARE(terrainButton->text(), QStringLiteral("Terrain"));
+    QVERIFY(terrainButton->toolTip().contains(QStringLiteral("DTED Level 1")));
     QVERIFY(!scene->surfaceVisible());
     QTest::mouseClick(surfaceButton, Qt::LeftButton);
     QVERIFY(scene->surfaceVisible());
     QVERIFY(surfaceButton->isChecked());
-    QCOMPARE(surfaceButton->text(), QStringLiteral("Surface: On"));
+    QCOMPARE(surfaceButton->text(), QStringLiteral("Target"));
+    QTest::mouseClick(terrainButton, Qt::LeftButton);
+    QVERIFY(scene->terrainVisible());
+    QVERIFY(terrainButton->isChecked());
+    QCOMPARE(terrainButton->text(), QStringLiteral("Terrain"));
     QCOMPARE(scene->skyboxIndex(), 0);
     QTest::mouseClick(changeButton, Qt::LeftButton);
     QCOMPARE(scene->skyboxIndex(), 1);
+    QVERIFY(!changeButton->isChecked());
     QVERIFY(scene->surfaceVisible());
 }
 

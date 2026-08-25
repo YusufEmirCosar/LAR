@@ -268,16 +268,8 @@ void PlaneSceneWidget::paintGL() {
         painter.drawText(rect().adjusted(24, 72, -24, -24), Qt::AlignHCenter | Qt::AlignTop,
                          QStringLiteral("ATTITUDE DATA INCOMPLETE"));
     }
-    const QString instructions =
-        QStringLiteral("Drag to orbit  •  Wheel to zoom  •  Double-click to reset");
-    painter.setPen(QColor(235, 242, 239, 210));
     if (m_surfaceVisible || m_terrainVisible) {
         const QFontMetrics metrics(painter.font());
-        const QRect instructionsRect(18, height() - 86,
-                                     metrics.horizontalAdvance(instructions) + 22, 31);
-        painter.setBrush(QColor(8, 12, 20, 190));
-        painter.drawRoundedRect(instructionsRect, 7.0, 7.0);
-        painter.drawText(instructionsRect, Qt::AlignCenter, instructions);
         const QString terrainSourceLabel =
             QStringLiteral("DT%1").arg(dtedLevelNumber(m_terrainDataset.level));
         QString statusLabel;
@@ -295,14 +287,14 @@ void PlaneSceneWidget::paintGL() {
                               ? QStringLiteral("Terrain: %1").arg(terrainSourceLabel)
                               : QStringLiteral("Terrain: Loading");
         }
-        const QRect labelRect(18, height() - 49, metrics.horizontalAdvance(statusLabel) + 22, 31);
+        const int labelWidth =
+            std::min(metrics.horizontalAdvance(statusLabel) + 22, std::max(0, width() - 36));
+        const QRect labelRect(std::max(0, (width() - labelWidth) / 2), height() - 49, labelWidth,
+                              31);
         painter.setPen(QColor(235, 242, 239, 235));
         painter.setBrush(QColor(8, 12, 20, 190));
         painter.drawRoundedRect(labelRect, 7.0, 7.0);
         painter.drawText(labelRect, Qt::AlignCenter, statusLabel);
-    } else {
-        painter.drawText(rect().adjusted(18, 18, -18, -14), Qt::AlignLeft | Qt::AlignBottom,
-                         instructions);
     }
     painter.end();
     emit frameRendered();

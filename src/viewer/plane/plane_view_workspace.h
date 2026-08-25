@@ -2,13 +2,15 @@
 
 /**
  * @file plane_view_workspace.h
- * @brief Hosted Plane page with lower-right surface and skybox controls.
+ * @brief Hosted Plane page with lower-corner upload and display controls.
  */
 
 #include "viewer/viewport/lar_viewport_page.h"
 
 #include <QWidget>
 
+class QFrame;
+class QGroupBox;
 class QLabel;
 class PlaneSceneWidget;
 class QPushButton;
@@ -48,6 +50,8 @@ class PlaneViewWorkspace final : public QWidget, public ILarViewportPage {
     void refreshTerrainControls();
 
     PlaneSceneWidget *m_sceneWidget = nullptr;
+    QGroupBox *m_uploadPanel = nullptr;
+    QFrame *m_displayPanel = nullptr;
     QPushButton *m_uploadModelButton = nullptr;
     QPushButton *m_uploadTerrainButton = nullptr;
     QPushButton *m_terrainButton = nullptr;
