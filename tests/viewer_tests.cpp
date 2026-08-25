@@ -111,6 +111,7 @@ class ViewerTests : public QObject {
     void viewportControlsStayAbovePages();
     void originalUiContractIsPreserved();
     void hudReplacesCurrentValuesColumn();
+    void planeZoneIndicatorTracksContainmentAndPrecedence();
     void cameraControlsExposeRequestedModes();
     void gridCameraIsNorthUpUnlessTurningWithPlane();
     void geodesicCirclePreservesSurfaceRadius();
@@ -231,6 +232,7 @@ void ViewerTests::hudReplacesCurrentValuesColumn() {
     auto *viewport = window.findChild<LarViewport *>(QStringLiteral("larViewport"));
     auto *valuesStack = window.findChild<QStackedWidget *>(QStringLiteral("currentValuesStack"));
     auto *valuesTitle = window.findChild<QLabel *>(QStringLiteral("columnTitle"));
+    auto *zoneIndicator = window.findChild<QLabel *>(QStringLiteral("planeZoneIndicator"));
     auto *planeButton =
         window.findChild<QPushButton *>(QStringLiteral("viewportPlaneContentButton"));
     auto *hudButton = window.findChild<QPushButton *>(QStringLiteral("viewportHudContentButton"));
@@ -241,6 +243,7 @@ void ViewerTests::hudReplacesCurrentValuesColumn() {
     QVERIFY(viewport);
     QVERIFY(valuesStack);
     QVERIFY(valuesTitle);
+    QVERIFY(zoneIndicator);
     QVERIFY(planeButton);
     QVERIFY(hudButton);
     QVERIFY(hudPanel);
@@ -250,7 +253,8 @@ void ViewerTests::hudReplacesCurrentValuesColumn() {
     QCOMPARE(udpReplayButton->text(), QStringLiteral("UDP / Offline Replay"));
     QCOMPARE(sliderTestButton->text(), QStringLiteral("Calculation Test"));
     QCOMPARE(valuesStack->currentIndex(), 0);
-    QCOMPARE(valuesTitle->text(), QStringLiteral("Current Values"));
+    QCOMPARE(valuesTitle->text(), QStringLiteral("Plane Telemetry"));
+    QVERIFY(zoneIndicator->isVisible());
     QVERIFY(udpReplayButton->isChecked());
     QVERIFY(!sliderTestButton->isChecked());
     QVERIFY(!hudPanel->isVisible());
@@ -259,6 +263,7 @@ void ViewerTests::hudReplacesCurrentValuesColumn() {
     QCOMPARE(viewport->contentMode(), ViewportContentMode::Plane);
     QCOMPARE(valuesStack->currentIndex(), 0);
     QCOMPARE(valuesTitle->text(), QStringLiteral("Plane Telemetry"));
+    QVERIFY(zoneIndicator->isVisible());
     auto *planeWorkspace = window.findChild<QWidget *>(QStringLiteral("planeViewport"));
     auto *larControlRail = window.findChild<QWidget *>(QStringLiteral("viewportControlRail"));
     QVERIFY(planeWorkspace);
@@ -270,6 +275,7 @@ void ViewerTests::hudReplacesCurrentValuesColumn() {
     QCOMPARE(viewport->contentMode(), ViewportContentMode::Hud);
     QCOMPARE(valuesStack->currentIndex(), 1);
     QCOMPARE(valuesTitle->text(), QStringLiteral("DLZ Values"));
+    QVERIFY(!zoneIndicator->isVisible());
     QVERIFY(hudPanel->isVisible());
     const auto hudEntityHeaders = hudPanel->findChildren<QLabel *>(QStringLiteral("entityHeader"));
     QVERIFY(hudPanel->findChild<QLabel *>(QStringLiteral("dlzExternalSource")) == nullptr);
@@ -297,7 +303,106 @@ void ViewerTests::hudReplacesCurrentValuesColumn() {
     QTest::mouseClick(larButton, Qt::LeftButton);
     QCOMPARE(viewport->contentMode(), ViewportContentMode::Lar);
     QCOMPARE(valuesStack->currentIndex(), 0);
-    QCOMPARE(valuesTitle->text(), QStringLiteral("Current Values"));
+    QCOMPARE(valuesTitle->text(), QStringLiteral("Plane Telemetry"));
+    QVERIFY(zoneIndicator->isVisible());
+}
+
+void ViewerTests::planeZoneIndicatorTracksContainmentAndPrecedence() {
+    ViewerTestContext context;
+    MainWindow window(context.facade);
+    window.show();
+
+    auto *planeButton =
+        window.findChild<QPushButton *>(QStringLiteral("viewportPlaneContentButton"));
+    auto *indicator = window.findChild<QLabel *>(QStringLiteral("planeZoneIndicator"));
+    auto *content = window.findChild<QWidget *>(QStringLiteral("currentValuesContent"));
+    QVERIFY(planeButton);
+    QVERIFY(indicator);
+    QVERIFY(content);
+    auto *planeHeader = content->findChildren<QLabel *>(QStringLiteral("entityHeader"))
+                            .value(0, nullptr);
+    QVERIFY(planeHeader);
+    QCOMPARE(planeHeader->text(), QStringLiteral("Plane Data"));
+    QCOMPARE(indicator->height(), 28);
+    QVERIFY(indicator->isVisible());
+    QCOMPARE(indicator->text(), QStringLiteral("OUTSIDE"));
+
+    QTest::mouseClick(planeButton, Qt::LeftButton);
+    QVERIFY(indicator->isVisible());
+    QVERIFY(indicator->geometry().bottom() <= planeHeader->geometry().top());
+
+    Plane plane{};
+    plane.location[0] = 0.5;
+    plane.location[1] = 1.0;
+    Target target{};
+    target.iz_pos[0] = plane.location[0];
+    target.iz_pos[1] = plane.location[1];
+    target.iz_theta1 = 0.0;
+    target.iz_theta2 = 0.0;
+    target.iz_r1 = 0.0;
+    target.iz_r2 = 500.0;
+    target.ir_pos[0] = plane.location[0];
+    target.ir_pos[1] = plane.location[1];
+    target.ir_r = 1000.0;
+
+    QBitArray available(StateField::Count, false);
+    for (const int field : {StateField::Location0, StateField::Location1, StateField::IzPos0,
+                            StateField::IzPos1, StateField::IzTheta1, StateField::IzTheta2,
+                            StateField::IzR1, StateField::IzR2, StateField::IrPos0,
+                            StateField::IrPos1, StateField::IrR}) {
+        available.setBit(field);
+    }
+
+    DecodedState decoded;
+    decoded.plane = plane;
+    decoded.target = target;
+    decoded.availableFields = available;
+
+    window.updateState(decoded);
+    QCOMPARE(indicator->text(), QStringLiteral("IZ"));
+    QCOMPARE(indicator->property("zoneStatus").toString(), QStringLiteral("IZ"));
+    const QString izStyle = indicator->styleSheet();
+    QVERIFY(izStyle.contains(QStringLiteral("#0e755b")));
+
+    available.clearBit(StateField::IzPos0);
+    available.clearBit(StateField::IzPos1);
+    available.clearBit(StateField::IzTheta1);
+    available.clearBit(StateField::IzTheta2);
+    available.clearBit(StateField::IzR1);
+    available.clearBit(StateField::IzR2);
+    decoded.availableFields = available;
+    window.updateState(decoded);
+    QCOMPARE(indicator->text(), QStringLiteral("IR"));
+    QCOMPARE(indicator->property("zoneStatus").toString(), QStringLiteral("IR"));
+    QVERIFY(indicator->styleSheet() != izStyle);
+    QVERIFY(indicator->styleSheet().contains(QStringLiteral("#346d91")));
+
+    plane.location[0] += 0.01;
+    decoded.plane = plane;
+    window.updateState(decoded);
+    QCOMPARE(indicator->text(), QStringLiteral("OUTSIDE"));
+    QVERIFY(indicator->styleSheet().contains(QStringLiteral("#6b3f47")));
+    QCOMPARE(indicator->property("zoneStatus").toString(), QStringLiteral("OUTSIDE"));
+
+    for (const int field : {StateField::IzPos0, StateField::IzPos1, StateField::IzTheta1,
+                            StateField::IzTheta2, StateField::IzR1, StateField::IzR2}) {
+        available.setBit(field);
+    }
+    target.iz_pos[0] = plane.location[0] - 0.001;
+    target.iz_pos[1] = plane.location[1];
+    target.iz_theta1 = -0.2;
+    target.iz_theta2 = 0.2;
+    target.iz_r2 = 200'000.0;
+    decoded.target = target;
+    decoded.availableFields = available;
+    window.updateState(decoded);
+    QCOMPARE(indicator->text(), QStringLiteral("IZ"));
+
+    target.iz_theta1 = 1.0;
+    target.iz_theta2 = 2.0;
+    decoded.target = target;
+    window.updateState(decoded);
+    QCOMPARE(indicator->text(), QStringLiteral("OUTSIDE"));
 }
 
 void ViewerTests::cameraControlsExposeRequestedModes() {

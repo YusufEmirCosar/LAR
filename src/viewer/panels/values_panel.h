@@ -18,7 +18,7 @@ namespace dlz::presentation {
 class ControlPanel;
 }
 
-/** Owns construction and rendering of the right-hand values/HUD column. */
+/** Owns construction and rendering of the right-hand values/HUD column and Plane zone status. */
 class ValuesPanel final : public QFrame {
   public:
     explicit ValuesPanel(QWidget *parent = nullptr);
@@ -34,6 +34,7 @@ class ValuesPanel final : public QFrame {
     QWidget *buildCurrentValues();
 
     QLabel *m_title = nullptr;
+    QLabel *m_planeZoneIndicator = nullptr;
     QStackedWidget *m_stack = nullptr;
     dlz::presentation::ControlPanel *m_hudControlPanel = nullptr;
     QVector<QLabel *> m_valueLabels;
