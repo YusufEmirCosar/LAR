@@ -2,8 +2,10 @@
 
 /**
  * @file dted_cell.h
- * @brief Immutable in-memory representation of one degree-aligned DTED0 cell.
+ * @brief Immutable in-memory representation of one degree-aligned DTED cell.
  */
+
+#include "viewer/terrain/dted_level.h"
 
 #include <QtGlobal>
 
@@ -28,27 +30,35 @@ struct DtedCellKey final {
     }
 };
 
-/** @brief Decoded DTED0 elevations stored as longitude profiles from south to north. */
+/** @brief Decoded DTED elevations stored as longitude profiles from south to north. */
 struct DtedCell final {
     static constexpr qint16 NoDataElevation = -32767;
 
     DtedCellKey key;
+    DtedLevel level = DtedLevel::Level0;
     int longitudeSampleCount = 0;
     int latitudeSampleCount = 0;
     double longitudeIntervalDegrees = 0.0;
     double latitudeIntervalDegrees = 0.0;
     std::vector<qint16> elevations;
 
-    /** @brief Returns true when dimensions and storage form a bounded usable Level-0 cell. */
+    /** @brief Returns true when dimensions and storage form a bounded usable DTED cell. */
     [[nodiscard]] bool valid() const noexcept {
+        const int maximumSamples = dtedLatitudeSampleCount(level);
         if (longitudeSampleCount < 2 || latitudeSampleCount < 2 ||
-            longitudeIntervalDegrees <= 0.0 || latitudeIntervalDegrees <= 0.0) {
+            longitudeIntervalDegrees <= 0.0 || latitudeIntervalDegrees <= 0.0 ||
+            maximumSamples <= 0) {
             return false;
         }
         const std::size_t longitudeCount = static_cast<std::size_t>(longitudeSampleCount);
         const std::size_t latitudeCount = static_cast<std::size_t>(latitudeSampleCount);
-        return longitudeCount <= 121U && latitudeCount <= 121U &&
+        return longitudeCount <= static_cast<std::size_t>(maximumSamples) &&
+               latitudeCount == static_cast<std::size_t>(maximumSamples) &&
                elevations.size() == longitudeCount * latitudeCount;
+    }
+
+    [[nodiscard]] std::size_t storageBytes() const noexcept {
+        return elevations.size() * sizeof(qint16);
     }
 
     /** @brief Returns one decoded elevation in metres, excluding the DTED no-data sentinel. */

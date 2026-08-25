@@ -10,6 +10,7 @@
 #include <QString>
 #include <QtGlobal>
 
+#include <cmath>
 #include <cstddef>
 #include <memory>
 #include <optional>
@@ -61,6 +62,21 @@ struct DtedWaterMaskCell final {
                                      static_cast<std::size_t>(latitudeIndex);
         const quint8 bit = static_cast<quint8>(1U << (bitIndex % 8U));
         return (packedWaterBits[bitIndex / 8U] & bit) != 0U;
+    }
+
+    /** @brief Returns the nearest mask-post classification for normalized cell coordinates. */
+    [[nodiscard]] std::optional<bool> waterAtFraction(double longitudeFraction,
+                                                      double latitudeFraction) const noexcept {
+        if (!valid() || !std::isfinite(longitudeFraction) || !std::isfinite(latitudeFraction) ||
+            longitudeFraction < 0.0 || longitudeFraction > 1.0 || latitudeFraction < 0.0 ||
+            latitudeFraction > 1.0) {
+            return std::nullopt;
+        }
+        const int longitudeIndex = static_cast<int>(
+            std::round(longitudeFraction * static_cast<double>(longitudeSampleCount - 1)));
+        const int latitudeIndex = static_cast<int>(
+            std::round(latitudeFraction * static_cast<double>(latitudeSampleCount - 1)));
+        return water(longitudeIndex, latitudeIndex);
     }
 };
 

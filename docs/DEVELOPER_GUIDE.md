@@ -150,7 +150,9 @@ one float uniform, because that reintroduces close-zoom replay jitter.
   under `assets/cubemaps` as PNG files.
 - Keep DTED Level-0 cells under `assets/DTED0/{e|w}DDD/{n|s}DD.dt0`, or point
   `LAR_DTED0_ROOT` at an external tree. Do not add the 1.7 GB tree to the normal
-  post-build copy or install path.
+  post-build copy or install path. User-selected Level-1/Level-2 trees use the
+  same degree-directory convention with `.dt1`/`.dt2`, are accessed in place,
+  and remain session-only.
 - Preserve negative DTED bathymetry. Regenerate
   `assets/water/dted0_water_mask.bin` with
   `tools/build_dted_water_mask.py` after replacing DTED or
@@ -188,10 +190,12 @@ one float uniform, because that reintroduces close-zoom replay jitter.
 - Keep all OpenGL resource creation, upload, draw, and destruction on the
   `PlaneSceneWidget` context thread.
 - Keep DTED parsing, caching, interpolation, and patch construction in the
-  latest-only Plane terrain worker. Readers must preserve Level-0 count/file
-  bounds, checksum validation, signed-magnitude/no-data handling, and variable
-  polar profile widths. Water-mask readers must preserve index/payload bounds,
-  matching DTED dimensions, CRC checks, and bounded lazy loads. Workers publish
+  latest-only Plane terrain worker. Readers must preserve level-specific
+  count/file/spacing bounds, checksum validation, signed-magnitude/no-data
+  handling, streaming profile reads, and variable polar profile widths.
+  Terrain caches must retain both entry-count and byte limits. Water-mask
+  readers must preserve native mask dimensions, index/payload bounds, CRC
+  checks, geographic resampling, and bounded lazy loads. Workers publish
   immutable patches only; they never access a widget or OpenGL object.
 - Keep the terrain patch aircraft-centered in east `+X`, up `+Y`, north `-Z`.
   Reuse it within the documented recenter threshold, retain bounded positive

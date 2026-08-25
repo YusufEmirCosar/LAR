@@ -41,6 +41,13 @@ class PlaneSceneWidget final : public QOpenGLWidget {
     void setTerrainVisible(bool visible);
 
     /**
+     * @brief Replaces the session terrain source after validating one addressed tile.
+     *
+     * @return True when the selected directory became the active source.
+     */
+    bool loadTerrainFromDirectory(const QString &path, DtedLevel level);
+
+    /**
      * @brief Loads a user-selected `.gltf` or `.glb` model.
      *
      * @details The current model is kept when the selected file cannot be read. The model is
@@ -74,9 +81,15 @@ class PlaneSceneWidget final : public QOpenGLWidget {
     [[nodiscard]] bool terrainVisible() const noexcept {
         return m_terrainVisible;
     }
-    /** @brief Returns whether a readable DTED0 root was discovered at construction. */
+    /** @brief Returns whether a readable DTED root is active. */
     [[nodiscard]] bool terrainAvailable() const noexcept {
         return m_terrainAvailable;
+    }
+    [[nodiscard]] DtedLevel terrainLevel() const noexcept {
+        return m_terrainDataset.level;
+    }
+    [[nodiscard]] const QString &terrainRootDirectory() const noexcept {
+        return m_terrainDataset.rootDirectory;
     }
     /** @brief Returns whether the compact DTED-aligned water mask passed validation. */
     [[nodiscard]] bool terrainWaterMaskAvailable() const noexcept {
@@ -102,6 +115,10 @@ class PlaneSceneWidget final : public QOpenGLWidget {
     void terrainVisibilityChanged(bool visible);
     /** @brief Notifies tests and controls when terrain preparation changes readiness. */
     void terrainPatchChanged(bool ready);
+    /** @brief Notifies controls when a validated session terrain source becomes active. */
+    void terrainSourceChanged(DtedLevel level, const QString &rootDirectory);
+    /** @brief Notifies controls when terrain availability changes after source replacement. */
+    void terrainAvailabilityChanged(bool available);
 
   protected:
     void initializeGL() override;
@@ -140,7 +157,7 @@ class PlaneSceneWidget final : public QOpenGLWidget {
     LarSceneState m_scene;
     QPointF m_lastMousePosition;
     QString m_diagnostic;
-    QString m_terrainRootDirectory;
+    DtedDataset m_terrainDataset;
     QString m_terrainWaterMaskFile;
     QString m_terrainWaterMaskError;
     QMetaObject::Connection m_contextConnection;

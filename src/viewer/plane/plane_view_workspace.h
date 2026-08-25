@@ -45,9 +45,11 @@ class PlaneViewWorkspace final : public QWidget, public ILarViewportPage {
 
   private:
     void forwardEvent(QEvent &event);
+    void refreshTerrainControls();
 
     PlaneSceneWidget *m_sceneWidget = nullptr;
     QPushButton *m_uploadModelButton = nullptr;
+    QPushButton *m_uploadTerrainButton = nullptr;
     QPushButton *m_terrainButton = nullptr;
     QPushButton *m_surfaceButton = nullptr;
     QPushButton *m_changeSkyboxButton = nullptr;

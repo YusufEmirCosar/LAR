@@ -3,6 +3,7 @@
 #include <QDir>
 #include <QFileInfo>
 
+#include <array>
 #include <cmath>
 #include <utility>
 
@@ -18,11 +19,23 @@ double normalizedLongitudeDegrees(double degrees) noexcept {
 }
 } // namespace
 
-DtedTileSource::DtedTileSource(QString rootDirectory)
-    : m_rootDirectory(QDir::cleanPath(std::move(rootDirectory))) {}
+DtedTileSource::DtedTileSource(QString rootDirectory, DtedLevel level)
+    : m_rootDirectory(QDir::cleanPath(std::move(rootDirectory))),
+      m_canonicalRootDirectory(QFileInfo(m_rootDirectory).canonicalFilePath()), m_level(level) {}
 
 bool DtedTileSource::isAvailable() const {
-    return !m_rootDirectory.isEmpty() && QFileInfo(m_rootDirectory).isDir();
+    return !m_rootDirectory.isEmpty() && !m_canonicalRootDirectory.isEmpty() &&
+           QFileInfo(m_rootDirectory).isDir();
+}
+
+bool DtedTileSource::containsFile(const QString &path) const {
+    if (m_canonicalRootDirectory.isEmpty()) {
+        return false;
+    }
+    const QFileInfo fileInfo(path);
+    const QString canonicalFile = fileInfo.canonicalFilePath();
+    const QString rootPrefix = QDir::cleanPath(m_canonicalRootDirectory) + QDir::separator();
+    return fileInfo.isFile() && !canonicalFile.isEmpty() && canonicalFile.startsWith(rootPrefix);
 }
 
 QString DtedTileSource::pathFor(const DtedCellKey &key) const {
@@ -33,22 +46,42 @@ QString DtedTileSource::pathFor(const DtedCellKey &key) const {
         QStringLiteral("%1%2")
             .arg(longitudeHemisphere)
             .arg(std::abs(key.longitudeDegrees), 3, 10, QLatin1Char('0'));
-    const QString latitudeFile = QStringLiteral("%1%2.dt0")
+    const QString latitudeFile = QStringLiteral("%1%2%3")
                                      .arg(latitudeHemisphere)
-                                     .arg(std::abs(key.latitudeDegrees), 2, 10, QLatin1Char('0'));
-    return QDir(m_rootDirectory).filePath(longitudeDirectory + QLatin1Char('/') + latitudeFile);
+                                     .arg(std::abs(key.latitudeDegrees), 2, 10, QLatin1Char('0'))
+                                     .arg(dtedFileSuffix(m_level));
+    const QString uppercaseLongitudeDirectory = longitudeDirectory.toUpper();
+    const QString uppercaseLatitudeFile = latitudeFile.toUpper();
+    const std::array<QString, 4> relativeCandidates{
+        longitudeDirectory + QLatin1Char('/') + latitudeFile,
+        uppercaseLongitudeDirectory + QLatin1Char('/') + uppercaseLatitudeFile,
+        longitudeDirectory + QLatin1Char('/') + uppercaseLatitudeFile,
+        uppercaseLongitudeDirectory + QLatin1Char('/') + latitudeFile};
+    const QDir root(m_rootDirectory);
+    for (const QString &relative : relativeCandidates) {
+        const QString candidate = root.filePath(relative);
+        if (containsFile(candidate)) {
+            return candidate;
+        }
+    }
+    return root.filePath(relativeCandidates.front());
 }
 
 DtedCellReadResult DtedTileSource::load(const DtedCellKey &key) const {
     if (key.longitudeDegrees < -180 || key.longitudeDegrees > 179 || key.latitudeDegrees < -90 ||
         key.latitudeDegrees > 89) {
-        return {nullptr, QStringLiteral("DTED0 cell key is outside the WGS84 tile range.")};
+        return {nullptr, QStringLiteral("%1 cell key is outside the WGS84 tile range.")
+                             .arg(dtedLevelDisplayName(m_level))};
     }
     const QString path = pathFor(key);
-    DtedCellReadResult result = DtedCellReader::readFile(path);
+    if (QFileInfo(path).isFile() && !containsFile(path)) {
+        return {nullptr, QStringLiteral("%1 tile '%2' resolves outside the selected root.")
+                             .arg(dtedLevelDisplayName(m_level), path)};
+    }
+    DtedCellReadResult result = DtedCellReader::readFile(path, m_level);
     if (result.succeeded() && !(result.cell->key == key)) {
-        return {nullptr,
-                QStringLiteral("DTED0 tile '%1' declares a different cell origin.").arg(path)};
+        return {nullptr, QStringLiteral("%1 tile '%2' declares a different cell origin.")
+                             .arg(dtedLevelDisplayName(m_level), path)};
     }
     return result;
 }

@@ -15,15 +15,21 @@
 #include "viewer/terrain/dted_mosaic_sampler.h"
 #include "viewer/terrain/dted_water_mask_source.h"
 
+#include "support/dted_fixture.h"
+
+#include <QApplication>
 #include <QBuffer>
 #include <QDir>
 #include <QFile>
+#include <QFileInfo>
+#include <QInputDialog>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QPushButton>
 #include <QTemporaryDir>
 #include <QTemporaryFile>
+#include <QTimer>
 #include <QtEndian>
 #include <QtMath>
 #include <QtTest>
@@ -254,12 +260,15 @@ class PlaneViewTests final : public QObject {
     void projectsAltitudeWithoutAircraftGroundPosition();
     void projectsExtremeAltitudeWithinGpuLimits();
     void readsAndValidatesVariableWidthDted0Cells();
+    void readsAndValidatesDted1AndDted2Cells();
     void readsAndValidatesDtedWaterMaskPack();
     void addressesAndSamplesDted0WithoutScanning();
+    void addressesAndSamplesHighResolutionDtedWithBoundedCache();
     void samplesBathymetryAsSeaLevelWater();
     void buildsBoundedLocalTerrainPatch();
     void buildsFlatDepthColoredWaterPatch();
     void widgetPreparesTerrainAsynchronously();
+    void widgetReplacesTerrainSourceForSession();
     void workspaceCyclesSkyboxFromLowerRight();
 };
 
@@ -767,7 +776,7 @@ void PlaneViewTests::readsAndValidatesVariableWidthDted0Cells() {
     QVERIFY(rejected.message.contains(QStringLiteral("checksum")));
 
     QByteArray invalidSpan = sourceBytes;
-    invalidSpan.replace(20, 4, QByteArrayLiteral("0400"));
+    invalidSpan.replace(20, 4, QByteArrayLiteral("0600"));
     QTemporaryFile invalidSpanFile;
     QVERIFY(invalidSpanFile.open());
     QCOMPARE(invalidSpanFile.write(invalidSpan), invalidSpan.size());
@@ -778,27 +787,65 @@ void PlaneViewTests::readsAndValidatesVariableWidthDted0Cells() {
     QVERIFY(invalidSpanResult.message.contains(QStringLiteral("one degree")));
 }
 
+void PlaneViewTests::readsAndValidatesDted1AndDted2Cells() {
+    QTemporaryDir directory;
+    QVERIFY(directory.isValid());
+
+    const DtedCellKey level1Key{12, 82};
+    QVERIFY(dted_test_fixture::writeCell(directory.path(), DtedLevel::Level1, level1Key, 6, 432));
+    const DtedTileSource level1Source(directory.path(), DtedLevel::Level1);
+    QVERIFY(level1Source.pathFor(level1Key).endsWith(QStringLiteral("e012/n82.dt1")));
+    const DtedCellReadResult level1 = level1Source.load(level1Key);
+    QVERIFY2(level1.succeeded(), qPrintable(level1.message));
+    QCOMPARE(dtedLevelNumber(level1.cell->level), 1);
+    QCOMPARE(level1.cell->longitudeSampleCount, 201);
+    QCOMPARE(level1.cell->latitudeSampleCount, 1201);
+    QVERIFY(std::abs(level1.cell->longitudeIntervalDegrees - 1.0 / 200.0) < 1.0e-12);
+    QVERIFY(std::abs(level1.cell->latitudeIntervalDegrees - 1.0 / 1200.0) < 1.0e-12);
+    QCOMPARE(qRound(*level1.cell->elevation(100, 600)), 432);
+    QVERIFY(level1.cell->storageBytes() > 400'000U);
+
+    const DtedCellReadResult wrongLevel =
+        DtedCellReader::readFile(level1Source.pathFor(level1Key), DtedLevel::Level2);
+    QVERIFY(!wrongLevel.succeeded());
+    QVERIFY(wrongLevel.message.contains(QStringLiteral("selected level")));
+
+    const DtedCellKey level2Key{-45, -82};
+    QVERIFY(dted_test_fixture::writeCell(directory.path(), DtedLevel::Level2, level2Key, 6, -765));
+    const DtedTileSource level2Source(directory.path(), DtedLevel::Level2);
+    QVERIFY(level2Source.pathFor(level2Key).endsWith(QStringLiteral("w045/s82.dt2")));
+    const DtedCellReadResult level2 = level2Source.load(level2Key);
+    QVERIFY2(level2.succeeded(), qPrintable(level2.message));
+    QCOMPARE(dtedLevelNumber(level2.cell->level), 2);
+    QCOMPARE(level2.cell->longitudeSampleCount, 601);
+    QCOMPARE(level2.cell->latitudeSampleCount, 3601);
+    QVERIFY(std::abs(level2.cell->longitudeIntervalDegrees - 1.0 / 600.0) < 1.0e-12);
+    QVERIFY(std::abs(level2.cell->latitudeIntervalDegrees - 1.0 / 3600.0) < 1.0e-12);
+    QCOMPARE(qRound(*level2.cell->elevation(300, 1800)), -765);
+    QVERIFY(level2.cell->storageBytes() > 4'000'000U);
+}
+
 void PlaneViewTests::readsAndValidatesDtedWaterMaskPack() {
     const QString packPath = sourcePath(QStringLiteral("assets/water/dted0_water_mask.bin"));
     const DtedWaterMaskSource source(packPath);
     QVERIFY2(source.isAvailable(), qPrintable(source.initializationError()));
 
-    const DtedWaterMaskReadResult ocean = source.load({-30, 30}, 121, 121);
+    const DtedWaterMaskReadResult ocean = source.load({-30, 30});
     QVERIFY2(ocean.succeeded(), qPrintable(ocean.message));
     QCOMPARE(ocean.cell->coverage, DtedWaterCoverage::Water);
     QCOMPARE(ocean.cell->water(60, 60), std::optional<bool>(true));
 
-    const DtedWaterMaskReadResult land = source.load({35, 39}, 121, 121);
+    const DtedWaterMaskReadResult land = source.load({35, 39});
     QVERIFY2(land.succeeded(), qPrintable(land.message));
     QCOMPARE(land.cell->coverage, DtedWaterCoverage::Land);
     QCOMPARE(land.cell->water(60, 60), std::optional<bool>(false));
 
-    const DtedWaterMaskReadResult coast = source.load({25, 35}, 121, 121);
+    const DtedWaterMaskReadResult coast = source.load({25, 35});
     QVERIFY2(coast.succeeded(), qPrintable(coast.message));
     QCOMPARE(coast.cell->coverage, DtedWaterCoverage::Mixed);
     QCOMPARE(coast.cell->water(0, 0), std::optional<bool>(false));
     QCOMPARE(coast.cell->water(60, 60), std::optional<bool>(true));
-    QVERIFY(!source.load({25, 35}, 61, 121).succeeded());
+    QVERIFY(coast.cell->waterAtFraction(0.5, 0.5).has_value());
 
     QTemporaryFile invalidPack;
     QVERIFY(invalidPack.open());
@@ -830,6 +877,34 @@ void PlaneViewTests::addressesAndSamplesDted0WithoutScanning() {
     QVERIFY(std::abs(*sender - 17.0) < 3.0);
     QVERIFY(sampler.cachedTileCount() <= 2U);
     QVERIFY(!sampler.sampleRadians(qDegreesToRadians(91.0), 0.0));
+}
+
+void PlaneViewTests::addressesAndSamplesHighResolutionDtedWithBoundedCache() {
+    QTemporaryDir directory;
+    QVERIFY(directory.isValid());
+    const DtedCellKey westCell{-30, 30};
+    const DtedCellKey eastCell{-29, 30};
+    QVERIFY(dted_test_fixture::writeCell(directory.path(), DtedLevel::Level1, westCell, 1, -2500));
+    QVERIFY(dted_test_fixture::writeCell(directory.path(), DtedLevel::Level1, eastCell, 1, -1500));
+
+    const QString mask = sourcePath(QStringLiteral("assets/water/dted0_water_mask.bin"));
+    DtedMosaicSampler sampler(DtedTileSource(directory.path(), DtedLevel::Level1),
+                              DtedWaterMaskSource(mask), 4U, 3U * 1024U * 1024U);
+    const std::optional<DtedSurfaceSample> west =
+        sampler.sampleSurfaceRadians(qDegreesToRadians(30.5), qDegreesToRadians(-29.5));
+    QVERIFY2(west.has_value(), qPrintable(sampler.lastError()));
+    QVERIFY(west->water);
+    QCOMPARE(west->elevationMeters, 0.0);
+    QCOMPARE(west->waterDepthMeters, 2500.0);
+
+    const std::optional<DtedSurfaceSample> east =
+        sampler.sampleSurfaceRadians(qDegreesToRadians(30.5), qDegreesToRadians(-28.5));
+    QVERIFY2(east.has_value(), qPrintable(sampler.lastError()));
+    QVERIFY(east->water);
+    QCOMPARE(east->waterDepthMeters, 1500.0);
+    QCOMPARE(sampler.cachedTileCount(), std::size_t(1));
+    QVERIFY(sampler.cachedTerrainBytes() <= 3U * 1024U * 1024U);
+    QVERIFY(sampler.cachedWaterMaskTileCount() <= 4U);
 }
 
 void PlaneViewTests::samplesBathymetryAsSeaLevelWater() {
@@ -951,6 +1026,48 @@ void PlaneViewTests::widgetPreparesTerrainAsynchronously() {
     QVERIFY(!widget.terrainVisible());
 }
 
+void PlaneViewTests::widgetReplacesTerrainSourceForSession() {
+    QTemporaryDir level1Directory;
+    QVERIFY(level1Directory.isValid());
+    QVERIFY(
+        dted_test_fixture::writeCell(level1Directory.path(), DtedLevel::Level1, {35, 39}, 1, 1600));
+
+    PlaneSceneWidget widget(QStringLiteral(LAR_TEST_SOURCE_DIR));
+    QCOMPARE(dtedLevelNumber(widget.terrainLevel()), 0);
+    QSignalSpy sourceSpy(&widget, &PlaneSceneWidget::terrainSourceChanged);
+    QSignalSpy diagnosticSpy(&widget, &PlaneSceneWidget::diagnosticRaised);
+    QVERIFY(widget.loadTerrainFromDirectory(level1Directory.path(), DtedLevel::Level1));
+    QCOMPARE(dtedLevelNumber(widget.terrainLevel()), 1);
+    QCOMPARE(widget.terrainRootDirectory(), QDir::cleanPath(level1Directory.path()));
+    QCOMPARE(sourceSpy.size(), 1);
+    QVERIFY(!widget.loadTerrainFromDirectory(level1Directory.path(), DtedLevel::Level2));
+    QCOMPARE(dtedLevelNumber(widget.terrainLevel()), 1);
+    QCOMPARE(sourceSpy.size(), 1);
+
+    QTemporaryDir invalidDirectory;
+    QVERIFY(invalidDirectory.isValid());
+    QVERIFY(!widget.loadTerrainFromDirectory(invalidDirectory.path(), DtedLevel::Level2));
+    QCOMPARE(dtedLevelNumber(widget.terrainLevel()), 1);
+    QCOMPARE(widget.terrainRootDirectory(), QDir::cleanPath(level1Directory.path()));
+    QVERIFY(!diagnosticSpy.isEmpty());
+
+    LarSceneState scene;
+    scene.hasScene = true;
+    scene.availableFields = QBitArray(StateField::Count);
+    scene.availableFields.setBit(StateField::Location0);
+    scene.availableFields.setBit(StateField::Location1);
+    scene.plane.location[0] = qDegreesToRadians(39.5);
+    scene.plane.location[1] = qDegreesToRadians(35.5);
+    widget.setSceneState(scene);
+    widget.setTerrainVisible(true);
+    QTRY_VERIFY_WITH_TIMEOUT(widget.terrainPatchReady(), 10000);
+
+    QVERIFY(!widget.loadTerrainFromDirectory(invalidDirectory.path(), DtedLevel::Level2));
+    QVERIFY(widget.terrainPatchReady());
+    QCOMPARE(dtedLevelNumber(widget.terrainLevel()), 1);
+    widget.setTerrainVisible(false);
+}
+
 void PlaneViewTests::wrapsSurfaceProjectionAcrossDateline() {
     LarSceneState scene = representativeSurfaceScene();
     scene.plane.location[0] = 0.0;
@@ -984,23 +1101,48 @@ void PlaneViewTests::workspaceCyclesSkyboxFromLowerRight() {
         workspace.findChild<QPushButton *>(QStringLiteral("planeChangeSkyboxButton"));
     auto *uploadButton =
         workspace.findChild<QPushButton *>(QStringLiteral("planeUploadModelButton"));
+    auto *uploadTerrainButton =
+        workspace.findChild<QPushButton *>(QStringLiteral("planeUploadTerrainButton"));
     auto *surfaceButton = workspace.findChild<QPushButton *>(QStringLiteral("planeSurfaceButton"));
     auto *terrainButton = workspace.findChild<QPushButton *>(QStringLiteral("planeTerrainButton"));
     QVERIFY(changeButton);
     QVERIFY(uploadButton);
+    QVERIFY(uploadTerrainButton);
     QVERIFY(surfaceButton);
     QVERIFY(terrainButton);
     QCOMPARE(uploadButton->text(), QStringLiteral("Upload Jet Model"));
+    QCOMPARE(uploadTerrainButton->text(), QStringLiteral("Upload DTED Folder"));
     const auto workspaceButtons =
         workspace.findChildren<QPushButton *>(QString(), Qt::FindDirectChildrenOnly);
-    QCOMPARE(workspaceButtons.size(), 4);
+    QCOMPARE(workspaceButtons.size(), 5);
     QVERIFY(changeButton->x() >= workspace.width() - changeButton->width() - 20);
     QVERIFY(changeButton->y() >= workspace.height() - changeButton->height() - 20);
     QVERIFY(surfaceButton->x() < changeButton->x());
     QCOMPARE(surfaceButton->y(), changeButton->y());
     QVERIFY(terrainButton->x() < surfaceButton->x());
     QCOMPARE(terrainButton->y(), changeButton->y());
+    QVERIFY(uploadTerrainButton->x() < terrainButton->x());
+    QCOMPARE(uploadTerrainButton->y(), changeButton->y());
     QVERIFY(terrainButton->isEnabled());
+    QCOMPARE(terrainButton->text(), QStringLiteral("Terrain DT0: Off"));
+    bool formatPromptShown = false;
+    QTimer::singleShot(0, &workspace, [&formatPromptShown] {
+        auto *dialog = qobject_cast<QInputDialog *>(QApplication::activeModalWidget());
+        if (dialog != nullptr) {
+            formatPromptShown = dialog->windowTitle() == QStringLiteral("Select DTED Format") &&
+                                dialog->textValue().contains(QStringLiteral("Level 1"));
+            dialog->reject();
+        }
+    });
+    QTest::mouseClick(uploadTerrainButton, Qt::LeftButton);
+    QVERIFY(formatPromptShown);
+
+    QTemporaryDir level1Directory;
+    QVERIFY(level1Directory.isValid());
+    QVERIFY(
+        dted_test_fixture::writeCell(level1Directory.path(), DtedLevel::Level1, {35, 39}, 1, 1600));
+    QVERIFY(scene->loadTerrainFromDirectory(level1Directory.path(), DtedLevel::Level1));
+    QCOMPARE(terrainButton->text(), QStringLiteral("Terrain DT1: Off"));
     QVERIFY(!scene->surfaceVisible());
     QTest::mouseClick(surfaceButton, Qt::LeftButton);
     QVERIFY(scene->surfaceVisible());

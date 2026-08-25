@@ -13,11 +13,10 @@ constexpr qsizetype UhlLength = 80;
 constexpr qsizetype DsiLength = 648;
 constexpr qsizetype AccLength = 2700;
 constexpr qsizetype HeaderLength = UhlLength + DsiLength + AccLength;
-constexpr int MaximumLevelZeroSamples = 121;
-constexpr qint64 MaximumLevelZeroFileBytes = 128 * 1024;
 
-DtedCellReadResult failure(const QString &path, const QString &reason) {
-    return {nullptr, QStringLiteral("DTED0 tile '%1' is invalid: %2").arg(path, reason)};
+DtedCellReadResult failure(const QString &path, DtedLevel level, const QString &reason) {
+    return {nullptr, QStringLiteral("%1 tile '%2' is invalid: %3")
+                         .arg(dtedLevelDisplayName(level), path, reason)};
 }
 
 bool parseUnsigned(const QByteArray &bytes, qsizetype offset, qsizetype length, int *value) {
@@ -88,24 +87,32 @@ qint16 decodeSignedMagnitude(quint16 encoded) noexcept {
 
 } // namespace
 
-DtedCellReadResult DtedCellReader::readFile(const QString &path) {
+DtedCellReadResult DtedCellReader::readFile(const QString &path, DtedLevel expectedLevel) {
+    const int maximumSamples = dtedLatitudeSampleCount(expectedLevel);
+    const int expectedLatitudeInterval = dtedLatitudeIntervalTenthsArcSecond(expectedLevel);
+    const qint64 maximumFileBytes = dtedMaximumFileBytes(expectedLevel);
+    if (maximumSamples <= 0 || expectedLatitudeInterval <= 0 || maximumFileBytes <= 0) {
+        return {nullptr, QStringLiteral("Unsupported DTED level requested for '%1'.").arg(path)};
+    }
     QFile file(path);
     if (!file.open(QIODevice::ReadOnly)) {
-        return {nullptr, QStringLiteral("DTED0 tile '%1' could not be opened: %2")
-                             .arg(path, file.errorString())};
+        return {nullptr, QStringLiteral("%1 tile '%2' could not be opened: %3")
+                             .arg(dtedLevelDisplayName(expectedLevel), path, file.errorString())};
     }
     const qint64 fileSize = file.size();
-    if (fileSize < HeaderLength || fileSize > MaximumLevelZeroFileBytes) {
-        return failure(path, QStringLiteral("file size is outside Level-0 limits"));
+    if (fileSize < HeaderLength || fileSize > maximumFileBytes) {
+        return failure(path, expectedLevel,
+                       QStringLiteral("file size is outside the selected level limits"));
     }
-    const QByteArray bytes = file.readAll();
-    if (bytes.size() != fileSize || bytes.size() < HeaderLength) {
-        return failure(path, QStringLiteral("file could not be read completely"));
+    const QByteArray header = file.read(HeaderLength);
+    if (header.size() != HeaderLength) {
+        return failure(path, expectedLevel, QStringLiteral("header could not be read completely"));
     }
-    if (bytes.first(4) != QByteArrayLiteral("UHL1") ||
-        bytes.mid(UhlLength, 3) != QByteArrayLiteral("DSI") ||
-        bytes.mid(UhlLength + DsiLength, 3) != QByteArrayLiteral("ACC")) {
-        return failure(path, QStringLiteral("required UHL/DSI/ACC headers are missing"));
+    if (header.first(4) != QByteArrayLiteral("UHL1") ||
+        header.mid(UhlLength, 3) != QByteArrayLiteral("DSI") ||
+        header.mid(UhlLength + DsiLength, 3) != QByteArrayLiteral("ACC")) {
+        return failure(path, expectedLevel,
+                       QStringLiteral("required UHL/DSI/ACC headers are missing"));
     }
 
     double longitudeOrigin = 0.0;
@@ -114,17 +121,29 @@ DtedCellReadResult DtedCellReader::readFile(const QString &path) {
     int latitudeIntervalTenths = 0;
     int longitudeCount = 0;
     int latitudeCount = 0;
-    if (!parseOrigin(bytes, 4, &longitudeOrigin) || !parseOrigin(bytes, 12, &latitudeOrigin) ||
-        !parseUnsigned(bytes, 20, 4, &longitudeIntervalTenths) ||
-        !parseUnsigned(bytes, 24, 4, &latitudeIntervalTenths) ||
-        !parseUnsigned(bytes, 47, 4, &longitudeCount) ||
-        !parseUnsigned(bytes, 51, 4, &latitudeCount)) {
-        return failure(path, QStringLiteral("UHL coordinate or dimension fields are malformed"));
+    if (!parseOrigin(header, 4, &longitudeOrigin) || !parseOrigin(header, 12, &latitudeOrigin) ||
+        !parseUnsigned(header, 20, 4, &longitudeIntervalTenths) ||
+        !parseUnsigned(header, 24, 4, &latitudeIntervalTenths) ||
+        !parseUnsigned(header, 47, 4, &longitudeCount) ||
+        !parseUnsigned(header, 51, 4, &latitudeCount)) {
+        return failure(path, expectedLevel,
+                       QStringLiteral("UHL coordinate or dimension fields are malformed"));
     }
-    if (longitudeCount < 2 || longitudeCount > MaximumLevelZeroSamples || latitudeCount < 2 ||
-        latitudeCount > MaximumLevelZeroSamples || longitudeIntervalTenths <= 0 ||
-        latitudeIntervalTenths <= 0) {
-        return failure(path, QStringLiteral("declared dimensions exceed Level-0 limits"));
+    if (longitudeCount < 2 || longitudeCount > maximumSamples || latitudeCount != maximumSamples ||
+        longitudeIntervalTenths <= 0 || latitudeIntervalTenths != expectedLatitudeInterval) {
+        return failure(
+            path, expectedLevel,
+            QStringLiteral("declared dimensions or spacing do not match the selected level"));
+    }
+    const int longitudeIntervalMultiplier = longitudeIntervalTenths / expectedLatitudeInterval;
+    const bool standardLongitudeInterval =
+        longitudeIntervalTenths % expectedLatitudeInterval == 0 &&
+        (longitudeIntervalMultiplier == 1 || longitudeIntervalMultiplier == 2 ||
+         longitudeIntervalMultiplier == 3 || longitudeIntervalMultiplier == 4 ||
+         longitudeIntervalMultiplier == 6);
+    if (!standardLongitudeInterval) {
+        return failure(path, expectedLevel,
+                       QStringLiteral("longitude spacing is not valid for the selected level"));
     }
     const double longitudeSpanDegrees = static_cast<double>(longitudeCount - 1) *
                                         static_cast<double>(longitudeIntervalTenths) / 36000.0;
@@ -132,56 +151,63 @@ DtedCellReadResult DtedCellReader::readFile(const QString &path) {
                                        static_cast<double>(latitudeIntervalTenths) / 36000.0;
     if (std::abs(longitudeSpanDegrees - 1.0) > 1.0e-9 ||
         std::abs(latitudeSpanDegrees - 1.0) > 1.0e-9) {
-        return failure(path, QStringLiteral("sample intervals do not span exactly one degree"));
+        return failure(path, expectedLevel,
+                       QStringLiteral("sample intervals do not span exactly one degree"));
     }
     const double roundedLongitude = std::round(longitudeOrigin);
     const double roundedLatitude = std::round(latitudeOrigin);
     if (std::abs(longitudeOrigin - roundedLongitude) > 1.0e-9 ||
         std::abs(latitudeOrigin - roundedLatitude) > 1.0e-9 || roundedLongitude < -180.0 ||
         roundedLongitude > 179.0 || roundedLatitude < -90.0 || roundedLatitude > 89.0) {
-        return failure(path, QStringLiteral("cell origin is not a valid degree boundary"));
+        return failure(path, expectedLevel,
+                       QStringLiteral("cell origin is not a valid degree boundary"));
     }
 
-    const qsizetype recordLength = 8 + static_cast<qsizetype>(latitudeCount) * 2 + 4;
-    const qsizetype expectedLength =
-        HeaderLength + static_cast<qsizetype>(longitudeCount) * recordLength;
-    if (expectedLength != bytes.size()) {
-        return failure(path, QStringLiteral("profile records do not match declared dimensions"));
+    const qint64 recordLength = 8 + static_cast<qint64>(latitudeCount) * 2 + 4;
+    const qint64 expectedLength =
+        static_cast<qint64>(HeaderLength) + static_cast<qint64>(longitudeCount) * recordLength;
+    if (expectedLength != fileSize) {
+        return failure(path, expectedLevel,
+                       QStringLiteral("profile records do not match declared dimensions"));
     }
 
     auto cell = std::make_shared<DtedCell>();
     cell->key = {static_cast<int>(roundedLongitude), static_cast<int>(roundedLatitude)};
+    cell->level = expectedLevel;
     cell->longitudeSampleCount = longitudeCount;
     cell->latitudeSampleCount = latitudeCount;
     cell->longitudeIntervalDegrees = static_cast<double>(longitudeIntervalTenths) / 36000.0;
     cell->latitudeIntervalDegrees = static_cast<double>(latitudeIntervalTenths) / 36000.0;
-    cell->elevations.reserve(static_cast<std::size_t>(longitudeCount) *
-                             static_cast<std::size_t>(latitudeCount));
+    cell->elevations.resize(static_cast<std::size_t>(longitudeCount) *
+                            static_cast<std::size_t>(latitudeCount));
 
     for (int longitudeIndex = 0; longitudeIndex < longitudeCount; ++longitudeIndex) {
-        const qsizetype recordOffset =
-            HeaderLength + static_cast<qsizetype>(longitudeIndex) * recordLength;
-        if (static_cast<uchar>(bytes.at(recordOffset)) != 0xAAU) {
-            return failure(path, QStringLiteral("profile sentinel is missing"));
+        const QByteArray record = file.read(recordLength);
+        if (static_cast<qint64>(record.size()) != recordLength) {
+            return failure(path, expectedLevel, QStringLiteral("profile record is truncated"));
+        }
+        if (static_cast<uchar>(record.at(0)) != 0xAAU) {
+            return failure(path, expectedLevel, QStringLiteral("profile sentinel is missing"));
         }
         quint32 calculatedChecksum = 0U;
-        for (qsizetype index = 0; index < recordLength - 4; ++index) {
-            calculatedChecksum += static_cast<uchar>(bytes.at(recordOffset + index));
+        for (qsizetype index = 0; index < record.size() - 4; ++index) {
+            calculatedChecksum += static_cast<uchar>(record.at(index));
         }
-        const quint32 storedChecksum =
-            bigEndianU32(bytes.constData() + recordOffset + recordLength - 4);
+        const quint32 storedChecksum = bigEndianU32(record.constData() + record.size() - 4);
         if (calculatedChecksum != storedChecksum) {
-            return failure(path, QStringLiteral("profile checksum mismatch"));
+            return failure(path, expectedLevel, QStringLiteral("profile checksum mismatch"));
         }
-        const qsizetype sampleOffset = recordOffset + 8;
         for (int latitudeIndex = 0; latitudeIndex < latitudeCount; ++latitudeIndex) {
             const quint16 encoded =
-                bigEndianU16(bytes.constData() + sampleOffset + latitudeIndex * 2);
-            cell->elevations.push_back(decodeSignedMagnitude(encoded));
+                bigEndianU16(record.constData() + 8 + static_cast<qsizetype>(latitudeIndex) * 2);
+            const std::size_t offset =
+                static_cast<std::size_t>(longitudeIndex) * static_cast<std::size_t>(latitudeCount) +
+                static_cast<std::size_t>(latitudeIndex);
+            cell->elevations[offset] = decodeSignedMagnitude(encoded);
         }
     }
     if (!cell->valid()) {
-        return failure(path, QStringLiteral("decoded cell is inconsistent"));
+        return failure(path, expectedLevel, QStringLiteral("decoded cell is inconsistent"));
     }
     return {std::move(cell), {}};
 }

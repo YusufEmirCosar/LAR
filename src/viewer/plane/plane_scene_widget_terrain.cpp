@@ -8,10 +8,14 @@
 #include "domain/statefield.h"
 #include "viewer/lar_projection.h"
 #include "viewer/plane/plane_terrain_worker.h"
+#include "viewer/terrain/dted_cell_reader.h"
+#include "viewer/terrain/dted_tile_source.h"
 #include "viewer/terrain/dted_water_mask_source.h"
 
 #include <QDir>
+#include <QDirIterator>
 #include <QFileInfo>
+#include <QRegularExpression>
 
 #include <algorithm>
 #include <cmath>
@@ -28,7 +32,7 @@ bool validGroundPosition(double latitude, double longitude) noexcept {
            latitude <= HalfPi && longitude >= -LarProjection::Pi && longitude <= LarProjection::Pi;
 }
 
-QString terrainRootDirectory(const QString &packageDirectory) {
+QString defaultTerrainRootDirectory(const QString &packageDirectory) {
     const QString overridePath = qEnvironmentVariable("LAR_DTED0_ROOT");
     if (!overridePath.isEmpty()) {
         return QDir::cleanPath(overridePath);
@@ -79,15 +83,92 @@ double terrainHalfExtentMeters(const PlaneSurfaceState &surface) noexcept {
     return std::clamp(requested, 20'000.0, 60'000.0);
 }
 
-int terrainResolution(double halfExtentMeters) noexcept {
-    constexpr double NominalPostSpacingMeters = 900.0;
-    int resolution =
-        static_cast<int>(std::ceil((halfExtentMeters * 2.0) / NominalPostSpacingMeters)) + 1;
-    resolution = std::clamp(resolution, 49, 129);
+int terrainResolution(double halfExtentMeters, DtedLevel level) noexcept {
+    int resolution = static_cast<int>(std::ceil((halfExtentMeters * 2.0) /
+                                                dtedNominalPostSpacingMeters(level))) +
+                     1;
+    resolution = std::clamp(resolution, 49, 257);
     if (resolution % 2 == 0) {
-        resolution += resolution < 129 ? 1 : -1;
+        resolution += resolution < 257 ? 1 : -1;
     }
     return resolution;
+}
+
+std::optional<DtedCellKey> keyForCandidatePath(const QString &path, DtedLevel level) {
+    static const QRegularExpression LongitudePattern(QStringLiteral("^([eEwW])(\\d{3})$"));
+    static const QRegularExpression LatitudePattern(
+        QStringLiteral("^([nNsS])(\\d{2})\\.[dD][tT]([012])$"));
+    const QFileInfo fileInfo(path);
+    const QRegularExpressionMatch longitudeMatch = LongitudePattern.match(fileInfo.dir().dirName());
+    const QRegularExpressionMatch latitudeMatch = LatitudePattern.match(fileInfo.fileName());
+    if (!longitudeMatch.hasMatch() || !latitudeMatch.hasMatch() ||
+        latitudeMatch.captured(3).toInt() != dtedLevelNumber(level)) {
+        return std::nullopt;
+    }
+    int longitude = longitudeMatch.captured(2).toInt();
+    int latitude = latitudeMatch.captured(2).toInt();
+    if (longitudeMatch.captured(1).compare(QStringLiteral("w"), Qt::CaseInsensitive) == 0) {
+        longitude = -longitude;
+    }
+    if (latitudeMatch.captured(1).compare(QStringLiteral("s"), Qt::CaseInsensitive) == 0) {
+        latitude = -latitude;
+    }
+    if (longitude < -180 || longitude > 179 || latitude < -90 || latitude > 89) {
+        return std::nullopt;
+    }
+    return DtedCellKey{longitude, latitude};
+}
+
+QString validateTerrainDataset(const DtedDataset &dataset) {
+    const DtedTileSource source(dataset.rootDirectory, dataset.level);
+    if (!source.isAvailable()) {
+        return QStringLiteral("The selected DTED folder is not a readable directory.");
+    }
+    const QString suffix = dtedFileSuffix(dataset.level);
+    QDirIterator directoryIterator(dataset.rootDirectory, QDir::Dirs | QDir::NoDotAndDotDot,
+                                   QDirIterator::NoIteratorFlags);
+    constexpr int MaximumProbeDirectories = 1024;
+    constexpr int MaximumProbeCandidates = 512;
+    int directories = 0;
+    int candidates = 0;
+    QString firstFailure;
+    while (directoryIterator.hasNext() && directories < MaximumProbeDirectories &&
+           candidates < MaximumProbeCandidates) {
+        const QString directoryPath = directoryIterator.next();
+        ++directories;
+        QDirIterator fileIterator(
+            directoryPath,
+            {QStringLiteral("*%1").arg(suffix), QStringLiteral("*%1").arg(suffix.toUpper())},
+            QDir::Files | QDir::Readable, QDirIterator::NoIteratorFlags);
+        while (fileIterator.hasNext() && candidates < MaximumProbeCandidates) {
+            const QString candidatePath = fileIterator.next();
+            ++candidates;
+            const std::optional<DtedCellKey> key =
+                keyForCandidatePath(candidatePath, dataset.level);
+            if (!key) {
+                continue;
+            }
+            const QString addressedPath = source.pathFor(*key);
+            const QString candidateCanonical = QFileInfo(candidatePath).canonicalFilePath();
+            const QString addressedCanonical = QFileInfo(addressedPath).canonicalFilePath();
+            if (candidateCanonical.isEmpty() || candidateCanonical != addressedCanonical) {
+                continue;
+            }
+            const DtedCellReadResult result = source.load(*key);
+            if (result.succeeded()) {
+                return {};
+            }
+            if (firstFailure.isEmpty()) {
+                firstFailure = result.message;
+            }
+        }
+    }
+    if (!firstFailure.isEmpty()) {
+        return firstFailure;
+    }
+    return QStringLiteral("No valid %1 tile was found under the selected folder. Expected "
+                          "{e|w}DDD/{n|s}DD%2.")
+        .arg(dtedLevelDisplayName(dataset.level), suffix);
 }
 
 } // namespace
@@ -95,9 +176,10 @@ int terrainResolution(double halfExtentMeters) noexcept {
 void PlaneSceneWidget::initializeTerrainSource() {
     qRegisterMetaType<PlaneTerrainBuildRequest>("PlaneTerrainBuildRequest");
     qRegisterMetaType<PlaneTerrainPatchPtr>("PlaneTerrainPatchPtr");
-    m_terrainRootDirectory = terrainRootDirectory(m_packageDirectory);
+    qRegisterMetaType<DtedLevel>("DtedLevel");
+    m_terrainDataset = {defaultTerrainRootDirectory(m_packageDirectory), DtedLevel::Level0};
     m_terrainWaterMaskFile = terrainWaterMaskFile(m_packageDirectory);
-    m_terrainAvailable = QFileInfo(m_terrainRootDirectory).isDir();
+    m_terrainAvailable = QFileInfo(m_terrainDataset.rootDirectory).isDir();
     const DtedWaterMaskSource waterMaskSource(m_terrainWaterMaskFile);
     m_terrainWaterMaskAvailable = waterMaskSource.isAvailable();
     m_terrainWaterMaskError = waterMaskSource.initializationError();
@@ -108,7 +190,7 @@ void PlaneSceneWidget::startTerrainWorker() {
         return;
     }
     m_terrainThread.setObjectName(QStringLiteral("lar-plane-terrain-thread"));
-    m_terrainWorker = new PlaneTerrainWorker(m_terrainRootDirectory, m_terrainWaterMaskFile);
+    m_terrainWorker = new PlaneTerrainWorker(m_terrainDataset, m_terrainWaterMaskFile);
     m_terrainWorker->moveToThread(&m_terrainThread);
     connect(m_terrainWorker, &PlaneTerrainWorker::patchReady, this,
             &PlaneSceneWidget::completeTerrainPatch, Qt::QueuedConnection);
@@ -118,7 +200,7 @@ void PlaneSceneWidget::startTerrainWorker() {
 void PlaneSceneWidget::setTerrainVisible(bool visible) {
     if (visible && !m_terrainAvailable) {
         setDiagnostic(QStringLiteral(
-            "DTED terrain is unavailable. Set LAR_DTED0_ROOT or place DTED0 under assets."));
+            "DTED terrain is unavailable. Upload a DT1/DT2 folder or configure DTED0."));
         emit terrainVisibilityChanged(false);
         return;
     }
@@ -143,6 +225,48 @@ void PlaneSceneWidget::setTerrainVisible(bool visible) {
     }
     emit terrainVisibilityChanged(visible);
     update();
+}
+
+bool PlaneSceneWidget::loadTerrainFromDirectory(const QString &path, DtedLevel level) {
+    if (path.trimmed().isEmpty()) {
+        setDiagnostic(QStringLiteral("DTED terrain: No terrain folder was selected."));
+        return false;
+    }
+    const DtedDataset candidate{QDir::cleanPath(QFileInfo(path).absoluteFilePath()), level};
+    const QString validationError = validateTerrainDataset(candidate);
+    if (!validationError.isEmpty()) {
+        setDiagnostic(QStringLiteral("DTED terrain: %1").arg(validationError));
+        return false;
+    }
+
+    const bool patchWasReady = terrainPatchReady();
+    const bool availabilityChanged = !m_terrainAvailable;
+    ++m_terrainRevision;
+    stopTerrainWorker();
+    m_terrainDataset = candidate;
+    m_terrainAvailable = true;
+    m_terrainRequestAnchor.reset();
+    m_failedTerrainAnchor.reset();
+    m_terrainPatch.reset();
+    m_terrainPending = false;
+    m_pendingTerrainHalfExtent = 0.0;
+    m_pendingTerrainScale = 0.0;
+    m_failedTerrainHalfExtent = 0.0;
+    m_renderer.setTerrainPatch(nullptr);
+    if (patchWasReady) {
+        emit terrainPatchChanged(false);
+    }
+    setDiagnostic({});
+    if (availabilityChanged) {
+        emit terrainAvailabilityChanged(true);
+    }
+    emit terrainSourceChanged(level, candidate.rootDirectory);
+    if (m_terrainVisible) {
+        startTerrainWorker();
+        requestTerrainIfNeeded(true);
+    }
+    update();
+    return true;
 }
 
 void PlaneSceneWidget::requestTerrainIfNeeded(bool force) {
@@ -191,7 +315,7 @@ void PlaneSceneWidget::requestTerrainIfNeeded(bool force) {
     request.longitudeRadians = anchor.longitude;
     request.halfExtentMeters = halfExtent;
     request.metersPerSceneUnit = scale;
-    request.resolution = terrainResolution(halfExtent);
+    request.resolution = terrainResolution(halfExtent, m_terrainDataset.level);
     m_terrainRequestAnchor = anchor;
     m_pendingTerrainHalfExtent = halfExtent;
     m_pendingTerrainScale = scale;

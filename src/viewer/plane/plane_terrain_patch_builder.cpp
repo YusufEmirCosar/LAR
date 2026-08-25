@@ -43,11 +43,17 @@ std::size_t vertexIndex(int row, int column, int resolution) noexcept {
 
 PlaneTerrainPatchBuilder::PlaneTerrainPatchBuilder(QString dtedRootDirectory,
                                                    QString waterMaskPackPath)
-    : m_sampler(DtedTileSource(std::move(dtedRootDirectory)),
-                DtedWaterMaskSource(std::move(waterMaskPackPath))) {}
+    : PlaneTerrainPatchBuilder(DtedDataset{std::move(dtedRootDirectory), DtedLevel::Level0},
+                               std::move(waterMaskPackPath)) {}
+
+PlaneTerrainPatchBuilder::PlaneTerrainPatchBuilder(DtedDataset dataset, QString waterMaskPackPath)
+    : m_sampler(DtedTileSource(std::move(dataset.rootDirectory), dataset.level),
+                DtedWaterMaskSource(std::move(waterMaskPackPath))),
+      m_level(dataset.level) {}
 
 PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequest &request,
-                                                     QString *errorMessage) {
+                                                     QString *errorMessage,
+                                                     const std::function<bool()> &cancelled) {
     if (!validRequest(request)) {
         setError(errorMessage, QStringLiteral("Terrain patch request is outside bounded limits."));
         return nullptr;
@@ -69,6 +75,10 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
     std::size_t validSamples = 0U;
     std::size_t waterSamples = 0U;
     for (int row = 0; row < resolution; ++row) {
+        if (cancelled && cancelled()) {
+            setError(errorMessage, QStringLiteral("Terrain patch request was superseded."));
+            return nullptr;
+        }
         const double northMeters = -request.halfExtentMeters + sampleSpacing * row;
         for (int column = 0; column < resolution; ++column) {
             const double eastMeters = -request.halfExtentMeters + sampleSpacing * column;
@@ -103,7 +113,8 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
         const QString detail = m_sampler.lastError();
         setError(errorMessage,
                  detail.isEmpty()
-                     ? QStringLiteral("No DTED0 elevation is available near the aircraft.")
+                     ? QStringLiteral("No %1 elevation is available near the aircraft.")
+                           .arg(dtedLevelDisplayName(m_level))
                      : detail);
         return nullptr;
     }
@@ -120,6 +131,7 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
     patch->validSampleCount = validSamples;
     patch->waterSampleCount = waterSamples;
     patch->resolution = resolution;
+    patch->sourceLevel = m_level;
     patch->vertices.reserve(sampleCount * PlaneTerrainVertexStrideFloats);
 
     for (int row = 0; row < resolution; ++row) {
@@ -186,8 +198,8 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
         }
     }
     if (patch->empty()) {
-        setError(errorMessage,
-                 QStringLiteral("Available DTED0 samples do not form terrain triangles."));
+        setError(errorMessage, QStringLiteral("Available %1 samples do not form terrain triangles.")
+                                   .arg(dtedLevelDisplayName(m_level)));
         return nullptr;
     }
     setError(errorMessage, {});

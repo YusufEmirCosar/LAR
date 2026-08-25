@@ -5,7 +5,9 @@
 The production application has four baseline execution threads. Qt's main
 thread is not owned by the runtime; the runtime owns and joins the other three.
 When DTED terrain is enabled, the Plane widget lazily starts and owns one
-bounded terrain-preparation thread for its remaining lifetime.
+bounded terrain-preparation thread at a time. A validated session source change
+stops that worker, invalidates stale revisions, and starts a replacement when
+terrain remains visible.
 
 | Thread | QObject/service owners | Work allowed |
 | --- | --- | --- |

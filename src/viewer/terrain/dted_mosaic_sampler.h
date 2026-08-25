@@ -2,7 +2,7 @@
 
 /**
  * @file dted_mosaic_sampler.h
- * @brief Bilinear DTED0 surface sampler with bounded terrain and water-mask caches.
+ * @brief Bilinear DTED surface sampler with bounded terrain and water-mask caches.
  */
 
 #include "viewer/terrain/dted_tile_source.h"
@@ -25,9 +25,13 @@ struct DtedSurfaceSample final {
 /** @brief Samples a seamless logical terrain mosaic while loading only addressed tiles. */
 class DtedMosaicSampler final {
   public:
-    explicit DtedMosaicSampler(DtedTileSource source, std::size_t cacheCapacity = 24U);
+    static constexpr std::size_t DefaultCacheByteCapacity = 128U * 1024U * 1024U;
+
+    explicit DtedMosaicSampler(DtedTileSource source, std::size_t cacheCapacity = 24U,
+                               std::size_t cacheByteCapacity = DefaultCacheByteCapacity);
     DtedMosaicSampler(DtedTileSource source, DtedWaterMaskSource waterMaskSource,
-                      std::size_t cacheCapacity = 24U);
+                      std::size_t cacheCapacity = 24U,
+                      std::size_t cacheByteCapacity = DefaultCacheByteCapacity);
 
     [[nodiscard]] std::optional<double> sampleRadians(double latitudeRadians,
                                                       double longitudeRadians);
@@ -43,6 +47,9 @@ class DtedMosaicSampler final {
     [[nodiscard]] std::size_t cachedWaterMaskTileCount() const noexcept {
         return m_waterMaskCache.size();
     }
+    [[nodiscard]] std::size_t cachedTerrainBytes() const noexcept {
+        return m_cachedTerrainBytes;
+    }
     [[nodiscard]] bool waterMaskAvailable() const noexcept {
         return m_waterMaskSource.isAvailable();
     }
@@ -51,6 +58,7 @@ class DtedMosaicSampler final {
     struct CacheEntry final {
         std::shared_ptr<const DtedCell> cell;
         quint64 access = 0;
+        std::size_t bytes = 0U;
     };
 
     struct WaterMaskCacheEntry final {
@@ -71,7 +79,7 @@ class DtedMosaicSampler final {
 
     [[nodiscard]] std::shared_ptr<const DtedCell> cellFor(const DtedCellKey &key);
     [[nodiscard]] std::shared_ptr<const DtedWaterMaskCell>
-    waterMaskFor(const DtedCellKey &key, int longitudeSampleCount, int latitudeSampleCount);
+    waterMaskFor(const DtedCellKey &key, const DtedCell &terrainCell);
     [[nodiscard]] std::optional<SamplePosition> positionFor(double latitudeRadians,
                                                             double longitudeRadians);
     [[nodiscard]] static std::optional<double>
@@ -82,6 +90,8 @@ class DtedMosaicSampler final {
     DtedTileSource m_source;
     DtedWaterMaskSource m_waterMaskSource;
     std::size_t m_cacheCapacity = 24U;
+    std::size_t m_cacheByteCapacity = DefaultCacheByteCapacity;
+    std::size_t m_cachedTerrainBytes = 0U;
     std::map<DtedCellKey, CacheEntry> m_cache;
     std::map<DtedCellKey, WaterMaskCacheEntry> m_waterMaskCache;
     quint64 m_accessCounter = 0;

@@ -278,19 +278,22 @@ void PlaneSceneWidget::paintGL() {
         painter.setBrush(QColor(8, 12, 20, 190));
         painter.drawRoundedRect(instructionsRect, 7.0, 7.0);
         painter.drawText(instructionsRect, Qt::AlignCenter, instructions);
+        const QString terrainSourceLabel =
+            QStringLiteral("DT%1").arg(dtedLevelNumber(m_terrainDataset.level));
         QString statusLabel;
         if (m_surfaceVisible && m_terrainVisible) {
             statusLabel =
                 QStringLiteral("Grid: %1  •  Terrain: %2")
                     .arg(GridGeometryBuilder::formatDistance(m_surfaceState.gridSpacingMeters),
-                         terrainPatchReady() ? QStringLiteral("DTED0") : QStringLiteral("Loading"));
+                         terrainPatchReady() ? terrainSourceLabel : QStringLiteral("Loading"));
         } else if (m_surfaceVisible) {
             statusLabel =
                 QStringLiteral("Grid: %1")
                     .arg(GridGeometryBuilder::formatDistance(m_surfaceState.gridSpacingMeters));
         } else {
-            statusLabel = terrainPatchReady() ? QStringLiteral("Terrain: DTED0")
-                                              : QStringLiteral("Terrain: Loading");
+            statusLabel = terrainPatchReady()
+                              ? QStringLiteral("Terrain: %1").arg(terrainSourceLabel)
+                              : QStringLiteral("Terrain: Loading");
         }
         const QRect labelRect(18, height() - 49, metrics.horizontalAdvance(statusLabel) + 22, 31);
         painter.setPen(QColor(235, 242, 239, 235));

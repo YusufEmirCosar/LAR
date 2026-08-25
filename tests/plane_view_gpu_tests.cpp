@@ -1,12 +1,15 @@
 #include "domain/statefield.h"
 #include "viewer/plane/plane_scene_widget.h"
 
+#include "support/dted_fixture.h"
+
 #include <QApplication>
 #include <QBitArray>
 #include <QColor>
 #include <QCoreApplication>
 #include <QElapsedTimer>
 #include <QImage>
+#include <QTemporaryDir>
 
 #include <algorithm>
 #include <cmath>
@@ -236,6 +239,28 @@ int main(int argc, char *argv[]) {
     }
     if (centerLuminance(terrainFrame) < 8 || surfaceGridContrast(terrainFrame) < 10) {
         std::cerr << "FAILED: DTED0 terrain obscured the aircraft or tactical overlays.\n";
+        return 1;
+    }
+
+    const QString defaultTerrainRoot = widget.terrainRootDirectory();
+    QTemporaryDir level1Directory;
+    if (!level1Directory.isValid() ||
+        !dted_test_fixture::writeCell(level1Directory.path(), DtedLevel::Level1, {35, 39}, 1,
+                                      1600) ||
+        !widget.loadTerrainFromDirectory(level1Directory.path(), DtedLevel::Level1) ||
+        !waitForTerrain(widget)) {
+        std::cerr << "FAILED: User-selected DT1 terrain did not prepare and render.\n";
+        return 1;
+    }
+    const QImage level1Frame = widget.grabFramebuffer();
+    if (level1Frame.isNull() || level1Frame == terrainFrame ||
+        widget.terrainLevel() != DtedLevel::Level1) {
+        std::cerr << "FAILED: DT1 source replacement left the terrain framebuffer unchanged.\n";
+        return 1;
+    }
+    if (!widget.loadTerrainFromDirectory(defaultTerrainRoot, DtedLevel::Level0) ||
+        !waitForTerrain(widget)) {
+        std::cerr << "FAILED: Restoring the default DT0 source did not render.\n";
         return 1;
     }
     widget.setSceneState(deepOceanScene());

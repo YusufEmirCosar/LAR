@@ -17,8 +17,7 @@ class PlaneTerrainWorker final : public QObject {
     Q_OBJECT
 
   public:
-    PlaneTerrainWorker(QString dtedRootDirectory, QString waterMaskPackPath,
-                       QObject *parent = nullptr);
+    PlaneTerrainWorker(DtedDataset dataset, QString waterMaskPackPath, QObject *parent = nullptr);
 
     void submit(PlaneTerrainBuildRequest request);
     void stop() noexcept;

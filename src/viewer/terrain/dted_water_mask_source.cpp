@@ -153,8 +153,7 @@ void DtedWaterMaskSource::initialize() {
     m_entries = std::move(entries);
 }
 
-DtedWaterMaskReadResult DtedWaterMaskSource::load(const DtedCellKey &key, int longitudeSampleCount,
-                                                  int latitudeSampleCount) const {
+DtedWaterMaskReadResult DtedWaterMaskSource::load(const DtedCellKey &key) const {
     const std::size_t index = indexFor(key);
     if (!isAvailable() || index >= m_entries.size()) {
         return {nullptr, m_initializationError.isEmpty()
@@ -167,16 +166,10 @@ DtedWaterMaskReadResult DtedWaterMaskSource::load(const DtedCellKey &key, int lo
                              .arg(key.latitudeDegrees)
                              .arg(key.longitudeDegrees)};
     }
-    if (longitudeSampleCount != entry.longitudeSampleCount ||
-        latitudeSampleCount != entry.latitudeSampleCount) {
-        return {nullptr,
-                QStringLiteral("DTED water-mask dimensions disagree with the terrain cell.")};
-    }
-
     auto cell = std::make_shared<DtedWaterMaskCell>();
     cell->key = key;
-    cell->longitudeSampleCount = longitudeSampleCount;
-    cell->latitudeSampleCount = latitudeSampleCount;
+    cell->longitudeSampleCount = entry.longitudeSampleCount;
+    cell->latitudeSampleCount = entry.latitudeSampleCount;
     cell->coverage = entry.coverage;
     if (entry.coverage == DtedWaterCoverage::Mixed) {
         QFile file(m_packPath);
@@ -190,8 +183,8 @@ DtedWaterMaskReadResult DtedWaterMaskSource::load(const DtedCellKey &key, int lo
         cell->packedWaterBits.assign(
             reinterpret_cast<const quint8 *>(payload.constData()),
             reinterpret_cast<const quint8 *>(payload.constData() + payload.size()));
-        const std::size_t sampleCount = static_cast<std::size_t>(longitudeSampleCount) *
-                                        static_cast<std::size_t>(latitudeSampleCount);
+        const std::size_t sampleCount = static_cast<std::size_t>(entry.longitudeSampleCount) *
+                                        static_cast<std::size_t>(entry.latitudeSampleCount);
         const std::size_t unusedBits = cell->packedWaterBits.size() * 8U - sampleCount;
         if (unusedBits > 0U) {
             const quint8 usedMask = static_cast<quint8>(0xFFU >> unusedBits);

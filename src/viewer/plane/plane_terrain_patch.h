@@ -5,6 +5,8 @@
  * @brief Immutable CPU terrain mesh and bounded build request for Plane mode.
  */
 
+#include "viewer/terrain/dted_level.h"
+
 #include <QMetaType>
 #include <QString>
 
@@ -41,6 +43,7 @@ struct PlaneTerrainPatch final {
     std::size_t validSampleCount = 0U;
     std::size_t waterSampleCount = 0U;
     int resolution = 0;
+    DtedLevel sourceLevel = DtedLevel::Level0;
 
     [[nodiscard]] bool empty() const noexcept {
         return vertices.empty() || indices.empty();

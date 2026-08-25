@@ -332,21 +332,28 @@ visible size when the surface is toggled. Available aircraft altitude places
 the ground at its exact metric distance below the aircraft, with ground bounds
 and grid spacing expanding for a usable high-altitude view.
 
-The adjacent **Terrain: Off/On** toggle replaces only that opaque flat ground
-with a nearby DTED0 elevation mesh. DTED horizontal coordinates remain WGS84,
-elevations are interpreted as metres above the tile's declared mean-sea-level
-datum, and the aircraft stays at the scene origin while the stable terrain
-anchor moves underneath it. Tactical grid, target, and LAR overlays remain
-available over the terrain. While a patch is loading, a tile is absent, or a
-cell fails validation, Plane mode retains the flat-ground fallback and reports
-a diagnostic.
+The adjacent **Terrain DT0: Off/On** toggle replaces only that opaque flat
+ground with a nearby DTED elevation mesh. DT0 is the startup source. Use
+**Upload DTED Folder** to select DTED Level 1 or Level 2, then choose a folder
+whose cells use `{e|w}DDD/{n|s}DD.dt1` or `.dt2`; the validated folder becomes
+the source for the current session without being copied. The format prompt and
+folder picker can both be cancelled without changing the active source. An
+invalid folder also leaves the current source and patch intact.
+
+DTED horizontal coordinates remain WGS84, elevations are interpreted as metres
+above the tile's declared mean-sea-level datum, and the aircraft stays at the
+scene origin while the stable terrain anchor moves underneath it. Tactical
+grid, target, and LAR overlays remain available over the terrain. While a patch
+is loading, a tile is absent, or a cell fails validation, Plane mode retains
+the flat-ground fallback and reports a diagnostic.
 
 Ocean and sea posts are classified by the compact Natural Earth-derived mask.
 Their negative DTED values remain bathymetric depth for a logarithmic
 shallow-blue to deep-navy ramp, while their rendered geometry is held at mean
 sea level. Land polygons, rather than elevation sign alone, keep depressions
-such as the Dead Sea from being colored as ocean. Coastline placement remains
-limited by DTED0's approximately kilometre-scale post spacing.
+such as the Dead Sea from being colored as ocean. The existing mask is sampled
+by geographic position for DT1/DT2 terrain, so coastline classification remains
+limited by its DTED0-aligned resolution even when elevations are more detailed.
 
 For absolute vertical alignment, mapped `Plane.location[2]` must use metres
 above a mean-sea-level datum compatible with the DTED files. If aircraft
@@ -355,12 +362,13 @@ default clearance above the sampled center elevation; it does not infer a true
 MSL aircraft altitude.
 
 Terrain preparation is latest-only on a dedicated CPU thread. It lazily opens
-only addressed cells, keeps bounded 24-cell terrain and water-mask caches, and
-builds a 20–60 km half-extent patch at approximately the DTED0 post spacing.
-The patch is reused until the aircraft moves beyond 35% of its radius; OpenGL
-upload still occurs only in the widget's active context. DTED0 is nominally
-coarse terrain (roughly kilometre-scale), so interpolation smooths the surface
-but does not create additional terrain detail.
+only addressed cells, bounds terrain caching by both 24 entries and 128 MiB,
+and builds a 20–60 km half-extent patch using level-aware sample spacing with a
+257-by-257 mesh cap. The water-mask cache remains capped at 24 entries. The
+patch is reused until the aircraft moves beyond 35% of its radius; OpenGL
+upload still occurs only in the widget's active context. DT0 is nominally
+coarse terrain (roughly kilometre-scale), while DT1/DT2 improve sampled detail
+within the mesh cap rather than forcing every source post onto the GPU.
 
 The first valid aircraft position anchors the grid to the Earth. As subsequent
 packets move the centered aircraft, the grid slides beneath it in the opposite
@@ -383,11 +391,13 @@ The model and cubemap files live under `assets/models` and `assets/cubemaps`.
 Plane mode renders validated `TEXCOORD_0` UVs and PNG/JPEG base-color textures
 from the packaged GLB or a user-uploaded `.gltf`/`.glb` model. The packaged
 F-16 remains the default; use **Upload Jet Model** in the Plane controls to
-replace it for the current session.
+replace it for the current session. **Upload DTED Folder** similarly selects an
+external DT1/DT2 tree for the session; restarting restores normal DT0 source
+discovery.
 They and the compact generated water mask are copied beside every executable
 that renders or tests the Plane scene and installed beneath `bin/assets`. The
-much larger `assets/DTED0` tree is not
-copied or installed by default. Plane mode checks `LAR_DTED0_ROOT`, then an
+much larger `assets/DTED0` tree and user-selected DT1/DT2 trees are not copied
+or installed by default. Plane mode checks `LAR_DTED0_ROOT`, then an
 executable-adjacent `assets/DTED0`, then the CMake `LAR_DTED0_ROOT` development
 path. The mask independently checks `LAR_DTED0_WATER_MASK`, its packaged path,
 then the CMake-configured development mask file. Invalid or missing assets

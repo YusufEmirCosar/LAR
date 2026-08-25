@@ -27,9 +27,8 @@ class DtedWaterMaskSource final {
         return m_initializationError;
     }
 
-    /** @brief Loads and verifies one cell whose dimensions must match its DTED cell. */
-    [[nodiscard]] DtedWaterMaskReadResult load(const DtedCellKey &key, int longitudeSampleCount,
-                                               int latitudeSampleCount) const;
+    /** @brief Loads and verifies one mask cell in the pack's native DTED0-aligned grid. */
+    [[nodiscard]] DtedWaterMaskReadResult load(const DtedCellKey &key) const;
 
   private:
     struct IndexEntry final {

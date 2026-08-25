@@ -324,6 +324,7 @@ qt_add_executable(larviewport-worker-tests
 
 qt_add_executable(larplane-view-tests
     tests/plane_view_tests.cpp
+    tests/support/dted_fixture.h
 )
 target_compile_definitions(larplane-view-tests PRIVATE
     "LAR_TEST_SOURCE_DIR=\"${CMAKE_CURRENT_SOURCE_DIR}\""
@@ -404,6 +405,7 @@ set_tests_properties(lar-earth-view-gpu-tests PROPERTIES
 
 qt_add_executable(lar-plane-view-gpu-tests
     tests/plane_view_gpu_tests.cpp
+    tests/support/dted_fixture.h
 )
 target_link_libraries(lar-plane-view-gpu-tests PRIVATE
     lar-presentation-widgets

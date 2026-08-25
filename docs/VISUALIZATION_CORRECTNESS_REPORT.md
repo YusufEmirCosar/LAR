@@ -193,9 +193,10 @@ human-verifiable.
 
 ### Terrain accuracy limits
 
-The DTED reader correctly bounds Level-0 dimensions, validates UHL/DSI/ACC
-record presence, checks every profile checksum, decodes signed-magnitude metre
-elevations, preserves no-data, and bilinearly samples adjoining cells.
+The DTED reader correctly applies level-specific DT0/DT1/DT2 dimension and
+spacing bounds, validates UHL/DSI/ACC record presence, checks every profile
+checksum, decodes signed-magnitude metre elevations, preserves no-data, and
+bilinearly samples adjoining cells.
 
 It does **not** parse or enforce DSI datum fields or ACC accuracy values. The
 inspected tile contains `WGS84`/`MSL` text, but its ACC accuracy fields are

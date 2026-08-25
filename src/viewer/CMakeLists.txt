@@ -25,6 +25,7 @@ qt_add_library(lar-presentation-widgets STATIC
     src/viewer/lar_geometry_builder.h
     src/viewer/lar_geometry_builder.cpp
     src/viewer/terrain/dted_cell.h
+    src/viewer/terrain/dted_level.h
     src/viewer/terrain/dted_cell_reader.h
     src/viewer/terrain/dted_cell_reader.cpp
     src/viewer/terrain/dted_tile_source.h

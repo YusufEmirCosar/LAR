@@ -4,9 +4,9 @@
 
 #include <utility>
 
-PlaneTerrainWorker::PlaneTerrainWorker(QString dtedRootDirectory, QString waterMaskPackPath,
+PlaneTerrainWorker::PlaneTerrainWorker(DtedDataset dataset, QString waterMaskPackPath,
                                        QObject *parent)
-    : QObject(parent), m_builder(std::move(dtedRootDirectory), std::move(waterMaskPackPath)) {
+    : QObject(parent), m_builder(std::move(dataset), std::move(waterMaskPackPath)) {
     connect(this, &PlaneTerrainWorker::wakeRequested, this, &PlaneTerrainWorker::processLatest,
             Qt::QueuedConnection);
 }
@@ -46,7 +46,10 @@ void PlaneTerrainWorker::processLatest() {
             m_hasPending = false;
         }
         QString message;
-        PlaneTerrainPatchPtr patch = m_builder.build(request, &message);
+        PlaneTerrainPatchPtr patch = m_builder.build(request, &message, [this, &request] {
+            return m_stopped.load(std::memory_order_acquire) ||
+                   m_latestRevision.load(std::memory_order_acquire) != request.revision;
+        });
         if (m_stopped.load(std::memory_order_acquire)) {
             break;
         }

@@ -19,13 +19,16 @@ double normalizedLongitudeDegrees(double radians) noexcept {
 }
 } // namespace
 
-DtedMosaicSampler::DtedMosaicSampler(DtedTileSource source, std::size_t cacheCapacity)
-    : m_source(std::move(source)), m_cacheCapacity(std::max<std::size_t>(1U, cacheCapacity)) {}
+DtedMosaicSampler::DtedMosaicSampler(DtedTileSource source, std::size_t cacheCapacity,
+                                     std::size_t cacheByteCapacity)
+    : m_source(std::move(source)), m_cacheCapacity(std::max<std::size_t>(1U, cacheCapacity)),
+      m_cacheByteCapacity(std::max<std::size_t>(1U, cacheByteCapacity)) {}
 
 DtedMosaicSampler::DtedMosaicSampler(DtedTileSource source, DtedWaterMaskSource waterMaskSource,
-                                     std::size_t cacheCapacity)
+                                     std::size_t cacheCapacity, std::size_t cacheByteCapacity)
     : m_source(std::move(source)), m_waterMaskSource(std::move(waterMaskSource)),
-      m_cacheCapacity(std::max<std::size_t>(1U, cacheCapacity)) {}
+      m_cacheCapacity(std::max<std::size_t>(1U, cacheCapacity)),
+      m_cacheByteCapacity(std::max<std::size_t>(1U, cacheByteCapacity)) {}
 
 std::shared_ptr<const DtedCell> DtedMosaicSampler::cellFor(const DtedCellKey &key) {
     ++m_accessCounter;
@@ -39,14 +42,15 @@ std::shared_ptr<const DtedCell> DtedMosaicSampler::cellFor(const DtedCellKey &ke
         m_lastError = result.message;
     }
     const std::shared_ptr<const DtedCell> cell = result.cell;
-    m_cache.emplace(key, CacheEntry{cell, m_accessCounter});
+    const std::size_t bytes = cell != nullptr ? cell->storageBytes() : 0U;
+    m_cachedTerrainBytes += bytes;
+    m_cache.emplace(key, CacheEntry{cell, m_accessCounter, bytes});
     evictIfNeeded();
     return cell;
 }
 
-std::shared_ptr<const DtedWaterMaskCell> DtedMosaicSampler::waterMaskFor(const DtedCellKey &key,
-                                                                         int longitudeSampleCount,
-                                                                         int latitudeSampleCount) {
+std::shared_ptr<const DtedWaterMaskCell>
+DtedMosaicSampler::waterMaskFor(const DtedCellKey &key, const DtedCell &terrainCell) {
     if (!m_waterMaskSource.isAvailable()) {
         return nullptr;
     }
@@ -56,22 +60,28 @@ std::shared_ptr<const DtedWaterMaskCell> DtedMosaicSampler::waterMaskFor(const D
         found->second.access = m_accessCounter;
         return found->second.cell;
     }
-    DtedWaterMaskReadResult result =
-        m_waterMaskSource.load(key, longitudeSampleCount, latitudeSampleCount);
-    const std::shared_ptr<const DtedWaterMaskCell> cell = result.cell;
+    DtedWaterMaskReadResult result = m_waterMaskSource.load(key);
+    std::shared_ptr<const DtedWaterMaskCell> cell = result.cell;
+    if (m_source.level() == DtedLevel::Level0 && cell != nullptr &&
+        (cell->longitudeSampleCount != terrainCell.longitudeSampleCount ||
+         cell->latitudeSampleCount != terrainCell.latitudeSampleCount)) {
+        cell.reset();
+    }
     m_waterMaskCache.emplace(key, WaterMaskCacheEntry{cell, m_accessCounter});
     evictIfNeeded();
     return cell;
 }
 
 void DtedMosaicSampler::evictIfNeeded() {
-    while (m_cache.size() > m_cacheCapacity) {
+    while (m_cache.size() > m_cacheCapacity ||
+           (m_cachedTerrainBytes > m_cacheByteCapacity && m_cache.size() > 1U)) {
         auto oldest = m_cache.begin();
         for (auto iterator = std::next(m_cache.begin()); iterator != m_cache.end(); ++iterator) {
             if (iterator->second.access < oldest->second.access) {
                 oldest = iterator;
             }
         }
+        m_cachedTerrainBytes -= oldest->second.bytes;
         m_cache.erase(oldest);
     }
     while (m_waterMaskCache.size() > m_cacheCapacity) {
@@ -135,11 +145,20 @@ std::optional<double> DtedMosaicSampler::interpolatedElevation(const SamplePosit
     const std::array<std::optional<double>, 4> samples{
         cell.elevation(longitude0, latitude0), cell.elevation(longitude1, latitude0),
         cell.elevation(longitude0, latitude1), cell.elevation(longitude1, latitude1)};
+    const auto maskWater = [&cell, mask](int longitudeIndex,
+                                         int latitudeIndex) -> std::optional<bool> {
+        if (mask == nullptr) {
+            return std::nullopt;
+        }
+        const double longitudeCellFraction = static_cast<double>(longitudeIndex) /
+                                             static_cast<double>(cell.longitudeSampleCount - 1);
+        const double latitudeCellFraction =
+            static_cast<double>(latitudeIndex) / static_cast<double>(cell.latitudeSampleCount - 1);
+        return mask->waterAtFraction(longitudeCellFraction, latitudeCellFraction);
+    };
     const std::array<std::optional<bool>, 4> classifications{
-        mask != nullptr ? mask->water(longitude0, latitude0) : std::nullopt,
-        mask != nullptr ? mask->water(longitude1, latitude0) : std::nullopt,
-        mask != nullptr ? mask->water(longitude0, latitude1) : std::nullopt,
-        mask != nullptr ? mask->water(longitude1, latitude1) : std::nullopt};
+        maskWater(longitude0, latitude0), maskWater(longitude1, latitude0),
+        maskWater(longitude0, latitude1), maskWater(longitude1, latitude1)};
     const std::array<double, 4> weights{(1.0 - longitudeFraction) * (1.0 - latitudeFraction),
                                         longitudeFraction * (1.0 - latitudeFraction),
                                         (1.0 - longitudeFraction) * latitudeFraction,
@@ -168,7 +187,8 @@ std::optional<double> DtedMosaicSampler::sampleRadians(double latitudeRadians,
     }
     const std::optional<double> elevation = interpolatedElevation(*position);
     if (!elevation) {
-        m_lastError = QStringLiteral("DTED0 samples at the requested coordinate contain no data.");
+        m_lastError = QStringLiteral("%1 samples at the requested coordinate contain no data.")
+                          .arg(dtedLevelDisplayName(m_source.level()));
         return std::nullopt;
     }
     m_lastError.clear();
@@ -181,15 +201,17 @@ std::optional<DtedSurfaceSample> DtedMosaicSampler::sampleSurfaceRadians(double 
     if (!position) {
         return std::nullopt;
     }
-    const std::shared_ptr<const DtedWaterMaskCell> mask = waterMaskFor(
-        position->key, position->cell->longitudeSampleCount, position->cell->latitudeSampleCount);
+    const std::shared_ptr<const DtedWaterMaskCell> mask =
+        waterMaskFor(position->key, *position->cell);
     bool water = false;
     if (mask != nullptr) {
-        const int nearestLongitude =
-            position->longitudeFraction < 0.5 ? position->longitude0 : position->longitude1;
-        const int nearestLatitude =
-            position->latitudeFraction < 0.5 ? position->latitude0 : position->latitude1;
-        water = mask->water(nearestLongitude, nearestLatitude).value_or(false);
+        const double longitudeCellFraction =
+            (static_cast<double>(position->longitude0) + position->longitudeFraction) /
+            static_cast<double>(position->cell->longitudeSampleCount - 1);
+        const double latitudeCellFraction =
+            (static_cast<double>(position->latitude0) + position->latitudeFraction) /
+            static_cast<double>(position->cell->latitudeSampleCount - 1);
+        water = mask->waterAtFraction(longitudeCellFraction, latitudeCellFraction).value_or(false);
     }
     std::optional<double> elevation =
         mask != nullptr ? interpolatedElevation(*position, mask.get(), water) : std::nullopt;
@@ -197,7 +219,8 @@ std::optional<DtedSurfaceSample> DtedMosaicSampler::sampleSurfaceRadians(double 
         elevation = interpolatedElevation(*position);
     }
     if (!elevation) {
-        m_lastError = QStringLiteral("DTED0 samples at the requested coordinate contain no data.");
+        m_lastError = QStringLiteral("%1 samples at the requested coordinate contain no data.")
+                          .arg(dtedLevelDisplayName(m_source.level()));
         return std::nullopt;
     }
     m_lastError.clear();

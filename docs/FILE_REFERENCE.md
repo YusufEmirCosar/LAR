@@ -47,6 +47,7 @@ implementation files are listed explicitly.
 | `assets/models/f16_3.glb` | Packaged glTF 2.0 F-16 model for Plane mode |
 | `assets/cubemaps/*_{rt,lf,up,dn,ft,bk}.png` | Naturally ordered six-face cubemap sets |
 | `assets/DTED0/{e|w}DDD/{n|s}DD.dt0` | Lazily addressed WGS84 Level-0 terrain cells; excluded from default staging/install |
+| User-selected `{e|w}DDD/{n|s}DD.dt1` / `.dt2` | Session-only Level-1/Level-2 terrain trees accessed in place and never staged |
 | `assets/ne_10m_land/*` | Natural Earth 1:10m build-time land polygons and required shapefile sidecars |
 | `assets/water/dted0_water_mask.bin` | Generated indexed DTED-post water mask; staged and installed with Plane assets |
 | `assets/water/README.md` | Mask format, provenance, and deterministic regeneration command |
@@ -160,8 +161,9 @@ implementation files are listed explicitly.
 | `src/viewer/lar_projection.{h,cpp}` | Local tangent-plane metric projection |
 | `src/viewer/lar_geometry_builder.{h,cpp}` | Grid-page LAR paths from target values |
 | `src/viewer/lar_geodesic_geometry.{h,cpp}` | Spherical destination, normalization, and distance/bearing math |
-| `src/viewer/terrain/dted_cell.h` | Bounded immutable DTED0 cell and degree key |
-| `src/viewer/terrain/dted_cell_reader.{h,cpp}` | UHL/profile/checksum and signed-magnitude DTED0 parser |
+| `src/viewer/terrain/dted_level.h` | DT0/DT1/DT2 metadata and active dataset value |
+| `src/viewer/terrain/dted_cell.h` | Bounded immutable DTED cell and degree key |
+| `src/viewer/terrain/dted_cell_reader.{h,cpp}` | Streaming level-aware UHL/profile/checksum and signed-magnitude parser |
 | `src/viewer/terrain/dted_tile_source.{h,cpp}` | Direct WGS84 coordinate-to-cell path resolution |
 | `src/viewer/terrain/dted_mosaic_sampler.{h,cpp}` | Bilinear sampling with bounded positive/negative tile cache |
 | `src/viewer/terrain/dted_water_mask.h` | Immutable pure/mixed DTED-post water classification |
@@ -339,8 +341,9 @@ fuzzers, benchmarks, and the optional native GPU tests.
 | `tests/map_renderer_validation_tests.cpp` | Shader and renderer input/state validation without native GPU execution |
 | `tests/map_loading_tests.cpp` | Source abstraction, async load lifecycle, installation failure/retry |
 | `tests/earth_lar_view_gpu_tests.cpp` | Opt-in native OpenGL integration and context/resource lifecycle |
-| `tests/plane_view_tests.cpp` | GLB/cubemap, DTED/water parser/sampler/worker, surface, attitude, camera, and controls |
+| `tests/plane_view_tests.cpp` | GLB/cubemap, DT0/DT1/DT2 and water parser/sampler/worker, source switching, surface, attitude, camera, and controls |
 | `tests/plane_view_gpu_tests.cpp` | Opt-in native Plane OpenGL, terrain, tactical-surface, and skybox validation |
+| `tests/support/dted_fixture.h` | Synthetic checksummed DT0/DT1/DT2 cell builder shared by CPU and GPU tests |
 | `tests/performance_benchmarks.cpp` | Mapping, recording, playback, map parsing, and zone preparation baselines |
 | `tests/ui_snapshot_tool.cpp` | Deterministic offscreen UI image helper for manual visual review |
 
