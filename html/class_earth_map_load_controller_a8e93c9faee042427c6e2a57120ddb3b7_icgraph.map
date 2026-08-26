@@ -1,5 +1,0 @@
-<map id="EarthMapLoadController::markFailed" name="EarthMapLoadController::markFailed">
-<area shape="rect" id="Node000001" title="Converts a deferred renderer failure into a terminal, retry&#45;safe load failure." alt="" coords="239,5,400,46"/>
-<area shape="rect" id="Node000002" href="$class_earth_lar_view.html#a7eb84ed5ba23f7d30ed5ac72308d4448" title="Constructs this object." alt="" coords="5,13,191,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,26,191,28,191,23,226,25"/>
-</map>

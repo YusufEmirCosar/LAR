@@ -1,8 +1,0 @@
-<map id="ApplicationFacade::processedPacketCountChanged" name="ApplicationFacade::processedPacketCountChanged">
-<area shape="rect" id="Node000001" title="Reports a change in the processed&#45;packet count." alt="" coords="374,29,583,70"/>
-<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="513,13,501,10,479,8,458,10,445,15,440,21,442,30,437,27,435,19,442,10,456,5,479,3,503,5,518,14"/>
-<area shape="rect" id="Node000002" href="$class_application_facade.html#acc84de76e45ecc6539751a18ab2ab19d" title="Creates the main&#45;thread application facade." alt="" coords="190,29,326,70"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="356,50,326,52,326,47,361,50"/>
-<area shape="rect" id="Node000003" href="$class_application_facade.html#a32410f883b62e33c853d2f6996cf8685" title="Creates the application facade with IP access&#45;policy file support." alt="" coords="5,29,142,70"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="172,50,142,52,142,47,177,49"/>
-</map>

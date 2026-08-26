@@ -17,12 +17,7 @@
 class GridCameraTransform final {
   public:
     void clear() noexcept;
-    /**
-     * @brief Sets origin.
-     *
-     * @param[in] latitudeRadians Angle value expressed in radians.
-     * @param[in] longitudeRadians Angle value expressed in radians.
-     */
+    /** Sets the geographic origin in radians; later calls preserve the first origin. */
     void setOrigin(double latitudeRadians, double longitudeRadians) noexcept;
     void applyCameraState(const ViewportCameraState &state) noexcept;
 
@@ -34,11 +29,7 @@ class GridCameraTransform final {
     [[nodiscard]] double originLongitude() const noexcept;
     [[nodiscard]] const std::array<double, 3> &location() const noexcept;
 
-    /**
-     * @brief Sets scale.
-     *
-     * @param[in] scale Finite numeric value used by the operation.
-     */
+    /** Sets the viewport scale in pixels per metre, clamped to its supported range. */
     void setScale(double scale) noexcept;
     void zoom(int wheelDelta) noexcept;
     void pan(const QPoint &pixelDelta) noexcept;

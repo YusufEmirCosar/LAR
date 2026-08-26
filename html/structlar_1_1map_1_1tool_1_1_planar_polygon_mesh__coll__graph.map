@@ -1,9 +1,0 @@
-<map id="lar::map::tool::PlanarPolygonMesh" name="lar::map::tool::PlanarPolygonMesh">
-<area shape="rect" id="Node000001" title="Flattened polygon coordinates with fill and border indices." alt="" coords="99,234,321,260"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="23,102,197,143"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,153,203,233,197,234,134,157"/>
-<area shape="rect" id="Node000003" href="$structlar_1_1map_1_1tool_1_1_source_coordinate.html" title="Geographic source coordinate expressed in degrees." alt="" coords="5,5,215,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="111,44,113,102,107,101,109,49"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="222,110,401,135"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="302,147,286,181,263,212,232,236,230,231,259,208,281,178,298,150"/>
-</map>

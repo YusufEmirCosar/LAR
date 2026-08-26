@@ -1,7 +1,0 @@
-<map id="IpAccessPolicy::IpAccessPolicy" name="IpAccessPolicy::IpAccessPolicy">
-<area shape="rect" id="Node000001" title="Constructs this object." alt="" coords="5,23,181,64"/>
-<area shape="rect" id="Node000002" href="$class_ip_access_policy.html#a78a84c573b930f04bf0b6e8a7ec51909" title="Documents the addresses operation." alt="" coords="229,5,409,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,31,216,29,211,31,182,36"/>
-<area shape="rect" id="Node000003" href="$class_ip_access_policy.html#a771de5ea54903cd08e3d2460a40b20db" title="Documents the mode operation." alt="" coords="243,55,395,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,50,230,58,224,58,181,56"/>
-</map>

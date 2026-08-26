@@ -86,31 +86,21 @@ class ApplicationViewModel final : public QObject {
 
     void setMode(ApplicationMode mode);
     void setProcessedPacketCount(quint64 count);
-    /**
-     * @brief Sets processed packet rate.
-     *
-     * @param[in] rate Finite numeric value used by the operation.
-     */
+    /** Sets the current source throughput in packets or records per second. */
     void setProcessedPacketRate(quint64 rate);
     void setRecordedPacketCount(quint64 count);
     void setRecordingDuration(SessionTimestamp duration);
 
     void setPlaybackPosition(SessionTimestamp position);
     void setPlaybackDuration(SessionTimestamp duration);
-    /**
-     * @brief Sets playback rate.
-     *
-     * @param[in] rate Finite numeric value used by the operation.
-     */
+    /** Sets the presentation-clock multiplier already validated by playback policy. */
     void setPlaybackRate(double rate);
 
     void setStatusText(const QString &text);
     void setLastError(const QString &error);
 
   signals:
-    /**
-     * @brief Returns the state changed.
-     */
+    /** Notifies observers that the decoded presentation state changed. */
     void stateChanged();
     void modeChanged(ApplicationMode mode);
     void metricsChanged();

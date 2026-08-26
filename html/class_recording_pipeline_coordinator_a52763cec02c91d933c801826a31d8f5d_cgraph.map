@@ -1,9 +1,0 @@
-<map id="RecordingPipelineCoordinator::completeOperation" name="RecordingPipelineCoordinator::completeOperation">
-<area shape="rect" id="Node000001" title="Documents the complete operation operation." alt="" coords="5,71,199,111"/>
-<area shape="rect" id="Node000002" href="$class_recording_pipeline_coordinator.html#a42d64115ff6cf47c38dc42f8e158098e" title="Notifies observers about command finished." alt="" coords="247,5,440,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,68,253,49,248,52,180,73"/>
-<area shape="rect" id="Node000003" href="$class_recording_pipeline_coordinator.html#a4a9ae2a22d74af74ad4e99213989a7fe" title="Notifies observers about recording reset finished." alt="" coords="247,71,440,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,88,234,90,229,92,199,94"/>
-<area shape="rect" id="Node000004" href="$class_recording_pipeline_coordinator.html#a0d65d0cfc1a4d5d1d90f2411087fcba8" title="Notifies observers about recording save finished." alt="" coords="247,136,440,177"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="180,109,253,131,248,132,179,115"/>
-</map>

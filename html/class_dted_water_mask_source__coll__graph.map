@@ -1,7 +1,0 @@
-<map id="DtedWaterMaskSource" name="DtedWaterMaskSource">
-<area shape="rect" id="Node000001" title="Opens one mask index and reads mixed&#45;cell payloads only when addressed." alt="" coords="22,229,178,254"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,117,195,158"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,172,103,229,97,227,98,175"/>
-<area shape="rect" id="Node000003" href="$struct_dted_water_mask_source_1_1_index_entry.html" title=" " alt="" coords="22,5,178,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="101,59,103,117,97,116,99,64"/>
-</map>

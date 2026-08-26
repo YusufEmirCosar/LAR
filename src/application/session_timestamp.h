@@ -130,22 +130,13 @@ class SessionTimestamp final {
     friend constexpr bool operator!=(SessionTimestamp left, SessionTimestamp right) noexcept {
         return !(left == right);
     }
-    /**
-     * @brief Converts or compares the represented value.
-     * @param[in] left Left used by the operation.
-     * @param[in] right Right used by the operation.
-     */
+    /** Orders timestamps by their exact millisecond value. */
     friend constexpr bool operator<(SessionTimestamp left, SessionTimestamp right) noexcept {
         return left.m_milliseconds < right.m_milliseconds;
     }
     friend constexpr bool operator<=(SessionTimestamp left, SessionTimestamp right) noexcept {
         return !(right < left);
     }
-    /**
-     * @brief Converts or compares the represented value.
-     * @param[in] left Left used by the operation.
-     * @param[in] right Right used by the operation.
-     */
     friend constexpr bool operator>(SessionTimestamp left, SessionTimestamp right) noexcept {
         return right < left;
     }

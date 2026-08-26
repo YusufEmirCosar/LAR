@@ -12,12 +12,28 @@
 #include <atomic>
 
 /**
- * Every structurally valid command returns an accepted dispatch with a unique
- * non-zero request ID. Operational success or failure is reported through the
- * matching typed result/failure signal. Invalid arguments and post-shutdown
- * commands are rejected immediately and produce no operational completion.
+ * @defgroup runtime_command_ports Runtime command ports
+ * @brief Shared command-dispatch contract for every runtime command port.
+ *
+ * A structurally valid command returns an accepted dispatch with a unique,
+ * non-zero request ID. The runtime reports exactly one operational completion
+ * bearing that ID through the signal assigned to the command. Delivery may be
+ * synchronous in the direct runtime or queued in the threaded runtime.
+ * Invalid arguments and commands issued after shutdown are rejected
+ * synchronously: their dispatch has no valid request ID and no completion is
+ * emitted.
+ *
+ * Acceptance only means that ownership of the request transferred to the
+ * runtime. Callers must not treat it as operational success.
+ * @{
  */
-/** Segregated command port for mapping, access policy, and online capture. */
+/**
+ * @brief Command port for mapping, access policy, and online capture.
+ *
+ * `loadMapping()` completes through `mappingLoadFinished()`, `startOnline()`
+ * and `stopOnline()` through their corresponding online result signals, and
+ * `setIpAccessPolicy()` through `ipAccessPolicyChangeFinished()`.
+ */
 class IMappingCaptureRuntime {
   public:
     virtual ~IMappingCaptureRuntime() = default;
@@ -27,7 +43,14 @@ class IMappingCaptureRuntime {
     virtual CommandDispatch stopOnline() = 0;
 };
 
-/** Segregated command port for the active recording transaction. */
+/**
+ * @brief Command port for the active recording transaction.
+ *
+ * Start, pause, resume, and discard complete through `commandFinished()`.
+ * Snapshot and final-save requests complete through `recordingSaveFinished()`;
+ * its `finalSave` flag distinguishes the two. Reset completes through
+ * `recordingResetFinished()`.
+ */
 class IRecordingRuntime {
   public:
     virtual ~IRecordingRuntime() = default;
@@ -40,7 +63,14 @@ class IRecordingRuntime {
     virtual CommandDispatch discardRecording() = 0;
 };
 
-/** Segregated command port for session loading and playback control. */
+/**
+ * @brief Command port for session loading and playback control.
+ *
+ * Loading and closing complete through `sessionLoadFinished()` and
+ * `sessionClosed()`. Playback controls complete through `commandFinished()`;
+ * position and playing-state events are publications, not command
+ * acknowledgements.
+ */
 class IPlaybackRuntime {
   public:
     virtual ~IPlaybackRuntime() = default;
@@ -54,12 +84,18 @@ class IPlaybackRuntime {
     virtual CommandDispatch setPlaybackRepeat(bool enabled) = 0;
 };
 
-/** Segregated command port for clearing source throughput counters. */
+/**
+ * @brief Command port for clearing source throughput counters.
+ *
+ * `resetMetrics()` completes through `commandFinished()`.
+ */
 class IMetricsRuntime {
   public:
     virtual ~IMetricsRuntime() = default;
     virtual CommandDispatch resetMetrics() = 0;
 };
+
+/** @} */
 
 /** Minimal lifecycle port for deterministic worker shutdown. */
 class IApplicationLifetime {
@@ -76,7 +112,9 @@ class IApplicationLifetime {
  *
  * The smaller base interfaces preserve interface segregation for focused
  * consumers and test doubles; this QObject adds the typed asynchronous event
- * protocol shared by direct and threaded runtime implementations.
+ * protocol shared by direct and threaded runtime implementations. Result
+ * signals are request-correlated completions. State, metrics, and playback
+ * signals are epoch-correlated publications and may occur repeatedly.
  */
 class IApplicationRuntime : public QObject,
                             public IMappingCaptureRuntime,
@@ -91,6 +129,7 @@ class IApplicationRuntime : public QObject,
     ~IApplicationRuntime() override = default;
 
   signals:
+    /** Completes an accepted command that has no command-specific result type. */
     void commandFinished(const RuntimeCommandResult &result);
     void mappingLoadFinished(const MappingLoadResult &result);
     void onlineStateChanged(const OnlineStateEvent &event);

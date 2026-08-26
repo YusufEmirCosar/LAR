@@ -1,8 +1,0 @@
-<map id="OnlineWorkflowController::publish" name="OnlineWorkflowController::publish">
-<area shape="rect" id="Node000001" title="Publishes the current policy view." alt="" coords="5,5,174,46"/>
-<area shape="rect" id="Node000002" href="$class_online_workflow_controller.html#a2a44f7f5543eba86c8bdb538849cc0d3" title="Notifies observers about policy view changed." alt="" coords="222,5,390,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,32,209,35,203,35,174,37"/>
-<area shape="poly" id="edge3_Node000002_Node000001" title=" " alt="" coords="218,17,189,19,189,14,224,17"/>
-<area shape="rect" id="Node000003" href="$class_online_workflow_controller.html#a7d138d69b5b5daf31b30af3c47c1dd89" title="Returns the current active policy." alt="" coords="438,5,606,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="390,23,425,26,420,26,390,28"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="lar::map::EarthMapWidget::setSphereZoom" name="lar::map::EarthMapWidget::setSphereZoom">
-<area shape="rect" id="Node000001" title="Sets sphere zoom." alt="" coords="5,71,179,111"/>
-<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_camera.html#abdc5cbaed04773909bf61a5f07d79784" title="Sets sphere zoom." alt="" coords="240,5,387,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,68,230,50,225,52,164,73"/>
-<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_map_camera.html#aebf699c18497bc664d6c955d7cfa8333" title="Returns the current sphere zoom." alt="" coords="240,71,387,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,88,227,90,221,92,180,94"/>
-<area shape="rect" id="Node000004" href="$classlar_1_1map_1_1_earth_map_widget.html#a4b185401cc64c6657d7c174621296c67" title="Notifies observers about zoom changed." alt="" coords="227,136,400,177"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="163,109,230,130,225,132,163,115"/>
-</map>

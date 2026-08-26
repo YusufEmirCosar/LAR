@@ -1,8 +1,0 @@
-<map id="ApplicationFacade::mappingLoaded" name="ApplicationFacade::mappingLoaded">
-<area shape="rect" id="Node000001" title="Reports successful loading of a packet mapping." alt="" coords="5,39,142,79"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="38,38,36,29,42,20,55,14,74,12,94,14,107,22,102,24,92,20,73,17,56,19,45,24,41,30,43,38"/>
-<area shape="rect" id="Node000002" href="$class_application_facade.html#a22237ba254d2b73c0d6ee14376a0aee9" title="Returns the number of fields in the active packet mapping." alt="" coords="192,5,328,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,44,180,40,175,41,143,49"/>
-<area shape="rect" id="Node000003" href="$class_application_facade.html#a1c17c18edd6c30bb9e2bf63bf449153a" title="Returns the minimum packet size required by the active mapping." alt="" coords="190,71,331,111"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="142,68,177,76,172,77,142,73"/>
-</map>

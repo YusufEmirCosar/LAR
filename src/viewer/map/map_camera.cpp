@@ -232,6 +232,9 @@ WorldCopyRange MapCamera::visibleWorldCopiesForBounds(double minimumLongitude,
         viewportRight = std::max(viewportRight, corner.x());
     }
 
+    // Copy k occupies [minimum + 360k, maximum + 360k]. Solving its
+    // intersection with the viewport yields these inclusive ceil/floor bounds;
+    // epsilon keeps a copy touching the edge visible despite projection noise.
     constexpr double Epsilon = 1.0e-6;
     const double firstValue =
         std::ceil((viewportLeft - maximumLongitude - Epsilon) / MapProjection::WorldWidthDegrees);
@@ -294,6 +297,8 @@ bool MapCamera::zoomAt(const QPointF &screenPosition, int wheelDelta, int viewpo
         return setSphereZoom(m_sphereZoom * factor);
     }
 
+    // Preserve the geographic point under the cursor: measure it before and
+    // after the zoom, then translate the center by the projection-space drift.
     const QPointF before = screenToMercator(screenPosition, viewportWidth, viewportHeight);
     const float previousZoom = m_mercatorZoom;
     m_mercatorZoom = std::clamp(m_mercatorZoom * factor, MinimumMercatorZoom, MaximumMercatorZoom);
@@ -314,6 +319,8 @@ void MapCamera::clampMercatorCenterY(int viewportWidth, int viewportHeight) noex
     const double boundsMaximum =
         std::max(m_mercatorWorldBounds.top(), m_mercatorWorldBounds.bottom());
     const double bearing = qDegreesToRadians(m_bearingDegrees);
+    // Rotation projects both viewport half-axes onto world y. Their absolute
+    // contributions form the furthest vertical reach that must remain in bounds.
     const double verticalExtent = std::abs(std::sin(bearing)) * viewport.halfWidth +
                                   std::abs(std::cos(bearing)) * viewport.halfHeight;
     const double minimum = boundsMinimum + verticalExtent;
@@ -450,6 +457,9 @@ bool MapCamera::sphereCoordinateAt(const QPointF &screenPosition, int viewportWi
         return false;
     }
 
+    // Orthographic projection drops z. Choosing the positive square root
+    // reconstructs the visible hemisphere; points outside the unit disk have
+    // no corresponding surface coordinate.
     const double sphereZ = std::sqrt(std::max(0.0, 1.0 - radiusSquared));
     const double centerLatitude = qDegreesToRadians(m_sphereLatitude);
     const double sinLatitude =

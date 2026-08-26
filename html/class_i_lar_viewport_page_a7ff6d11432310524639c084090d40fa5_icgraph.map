@@ -1,6 +1,0 @@
-<map id="ILarViewportPage::events" name="ILarViewportPage::events">
-<area shape="rect" id="Node000001" title="Returns the current events." alt="" coords="221,29,392,55"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="343,14,331,10,306,8,283,10,271,15,268,20,275,30,270,28,263,21,267,11,282,5,306,3,333,5,348,15"/>
-<area shape="rect" id="Node000002" href="$class_lar_viewport.html#a045b81df3d8d90ee257ea57ddc298ccb" title="Constructs this object." alt="" coords="5,29,173,55"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="202,42,173,45,173,40,208,42"/>
-</map>

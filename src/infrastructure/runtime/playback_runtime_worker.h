@@ -45,9 +45,7 @@ class PlaybackRuntimeWorker final : public QObject {
     void setPlaybackRate(double rate, RuntimeRequestId request = {});
     void setPlaybackRepeat(bool enabled, RuntimeRequestId request = {});
     void resetMetrics(RuntimeRequestId request = {});
-    /**
-     * @brief Controls the shutdown operation.
-     */
+    /** Stops publication and metrics and closes the loaded session. */
     void shutdown();
 
   signals:

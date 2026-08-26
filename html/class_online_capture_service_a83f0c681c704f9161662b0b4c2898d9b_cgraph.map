@@ -1,5 +1,0 @@
-<map id="OnlineCaptureService::stop" name="OnlineCaptureService::stop">
-<area shape="rect" id="Node000001" title="Stops the current operation." alt="" coords="5,5,154,46"/>
-<area shape="rect" id="Node000002" href="$class_i_datagram_source.html#a31de927568c9387b1e8084fe5411812d" title="Closes the transport; repeated calls are safe." alt="" coords="202,13,358,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,23,189,25,183,26,154,28"/>
-</map>

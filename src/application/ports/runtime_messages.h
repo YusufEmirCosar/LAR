@@ -23,7 +23,12 @@ enum class RuntimeStateSource : quint8 {
     Playback,
 };
 
-/** Correlates an accepted command with exactly one typed completion. */
+/**
+ * Correlates an accepted command with exactly one typed completion.
+ *
+ * Zero is reserved as the invalid value used when no request is associated
+ * with a message.
+ */
 struct RuntimeRequestId final {
     quint64 value = 0;
     [[nodiscard]] bool isValid() const noexcept {
@@ -44,7 +49,9 @@ struct RuntimeRequestId final {
  * state of a newer source activation.
  */
 struct RuntimeSourceEpoch final {
+    /** Producer kind; `None` makes the epoch invalid. */
     RuntimeStateSource source = RuntimeStateSource::None;
+    /** Monotonic activation generation; zero makes the epoch invalid. */
     quint64 generation = 0;
     [[nodiscard]] bool isValid() const noexcept {
         return source != RuntimeStateSource::None && generation != 0;
@@ -67,7 +74,14 @@ inline std::size_t qHash(const RuntimeSourceEpoch &epoch, std::size_t seed = 0) 
     return qHashMulti(seed, static_cast<quint8>(epoch.source), epoch.generation);
 }
 
-/** Immediate structural acceptance or rejection of a runtime command. */
+/**
+ * Immediate structural acceptance or rejection of a runtime command.
+ *
+ * An accepted dispatch carries a valid request ID and receives one typed
+ * completion, either during direct dispatch or later through a queued runtime.
+ * A rejected dispatch carries the user-facing reason and receives no
+ * completion.
+ */
 struct CommandDispatch final {
     RuntimeRequestId request;
     bool accepted = false;
@@ -174,6 +188,7 @@ struct RecordingStateEvent final {
 /** Completion payload for a snapshot or final recording save. */
 struct RecordingSaveResult final {
     RuntimeRequestId request;
+    /** `true` for stop-and-finalize, `false` for a non-destructive snapshot. */
     bool finalSave = false;
     bool saved = false;
     QString path;
@@ -230,7 +245,13 @@ enum class RuntimeFailureCode : quint8 {
     Shutdown,
 };
 
-/** Diagnostic associated with an optional request and source epoch. */
+/**
+ * Diagnostic associated with an optional request and source epoch.
+ *
+ * The request is invalid for unsolicited failures. The optional epoch lets a
+ * consumer discard a queued failure from a source activation it no longer
+ * owns.
+ */
 struct RuntimeFailure final {
     RuntimeRequestId request;
     std::optional<RuntimeSourceEpoch> epoch;

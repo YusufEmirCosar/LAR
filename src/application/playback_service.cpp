@@ -101,6 +101,9 @@ void PlaybackService::seek(SessionTimestamp position) {
     const SessionTimestamp targetTime = std::min(position, m_reader.duration());
 
     qint64 bestIndex = 0;
+    // findFrameBefore() uses a strict comparison. Advancing the integer target
+    // by one millisecond makes seeking inclusive without changing replay's
+    // between-tick sampling rule.
     if (!findFrameBefore(static_cast<long double>(targetTime.milliseconds()) + 1.0L, &bestIndex))
         return;
 
@@ -129,6 +132,9 @@ void PlaybackService::onClockTick() {
     if (!m_isPlaying || !m_reader.isValid() || m_reader.recordCount() == 0)
         return;
 
+    // The clock advances independently of record density. Selecting only the
+    // newest eligible record prevents a dense capture or high rate from
+    // flooding the UI with a catch-up burst.
     const long double frameStepMilliseconds = 1000.0L * static_cast<long double>(m_rate) /
                                               static_cast<long double>(ReplayFramesPerSecond);
     const long double durationMilliseconds =
@@ -209,6 +215,8 @@ bool PlaybackService::findFrameBefore(long double targetMilliseconds, qint64 *in
         return false;
     }
 
+    // Upper-bound search: low becomes the first timestamp not strictly before
+    // the target, so low - 1 is the presentation frame for that clock instant.
     qint64 low = 0;
     qint64 high = m_reader.recordCount();
     while (low < high) {

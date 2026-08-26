@@ -1,7 +1,0 @@
-<map id="src/domain/dlz/dlz_solver.h" name="src/domain/dlz/dlz_solver.h">
-<area shape="rect" id="Node000001" title="Guarded toy&#45;model Dynamic Launch Zone solver API." alt="" coords="86,5,213,46"/>
-<area shape="rect" id="Node000002" href="$dlz__types_8h.html" title="Dedicated Dynamic Launch Zone domain values." alt="" coords="5,94,161,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,45,105,84,101,80,131,48"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="184,94,251,120"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,44,200,82,195,82,165,49"/>
-</map>

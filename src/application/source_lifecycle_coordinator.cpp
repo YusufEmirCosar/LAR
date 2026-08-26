@@ -56,6 +56,10 @@ void SourceLifecycleCoordinator::transitionBoundary() {
     if (m_transitionBoundaryActive)
         return;
     m_transitionBoundaryActive = true;
+
+    // Invalidate identity before clearing presentation state. Any already-queued
+    // publication from the departing source will then fail accepts(), even if it
+    // arrives while the replacement source is being constructed.
     m_activeEpoch = {};
     clearDeferredPublications();
     const bool wasListening = m_applicationState.listening;
@@ -163,6 +167,10 @@ bool SourceLifecycleCoordinator::closeSession() {
 bool SourceLifecycleCoordinator::beginStartOnline() {
     setState(State::StartingOnline);
     m_synchronousStart.reset();
+
+    // Direct runtimes may emit their completion from inside startOnline(). Hold
+    // that re-entrant result until the dispatch returns and its request ID can be
+    // installed; threaded runtimes naturally take the normal pending-ID path.
     m_dispatching = DispatchKind::StartOnline;
     const CommandDispatch dispatch = m_runtime.startOnline(m_desiredPort);
     m_dispatching = DispatchKind::None;
@@ -487,6 +495,9 @@ void SourceLifecycleCoordinator::accept(const PlaybackFinishedEvent &event) {
 }
 
 void SourceLifecycleCoordinator::replayDeferredPublications() {
+    // Publications describe replaceable state, not an audit stream. Keeping the
+    // latest value of each type avoids replaying an obsolete burst while still
+    // restoring the complete presentation after a synchronous activation.
     const auto online = m_deferredOnlineState;
     const auto state = m_deferredState;
     const auto metrics = m_deferredMetrics;

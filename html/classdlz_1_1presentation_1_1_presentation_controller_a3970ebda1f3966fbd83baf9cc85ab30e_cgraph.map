@@ -1,9 +1,0 @@
-<map id="dlz::presentation::PresentationController::update" name="dlz::presentation::PresentationController::update">
-<area shape="rect" id="Node000001" title="Performs the update operation." alt="" coords="5,45,156,101"/>
-<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_presentation_controller.html#a43321c3aad465649153fe0c5101816b2" title="Clears the current operation." alt="" coords="216,5,366,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,56,203,49,198,51,157,62"/>
-<area shape="rect" id="Node000004" href="$classdlz_1_1presentation_1_1_presentation_controller.html#a1c2f4dbe3c7c69d8107b4b98848f8f4f" title="Performs the update shoot presentation operation." alt="" coords="204,85,379,141"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="156,85,191,93,186,94,156,90"/>
-<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_presentation_controller.html#abcb0380e5c09132aa112a1ab05585eaf" title="Resets the current operation." alt="" coords="427,5,577,61"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="366,31,414,33,408,34,367,36"/>
-</map>

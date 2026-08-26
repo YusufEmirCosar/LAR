@@ -1,7 +1,0 @@
-<map id="src/viewer/map/map_checksum.h" name="src/viewer/map/map_checksum.h">
-<area shape="rect" id="Node000001" title="Dependency&#45;free CRC&#45;32 implementation for map asset integrity." alt="" coords="88,5,227,46"/>
-<area shape="rect" id="Node000002" href="$map__asset__reader_8cpp.html" title=" " alt="" coords="5,94,145,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,56,95,96,92,92,126,59"/>
-<area shape="rect" id="Node000003" href="$map__asset__writer_8cpp.html" title=" " alt="" coords="168,94,315,135"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,55,225,94,220,93,186,60"/>
-</map>

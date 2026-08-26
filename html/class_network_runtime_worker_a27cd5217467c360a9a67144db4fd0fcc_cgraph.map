@@ -1,7 +1,0 @@
-<map id="NetworkRuntimeWorker::shutdown" name="NetworkRuntimeWorker::shutdown">
-<area shape="rect" id="Node000001" title="Controls the shutdown operation." alt="" coords="5,5,166,46"/>
-<area shape="rect" id="Node000002" href="$class_online_capture_service.html#a83f0c681c704f9161662b0b4c2898d9b" title="Stops the current operation." alt="" coords="214,5,362,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,23,201,25,195,26,166,28"/>
-<area shape="rect" id="Node000003" href="$class_i_datagram_source.html#a31de927568c9387b1e8084fe5411812d" title="Closes the transport; repeated calls are safe." alt="" coords="410,13,566,38"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="362,23,397,26,392,26,362,28"/>
-</map>

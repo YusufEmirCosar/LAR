@@ -1,7 +1,0 @@
-<map id="LarViewFit::mercator" name="LarViewFit::mercator">
-<area shape="rect" id="Node000001" title="Constructs this object." alt="" coords="5,46,148,72"/>
-<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_projection.html#a69e03472280955558ba20627406488e6" title="Projects latitude." alt="" coords="196,5,355,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,44,183,41,178,42,149,50"/>
-<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_map_projection.html#abda6cc4a42ca2edee384a3e338bbf5c1" title="Performs the unwrap longitude operation." alt="" coords="196,71,355,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,68,183,75,177,76,148,73"/>
-</map>

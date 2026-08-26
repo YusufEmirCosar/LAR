@@ -1,5 +1,0 @@
-<map id="LarZoneGpuLayer::draw" name="LarZoneGpuLayer::draw">
-<area shape="rect" id="Node000001" title="Draws the current operation." alt="" coords="5,5,166,31"/>
-<area shape="rect" id="Node000002" href="$class_lar_zone_gpu_layer.html#afdd155bf74a1f13201f9ca164825d71e" title="Performs the draw range operation." alt="" coords="214,5,412,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,16,201,18,195,18,166,21"/>
-</map>

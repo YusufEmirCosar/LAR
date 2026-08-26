@@ -27,9 +27,7 @@ class LarSessionReader final : public ISessionReader {
 
     bool loadFile(const QString &path, QString *error = nullptr) override;
     bool loadData(const QByteArray &data, QString *error = nullptr) override;
-    /**
-     * @brief Closes the current operation.
-     */
+    /** Releases the source, sparse index, decoded mapping, and cached record page. */
     void close() noexcept override;
     bool isValid() const noexcept override {
         return m_isValid;

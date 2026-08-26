@@ -1,5 +1,0 @@
-<map id="ViewportFrameCounter::totalFrameCountChanged" name="ViewportFrameCounter::totalFrameCountChanged">
-<area shape="rect" id="Node000001" title="Notifies observers about total frame count changed." alt="" coords="5,5,184,46"/>
-<area shape="rect" id="Node000002" href="$class_viewport_frame_counter.html#a2fbcb1fdc2b482b8cbaac032a291cb59" title="Returns the current total frames." alt="" coords="232,5,387,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,23,219,25,214,26,184,28"/>
-</map>

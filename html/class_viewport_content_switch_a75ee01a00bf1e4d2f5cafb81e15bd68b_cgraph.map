@@ -1,6 +1,0 @@
-<map id="ViewportContentSwitch::setContentMode" name="ViewportContentSwitch::setContentMode">
-<area shape="rect" id="Node000001" title="Sets content mode." alt="" coords="5,29,164,70"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="45,28,43,19,49,10,63,5,85,3,107,5,123,13,117,14,106,10,84,8,64,10,52,15,48,20,50,29"/>
-<area shape="rect" id="Node000002" href="$class_viewport_content_switch.html#abb60032762a14344e7aad67a9baf7fa5" title="Notifies observers about content mode requested." alt="" coords="212,29,379,70"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,47,199,49,193,50,164,52"/>
-</map>

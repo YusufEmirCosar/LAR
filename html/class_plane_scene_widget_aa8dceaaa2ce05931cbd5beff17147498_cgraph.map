@@ -1,5 +1,0 @@
-<map id="PlaneSceneWidget::mouseMoveEvent" name="PlaneSceneWidget::mouseMoveEvent">
-<area shape="rect" id="Node000001" title="Performs the mouse move event operation." alt="" coords="5,5,217,46"/>
-<area shape="rect" id="Node000002" href="$class_plane_orbit_camera.html#af3923168feaf5f561a50b0be4e5b9f94" title="Performs the orbit operation." alt="" coords="265,13,426,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,23,252,26,246,26,217,28"/>
-</map>

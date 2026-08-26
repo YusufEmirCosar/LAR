@@ -167,7 +167,7 @@ target_link_libraries(lar-presentation-widgets
 lar_define_map_asset_target()
 
 # Executables
-qt_add_executable(lar-viewer MACOSX_BUNDLE
+qt_add_executable(lar-viewer WIN32 MACOSX_BUNDLE
     src/viewer/main.cpp
     assets/ui/icons/icons.qrc
 )
@@ -195,15 +195,4 @@ target_link_libraries(lar-custom-test-sender PRIVATE
     lar-domain
     Qt6::Core
     Qt6::Network
-)
-
-qt_add_executable(lar-testsender-scenario-tests
-    src/testsender/scenario_tests.cpp
-    src/testsender/scenarios.h
-    src/testsender/scenarios.cpp
-)
-target_link_libraries(lar-testsender-scenario-tests PRIVATE
-    lar-infrastructure-qt
-    lar-domain
-    Qt6::Core
 )

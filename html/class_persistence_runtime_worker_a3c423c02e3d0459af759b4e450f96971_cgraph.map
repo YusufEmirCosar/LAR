@@ -1,7 +1,0 @@
-<map id="PersistenceRuntimeWorker::save" name="PersistenceRuntimeWorker::save">
-<area shape="rect" id="Node000001" title="Saves the current operation." alt="" coords="5,39,186,79"/>
-<area shape="rect" id="Node000002" href="$class_i_session_persistence.html#a82c749d0f2d8c2f94d3181077f6ebf6c" title="Atomically replaces targetPath with all bytes from snapshot." alt="" coords="253,5,394,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,43,240,37,235,39,187,48"/>
-<area shape="rect" id="Node000003" href="$class_persistence_runtime_worker.html#abb7a24e6e1c6a85ed06ddb1155e57a7f" title="Notifies observers about save finished." alt="" coords="234,71,414,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,69,221,76,215,76,186,74"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="GridCameraTransform::geographicToWorld" name="GridCameraTransform::geographicToWorld">
-<area shape="rect" id="Node000001" title="Performs the geographic To World operation." alt="" coords="5,5,156,46"/>
-<area shape="rect" id="Node000002" href="$class_lar_projection.html#a4e2dca65a4cdc72bf5aa871c00eda908" title="Performs the geographic To Plane World operation." alt="" coords="204,5,372,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,23,191,25,185,26,156,28"/>
-</map>

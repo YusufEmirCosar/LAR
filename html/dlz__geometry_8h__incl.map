@@ -1,9 +1,0 @@
-<map id="src/domain/dlz/dlz_geometry.h" name="src/domain/dlz/dlz_geometry.h">
-<area shape="rect" id="Node000001" title="Pure derivation of engagement geometry from shooter and target state." alt="" coords="154,5,281,46"/>
-<area shape="rect" id="Node000002" href="$dlz__types_8h.html" title="Dedicated Dynamic Launch Zone domain values." alt="" coords="5,94,161,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,46,118,88,116,83,181,47"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="185,94,250,120"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,44,220,80,215,77,216,48"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="274,94,340,120"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="241,44,285,84,279,83,239,49"/>
-</map>

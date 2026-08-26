@@ -1,5 +1,0 @@
-<map id="IDatagramSource" name="IDatagramSource">
-<area shape="rect" id="Node000001" title="Emits complete datagrams without exposing a concrete socket API." alt="" coords="5,79,129,105"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="32,5,102,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,45,70,79,64,78,65,48"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="PlaneSceneWidget::PlaneSceneWidget" name="PlaneSceneWidget::PlaneSceneWidget">
-<area shape="rect" id="Node000001" title="Constructs this object." alt="" coords="5,39,216,79"/>
-<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#aaa5d56b721face65adc97089cf2347ef" title=" " alt="" coords="264,39,451,79"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,56,251,59,246,59,216,62"/>
-<area shape="rect" id="Node000003" href="$class_dted_water_mask_source.html#a86cf1184da5d5071e004f8607dcec5f9" title=" " alt="" coords="499,5,655,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="451,42,481,40,486,39,452,47"/>
-<area shape="rect" id="Node000004" href="$class_dted_water_mask_source.html#a665cf609ebaa3d8106a50ca382565bae" title=" " alt="" coords="499,71,655,111"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="452,70,486,77,481,77,451,75"/>
-</map>

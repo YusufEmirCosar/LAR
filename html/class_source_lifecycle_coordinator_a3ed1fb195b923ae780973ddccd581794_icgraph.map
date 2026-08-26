@@ -1,9 +1,0 @@
-<map id="SourceLifecycleCoordinator::sessionLoaded" name="SourceLifecycleCoordinator::sessionLoaded">
-<area shape="rect" id="Node000001" title="Notifies observers about session loaded." alt="" coords="419,39,600,79"/>
-<area shape="rect" id="Node000002" href="$class_application_facade.html#acc84de76e45ecc6539751a18ab2ab19d" title="Creates the main&#45;thread application facade." alt="" coords="212,5,348,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="401,44,349,38,349,33,407,43"/>
-<area shape="rect" id="Node000004" href="$class_source_lifecycle_coordinator.html#ad289bae443fa45b277710f239bf5652e" title="Performs the handle operation." alt="" coords="190,71,371,111"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="406,73,372,81,371,76,401,74"/>
-<area shape="rect" id="Node000003" href="$class_application_facade.html#a32410f883b62e33c853d2f6996cf8685" title="Creates the application facade with IP access&#45;policy file support." alt="" coords="5,5,142,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="194,27,143,28,142,23,199,25"/>
-</map>

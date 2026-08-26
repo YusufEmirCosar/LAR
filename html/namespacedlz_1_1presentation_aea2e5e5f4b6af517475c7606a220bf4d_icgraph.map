@@ -1,8 +1,0 @@
-<map id="dlz::presentation::initialScaleIndex" name="dlz::presentation::initialScaleIndex">
-<area shape="rect" id="Node000001" title="Performs the initial scale index operation." alt="" coords="398,29,523,70"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="489,13,479,10,461,8,443,10,433,15,429,20,430,30,426,27,424,19,429,10,442,5,461,3,481,5,494,14"/>
-<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_range_scale_controller.html#a5c877a0c1ab69dbdfea206f3a6c8caa7" title="Resets the current operation." alt="" coords="202,22,350,78"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="380,50,350,52,350,47,385,50"/>
-<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_range_scale_controller.html#a8c586176bd382ca4fc328d79d76ea30b" title="Performs the update operation." alt="" coords="5,22,154,78"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="184,50,154,52,154,47,189,49"/>
-</map>

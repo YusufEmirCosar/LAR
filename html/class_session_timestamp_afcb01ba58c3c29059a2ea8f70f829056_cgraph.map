@@ -1,5 +1,0 @@
-<map id="SessionTimestamp::maximum" name="SessionTimestamp::maximum">
-<area shape="rect" id="Node000001" title="Returns the largest timestamp accepted by the application domain." alt="" coords="5,13,204,38"/>
-<area shape="rect" id="Node000002" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="252,5,440,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,23,239,26,233,26,204,28"/>
-</map>

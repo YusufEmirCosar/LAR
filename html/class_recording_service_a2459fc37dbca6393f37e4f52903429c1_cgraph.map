@@ -1,5 +1,0 @@
-<map id="RecordingService::createSnapshot" name="RecordingService::createSnapshot">
-<area shape="rect" id="Node000001" title="Performs the create snapshot operation." alt="" coords="5,5,174,46"/>
-<area shape="rect" id="Node000002" href="$class_i_recording_transaction.html#ab7ef37b53a17ac9f3403a25f05e1c524" title="Captures an immutable prefix safe for another thread to persist." alt="" coords="222,5,374,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,23,208,25,203,26,174,28"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="src/application/ports/session_snapshot.h" name="src/application/ports/session_snapshot.h">
-<area shape="rect" id="Node000001" title="Type&#45;erased immutable snapshot shared with persistence workers." alt="" coords="80,5,222,46"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,94,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,46,78,86,75,82,123,47"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="118,94,184,120"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,44,153,80,148,77,149,48"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="207,94,276,120"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="174,44,219,84,213,84,172,49"/>
-</map>

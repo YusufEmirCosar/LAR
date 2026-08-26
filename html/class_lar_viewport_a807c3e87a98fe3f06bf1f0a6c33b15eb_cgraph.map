@@ -1,8 +1,0 @@
-<map id="LarViewport::distributeCameraState" name="LarViewport::distributeCameraState">
-<area shape="rect" id="Node000001" title="Documents the distribute camera state operation." alt="" coords="5,63,203,103"/>
-<area shape="rect" id="Node000002" href="$class_i_lar_viewport_page.html#a4a83609a08e6e23898c3e592421a11b5" title="Sets camera state." alt="" coords="251,29,447,70"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,67,238,64,233,66,204,72"/>
-<area shape="rect" id="Node000003" href="$class_viewport_camera_controller.html#a1ae2d70894db28fff6474920cdbd7d65" title="Returns the current state." alt="" coords="262,95,436,135"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="203,93,249,101,243,102,203,99"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="303,28,301,19,308,10,324,5,349,3,375,5,393,14,387,14,374,10,349,8,325,10,311,15,306,21,308,30"/>
-</map>

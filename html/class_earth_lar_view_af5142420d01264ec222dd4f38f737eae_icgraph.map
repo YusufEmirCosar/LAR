@@ -1,7 +1,0 @@
-<map id="EarthLarView::clearState" name="EarthLarView::clearState">
-<area shape="rect" id="Node000001" title="Performs the clear state operation." alt="" coords="247,31,413,56"/>
-<area shape="rect" id="Node000002" href="$class_earth_lar_view.html#a4b140ea70c5516564e40b7f390d1599c" title="Performs the clear scene operation." alt="" coords="16,5,188,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,33,189,30,189,25,234,32"/>
-<area shape="rect" id="Node000003" href="$class_earth_lar_view.html#ae31d62da8f683c8248c901915ebf246b" title="Sets scene state." alt="" coords="5,55,199,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,54,199,60,199,55,234,54"/>
-</map>

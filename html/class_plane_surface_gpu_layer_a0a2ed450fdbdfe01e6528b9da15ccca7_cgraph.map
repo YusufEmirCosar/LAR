@@ -1,7 +1,0 @@
-<map id="PlaneSurfaceGpuLayer::draw" name="PlaneSurfaceGpuLayer::draw">
-<area shape="rect" id="Node000001" title="Draws the current operation." alt="" coords="5,39,161,79"/>
-<area shape="rect" id="Node000002" href="$class_plane_surface_gpu_layer.html#a972e1bf9e132cd6176f4a85947e64378" title="Performs the draw shape operation." alt="" coords="209,5,364,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,44,196,40,190,42,161,49"/>
-<area shape="rect" id="Node000003" href="$class_plane_surface_gpu_layer.html#a1bcf8f57da73d25059060fad462947c6" title="Performs the draw zone operation." alt="" coords="209,71,364,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,69,196,76,190,77,161,74"/>
-</map>

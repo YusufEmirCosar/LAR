@@ -35,11 +35,7 @@ class IRecordingTransaction {
      * @details Discards transaction-owned resources and makes the transaction inactive.
      */
     virtual void cancel() noexcept = 0;
-    /**
-     * @brief Returns whether begin() succeeded and the transaction is not cancelled.
-     *
-     * @return True when the reported condition holds; false otherwise.
-     */
+    /** True after a successful `begin()` and until `cancel()` releases the transaction. */
     virtual bool isActive() const noexcept = 0;
     virtual quint64 recordCount() const noexcept = 0;
 };

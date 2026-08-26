@@ -1,7 +1,0 @@
-<map id="DtedCell" name="DtedCell">
-<area shape="rect" id="Node000001" title="Decoded DTED0 elevations stored as longitude profiles from south to north." alt="" coords="88,102,160,128"/>
-<area shape="rect" id="Node000002" href="$struct_dted_cell_key.html" title="Integer south&#45;west origin used to address one DTED cell." alt="" coords="5,5,101,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,41,117,101,112,102,70,46"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="124,5,267,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,43,135,103,131,99,175,44"/>
-</map>

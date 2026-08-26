@@ -1,5 +1,0 @@
-<map id="QtIpAccessPolicyRepository" name="QtIpAccessPolicyRepository">
-<area shape="rect" id="Node000001" title="Bounded Qt filesystem/parser adapter for exact IP whitelist files." alt="" coords="5,79,195,105"/>
-<area shape="rect" id="Node000002" href="$class_i_ip_access_policy_repository.html" title="Loads and validates exact&#45;match sender policies from external storage." alt="" coords="10,5,190,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,45,102,80,98,77,98,48"/>
-</map>

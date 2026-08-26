@@ -1,7 +1,0 @@
-<map id="PlaneSceneRenderer::uploadModel" name="PlaneSceneRenderer::uploadModel">
-<area shape="rect" id="Node000001" title="Performs the upload model operation." alt="" coords="5,27,150,68"/>
-<area shape="rect" id="Node000002" href="$struct_plane_model_mesh.html#ada14130db0049dc0de9a4ce382447426" title="Reports whether the model mesh has no renderable geometry." alt="" coords="198,5,363,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,34,185,32,179,33,151,40"/>
-<area shape="rect" id="Node000003" href="$class_plane_scene_renderer.html#a44ca4c2f5d7f37f1d8e0015af9568865" title="Performs the upload interleaved operation." alt="" coords="208,55,352,96"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,55,196,63,190,64,150,60"/>
-</map>

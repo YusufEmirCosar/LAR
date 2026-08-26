@@ -1,7 +1,0 @@
-<map id="IRecordingRuntime::snapshotRecording" name="IRecordingRuntime::snapshotRecording">
-<area shape="rect" id="Node000001" title="Persists an immutable point&#45;in&#45;time snapshot without stopping capture." alt="" coords="428,5,569,46"/>
-<area shape="rect" id="Node000002" href="$class_application_facade.html#a42f5497c396fac20046b6c11bc55ea1b" title="Saves a snapshot of the active recording without finalizing it." alt="" coords="244,5,380,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="410,26,381,28,380,23,415,26"/>
-<area shape="rect" id="Node000003" href="$class_recording_workflow_controller.html#ab315058e28ddfd64c1ccb74066517621" title="Performs the request snapshot operation." alt="" coords="5,5,196,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="226,26,196,28,196,23,231,25"/>
-</map>

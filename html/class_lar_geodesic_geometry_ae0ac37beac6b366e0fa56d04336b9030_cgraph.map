@@ -1,7 +1,0 @@
-<map id="LarGeodesicGeometry::arc" name="LarGeodesicGeometry::arc">
-<area shape="rect" id="Node000001" title="Documents the arc operation." alt="" coords="5,13,183,38"/>
-<area shape="rect" id="Node000002" href="$class_lar_geodesic_geometry.html#ab0e974e1e3b2af5df57bf159a357b143" title="Performs the destination operation." alt="" coords="231,5,382,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,23,218,25,212,26,183,28"/>
-<area shape="rect" id="Node000003" href="$class_lar_geodesic_geometry.html#ae3ba4dbef8641441c270e58e3363dba5" title="Performs the wrap longitude operation." alt="" coords="430,5,581,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="383,23,417,26,412,26,383,28"/>
-</map>

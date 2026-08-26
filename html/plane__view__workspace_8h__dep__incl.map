@@ -1,7 +1,0 @@
-<map id="src/viewer/plane/plane_view_workspace.h" name="src/viewer/plane/plane_view_workspace.h">
-<area shape="rect" id="Node000001" title="Hosted Plane page with lower&#45;right surface and skybox controls." alt="" coords="88,5,239,46"/>
-<area shape="rect" id="Node000002" href="$plane__view__workspace_8cpp.html" title=" " alt="" coords="5,94,157,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,56,101,96,98,92,132,59"/>
-<area shape="rect" id="Node000003" href="$lar__viewport_8cpp.html" title=" " alt="" coords="180,94,315,135"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,55,231,94,226,93,192,60"/>
-</map>

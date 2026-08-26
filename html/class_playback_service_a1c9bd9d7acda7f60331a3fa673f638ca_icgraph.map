@@ -1,9 +1,0 @@
-<map id="PlaybackService::stop" name="PlaybackService::stop">
-<area shape="rect" id="Node000001" title="Stops the current operation." alt="" coords="467,46,619,72"/>
-<area shape="rect" id="Node000002" href="$class_direct_application_runtime.html#ae0f452bf0b866e973cb62a7a4101cbe8" title="Returns the current stop." alt="" coords="250,5,419,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="449,44,419,42,419,37,454,44"/>
-<area shape="rect" id="Node000003" href="$class_playback_runtime_worker.html#a068f75300a31e5a915f5c33b62499336" title="Controls the stop operation." alt="" coords="252,71,417,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="455,73,418,81,417,76,449,73"/>
-<area shape="rect" id="Node000004" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,71,202,111"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="233,91,202,94,202,88,239,91"/>
-</map>

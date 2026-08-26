@@ -1,9 +1,0 @@
-<map id="lar::map::MapCamera::setPresentation" name="lar::map::MapCamera::setPresentation">
-<area shape="rect" id="Node000001" title="Sets presentation." alt="" coords="744,5,892,46"/>
-<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_earth_map_widget.html#a30e26a4787bcf8a7c06ff7fed5362d62" title="Sets map presentation." alt="" coords="523,5,696,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="726,26,697,28,697,23,732,26"/>
-<area shape="rect" id="Node000003" href="$class_earth_lar_view.html#aef92f959470406de4057c89fa40cbb14" title="Sets lar view mode." alt="" coords="271,13,475,38"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="505,26,476,28,475,23,510,26"/>
-<area shape="rect" id="Node000004" href="$class_earth_lar_view.html#a8b2e659fc16224bb78ef2b7b7eed1323" title="Sets earth view mode." alt="" coords="5,13,223,38"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="253,26,223,28,223,23,258,26"/>
-</map>

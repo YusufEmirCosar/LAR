@@ -1,7 +1,0 @@
-<map id="src/viewer/plane/glb_model_reader.h" name="src/viewer/plane/glb_model_reader.h">
-<area shape="rect" id="Node000001" title="Bounded reader for the static .gltf/.glb subset used by Plane." alt="" coords="89,5,227,46"/>
-<area shape="rect" id="Node000002" href="$glb__model__reader_8cpp.html" title=" " alt="" coords="5,94,143,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,56,95,96,91,92,126,59"/>
-<area shape="rect" id="Node000003" href="$plane__scene__widget_8cpp.html" title=" " alt="" coords="166,94,318,135"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="189,55,226,94,220,93,187,60"/>
-</map>

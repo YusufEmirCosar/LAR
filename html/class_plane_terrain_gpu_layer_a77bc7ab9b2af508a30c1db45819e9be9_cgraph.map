@@ -1,6 +1,0 @@
-<map id="PlaneTerrainGpuLayer::hasPatch" name="PlaneTerrainGpuLayer::hasPatch">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,155,70"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="44,28,42,19,48,10,61,5,80,3,101,5,115,13,109,14,99,10,80,8,62,10,51,15,47,20,49,29"/>
-<area shape="rect" id="Node000002" href="$struct_plane_terrain_patch.html#ab62d24e4661e6b0784a07ec75854b4f1" title=" " alt="" coords="203,29,338,70"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,47,190,49,185,50,155,52"/>
-</map>

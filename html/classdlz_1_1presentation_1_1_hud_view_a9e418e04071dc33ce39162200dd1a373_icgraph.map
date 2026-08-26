@@ -1,8 +1,0 @@
-<map id="dlz::presentation::HudView::frameRendered" name="dlz::presentation::HudView::frameRendered">
-<area shape="rect" id="Node000001" title="Performs the frame rendered operation." alt="" coords="261,71,432,111"/>
-<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_hud_workspace.html#aec685012fec2dfb24231b60b8836444b" title="Constructs this object." alt="" coords="5,5,213,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,67,185,49,186,44,259,66"/>
-<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_view.html#a5b51201b52af68e500d1286bced3601a" title="Performs the paint event operation." alt="" coords="37,71,181,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="242,100,182,102,182,97,248,100"/>
-<area shape="poly" id="edge3_Node000003_Node000001" title=" " alt="" coords="196,80,263,82,258,83,197,85"/>
-</map>

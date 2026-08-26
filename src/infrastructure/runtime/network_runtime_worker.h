@@ -54,9 +54,7 @@ class NetworkRuntimeWorker final : public QObject {
     void setRecordingInputEnabled(bool enabled);
     void drainRecordingInput(quint64 token, bool preserveIncoming = false);
     void acknowledgeRecordingBatch(quint64 batchId);
-    /**
-     * @brief Controls the shutdown operation.
-     */
+    /** Stops capture and metrics and discards every queued or fenced recording batch. */
     void shutdown();
 
   signals:

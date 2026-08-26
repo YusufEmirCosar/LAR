@@ -1,6 +1,0 @@
-<map id="ApplicationFacade::setRecordingOperationState" name="ApplicationFacade::setRecordingOperationState">
-<area shape="rect" id="Node000001" title="Updates and publishes the recording&#45;operation state." alt="" coords="5,29,191,70"/>
-<area shape="rect" id="Node000002" href="$class_application_facade.html#ad8fd175d53d1e7696bfac7d07e23f0da" title="Reports a change in the recording&#45;operation state." alt="" coords="239,29,452,70"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,47,226,49,220,50,191,52"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="299,27,297,19,304,10,321,5,345,3,372,5,389,14,384,13,371,10,345,8,322,10,307,15,302,21,304,30"/>
-</map>

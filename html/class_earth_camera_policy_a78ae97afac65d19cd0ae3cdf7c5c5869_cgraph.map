@@ -1,9 +1,0 @@
-<map id="EarthCameraPolicy::fieldsChanged" name="EarthCameraPolicy::fieldsChanged">
-<area shape="rect" id="Node000001" title="Notifies observers about fields changed." alt="" coords="5,5,148,46"/>
-<area shape="rect" id="Node000002" href="$class_state_field.html#aef3dfc4418848efa5769202f760e1e44" title="Reads a trusted legacy field ID; invalid IDs return zero." alt="" coords="196,13,315,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,23,183,25,177,26,148,28"/>
-<area shape="rect" id="Node000003" href="$class_state_field.html#a2dfc080fa7c4d91049a450951893646c" title="Explicit optional access for callers handling untrusted field IDs." alt="" coords="363,13,498,38"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="316,23,350,26,345,26,316,28"/>
-<area shape="rect" id="Node000004" href="$class_state_field.html#a518ff6ce6f1e93a5135e7274e2db7359" title="Returns the canonical descriptor, or null for an invalid ID." alt="" coords="546,13,692,38"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="498,23,533,26,528,26,499,28"/>
-</map>

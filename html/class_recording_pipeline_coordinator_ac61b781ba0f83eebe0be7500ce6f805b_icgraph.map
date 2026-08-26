@@ -1,7 +1,0 @@
-<map id="RecordingPipelineCoordinator::resetRecording" name="RecordingPipelineCoordinator::resetRecording">
-<area shape="rect" id="Node000001" title="Documents the reset recording operation." alt="" coords="468,5,661,46"/>
-<area shape="rect" id="Node000002" href="$class_recording_runtime_worker.html#a936496b85d48a45d4211d2f2c42165bf" title="Documents the reset recording operation." alt="" coords="250,5,420,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="450,26,421,28,421,23,455,26"/>
-<area shape="rect" id="Node000003" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,5,202,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="231,26,202,28,202,23,236,26"/>
-</map>

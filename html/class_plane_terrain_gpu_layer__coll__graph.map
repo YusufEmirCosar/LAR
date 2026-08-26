@@ -1,9 +1,0 @@
-<map id="PlaneTerrainGpuLayer" name="PlaneTerrainGpuLayer">
-<area shape="rect" id="Node000001" title="Uploads terrain only from an active paint context and retains CPU data across GL loss." alt="" coords="345,63,494,88"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="46,5,183,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,25,321,45,379,62,374,62,320,50,198,30"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,55,224,96"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="239,73,347,75,342,76,239,78"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="38,120,191,161"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="206,124,320,101,373,89,378,88,321,106,207,129"/>
-</map>

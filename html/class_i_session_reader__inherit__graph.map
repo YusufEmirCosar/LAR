@@ -1,5 +1,0 @@
-<map id="ISessionReader" name="ISessionReader">
-<area shape="rect" id="Node000001" title="Loads, indexes, and decodes records without playback policy." alt="" coords="12,5,127,31"/>
-<area shape="rect" id="Node000002" href="$class_lar_session_reader.html" title="Validates a session once, indexes records, and decodes on demand." alt="" coords="5,79,134,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,45,72,79,67,78,68,48"/>
-</map>

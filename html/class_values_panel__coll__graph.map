@@ -1,9 +1,0 @@
-<map id="ValuesPanel" name="ValuesPanel">
-<area shape="rect" id="Node000001" title="Owns construction and rendering of the right&#45;hand values/HUD column." alt="" coords="14,192,108,218"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,88,74,114"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="47,127,61,191,56,192,43,130"/>
-<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_control_panel.html" title="Small interactive control surface for the mandatory toy model." alt="" coords="98,80,224,121"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,133,74,194,71,190,129,131"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="125,5,197,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="162,44,163,81,158,79,160,49"/>
-</map>

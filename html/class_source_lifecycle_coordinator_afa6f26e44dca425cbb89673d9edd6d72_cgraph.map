@@ -1,9 +1,0 @@
-<map id="SourceLifecycleCoordinator::stop" name="SourceLifecycleCoordinator::stop">
-<area shape="rect" id="Node000001" title="Stops the current operation." alt="" coords="5,35,187,75"/>
-<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#acdf83d7d75370c38dd81dcb69898ee8f" title="Performs the report rejected command operation." alt="" coords="235,5,416,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,41,222,39,217,40,187,46"/>
-<area shape="rect" id="Node000004" href="$class_i_playback_runtime.html#a514241b1cbf716b6c606beea2b4e1611" title="Stops playback and returns to the first record." alt="" coords="245,70,406,96"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="187,63,232,71,227,71,187,69"/>
-<area shape="rect" id="Node000003" href="$class_source_lifecycle_coordinator.html#a17ce5b778f5c25dcf667c451910501ec" title="Notifies observers about error raised." alt="" coords="464,5,645,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="416,23,451,25,446,26,416,28"/>
-</map>

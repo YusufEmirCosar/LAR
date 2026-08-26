@@ -1,9 +1,0 @@
-<map id="PersistenceRuntimeWorker" name="PersistenceRuntimeWorker">
-<area shape="rect" id="Node000001" title="Serializes persistence requests away from capture and the UI." alt="" coords="5,214,186,239"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="40,110,109,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,148,96,213,90,213,78,152"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="133,102,303,143"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,153,111,215,108,211,181,152"/>
-<area shape="rect" id="Node000004" href="$class_i_session_persistence.html" title="Persists an immutable session snapshot to a destination." alt="" coords="148,5,289,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="220,44,221,103,216,101,217,49"/>
-</map>

@@ -23,6 +23,9 @@ SourceRing prepareRing(const SourceRing &source, double referenceLongitude) {
     SourceRing ring;
     ring.reserve(source.size());
     double previousLongitude = referenceLongitude;
+    // Unwrap relative to the preceding vertex so an antimeridian edge remains
+    // short in the planar domain. The final whole-world shift keeps every ring
+    // near the exterior's reference without changing its shape.
     for (const SourceCoordinate &coordinate : source) {
         SourceCoordinate unwrapped{lar::map::MapProjection::unwrapLongitude(
                                        coordinate.longitudeDegrees, previousLongitude),
@@ -224,6 +227,9 @@ RingNode *leftmost(RingNode &ring) {
 }
 
 RingNode *joinHole(RingNode &outer, RingNode &hole, NodePool &pool) {
+    // The nearest bridge is used only when it crosses neither boundary and its
+    // midpoint lies in the polygon but outside the hole. Duplicating both bridge
+    // endpoints turns the two rings into one walk without adding new vertices.
     RingNode *holeAnchor = leftmost(hole);
     RingNode *outerAnchor = nullptr;
     double bestDistance = std::numeric_limits<double>::max();
@@ -366,6 +372,9 @@ bool triangulateLinkedRing(RingNode *start, std::vector<std::uint32_t> &indices,
             candidate = removeRedundantNodes(candidate);
             stop = candidate;
             if (++stalledPasses > 1U) {
+                // Ear clipping can stall on numerically awkward concavity. A
+                // valid interior diagonal decomposes the ring into smaller
+                // problems; recursion is capped by splitAndTriangulate().
                 return candidate != nullptr &&
                        splitAndTriangulate(*candidate, indices, pool, depth);
             }

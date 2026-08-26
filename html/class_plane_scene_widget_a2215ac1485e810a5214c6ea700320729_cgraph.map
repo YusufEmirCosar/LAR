@@ -1,5 +1,0 @@
-<map id="PlaneSceneWidget::skyboxCount" name="PlaneSceneWidget::skyboxCount">
-<area shape="rect" id="Node000001" title="Returns the current skybox count." alt="" coords="5,5,188,46"/>
-<area shape="rect" id="Node000002" href="$class_cubemap_catalog.html#a274317775c50bbb83cc4e94aad55d93e" title="Documents the count operation." alt="" coords="236,13,398,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,23,223,25,217,26,188,28"/>
-</map>

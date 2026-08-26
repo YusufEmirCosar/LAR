@@ -1,9 +1,0 @@
-<map id="anonymous_namespace{plane_surface_projection::cpp}::aircraftGroundMeters" name="anonymous_namespace{plane_surface_projection::cpp}::aircraftGroundMeters">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,46,190,102"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="53,45,54,35,62,27,77,21,98,19,121,22,137,30,132,32,120,27,97,24,78,26,65,31,59,37,59,46"/>
-<area shape="rect" id="Node000002" href="$class_lar_projection.html#a4e2dca65a4cdc72bf5aa871c00eda908" title="Performs the geographic To Plane World operation." alt="" coords="238,5,406,46"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="189,51,225,46,220,48,191,57"/>
-<area shape="rect" id="Node000003" href="$namespaceanonymous__namespace_02plane__surface__projection_8cpp_03.html#a5107f73aea7dcbce9800c5bee4a5fa84" title=" " alt="" coords="238,94,407,150"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="190,91,225,100,220,101,190,96"/>
-<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="279,92,279,83,287,75,301,69,322,67,346,70,362,79,357,79,345,75,322,72,303,74,290,79,284,85,283,95"/>
-</map>

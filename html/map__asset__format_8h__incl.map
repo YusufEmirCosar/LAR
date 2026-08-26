@@ -1,9 +1,0 @@
-<map id="src/viewer/map/map_asset_format.h" name="src/viewer/map/map_asset_format.h">
-<area shape="rect" id="Node000001" title="Versioned binary .larmap header layout and field offsets." alt="" coords="42,5,182,46"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,56,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,45,56,85,52,81,89,47"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="80,94,144,120"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="114,44,114,79,109,77,110,48"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="168,94,229,120"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="134,44,177,83,171,83,132,49"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="GridLarView::worldToScreen" name="GridLarView::worldToScreen">
-<area shape="rect" id="Node000001" title="Performs the world To Screen operation." alt="" coords="5,13,192,38"/>
-<area shape="rect" id="Node000002" href="$class_grid_camera_transform.html#a7fa86e11dac9ebc8ef9d98a8645addf5" title="Performs the world To Screen operation." alt="" coords="240,5,390,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,23,227,25,222,26,192,28"/>
-<area shape="rect" id="Node000003" href="$class_lar_projection.html#a6f3e1ed27e51b9fee5f2ecf314fb5ebc" title="Performs the world To Screen operation." alt="" coords="438,13,629,38"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="390,23,425,26,420,26,391,28"/>
-</map>

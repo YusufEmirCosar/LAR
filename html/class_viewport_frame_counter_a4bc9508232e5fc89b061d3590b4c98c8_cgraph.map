@@ -1,5 +1,0 @@
-<map id="ViewportFrameCounter::framesPerSecondChanged" name="ViewportFrameCounter::framesPerSecondChanged">
-<area shape="rect" id="Node000001" title="Notifies observers about frames per second changed." alt="" coords="5,5,191,46"/>
-<area shape="rect" id="Node000002" href="$class_viewport_frame_counter.html#a76b4b73f3ca79a44886589fb7b518841" title="Returns the current fps." alt="" coords="239,13,420,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,23,226,25,220,26,191,28"/>
-</map>

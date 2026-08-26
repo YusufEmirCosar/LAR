@@ -1,9 +1,0 @@
-<map id="src/viewer/viewport/lar_zone_mesh_limits.h" name="src/viewer/viewport/lar_zone_mesh_limits.h">
-<area shape="rect" id="Node000001" title="Central memory, complexity, radius, and accuracy bounds for zone meshes." alt="" coords="54,5,216,46"/>
-<area shape="rect" id="Node000002" href="$lar__geodesic__geometry_8h.html" title="Spherical destination&#45;point and arc tessellation utilities." alt="" coords="5,94,142,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,44,98,83,94,80,119,49"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="165,102,230,127"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="150,44,183,89,177,89,148,49"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="45,183,102,208"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="75,133,76,168,71,166,72,137"/>
-</map>

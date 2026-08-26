@@ -1,7 +1,0 @@
-<map id="ViewportCameraController::setTurnWithPlane" name="ViewportCameraController::setTurnWithPlane">
-<area shape="rect" id="Node000001" title="Sets turn with plane." alt="" coords="5,5,180,46"/>
-<area shape="rect" id="Node000002" href="$class_viewport_camera_controller.html#a7eb6ee5ba8b24367e895638c6c98c63f" title="Performs the refresh operation." alt="" coords="228,5,402,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,23,215,25,209,26,180,28"/>
-<area shape="rect" id="Node000003" href="$class_viewport_camera_controller.html#abc947546a2318609e939ba25c027f8e8" title="Reports whether fields is true." alt="" coords="450,5,624,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="402,23,437,26,432,26,402,28"/>
-</map>

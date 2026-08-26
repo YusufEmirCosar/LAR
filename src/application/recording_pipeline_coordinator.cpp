@@ -203,6 +203,9 @@ void RecordingPipelineCoordinator::recordingInputFailed(const QString &error) {
 void RecordingPipelineCoordinator::persistenceFinished(quint64 requestId, bool finalSave,
                                                        bool saved, const QString &targetPath,
                                                        const QString &error) {
+    // A save can finish after shutdown or after another transaction has claimed
+    // the completion channel. Both identities must match before the recording is
+    // allowed to transition to its finalized state.
     if (!m_persistenceInFlight || requestId != m_activePersistenceRequest ||
         finalSave != m_finalSaveInFlight) {
         return;
@@ -241,6 +244,10 @@ bool RecordingPipelineCoordinator::beginDrain(PendingOperation operation, Runtim
     m_pendingRequest = request;
     m_pendingTargetPath = targetPath;
     m_activeDrainToken = ++m_nextDrainToken;
+
+    // Snapshot and reset are non-terminal: packets arriving behind the fence
+    // belong to the continuing transaction. Terminal operations deliberately
+    // keep input disabled once the pre-fence batch has drained.
     const bool preserveIncoming =
         m_resumeAfterOperation &&
         (operation == PendingOperation::Snapshot || operation == PendingOperation::Reset);

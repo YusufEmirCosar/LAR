@@ -1,7 +1,0 @@
-<map id="lar::map::EarthMapGpuRenderer::isShaderValid" name="lar::map::EarthMapGpuRenderer::isShaderValid">
-<area shape="rect" id="Node000001" title="Reports whether shader valid is true." alt="" coords="263,39,472,79"/>
-<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_earth_map_widget.html#a5508460a00fb7a85fd66f2881f80368c" title="Reports whether shader valid is true." alt="" coords="23,5,197,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,44,197,40,197,34,250,43"/>
-<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_earth_map_gpu_renderer.html#a69950dc44cc3b2d48bb59cfd06eaebc6" title="Prohibits assignment of OpenGL resource ownership." alt="" coords="5,71,215,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="244,74,215,81,215,75,250,74"/>
-</map>

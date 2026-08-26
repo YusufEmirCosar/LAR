@@ -1,5 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_i_recording_transaction.html" title="Mutable transaction used while a recording is active." alt="" coords="5,5,158,31"/>
-<area shape="rect" id="Node000001" href="$class_lar_session_writer.html" title="Appends timestamped packets and creates immutable file snapshots." alt="" coords="206,5,326,31"/>
-<area shape="poly" id="edge70_Node000000_Node000001" title=" " alt="" coords="173,16,208,18,202,18,173,21"/>
-</map>

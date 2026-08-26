@@ -11,14 +11,21 @@
 
 namespace dlz {
 
-/** Cartesian vector in the coordinate system documented by its owning state. */
+/** Cartesian vector whose axes and units are defined by the owning value. */
 struct Vec3 {
     double x = 0.0;
     double y = 0.0;
     double z = 0.0;
 };
 
-/** Shooter kinematics consumed by geometry and solver functions. */
+/**
+ * Shooter kinematics in a local North-East-Down (NED) frame.
+ *
+ * Position components are metres and velocity components are metres per
+ * second: x is north, y is east, and z is down. `psi` is yaw clockwise from
+ * north, `theta` is pitch positive nose-up, and `phi` is roll; all attitudes
+ * are radians. Mach is dimensionless.
+ */
 struct ShooterState {
     Vec3 pos;
     Vec3 vel;
@@ -28,7 +35,13 @@ struct ShooterState {
     double phi = 0.0;
 };
 
-/** Target kinematics and defensive loading consumed by the DLZ model. */
+/**
+ * Target kinematics in the shooter's local North-East-Down (NED) frame.
+ *
+ * Position and velocity use metres and metres per second. `psi` is heading in
+ * radians clockwise from north, and `nzDefensive` is the non-negative normal
+ * load factor in g used by the teaching model.
+ */
 struct TargetState {
     Vec3 pos;
     Vec3 vel;
@@ -46,22 +59,22 @@ struct TelemetryInputs {
 
 /** Atmospheric values used to convert Mach to velocity. */
 struct Atmosphere {
-    double rho = 1.225;
-    double temperature = 288.15;
-    double pressure = 101325.0;
-    double speedOfSound = 340.294;
+    double rho = 1.225;              ///< Density in kilograms per cubic metre.
+    double temperature = 288.15;     ///< Absolute temperature in kelvin.
+    double pressure = 101325.0;      ///< Static pressure in pascals.
+    double speedOfSound = 340.294;   ///< Local speed of sound in metres per second.
 };
 
 /** Derived relative engagement geometry in explicit aviation units. */
 struct Geometry {
-    double rangeNm = 0.0;
-    double rangeRateKnots = 0.0;
-    double aspectRadians = 0.0;
-    double antennaTrainAngleRadians = 0.0;
-    double offBoresightRadians = 0.0;
-    double losAzimuthRadians = 0.0;
-    double losElevationRadians = 0.0;
-    double altitudeDifferenceFeet = 0.0;
+    double rangeNm = 0.0;       ///< Shooter-to-target slant range.
+    double rangeRateKnots = 0.0; ///< Positive when opening; negative when closing.
+    double aspectRadians = 0.0; ///< 0 is head-on; pi is target heading away.
+    double antennaTrainAngleRadians = 0.0; ///< Angle between boresight and target LOS.
+    double offBoresightRadians = 0.0;      ///< Alias of antenna train angle in this model.
+    double losAzimuthRadians = 0.0; ///< From north toward east in the local NED frame.
+    double losElevationRadians = 0.0; ///< Positive above the local horizontal plane.
+    double altitudeDifferenceFeet = 0.0; ///< Target altitude minus shooter altitude.
 };
 
 /** Tunable constants for the intentionally simplified teaching model. */

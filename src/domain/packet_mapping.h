@@ -33,11 +33,7 @@ class PacketMapping final {
     PacketMapping() = default;
     PacketMapping(QVector<FieldBinding> bindings, QByteArray json);
 
-    /**
-     * @brief Returns whether all bindings form a complete non-overlapping schema.
-     *
-     * @return True when the reported condition holds; false otherwise.
-     */
+    /** True only when all bindings form a complete, non-overlapping schema. */
     bool isValid() const noexcept {
         return m_valid;
     }

@@ -1,7 +1,0 @@
-<map id="anonymous_namespace{playback_runtime_worker.cpp}::InertPlaybackClock" name="anonymous_namespace{playback_runtime_worker.cpp}::InertPlaybackClock">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,153,207,208"/>
-<area shape="rect" id="Node000002" href="$class_i_playback_clock.html" title="Emits playback ticks at the frame rate selected by replay policy." alt="" coords="49,79,163,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,118,109,153,103,151,104,122"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="71,5,141,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,44,109,79,103,78,105,49"/>
-</map>

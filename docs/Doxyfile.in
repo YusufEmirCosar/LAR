@@ -29,6 +29,8 @@ EXCLUDE_PATTERNS       = */build-*/* */tests/* */html/* */latex/* \
                          */src/testsender/README.md
 USE_MDFILE_AS_MAINPAGE = "@PROJECT_SOURCE_DIR@/docs/README.md"
 
+# Keep the source browser exhaustive without forcing prose onto trivial members.
+# tools/check_doxygen_coverage.py separately protects selected high-risk contracts.
 EXTRACT_ALL            = YES
 EXTRACT_PRIVATE        = YES
 EXTRACT_STATIC         = YES
@@ -78,6 +80,8 @@ MAX_DOT_GRAPH_DEPTH    = 4
 
 QUIET                  = NO
 WARNINGS               = YES
+# EXTRACT_ALL suppresses this warning in Doxygen; the selective project gate above
+# is the authoritative completeness check.
 WARN_IF_UNDOCUMENTED   = NO
 WARN_IF_DOC_ERROR      = YES
 WARN_NO_PARAMDOC       = YES

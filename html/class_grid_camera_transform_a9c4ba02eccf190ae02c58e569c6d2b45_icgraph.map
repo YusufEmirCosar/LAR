@@ -1,5 +1,0 @@
-<map id="GridCameraTransform::zoom" name="GridCameraTransform::zoom">
-<area shape="rect" id="Node000001" title="Performs the zoom operation." alt="" coords="222,5,372,46"/>
-<area shape="rect" id="Node000002" href="$class_grid_lar_view.html#ae819fd108e6701d37373188c57195143" title="Performs the wheel event operation." alt="" coords="5,13,174,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,26,174,28,174,23,208,25"/>
-</map>

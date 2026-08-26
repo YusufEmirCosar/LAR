@@ -1,7 +1,0 @@
-<map id="lar::map::tool::anonymous_namespace{map_mesh_compiler::cpp}::edgeNeedsRefinement" name="lar::map::tool::anonymous_namespace{map_mesh_compiler::cpp}::edgeNeedsRefinement">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,225,85"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="63,28,64,19,73,10,90,5,115,3,144,5,162,15,157,15,142,11,115,8,91,10,76,15,69,21,68,30"/>
-<area shape="rect" id="Node000002" href="$namespacelar_1_1map_1_1tool_1_1anonymous__namespace_02map__mesh__compiler_8cpp_03.html#af6fa506fa43d45e06296d8133266b3a8" title=" " alt="" coords="273,29,492,85"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="225,55,260,57,254,57,225,60"/>
-<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="331,27,331,19,340,10,358,5,382,3,411,5,430,15,424,15,410,11,382,8,359,10,343,15,336,21,335,31"/>
-</map>

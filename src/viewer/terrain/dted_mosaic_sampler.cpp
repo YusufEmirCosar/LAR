@@ -73,6 +73,8 @@ DtedMosaicSampler::waterMaskFor(const DtedCellKey &key, const DtedCell &terrainC
 }
 
 void DtedMosaicSampler::evictIfNeeded() {
+    // One access counter orders both caches. Terrain obeys count and byte
+    // budgets; masks have no retained byte accounting and obey the count budget.
     while (m_cache.size() > m_cacheCapacity ||
            (m_cachedTerrainBytes > m_cacheByteCapacity && m_cache.size() > 1U)) {
         auto oldest = m_cache.begin();
@@ -176,6 +178,9 @@ std::optional<double> DtedMosaicSampler::interpolatedElevation(const SamplePosit
     if (validWeight <= std::numeric_limits<double>::epsilon()) {
         return std::nullopt;
     }
+    // Void or classification-mismatched posts contribute neither value nor
+    // weight, so divide by the remaining weight rather than depressing the
+    // surface toward zero.
     return weightedElevation / validWeight;
 }
 
@@ -215,6 +220,8 @@ std::optional<DtedSurfaceSample> DtedMosaicSampler::sampleSurfaceRadians(double 
     }
     std::optional<double> elevation =
         mask != nullptr ? interpolatedElevation(*position, mask.get(), water) : std::nullopt;
+    // Classification boundaries can leave all four weighted posts on the other
+    // side of the mask. Prefer a continuous terrain value over a sampling hole.
     if (!elevation) {
         elevation = interpolatedElevation(*position);
     }

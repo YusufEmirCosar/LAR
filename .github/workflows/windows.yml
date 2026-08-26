@@ -1,0 +1,39 @@
+name: Windows MSVC
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  QT_VERSION: '6.11.2'
+
+jobs:
+  msvc:
+    runs-on: windows-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Qt
+        uses: jurplel/install-qt-action@48d3ad6db93f3627c8ee7a0454bc6f3744f7e730 # v4.3.1
+        with:
+          version: ${{ env.QT_VERSION }}
+          arch: win64_msvc2022_64
+          cache: true
+      - name: Configure strict MSVC build
+        run: cmake --preset ci-msvc
+      - name: Build
+        run: cmake --build --preset ci-msvc --parallel 4
+      - name: Deterministic tests
+        run: >-
+          ctest --preset ci-msvc --parallel 4
+          --exclude-regex '(lar-earth-view-gpu-tests|lar-plane-view-gpu-tests)'
+      - name: Installed-layout smoke
+        run: >-
+          cmake --build build-ci-msvc --config Release
+          --target check-install-layout --parallel 2

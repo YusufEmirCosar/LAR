@@ -30,10 +30,6 @@ struct SourceMap final {
 
     /**
      * @brief Reports whether the source map has no renderable polygon data.
-     *
-     * @details The operation observes the current object state without modifying it.
-     *
-     * @return True when no polygons or source coordinates are present.
      */
     [[nodiscard]] bool empty() const noexcept {
         return polygons.empty() || coordinateCount == 0U;

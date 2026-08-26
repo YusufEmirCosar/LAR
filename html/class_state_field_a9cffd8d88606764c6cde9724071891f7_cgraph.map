@@ -1,5 +1,0 @@
-<map id="StateField::displayName" name="StateField::displayName">
-<area shape="rect" id="Node000001" title="Returns the canonical mapping&#45;oriented name for id." alt="" coords="5,5,170,31"/>
-<area shape="rect" id="Node000002" href="$class_state_field.html#a518ff6ce6f1e93a5135e7274e2db7359" title="Returns the canonical descriptor, or null for an invalid ID." alt="" coords="218,5,363,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,16,205,18,199,18,170,21"/>
-</map>

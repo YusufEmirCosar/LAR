@@ -1,5 +1,0 @@
-<map id="dlz::presentation::ControlPanel::inputModeRequested" name="dlz::presentation::ControlPanel::inputModeRequested">
-<area shape="rect" id="Node000001" title="Requests the workspace to switch the active DLZ input source." alt="" coords="5,5,233,46"/>
-<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_control_panel.html#a6b68b40dcf8b349ed1d736c742b8fd19" title="Documents the refresh labels operation." alt="" coords="281,5,463,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,23,268,26,262,26,233,28"/>
-</map>

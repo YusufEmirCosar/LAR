@@ -1,8 +1,0 @@
-<map id="PacketMapping::decode" name="PacketMapping::decode">
-<area shape="rect" id="Node000001" title="Decodes the legacy Plane/Target fields without exposing DLZ telemetry." alt="" coords="5,42,167,68"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="50,42,43,34,48,24,62,18,86,16,112,18,127,27,122,28,111,23,86,21,63,23,51,28,49,33,55,42"/>
-<area shape="rect" id="Node000002" href="$class_packet_mapping.html#a37e8ae3c0071d0ed32f9075347e51cf1" title="Returns the StateField mask covered by this mapping." alt="" coords="215,5,385,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,41,202,39,197,40,168,47"/>
-<area shape="rect" id="Node000003" href="$class_packet_mapping.html#ad1917abe7193f42eb04c4bc08cfdb309" title="Returns whether all bindings form a complete non&#45;overlapping schema." alt="" coords="221,70,378,96"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="167,63,208,71,203,71,167,68"/>
-</map>

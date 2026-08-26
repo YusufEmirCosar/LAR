@@ -33,10 +33,6 @@ struct SourceMapReadResult final {
 
     /**
      * @brief Reports whether parsing produced a valid non-empty source map.
-     *
-     * @details The operation observes the current object state without modifying it.
-     *
-     * @return True when parsing completed without an error and produced geometry.
      */
     [[nodiscard]] bool succeeded() const noexcept {
         return error == SourceMapError::None && !map.empty();

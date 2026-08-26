@@ -1,7 +1,0 @@
-<map id="GlbTextureReader::load" name="GlbTextureReader::load">
-<area shape="rect" id="Node000001" title="Decodes embedded PNG/JPEG images and their glTF sampler state." alt="" coords="216,44,374,70"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="330,29,319,25,295,23,273,25,261,30,259,35,265,45,260,43,253,36,257,26,272,20,295,18,320,20,335,30"/>
-<area shape="rect" id="Node000002" href="$namespaceanonymous__namespace_02glb__model__reader_8cpp_03.html#a37cd67a1abdbfd67e513846af682aed8" title=" " alt="" coords="5,29,168,85"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="197,57,168,60,168,55,203,57"/>
-<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="118,15,107,10,86,8,68,10,56,15,51,21,51,30,45,28,46,19,53,10,67,5,87,3,109,5,123,14"/>
-</map>

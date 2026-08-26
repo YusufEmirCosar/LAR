@@ -1,7 +1,0 @@
-<map id="StateField::presentationName" name="StateField::presentationName">
-<area shape="rect" id="Node000001" title="Returns the stable short label used by field&#45;value views." alt="" coords="446,13,640,38"/>
-<area shape="rect" id="Node000002" href="$class_values_panel.html#a23abb686455dd38be90c5299c66941a7" title="Builds current values." alt="" coords="227,5,398,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="428,26,398,28,398,23,433,26"/>
-<area shape="rect" id="Node000003" href="$class_values_panel.html#a5f4c8b217ff84963d1792a1be6d2499b" title="Constructs this object." alt="" coords="5,13,179,38"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="208,26,179,28,179,23,214,25"/>
-</map>

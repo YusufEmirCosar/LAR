@@ -1,7 +1,0 @@
-<map id="MetricsPanel::render" name="MetricsPanel::render">
-<area shape="rect" id="Node000001" title="Renders the current operation." alt="" coords="5,46,147,72"/>
-<area shape="rect" id="Node000002" href="$class_application_view_model.html#adb760bee608b624274a0fcdbd0b78603" title="Performs the processed packet count operation." alt="" coords="195,5,360,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,45,182,41,177,43,147,50"/>
-<area shape="rect" id="Node000003" href="$class_application_view_model.html#ae076daf936bcec0830763dc12711b7ec" title="Performs the processed packet rate operation." alt="" coords="198,71,356,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,68,185,76,180,76,147,73"/>
-</map>

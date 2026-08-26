@@ -1,5 +1,0 @@
-<map id="QtSessionPersistence" name="QtSessionPersistence">
-<area shape="rect" id="Node000001" title="Commits a snapshot with QSaveFile semantics." alt="" coords="5,79,157,105"/>
-<area shape="rect" id="Node000002" href="$class_i_session_persistence.html" title="Persists an immutable session snapshot to a destination." alt="" coords="10,5,152,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,45,84,79,78,78,79,48"/>
-</map>

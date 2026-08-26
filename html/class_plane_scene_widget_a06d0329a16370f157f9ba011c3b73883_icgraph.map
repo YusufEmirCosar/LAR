@@ -1,7 +1,0 @@
-<map id="PlaneSceneWidget::terrainVisibilityChanged" name="PlaneSceneWidget::terrainVisibilityChanged">
-<area shape="rect" id="Node000001" title="Notifies controls when optional DTED terrain visibility changes." alt="" coords="251,39,427,79"/>
-<area shape="rect" id="Node000002" href="$class_plane_view_workspace.html#a55d93a05f591059971079deefd98445a" title="Sets camera state." alt="" coords="30,5,178,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,45,179,39,178,34,238,44"/>
-<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#a605af179df470891b8fa7b2433ce23cc" title="Enables DTED terrain, retaining flat ground as an unavailable/loading fallback." alt="" coords="5,71,203,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="233,73,203,80,203,75,238,73"/>
-</map>

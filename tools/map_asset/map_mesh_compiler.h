@@ -19,10 +19,6 @@ struct MapMeshCompileResult final {
 
     /**
      * @brief Reports whether compilation produced a non-empty mesh.
-     *
-     * @details The operation observes the current object state without modifying it.
-     *
-     * @return True when the compiled mesh contains renderable geometry.
      */
     [[nodiscard]] bool succeeded() const noexcept {
         return !mesh.empty();

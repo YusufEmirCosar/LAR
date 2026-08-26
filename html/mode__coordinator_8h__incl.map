@@ -1,7 +1,0 @@
-<map id="src/application/mode_coordinator.h" name="src/application/mode_coordinator.h">
-<area shape="rect" id="Node000001" title="Legal application modes and validated workflow transitions." alt="" coords="15,5,156,46"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,75,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,45,57,82,52,79,72,48"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="99,94,165,120"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="98,44,120,80,114,80,96,49"/>
-</map>

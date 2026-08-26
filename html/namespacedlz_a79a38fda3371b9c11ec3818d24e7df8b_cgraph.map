@@ -1,7 +1,0 @@
-<map id="dlz::solve" name="dlz::solve">
-<area shape="rect" id="Node000001" title="Produces an ordered, finite launch&#45;zone solution for supported inputs." alt="" coords="5,29,83,55"/>
-<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="16,30,11,21,14,11,26,5,44,3,64,5,75,14,70,14,62,10,44,8,27,10,18,15,16,20,21,28"/>
-<area shape="rect" id="Node000002" href="$namespacedlz.html#ad537dc96fce26dc838eb397357fe99cb" title="Evaluates the exact toy equations without applying the ordering guard." alt="" coords="131,29,282,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,40,118,42,113,43,83,45"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="178,28,173,21,177,11,188,5,206,3,226,5,238,15,233,14,224,10,206,8,189,10,181,15,179,20,183,30"/>
-</map>

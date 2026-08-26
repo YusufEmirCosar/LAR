@@ -1,5 +1,0 @@
-<map id="RecordingStateEvent" name="RecordingStateEvent">
-<area shape="rect" id="Node000001" title="Authoritative recording transaction state and committed record count." alt="" coords="5,102,151,128"/>
-<area shape="rect" id="Node000002" href="$class_session_timestamp.html" title="Exact, bounded, non&#45;negative session&#45;relative time in milliseconds." alt="" coords="11,5,145,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,45,81,102,75,101,76,48"/>
-</map>

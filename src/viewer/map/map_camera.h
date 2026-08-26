@@ -51,12 +51,24 @@ struct SphereProjectionParameters final {
 
 /**
  * @brief Stores camera state and performs projection, pan, zoom, and picking.
+ *
+ * Geographic inputs and bearings are degrees. Flat-map coordinates use
+ * longitude degrees for x and `MapProjection::projectLatitude()` projected
+ * degrees for y; longitude repeats every 360 degrees. Screen coordinates are
+ * pixels with the origin at the upper-left.
+ *
+ * Unless a method documents another meaning, a boolean mutator reports whether
+ * the effective stored value changed after normalization or clamping. Projection
+ * methods separate input validity from visibility: a valid geographic point can
+ * project successfully while lying outside the viewport or on the sphere's back
+ * hemisphere.
  */
 class MapCamera final {
   public:
     [[nodiscard]] MapPresentation presentation() const noexcept;
     bool setPresentation(MapPresentation presentation) noexcept;
 
+    /** Returns `(longitude, latitude)` in geographic degrees. */
     [[nodiscard]] QPointF sphereCenter() const noexcept;
     [[nodiscard]] SphereProjectionParameters sphereProjectionParameters() const noexcept;
     bool setSphereCenter(double longitudeDegrees, double latitudeDegrees) noexcept;
@@ -64,6 +76,7 @@ class MapCamera final {
     [[nodiscard]] float bearingDegrees() const noexcept;
     bool setBearingDegrees(float bearingDegrees) noexcept;
 
+    /** Returns the finite projected-degree bounds used for flat-map constraints. */
     [[nodiscard]] QRectF mercatorWorldBounds() const noexcept;
     bool setMercatorWorldBounds(const QRectF &projectedBounds, int viewportWidth,
                                 int viewportHeight) noexcept;
@@ -84,12 +97,14 @@ class MapCamera final {
 
     [[nodiscard]] MercatorViewport mercatorViewport(int viewportWidth,
                                                     int viewportHeight) const noexcept;
+    /** Returns inclusive 360-degree copy indices intersecting the rotated viewport. */
     [[nodiscard]] WorldCopyRange visibleWorldCopies(int viewportWidth,
                                                     int viewportHeight) const noexcept;
     [[nodiscard]] WorldCopyRange visibleWorldCopiesForBounds(double minimumLongitude,
                                                              double maximumLongitude,
                                                              int viewportWidth,
                                                              int viewportHeight) const noexcept;
+    /** Converts upper-left-origin screen pixels to unwrapped projected degrees. */
     [[nodiscard]] QPointF screenToMercator(const QPointF &screenPosition, int viewportWidth,
                                            int viewportHeight) const noexcept;
 
@@ -99,10 +114,15 @@ class MapCamera final {
     void constrainMercatorCenter(int viewportWidth, int viewportHeight) noexcept;
 
     [[nodiscard]] QMatrix4x4 projectionMatrix(int viewportWidth, int viewportHeight) const noexcept;
+    /**
+     * Projects a valid geographic coordinate and reports viewport and front
+     * hemisphere membership together through `visible`.
+     */
     [[nodiscard]] bool projectGeoToScreen(double longitudeDegrees, double latitudeDegrees,
                                           int viewportWidth, int viewportHeight,
                                           QPointF &screenPosition, bool &visible) const noexcept;
 
+    /** Inverts orthographic projection for points on the visible sphere disk. */
     [[nodiscard]] bool sphereCoordinateAt(const QPointF &screenPosition, int viewportWidth,
                                           int viewportHeight, double &longitudeDegrees,
                                           double &latitudeDegrees) const noexcept;

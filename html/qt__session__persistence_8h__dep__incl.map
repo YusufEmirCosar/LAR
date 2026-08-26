@@ -1,7 +1,0 @@
-<map id="src/infrastructure/session/qt_session_persistence.h" name="src/infrastructure/session/qt_session_persistence.h">
-<area shape="rect" id="Node000001" title="Atomic Qt filesystem persistence for polymorphic session snapshots." alt="" coords="89,5,226,61"/>
-<area shape="rect" id="Node000002" href="$persistence__runtime__worker_8cpp.html" title=" " alt="" coords="5,109,147,165"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,72,100,110,96,106,124,75"/>
-<area shape="rect" id="Node000003" href="$qt__session__persistence_8cpp.html" title=" " alt="" coords="171,109,309,165"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,71,220,109,215,108,188,76"/>
-</map>

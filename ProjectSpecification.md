@@ -95,10 +95,12 @@ adversarial tests.
 ## Dependency and packaging requirements
 
 - Build requirements are CMake 3.24+, C++17, and Qt 6.10.3 or newer with Core,
-  Concurrent, Gui, Network, Widgets, OpenGL, OpenGLWidgets, and Test as used by
-  the configured targets.
+  Concurrent, Gui, Network, Widgets, OpenGL, and OpenGLWidgets. Test builds also
+  require Qt Test; quality and installation checks require Python 3.
 - Release CI is pinned to Qt 6.11.2. Changing that pin requires strict,
   sanitizer, GPU, installation, and dependency-scan evidence.
+- Windows installations shall deploy the required Qt runtime DLLs and platform
+  plugins beside the installed application layout.
 - The installed SPDX 2.3 SBOM shall identify the application, each directly
   used Qt module, the platform plugin, PNG/JPEG image handlers, and the C++
   runtime, including exact versions, package URLs where defined, and dependency
@@ -119,8 +121,8 @@ boundaries, abuse cases, mitigations, residual risks, and release review rules.
 
 A release candidate is acceptable only when:
 
-1. GCC, Clang, and AppleClang jobs configured for the release compile with
-   warnings-as-errors and strict conversion diagnostics.
+1. GCC, Clang, AppleClang, and MSVC jobs configured for the release compile
+   with warnings-as-errors and their supported strict diagnostics.
 2. Deterministic tests, architecture checks, documentation semantic/link/API
    gates, ASan/UBSan, TSan contracts, native GPU accuracy tests, installation
    smoke, and the SPDX dependency scan pass as specified in
@@ -129,4 +131,3 @@ A release candidate is acceptable only when:
    fallback retain explicit regression tests.
 4. Known residual risks are documented here or in the threat model and are not
    contradicted by the UI or deployment guidance.
-

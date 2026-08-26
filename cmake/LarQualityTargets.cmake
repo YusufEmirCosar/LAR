@@ -116,6 +116,7 @@ add_custom_target(check-install-layout
     COMMAND "${CMAKE_COMMAND}" -E remove_directory
         "${lar_install_smoke_prefix}"
     COMMAND "${CMAKE_COMMAND}" --install "${CMAKE_BINARY_DIR}"
+        --config "$<CONFIG>"
         --prefix "${lar_install_smoke_prefix}"
     COMMAND "${Python3_EXECUTABLE}"
         "${PROJECT_SOURCE_DIR}/tools/check_install_layout.py"

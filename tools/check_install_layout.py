@@ -15,6 +15,13 @@ def require_file(path: Path) -> None:
         raise RuntimeError(f"missing or empty installed file: {path}")
 
 
+def require_one_file(paths: tuple[Path, ...]) -> Path:
+    for path in paths:
+        if path.is_file() and path.stat().st_size > 0:
+            return path
+    raise RuntimeError(f"none of the required files exist: {', '.join(map(str, paths))}")
+
+
 def validate_sbom(document: object) -> None:
     """Require a patched, componentized Qt runtime inventory."""
     if not isinstance(document, dict) or document.get("spdxVersion") != "SPDX-2.3":
@@ -95,7 +102,9 @@ def main() -> int:
         print("usage: check_install_layout.py PREFIX", file=sys.stderr)
         return 2
     prefix = Path(sys.argv[1]).resolve()
-    viewer = prefix / "bin" / "lar-viewer"
+    executable_suffix = ".exe" if sys.platform == "win32" else ""
+    viewer = prefix / "bin" / f"lar-viewer{executable_suffix}"
+    sender_path = prefix / "bin" / f"lar-test-sender{executable_suffix}"
     if sys.platform == "darwin":
         viewer = prefix / "lar-viewer.app" / "Contents" / "MacOS" / "lar-viewer"
     viewer_asset_root = viewer.parent / "assets"
@@ -103,7 +112,7 @@ def main() -> int:
         viewer,
         viewer_asset_root / "models" / "f16_3.glb",
         viewer_asset_root / "water" / "dted0_water_mask.bin",
-        prefix / "bin" / "lar-test-sender",
+        sender_path,
         prefix / "bin" / "lar_world_map.larmap",
         prefix / "bin" / "lar_world_map.manifest.json",
         prefix / "share" / "lar-area-display" / "maps" / "full-state.json",
@@ -114,6 +123,16 @@ def main() -> int:
     try:
         for path in required:
             require_file(path)
+        if sys.platform == "win32":
+            require_file(prefix / "bin" / "Qt6Core.dll")
+            require_one_file(
+                (
+                    prefix / "plugins" / "platforms" / "qwindows.dll",
+                    prefix / "bin" / "platforms" / "qwindows.dll",
+                    prefix / "bin" / "plugins" / "platforms" / "qwindows.dll",
+                    prefix / "share" / "qt" / "plugins" / "platforms" / "qwindows.dll",
+                )
+            )
         cubemap_faces = sorted((viewer_asset_root / "cubemaps").glob("*.png"))
         if not cubemap_faces:
             raise RuntimeError("installed Plane cubemap catalog is empty")
@@ -133,7 +152,7 @@ def main() -> int:
         json.loads(manifest_path.read_text(encoding="utf-8"))
         validate_sbom(json.loads(sbom_path.read_text(encoding="utf-8")))
         sender = subprocess.run(
-            [str(prefix / "bin" / "lar-test-sender"), "--list-scenarios"],
+            [str(sender_path), "--list-scenarios"],
             check=False,
             capture_output=True,
             text=True,

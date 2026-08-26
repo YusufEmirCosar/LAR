@@ -1,5 +1,0 @@
-<map id="src/viewer/hud/dlz_fixtures.h" name="src/viewer/hud/dlz_fixtures.h">
-<area shape="rect" id="Node000001" title="Named deterministic DLZ scenarios exposed by the HUD controls." alt="" coords="19,5,147,46"/>
-<area shape="rect" id="Node000002" href="$dlz__types_8h.html" title="Dedicated Dynamic Launch Zone domain values." alt="" coords="5,94,161,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,44,86,79,80,78,81,48"/>
-</map>

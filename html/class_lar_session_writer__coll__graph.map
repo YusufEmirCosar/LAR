@@ -1,9 +1,0 @@
-<map id="LarSessionWriter" name="LarSessionWriter">
-<area shape="rect" id="Node000001" title="Appends timestamped packets and creates immutable file snapshots." alt="" coords="217,117,338,143"/>
-<area shape="rect" id="Node000002" href="$class_i_recording_transaction.html" title="Mutable transaction used while a recording is active." alt="" coords="5,13,158,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,44,256,115,252,118,118,49"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="182,5,373,46"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="279,60,280,118,275,115,276,63"/>
-<area shape="rect" id="Node000004" href="$class_packet_mapping.html" title="Validated packet schema that decodes and encodes Plane/Target values." alt="" coords="398,13,509,38"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="422,46,299,119,297,114,417,47"/>
-</map>

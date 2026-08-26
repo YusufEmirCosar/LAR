@@ -1,7 +1,0 @@
-<map id="RequestResultGate&lt; Result &gt;" name="RequestResultGate&lt; Result &gt;">
-<area shape="rect" id="Node000001" title="Correlates one latest&#45;wins command with either synchronous or asynchronous delivery of its typed resu..." alt="" coords="78,102,223,143"/>
-<area shape="rect" id="Node000002" href="$struct_runtime_request_id.html" title="Correlates an accepted command with exactly one typed completion." alt="" coords="5,5,136,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,41,138,101,133,102,88,46"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="159,5,304,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,43,194,80,172,104,169,99,190,76,214,46"/>
-</map>

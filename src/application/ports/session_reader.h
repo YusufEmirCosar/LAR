@@ -30,11 +30,7 @@ class ISessionReader {
      * @brief Releases the current source and returns the reader to its empty state.
      */
     virtual void close() noexcept = 0;
-    /**
-     * @brief Returns whether a fully validated session is loaded.
-     *
-     * @return True when the reported condition holds; false otherwise.
-     */
+    /** True only while a fully validated session remains loaded. */
     virtual bool isValid() const noexcept = 0;
     /** @brief Returns the number of records validated in the loaded session. */
     virtual qint64 recordCount() const noexcept = 0;

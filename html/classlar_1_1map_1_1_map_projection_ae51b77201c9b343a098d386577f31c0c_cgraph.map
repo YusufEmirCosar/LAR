@@ -1,5 +1,0 @@
-<map id="lar::map::MapProjection::wrapLongitude" name="lar::map::MapProjection::wrapLongitude">
-<area shape="rect" id="Node000001" title="Performs the wrap longitude operation." alt="" coords="5,5,165,46"/>
-<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_projection.html#a07314ffecd55c0529f331a1aa41a8107" title="Performs the wrap periodic operation." alt="" coords="213,5,372,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,23,200,25,195,26,165,28"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="lar::map::tool::MapMeshCompileResult::succeeded" name="lar::map::tool::MapMeshCompileResult::succeeded">
-<area shape="rect" id="Node000001" title="Reports whether compilation produced a non&#45;empty mesh." alt="" coords="5,5,216,46"/>
-<area shape="rect" id="Node000002" href="$structlar_1_1map_1_1_map_mesh.html#a47ba9df528bea7113f0308bb7ceb93c1" title="Reports whether the mesh has no renderable projection data." alt="" coords="264,5,405,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,23,251,26,246,26,216,28"/>
-</map>

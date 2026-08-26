@@ -37,37 +37,20 @@ class EarthMapWidget : public QOpenGLWidget, protected QOpenGLFunctions {
 
     void setMapPresentation(MapPresentation presentation);
     [[nodiscard]] MapPresentation mapPresentation() const noexcept;
-    /**
-     * @brief Sets rotation.
-     *
-     * @param[in] longitudeDegrees Angle value expressed in degrees.
-     * @param[in] latitudeDegrees Angle value expressed in degrees.
-     */
+    /** Centers the spherical presentation on a geographic coordinate in degrees. */
     void setRotation(double longitudeDegrees, double latitudeDegrees);
     [[nodiscard]] QPointF rotation() const noexcept;
     [[nodiscard]] float activeZoom() const noexcept;
-    /**
-     * @brief Sets camera bearing.
-     *
-     * @param[in] bearingDegrees Angle value expressed in degrees.
-     */
+    /** Sets clockwise map bearing in degrees after camera normalization. */
     void setCameraBearing(float bearingDegrees);
     [[nodiscard]] float cameraBearing() const noexcept;
 
     void setFlatWorldBounds(const QRectF &projectedBounds);
     void setFlatCenter(const QPointF &projectedCenter);
     [[nodiscard]] QPointF flatCenterProjected() const noexcept;
-    /**
-     * @brief Sets flat zoom.
-     *
-     * @param[in] zoom Finite numeric value used by the operation.
-     */
+    /** Applies the flat-camera zoom after `MapCamera` validation and clamping. */
     void setFlatZoom(float zoom);
-    /**
-     * @brief Sets sphere zoom.
-     *
-     * @param[in] zoom Finite numeric value used by the operation.
-     */
+    /** Applies the sphere-camera zoom after `MapCamera` validation and clamping. */
     void setSphereZoom(float zoom);
 
     [[nodiscard]] MercatorViewport flatViewport(int targetWidth, int targetHeight) const noexcept;

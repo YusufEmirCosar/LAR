@@ -127,6 +127,9 @@ bool accessorSpan(const ReaderContext &context, int accessorIndex, int elementBy
     const qint64 first = static_cast<qint64>(viewOffset) + accessorOffset;
     const qint64 required = static_cast<qint64>(count - 1) * stride + elementBytes;
     const qint64 viewEnd = static_cast<qint64>(viewOffset) + viewLength;
+    // Validate the complete strided range against both its declared bufferView
+    // and the resolved buffer. Checking only the first element would let a
+    // crafted count/stride escape the view late in iteration.
     if (first < viewOffset || required <= 0 || first + required > viewEnd ||
         first + required > binary.size()) {
         return false;
@@ -425,6 +428,9 @@ bool appendMesh(const ReaderContext &context, int meshIndex, const QMatrix4x4 &t
 }
 
 bool flattenScene(const ReaderContext &context, const QJsonArray &roots, PlaneModelMesh *mesh) {
+    // glTF nodes should form a forest. Track the active path to reject cycles
+    // and all completed nodes to reject aliases that would duplicate geometry;
+    // the depth cap also bounds recursive processing of hostile input.
     std::vector<bool> visiting(static_cast<std::size_t>(context.nodes.size()), false);
     std::vector<bool> visited(static_cast<std::size_t>(context.nodes.size()), false);
     std::function<bool(int, const QMatrix4x4 &, int)> visit;
@@ -483,6 +489,9 @@ bool normalizeMesh(PlaneModelMesh *mesh) {
     if (!std::isfinite(largest) || largest <= 1.0e-6F) {
         return false;
     }
+    // Plane rendering operates in scene-relative units, independent of the
+    // model author's scale or origin. Center the AABB and make its largest axis
+    // exactly two units while preserving aspect ratio.
     const QVector3D center = minimum + extent * 0.5F;
     const float scale = 2.0F / largest;
     mesh->forwardExtentSceneUnits = extent.z() * scale;

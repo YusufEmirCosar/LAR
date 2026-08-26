@@ -1,5 +1,0 @@
-<map id="tools/map_asset/map_source_limits.h" name="tools/map_asset/map_source_limits.h">
-<area shape="rect" id="Node000001" title="Resource ceilings applied while parsing untrusted GeoJSON." alt="" coords="15,5,162,46"/>
-<area shape="rect" id="Node000002" href="$geojson__source__reader_8cpp.html" title=" " alt="" coords="5,94,172,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,60,91,94,86,93,87,64"/>
-</map>

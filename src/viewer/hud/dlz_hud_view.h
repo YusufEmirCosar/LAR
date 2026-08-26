@@ -33,19 +33,11 @@ class HudView final : public QWidget {
     double displayedRangeNm() const noexcept {
         return m_displayedRangeNm;
     }
-    /**
-     * @brief Returns whether the view currently owns a valid render frame.
-     *
-     * @return True when the reported condition holds; false otherwise.
-     */
+    /** True while the view owns a valid render frame. */
     bool hasFrame() const noexcept {
         return m_hasFrame;
     }
-    /**
-     * @brief Returns whether a persistent canvas error is currently shown.
-     *
-     * @return True when the reported condition holds; false otherwise.
-     */
+    /** True while a persistent canvas error is shown. */
     bool hasError() const noexcept {
         return !m_errorText.isEmpty();
     }

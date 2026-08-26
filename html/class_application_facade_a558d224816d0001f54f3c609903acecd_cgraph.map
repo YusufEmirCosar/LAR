@@ -1,5 +1,0 @@
-<map id="ApplicationFacade::isRecordingPaused" name="ApplicationFacade::isRecordingPaused">
-<area shape="rect" id="Node000001" title="Reports whether the existing recording session is paused." alt="" coords="5,5,142,46"/>
-<area shape="rect" id="Node000002" href="$struct_application_state.html#ad973f6bd0201d31d58ab2d7d459bf882" title="Reports whether recording paused is true." alt="" coords="190,5,383,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,23,176,25,171,26,142,28"/>
-</map>

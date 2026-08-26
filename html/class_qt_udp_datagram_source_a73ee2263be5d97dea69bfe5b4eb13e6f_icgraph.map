@@ -1,7 +1,0 @@
-<map id="QtUdpDatagramSource::stop" name="QtUdpDatagramSource::stop">
-<area shape="rect" id="Node000001" title="Stops the current operation." alt="" coords="227,39,384,79"/>
-<area shape="rect" id="Node000002" href="$class_qt_udp_datagram_source.html#a93be5747953f5864643a3614e6e54480" title="Starts the current operation." alt="" coords="13,5,171,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,45,171,41,171,35,214,44"/>
-<area shape="rect" id="Node000003" href="$class_qt_udp_datagram_source.html#a7c498ca5bd3443bd431855b309fc04b2" title="Returns the current qt udp datagram source." alt="" coords="5,71,179,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,74,179,81,179,75,214,73"/>
-</map>

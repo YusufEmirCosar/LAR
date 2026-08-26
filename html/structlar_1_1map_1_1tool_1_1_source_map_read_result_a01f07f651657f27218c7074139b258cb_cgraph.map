@@ -1,5 +1,0 @@
-<map id="lar::map::tool::SourceMapReadResult::succeeded" name="lar::map::tool::SourceMapReadResult::succeeded">
-<area shape="rect" id="Node000001" title="Reports whether parsing produced a valid non&#45;empty source map." alt="" coords="5,5,177,46"/>
-<area shape="rect" id="Node000002" href="$structlar_1_1map_1_1tool_1_1_source_map.html#a33a427eb8117e2eabb48e90c8a48c16b" title="Reports whether the source map has no renderable polygon data." alt="" coords="225,5,396,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,23,212,25,206,26,177,28"/>
-</map>

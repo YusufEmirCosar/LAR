@@ -14,7 +14,16 @@
 
 #include <algorithm>
 #include <optional>
+
+#if defined(Q_OS_WIN)
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
+#include <windows.h>
+#include <psapi.h>
+#else
 #include <sys/resource.h>
+#endif
 
 namespace {
 
@@ -24,6 +33,13 @@ constexpr qint64 MaximumSoakSeconds = 1800;
 constexpr qint64 MaximumResidentGrowthBytes = 256LL * 1024LL * 1024LL;
 
 qint64 maximumResidentBytes() noexcept {
+#if defined(Q_OS_WIN)
+    PROCESS_MEMORY_COUNTERS counters{};
+    counters.cb = static_cast<DWORD>(sizeof(counters));
+    if (!GetProcessMemoryInfo(GetCurrentProcess(), &counters, counters.cb))
+        return 0;
+    return static_cast<qint64>(counters.PeakWorkingSetSize);
+#else
     rusage usage{};
     if (getrusage(RUSAGE_SELF, &usage) != 0)
         return 0;
@@ -31,6 +47,7 @@ qint64 maximumResidentBytes() noexcept {
     return static_cast<qint64>(usage.ru_maxrss);
 #else
     return static_cast<qint64>(usage.ru_maxrss) * 1024;
+#endif
 #endif
 }
 

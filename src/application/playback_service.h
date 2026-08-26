@@ -12,7 +12,20 @@
 #include <QObject>
 #include <QString>
 
-/** @brief Implements indexed, fixed-frame-rate session replay. */
+/**
+ * @brief Implements indexed session replay on a fixed-rate presentation clock.
+ *
+ * Session records remain ordered by their recorded timestamps, but playback
+ * publishes at 60 presentation ticks per second. At each tick it selects the
+ * newest record strictly before the target clock position; consequently fast
+ * rates and dense sessions may skip source records rather than emitting a
+ * burst. `recordsProcessed()` counts displayed-record changes, not clock ticks.
+ *
+ * Seeking is inclusive of a record whose timestamp exactly equals the target.
+ * Non-repeating playback publishes the last eligible frame, moves to the exact
+ * session duration, and emits `playbackFinished()`. Repeating playback wraps
+ * the presentation position modulo the duration without emitting completion.
+ */
 class PlaybackService final : public QObject {
     Q_OBJECT
 
@@ -22,17 +35,20 @@ class PlaybackService final : public QObject {
 
     PlaybackService(ISessionReader &reader, IPlaybackClock &clock, QObject *parent = nullptr);
 
+    /** Replaces any loaded session and publishes its first record, if present. */
     bool loadSession(const QString &path, QString *error = nullptr);
+    /** In-memory equivalent of `loadSession()`, primarily for bounded inputs and tests. */
     bool loadData(const QByteArray &data, QString *error = nullptr);
     void closeSession();
 
     void play();
-    /**
-     * @brief Pauses the current operation.
-     */
+    /** Stops the presentation clock while preserving the current position. */
     void pause();
+    /** Stops playback and returns the position and displayed frame to the start. */
     void stop();
+    /** Clamps to the session duration and publishes the frame at or before the target. */
     void seek(SessionTimestamp position);
+    /** Sets a finite, strictly positive multiplier for presentation-clock progress. */
     bool setRate(double rate);
     void setRepeat(bool enabled) noexcept;
 

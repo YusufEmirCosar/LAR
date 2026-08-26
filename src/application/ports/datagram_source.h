@@ -24,11 +24,7 @@ class IDatagramSource : public QObject {
      * @brief Closes the transport; repeated calls are safe.
      */
     virtual void stop() = 0;
-    /**
-     * @brief Returns whether the adapter currently owns a bound transport.
-     *
-     * @return True when the reported condition holds; false otherwise.
-     */
+    /** True while the adapter owns a bound transport. */
     virtual bool isListening() const = 0;
     virtual quint16 localPort() const = 0;
     virtual bool setIpAccessPolicy(const IpAccessPolicy &policy) = 0;

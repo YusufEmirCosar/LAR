@@ -1,9 +1,0 @@
-<map id="PlaneSurfaceGpuLayer" name="PlaneSurfaceGpuLayer">
-<area shape="rect" id="Node000001" title="Renders the optional local tactical surface beneath the aircraft." alt="" coords="382,69,537,95"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="46,5,183,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,15,276,20,358,34,400,49,437,68,432,69,398,54,357,39,276,25,199,20"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,62,224,102"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="239,80,384,81,379,84,240,85"/>
-<area shape="rect" id="Node000004" href="$struct_plane_surface_gpu_layer_1_1_range.html" title=" " alt="" coords="37,278,192,318"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="208,306,245,305,284,300,322,289,356,271,378,253,397,230,426,180,444,131,454,97,457,93,449,133,430,182,401,233,382,256,359,275,324,294,285,305,246,310,208,311"/>
-</map>

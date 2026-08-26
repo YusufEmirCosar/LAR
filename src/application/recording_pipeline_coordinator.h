@@ -21,6 +21,14 @@ class RecordingService;
  * The coordinator knows recording policy, drain ordering, immutable snapshots,
  * and persistence request identity. It does not know about threads, Qt file
  * APIs, sockets, or concrete session formats.
+ *
+ * Pause, reset, snapshot, final save, and discard first disable or fence the
+ * input producer and request a drain token. Only the matching token may apply
+ * the operation at the reported monotonic-time boundary. Reset and snapshot
+ * preserve packets arriving during the drain when recording was active, then
+ * re-enable input; pause, final save, and discard leave input disabled.
+ * Persistence receives an immutable snapshot and a separate request identity,
+ * so a stale completion cannot finalize a newer save.
  */
 class RecordingPipelineCoordinator final : public QObject {
     Q_OBJECT
@@ -35,14 +43,14 @@ class RecordingPipelineCoordinator final : public QObject {
     void resetRecording(RuntimeRequestId request = {});
     void snapshotRecording(const QString &targetPath, RuntimeRequestId request = {});
     void discardRecording(RuntimeRequestId request = {});
+    /** Consumes a producer batch and acknowledges its ID exactly once. */
     void appendRecordingBatch(quint64 batchId, const QVector<CapturedPacket> &packets);
+    /** Applies the pending operation only when `token` matches the active drain. */
     void recordingInputDrained(quint64 token, qint64 boundaryNanoseconds = 0);
     void recordingInputFailed(const QString &error);
     void persistenceFinished(quint64 requestId, bool finalSave, bool saved,
                              const QString &targetPath, const QString &error);
-    /**
-     * @brief Controls the shutdown operation.
-     */
+    /** Cancels the transaction and invalidates every in-flight drain or save identity. */
     void shutdown();
 
   signals:

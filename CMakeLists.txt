@@ -20,6 +20,8 @@ option(LAR_ENABLE_TSAN "Enable ThreadSanitizer" OFF)
 option(LAR_ENABLE_COVERAGE "Enable GCC/gcov coverage instrumentation" OFF)
 option(LAR_ENABLE_MUTATION "Enable Mull mutation instrumentation" OFF)
 option(LAR_BUILD_FUZZERS "Build parser fuzz targets" OFF)
+option(LAR_ENABLE_QUALITY_TARGETS "Define Python/tool-based quality targets" ON)
+include(CTest)
 set(LAR_DTED0_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/assets/DTED0" CACHE PATH
     "Development DTED0 root used by Plane terrain (not copied into build outputs)")
 set(LAR_DTED0_WATER_MASK "${CMAKE_CURRENT_SOURCE_DIR}/assets/water/dted0_water_mask.bin"
@@ -51,21 +53,26 @@ find_package(Qt6 6.10.3 REQUIRED COMPONENTS
     Network
     Widgets
     OpenGLWidgets
-    Test
 )
+if(BUILD_TESTING)
+    find_package(Qt6 6.10.3 REQUIRED COMPONENTS Test)
+endif()
 lar_configure_sbom()
 
-enable_testing()
 include("${PROJECT_SOURCE_DIR}/src/viewer/map/CMakeLists.txt")
 include("${PROJECT_SOURCE_DIR}/tools/CMakeLists.txt")
 include("${PROJECT_SOURCE_DIR}/src/domain/CMakeLists.txt")
 include("${PROJECT_SOURCE_DIR}/src/application/CMakeLists.txt")
 include("${PROJECT_SOURCE_DIR}/src/infrastructure/CMakeLists.txt")
 include("${PROJECT_SOURCE_DIR}/src/viewer/CMakeLists.txt")
-include("${PROJECT_SOURCE_DIR}/tests/CMakeLists.txt")
+if(BUILD_TESTING)
+    include("${PROJECT_SOURCE_DIR}/tests/CMakeLists.txt")
+endif()
 
 lar_apply_project_defaults()
-include(LarQualityTargets)
+if(LAR_ENABLE_QUALITY_TARGETS)
+    include(LarQualityTargets)
+endif()
 
 file(COPY maps DESTINATION "${CMAKE_BINARY_DIR}")
 
@@ -73,6 +80,14 @@ install(TARGETS lar-viewer lar-test-sender
     BUNDLE DESTINATION .
     RUNTIME DESTINATION bin
 )
+if(WIN32)
+    qt_generate_deploy_app_script(
+        TARGET lar-viewer
+        OUTPUT_SCRIPT lar_viewer_deploy_script
+        NO_TRANSLATIONS
+    )
+    install(SCRIPT "${lar_viewer_deploy_script}")
+endif()
 install(FILES
     "${LAR_MAP_ASSET_FILE}"
     "${LAR_MAP_MANIFEST_FILE}"

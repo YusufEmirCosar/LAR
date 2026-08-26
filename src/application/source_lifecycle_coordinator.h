@@ -14,7 +14,22 @@
 
 #include <optional>
 
-/** Single owner of online/playback activation, switching, and publications. */
+/**
+ * @brief Single owner of online/playback activation, switching, and publications.
+ *
+ * Online capture and playback are mutually exclusive. Public source-selection
+ * calls update the desired source, and the coordinator converges on that intent
+ * by stopping or closing the current source before activating the next one.
+ * A `true` return means the intent was accepted (possibly for deferred work),
+ * not that the asynchronous transition has completed.
+ *
+ * Every transition boundary invalidates the active source epoch before UI
+ * state is cleared. Publications are accepted only from the current epoch, so
+ * queued events from a stopped activation cannot repopulate the view. Direct
+ * runtimes are allowed to complete synchronously while a command is being
+ * dispatched; such completions and the latest publication of each event type
+ * are deferred until the returned request ID and epoch have been installed.
+ */
 class SourceLifecycleCoordinator final : public QObject {
     Q_OBJECT
 
@@ -37,21 +52,24 @@ class SourceLifecycleCoordinator final : public QObject {
                                ApplicationViewModel &viewModel, ApplicationState &applicationState,
                                QObject *parent = nullptr);
 
+    /** Selects online capture on a non-zero UDP port. */
     bool startOnline(quint16 port);
+    /** Selects no source, stopping online capture if necessary. */
     bool stopOnline();
+    /** Selects playback of a non-empty session path. */
     bool loadSession(const QString &path);
+    /** Selects no source, closing playback if necessary. */
     bool closeSession();
     void play();
-    /**
-     * @brief Pauses the current operation.
-     */
+    /** Forwards a pause request to the active playback runtime. */
     void pause();
     void stop();
     void seek(SessionTimestamp position);
     void resetMetrics();
     void applyRecordingState(bool hasSession, bool paused);
     /**
-     * @brief Shuts down the active source lifecycle.
+     * Enters the terminal state and invalidates all pending request and epoch
+     * identities. This function does not throw.
      */
     void shutdown() noexcept;
 
@@ -109,6 +127,7 @@ class SourceLifecycleCoordinator final : public QObject {
     ApplicationState &m_applicationState;
     State m_state = State::Idle;
     DesiredSource m_desiredSource = DesiredSource::None;
+    /** Non-`None` only while a runtime call may re-enter through a direct signal. */
     DispatchKind m_dispatching = DispatchKind::None;
     quint16 m_desiredPort = 0;
     quint16 m_pendingStartPort = 0;
@@ -120,6 +139,7 @@ class SourceLifecycleCoordinator final : public QObject {
     RuntimeRequestId m_pendingLoad;
     RuntimeRequestId m_pendingClose;
 
+    /** Synchronous completions held until their dispatch IDs become authoritative. */
     std::optional<OnlineStartResult> m_synchronousStart;
     std::optional<OnlineStopResult> m_synchronousStop;
     std::optional<SessionLoadResult> m_synchronousLoad;

@@ -1,3 +1,13 @@
+qt_add_executable(lar-testsender-scenario-tests
+    src/testsender/scenario_tests.cpp
+    src/testsender/scenarios.h
+    src/testsender/scenarios.cpp
+)
+target_link_libraries(lar-testsender-scenario-tests PRIVATE
+    lar-infrastructure-qt
+    lar-domain
+    Qt6::Core
+)
 add_test(NAME lar-testsender-scenario-tests COMMAND lar-testsender-scenario-tests)
 set_tests_properties(lar-testsender-scenario-tests PROPERTIES TIMEOUT 30)
 
@@ -136,6 +146,9 @@ target_link_libraries(laroperational-soak-tests PRIVATE
     Qt6::Network
     Qt6::Test
 )
+if(WIN32)
+    target_link_libraries(laroperational-soak-tests PRIVATE Psapi)
+endif()
 add_test(NAME laroperational-soak-tests COMMAND laroperational-soak-tests)
 set_tests_properties(laroperational-soak-tests PROPERTIES
     LABELS "integration;network;slow"

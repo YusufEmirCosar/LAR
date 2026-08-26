@@ -1,7 +1,0 @@
-<map id="src/application/application_state.h" name="src/application/application_state.h">
-<area shape="rect" id="Node000001" title="Internal lifecycle state owned by ApplicationFacade." alt="" coords="16,5,188,46"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,95,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,45,69,82,64,79,87,48"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="119,94,192,120"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,44,141,81,136,81,114,49"/>
-</map>

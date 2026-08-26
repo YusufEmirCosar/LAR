@@ -34,6 +34,23 @@
       }
     },
     {
+      "name": "windows-release",
+      "displayName": "Windows MSVC release",
+      "inherits": "release",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      },
+      "binaryDir": "${sourceDir}/build-windows-release",
+      "cacheVariables": {
+        "BUILD_TESTING": "OFF",
+        "LAR_ENABLE_QUALITY_TARGETS": "OFF"
+      }
+    },
+    {
       "name": "ci",
       "displayName": "CI strict build",
       "inherits": "release",
@@ -41,6 +58,22 @@
       "cacheVariables": {
         "LAR_WARNINGS_AS_ERRORS": "ON",
         "LAR_ENABLE_STRICT_CONVERSIONS": "ON"
+      }
+    },
+    {
+      "name": "ci-msvc",
+      "displayName": "CI MSVC warnings-as-errors",
+      "inherits": "ci",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      },
+      "binaryDir": "${sourceDir}/build-ci-msvc",
+      "cacheVariables": {
+        "BUILD_TESTING": "ON"
       }
     },
     {
@@ -137,7 +170,27 @@
   "buildPresets": [
     { "name": "dev", "configurePreset": "dev" },
     { "name": "release", "configurePreset": "release" },
+    {
+      "name": "windows-release",
+      "configurePreset": "windows-release",
+      "configuration": "Release",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      }
+    },
     { "name": "ci", "configurePreset": "ci" },
+    {
+      "name": "ci-msvc",
+      "configurePreset": "ci-msvc",
+      "configuration": "Release",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      }
+    },
     { "name": "ci-gcc", "configurePreset": "ci-gcc" },
     { "name": "ci-clang", "configurePreset": "ci-clang" },
     { "name": "asan-ubsan", "configurePreset": "asan-ubsan" },
@@ -160,6 +213,17 @@
     {
       "name": "ci",
       "configurePreset": "ci",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "ci-msvc",
+      "configurePreset": "ci-msvc",
+      "configuration": "Release",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      },
       "output": { "outputOnFailure": true }
     },
     {

@@ -49,8 +49,10 @@ command-acceptance/completion contract for deterministic tests. See the
 ## Build
 
 Requirements: CMake 3.24+, Qt 6.10.3+ with Core, Concurrent, Gui, Network,
-Widgets, OpenGL, OpenGLWidgets, and Test modules, OpenGL support, Ninja for the
-checked-in presets, and a C++17 compiler.
+Widgets, OpenGL, and OpenGLWidgets, OpenGL support, and a C++17 compiler. Test
+builds additionally require Qt Test. Quality and installation checks require
+Python 3. The Unix presets use Ninja; the Windows presets use Visual Studio
+2022 and its x64 MSVC toolchain.
 
 The release-certification matrix is:
 
@@ -58,6 +60,7 @@ The release-certification matrix is:
 | --- | --- | --- |
 | Ubuntu 24.04 | distribution GCC and Clang, both warnings-as-errors | 6.11.2 |
 | macOS 15 | Xcode AppleClang, warnings-as-errors | 6.11.2 |
+| Windows | Visual Studio 2022 MSVC, warnings-as-errors | 6.11.2 |
 
 Qt 6.10.3 is the source/API minimum; CI tracks the patched Qt 6.11 line. A
 platform/version outside the matrix may build, but is not release evidence until
@@ -83,6 +86,26 @@ On macOS:
 open build-release/lar-viewer.app
 ```
 
+On Windows, install the matching `msvc2022_64` Qt kit and configure the
+production-only preset. Pass `Qt6_DIR` when Qt is not already discoverable:
+
+```powershell
+cmake --preset windows-release -DQt6_DIR=C:/Qt/6.11.2/msvc2022_64/lib/cmake/Qt6
+cmake --build --preset windows-release --parallel
+cmake --install build-windows-release --config Release --prefix build-windows-package
+./build-windows-package/bin/lar-viewer.exe
+```
+
+The install step deploys the required Qt runtime DLLs and plugins. The strict
+test build uses `ci-msvc`; the Windows production preset disables tests and
+tool-based quality targets:
+
+```powershell
+cmake --preset ci-msvc -DQt6_DIR=C:/Qt/6.11.2/msvc2022_64/lib/cmake/Qt6
+cmake --build --preset ci-msvc --parallel
+ctest --preset ci-msvc
+```
+
 For a debug build, use the developer preset:
 
 ```bash
@@ -105,7 +128,7 @@ with `cmake --list-presets=all`.
 
 | Preset/target | Purpose |
 | --- | --- |
-| `ci`, `ci-gcc`, `ci-clang` | hardening, strict conversions, warnings-as-errors |
+| `ci`, `ci-gcc`, `ci-clang`, `ci-msvc` | hardening and warnings-as-errors for the selected compiler |
 | `asan-ubsan` | memory and undefined-behavior contracts |
 | `tsan` | runtime/source/recording/playback/map/viewport concurrency contracts |
 | `coverage` / `coverage-report` | gcovr report and mandatory thresholds |

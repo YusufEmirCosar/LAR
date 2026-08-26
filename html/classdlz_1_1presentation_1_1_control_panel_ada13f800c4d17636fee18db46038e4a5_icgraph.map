@@ -1,8 +1,0 @@
-<map id="dlz::presentation::ControlPanel::inputModeRequested" name="dlz::presentation::ControlPanel::inputModeRequested">
-<area shape="rect" id="Node000001" title="Requests the workspace to switch the active DLZ input source." alt="" coords="488,35,715,75"/>
-<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_control_panel.html#ad2c9070616837a5a5e9fe9f492655e5e" title="Constructs this object." alt="" coords="261,5,440,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="470,40,440,39,441,33,475,40"/>
-<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_workspace.html#aec685012fec2dfb24231b60b8836444b" title="Constructs this object." alt="" coords="5,35,213,75"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="469,57,440,60,261,60,213,60,213,54,261,55,440,55,475,57"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="243,39,213,45,213,40,248,38"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="dlz::presentation::HudWorkspace::tick" name="dlz::presentation::HudWorkspace::tick">
-<area shape="rect" id="Node000001" title="Documents the tick operation." alt="" coords="272,39,411,79"/>
-<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_hud_workspace.html#a33bf0345b5e07d56f8af527bc50cadf7" title="Notifies observers about diagnostic raised." alt="" coords="5,5,224,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="254,47,224,44,224,39,259,46"/>
-<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_workspace.html#aec685012fec2dfb24231b60b8836444b" title="Constructs this object." alt="" coords="11,71,218,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="254,71,219,79,218,74,259,70"/>
-</map>

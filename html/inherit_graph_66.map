@@ -1,5 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classlar_1_1map_1_1_i_map_asset_source.html" title="Hides package/file lookup from EarthLarView." alt="" coords="5,13,186,38"/>
-<area shape="rect" id="Node000001" href="$classlar_1_1map_1_1_packaged_map_asset_source.html" title="Resolves package paths, validates the manifest, and reads the mesh." alt="" coords="234,5,427,46"/>
-<area shape="poly" id="edge75_Node000000_Node000001" title=" " alt="" coords="201,23,236,26,231,26,201,28"/>
-</map>

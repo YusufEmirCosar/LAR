@@ -1,5 +1,0 @@
-<map id="ApplicationFacade::snapshotRecording" name="ApplicationFacade::snapshotRecording">
-<area shape="rect" id="Node000001" title="Saves a snapshot of the active recording without finalizing it." alt="" coords="244,5,380,46"/>
-<area shape="rect" id="Node000002" href="$class_recording_workflow_controller.html#ab315058e28ddfd64c1ccb74066517621" title="Performs the request snapshot operation." alt="" coords="5,5,196,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,26,196,28,196,23,231,25"/>
-</map>

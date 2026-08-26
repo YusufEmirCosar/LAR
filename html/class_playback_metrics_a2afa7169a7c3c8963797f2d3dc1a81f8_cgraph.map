@@ -1,8 +1,0 @@
-<map id="PlaybackMetrics::reset" name="PlaybackMetrics::reset">
-<area shape="rect" id="Node000001" title="Resets the current operation." alt="" coords="5,13,161,38"/>
-<area shape="rect" id="Node000002" href="$class_playback_metrics.html#a199188ac00273ba121ca123ffb4055f8" title="Notifies observers about metrics changed." alt="" coords="209,5,378,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,23,196,25,190,26,161,28"/>
-<area shape="rect" id="Node000003" href="$class_playback_metrics.html#abb138f5d3bd91007a77e0fedbc52033e" title="Publishes the current playback metrics." alt="" coords="426,13,593,38"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="378,32,413,35,407,35,379,37"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="423,17,394,19,393,14,428,17"/>
-</map>

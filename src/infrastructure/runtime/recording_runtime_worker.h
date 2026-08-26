@@ -47,9 +47,7 @@ class RecordingRuntimeWorker final : public QObject {
     void recordingInputFailed(const QString &error);
     void persistenceFinished(quint64 requestId, bool finalSave, bool saved,
                              const QString &targetPath, const QString &error);
-    /**
-     * @brief Controls the shutdown operation.
-     */
+    /** Cancels the active recording transaction and invalidates pending pipeline work. */
     void shutdown();
 
   signals:

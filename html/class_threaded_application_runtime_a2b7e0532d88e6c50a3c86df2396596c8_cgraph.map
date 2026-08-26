@@ -1,9 +1,0 @@
-<map id="ThreadedApplicationRuntime::setIpAccessPolicy" name="ThreadedApplicationRuntime::setIpAccessPolicy">
-<area shape="rect" id="Node000001" title="Sets ip access policy." alt="" coords="5,71,194,111"/>
-<area shape="rect" id="Node000002" href="$class_i_application_runtime.html#a8a335e653e0be8326f22b4d50759f8f7" title="Documents the accept command operation." alt="" coords="286,5,424,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,68,273,46,269,48,183,73"/>
-<area shape="rect" id="Node000003" href="$class_threaded_application_runtime.html#a0da5dbe706315476aca1f5125c4c5346" title="Notifies observers about ip access policy change requested." alt="" coords="242,71,469,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,88,229,90,223,92,194,94"/>
-<area shape="rect" id="Node000004" href="$class_i_application_runtime.html#a01f646d011f811a4eb6b1ac3faae60ec" title="Documents the reject command operation." alt="" coords="286,136,424,177"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="182,109,274,134,268,136,182,115"/>
-</map>

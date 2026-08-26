@@ -20,11 +20,7 @@ class IPlaybackClock : public QObject {
      * @brief Stops future ticks.
      */
     virtual void stop() = 0;
-    /**
-     * @brief Reports whether ticks are currently scheduled.
-     *
-     * @return True when the reported condition holds; false otherwise.
-     */
+    /** True while ticks are scheduled for delivery. */
     virtual bool isActive() const = 0;
 
   signals:

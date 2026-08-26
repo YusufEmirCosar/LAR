@@ -1,7 +1,0 @@
-<map id="TestSenderScenarios::anonymous_namespace{scenarios::cpp}::updatePoleCrossingRoute" name="TestSenderScenarios::anonymous_namespace{scenarios::cpp}::updatePoleCrossingRoute">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,193,100"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="51,28,53,18,63,10,78,5,99,3,124,5,141,15,136,16,123,11,99,8,79,10,65,15,58,21,56,30"/>
-<area shape="rect" id="Node000002" href="$namespace_test_sender_scenarios_1_1anonymous__namespace_02scenarios_8cpp_03.html#a70c0bf52dc00906b213b9c8d1d154a8c" title=" " alt="" coords="241,37,447,92"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="193,62,228,64,222,65,193,67"/>
-<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="297,35,297,26,305,18,321,12,344,10,370,13,387,22,381,22,368,18,344,15,322,17,308,22,301,28,301,38"/>
-</map>

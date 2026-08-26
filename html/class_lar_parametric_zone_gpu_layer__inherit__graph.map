@@ -1,7 +1,0 @@
-<map id="LarParametricZoneGpuLayer" name="LarParametricZoneGpuLayer">
-<area shape="rect" id="Node000001" title="Draws regular IR/IZ zones from compact parameters and static LOD." alt="" coords="9,79,196,105"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,75,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,40,95,78,90,79,59,45"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="98,5,235,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,41,115,81,112,76,144,43"/>
-</map>

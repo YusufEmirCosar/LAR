@@ -18,8 +18,22 @@ BOILERPLATE = (
     re.compile(r"@brief\s+Documents the\b"),
     re.compile(
         r"@brief\s+(?:Stops|Resets|Draws|Initializes|Cleanups|Clears|Starts|"
-        r"Saves|Renders|Plays|Updates) the current operation\."
+        r"Saves|Renders|Plays|Pauses|Closes|Controls|Updates) (?:the current|the shutdown) "
+        r"operation\."
     ),
+    re.compile(r"@brief\s+Returns the state changed\."),
+    re.compile(r"@brief\s+Converts or compares the represented value\."),
+    re.compile(r"@brief\s+(?:Starts start|Ends or resets|Obtains load|Updates set)\b"),
+    re.compile(r"@brief\s+Reports whether\b.+\bis true\."),
+    re.compile(
+        r"@details\s+The operation observes the current object state without modifying it\."
+    ),
+    re.compile(
+        r"\bImplementations provide the concrete behavior required by the owning interface\."
+    ),
+    re.compile(r"\bThe operation exposes the stable behavior of the owning type to its callers\."),
+    re.compile(r"\bThe operation follows the contract of the owning type\b"),
+    re.compile(r"@return\s+True when the reported condition holds; false otherwise\."),
     re.compile(r"\bsupplied to the operation\b"),
     re.compile(r"\bsupplied by the caller\b"),
     re.compile(r"\bThe value produced by the operation\."),
@@ -27,6 +41,8 @@ BOILERPLATE = (
     re.compile(r"\bOptional destination for a human-readable diagnostic\."),
     re.compile(r"\bPath of the input or output file\."),
     re.compile(r"\bWhether the corresponding feature is enabled\."),
+    re.compile(r"\bFinite numeric value used by the operation\."),
+    re.compile(r"\bAngle value expressed in (?:radians|degrees)\."),
 )
 
 REQUIRED_CONTRACTS: dict[str, tuple[str, ...]] = {
@@ -69,11 +85,13 @@ REQUIRED_CONTRACTS: dict[str, tuple[str, ...]] = {
 }
 
 
-def production_sources(root: Path) -> list[Path]:
-    """Return maintained C++ sources whose Doxygen prose is reviewed."""
+def reviewed_sources(root: Path) -> list[Path]:
+    """Return production sources and reusable test support whose prose is reviewed."""
     files = [*root.joinpath("src").rglob("*.h"), *root.joinpath("src").rglob("*.cpp")]
     files.extend(root.joinpath("tools", "map_asset").rglob("*.h"))
     files.extend(root.joinpath("tools", "map_asset").rglob("*.cpp"))
+    files.extend(root.joinpath("tests", "support").rglob("*.h"))
+    files.extend(root.joinpath("tests", "support").rglob("*.cpp"))
     return sorted(files)
 
 
@@ -82,7 +100,7 @@ def main() -> int:
     failures: list[str] = []
     block_count = 0
 
-    for source in production_sources(root):
+    for source in reviewed_sources(root):
         text = source.read_text(encoding="utf-8")
         for block in DOXYGEN_BLOCK.findall(text):
             block_count += 1

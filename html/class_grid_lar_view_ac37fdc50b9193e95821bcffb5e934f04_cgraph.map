@@ -1,7 +1,0 @@
-<map id="GridLarView::mousePressEvent" name="GridLarView::mousePressEvent">
-<area shape="rect" id="Node000001" title="Performs the mouse press event operation." alt="" coords="5,13,213,38"/>
-<area shape="rect" id="Node000002" href="$class_grid_lar_view.html#aaffd5b3712b0955b71c0f77a58ebf908" title="Performs the begin free movement operation." alt="" coords="261,13,479,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,23,248,26,242,26,213,28"/>
-<area shape="rect" id="Node000003" href="$class_lar_viewport_page_events.html#af90e234fa20dba1671c2afa4f2530e7b" title="Notifies observers about free movement requested." alt="" coords="527,5,702,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="479,23,514,26,509,26,480,28"/>
-</map>

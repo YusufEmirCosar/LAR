@@ -1,5 +1,0 @@
-<map id="dlz::DlzSolveResult::operator bool" name="dlz::DlzSolveResult::operator bool">
-<area shape="rect" id="Node000001" title="Reports whether this result contains a valid solution." alt="" coords="5,5,143,46"/>
-<area shape="rect" id="Node000002" href="$structdlz_1_1_dlz_solve_result.html#a358a649f55ca9881f4d51f729148ecc6" title="Reports whether value is true." alt="" coords="191,5,328,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,23,178,25,172,26,143,28"/>
-</map>

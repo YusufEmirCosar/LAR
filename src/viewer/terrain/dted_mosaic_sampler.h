@@ -22,7 +22,22 @@ struct DtedSurfaceSample final {
     bool water = false;
 };
 
-/** @brief Samples a seamless logical terrain mosaic while loading only addressed tiles. */
+/**
+ * @brief Samples a logical DTED mosaic while loading only addressed tiles.
+ *
+ * Inputs are WGS84 latitude and longitude in radians; elevations and water
+ * depths are metres. Bilinear interpolation ignores DTED void posts and
+ * renormalizes the remaining weights. With a water mask, surface sampling first
+ * interpolates posts matching the classification at the requested coordinate;
+ * if none contribute, it falls back to all valid terrain posts. Water is
+ * rendered at zero elevation while a negative source elevation is retained as
+ * non-negative depth.
+ *
+ * Terrain cells are evicted least-recently-used when either the configured tile
+ * count or byte budget is exceeded; the currently addressed tile is retained
+ * when it alone exceeds the byte budget. Water-mask cells use the same access
+ * order and tile-count budget.
+ */
 class DtedMosaicSampler final {
   public:
     static constexpr std::size_t DefaultCacheByteCapacity = 128U * 1024U * 1024U;
@@ -33,9 +48,10 @@ class DtedMosaicSampler final {
                       std::size_t cacheCapacity = 24U,
                       std::size_t cacheByteCapacity = DefaultCacheByteCapacity);
 
+    /** Returns interpolated terrain elevation, or no value when no valid post contributes. */
     [[nodiscard]] std::optional<double> sampleRadians(double latitudeRadians,
                                                       double longitudeRadians);
-    /** @brief Samples a sea-level water surface while retaining source depth for coloring. */
+    /** Samples a sea-level water surface while retaining source depth for coloring. */
     [[nodiscard]] std::optional<DtedSurfaceSample> sampleSurfaceRadians(double latitudeRadians,
                                                                         double longitudeRadians);
     [[nodiscard]] const QString &lastError() const noexcept {

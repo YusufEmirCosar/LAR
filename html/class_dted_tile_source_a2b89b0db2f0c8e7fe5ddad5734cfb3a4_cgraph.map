@@ -1,9 +1,0 @@
-<map id="DtedTileSource::load" name="DtedTileSource::load">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,149,80"/>
-<area shape="rect" id="Node000002" href="$class_dted_tile_source.html#a282f77684ceeb7f03c99a465812ddad7" title=" " alt="" coords="199,5,362,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,52,212,34,208,37,134,57"/>
-<area shape="rect" id="Node000003" href="$class_dted_cell_reader.html#a17a1f01a3671a82cddfd3f0d511c7058" title="Parses a DTED0 file and verifies its declared dimensions and profile checksums." alt="" coords="197,55,365,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,65,184,67,178,68,150,70"/>
-<area shape="rect" id="Node000004" href="$struct_dted_cell_read_result.html#a812fc45e0db265cc5fceb081bf1b7478" title=" " alt="" coords="210,104,352,145"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="126,78,198,100,193,102,125,84"/>
-</map>

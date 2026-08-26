@@ -1,5 +1,0 @@
-<map id="ISessionSnapshot::writeTo" name="ISessionSnapshot::writeTo">
-<area shape="rect" id="Node000001" title="Writes exactly this immutable snapshot to an already&#45;open device." alt="" coords="205,13,382,38"/>
-<area shape="rect" id="Node000002" href="$class_qt_session_persistence.html#a4afb09b85ef1ce47f7f74d39a1b625f0" title="Saves the current operation." alt="" coords="5,5,157,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,26,157,28,157,23,192,25"/>
-</map>

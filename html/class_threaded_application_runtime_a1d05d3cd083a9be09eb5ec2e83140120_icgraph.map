@@ -1,7 +1,0 @@
-<map id="ThreadedApplicationRuntime::onlineStopRequested" name="ThreadedApplicationRuntime::onlineStopRequested">
-<area shape="rect" id="Node000001" title="Notifies observers about online stop requested." alt="" coords="250,39,438,79"/>
-<area shape="rect" id="Node000002" href="$class_threaded_application_runtime.html#a39721cfa59e1c659e89d86c9d6e98747" title="Returns the current stop online." alt="" coords="9,5,198,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,44,198,41,198,36,237,43"/>
-<area shape="rect" id="Node000003" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title="Constructs this object." alt="" coords="5,71,202,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,74,203,81,202,75,237,73"/>
-</map>

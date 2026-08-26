@@ -1,5 +1,0 @@
-<map id="PlaneSceneRenderer::drawAircraft" name="PlaneSceneRenderer::drawAircraft">
-<area shape="rect" id="Node000001" title="Performs the draw aircraft operation." alt="" coords="5,5,150,46"/>
-<area shape="rect" id="Node000002" href="$class_plane_scene_renderer.html#a65ab44234d48b4d77ae4a107b0a64c0f" title="Performs the draw mesh operation." alt="" coords="198,5,342,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,23,185,25,180,26,150,28"/>
-</map>

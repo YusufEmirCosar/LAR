@@ -1,7 +1,0 @@
-<map id="LarViewport::activePageWidget" name="LarViewport::activePageWidget">
-<area shape="rect" id="Node000001" title="Documents the active page widget operation." alt="" coords="5,31,210,56"/>
-<area shape="rect" id="Node000002" href="$class_lar_viewport.html#a87f5ac3cf9e88e1603eb618760909944" title="Documents the active page operation." alt="" coords="261,5,424,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,30,248,28,243,29,211,35"/>
-<area shape="rect" id="Node000003" href="$class_i_lar_viewport_page.html#a5bacb9c4b9fc42c6d3c772a5fca5d2f7" title="Returns the current widget." alt="" coords="258,55,428,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,51,245,57,239,57,210,57"/>
-</map>

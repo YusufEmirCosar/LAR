@@ -1,5 +1,0 @@
-<map id="CommandDispatch" name="CommandDispatch">
-<area shape="rect" id="Node000001" title="Immediate structural acceptance or rejection of a runtime command." alt="" coords="5,102,139,128"/>
-<area shape="rect" id="Node000002" href="$struct_runtime_request_id.html" title="Correlates an accepted command with exactly one typed completion." alt="" coords="7,5,137,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,45,75,102,69,101,70,48"/>
-</map>
