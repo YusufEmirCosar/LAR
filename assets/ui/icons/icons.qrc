@@ -1,0 +1,16 @@
+<RCC>
+  <qresource prefix="/icons">
+    <file alias="folder.png">folder.png</file>
+    <file alias="navigator.png">navigator.png</file>
+    <file alias="reset.png">reset.png</file>
+    <file alias="save.png">save.png</file>
+    <file alias="play.png">play.png</file>
+    <file alias="play-button-empty.png">play-button-empty.png</file>
+    <file alias="pause.png">pause.png</file>
+    <file alias="trash.png">trash.png</file>
+    <file alias="lightning.png">lightning.png</file>
+  </qresource>
+  <qresource prefix="/styles">
+    <file alias="mainwindow.qss">../styles/mainwindow.qss</file>
+  </qresource>
+</RCC>
