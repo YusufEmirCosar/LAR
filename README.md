@@ -48,11 +48,36 @@ command-acceptance/completion contract for deterministic tests. See the
 
 ## Build
 
-Requirements: CMake 3.24+, Qt 6.10.3+ with Core, Concurrent, Gui, Network,
-Widgets, OpenGL, and OpenGLWidgets, OpenGL support, and a C++17 compiler. Test
-builds additionally require Qt Test. Quality and installation checks require
-Python 3. The Unix presets use Ninja; the Windows presets use Visual Studio
-2022 and its x64 MSVC toolchain.
+Requirements on every platform: CMake 3.24+, Qt 6.10.3+ with Core, Concurrent,
+Gui, Network, Widgets, OpenGL, and OpenGLWidgets, an OpenGL-capable system, and
+a C++17 compiler. The Qt kit must match the target platform and architecture.
+Presets with `BUILD_TESTING=ON` additionally require Qt Test. Presets with
+`LAR_ENABLE_QUALITY_TARGETS=ON` require Python 3; this is the default for the
+Unix release/developer/CI presets and for `ci-msvc`, while `windows-release`
+disables both options. The Unix presets use Ninja; the Windows presets use
+Visual Studio 2022 and its x64 MSVC toolchain.
+
+Platform prerequisites:
+
+- Windows: Windows 10 or 11 x64; Visual Studio 2022 or Visual Studio 2022
+  Build Tools with the **Desktop development with C++** workload, MSVC v143,
+  and a Windows 10/11 SDK. Install the Qt `msvc2022_64` kit. A Developer
+  PowerShell or Native Tools command prompt for VS 2022 is recommended. Ninja
+  is not required by the Windows presets.
+- macOS: macOS 15 for the release-certified matrix; Xcode 15 or newer with
+  AppleClang, the macOS SDK, and Command Line Tools. Install a Qt macOS kit
+  matching the machine architecture (`arm64` or `x86_64`) and make Ninja
+  available on `PATH`.
+- Linux: Ubuntu 24.04 for the release-certified matrix, or a Linux system
+  with a supported GCC or Clang C++17 toolchain. Install Ninja, Python 3, the
+  Qt 6.10.3+ Linux development kit, and the system OpenGL plus Qt platform
+  plugin dependencies required by that kit. Install both GCC and Clang when
+  running the `ci-gcc` and `ci-clang` presets.
+
+For the optional full verification targets, also install the tools named by the
+target: `clang-format` for `check-format`, `clang-tidy` for `check-tidy`, and
+Doxygen for `check-docs`. These tools are not needed for the production
+`windows-release` build.
 
 The release-certification matrix is:
 
@@ -370,7 +395,15 @@ above the tile's declared mean-sea-level datum, and the aircraft stays at the
 scene origin while the stable terrain anchor moves underneath it. Tactical
 grid, target, and LAR overlays remain available over the terrain. While a patch
 is loading, a tile is absent, or a cell fails validation, Plane mode retains
-the flat-ground fallback and reports a diagnostic.
+the skybox/aircraft view without drawing a land-colored fallback, and reports a
+diagnostic/status so an unclassified area cannot be mistaken for land.
+
+Terrain vertices are sampled by inverting the same local flat east/north
+projection used by the Plane overlays. When a patch is reused as the aircraft
+moves, its east axis is rescaled for the change in reference latitude before it
+is placed under the aircraft; this keeps a shoreline and its target marker in
+the same geographic position instead of mixing spherical sampling with flat
+rendering coordinates.
 
 Ocean and sea posts are classified by the compact Natural Earth-derived mask.
 Their negative DTED values remain bathymetric depth for a logarithmic

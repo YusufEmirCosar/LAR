@@ -140,9 +140,16 @@ void PlaneSceneRenderer::setTerrainVisible(bool visible) noexcept {
 }
 
 void PlaneSceneRenderer::setTerrainPlacement(const QVector2D &offsetXZ,
+                                             const QVector2D &scaleXZ,
                                              float aircraftAltitudeScene) noexcept {
     m_terrainOffsetXZ = offsetXZ;
+    m_terrainScaleXZ = scaleXZ;
     m_aircraftAltitudeScene = aircraftAltitudeScene;
+}
+
+void PlaneSceneRenderer::setTerrainPlacement(const QVector2D &offsetXZ,
+                                             float aircraftAltitudeScene) noexcept {
+    setTerrainPlacement(offsetXZ, {1.0F, 1.0F}, aircraftAltitudeScene);
 }
 
 bool PlaneSceneRenderer::setSkybox(const CubemapFaces &faces, QString *errorMessage) {
@@ -440,13 +447,18 @@ bool PlaneSceneRenderer::draw(const QMatrix4x4 &view, const QMatrix4x4 &projecti
     drawSkybox(view, projection);
     bool terrainDrawn = false;
     if (m_terrainVisible && m_terrainLayer.hasPatch()) {
-        if (!m_terrainLayer.draw(view, projection, m_terrainOffsetXZ, m_aircraftAltitudeScene,
-                                 errorMessage)) {
+        if (!m_terrainLayer.draw(view, projection, m_terrainOffsetXZ, m_terrainScaleXZ,
+                                 m_aircraftAltitudeScene, errorMessage)) {
             return false;
         }
         terrainDrawn = m_terrainLayer.hasRenderableGeometry();
     }
-    if (m_surfaceVisible || (m_terrainVisible && !terrainDrawn)) {
+    // A terrain-enabled scene must not silently fall back to land-colored flat ground while the
+    // asynchronous patch is loading. That transient surface made a near-shore target appear on
+    // land in one frame and at sea after the patch arrived. Keep the tactical overlays available,
+    // but only draw the flat ground when terrain is not the selected source.
+    const bool drawFlatGround = !m_terrainVisible && !terrainDrawn;
+    if (m_surfaceVisible || drawFlatGround) {
         PlaneSurfaceState surfaceState = m_surfaceState;
         if (terrainDrawn) {
             const std::optional<float> groundHeight =
@@ -455,7 +467,7 @@ bool PlaneSceneRenderer::draw(const QMatrix4x4 &view, const QMatrix4x4 &projecti
                 surfaceState.surfaceHeight = *groundHeight;
             }
         }
-        m_surfaceLayer.draw(surfaceState, view, projection, !terrainDrawn, m_surfaceVisible);
+        m_surfaceLayer.draw(surfaceState, view, projection, drawFlatGround, m_surfaceVisible);
     }
     drawAircraft(view, projection, aircraftAttitude);
     return true;

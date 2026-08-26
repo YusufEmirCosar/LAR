@@ -37,7 +37,7 @@ class PlaneSceneWidget final : public QOpenGLWidget {
     void resetCamera();
     bool selectNextSkybox();
     void setSurfaceVisible(bool visible);
-    /** @brief Enables DTED terrain, retaining flat ground as an unavailable/loading fallback. */
+    /** @brief Enables DTED terrain; loading and unavailable terrain remain visibly unclassified. */
     void setTerrainVisible(bool visible);
 
     /**

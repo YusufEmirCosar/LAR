@@ -254,6 +254,7 @@ class PlaneViewTests final : public QObject {
     void reportsIncompleteAttitudeWithoutUsingStaleAngles();
     void orbitCameraRemainsAnchoredAndBounded();
     void usesF16AsFifteenMeterSurfaceReference();
+    void invertsPlaneProjectionForTerrainSampling();
     void projectsMetricSurfaceZonesAndTarget();
     void keepsGridAnchoredWhileAircraftMoves();
     void widgetRetainsGroundOriginAcrossPackets();
@@ -603,6 +604,35 @@ void PlaneViewTests::usesF16AsFifteenMeterSurfaceReference() {
              PlaneAircraftScale::DefaultMetersPerSceneUnit);
     QCOMPARE(PlaneAircraftScale::metersPerSceneUnit(std::numeric_limits<float>::quiet_NaN()),
              PlaneAircraftScale::DefaultMetersPerSceneUnit);
+}
+
+void PlaneViewTests::invertsPlaneProjectionForTerrainSampling() {
+    constexpr double latitude = 41.0 * M_PI / 180.0;
+    constexpr double longitude = 29.0 * M_PI / 180.0;
+    const double anchor[3]{latitude, longitude, 0.0};
+    for (const QPointF &local : {QPointF{-60'000.0, -60'000.0}, QPointF{60'000.0, -60'000.0},
+                                 QPointF{-60'000.0, 60'000.0}, QPointF{60'000.0, 60'000.0},
+                                 QPointF{0.0, 0.0}}) {
+        const std::optional<GeoCoordinateRadians> coordinate =
+            LarProjection::planeWorldToGeographic(local, anchor, 0.0, latitude, true);
+        QVERIFY(coordinate.has_value());
+        const double position[3]{coordinate->latitude, coordinate->longitude, 0.0};
+        const QPointF roundTrip =
+            LarProjection::geographicToPlaneWorld(position, anchor, 0.0, latitude, true);
+        QVERIFY(std::abs(roundTrip.x() - local.x()) < 1.0e-9);
+        QVERIFY(std::abs(roundTrip.y() - local.y()) < 1.0e-9);
+    }
+
+    const QPointF local{12'345.0, -6'789.0};
+    const std::optional<GeoCoordinateRadians> rotatedCoordinate =
+        LarProjection::planeWorldToGeographic(local, anchor, 0.37, latitude, true);
+    QVERIFY(rotatedCoordinate.has_value());
+    const double rotatedPosition[3]{rotatedCoordinate->latitude, rotatedCoordinate->longitude,
+                                    0.0};
+    const QPointF rotatedRoundTrip =
+        LarProjection::geographicToPlaneWorld(rotatedPosition, anchor, 0.37, latitude, true);
+    QVERIFY(std::abs(rotatedRoundTrip.x() - local.x()) < 1.0e-9);
+    QVERIFY(std::abs(rotatedRoundTrip.y() - local.y()) < 1.0e-9);
 }
 
 void PlaneViewTests::projectsMetricSurfaceZonesAndTarget() {

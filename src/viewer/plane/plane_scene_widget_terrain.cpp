@@ -313,6 +313,7 @@ void PlaneSceneWidget::requestTerrainIfNeeded(bool force) {
     request.revision = ++m_terrainRevision;
     request.latitudeRadians = anchor.latitude;
     request.longitudeRadians = anchor.longitude;
+    request.projectionOriginLatitudeRadians = anchor.latitude;
     request.halfExtentMeters = halfExtent;
     request.metersPerSceneUnit = scale;
     request.resolution = terrainResolution(halfExtent, m_terrainDataset.level);
@@ -329,13 +330,20 @@ void PlaneSceneWidget::updateTerrainPlacement() {
         !fieldAvailable(m_scene.availableFields, StateField::Location0) ||
         !fieldAvailable(m_scene.availableFields, StateField::Location1) ||
         !validGroundPosition(m_scene.plane.location[0], m_scene.plane.location[1])) {
-        m_renderer.setTerrainPlacement({}, 0.0F);
+        m_renderer.setTerrainPlacement({}, {1.0F, 1.0F}, 0.0F);
         return;
     }
     const double anchorPosition[3]{m_terrainPatch->anchorLatitudeRadians,
                                    m_terrainPatch->anchorLongitudeRadians, 0.0};
     const QPointF eastNorth = LarProjection::geographicToPlaneWorld(
         anchorPosition, m_scene.plane.location, 0.0, m_scene.plane.location[0], true);
+    const double patchLatitude =
+        std::isfinite(m_terrainPatch->projectionOriginLatitudeRadians)
+            ? m_terrainPatch->projectionOriginLatitudeRadians
+            : m_terrainPatch->anchorLatitudeRadians;
+    const double currentCosineLatitude =
+        std::max(0.01, std::cos(m_scene.plane.location[0]));
+    const double patchCosineLatitude = std::max(0.01, std::cos(patchLatitude));
     const double scale = m_terrainPatch->metersPerSceneUnit;
     double altitudeMeters = m_terrainPatch->centerElevationMeters -
                             static_cast<double>(m_surfaceState.surfaceHeight) * scale;
@@ -345,6 +353,7 @@ void PlaneSceneWidget::updateTerrainPlacement() {
     }
     m_renderer.setTerrainPlacement(
         {static_cast<float>(eastNorth.x() / scale), static_cast<float>(-eastNorth.y() / scale)},
+        {static_cast<float>(currentCosineLatitude / patchCosineLatitude), 1.0F},
         static_cast<float>(altitudeMeters / scale));
 }
 

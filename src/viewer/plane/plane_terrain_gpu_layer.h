@@ -29,6 +29,11 @@ class PlaneTerrainGpuLayer final : protected QOpenGLFunctions {
     void setPatch(PlaneTerrainPatchPtr patch) noexcept;
     [[nodiscard]] bool initialize(QString *errorMessage = nullptr);
     [[nodiscard]] bool draw(const QMatrix4x4 &view, const QMatrix4x4 &projection,
+                            const QVector2D &offsetXZ, const QVector2D &scaleXZ,
+                            float aircraftAltitudeScene,
+                            QString *errorMessage = nullptr);
+    /** @brief Draws an unscaled terrain anchor (compatibility overload). */
+    [[nodiscard]] bool draw(const QMatrix4x4 &view, const QMatrix4x4 &projection,
                             const QVector2D &offsetXZ, float aircraftAltitudeScene,
                             QString *errorMessage = nullptr);
     void cleanup() noexcept;

@@ -12,6 +12,7 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <limits>
 #include <memory>
 #include <vector>
 
@@ -23,6 +24,8 @@ struct PlaneTerrainBuildRequest final {
     quint64 revision = 0;
     double latitudeRadians = 0.0;
     double longitudeRadians = 0.0;
+    // NaN means use the request latitude (for standalone builders and old callers).
+    double projectionOriginLatitudeRadians = std::numeric_limits<double>::quiet_NaN();
     double halfExtentMeters = 0.0;
     double metersPerSceneUnit = 1.0;
     int resolution = 0;
@@ -34,6 +37,9 @@ struct PlaneTerrainPatch final {
     std::vector<std::uint32_t> indices;
     double anchorLatitudeRadians = 0.0;
     double anchorLongitudeRadians = 0.0;
+    // All local east/north coordinates use this fixed latitude scale. Keeping it stable while
+    // the aircraft moves makes patch translation algebraically match PlaneSurfaceProjection.
+    double projectionOriginLatitudeRadians = std::numeric_limits<double>::quiet_NaN();
     double halfExtentMeters = 0.0;
     double metersPerSceneUnit = 1.0;
     double minimumElevationMeters = 0.0;

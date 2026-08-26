@@ -150,7 +150,8 @@ bool PlaneTerrainGpuLayer::uploadPending(QString *errorMessage) {
 }
 
 bool PlaneTerrainGpuLayer::draw(const QMatrix4x4 &view, const QMatrix4x4 &projection,
-                                const QVector2D &offsetXZ, float aircraftAltitudeScene,
+                                const QVector2D &offsetXZ, const QVector2D &scaleXZ,
+                                float aircraftAltitudeScene,
                                 QString *errorMessage) {
     if (!m_ready) {
         setError(errorMessage, QStringLiteral("Plane terrain GPU resources are not ready."));
@@ -166,6 +167,7 @@ bool PlaneTerrainGpuLayer::draw(const QMatrix4x4 &view, const QMatrix4x4 &projec
     m_program->setUniformValue("uView", view);
     m_program->setUniformValue("uProjection", projection);
     m_program->setUniformValue("uOffsetXZ", offsetXZ);
+    m_program->setUniformValue("uHorizontalScale", scaleXZ);
     m_program->setUniformValue("uAircraftAltitudeScene", aircraftAltitudeScene);
     m_program->setUniformValue("uMetersPerSceneUnit",
                                static_cast<float>(m_patch->metersPerSceneUnit));
@@ -183,6 +185,12 @@ bool PlaneTerrainGpuLayer::draw(const QMatrix4x4 &view, const QMatrix4x4 &projec
     glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(m_indexCount), GL_UNSIGNED_INT, nullptr);
     m_program->release();
     return true;
+}
+
+bool PlaneTerrainGpuLayer::draw(const QMatrix4x4 &view, const QMatrix4x4 &projection,
+                                const QVector2D &offsetXZ, float aircraftAltitudeScene,
+                                QString *errorMessage) {
+    return draw(view, projection, offsetXZ, {1.0F, 1.0F}, aircraftAltitudeScene, errorMessage);
 }
 
 std::optional<float>

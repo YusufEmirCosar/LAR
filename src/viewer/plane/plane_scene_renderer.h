@@ -36,9 +36,12 @@ class PlaneSceneRenderer final : protected QOpenGLFunctions {
     void setSurfaceVisible(bool visible) noexcept;
     /** @brief Sets the immutable terrain snapshot uploaded on the next paint pass. */
     void setTerrainPatch(PlaneTerrainPatchPtr patch) noexcept;
-    /** @brief Shows DTED terrain, using the existing flat ground until a patch is ready. */
+    /** @brief Shows DTED terrain; no land-colored fallback is drawn while a patch is loading. */
     void setTerrainVisible(bool visible) noexcept;
-    /** @brief Positions the stable terrain anchor relative to the current aircraft. */
+    /** @brief Positions and scales the stable terrain anchor relative to the current aircraft. */
+    void setTerrainPlacement(const QVector2D &offsetXZ, const QVector2D &scaleXZ,
+                             float aircraftAltitudeScene) noexcept;
+    /** @brief Positions an unscaled terrain anchor (compatibility overload). */
     void setTerrainPlacement(const QVector2D &offsetXZ, float aircraftAltitudeScene) noexcept;
 
     bool initialize(QString *errorMessage = nullptr);
@@ -91,6 +94,7 @@ class PlaneSceneRenderer final : protected QOpenGLFunctions {
     std::shared_ptr<const PlaneModelMesh> m_model;
     PlaneSurfaceState m_surfaceState;
     QVector2D m_terrainOffsetXZ;
+    QVector2D m_terrainScaleXZ{1.0F, 1.0F};
     float m_aircraftAltitudeScene = 0.0F;
     CubemapFaces m_pendingSkybox;
     bool m_modelPending = false;

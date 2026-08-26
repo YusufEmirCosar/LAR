@@ -1,11 +1,11 @@
 #include "viewer/plane/plane_terrain_patch_builder.h"
 
-#include "viewer/lar_geodesic_geometry.h"
 #include "viewer/lar_projection.h"
 
 #include <algorithm>
 #include <cmath>
 #include <limits>
+#include <optional>
 #include <utility>
 
 namespace {
@@ -23,6 +23,11 @@ void setError(QString *destination, const QString &message) {
 
 bool validRequest(const PlaneTerrainBuildRequest &request) noexcept {
     constexpr double HalfPi = LarProjection::Pi * 0.5;
+    const bool validProjectionOrigin =
+        std::isnan(request.projectionOriginLatitudeRadians) ||
+        (std::isfinite(request.projectionOriginLatitudeRadians) &&
+         request.projectionOriginLatitudeRadians >= -HalfPi &&
+         request.projectionOriginLatitudeRadians <= HalfPi);
     return std::isfinite(request.latitudeRadians) && request.latitudeRadians >= -HalfPi &&
            request.latitudeRadians <= HalfPi && std::isfinite(request.longitudeRadians) &&
            request.longitudeRadians >= -LarProjection::Pi &&
@@ -30,6 +35,7 @@ bool validRequest(const PlaneTerrainBuildRequest &request) noexcept {
            std::isfinite(request.halfExtentMeters) &&
            request.halfExtentMeters >= MinimumHalfExtentMeters &&
            request.halfExtentMeters <= MaximumHalfExtentMeters &&
+           validProjectionOrigin &&
            std::isfinite(request.metersPerSceneUnit) && request.metersPerSceneUnit > 0.0 &&
            request.resolution >= MinimumResolution && request.resolution <= MaximumResolution;
 }
@@ -67,7 +73,11 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
     std::vector<unsigned char> water(sampleCount, 0U);
     const double sampleSpacing =
         request.halfExtentMeters * 2.0 / static_cast<double>(resolution - 1);
-    const GeoCoordinateRadians anchor{request.latitudeRadians, request.longitudeRadians};
+    const double anchorPosition[3]{request.latitudeRadians, request.longitudeRadians, 0.0};
+    const double projectionOriginLatitude =
+        std::isfinite(request.projectionOriginLatitudeRadians)
+            ? request.projectionOriginLatitudeRadians
+            : request.latitudeRadians;
 
     double minimumElevation = std::numeric_limits<double>::infinity();
     double maximumElevation = -std::numeric_limits<double>::infinity();
@@ -82,14 +92,19 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
         const double northMeters = -request.halfExtentMeters + sampleSpacing * row;
         for (int column = 0; column < resolution; ++column) {
             const double eastMeters = -request.halfExtentMeters + sampleSpacing * column;
-            const double distanceMeters = std::hypot(eastMeters, northMeters);
-            const double bearingRadians = std::atan2(eastMeters, northMeters);
-            const GeoCoordinateRadians coordinate =
-                distanceMeters > 0.0
-                    ? LarGeodesicGeometry::destination(anchor, distanceMeters, bearingRadians)
-                    : anchor;
+            // The Plane surface, target marker, and LAR rings all use this local flat metric.
+            // Sampling with a spherical destination while retaining east/north vertex coordinates
+            // shifts terrain against those overlays (up to hundreds of metres at patch corners).
+            // Invert the exact renderer projection so the DTED classification belongs to the
+            // geographic point represented by this vertex.
+            const std::optional<GeoCoordinateRadians> coordinate =
+                LarProjection::planeWorldToGeographic({eastMeters, northMeters}, anchorPosition,
+                                                      0.0, projectionOriginLatitude, true);
+            if (!coordinate) {
+                continue;
+            }
             const std::optional<DtedSurfaceSample> surface =
-                m_sampler.sampleSurfaceRadians(coordinate.latitude, coordinate.longitude);
+                m_sampler.sampleSurfaceRadians(coordinate->latitude, coordinate->longitude);
             const std::size_t index = vertexIndex(row, column, resolution);
             if (!surface || !std::isfinite(surface->elevationMeters) ||
                 !std::isfinite(surface->waterDepthMeters)) {
@@ -122,6 +137,7 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
     auto patch = std::make_shared<PlaneTerrainPatch>();
     patch->anchorLatitudeRadians = request.latitudeRadians;
     patch->anchorLongitudeRadians = request.longitudeRadians;
+    patch->projectionOriginLatitudeRadians = projectionOriginLatitude;
     patch->halfExtentMeters = request.halfExtentMeters;
     patch->metersPerSceneUnit = request.metersPerSceneUnit;
     patch->minimumElevationMeters = minimumElevation;

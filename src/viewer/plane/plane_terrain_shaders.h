@@ -11,6 +11,7 @@ attribute vec2 aWater;
 uniform mat4 uView;
 uniform mat4 uProjection;
 uniform vec2 uOffsetXZ;
+uniform vec2 uHorizontalScale;
 uniform float uAircraftAltitudeScene;
 uniform float uMetersPerSceneUnit;
 varying vec3 vNormal;
@@ -18,9 +19,9 @@ varying float vElevationMeters;
 varying float vWaterMask;
 varying float vWaterDepthMeters;
 void main() {
-    vec3 worldPosition = vec3(aPosition.x + uOffsetXZ.x,
+    vec3 worldPosition = vec3(aPosition.x * uHorizontalScale.x + uOffsetXZ.x,
                               aPosition.y - uAircraftAltitudeScene,
-                              aPosition.z + uOffsetXZ.y);
+                              aPosition.z * uHorizontalScale.y + uOffsetXZ.y);
     vNormal = aNormal;
     vElevationMeters = aPosition.y * uMetersPerSceneUnit;
     vWaterMask = aWater.x;
@@ -66,6 +67,7 @@ in vec2 aWater;
 uniform mat4 uView;
 uniform mat4 uProjection;
 uniform vec2 uOffsetXZ;
+uniform vec2 uHorizontalScale;
 uniform float uAircraftAltitudeScene;
 uniform float uMetersPerSceneUnit;
 out vec3 vNormal;
@@ -73,9 +75,9 @@ out float vElevationMeters;
 out float vWaterMask;
 out float vWaterDepthMeters;
 void main() {
-    vec3 worldPosition = vec3(aPosition.x + uOffsetXZ.x,
+    vec3 worldPosition = vec3(aPosition.x * uHorizontalScale.x + uOffsetXZ.x,
                               aPosition.y - uAircraftAltitudeScene,
-                              aPosition.z + uOffsetXZ.y);
+                              aPosition.z * uHorizontalScale.y + uOffsetXZ.y);
     vNormal = aNormal;
     vElevationMeters = aPosition.y * uMetersPerSceneUnit;
     vWaterMask = aWater.x;
