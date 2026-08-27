@@ -1,0 +1,17 @@
+<map id="dtedFileSuffix" name="dtedFileSuffix">
+<area shape="rect" id="Node000001" title=" " alt="" coords="841,117,942,142"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="921,101,911,98,891,95,872,97,862,102,860,108,865,118,861,115,855,108,859,99,871,92,891,90,913,93,926,102"/>
+<area shape="rect" id="Node000002" href="$class_dted_tile_source.html#a282f77684ceeb7f03c99a465812ddad7" title=" " alt="" coords="629,92,793,117"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="823,120,793,119,793,113,828,121"/>
+<area shape="rect" id="Node000015" href="$namespaceanonymous__namespace_02plane__scene__widget__terrain_8cpp_03.html#a43699095805e832b356d470d93e4f1ae" title=" " alt="" coords="201,94,390,165"/>
+<area shape="poly" id="edge9_Node000001_Node000015" title=" " alt="" coords="825,132,390,132,390,127,827,127"/>
+<area shape="rect" id="Node000003" href="$class_dted_tile_source.html#a2b89b0db2f0c8e7fe5ddad5734cfb3a4" title=" " alt="" coords="438,41,581,66"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="640,87,563,70,564,64,645,87"/>
+<area shape="poly" id="edge8_Node000002_Node000015" title=" " alt="" coords="611,111,391,127,390,121,616,110"/>
+<area shape="rect" id="Node000004" href="$class_dted_mosaic_sampler.html#a44929b88aa05b416734a507b31424551" title=" " alt="" coords="222,5,369,46"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="420,43,370,38,369,33,426,42"/>
+<area shape="poly" id="edge6_Node000003_Node000015" title=" " alt="" coords="460,71,391,99,390,93,454,73"/>
+<area shape="rect" id="Node000005" href="$class_dted_mosaic_sampler.html#a6846daac445cde1ec6c433644309a5bd" title=" " alt="" coords="5,5,153,46"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="204,27,154,28,153,23,208,24"/>
+<area shape="poly" id="edge7_Node000015_Node000015" title=" " alt="" coords="327,80,315,75,295,73,278,75,266,79,260,86,257,96,253,92,255,83,263,75,277,70,295,68,317,70,332,80"/>
+</map>

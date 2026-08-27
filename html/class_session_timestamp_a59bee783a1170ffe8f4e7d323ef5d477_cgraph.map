@@ -1,0 +1,5 @@
+<map id="SessionTimestamp::fromNanoseconds" name="SessionTimestamp::fromNanoseconds">
+<area shape="rect" id="Node000001" title="Converts monotonic nanoseconds using nearest&#45;millisecond rounding." alt="" coords="5,13,253,38"/>
+<area shape="rect" id="Node000002" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="301,5,489,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,23,288,26,282,26,253,28"/>
+</map>

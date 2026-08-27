@@ -1,0 +1,9 @@
+<map id="IPlaybackClock" name="IPlaybackClock">
+<area shape="rect" id="Node000001" title="Emits playback ticks at the frame rate selected by replay policy." alt="" coords="123,39,236,64"/>
+<area shape="rect" id="Node000003" href="$class_qt_playback_clock.html" title="Precise Qt timer that supplies fixed&#45;rate playback ticks." alt="" coords="323,5,446,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="251,37,325,28,320,29,252,42"/>
+<area shape="rect" id="Node000004" href="$classanonymous__namespace_02playback__runtime__worker_8cpp_03_1_1_inert_playback_clock.html" title=" " alt="" coords="284,56,485,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="252,60,286,68,281,68,251,65"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,39,75,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,49,125,50,120,53,91,54"/>
+</map>

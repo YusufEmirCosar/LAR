@@ -1,0 +1,8 @@
+<map id="dlz::presentation::ControlPanel::inputsChanged" name="dlz::presentation::ControlPanel::inputsChanged">
+<area shape="rect" id="Node000001" title=" " alt="" coords="488,35,679,75"/>
+<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_control_panel.html#ad2c9070616837a5a5e9fe9f492655e5e" title=" " alt="" coords="261,5,440,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="470,41,440,40,441,34,475,41"/>
+<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_workspace.html#aec685012fec2dfb24231b60b8836444b" title=" " alt="" coords="5,35,213,75"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="469,57,440,60,261,60,213,60,213,54,261,55,440,55,475,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="243,39,213,45,213,40,248,38"/>
+</map>

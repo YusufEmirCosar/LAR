@@ -1,0 +1,38 @@
+<map id="src/viewer/plane/plane_terrain_patch.h" name="src/viewer/plane/plane_terrain_patch.h">
+<area shape="rect" id="Node000001" title="Immutable CPU terrain mesh and bounded build request for Plane mode." alt="" coords="545,5,697,46"/>
+<area shape="rect" id="Node000002" href="$plane__land__mask_8h.html" title="Adaptive local land coverage derived from the packaged world&#45;map triangles." alt="" coords="144,94,274,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="543,45,290,99,288,94,547,41"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="265,345,329,371"/>
+<area shape="poly" id="edge18_Node000001_Node000005" title=" " alt="" coords="621,44,616,97,599,165,586,201,569,237,548,270,521,299,496,310,451,324,345,349,344,344,450,318,495,305,518,295,544,267,565,234,581,199,594,164,610,96,618,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="371,345,431,371"/>
+<area shape="poly" id="edge19_Node000001_Node000006" title=" " alt="" coords="624,44,627,96,621,163,614,199,603,234,587,268,566,299,540,321,509,337,477,348,447,354,446,349,476,343,507,332,537,317,562,295,583,266,598,232,609,197,616,162,621,96,621,49"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="104,345,162,371"/>
+<area shape="poly" id="edge22_Node000001_Node000007" title=" " alt="" coords="543,27,459,32,354,42,241,62,186,78,133,96,80,119,36,144,20,160,11,177,8,198,14,222,32,256,56,287,106,334,102,336,52,290,28,259,9,224,3,198,6,176,16,156,32,140,77,114,131,92,184,72,240,57,353,37,458,26,548,25"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="439,271,507,297"/>
+<area shape="poly" id="edge21_Node000001_Node000008" title=" " alt="" coords="612,46,489,260,485,256,607,48"/>
+<area shape="rect" id="Node000010" href="$dted__level_8h.html" title="Shared DTED level metadata and external terrain&#45;source configuration." alt="" coords="709,94,837,135"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="656,44,729,86,723,86,655,49"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="658,190,747,216"/>
+<area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="631,44,693,176,688,175,629,49"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="867,190,932,216"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="697,31,736,38,776,51,816,68,851,92,868,110,881,132,896,176,891,174,876,134,863,114,847,96,813,73,775,56,735,44,698,36"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="912,102,965,127"/>
+<area shape="poly" id="edge20_Node000001_Node000014" title=" " alt="" coords="697,40,792,62,894,91,900,96,895,96,892,97,791,67,697,45"/>
+<area shape="rect" id="Node000003" href="$map__land__index_8h.html" title="Bounded geographic queries over the packaged world&#45;map fill triangles." alt="" coords="206,183,354,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="226,133,257,170,252,171,225,138"/>
+<area shape="poly" id="edge11_Node000002_Node000007" title=" " alt="" coords="205,134,162,272,144,332,139,329,157,271,200,137"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="24,190,101,216"/>
+<area shape="poly" id="edge10_Node000002_Node000009" title=" " alt="" coords="174,137,98,184,94,180,177,133"/>
+<area shape="rect" id="Node000004" href="$map__mesh_8h.html" title="CPU&#45;side vertex/index representation shared by tools and renderer." alt="" coords="196,271,363,297"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="281,222,282,257,277,254,278,226"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="320,221,351,242,378,270,393,299,400,331,395,328,388,301,374,273,348,246,319,227"/>
+<area shape="poly" id="edge9_Node000003_Node000007" title=" " alt="" coords="247,222,215,247,186,273,164,303,147,333,143,329,159,300,182,270,212,243,242,225"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="328,221,432,265,427,266,328,227"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="284,295,293,331,288,329,281,299"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="301,295,370,337,365,337,300,300"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="258,297,173,340,171,335,252,298"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="759,134,723,180,720,176,755,137"/>
+<area shape="poly" id="edge14_Node000010_Node000012" title=" " alt="" coords="802,133,872,182,867,181,801,138"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="770,190,843,216"/>
+<area shape="poly" id="edge15_Node000010_Node000013" title=" " alt="" coords="782,133,799,177,794,175,779,138"/>
+</map>

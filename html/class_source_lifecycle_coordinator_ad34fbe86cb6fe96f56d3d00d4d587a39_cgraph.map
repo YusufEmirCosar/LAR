@@ -1,0 +1,9 @@
+<map id="SourceLifecycleCoordinator::setState" name="SourceLifecycleCoordinator::setState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,187,75"/>
+<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#af8c4c5b43ccda3fdf84ed7b6931094bf" title=" " alt="" coords="235,5,416,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,41,222,39,217,40,187,46"/>
+<area shape="rect" id="Node000003" href="$class_source_lifecycle_coordinator.html#aa255c75c16a3452923516e76766ae9c9" title=" " alt="" coords="464,35,645,75"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="187,54,235,55,416,55,451,57,446,57,416,60,235,60,187,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="416,35,451,41,446,41,416,40"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="512,32,509,25,516,16,532,10,555,8,579,10,596,19,590,19,578,16,555,13,533,15,520,20,515,26,516,36"/>
+</map>

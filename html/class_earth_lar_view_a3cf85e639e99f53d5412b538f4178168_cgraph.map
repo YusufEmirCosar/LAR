@@ -1,0 +1,39 @@
+<map id="EarthLarView::rotateSphere" name="EarthLarView::rotateSphere">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,181,187,206"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_earth_map_widget.html#ad44b3df473ce262b16725aa5bcc82ecc" title=" " alt="" coords="248,13,421,54"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,179,160,129,195,99,233,73,263,59,259,62,236,77,199,104,164,133,112,182"/>
+<area shape="rect" id="Node000004" href="$class_earth_lar_view.html#a06afbcf99381269bfad19f5a49b0a397" title=" " alt="" coords="242,87,427,127"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="128,178,234,137,255,131,250,134,236,141,131,183"/>
+<area shape="rect" id="Node000011" href="$class_earth_lar_view.html#ab9d964f4773a72905409c4040414aedb" title=" " alt="" coords="235,152,434,177"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="186,180,221,177,217,180,188,185"/>
+<area shape="rect" id="Node000012" href="$classlar_1_1map_1_1_earth_map_widget.html#a25c7c9d02d43b6f20795c4c921c2df8a" title=" " alt="" coords="248,201,421,242"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="186,202,235,209,230,211,188,207"/>
+<area shape="rect" id="Node000014" href="$classlar_1_1map_1_1_earth_map_widget.html#abbd4908aee727f405614ca12891ca3c0" title="Centers the spherical presentation on a geographic coordinate in degrees." alt="" coords="248,267,421,307"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="126,204,236,251,257,261,252,262,234,256,126,210"/>
+<area shape="rect" id="Node000018" href="$classlar_1_1map_1_1_map_projection.html#ae51b77201c9b343a098d386577f31c0c" title=" " alt="" coords="732,360,892,401"/>
+<area shape="poly" id="edge19_Node000001_Node000018" title=" " alt="" coords="108,204,160,259,196,290,236,317,295,344,358,364,423,378,488,387,612,393,714,391,719,391,612,399,488,393,422,384,357,369,293,349,233,321,193,295,157,263,107,209"/>
+<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_map_camera.html#af1180ca3e71cd054c36d62bc35755d68" title=" " alt="" coords="506,5,653,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="421,28,493,27,488,30,422,33"/>
+<area shape="rect" id="Node000005" href="$class_earth_overlay_coordinator.html#a21299d7ff2250ab203ea6e9db1765334" title=" " alt="" coords="498,71,662,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="427,98,485,96,480,98,428,104"/>
+<area shape="rect" id="Node000006" href="$class_earth_lar_view.html#a07f6e850546cab4c80f9cda34444f565" title=" " alt="" coords="482,136,677,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="427,123,469,133,464,134,428,128"/>
+<area shape="rect" id="Node000007" href="$classlar_1_1map_1_1_earth_map_widget.html#a59f43f7b7adc4e0aab4cd7467709479f" title=" " alt="" coords="725,80,899,121"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="666,133,712,124,707,126,667,138"/>
+<area shape="rect" id="Node000008" href="$class_earth_overlay_coordinator.html#aedf8cc2051f858c3b4f1b1dd7701d978" title=" " alt="" coords="730,169,894,210"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="678,168,717,175,712,176,678,173"/>
+<area shape="poly" id="edge8_Node000008_Node000008" title=" " alt="" coords="770,167,768,159,775,150,789,145,812,143,836,145,852,154,847,154,835,150,812,148,791,150,778,155,773,161,775,170"/>
+<area shape="rect" id="Node000009" href="$class_viewport_preparation_worker.html#a94eb1c1152292149a523977b8b19489b" title=" " alt="" coords="947,169,1126,210"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="894,187,934,189,928,190,895,192"/>
+<area shape="rect" id="Node000013" href="$classlar_1_1map_1_1_map_camera.html#a60419fa91a41c629757c2a3a4cf9ac74" title="Returns (longitude, latitude) in geographic degrees." alt="" coords="506,201,653,242"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="421,219,493,221,488,222,422,224"/>
+<area shape="rect" id="Node000015" href="$classlar_1_1map_1_1_earth_map_widget.html#a86b09d5aed7447ce3fc3c81f1bd44560" title=" " alt="" coords="493,267,666,307"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="421,284,480,287,475,287,422,290"/>
+<area shape="rect" id="Node000017" href="$classlar_1_1map_1_1_map_camera.html#a77395219a86be47b2fe891af4be700ce" title=" " alt="" coords="506,332,653,373"/>
+<area shape="poly" id="edge16_Node000014_Node000017" title=" " alt="" coords="414,305,494,329,488,329,413,311"/>
+<area shape="rect" id="Node000016" href="$classlar_1_1map_1_1_map_camera.html#af281b7b5f7a8ede8b9dac8bc355e3b72" title=" " alt="" coords="738,267,886,307"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="666,284,725,287,720,287,667,290"/>
+<area shape="poly" id="edge17_Node000017_Node000018" title=" " alt="" coords="654,359,719,369,714,369,654,364"/>
+<area shape="rect" id="Node000019" href="$classlar_1_1map_1_1_map_projection.html#a07314ffecd55c0529f331a1aa41a8107" title=" " alt="" coords="957,360,1116,401"/>
+<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="892,378,943,380,938,380,892,383"/>
+</map>

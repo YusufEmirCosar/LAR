@@ -38,11 +38,10 @@ bool validPlanePosition(double latitude, double longitude) noexcept {
            longitude <= LarGeodesicGeometry::Pi;
 }
 
-QPointF planeWorldFor(const GeoCoordinateRadians &coordinate,
-                      const Plane &plane) noexcept {
+QPointF planeWorldFor(const GeoCoordinateRadians &coordinate, const Plane &plane) noexcept {
     const double position[3]{coordinate.latitude, coordinate.longitude, 0.0};
-    return LarProjection::geographicToPlaneWorld(position, plane.location, 0.0,
-                                                  plane.location[0], true);
+    return LarProjection::geographicToPlaneWorld(position, plane.location, 0.0, plane.location[0],
+                                                 true);
 }
 
 bool contains(const LarZoneDefinition &zone, const QPointF &zoneCenterOffset) noexcept {
@@ -83,9 +82,9 @@ PlaneZoneStatus planeZoneStatus(const ApplicationViewModel &viewModel) noexcept 
         contains(*validation.inZone, planeWorldFor(validation.inZone->center, viewModel.plane()))) {
         return PlaneZoneStatus::InZone;
     }
-    if (validation.inRange && contains(*validation.inRange,
-                                        planeWorldFor(validation.inRange->center,
-                                                      viewModel.plane()))) {
+    if (validation.inRange &&
+        contains(*validation.inRange,
+                 planeWorldFor(validation.inRange->center, viewModel.plane()))) {
         return PlaneZoneStatus::InRange;
     }
     return PlaneZoneStatus::Outside;

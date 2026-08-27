@@ -1,0 +1,9 @@
+<map id="GeodesicZoneSampleGrid" name="GeodesicZoneSampleGrid">
+<area shape="rect" id="Node000001" title="Deterministic geographic sample grid for one validated zone." alt="" coords="35,234,209,260"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,110,151,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,148,120,233,115,234,86,152"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="175,102,357,143"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="237,153,173,212,141,236,138,231,170,208,232,155"/>
+<area shape="rect" id="Node000004" href="$struct_geo_coordinate_radians.html" title="Latitude/longitude pair expressed in radians." alt="" coords="188,5,344,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="268,44,268,103,264,101,264,49"/>
+</map>

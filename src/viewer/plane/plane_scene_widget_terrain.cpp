@@ -313,12 +313,10 @@ void PlaneSceneWidget::updateTerrainPlacement() {
                                    m_terrainPatch->anchorLongitudeRadians, 0.0};
     const QPointF eastNorth = LarProjection::geographicToPlaneWorld(
         anchorPosition, m_scene.plane.location, 0.0, m_scene.plane.location[0], true);
-    const double patchLatitude =
-        std::isfinite(m_terrainPatch->projectionOriginLatitudeRadians)
-            ? m_terrainPatch->projectionOriginLatitudeRadians
-            : m_terrainPatch->anchorLatitudeRadians;
-    const double currentCosineLatitude =
-        std::max(0.01, std::cos(m_scene.plane.location[0]));
+    const double patchLatitude = std::isfinite(m_terrainPatch->projectionOriginLatitudeRadians)
+                                     ? m_terrainPatch->projectionOriginLatitudeRadians
+                                     : m_terrainPatch->anchorLatitudeRadians;
+    const double currentCosineLatitude = std::max(0.01, std::cos(m_scene.plane.location[0]));
     const double patchCosineLatitude = std::max(0.01, std::cos(patchLatitude));
     const double scale = m_terrainPatch->metersPerSceneUnit;
     double altitudeMeters = m_terrainPatch->centerElevationMeters -
@@ -353,9 +351,10 @@ void PlaneSceneWidget::completeTerrainPatch(quint64 revision, PlaneTerrainPatchP
         m_renderer.setTerrainPatch(nullptr);
         m_failedTerrainAnchor = m_terrainRequestAnchor;
         m_failedTerrainHalfExtent = m_pendingTerrainHalfExtent;
-        setDiagnostic(message.isEmpty()
-                          ? QStringLiteral("DTED terrain is unavailable here; using flat ground.")
-                          : QStringLiteral("DTED terrain: %1").arg(message));
+        setDiagnostic(
+            message.isEmpty()
+                ? QStringLiteral("DTED terrain is unavailable here; terrain surface is hidden.")
+                : QStringLiteral("DTED terrain: %1").arg(message));
         emit terrainPatchChanged(false);
     }
     update();

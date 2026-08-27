@@ -1,0 +1,38 @@
+var class_recording_service =
+[
+    [ "State", "class_recording_service.html#ace6b59f85cd06e03a05900a2ef2f095a", [
+      [ "Idle", "class_recording_service.html#ace6b59f85cd06e03a05900a2ef2f095aae599161956d626eda4cb0a5ffb85271c", null ],
+      [ "Recording", "class_recording_service.html#ace6b59f85cd06e03a05900a2ef2f095aac5564d2e8b8e0ae08bf4363f2b947166", null ],
+      [ "Paused", "class_recording_service.html#ace6b59f85cd06e03a05900a2ef2f095aae99180abf47a8b3a856e0bcb2656990a", null ]
+    ] ],
+    [ "RecordingService", "class_recording_service.html#aeb81af6134f773d739423e1266bda660", null ],
+    [ "startRecording", "class_recording_service.html#a34839e02657747aa67f48b8e6d18a3da", null ],
+    [ "pauseRecording", "class_recording_service.html#a25cff8f1e89eeba78af7ae347e6511c4", null ],
+    [ "pauseRecordingAt", "class_recording_service.html#a3afe3497ce2d98a63530382489ab7187", null ],
+    [ "resumeRecording", "class_recording_service.html#ad8f89c817a62c6b36078429f23eaa382", null ],
+    [ "resetRecording", "class_recording_service.html#a36a2e7cd085e42a513ff738b1f5a1efe", null ],
+    [ "resetRecordingAt", "class_recording_service.html#aac45cc993940f6a4fd465e45cf5ca2b0", null ],
+    [ "createSnapshot", "class_recording_service.html#a2459fc37dbca6393f37e4f52903429c1", null ],
+    [ "cancelRecording", "class_recording_service.html#a4849870db94fac0b6e060909e7332915", null ],
+    [ "completeRecording", "class_recording_service.html#a94088791a65b91dd83b459da0b8f6c3a", null ],
+    [ "recordPacket", "class_recording_service.html#a31789e1b2374ce87e9e61d253dca1613", null ],
+    [ "recordPacket", "class_recording_service.html#a2f7614308dddf893f521332000651127", null ],
+    [ "recordPackets", "class_recording_service.html#afe7401dfa1084a3e3d7dbdbd49a8fabb", null ],
+    [ "state", "class_recording_service.html#ac724bb3c7302c41ba74c9b686e8c1641", null ],
+    [ "isRecording", "class_recording_service.html#a9e5faab16b85d3ddc1c95f67cc72d642", null ],
+    [ "isPaused", "class_recording_service.html#a26fbbe76f509ced7c5d86231d2cbdfc3", null ],
+    [ "recordCount", "class_recording_service.html#a82e3d26f814c7e83154c39bdf68a55fd", null ],
+    [ "recordingDuration", "class_recording_service.html#ac36c5351de37045fc101da63a991399d", null ],
+    [ "recordingStateChanged", "class_recording_service.html#ad78c4b9e8ae3320196e181369a6123ea", null ],
+    [ "recordCountChanged", "class_recording_service.html#a0a716c2fe4374fe773459319b090249f", null ],
+    [ "recordingError", "class_recording_service.html#af232df78a124fbd7d435380d671d49f4", null ],
+    [ "setState", "class_recording_service.html#a5f8da97e34dd808d9f5819e0a02af42f", null ],
+    [ "timestampFor", "class_recording_service.html#a92e22198dc632de37f055bfb0ab14889", null ],
+    [ "m_transaction", "class_recording_service.html#a27a719bc252917a62a6b92d9671690db", null ],
+    [ "m_clock", "class_recording_service.html#ac53348046829052ea40478ac293081c4", null ],
+    [ "m_state", "class_recording_service.html#a5f98c1807d80dddcd772c35cdba5e636", null ],
+    [ "m_accumulatedNanoseconds", "class_recording_service.html#a3e764279b204293bf4ae86150deeacf5", null ],
+    [ "m_segmentStartNanoseconds", "class_recording_service.html#a2a854e42474709510c13ab927f820967", null ],
+    [ "m_firstRecordedTimestamp", "class_recording_service.html#a4e0508ad1a4ab89dbdb922c382f57f20", null ],
+    [ "m_lastRecordedTimestamp", "class_recording_service.html#a624b854d61f2686ffabfb57ea7c15d05", null ]
+];

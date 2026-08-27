@@ -1,0 +1,11 @@
+<map id="IRecordingRuntime::resetRecording" name="IRecordingRuntime::resetRecording">
+<area shape="rect" id="Node000001" title=" " alt="" coords="869,5,1010,46"/>
+<area shape="rect" id="Node000002" href="$class_application_facade.html#a8a7b37f032f51eaaf3ef9516f0d19009" title="Requests reset of the active recording transaction." alt="" coords="684,5,821,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="851,26,821,28,821,23,856,26"/>
+<area shape="rect" id="Node000003" href="$class_recording_workflow_controller.html#a62a8497e8b07c3ae6db22e6e62a0d8f8" title=" " alt="" coords="446,5,636,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="666,26,637,28,637,23,672,26"/>
+<area shape="rect" id="Node000004" href="$class_online_panel.html#a718a7f2c79b67e00d58efdbeedbd3ad8" title=" " alt="" coords="229,13,398,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="428,26,398,28,398,23,433,26"/>
+<area shape="rect" id="Node000005" href="$class_main_window.html#a0531fa9a3d2a53bacd3923ea4d4cef5a" title=" " alt="" coords="5,13,181,38"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="211,26,181,28,181,23,216,25"/>
+</map>

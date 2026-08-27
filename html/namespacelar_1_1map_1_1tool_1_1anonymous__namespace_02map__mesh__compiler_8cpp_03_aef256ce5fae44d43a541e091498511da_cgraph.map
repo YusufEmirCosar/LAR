@@ -1,0 +1,18 @@
+<map id="lar::map::tool::anonymous_namespace{map_mesh_compiler::cpp}::refineForSphere" name="lar::map::tool::anonymous_namespace{map_mesh_compiler::cpp}::refineForSphere">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,185,225,241"/>
+<area shape="poly" id="edge10_Node000001_Node000001" title=" " alt="" coords="63,184,64,175,73,166,90,161,115,159,144,161,162,170,157,172,142,167,115,164,91,166,76,171,69,177,68,185"/>
+<area shape="rect" id="Node000002" href="$namespacelar_1_1map_1_1tool_1_1anonymous__namespace_02map__mesh__compiler_8cpp_03.html#a3c9b679547458370a219cf6bcd75c28d" title=" " alt="" coords="273,29,492,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,183,203,139,271,95,285,90,281,93,274,99,206,143,150,187"/>
+<area shape="rect" id="Node000003" href="$namespacelar_1_1map_1_1tool_1_1anonymous__namespace_02map__mesh__compiler_8cpp_03.html#afa6801f33d8cfbc05e7ef6a2725000cd" title=" " alt="" coords="273,133,492,189"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="224,189,260,184,255,187,226,194"/>
+<area shape="rect" id="Node000004" href="$namespacelar_1_1map_1_1tool_1_1anonymous__namespace_02map__mesh__compiler_8cpp_03.html#adec68a08b964d76228fee5066ec03bbe" title=" " alt="" coords="273,237,492,293"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="225,232,260,240,255,241,225,237"/>
+<area shape="rect" id="Node000006" href="$structlar_1_1map_1_1tool_1_1_planar_polygon_mesh.html#a6645c6c8a2ea19106796ccaf294082e1" title="Reports whether triangulation produced no renderable geometry." alt="" coords="288,317,477,358"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="158,239,213,272,274,303,291,312,285,311,272,308,210,276,158,244"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="331,28,331,19,340,10,358,5,382,3,411,5,430,15,424,15,410,11,382,8,359,10,343,15,336,21,335,30"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="331,132,331,123,340,114,358,109,382,107,411,109,430,119,424,119,410,115,382,112,359,114,343,119,336,125,335,134"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="331,235,331,227,340,218,358,213,382,211,411,213,430,223,424,223,410,219,382,216,359,218,343,223,336,229,335,238"/>
+<area shape="rect" id="Node000005" href="$namespacelar_1_1map_1_1tool_1_1anonymous__namespace_02map__mesh__compiler_8cpp_03.html#af6fa506fa43d45e06296d8133266b3a8" title=" " alt="" coords="540,237,759,293"/>
+<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="492,263,527,265,522,265,493,268"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="598,235,598,227,608,218,625,213,650,211,678,213,697,223,692,223,677,219,650,216,626,218,610,223,603,229,602,239"/>
+</map>

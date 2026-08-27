@@ -59,7 +59,31 @@ and verification information lives in the [documentation hub](docs/README.md).
 - The DLZ view shall remain clearly identified as a deterministic fictional
   teaching model.
 
-### User-selected Plane assets
+### Map, terrain, and Plane assets
+
+- The Natural Earth source shall be compiled at build time into one bounded,
+  versioned map package. The viewer shall not parse GeoJSON or link the source
+  compiler at runtime.
+- The current map package shall carry the projection meshes and a validated
+  one-degree land-triangle index. Mercator, Sphere, and Plane terrain shall use
+  that same immutable source rather than independent coastline data.
+- Plane terrain shall accept directly addressed DTED Level 0, 1, and 2 cells,
+  validate complete headers/dimensions/profile checksums, preserve no-data and
+  signed elevation semantics, and keep its decoded tile cache bounded by both
+  entry count and bytes.
+- Land/water classification shall come from the packaged vector map, not the
+  sign of DTED elevation. Classified water shall render at mean sea level while
+  retaining negative bathymetry as non-negative depth for color; terrestrial
+  depressions shall remain land.
+- Terrain preparation shall be latest-only on a presentation-owned CPU worker.
+  It shall publish immutable bounded patches and perform no QWidget or OpenGL
+  work. Missing or invalid terrain shall produce a diagnostic and shall not be
+  replaced by a misleading land-colored flat surface.
+- A user-selected DTED Level 1 or 2 directory shall become active only after a
+  contained addressed tile fully validates. Cancellation or failure shall
+  retain the previous session source and patch.
+
+### User-selected Plane models
 
 - The Plane view may load glTF 2.0 JSON (`.gltf`) or binary (`.glb`) models from
   a supported mesh/material/texture subset.
@@ -69,6 +93,9 @@ and verification information lives in the [documentation hub](docs/README.md).
 - Resource accounting shall be transactional and apply the exact CPU/GPU
   budgets documented in the [threat model](docs/THREAT_MODEL.md). A failed load
   shall retain the previously active model.
+- The large DTED source tree and user-selected model/terrain data shall not be
+  silently copied into build or install outputs. Deployment and redistribution
+  shall preserve asset provenance and attribution.
 
 ## Architecture and lifecycle requirements
 
@@ -97,8 +124,9 @@ adversarial tests.
 - Build requirements are CMake 3.24+, C++17, and Qt 6.10.3 or newer with Core,
   Concurrent, Gui, Network, Widgets, OpenGL, and OpenGLWidgets. Test builds also
   require Qt Test; quality and installation checks require Python 3.
-- Release CI is pinned to Qt 6.11.2. Changing that pin requires strict,
-  sanitizer, GPU, installation, and dependency-scan evidence.
+- Automated release jobs that install Qt are pinned to Qt 6.11.2. Changing that
+  pin requires strict, sanitizer, GPU, installation, and dependency-scan
+  evidence.
 - Windows installations shall deploy the required Qt runtime DLLs and platform
   plugins beside the installed application layout.
 - The installed SPDX 2.3 SBOM shall identify the application, each directly
@@ -121,8 +149,10 @@ boundaries, abuse cases, mitigations, residual risks, and release review rules.
 
 A release candidate is acceptable only when:
 
-1. GCC, Clang, AppleClang, and MSVC jobs configured for the release compile
-   with warnings-as-errors and their supported strict diagnostics.
+1. GCC, Clang, AppleClang, and MSVC evidence selected for the release compiles
+   with warnings-as-errors and the supported strict diagnostics. The current
+   checked-in workflow supplies Windows MSVC evidence only; the other preset
+   capabilities require separate execution until their workflows are restored.
 2. Deterministic tests, architecture checks, documentation semantic/link/API
    gates, ASan/UBSan, TSan contracts, native GPU accuracy tests, installation
    smoke, and the SPDX dependency scan pass as specified in

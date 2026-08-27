@@ -1,0 +1,11 @@
+<map id="EarthOverlayCoordinator::complete" name="EarthOverlayCoordinator::complete">
+<area shape="rect" id="Node000001" title=" " alt="" coords="459,71,623,111"/>
+<area shape="rect" id="Node000002" href="$class_earth_overlay_coordinator.html#aa2ee2cbd2b9e9873d7ef7cc460c62527" title=" " alt="" coords="239,5,411,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="455,66,394,49,395,44,460,66"/>
+<area shape="rect" id="Node000004" href="$class_earth_overlay_coordinator.html#a99b84134c021f7b7840060dffc05563f" title=" " alt="" coords="243,71,407,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="441,100,407,102,407,97,446,100"/>
+<area shape="rect" id="Node000003" href="$class_earth_lar_view.html#a7eb84ed5ba23f7d30ed5ac72308d4448" title=" " alt="" coords="5,46,191,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="221,41,191,48,189,43,226,40"/>
+<area shape="poly" id="edge4_Node000004_Node000001" title=" " alt="" coords="422,79,461,82,456,82,422,85"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="225,77,191,75,191,69,230,77"/>
+</map>

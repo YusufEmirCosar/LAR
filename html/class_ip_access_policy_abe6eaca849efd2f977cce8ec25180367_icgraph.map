@@ -1,0 +1,8 @@
+<map id="IpAccessPolicy::accepts" name="IpAccessPolicy::accepts">
+<area shape="rect" id="Node000001" title=" " alt="" coords="424,37,590,62"/>
+<area shape="rect" id="Node000002" href="$class_qt_udp_datagram_source.html#aa820ca3974584a3afe1a6965ae680d7e" title="Reads pending datagrams." alt="" coords="211,29,376,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="406,50,376,52,376,47,411,50"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="326,13,315,10,293,8,273,10,261,15,257,20,258,30,254,27,252,19,258,10,272,5,293,3,316,5,331,14"/>
+<area shape="rect" id="Node000003" href="$class_qt_udp_datagram_source.html#a93be5747953f5864643a3614e6e54480" title=" " alt="" coords="5,29,163,70"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="193,50,163,52,163,47,198,49"/>
+</map>

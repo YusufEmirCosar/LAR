@@ -1,0 +1,7 @@
+<map id="lar::map::EarthMapWidget::setMapPresentation" name="lar::map::EarthMapWidget::setMapPresentation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="523,5,696,46"/>
+<area shape="rect" id="Node000002" href="$class_earth_lar_view.html#aef92f959470406de4057c89fa40cbb14" title=" " alt="" coords="271,13,475,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="505,26,476,28,475,23,510,26"/>
+<area shape="rect" id="Node000003" href="$class_earth_lar_view.html#a8b2e659fc16224bb78ef2b7b7eed1323" title=" " alt="" coords="5,13,223,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="253,26,223,28,223,23,258,26"/>
+</map>

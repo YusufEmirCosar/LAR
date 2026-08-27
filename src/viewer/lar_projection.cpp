@@ -24,8 +24,7 @@ QPointF LarProjection::geographicToPlaneWorld(const double position[3],
 
 std::optional<GeoCoordinateRadians>
 LarProjection::planeWorldToGeographic(const QPointF &world, const double planeLocation[3],
-                                      double yaw, double originLatitude,
-                                      bool hasOrigin) noexcept {
+                                      double yaw, double originLatitude, bool hasOrigin) noexcept {
     if (planeLocation == nullptr || !std::isfinite(world.x()) || !std::isfinite(world.y()) ||
         !std::isfinite(planeLocation[0]) || !std::isfinite(planeLocation[1]) ||
         !std::isfinite(yaw)) {
@@ -34,8 +33,8 @@ LarProjection::planeWorldToGeographic(const QPointF &world, const double planeLo
 
     const double latRef = hasOrigin ? originLatitude : planeLocation[0];
     if (!std::isfinite(latRef) || latRef < -Pi * 0.5 || latRef > Pi * 0.5 ||
-        planeLocation[0] < -Pi * 0.5 || planeLocation[0] > Pi * 0.5 ||
-        planeLocation[1] < -Pi || planeLocation[1] > Pi) {
+        planeLocation[0] < -Pi * 0.5 || planeLocation[0] > Pi * 0.5 || planeLocation[1] < -Pi ||
+        planeLocation[1] > Pi) {
         return std::nullopt;
     }
 

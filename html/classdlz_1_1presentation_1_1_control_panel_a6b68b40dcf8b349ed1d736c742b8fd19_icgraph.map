@@ -1,0 +1,11 @@
+<map id="dlz::presentation::ControlPanel::refreshLabels" name="dlz::presentation::ControlPanel::refreshLabels">
+<area shape="rect" id="Node000001" title=" " alt="" coords="763,35,946,75"/>
+<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_control_panel.html#ad2c9070616837a5a5e9fe9f492655e5e" title=" " alt="" coords="261,5,440,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="746,50,440,34,440,28,751,48"/>
+<area shape="rect" id="Node000004" href="$classdlz_1_1presentation_1_1_control_panel.html#ada13f800c4d17636fee18db46038e4a5" title=" " alt="" coords="488,63,715,103"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="750,67,716,73,716,68,745,67"/>
+<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_workspace.html#aec685012fec2dfb24231b60b8836444b" title=" " alt="" coords="5,35,213,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="243,39,213,45,212,40,248,38"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="492,59,440,49,441,44,497,59"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="472,78,213,64,213,58,474,73"/>
+</map>

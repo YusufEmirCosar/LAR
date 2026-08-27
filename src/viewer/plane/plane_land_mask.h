@@ -32,10 +32,10 @@ class PlaneLandMaskBuilder final {
   public:
     explicit PlaneLandMaskBuilder(lar::map::MapLandIndex landIndex);
 
-    [[nodiscard]] PlaneLandMask
-    build(double anchorLatitudeRadians, double anchorLongitudeRadians,
-          double projectionOriginLatitudeRadians, double halfExtentMeters,
-          const std::function<bool()> &cancelled = {}) const;
+    [[nodiscard]] PlaneLandMask build(double anchorLatitudeRadians, double anchorLongitudeRadians,
+                                      double projectionOriginLatitudeRadians,
+                                      double halfExtentMeters,
+                                      const std::function<bool()> &cancelled = {}) const;
 
     [[nodiscard]] bool isAvailable() const noexcept {
         return m_landIndex.isValid();

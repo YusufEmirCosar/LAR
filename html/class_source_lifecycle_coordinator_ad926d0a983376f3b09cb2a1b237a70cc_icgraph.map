@@ -1,0 +1,45 @@
+<map id="SourceLifecycleCoordinator::beginStartOnline" name="SourceLifecycleCoordinator::beginStartOnline">
+<area shape="rect" id="Node000001" title=" " alt="" coords="931,229,1112,270"/>
+<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#a92e4dcfa7138ea6a8c54e78d2198b850" title=" " alt="" coords="701,331,883,371"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="962,276,841,333,839,328,957,278"/>
+<area shape="rect" id="Node000017" href="$class_source_lifecycle_coordinator.html#ad0e12423ba037917169cd328304bc18f" title="Selects online capture on a non&#45;zero UDP port." alt="" coords="9,5,191,46"/>
+<area shape="poly" id="edge25_Node000001_Node000017" title=" " alt="" coords="965,222,868,177,735,119,582,65,503,42,424,24,364,17,303,14,192,18,190,13,303,8,364,11,424,19,504,37,584,59,737,114,870,172,970,222"/>
+<area shape="rect" id="Node000003" href="$class_source_lifecycle_coordinator.html#a5fe8ac3946fc99edecf8f2d8ca6070c3" title=" " alt="" coords="472,229,653,270"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="727,324,611,273,611,268,733,324"/>
+<area shape="rect" id="Node000013" href="$class_source_lifecycle_coordinator.html#ad289bae443fa45b277710f239bf5652e" title=" " alt="" coords="9,487,191,527"/>
+<area shape="poly" id="edge24_Node000002_Node000013" title=" " alt="" coords="731,377,591,432,509,459,425,480,303,499,192,507,191,502,303,494,423,475,507,454,590,427,726,378"/>
+<area shape="rect" id="Node000034" href="$class_source_lifecycle_coordinator.html#aca7c03cf83288fd02c8c2ec13bb8fd2b" title=" " alt="" coords="472,303,653,343"/>
+<area shape="poly" id="edge22_Node000002_Node000034" title=" " alt="" coords="683,338,654,337,653,331,689,338"/>
+<area shape="rect" id="Node000035" href="$class_source_lifecycle_coordinator.html#acce1a988120c5c5d1bb18056b02f9b88" title=" " alt="" coords="472,540,653,581"/>
+<area shape="poly" id="edge23_Node000002_Node000035" title=" " alt="" coords="773,383,724,454,692,491,655,524,624,542,623,537,652,520,688,487,720,451,769,386"/>
+<area shape="poly" id="edge11_Node000003_Node000001" title=" " alt="" coords="668,247,933,249,928,251,669,252"/>
+<area shape="rect" id="Node000004" href="$class_source_lifecycle_coordinator.html#af43f2b65f8774e1acccf82ec28a3397c" title=" " alt="" coords="243,425,424,466"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="489,277,474,293,463,308,456,323,451,353,446,383,439,399,426,414,409,427,406,422,422,410,434,396,441,381,446,352,451,321,458,305,470,289,484,280"/>
+<area shape="rect" id="Node000020" href="$class_source_lifecycle_coordinator.html#a608bc622a76c4b5b965a252234e888e5" title=" " alt="" coords="243,360,424,401"/>
+<area shape="poly" id="edge8_Node000003_Node000020" title=" " alt="" coords="495,276,474,293,459,307,451,321,441,335,426,349,403,362,401,357,422,345,437,331,446,318,455,304,470,289,491,279"/>
+<area shape="rect" id="Node000021" href="$class_source_lifecycle_coordinator.html#aa4662a449eeafb24036a56622528c705" title=" " alt="" coords="243,33,424,74"/>
+<area shape="poly" id="edge12_Node000003_Node000021" title=" " alt="" coords="532,217,485,159,455,128,422,101,398,88,375,77,374,72,401,83,426,97,459,124,489,156,537,217"/>
+<area shape="rect" id="Node000029" href="$class_source_lifecycle_coordinator.html#ace0e008f26d26cff9af3463128254077" title=" " alt="" coords="243,229,424,270"/>
+<area shape="poly" id="edge17_Node000003_Node000029" title=" " alt="" coords="454,251,425,252,424,247,459,249"/>
+<area shape="rect" id="Node000031" href="$class_source_lifecycle_coordinator.html#afb419f7fb0d0b7348b786cd6ed7edb23" title=" " alt="" coords="243,295,424,335"/>
+<area shape="poly" id="edge19_Node000003_Node000031" title=" " alt="" coords="472,276,409,296,406,292,477,273"/>
+<area shape="rect" id="Node000032" href="$class_source_lifecycle_coordinator.html#a0b590ff484b4a5b5d96851d3063696d9" title=" " alt="" coords="243,99,424,139"/>
+<area shape="poly" id="edge20_Node000003_Node000032" title=" " alt="" coords="522,220,476,188,423,155,398,143,397,137,425,150,479,183,527,219"/>
+<area shape="rect" id="Node000033" href="$class_source_lifecycle_coordinator.html#ab761919c892fb1bec843355c3d7a929f" title=" " alt="" coords="243,164,424,205"/>
+<area shape="poly" id="edge21_Node000003_Node000033" title=" " alt="" coords="472,225,408,208,407,203,477,224"/>
+<area shape="rect" id="Node000005" href="$class_source_lifecycle_coordinator.html#ac59a84185f8ff93b63c68d9972de9113" title="Selects no source, closing playback if necessary." alt="" coords="9,421,191,462"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="225,445,192,446,191,441,230,443"/>
+<area shape="poly" id="edge5_Node000004_Node000013" title=" " alt="" coords="236,472,181,489,179,484,241,469"/>
+<area shape="rect" id="Node000014" href="$class_source_lifecycle_coordinator.html#aa10eb11bdb8fea7dfe07f238c6611a21" title="Selects playback of a non&#45;empty session path." alt="" coords="9,356,191,397"/>
+<area shape="poly" id="edge6_Node000004_Node000014" title=" " alt="" coords="245,421,171,400,171,395,250,419"/>
+<area shape="poly" id="edge7_Node000004_Node000017" title=" " alt="" coords="242,415,241,414,225,391,214,367,205,322,208,278,216,235,225,192,228,149,219,105,208,83,193,61,182,49,180,44,197,57,213,81,224,104,233,149,230,193,222,236,213,279,210,322,219,366,229,388,245,411,248,415"/>
+<area shape="poly" id="edge9_Node000020_Node000002" title=" " alt="" coords="439,371,704,356,699,358,440,376"/>
+<area shape="poly" id="edge10_Node000020_Node000014" title=" " alt="" coords="225,380,192,380,190,375,230,377"/>
+<area shape="poly" id="edge13_Node000021_Node000003" title=" " alt="" coords="435,81,476,118,510,158,556,229,550,229,506,161,473,122,435,86"/>
+<area shape="poly" id="edge14_Node000021_Node000014" title=" " alt="" coords="244,86,245,89,228,113,219,135,216,158,215,180,215,228,209,255,197,283,165,325,131,357,127,354,161,321,192,280,204,253,210,228,210,180,210,157,214,134,223,110,241,85,247,82"/>
+<area shape="poly" id="edge15_Node000021_Node000017" title=" " alt="" coords="225,42,193,39,190,34,229,39"/>
+<area shape="rect" id="Node000022" href="$class_source_lifecycle_coordinator.html#ad41b0a0c2a06a10f67ff1de2ae3cf5e4" title="Selects no source, stopping online capture if necessary." alt="" coords="9,71,191,111"/>
+<area shape="poly" id="edge16_Node000021_Node000022" title=" " alt="" coords="225,72,193,79,190,74,229,69"/>
+<area shape="rect" id="Node000030" href="$class_source_lifecycle_coordinator.html#a8a284b25c663c1d8c55f7cdad5633d3d" title=" " alt="" coords="5,229,195,270"/>
+<area shape="poly" id="edge18_Node000029_Node000030" title=" " alt="" coords="225,251,196,252,194,247,229,248"/>
+</map>

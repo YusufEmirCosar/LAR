@@ -5,8 +5,8 @@
  * @brief Latest-only dedicated CPU worker for DTED terrain patch preparation.
  */
 
-#include "viewer/plane/plane_terrain_patch_builder.h"
 #include "viewer/map/map_asset_source.h"
+#include "viewer/plane/plane_terrain_patch_builder.h"
 
 #include <QMutex>
 #include <QObject>

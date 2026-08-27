@@ -1,0 +1,40 @@
+<map id="src/viewer/viewport/earth_camera_policy.h" name="src/viewer/viewport/earth_camera_policy.h">
+<area shape="rect" id="Node000001" title="Pure tracking, fit, zoom&#45;anchor, and scale policy for Earth views." alt="" coords="634,5,788,46"/>
+<area shape="rect" id="Node000002" href="$state_8h.html" title="Canonical in&#45;memory aircraft, target, and LAR state structures." alt="" coords="5,183,113,208"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="631,30,550,37,450,49,342,68,237,97,195,114,155,134,89,176,86,171,152,130,193,109,235,91,341,63,449,43,550,32,636,28"/>
+<area shape="rect" id="Node000004" href="$map__camera_8h.html" title="Projection&#45;independent Earth map camera model and hit testing." alt="" coords="622,102,800,127"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="713,44,713,88,709,85,709,49"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="996,183,1066,208"/>
+<area shape="poly" id="edge17_Node000001_Node000007" title=" " alt="" coords="743,44,814,92,839,113,864,132,924,160,984,182,979,181,923,165,862,137,835,118,811,96,742,49"/>
+<area shape="rect" id="Node000010" href="$viewport__camera__controller_8h.html" title="Shared tracking policy independent of any viewport renderer." alt="" coords="248,94,414,135"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="631,46,430,93,428,88,636,44"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="373,183,452,208"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="667,46,568,96,500,138,442,176,440,171,497,133,566,92,662,48"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="476,183,572,208"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="679,45,645,70,611,96,574,135,543,172,540,168,570,131,608,92,642,66,674,48"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="875,102,942,127"/>
+<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="756,44,869,95,864,95,755,49"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="966,102,1018,127"/>
+<area shape="poly" id="edge20_Node000001_Node000016" title=" " alt="" coords="789,42,870,63,955,91,959,95,954,95,953,97,868,69,789,47"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1042,102,1100,127"/>
+<area shape="poly" id="edge21_Node000001_Node000017" title=" " alt="" coords="789,35,905,57,1032,91,1037,95,1032,95,1030,97,904,62,789,41"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="88,256,176,282"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="72,206,112,245,107,246,70,211"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="799,183,887,208"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="732,125,812,175,807,174,730,130"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="911,183,972,208"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="747,125,899,179,894,179,746,130"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="761,125,984,182,978,182,760,130"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="596,183,663,208"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="701,126,654,174,652,169,696,129"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="688,183,774,208"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="716,125,727,169,722,166,713,130"/>
+<area shape="poly" id="edge10_Node000010_Node000002" title=" " alt="" coords="262,138,116,180,115,175,264,133"/>
+<area shape="rect" id="Node000011" href="$lar__camera_8h.html" title="Shared viewport presentation and tracking mode enumerations." alt="" coords="136,183,275,208"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="302,134,239,176,237,172,298,136"/>
+<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="352,133,392,172,386,171,350,138"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="299,183,350,208"/>
+<area shape="poly" id="edge14_Node000010_Node000013" title=" " alt="" coords="331,133,329,169,324,166,328,137"/>
+<area shape="poly" id="edge15_Node000010_Node000014" title=" " alt="" coords="380,133,483,176,478,177,379,138"/>
+<area shape="poly" id="edge12_Node000011_Node000003" title=" " alt="" coords="196,208,157,248,154,243,191,210"/>
+</map>

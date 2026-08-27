@@ -1,4 +1,3 @@
-
 #include "viewer/plane/glb_model_reader.h"
 #include "viewer/plane/glb_resource_limits.h"
 #include "viewer/plane/glb_resource_reader.h"
@@ -25,7 +24,6 @@
 #include <vector>
 
 namespace {
-
 constexpr std::size_t MaximumVertices = 250000U;
 constexpr std::size_t MaximumIndices = 1500000U;
 

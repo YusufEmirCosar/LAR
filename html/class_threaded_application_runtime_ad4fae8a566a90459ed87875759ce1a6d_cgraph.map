@@ -1,0 +1,9 @@
+<map id="ThreadedApplicationRuntime::resumeRecording" name="ThreadedApplicationRuntime::resumeRecording">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,194,111"/>
+<area shape="rect" id="Node000002" href="$class_i_application_runtime.html#a8a335e653e0be8326f22b4d50759f8f7" title=" " alt="" coords="270,5,408,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,68,257,47,252,50,177,73"/>
+<area shape="rect" id="Node000003" href="$class_threaded_application_runtime.html#ae077e8c5caef61c6bb8362fe87a2c7d8" title=" " alt="" coords="242,71,436,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,88,229,90,224,92,194,94"/>
+<area shape="rect" id="Node000004" href="$class_i_application_runtime.html#a01f646d011f811a4eb6b1ac3faae60ec" title=" " alt="" coords="270,136,408,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="177,109,257,133,252,134,176,115"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="GeodesicZoneSampler::sample" name="GeodesicZoneSampler::sample">
+<area shape="rect" id="Node000001" title=" " alt="" coords="942,57,1095,98"/>
+<area shape="rect" id="Node000002" href="$class_lar_zone_mesh_builder.html#aeae61a0b50e2824ca5cb7b32318e8ec1" title=" " alt="" coords="721,5,861,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="924,57,861,44,862,39,929,57"/>
+<area shape="rect" id="Node000008" href="$namespaceanonymous__namespace_02lar__parametric__zone__gpu__layer_8cpp_03.html#a85e6f5dc2564b7cdd929fde4ffcb7dab" title=" " alt="" coords="688,94,894,165"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="929,98,895,109,894,103,924,99"/>
+<area shape="rect" id="Node000003" href="$class_viewport_preparation_worker.html#a70c6d90f31a6ec89cf2be630b2579331" title=" " alt="" coords="461,5,640,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="703,26,641,28,641,23,708,25"/>
+<area shape="rect" id="Node000004" href="$class_viewport_preparation_worker.html#ad377d90c3d519cc10d42bd97d6e26e00" title=" " alt="" coords="230,5,409,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="443,35,410,37,409,32,448,34"/>
+<area shape="rect" id="Node000007" href="$class_viewport_preparation_worker.html#a05843486134e53d3c3ca6e89d23526b0" title=" " alt="" coords="226,71,413,111"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="464,50,395,73,393,67,459,51"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="424,14,464,16,458,17,425,19"/>
+<area shape="rect" id="Node000005" href="$class_earth_overlay_coordinator.html#aa2ee2cbd2b9e9873d7ef7cc460c62527" title=" " alt="" coords="5,5,178,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="212,27,179,28,178,23,216,25"/>
+<area shape="poly" id="edge8_Node000008_Node000008" title=" " alt="" coords="825,80,813,76,791,73,772,75,760,79,753,86,750,96,747,92,748,83,757,75,771,70,791,68,814,70,830,81"/>
+</map>

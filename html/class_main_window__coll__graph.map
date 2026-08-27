@@ -1,0 +1,165 @@
+<map id="MainWindow" name="MainWindow">
+<area shape="rect" id="Node000001" title="Builds the control panels and renders ApplicationViewModel changes." alt="" coords="2725,961,2822,986"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="2419,578,2526,604"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2540,582,2582,583,2625,590,2667,605,2703,630,2720,656,2735,695,2756,792,2768,891,2774,962,2769,959,2763,892,2750,793,2730,696,2716,659,2699,634,2665,610,2624,595,2581,589,2541,587"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html" title="Main&#45;thread presentation facade." alt="" coords="1699,699,1828,725"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1843,701,1980,691,2158,689,2257,693,2357,703,2457,718,2554,742,2601,756,2637,772,2668,794,2703,828,2729,862,2748,898,2771,961,2766,959,2743,901,2724,864,2699,831,2665,798,2634,776,2599,761,2553,747,2456,724,2356,708,2256,698,2158,694,1980,696,1844,706"/>
+<area shape="rect" id="Node000042" href="$class_recording_workflow_controller.html" title="Owns recording dialog policy while the application owns transaction state." alt="" coords="1971,750,2161,776"/>
+<area shape="poly" id="edge62_Node000042_Node000003" title=" " alt="" coords="1801,730,1859,751,1915,760,1973,766,1968,767,1914,766,1858,757,1802,735"/>
+<area shape="rect" id="Node000043" href="$class_online_workflow_controller.html" title="Owns mapping/IP file choices and the last successfully applied policy view." alt="" coords="1982,990,2150,1016"/>
+<area shape="poly" id="edge66_Node000043_Node000003" title=" " alt="" coords="1779,737,1812,790,1835,817,1860,840,1882,851,1903,855,1924,859,1948,870,1984,899,2016,932,2059,990,2054,989,2011,935,1980,903,1945,875,1922,864,1902,860,1881,856,1857,844,1831,820,1808,793,1777,742"/>
+<area shape="rect" id="Node000060" href="$class_offline_panel.html" title="Owns offline&#45;session selection, sampled replay controls, and timeline mapping." alt="" coords="2020,1069,2112,1094"/>
+<area shape="poly" id="edge96_Node000060_Node000003" title=" " alt="" coords="1774,738,1813,853,1837,910,1861,947,1882,959,1903,962,1925,964,1948,977,1958,990,1962,1002,1965,1014,1973,1026,2001,1049,2033,1068,2028,1068,1998,1054,1969,1030,1960,1016,1957,1004,1953,992,1945,981,1923,969,1902,967,1880,964,1857,951,1832,912,1808,855,1772,742"/>
+<area shape="rect" id="Node000061" href="$class_online_panel.html" title="Owns mapping, listener, IP&#45;policy, and recording controls." alt="" coords="2427,930,2518,956"/>
+<area shape="poly" id="edge100_Node000061_Node000003" title=" " alt="" coords="1796,731,1860,769,2005,824,2186,886,2317,915,2429,936,2424,937,2315,920,2184,891,2003,829,1858,773,1796,737"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="612,967,682,993"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="696,966,811,934,860,918,885,905,895,889,899,874,896,841,893,808,897,791,908,773,932,749,956,732,980,721,1004,714,1058,708,1123,700,1240,692,1400,693,1702,708,1697,709,1400,699,1240,698,1124,706,1058,713,1005,719,981,726,959,736,936,753,912,777,902,793,898,809,901,841,904,874,900,891,888,909,862,923,812,939,698,971"/>
+<area shape="rect" id="Node000005" href="$class_mode_coordinator.html" title="Rejects illegal mode changes and announces accepted transitions." alt="" coords="945,997,1065,1022"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="697,982,947,1003,942,1006,698,987"/>
+<area shape="rect" id="Node000006" href="$class_i_application_runtime.html" title="Composite runtime boundary used by ApplicationFacade." alt="" coords="936,665,1074,690"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="662,953,756,794,774,783,791,777,822,774,852,772,868,767,885,757,892,749,896,740,900,731,909,721,936,702,967,689,963,693,938,707,912,725,905,734,901,742,897,752,888,761,870,772,853,777,822,780,792,783,776,788,760,798,666,956"/>
+<area shape="rect" id="Node000013" href="$class_application_view_model.html" title="Main&#45;thread projection of state, metrics, mode, and playback status." alt="" coords="930,1231,1080,1257"/>
+<area shape="poly" id="edge15_Node000013_Node000004" title=" " alt="" coords="661,1005,701,1072,728,1108,760,1139,797,1162,852,1186,967,1230,962,1231,850,1191,795,1166,757,1144,724,1111,697,1075,660,1010"/>
+<area shape="rect" id="Node000021" href="$class_source_lifecycle_coordinator.html" title="Single owner of online/playback activation, switching, and publications." alt="" coords="1303,866,1484,892"/>
+<area shape="poly" id="edge26_Node000021_Node000004" title=" " alt="" coords="697,976,948,958,1113,939,1278,911,1357,891,1353,893,1280,916,1113,944,948,963,698,981"/>
+<area shape="poly" id="edge61_Node000042_Node000004" title=" " alt="" coords="666,953,702,900,719,867,732,833,736,798,737,738,735,577,738,419,744,362,749,342,756,329,784,304,812,290,840,284,868,283,930,292,1004,299,1765,299,1805,303,1841,315,1874,334,1904,359,1931,389,1955,422,1994,496,2024,574,2045,647,2065,751,2060,749,2040,648,2019,575,1989,498,1950,425,1927,392,1901,363,1871,339,1839,320,1804,308,1765,304,1004,304,929,298,868,289,840,289,814,295,787,309,760,333,754,344,750,363,743,419,741,578,742,738,741,798,737,834,724,869,706,903,671,957"/>
+<area shape="poly" id="edge65_Node000043_Node000004" title=" " alt="" coords="696,992,883,1041,1002,1067,1124,1087,1252,1097,1383,1098,1513,1091,1637,1079,1856,1045,2012,1016,2007,1017,1857,1050,1638,1084,1513,1096,1383,1103,1252,1103,1123,1092,1001,1073,882,1047,697,997"/>
+<area shape="rect" id="Node000047" href="$class_viewport_frame_counter.html" title="Aggregates page render notifications into displayable metrics." alt="" coords="1124,1138,1279,1164"/>
+<area shape="poly" id="edge75_Node000047_Node000004" title=" " alt="" coords="664,1004,704,1056,730,1081,760,1101,805,1120,852,1135,950,1153,1044,1158,1126,1158,1120,1159,1044,1163,950,1158,851,1140,803,1125,757,1105,727,1085,700,1059,663,1009"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="1040,1028,1091,1053,1152,1074,1184,1080,1217,1081,1248,1076,1278,1063,1286,1055,1289,1045,1293,1033,1301,1021,1350,985,1396,964,1441,951,1485,944,1529,936,1573,924,1619,903,1667,869,1699,833,1725,793,1756,728,1759,724,1729,795,1703,836,1670,873,1621,908,1575,929,1530,942,1486,949,1442,957,1398,969,1352,990,1305,1025,1297,1035,1294,1046,1291,1058,1280,1068,1250,1081,1217,1086,1184,1085,1150,1079,1089,1058,1040,1033"/>
+<area shape="poly" id="edge27_Node000021_Node000005" title=" " alt="" coords="1080,1007,1193,1002,1243,995,1278,984,1286,977,1290,969,1301,951,1338,917,1371,894,1376,891,1341,921,1305,954,1295,972,1290,980,1280,988,1245,1000,1194,1007,1081,1013"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="1088,668,1124,666,1277,661,1397,662,1516,671,1669,690,1708,698,1703,699,1668,695,1516,676,1397,667,1277,666,1124,671,1090,673"/>
+<area shape="poly" id="edge28_Node000021_Node000006" title=" " alt="" coords="1065,693,1169,731,1226,756,1280,785,1338,826,1381,866,1376,865,1334,830,1278,789,1223,761,1167,735,1066,698"/>
+<area shape="rect" id="Node000007" href="$class_i_mapping_capture_runtime.html" title="Command port for mapping, access policy, and online capture." alt="" coords="562,598,732,624"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="746,617,816,626,887,639,968,663,963,665,886,644,815,632,748,622"/>
+<area shape="rect" id="Node000008" href="$class_i_recording_runtime.html" title="Command port for the active recording transaction." alt="" coords="580,647,714,673"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="728,656,886,660,938,667,933,669,886,666,730,661"/>
+<area shape="rect" id="Node000009" href="$class_i_playback_runtime.html" title="Command port for session loading and playback control." alt="" coords="583,697,711,722"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="725,697,758,694,938,681,933,683,759,699,728,702"/>
+<area shape="rect" id="Node000010" href="$class_i_metrics_runtime.html" title="Command port for clearing source throughput counters." alt="" coords="588,746,706,772"/>
+<area shape="poly" id="edge11_Node000006_Node000010" title=" " alt="" coords="709,739,758,727,938,689,934,693,759,732,712,744"/>
+<area shape="rect" id="Node000011" href="$class_i_application_lifetime.html" title="Minimal lifecycle port for deterministic worker shutdown." alt="" coords="580,795,715,821"/>
+<area shape="poly" id="edge12_Node000006_Node000011" title=" " alt="" coords="722,787,733,782,745,772,757,761,791,745,820,738,849,733,885,723,976,689,971,692,887,728,851,738,821,743,793,750,760,765,748,776,736,786,726,791"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="571,549,723,574"/>
+<area shape="poly" id="edge13_Node000006_Node000012" title=" " alt="" coords="738,573,812,588,887,611,941,636,986,664,981,665,939,641,885,616,811,593,740,578"/>
+<area shape="poly" id="edge14_Node000003_Node000013" title=" " alt="" coords="1095,1245,1185,1238,1233,1230,1278,1216,1404,1167,1453,1143,1497,1116,1538,1085,1578,1048,1666,947,1703,887,1730,823,1748,765,1758,727,1761,723,1753,767,1735,825,1708,889,1670,950,1582,1052,1541,1089,1500,1121,1456,1147,1406,1172,1280,1221,1234,1235,1186,1243,1096,1250"/>
+<area shape="poly" id="edge29_Node000021_Node000013" title=" " alt="" coords="1026,1217,1068,1172,1122,1123,1167,1098,1206,1084,1242,1068,1259,1054,1277,1035,1287,1014,1289,995,1291,974,1301,951,1333,915,1367,894,1371,891,1337,919,1305,954,1296,975,1295,995,1292,1016,1281,1038,1263,1058,1244,1072,1208,1089,1169,1102,1125,1128,1072,1176,1029,1222"/>
+<area shape="rect" id="Node000014" href="$struct_decoded_state.html" title="One validated mapped frame and its field&#45;availability mask." alt="" coords="595,1207,699,1233"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="714,1228,759,1233,933,1243,927,1244,758,1238,715,1233"/>
+<area shape="rect" id="Node000015" href="$struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft." alt="" coords="349,1449,404,1474"/>
+<area shape="poly" id="edge20_Node000013_Node000015" title=" " alt="" coords="400,1436,434,1409,474,1383,955,1255,952,1260,476,1388,437,1413,404,1440"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="397,1435,473,1350,505,1322,534,1292,544,1271,549,1261,558,1250,597,1231,592,1234,562,1254,553,1264,549,1273,538,1295,508,1326,477,1354,400,1439"/>
+<area shape="rect" id="Node000046" href="$struct_lar_scene_state.html" title="Plane, target, field availability, and scene&#45;presence flag." alt="" coords="594,1450,701,1476"/>
+<area shape="poly" id="edge72_Node000046_Node000015" title=" " alt="" coords="419,1459,595,1462,590,1464,419,1464"/>
+<area shape="rect" id="Node000051" href="$class_viewport_camera_controller.html" title="Selects stable plane/target anchors from the available state fields." alt="" coords="560,1571,734,1597"/>
+<area shape="poly" id="edge82_Node000051_Node000015" title=" " alt="" coords="394,1485,429,1529,451,1550,476,1566,517,1580,562,1588,557,1589,516,1585,474,1571,448,1554,425,1533,392,1490"/>
+<area shape="rect" id="Node000016" href="$struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters." alt="" coords="348,1333,405,1358"/>
+<area shape="poly" id="edge21_Node000013_Node000016" title=" " alt="" coords="412,1323,442,1308,474,1296,658,1275,932,1250,928,1252,658,1280,476,1302,444,1313,415,1327"/>
+<area shape="poly" id="edge18_Node000014_Node000016" title=" " alt="" coords="399,1319,433,1290,474,1263,535,1239,597,1227,592,1229,536,1245,476,1268,436,1294,403,1323"/>
+<area shape="poly" id="edge73_Node000046_Node000016" title=" " alt="" coords="413,1364,481,1400,561,1436,596,1450,590,1450,559,1441,479,1405,413,1369"/>
+<area shape="poly" id="edge83_Node000051_Node000016" title=" " alt="" coords="401,1367,428,1399,453,1435,464,1464,468,1476,477,1489,507,1516,540,1538,608,1571,602,1571,538,1543,503,1520,473,1493,463,1479,459,1466,449,1437,424,1402,400,1372"/>
+<area shape="rect" id="Node000017" href="$structdlz_1_1_telemetry_inputs.html" title="The three packet/replay inputs consumed by the DLZ workspace." alt="" coords="307,1170,446,1196"/>
+<area shape="poly" id="edge19_Node000014_Node000017" title=" " alt="" coords="461,1192,597,1212,592,1214,462,1197"/>
+<area shape="rect" id="Node000018" href="$class_session_timestamp.html" title="Exact, bounded, non&#45;negative session&#45;relative time in milliseconds." alt="" coords="580,1401,714,1426"/>
+<area shape="poly" id="edge22_Node000013_Node000018" title=" " alt="" coords="728,1414,820,1410,859,1404,885,1394,895,1383,898,1372,901,1358,908,1343,949,1293,986,1259,991,1256,953,1297,913,1346,906,1360,903,1373,899,1386,888,1398,860,1409,821,1415,729,1419"/>
+<area shape="poly" id="edge97_Node000060_Node000018" title=" " alt="" coords="729,1420,806,1423,886,1419,1110,1385,1283,1346,1452,1294,1667,1222,1722,1201,1763,1183,1804,1163,1858,1142,2017,1095,2022,1093,1860,1147,1806,1168,1765,1187,1724,1206,1669,1227,1454,1299,1284,1352,1111,1391,887,1424,806,1429,730,1425"/>
+<area shape="rect" id="Node000019" href="$class_ip_access_policy_service.html" title="Application use case for obtaining a validated IP access policy." alt="" coords="1316,419,1472,445"/>
+<area shape="poly" id="edge23_Node000003_Node000019" title=" " alt="" coords="1487,431,1533,437,1581,449,1628,467,1670,494,1693,518,1712,545,1740,603,1756,659,1763,700,1758,698,1751,660,1735,605,1707,547,1689,521,1667,498,1626,472,1580,454,1532,442,1488,436"/>
+<area shape="rect" id="Node000020" href="$class_i_ip_access_policy_repository.html" title="Loads and validates exact&#45;match sender policies from external storage." alt="" coords="915,403,1095,429"/>
+<area shape="poly" id="edge24_Node000019_Node000020" title=" " alt="" coords="1109,418,1318,428,1313,430,1111,423"/>
+<area shape="poly" id="edge25_Node000003_Node000021" title=" " alt="" coords="1499,865,1584,846,1627,830,1667,810,1694,791,1718,767,1752,727,1756,724,1722,771,1697,795,1670,815,1629,835,1586,851,1501,870"/>
+<area shape="rect" id="Node000022" href="$struct_application_state.html" title="Authoritative workflow state owned by ApplicationFacade." alt="" coords="947,787,1063,813"/>
+<area shape="poly" id="edge33_Node000003_Node000022" title=" " alt="" coords="1078,791,1484,750,1668,727,1702,723,1697,725,1669,732,1485,755,1079,796"/>
+<area shape="poly" id="edge30_Node000021_Node000022" title=" " alt="" coords="1078,806,1175,820,1280,840,1358,865,1352,866,1278,846,1174,825,1079,811"/>
+<area shape="rect" id="Node000023" href="$struct_runtime_source_epoch.html" title="Identifies one activation generation of an online or playback source." alt="" coords="931,895,1079,921"/>
+<area shape="poly" id="edge31_Node000021_Node000023" title=" " alt="" coords="1094,906,1184,903,1279,897,1329,891,1324,893,1279,902,1184,909,1096,911"/>
+<area shape="rect" id="Node000024" href="$struct_runtime_request_id.html" title="Correlates an accepted command with exactly one typed completion." alt="" coords="311,238,442,264"/>
+<area shape="poly" id="edge32_Node000021_Node000024" title=" " alt="" coords="387,276,562,832,592,839,659,847,864,859,1305,875,1300,878,863,865,658,852,591,844,558,836,385,281"/>
+<area shape="rect" id="Node000026" href="$class_request_result_gate.html" title=" " alt="" coords="1318,504,1470,545"/>
+<area shape="poly" id="edge36_Node000026_Node000024" title=" " alt="" coords="401,272,471,329,514,358,561,382,610,395,693,410,918,443,1279,494,1320,504,1314,505,1279,499,917,449,692,415,608,400,559,387,512,362,468,333,402,277"/>
+<area shape="rect" id="Node000028" href="$struct_mapping_load_result.html" title="Completion payload for a mapping&#45;load request." alt="" coords="579,447,715,473"/>
+<area shape="poly" id="edge39_Node000028_Node000024" title=" " alt="" coords="381,276,391,323,408,376,435,428,454,451,476,469,509,482,545,484,580,480,614,472,610,475,581,485,545,490,508,487,474,474,450,454,431,431,403,378,386,324,380,282"/>
+<area shape="rect" id="Node000029" href="$class_request_result_gate.html" title=" " alt="" coords="1310,339,1477,379"/>
+<area shape="poly" id="edge41_Node000029_Node000024" title=" " alt="" coords="456,251,610,257,815,271,1046,294,1279,328,1315,337,1310,339,1279,334,1046,299,815,276,610,262,459,255"/>
+<area shape="rect" id="Node000031" href="$struct_ip_policy_change_result.html" title="Completion payload that retains the actually applied access policy." alt="" coords="572,346,723,372"/>
+<area shape="poly" id="edge44_Node000031_Node000024" title=" " alt="" coords="421,268,476,290,613,344,608,347,474,295,423,273"/>
+<area shape="rect" id="Node000032" href="$class_request_result_gate.html" title=" " alt="" coords="1312,64,1476,105"/>
+<area shape="poly" id="edge47_Node000032_Node000024" title=" " alt="" coords="396,225,431,192,474,162,497,152,516,148,560,143,771,116,982,99,1169,88,1313,85,1309,87,1169,94,982,104,772,121,560,148,517,153,498,157,476,167,434,196,401,228"/>
+<area shape="rect" id="Node000034" href="$struct_recording_save_result.html" title="Completion payload for a snapshot or final recording save." alt="" coords="573,18,721,44"/>
+<area shape="poly" id="edge50_Node000034_Node000024" title=" " alt="" coords="382,223,393,186,412,143,438,100,473,64,496,50,521,40,574,30,570,34,523,45,499,54,477,68,442,103,416,145,398,188,387,224"/>
+<area shape="rect" id="Node000035" href="$class_request_result_gate.html" title=" " alt="" coords="1309,173,1478,214"/>
+<area shape="poly" id="edge52_Node000035_Node000024" title=" " alt="" coords="406,227,438,206,474,188,516,175,560,170,711,155,829,152,1100,159,1190,157,1229,158,1279,163,1320,172,1315,174,1279,168,1229,163,1190,163,1100,164,829,158,711,160,560,175,517,181,476,193,441,211,410,230"/>
+<area shape="rect" id="Node000037" href="$struct_recording_reset_result.html" title="Completion payload for clearing the active recording transaction." alt="" coords="570,185,724,210"/>
+<area shape="poly" id="edge55_Node000037_Node000024" title=" " alt="" coords="455,233,580,209,576,213,459,237"/>
+<area shape="rect" id="Node000025" href="$class_ip_access_policy.html" title="Optional exact IP allow&#45;list used before packet decoding." alt="" coords="320,498,432,524"/>
+<area shape="poly" id="edge34_Node000003_Node000025" title=" " alt="" coords="447,513,734,534,778,534,813,531,847,534,888,549,896,556,901,564,905,571,912,577,991,612,1061,631,1125,638,1187,637,1319,627,1396,625,1485,632,1578,641,1618,648,1669,662,1708,678,1743,699,1738,699,1706,683,1667,667,1617,653,1577,647,1484,638,1396,631,1319,632,1187,642,1125,643,1060,636,989,617,909,582,900,574,896,566,892,559,885,553,846,539,813,537,778,539,734,539,449,518"/>
+<area shape="poly" id="edge45_Node000031_Node000025" title=" " alt="" coords="405,487,474,441,549,400,617,370,614,374,551,405,476,445,409,490"/>
+<area shape="poly" id="edge68_Node000043_Node000025" title=" " alt="" coords="382,537,402,624,435,744,459,811,488,878,522,944,562,1004,606,1057,647,1093,695,1120,759,1147,812,1166,857,1179,937,1191,1019,1193,1124,1197,1233,1201,1325,1197,1406,1187,1481,1171,1636,1128,1834,1076,1891,1065,1946,1050,2034,1017,2039,1015,1948,1055,1892,1070,1835,1082,1637,1133,1483,1176,1407,1192,1326,1202,1233,1206,1124,1202,1019,1198,936,1196,856,1184,810,1171,757,1152,693,1125,644,1097,603,1061,558,1007,517,946,483,881,454,813,430,746,397,625,382,542"/>
+<area shape="poly" id="edge35_Node000003_Node000026" title=" " alt="" coords="1485,519,1531,523,1579,532,1626,546,1670,569,1703,599,1730,635,1748,670,1760,700,1755,698,1744,673,1725,638,1700,602,1667,573,1624,551,1577,537,1530,528,1486,525"/>
+<area shape="rect" id="Node000027" title=" " alt="" coords="919,504,1091,545"/>
+<area shape="poly" id="edge37_Node000026_Node000027" title=" " alt="" coords="1106,522,1320,523,1315,525,1107,527"/>
+<area shape="poly" id="edge38_Node000027_Node000028" title=" " alt="" coords="730,469,887,495,921,503,916,505,886,500,732,474"/>
+<area shape="poly" id="edge40_Node000003_Node000029" title=" " alt="" coords="1492,350,1538,353,1585,362,1630,379,1670,405,1701,439,1724,479,1741,521,1752,565,1764,645,1765,701,1760,698,1758,645,1747,566,1736,523,1719,481,1696,442,1667,409,1628,383,1584,367,1537,358,1494,355"/>
+<area shape="rect" id="Node000030" title=" " alt="" coords="911,339,1099,379"/>
+<area shape="poly" id="edge42_Node000029_Node000030" title=" " alt="" coords="1113,356,1312,358,1307,360,1115,361"/>
+<area shape="poly" id="edge43_Node000030_Node000031" title=" " alt="" coords="737,357,913,357,909,360,740,361"/>
+<area shape="poly" id="edge46_Node000003_Node000032" title=" " alt="" coords="1491,97,1539,111,1587,131,1632,158,1671,195,1684,226,1698,281,1726,434,1763,700,1758,698,1721,435,1693,282,1679,227,1666,198,1629,163,1585,136,1537,116,1492,102"/>
+<area shape="rect" id="Node000033" title=" " alt="" coords="913,7,1097,47"/>
+<area shape="poly" id="edge48_Node000032_Node000033" title=" " alt="" coords="1111,39,1279,63,1314,70,1309,72,1279,68,1113,44"/>
+<area shape="poly" id="edge49_Node000033_Node000034" title=" " alt="" coords="735,28,914,26,910,30,738,32"/>
+<area shape="poly" id="edge51_Node000003_Node000035" title=" " alt="" coords="1493,215,1540,232,1588,255,1632,285,1670,323,1702,371,1726,424,1744,480,1755,535,1765,634,1765,700,1760,698,1760,634,1750,536,1738,481,1721,426,1698,374,1666,326,1629,289,1585,260,1538,237,1494,220"/>
+<area shape="rect" id="Node000036" title=" " alt="" coords="910,173,1100,214"/>
+<area shape="poly" id="edge53_Node000035_Node000036" title=" " alt="" coords="1114,191,1311,192,1306,195,1117,196"/>
+<area shape="poly" id="edge54_Node000036_Node000037" title=" " alt="" coords="738,194,912,193,907,196,741,199"/>
+<area shape="rect" id="Node000038" title=" " alt="" coords="2185,408,2367,449"/>
+<area shape="poly" id="edge56_Node000001_Node000038" title=" " alt="" coords="2287,461,2303,504,2324,552,2354,599,2372,619,2393,637,2434,659,2473,666,2512,665,2550,659,2588,653,2626,654,2664,665,2703,692,2718,712,2731,743,2752,822,2766,902,2773,962,2768,959,2760,903,2746,823,2726,745,2713,715,2699,695,2662,670,2625,659,2588,659,2551,664,2513,670,2473,672,2432,664,2390,641,2368,623,2350,602,2319,555,2298,506,2285,466"/>
+<area shape="rect" id="Node000039" href="$class_i_recording_file_dialog.html" title="User&#45;choice boundary for recording persistence and destructive actions." alt="" coords="1692,215,1835,241"/>
+<area shape="poly" id="edge57_Node000038_Node000039" title=" " alt="" coords="1850,219,1899,222,1947,231,1994,247,2041,268,2127,316,2200,365,2253,408,2247,407,2197,370,2124,321,2038,272,1992,252,1946,236,1898,227,1851,225"/>
+<area shape="poly" id="edge63_Node000042_Node000039" title=" " alt="" coords="1822,244,1948,285,1973,323,1994,379,2013,446,2029,518,2053,658,2065,751,2061,748,2048,658,2024,519,2008,447,1989,380,1968,326,1945,289,1823,249"/>
+<area shape="rect" id="Node000040" title=" " alt="" coords="2194,792,2358,833"/>
+<area shape="poly" id="edge58_Node000001_Node000040" title=" " alt="" coords="2373,826,2531,862,2618,890,2702,923,2733,940,2759,961,2754,960,2730,945,2700,928,2616,895,2529,868,2373,831"/>
+<area shape="rect" id="Node000041" href="$class_i_viewer_file_dialog.html" title="Selection&#45;only boundary for viewer input files; empty always means cancel." alt="" coords="1702,933,1825,958"/>
+<area shape="poly" id="edge59_Node000040_Node000041" title=" " alt="" coords="1840,927,2160,855,2171,846,2184,837,2195,834,2200,832,2186,841,2175,851,2162,860,1841,932"/>
+<area shape="poly" id="edge67_Node000043_Node000041" title=" " alt="" coords="1793,965,1825,985,1859,999,1921,1009,1984,1012,1979,1013,1920,1015,1858,1004,1822,990,1793,971"/>
+<area shape="poly" id="edge60_Node000001_Node000042" title=" " alt="" coords="2176,757,2260,759,2356,765,2456,779,2554,802,2600,817,2634,832,2666,852,2703,882,2741,922,2767,962,2762,960,2737,926,2700,886,2663,857,2631,837,2598,822,2553,807,2455,784,2355,770,2260,764,2177,762"/>
+<area shape="poly" id="edge102_Node000061_Node000042" title=" " alt="" coords="2137,780,2163,798,2173,817,2175,835,2176,851,2187,865,2209,880,2230,887,2250,889,2270,887,2315,883,2340,884,2368,890,2413,907,2451,930,2446,929,2410,912,2367,895,2339,889,2315,888,2271,893,2250,894,2229,892,2207,885,2183,869,2171,853,2169,835,2168,818,2159,802,2136,785"/>
+<area shape="poly" id="edge64_Node000001_Node000043" title=" " alt="" coords="2165,1000,2346,996,2553,989,2727,978,2722,979,2553,994,2346,1002,2166,1005"/>
+<area shape="poly" id="edge101_Node000061_Node000043" title=" " alt="" coords="2164,985,2185,982,2429,949,2424,950,2185,987,2166,990"/>
+<area shape="rect" id="Node000044" href="$class_lar_viewport.html" title="Stable viewport boundary for Grid, Mercator, and Sphere modes." alt="" coords="2427,1318,2518,1344"/>
+<area shape="poly" id="edge69_Node000001_Node000044" title=" " alt="" coords="2494,1304,2576,1220,2611,1191,2641,1171,2669,1150,2699,1118,2723,1083,2742,1046,2766,988,2770,985,2746,1048,2727,1085,2703,1121,2672,1154,2644,1175,2614,1195,2579,1224,2497,1309"/>
+<area shape="rect" id="Node000045" title=" " alt="" coords="1727,1262,1800,1288"/>
+<area shape="poly" id="edge70_Node000044_Node000045" title=" " alt="" coords="1815,1276,2429,1327,2424,1328,1815,1282"/>
+<area shape="rect" id="Node000050" href="$class_viewport_content_switch.html" title="Accessible LAR/Plane/DLZ content selector owned by the host." alt="" coords="1987,1226,2145,1252"/>
+<area shape="poly" id="edge80_Node000050_Node000045" title=" " alt="" coords="1814,1266,1989,1248,1983,1249,1815,1272"/>
+<area shape="rect" id="Node000058" href="$classdlz_1_1presentation_1_1_control_panel.html" title="Small interactive control surface for the mandatory toy model." alt="" coords="2003,1520,2128,1561"/>
+<area shape="poly" id="edge91_Node000058_Node000045" title=" " alt="" coords="1792,1296,1972,1456,2044,1520,2038,1519,1969,1460,1790,1301"/>
+<area shape="poly" id="edge95_Node000060_Node000045" title=" " alt="" coords="1813,1255,1833,1241,1841,1230,1844,1218,1848,1206,1857,1193,1897,1159,1941,1131,2023,1096,2028,1094,1944,1135,1900,1163,1861,1197,1853,1208,1849,1220,1846,1232,1837,1245,1815,1260"/>
+<area shape="poly" id="edge99_Node000061_Node000045" title=" " alt="" coords="1813,1254,1969,1191,2160,1105,2268,1053,2312,1027,2365,988,2377,974,2390,961,2424,950,2429,948,2393,965,2381,977,2369,992,2315,1031,2270,1058,2162,1109,1971,1196,1815,1259"/>
+<area shape="poly" id="edge71_Node000044_Node000046" title=" " alt="" coords="716,1466,849,1476,1004,1480,2067,1480,2154,1483,2223,1485,2255,1482,2288,1475,2325,1463,2366,1443,2398,1421,2425,1394,2461,1346,2466,1343,2429,1397,2401,1425,2369,1448,2327,1467,2290,1480,2256,1487,2223,1490,2154,1488,2067,1486,1004,1486,849,1481,717,1472"/>
+<area shape="poly" id="edge74_Node000044_Node000047" title=" " alt="" coords="1294,1144,1537,1138,1851,1140,2009,1147,2154,1161,2278,1182,2328,1195,2369,1211,2402,1234,2430,1263,2467,1319,2462,1317,2426,1266,2399,1238,2366,1216,2326,1200,2276,1187,2154,1166,2008,1153,1851,1145,1537,1143,1295,1149"/>
+<area shape="rect" id="Node000048" href="$class_i_lar_viewport_page.html" title="Common contract implemented by every viewport presentation page." alt="" coords="1701,1377,1826,1402"/>
+<area shape="poly" id="edge76_Node000044_Node000048" title=" " alt="" coords="1841,1381,2429,1334,2424,1335,1842,1386"/>
+<area shape="rect" id="Node000049" href="$class_i_earth_lar_viewport_page.html" title="Extra availability and mode operations required by Earth pages." alt="" coords="1988,1419,2144,1445"/>
+<area shape="poly" id="edge78_Node000049_Node000048" title=" " alt="" coords="1841,1398,1990,1421,1985,1421,1841,1403"/>
+<area shape="poly" id="edge77_Node000044_Node000049" title=" " alt="" coords="2159,1437,2208,1438,2261,1434,2315,1425,2366,1410,2394,1396,2419,1378,2457,1345,2462,1343,2423,1382,2397,1401,2368,1415,2316,1431,2261,1439,2208,1443,2159,1443"/>
+<area shape="poly" id="edge79_Node000044_Node000050" title=" " alt="" coords="2161,1237,2262,1246,2316,1256,2368,1270,2416,1291,2455,1318,2450,1317,2413,1296,2366,1275,2315,1261,2261,1252,2161,1242"/>
+<area shape="poly" id="edge81_Node000044_Node000051" title=" " alt="" coords="750,1587,1004,1595,1904,1595,2035,1597,2091,1591,2160,1570,2172,1562,2184,1553,2235,1534,2279,1527,2320,1517,2342,1507,2366,1492,2402,1455,2430,1413,2451,1373,2464,1346,2468,1342,2456,1376,2435,1416,2406,1459,2369,1496,2345,1512,2322,1522,2280,1532,2237,1539,2186,1557,2175,1566,2162,1575,2092,1596,2035,1603,1904,1600,1004,1600,750,1593"/>
+<area shape="rect" id="Node000052" href="$struct_viewport_camera_state.html" title="Renderer&#45;neutral camera anchor and bearing snapshot." alt="" coords="302,1610,451,1636"/>
+<area shape="poly" id="edge84_Node000051_Node000052" title=" " alt="" coords="466,1625,536,1619,577,1609,613,1598,618,1597,579,1614,536,1625,466,1630"/>
+<area shape="rect" id="Node000053" title=" " alt="" coords="5,1610,159,1636"/>
+<area shape="poly" id="edge85_Node000052_Node000053" title=" " alt="" coords="174,1620,303,1622,299,1624,175,1626"/>
+<area shape="rect" id="Node000054" href="$class_viewport_controls.html" title="Presents viewport choices and emits typed user requests." alt="" coords="2412,1673,2533,1698"/>
+<area shape="poly" id="edge86_Node000001_Node000054" title=" " alt="" coords="2548,1680,2588,1673,2629,1660,2667,1641,2699,1612,2713,1575,2727,1507,2748,1314,2762,1115,2770,989,2773,985,2767,1115,2753,1315,2732,1507,2719,1577,2704,1615,2670,1645,2631,1665,2589,1678,2548,1685"/>
+<area shape="rect" id="Node000055" title=" " alt="" coords="2021,1685,2110,1710"/>
+<area shape="poly" id="edge87_Node000054_Node000055" title=" " alt="" coords="2126,1693,2408,1687,2414,1687,2126,1699"/>
+<area shape="rect" id="Node000056" href="$class_values_panel.html" title="Owns construction and rendering of the right&#45;hand values/HUD column and Plane zone status." alt="" coords="2426,1566,2519,1592"/>
+<area shape="poly" id="edge88_Node000001_Node000056" title=" " alt="" coords="2483,1550,2519,1470,2545,1421,2575,1375,2609,1337,2640,1313,2670,1288,2699,1249,2717,1213,2731,1175,2752,1099,2763,1032,2769,989,2773,985,2769,1033,2757,1100,2736,1177,2722,1215,2704,1251,2674,1291,2644,1317,2612,1341,2579,1378,2550,1424,2524,1472,2486,1554"/>
+<area shape="rect" id="Node000057" title=" " alt="" coords="2032,1635,2100,1661"/>
+<area shape="poly" id="edge89_Node000056_Node000057" title=" " alt="" coords="2115,1637,2423,1587,2428,1587,2116,1643"/>
+<area shape="rect" id="Node000059" href="$class_metrics_panel.html" title="Owns telemetry indicator widgets and their presentation formatting." alt="" coords="2424,1618,2521,1644"/>
+<area shape="poly" id="edge93_Node000059_Node000057" title=" " alt="" coords="2116,1644,2367,1635,2420,1634,2426,1634,2367,1640,2116,1650"/>
+<area shape="poly" id="edge90_Node000056_Node000058" title=" " alt="" coords="2144,1545,2428,1575,2423,1575,2144,1550"/>
+<area shape="poly" id="edge92_Node000001_Node000059" title=" " alt="" coords="2535,1612,2552,1602,2606,1558,2643,1517,2670,1468,2699,1404,2721,1344,2737,1281,2759,1158,2768,1053,2771,989,2774,985,2773,1054,2764,1159,2743,1282,2726,1345,2704,1406,2675,1471,2647,1520,2610,1562,2555,1606,2536,1617"/>
+<area shape="poly" id="edge94_Node000001_Node000060" title=" " alt="" coords="2127,1074,2318,1055,2553,1023,2627,1010,2701,992,2727,988,2732,986,2702,998,2628,1015,2554,1029,2318,1060,2128,1079"/>
+<area shape="poly" id="edge98_Node000001_Node000061" title=" " alt="" coords="2533,946,2727,968,2722,969,2534,952"/>
+</map>

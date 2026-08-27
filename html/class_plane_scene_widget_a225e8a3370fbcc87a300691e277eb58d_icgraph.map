@@ -1,0 +1,39 @@
+<map id="PlaneSceneWidget::diagnosticRaised" name="PlaneSceneWidget::diagnosticRaised">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1280,468,1479,508"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#aa6cccb6ef7357cd1ef6c3760d183c15d" title=" " alt="" coords="502,533,707,558"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1278,512,1129,544,964,567,860,572,755,567,699,562,700,556,756,561,860,567,963,561,1128,539,1273,513"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a4a7bba43ba244905b278bc0de801b463" title=" " alt="" coords="1012,342,1232,368"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1322,460,1148,371,1149,366,1328,460"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="267,309,444,350"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="510,526,500,522,453,482,414,435,384,389,366,353,367,348,389,386,419,432,457,479,504,518,515,527"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,144,209,184"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="308,301,139,187,140,182,313,299"/>
+<area shape="poly" id="edge11_Node000005_Node000002" title=" " alt="" coords="1107,380,1083,416,1051,455,1011,493,965,522,901,545,834,557,768,561,707,560,707,555,767,556,833,552,900,540,962,518,1008,489,1047,452,1079,413,1102,383"/>
+<area shape="poly" id="edge24_Node000005_Node000003" title=" " alt="" coords="1077,373,1023,394,964,408,889,416,813,417,737,413,663,404,528,379,425,353,425,348,530,374,664,399,737,407,813,412,889,411,963,403,1021,389,1072,374"/>
+<area shape="poly" id="edge19_Node000005_Node000004" title=" " alt="" coords="1107,327,1087,285,1055,230,1014,176,989,152,962,132,869,77,784,39,703,17,625,9,544,12,459,26,364,48,257,77,222,90,189,108,135,145,131,142,186,103,220,86,256,72,363,43,458,21,544,7,625,3,704,12,785,34,871,72,965,127,993,148,1018,173,1060,228,1091,282,1112,329"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#abe802663afdff5d56c7bba1c6b07dc1c" title=" " alt="" coords="763,194,956,235"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1087,332,1031,297,962,258,918,238,918,233,965,254,1033,293,1092,333"/>
+<area shape="rect" id="Node000008" href="$class_plane_scene_widget.html#a605af179df470891b8fa7b2433ce23cc" title="Enables DTED terrain; loading and unavailable terrain remain visibly unclassified." alt="" coords="257,86,454,127"/>
+<area shape="poly" id="edge23_Node000005_Node000008" title=" " alt="" coords="1102,328,1079,297,1047,257,1007,218,962,185,900,155,834,132,765,115,696,104,565,96,455,99,454,94,565,91,697,99,766,110,835,126,902,150,965,180,1011,214,1051,254,1083,294,1107,330"/>
+<area shape="rect" id="Node000009" href="$class_plane_scene_widget.html#a7cb14c31a868d84d81a36418888be91c" title="Loads a user&#45;selected .gltf or .glb model." alt="" coords="760,468,959,508"/>
+<area shape="poly" id="edge12_Node000005_Node000009" title=" " alt="" coords="1091,376,1033,415,965,452,923,470,921,465,963,447,1030,410,1086,377"/>
+<area shape="rect" id="Node000011" href="$class_plane_scene_widget.html#ac76b6b824e201788b75bd17e8cd4b5c2" title=" " alt="" coords="755,317,964,342"/>
+<area shape="poly" id="edge15_Node000005_Node000011" title=" " alt="" coords="993,343,964,342,964,337,999,342"/>
+<area shape="rect" id="Node000012" href="$class_plane_scene_widget.html#a0e31234ca39d9854cca8a3aca8402244" title=" " alt="" coords="517,252,692,292"/>
+<area shape="poly" id="edge22_Node000005_Node000012" title=" " alt="" coords="1070,336,1020,321,963,307,893,295,821,286,693,277,692,272,822,281,893,289,964,301,1021,316,1075,336"/>
+<area shape="rect" id="Node000013" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title=" " alt="" coords="767,367,952,393"/>
+<area shape="poly" id="edge20_Node000005_Node000013" title=" " alt="" coords="993,367,953,374,952,368,999,366"/>
+<area shape="poly" id="edge10_Node000006_Node000003" title=" " alt="" coords="745,210,628,218,564,227,503,243,469,256,437,274,384,311,381,306,434,270,467,252,501,238,563,222,627,212,750,208"/>
+<area shape="rect" id="Node000007" href="$class_plane_scene_widget.html#a5c8242aec92b08254db217286a0b9194" title=" " alt="" coords="502,137,707,178"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="749,191,699,181,698,176,754,190"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="522,186,503,198,465,225,430,256,376,311,373,307,427,252,462,221,501,194,526,183"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="485,161,210,165,209,160,488,157"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="484,134,455,129,454,124,489,133"/>
+<area shape="poly" id="edge13_Node000009_Node000002" title=" " alt="" coords="754,512,666,535,665,529,749,513"/>
+<area shape="rect" id="Node000010" href="$class_plane_view_workspace.html#a6bffcd0d76b3d98afd81bc31230254f0" title=" " alt="" coords="526,468,683,508"/>
+<area shape="poly" id="edge14_Node000009_Node000010" title=" " alt="" coords="742,488,683,491,683,485,747,488"/>
+<area shape="poly" id="edge16_Node000011_Node000002" title=" " alt="" coords="762,350,757,357,742,376,735,396,734,437,733,480,725,501,709,522,691,534,690,529,705,518,721,499,728,479,729,437,730,395,737,374,753,353,757,352"/>
+<area shape="poly" id="edge18_Node000011_Node000003" title=" " alt="" coords="738,331,444,332,444,327,742,328"/>
+<area shape="poly" id="edge17_Node000011_Node000012" title=" " alt="" coords="781,313,693,295,693,289,787,312"/>
+<area shape="poly" id="edge21_Node000013_Node000003" title=" " alt="" coords="749,371,444,341,444,336,754,368"/>
+</map>

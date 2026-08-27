@@ -18,9 +18,11 @@
  * @brief Samples a logical DTED mosaic while loading only addressed tiles.
  *
  * Inputs are WGS84 latitude and longitude in radians; elevations are metres.
- * Bilinear interpolation ignores DTED void posts and
- * renormalizes the remaining weights. Land/water classification is deliberately
- * outside this class so all viewports can use one vector coastline source.
+ * Bilinear interpolation ignores DTED void posts and renormalizes the remaining
+ * weights. The returned elevation remains signed; a terrain consumer may convert
+ * negative water elevation into non-negative depth only after applying the shared
+ * vector land classification. Classification deliberately remains outside this
+ * class so all viewports can use one coastline source.
  *
  * Terrain cells are evicted least-recently-used when either the configured tile
  * count or byte budget is exceeded; the currently addressed tile is retained

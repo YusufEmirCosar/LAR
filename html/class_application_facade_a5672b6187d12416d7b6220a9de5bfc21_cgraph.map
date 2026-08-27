@@ -1,0 +1,10 @@
+<map id="ApplicationFacade::pauseRecording" name="ApplicationFacade::pauseRecording">
+<area shape="rect" id="Node000001" title="Pauses the active recording transaction." alt="" coords="5,39,142,79"/>
+<area shape="rect" id="Node000002" href="$class_i_recording_runtime.html#af8522e2290c4818dc0bf12fddb71648d" title=" " alt="" coords="208,5,349,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,45,195,39,190,41,143,50"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#a6f58372a5b0357529092761717b35cf9" title="Reports whether a recording persistence operation is pending." alt="" coords="190,71,367,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="142,67,177,74,172,75,142,72"/>
+<area shape="rect" id="Node000004" href="$recording__operation__state_8h.html#a434844ed2cfed8091ef202b256cd2024" title=" " alt="" coords="415,78,608,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="367,88,402,91,397,91,368,94"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="473,77,465,70,470,60,486,54,512,52,540,54,556,64,551,63,539,59,512,57,487,59,474,64,471,69,478,79"/>
+</map>

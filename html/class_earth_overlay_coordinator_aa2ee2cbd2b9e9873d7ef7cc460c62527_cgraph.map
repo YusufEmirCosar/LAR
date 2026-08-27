@@ -1,0 +1,31 @@
+<map id="EarthOverlayCoordinator::EarthOverlayCoordinator" name="EarthOverlayCoordinator::EarthOverlayCoordinator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,153,178,194"/>
+<area shape="rect" id="Node000002" href="$class_earth_overlay_coordinator.html#a9ea8f83160e4bef2a40fccd8294604df" title=" " alt="" coords="233,120,398,161"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,159,220,153,216,156,179,163"/>
+<area shape="rect" id="Node000005" href="$class_viewport_preparation_worker.html#ad377d90c3d519cc10d42bd97d6e26e00" title=" " alt="" coords="226,185,405,226"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="177,183,213,190,208,192,179,188"/>
+<area shape="rect" id="Node000003" href="$struct_lar_zone_mesh.html#a9527b635a503edee14d7c1eb492c52a0" title="Reports whether the zone mesh has no renderable geometry." alt="" coords="470,70,615,96"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="397,117,476,99,472,101,399,122"/>
+<area shape="rect" id="Node000004" href="$class_earth_overlay_coordinator.html#a99b84134c021f7b7840060dffc05563f" title=" " alt="" coords="460,120,625,161"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="397,146,448,148,443,150,398,152"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="457,133,413,134,412,129,462,131"/>
+<area shape="rect" id="Node000006" href="$class_viewport_preparation_worker.html#a70c6d90f31a6ec89cf2be630b2579331" title=" " alt="" coords="453,185,632,226"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="405,212,440,214,435,215,406,217"/>
+<area shape="poly" id="edge15_Node000006_Node000005" title=" " alt="" coords="450,198,421,199,420,194,455,196"/>
+<area shape="rect" id="Node000007" href="$class_lar_zone_mesh_builder.html#aeae61a0b50e2824ca5cb7b32318e8ec1" title=" " alt="" coords="680,185,821,226"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="632,203,667,205,662,206,633,208"/>
+<area shape="rect" id="Node000008" href="$class_lar_zone_mesh_assembler.html#aae0a8f54e733e9fde495ae3278b3558c" title=" " alt="" coords="869,5,1031,46"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="762,183,803,121,833,86,867,56,871,56,876,53,870,60,836,90,807,125,765,187"/>
+<area shape="rect" id="Node000012" href="$struct_lar_zone_mesh.html#a1488f156c2b7278aee0cf91aee91ed3b" title=" " alt="" coords="882,70,1018,96"/>
+<area shape="poly" id="edge9_Node000007_Node000012" title=" " alt="" coords="770,183,812,144,867,106,880,103,885,101,870,111,816,148,773,187"/>
+<area shape="rect" id="Node000013" href="$classlar_1_1map_1_1_map_camera.html#a6acfbc204d47a5532bd78de545c9523b" title=" " alt="" coords="876,120,1024,161"/>
+<area shape="poly" id="edge10_Node000007_Node000013" title=" " alt="" coords="814,182,869,167,874,165,815,187"/>
+<area shape="rect" id="Node000014" href="$classlar_1_1map_1_1_map_camera.html#af281b7b5f7a8ede8b9dac8bc355e3b72" title=" " alt="" coords="876,185,1024,226"/>
+<area shape="poly" id="edge11_Node000007_Node000014" title=" " alt="" coords="821,203,863,205,858,206,821,208"/>
+<area shape="rect" id="Node000015" href="$class_geodesic_zone_sampler.html#a3b238e9b4105132eff53432a2d213e25" title=" " alt="" coords="873,251,1026,291"/>
+<area shape="poly" id="edge12_Node000007_Node000015" title=" " alt="" coords="815,224,874,245,869,245,814,229"/>
+<area shape="rect" id="Node000018" href="$classlar_1_1map_1_1_map_camera.html#a60419fa91a41c629757c2a3a4cf9ac74" title="Returns (longitude, latitude) in geographic degrees." alt="" coords="876,316,1024,357"/>
+<area shape="poly" id="edge13_Node000007_Node000018" title=" " alt="" coords="774,224,817,262,870,301,881,309,876,308,867,305,814,266,772,229"/>
+<area shape="rect" id="Node000019" href="$class_lar_zone_input_validator.html#a6b122729b48ca9995d79faaf3dc4c447" title=" " alt="" coords="876,381,1024,422"/>
+<area shape="poly" id="edge14_Node000007_Node000019" title=" " alt="" coords="763,224,805,294,835,332,870,366,878,374,872,372,867,370,831,336,801,297,761,229"/>
+</map>

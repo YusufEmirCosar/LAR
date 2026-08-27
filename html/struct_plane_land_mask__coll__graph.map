@@ -1,0 +1,5 @@
+<map id="PlaneLandMask" name="PlaneLandMask">
+<area shape="rect" id="Node000001" title="Immutable south&#45;to&#45;north R8 land mask for one local metric patch." alt="" coords="22,117,136,143"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,153,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,60,82,117,76,116,77,63"/>
+</map>

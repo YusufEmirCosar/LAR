@@ -1,0 +1,13 @@
+<map id="ApplicationViewModel::setState" name="ApplicationViewModel::setState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="470,100,619,141"/>
+<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#ae2e076a6a4966d8ed697f54927c04e04" title=" " alt="" coords="241,5,422,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="489,93,421,61,392,49,392,44,423,57,494,93"/>
+<area shape="rect" id="Node000003" href="$class_application_view_model.html#aa8f875b1a6d90fd8d4f29f7ae97092ae" title=" " alt="" coords="257,71,406,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="452,108,407,104,407,99,457,108"/>
+<area shape="rect" id="Node000004" href="$class_main_window.html#af4ab95a87e410b5be4b4bd491b720e0d" title=" " alt="" coords="244,136,418,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="452,133,419,140,419,134,457,132"/>
+<area shape="rect" id="Node000005" href="$class_main_window.html#a7991d69512772d248e16fa0aefa0c121" title=" " alt="" coords="244,185,418,210"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="489,147,423,176,388,187,387,182,421,171,484,148"/>
+<area shape="rect" id="Node000006" href="$class_main_window.html#a1f7d2c56410fc1bfa135bb907d43313f" title=" " alt="" coords="5,185,193,210"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="226,198,193,200,193,195,231,198"/>
+</map>

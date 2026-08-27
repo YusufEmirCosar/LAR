@@ -1,0 +1,14 @@
+<map id="CubemapCatalog::displayName" name="CubemapCatalog::displayName">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1004,56,1210,82"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#a7db2f0682763423c65b643318d0d58f7" title=" " alt="" coords="738,56,956,82"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="985,69,956,71,956,66,990,69"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#ac76b6b824e201788b75bd17e8cd4b5c2" title=" " alt="" coords="482,56,690,82"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="720,69,691,71,691,66,725,69"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#aa6cccb6ef7357cd1ef6c3760d183c15d" title=" " alt="" coords="230,5,434,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="500,53,400,34,400,29,506,52"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="5,23,182,64"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="465,65,182,51,182,45,468,60"/>
+<area shape="rect" id="Node000007" href="$class_plane_scene_widget.html#a0e31234ca39d9854cca8a3aca8402244" title=" " alt="" coords="244,106,420,146"/>
+<area shape="poly" id="edge5_Node000003_Node000007" title=" " alt="" coords="514,85,420,109,419,104,508,86"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="212,32,183,37,181,32,216,30"/>
+</map>

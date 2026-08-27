@@ -1,0 +1,12 @@
+<map id="anonymous_namespace{dted_tile_source::cpp}::normalizedLongitudeDegrees" name="anonymous_namespace{dted_tile_source::cpp}::normalizedLongitudeDegrees">
+<area shape="rect" id="Node000001" title=" " alt="" coords="867,29,1064,85"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="1004,14,990,10,965,8,943,10,929,15,922,21,921,31,917,27,917,19,926,10,942,5,965,3,992,5,1009,15"/>
+<area shape="rect" id="Node000002" href="$class_dted_tile_source.html#a0fdda0cc9f7560a9fbf5f48b25dddd2c" title=" " alt="" coords="611,44,819,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="848,57,819,60,819,55,853,57"/>
+<area shape="rect" id="Node000003" href="$class_dted_mosaic_sampler.html#a6846daac445cde1ec6c433644309a5bd" title=" " alt="" coords="416,37,563,78"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="593,57,564,60,564,55,598,57"/>
+<area shape="rect" id="Node000004" href="$class_dted_mosaic_sampler.html#a9cad4de48229805ca1ee5dd471ecfd5e" title="Returns interpolated terrain elevation, or no value when no valid post contributes." alt="" coords="221,37,368,78"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="398,57,369,60,369,55,403,57"/>
+<area shape="rect" id="Node000005" href="$class_plane_terrain_patch_builder.html#a580df2736ddf2edbd9c6a4a6dafb1e14" title="Samples and triangulates one request, returning null when local terrain is absent." alt="" coords="5,37,173,78"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="202,57,173,60,173,55,208,57"/>
+</map>

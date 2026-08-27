@@ -1,0 +1,5 @@
+<map id="MappedPacketDecoder" name="MappedPacketDecoder">
+<area shape="rect" id="Node000001" title="Thin IPacketDecoder adapter around PacketMapping::decode()." alt="" coords="5,79,163,105"/>
+<area shape="rect" id="Node000002" href="$class_i_packet_decoder.html" title="Mutable decoder whose active PacketMapping can be replaced." alt="" coords="26,5,142,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,45,86,79,82,78,82,48"/>
+</map>

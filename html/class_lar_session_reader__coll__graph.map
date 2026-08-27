@@ -1,0 +1,11 @@
+<map id="LarSessionReader" name="LarSessionReader">
+<area shape="rect" id="Node000001" title="Validates a session once, checkpoints it sparsely, and decodes on demand." alt="" coords="216,102,344,128"/>
+<area shape="rect" id="Node000002" href="$class_i_session_reader.html" title="Loads, indexes, and decodes records without playback policy." alt="" coords="5,5,120,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,35,254,100,250,103,104,40"/>
+<area shape="rect" id="Node000003" href="$class_packet_mapping.html" title="Validated packet schema that decodes and encodes Plane/Target values." alt="" coords="144,5,256,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="221,41,272,102,267,101,219,45"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="280,5,442,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="353,44,331,80,302,104,300,99,327,76,348,46"/>
+<area shape="rect" id="Node000005" href="$class_session_timestamp.html" title="Exact, bounded, non&#45;negative session&#45;relative time in milliseconds." alt="" coords="466,5,600,31"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="507,39,474,62,437,80,391,96,345,106,344,101,389,90,435,76,471,58,502,41"/>
+</map>

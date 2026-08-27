@@ -1,0 +1,5 @@
+<map id="MappingLoadResult" name="MappingLoadResult">
+<area shape="rect" id="Node000001" title="Completion payload for a mapping&#45;load request." alt="" coords="5,102,142,128"/>
+<area shape="rect" id="Node000002" href="$struct_runtime_request_id.html" title="Correlates an accepted command with exactly one typed completion." alt="" coords="8,5,139,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,45,76,102,71,101,71,48"/>
+</map>

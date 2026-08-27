@@ -1,0 +1,14 @@
+<map id="src/viewer/viewport/geodesic_zone_sampler.h" name="src/viewer/viewport/geodesic_zone_sampler.h">
+<area shape="rect" id="Node000001" title="Bounded adaptive sampling of validated geographic LAR zones." alt="" coords="296,5,472,46"/>
+<area shape="rect" id="Node000002" href="$geodesic__zone__sampler_8cpp.html" title=" " alt="" coords="5,102,195,142"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="309,53,160,103,158,98,312,49"/>
+<area shape="rect" id="Node000003" href="$lar__parametric__zone__gpu__layer_8cpp.html" title=" " alt="" coords="218,94,360,150"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="356,56,318,95,315,91,351,58"/>
+<area shape="rect" id="Node000004" href="$lar__zone__mesh__assembler_8h.html" title="Bounded conversion from geodesic samples to indexed GPU geometry." alt="" coords="385,102,575,142"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="415,54,463,101,457,101,414,59"/>
+<area shape="rect" id="Node000006" href="$lar__zone__mesh__builder_8cpp.html" title=" " alt="" coords="521,198,703,238"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="487,37,542,57,567,73,589,92,604,117,613,146,616,199,611,195,607,147,599,120,585,96,564,77,540,62,487,42"/>
+<area shape="rect" id="Node000005" href="$lar__zone__mesh__assembler_8cpp.html" title=" " alt="" coords="292,198,497,238"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="455,152,414,200,411,195,450,155"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="521,149,587,198,582,197,519,154"/>
+</map>

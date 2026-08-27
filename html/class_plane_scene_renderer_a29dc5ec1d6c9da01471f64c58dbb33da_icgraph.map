@@ -1,0 +1,16 @@
+<map id="PlaneSceneRenderer::setModel" name="PlaneSceneRenderer::setModel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="981,63,1125,103"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#aa6cccb6ef7357cd1ef6c3760d183c15d" title=" " alt="" coords="481,13,685,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="965,58,932,54,804,38,686,31,686,25,805,33,933,48,971,58"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a7cb14c31a868d84d81a36418888be91c" title="Loads a user&#45;selected .gltf or .glb model." alt="" coords="733,63,933,103"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="963,83,933,86,933,80,968,83"/>
+<area shape="rect" id="Node000007" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title=" " alt="" coords="761,128,905,169"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="970,108,905,130,904,125,965,109"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="257,5,433,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="463,26,434,28,433,23,468,25"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,5,209,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="239,27,210,28,209,23,244,25"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="724,59,642,42,643,36,729,59"/>
+<area shape="rect" id="Node000006" href="$class_plane_view_workspace.html#a6bffcd0d76b3d98afd81bc31230254f0" title=" " alt="" coords="505,63,661,103"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="715,83,662,86,662,80,720,83"/>
+</map>

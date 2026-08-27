@@ -1,0 +1,19 @@
+<map id="lar::map::EarthMapWidget::setFlatZoom" name="lar::map::EarthMapWidget::setFlatZoom">
+<area shape="rect" id="Node000001" title="Applies the flat&#45;camera zoom after MapCamera validation and clamping." alt="" coords="5,71,179,111"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_camera.html#a41fe087c1540bbcefa4f64ea318eea6b" title=" " alt="" coords="240,5,387,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,68,230,50,225,52,164,73"/>
+<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_map_camera.html#a90b04c6402f57d212b0d56789e29b210" title=" " alt="" coords="240,71,387,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,88,227,90,221,92,180,94"/>
+<area shape="rect" id="Node000010" href="$classlar_1_1map_1_1_earth_map_widget.html#a4b185401cc64c6657d7c174621296c67" title=" " alt="" coords="227,136,400,177"/>
+<area shape="poly" id="edge8_Node000001_Node000010" title=" " alt="" coords="163,109,230,130,225,132,163,115"/>
+<area shape="rect" id="Node000004" href="$classlar_1_1map_1_1_map_camera.html#a7b051361862a20132feef31029587881" title=" " alt="" coords="448,71,620,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="387,88,435,91,430,91,388,94"/>
+<area shape="rect" id="Node000005" href="$classlar_1_1map_1_1_map_camera.html#a699e33e0cbd4dca626c0dfff694efced" title=" " alt="" coords="674,37,838,78"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="620,75,662,72,656,73,621,81"/>
+<area shape="rect" id="Node000007" href="$classlar_1_1map_1_1_map_camera.html#acd6f80d79badd22c058d5f60efc95f83" title=" " alt="" coords="668,103,844,143"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="621,101,655,108,650,108,621,106"/>
+<area shape="rect" id="Node000006" href="$classlar_1_1map_1_1_map_camera.html#a7079b884e2e9dead87376cbd91f8f774" title=" " alt="" coords="898,37,1045,78"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="838,55,885,57,879,58,838,60"/>
+<area shape="rect" id="Node000008" href="$classlar_1_1map_1_1_map_projection.html#ae51b77201c9b343a098d386577f31c0c" title=" " alt="" coords="892,103,1051,143"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="844,120,879,123,873,123,844,126"/>
+</map>

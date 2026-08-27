@@ -23,19 +23,17 @@ void setError(QString *destination, const QString &message) {
 
 bool validRequest(const PlaneTerrainBuildRequest &request) noexcept {
     constexpr double HalfPi = LarProjection::Pi * 0.5;
-    const bool validProjectionOrigin =
-        std::isnan(request.projectionOriginLatitudeRadians) ||
-        (std::isfinite(request.projectionOriginLatitudeRadians) &&
-         request.projectionOriginLatitudeRadians >= -HalfPi &&
-         request.projectionOriginLatitudeRadians <= HalfPi);
+    const bool validProjectionOrigin = std::isnan(request.projectionOriginLatitudeRadians) ||
+                                       (std::isfinite(request.projectionOriginLatitudeRadians) &&
+                                        request.projectionOriginLatitudeRadians >= -HalfPi &&
+                                        request.projectionOriginLatitudeRadians <= HalfPi);
     return std::isfinite(request.latitudeRadians) && request.latitudeRadians >= -HalfPi &&
            request.latitudeRadians <= HalfPi && std::isfinite(request.longitudeRadians) &&
            request.longitudeRadians >= -LarProjection::Pi &&
            request.longitudeRadians <= LarProjection::Pi &&
            std::isfinite(request.halfExtentMeters) &&
            request.halfExtentMeters >= MinimumHalfExtentMeters &&
-           request.halfExtentMeters <= MaximumHalfExtentMeters &&
-           validProjectionOrigin &&
+           request.halfExtentMeters <= MaximumHalfExtentMeters && validProjectionOrigin &&
            std::isfinite(request.metersPerSceneUnit) && request.metersPerSceneUnit > 0.0 &&
            request.resolution >= MinimumResolution && request.resolution <= MaximumResolution;
 }
@@ -55,8 +53,7 @@ PlaneTerrainPatchBuilder::PlaneTerrainPatchBuilder(QString dtedRootDirectory,
 PlaneTerrainPatchBuilder::PlaneTerrainPatchBuilder(DtedDataset dataset,
                                                    lar::map::MapLandIndex landIndex)
     : m_sampler(DtedTileSource(std::move(dataset.rootDirectory), dataset.level)),
-      m_landMaskBuilder(std::move(landIndex)),
-      m_level(dataset.level) {}
+      m_landMaskBuilder(std::move(landIndex)), m_level(dataset.level) {}
 
 PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequest &request,
                                                      QString *errorMessage,
@@ -75,13 +72,12 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
     const double sampleSpacing =
         request.halfExtentMeters * 2.0 / static_cast<double>(resolution - 1);
     const double anchorPosition[3]{request.latitudeRadians, request.longitudeRadians, 0.0};
-    const double projectionOriginLatitude =
-        std::isfinite(request.projectionOriginLatitudeRadians)
-            ? request.projectionOriginLatitudeRadians
-            : request.latitudeRadians;
-    PlaneLandMask landMask = m_landMaskBuilder.build(
-        request.latitudeRadians, request.longitudeRadians, projectionOriginLatitude,
-        request.halfExtentMeters, cancelled);
+    const double projectionOriginLatitude = std::isfinite(request.projectionOriginLatitudeRadians)
+                                                ? request.projectionOriginLatitudeRadians
+                                                : request.latitudeRadians;
+    PlaneLandMask landMask =
+        m_landMaskBuilder.build(request.latitudeRadians, request.longitudeRadians,
+                                projectionOriginLatitude, request.halfExtentMeters, cancelled);
     if (!landMask.valid()) {
         setError(errorMessage,
                  cancelled && cancelled()
@@ -155,8 +151,7 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
     patch->metersPerSceneUnit = request.metersPerSceneUnit;
     patch->minimumElevationMeters = minimumElevation;
     patch->maximumElevationMeters = maximumElevation;
-    patch->centerElevationMeters =
-        water[centerOffset] != 0U ? 0.0 : elevations[centerOffset];
+    patch->centerElevationMeters = water[centerOffset] != 0U ? 0.0 : elevations[centerOffset];
     patch->maximumWaterDepthMeters = maximumWaterDepth;
     patch->validSampleCount = validSamples;
     patch->waterSampleCount = waterSamples;
@@ -171,17 +166,13 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
             const double center = elevations[index];
             const auto usableNeighbor = [&valid, &water, index, resolution](int neighborRow,
                                                                             int neighborColumn) {
-                const std::size_t neighbor =
-                    vertexIndex(neighborRow, neighborColumn, resolution);
+                const std::size_t neighbor = vertexIndex(neighborRow, neighborColumn, resolution);
                 return valid[neighbor] != 0U && water[neighbor] == water[index];
             };
-            const int leftColumn = column > 0 && usableNeighbor(row, column - 1)
-                                       ? column - 1
-                                       : column;
+            const int leftColumn =
+                column > 0 && usableNeighbor(row, column - 1) ? column - 1 : column;
             const int rightColumn =
-                column + 1 < resolution && usableNeighbor(row, column + 1)
-                    ? column + 1
-                    : column;
+                column + 1 < resolution && usableNeighbor(row, column + 1) ? column + 1 : column;
             const int southRow = row > 0 && usableNeighbor(row - 1, column) ? row - 1 : row;
             const int northRow =
                 row + 1 < resolution && usableNeighbor(row + 1, column) ? row + 1 : row;

@@ -1,0 +1,36 @@
+<map id="PlaneSceneWidget::setDiagnostic" name="PlaneSceneWidget::setDiagnostic">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1012,316,1232,342"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#abe802663afdff5d56c7bba1c6b07dc1c" title=" " alt="" coords="763,186,956,227"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1085,307,1030,276,963,242,932,230,932,225,965,237,1032,271,1090,308"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,143,209,184"/>
+<area shape="poly" id="edge17_Node000001_Node000004" title=" " alt="" coords="1106,301,1084,263,1053,214,1012,166,988,144,962,126,867,73,782,38,701,16,623,9,543,12,458,26,364,48,257,77,222,90,189,108,135,145,131,141,186,103,220,85,256,72,362,43,457,21,543,7,623,3,702,11,783,32,870,69,965,121,991,140,1015,162,1057,211,1089,260,1111,303"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a605af179df470891b8fa7b2433ce23cc" title="Enables DTED terrain; loading and unavailable terrain remain visibly unclassified." alt="" coords="257,86,454,127"/>
+<area shape="poly" id="edge21_Node000001_Node000005" title=" " alt="" coords="1100,303,1044,240,1006,205,962,177,899,149,832,127,764,112,695,103,564,96,455,99,454,94,564,90,695,97,765,107,834,122,901,144,965,172,1009,201,1048,236,1105,304"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="267,309,444,349"/>
+<area shape="poly" id="edge22_Node000001_Node000006" title=" " alt="" coords="1099,351,1040,401,1004,425,965,443,838,490,784,505,733,514,681,516,627,510,568,495,501,471,458,447,420,414,390,380,369,352,371,347,394,377,424,411,461,443,503,467,569,490,628,505,681,511,732,509,783,500,836,485,963,439,1001,420,1037,397,1094,354"/>
+<area shape="rect" id="Node000007" href="$class_plane_scene_widget.html#aa6cccb6ef7357cd1ef6c3760d183c15d" title=" " alt="" coords="502,316,707,342"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="994,330,707,332,707,326,999,328"/>
+<area shape="rect" id="Node000008" href="$class_plane_scene_widget.html#a7cb14c31a868d84d81a36418888be91c" title="Loads a user&#45;selected .gltf or .glb model." alt="" coords="760,251,959,292"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="1042,312,956,295,956,290,1047,312"/>
+<area shape="rect" id="Node000010" href="$class_plane_scene_widget.html#ac76b6b824e201788b75bd17e8cd4b5c2" title=" " alt="" coords="755,367,964,392"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="1034,346,930,369,929,364,1039,345"/>
+<area shape="rect" id="Node000011" href="$class_plane_scene_widget.html#a0e31234ca39d9854cca8a3aca8402244" title=" " alt="" coords="517,417,692,457"/>
+<area shape="poly" id="edge20_Node000001_Node000011" title=" " alt="" coords="1089,349,1031,382,964,408,894,423,822,433,693,441,693,435,822,428,893,418,963,402,1029,377,1084,351"/>
+<area shape="rect" id="Node000012" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title=" " alt="" coords="767,532,952,558"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="1107,354,1084,392,1051,435,1011,478,965,515,924,534,923,529,962,511,1007,474,1047,432,1079,389,1103,357"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#a5c8242aec92b08254db217286a0b9194" title=" " alt="" coords="502,137,707,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="745,185,708,180,708,174,750,184"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="745,205,628,215,564,226,503,242,469,256,437,274,384,310,381,306,434,269,467,251,501,237,563,220,627,210,750,203"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="485,161,210,165,209,160,488,156"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="484,134,455,129,454,124,489,132"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="522,185,503,198,465,225,430,255,376,310,373,306,427,251,462,221,501,193,526,182"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="308,301,139,187,140,182,313,298"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="484,330,444,332,443,326,489,328"/>
+<area shape="poly" id="edge11_Node000008_Node000007" title=" " alt="" coords="749,297,666,318,665,313,754,295"/>
+<area shape="rect" id="Node000009" href="$class_plane_view_workspace.html#a6bffcd0d76b3d98afd81bc31230254f0" title=" " alt="" coords="526,251,683,292"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="742,272,684,274,683,269,747,271"/>
+<area shape="poly" id="edge16_Node000010_Node000006" title=" " alt="" coords="737,375,624,369,502,357,444,348,444,343,502,352,625,364,743,374"/>
+<area shape="poly" id="edge14_Node000010_Node000007" title=" " alt="" coords="774,363,673,345,673,340,779,363"/>
+<area shape="poly" id="edge15_Node000010_Node000011" title=" " alt="" coords="787,396,694,420,692,415,781,397"/>
+<area shape="poly" id="edge19_Node000012_Node000006" title=" " alt="" coords="754,557,692,560,627,554,562,540,501,515,475,499,452,479,413,434,383,388,365,352,367,347,388,385,417,430,456,475,479,495,503,511,563,535,628,549,692,554,749,557"/>
+</map>

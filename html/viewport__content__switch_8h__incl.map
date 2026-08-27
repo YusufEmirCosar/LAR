@@ -1,0 +1,7 @@
+<map id="src/viewer/viewport/viewport_content_switch.h" name="src/viewer/viewport/viewport_content_switch.h">
+<area shape="rect" id="Node000001" title="Accessible three&#45;way widget for selecting viewport content." alt="" coords="68,5,249,46"/>
+<area shape="rect" id="Node000002" href="$viewport__content__mode_8h.html" title="Top&#45;level selection between geographic LAR, Plane, and DLZ content." alt="" coords="5,94,171,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,45,115,84,112,80,140,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="194,102,267,127"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,44,214,90,208,89,174,49"/>
+</map>

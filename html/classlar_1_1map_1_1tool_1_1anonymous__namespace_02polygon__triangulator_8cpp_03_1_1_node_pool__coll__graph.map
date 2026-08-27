@@ -1,0 +1,10 @@
+<map id="lar::map::tool::anonymous_namespace{polygon_triangulator.cpp}::NodePool" name="lar::map::tool::anonymous_namespace{polygon_triangulator.cpp}::NodePool">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1024,73,1268,128"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="672,65,915,136"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="931,98,1027,100,1021,101,931,103"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="320,65,563,136"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="579,98,674,100,669,101,579,103"/>
+<area shape="rect" id="Node000004" href="$structlar_1_1map_1_1tool_1_1anonymous__namespace_02polygon__triangulator_8cpp_03_1_1_ring_node.html" title=" " alt="" coords="5,73,249,128"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="264,98,322,100,316,101,265,103"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="100,55,110,49,127,46,142,48,153,54,158,62,158,74,154,71,153,64,149,58,140,53,127,51,112,54,103,60"/>
+</map>

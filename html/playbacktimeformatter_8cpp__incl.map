@@ -1,0 +1,20 @@
+<map id="src/viewer/playbacktimeformatter.cpp" name="src/viewer/playbacktimeformatter.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="271,5,509,31"/>
+<area shape="rect" id="Node000002" href="$playbacktimeformatter_8h.html" title="Presentation&#45;only formatting of playback time and slider values." alt="" coords="220,79,422,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="381,29,345,70,341,66,377,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="229,330,301,356"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="403,29,422,51,437,78,456,136,467,185,467,208,463,232,453,257,436,284,412,308,381,325,348,335,317,341,316,336,347,330,379,320,409,304,432,280,448,254,458,231,462,208,462,185,451,137,432,80,418,54,402,34"/>
+<area shape="rect" id="Node000003" href="$session__timestamp_8h.html" title="Exact validated session&#45;relative timestamp value object." alt="" coords="171,153,303,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,103,270,144,267,140,306,107"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="327,160,392,186"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="328,103,350,147,344,146,326,108"/>
+<area shape="rect" id="Node000004" href="$session__limits_8h.html" title="Shared resource and duration bounds for the LAR1 session format." alt="" coords="5,241,138,282"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="197,196,124,236,121,232,201,192"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="162,249,250,274"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="232,192,218,236,213,233,228,196"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="275,249,332,274"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="253,191,288,237,282,236,251,196"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="356,249,422,274"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="272,191,357,240,352,241,271,196"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="120,280,224,322,219,325,119,285"/>
+</map>

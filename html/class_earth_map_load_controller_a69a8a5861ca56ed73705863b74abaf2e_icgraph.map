@@ -1,0 +1,11 @@
+<map id="EarthMapLoadController::loadStarted" name="EarthMapLoadController::loadStarted">
+<area shape="rect" id="Node000001" title="Processes load started." alt="" coords="747,27,909,68"/>
+<area shape="rect" id="Node000002" href="$class_earth_lar_view.html#a7eb84ed5ba23f7d30ed5ac72308d4448" title=" " alt="" coords="514,5,699,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="729,35,700,33,700,28,735,35"/>
+<area shape="rect" id="Node000003" href="$class_earth_map_load_controller.html#aa637a2913d0a72eeb99db6cc5c2161dd" title=" " alt="" coords="526,55,687,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="735,59,688,68,688,63,729,60"/>
+<area shape="rect" id="Node000004" href="$class_earth_lar_view.html#a4398ca72f93f3a543e78521db1f21b05" title=" " alt="" coords="253,63,466,88"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="508,76,467,78,467,73,513,75"/>
+<area shape="rect" id="Node000005" href="$class_earth_lar_view.html#a6098f3b13187ad90dc53f0591494515d" title=" " alt="" coords="5,63,205,88"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="234,76,205,78,205,73,240,75"/>
+</map>

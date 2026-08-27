@@ -1,0 +1,9 @@
+<map id="ThreadedApplicationRuntime::discardRecording" name="ThreadedApplicationRuntime::discardRecording">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,194,111"/>
+<area shape="rect" id="Node000002" href="$class_i_application_runtime.html#a8a335e653e0be8326f22b4d50759f8f7" title=" " alt="" coords="268,5,406,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,68,255,47,250,50,177,73"/>
+<area shape="rect" id="Node000003" href="$class_threaded_application_runtime.html#ad530b695a592a1f433fdb2214dd9b0ee" title=" " alt="" coords="242,71,432,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,88,229,90,224,92,195,94"/>
+<area shape="rect" id="Node000004" href="$class_i_application_runtime.html#a01f646d011f811a4eb6b1ac3faae60ec" title=" " alt="" coords="268,136,406,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="176,109,255,133,250,134,175,115"/>
+</map>

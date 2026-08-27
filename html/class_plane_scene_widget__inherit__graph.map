@@ -1,0 +1,5 @@
+<map id="PlaneSceneWidget" name="PlaneSceneWidget">
+<area shape="rect" id="Node000001" title="Loads packaged Plane assets and renders one orbit&#45;controlled simulation canvas." alt="" coords="5,79,138,105"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="12,5,131,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,45,74,79,69,78,70,48"/>
+</map>

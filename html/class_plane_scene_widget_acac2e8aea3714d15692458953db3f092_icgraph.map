@@ -1,0 +1,20 @@
+<map id="PlaneSceneWidget::updateTerrainPlacement" name="PlaneSceneWidget::updateTerrainPlacement">
+<area shape="rect" id="Node000001" title=" " alt="" coords="999,133,1178,173"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#abe802663afdff5d56c7bba1c6b07dc1c" title=" " alt="" coords="756,75,950,116"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="985,128,939,119,940,114,990,129"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="267,90,444,131"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="982,149,444,118,444,113,985,144"/>
+<area shape="rect" id="Node000007" href="$class_plane_scene_widget.html#a6387f9c3b66f950945e37e615318d0e1" title=" " alt="" coords="755,190,951,231"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="990,177,940,192,939,187,985,178"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#a5c8242aec92b08254db217286a0b9194" title=" " alt="" coords="502,25,707,65"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="739,73,707,68,708,63,744,73"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="739,100,444,110,444,105,744,98"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,29,209,69"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="503,21,454,16,355,8,257,15,181,30,179,25,256,10,355,3,454,10,508,20"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a605af179df470891b8fa7b2433ce23cc" title="Enables DTED terrain; loading and unavailable terrain remain visibly unclassified." alt="" coords="257,25,454,65"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="484,45,455,47,454,42,489,44"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="507,70,436,92,435,87,512,69"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="253,87,192,72,192,67,258,85"/>
+<area shape="rect" id="Node000008" href="$class_plane_view_workspace.html#a2ea39e4580b3c81fceabb56b8e829ed7" title=" " alt="" coords="530,190,679,231"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="737,210,680,213,679,208,743,210"/>
+</map>

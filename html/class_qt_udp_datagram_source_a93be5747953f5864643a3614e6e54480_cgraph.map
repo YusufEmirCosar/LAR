@@ -1,0 +1,17 @@
+<map id="QtUdpDatagramSource::start" name="QtUdpDatagramSource::start">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,136,163,177"/>
+<area shape="rect" id="Node000002" href="$class_qt_udp_datagram_source.html#aa820ca3974584a3afe1a6965ae680d7e" title="Reads pending datagrams." alt="" coords="219,71,384,112"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,134,219,115,215,118,155,138"/>
+<area shape="rect" id="Node000006" href="$class_qt_udp_datagram_source.html#a73ee2263be5d97dea69bfe5b4eb13e6f" title="Closes the transport; repeated calls are safe." alt="" coords="223,136,380,177"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="163,154,210,156,205,158,163,159"/>
+<area shape="rect" id="Node000007" href="$class_i_datagram_source.html#a6a72d9ac9325ae1e13513b5a3484d6c0" title=" " alt="" coords="211,202,393,242"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="154,175,220,196,215,197,154,180"/>
+<area shape="poly" id="edge6_Node000002_Node000002" title=" " alt="" coords="261,70,259,61,265,52,280,47,302,45,325,47,341,55,336,56,324,52,302,50,281,52,269,56,264,62,266,71"/>
+<area shape="rect" id="Node000003" href="$class_ip_access_policy.html#abe6eaca849efd2f977cce8ec25180367" title=" " alt="" coords="450,5,617,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="357,68,440,40,466,35,461,37,442,45,359,73"/>
+<area shape="rect" id="Node000004" href="$qt__ip__address__normalizer_8cpp.html#a354a4fa14cb86712651a806de8372f12" title=" " alt="" coords="466,79,601,104"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="384,89,453,91,448,92,385,94"/>
+<area shape="rect" id="Node000005" href="$class_i_datagram_source.html#ad964bf821e34eb02c300064fddf4b80e" title="Notifies observers that a datagram was received." alt="" coords="441,128,626,169"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="385,109,436,124,431,124,385,115"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="495,78,488,70,492,60,508,54,534,52,562,55,578,64,573,64,561,60,534,57,509,59,496,64,493,69,500,79"/>
+</map>

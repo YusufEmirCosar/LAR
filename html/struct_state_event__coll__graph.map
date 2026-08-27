@@ -1,0 +1,13 @@
+<map id="StateEvent" name="StateEvent">
+<area shape="rect" id="Node000001" title="One atomic decoded frame tagged with its producing source epoch." alt="" coords="72,199,159,224"/>
+<area shape="rect" id="Node000002" href="$struct_runtime_source_epoch.html" title="Identifies one activation generation of an online or playback source." alt="" coords="5,102,154,128"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,140,114,198,108,198,88,144"/>
+<area shape="rect" id="Node000003" href="$struct_decoded_state.html" title="One validated mapped frame and its field&#45;availability mask." alt="" coords="178,102,282,128"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,137,132,200,129,196,201,138"/>
+<area shape="rect" id="Node000004" href="$struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft." alt="" coords="123,5,177,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="164,42,188,76,215,101,210,102,184,80,162,47"/>
+<area shape="rect" id="Node000005" href="$struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters." alt="" coords="202,5,259,31"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="232,44,233,102,228,100,229,48"/>
+<area shape="rect" id="Node000006" href="$structdlz_1_1_telemetry_inputs.html" title="The three packet/replay inputs consumed by the DLZ workspace." alt="" coords="283,5,422,31"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="327,40,278,80,248,104,245,99,275,76,323,42"/>
+</map>

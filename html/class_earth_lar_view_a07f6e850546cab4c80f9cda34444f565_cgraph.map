@@ -1,0 +1,12 @@
+<map id="EarthLarView::requestOverlayPreparation" name="EarthLarView::requestOverlayPreparation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,51,201,91"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_earth_map_widget.html#a59f43f7b7adc4e0aab4cd7467709479f" title=" " alt="" coords="249,5,422,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,49,236,45,231,46,202,54"/>
+<area shape="rect" id="Node000003" href="$class_earth_overlay_coordinator.html#aedf8cc2051f858c3b4f1b1dd7701d978" title=" " alt="" coords="253,95,418,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,87,241,96,235,97,201,92"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="293,93,291,85,298,76,313,70,335,68,360,70,376,79,370,79,358,76,335,73,314,75,301,80,296,86,298,95"/>
+<area shape="rect" id="Node000004" href="$class_viewport_preparation_worker.html#a94eb1c1152292149a523977b8b19489b" title=" " alt="" coords="470,95,649,135"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="418,112,457,115,452,115,418,118"/>
+<area shape="rect" id="Node000005" href="$class_viewport_preparation_worker.html#a0cd67140363a9ea0c52348543e447ae4" title="Posts one coalesced, argument&#45;free worker wake&#45;up." alt="" coords="697,95,877,135"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="650,112,684,115,679,115,650,118"/>
+</map>

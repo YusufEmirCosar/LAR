@@ -1,0 +1,9 @@
+<map id="SessionLoadResult" name="SessionLoadResult">
+<area shape="rect" id="Node000001" title="Completion payload for loading and indexing a playback session." alt="" coords="167,102,302,128"/>
+<area shape="rect" id="Node000002" href="$struct_runtime_request_id.html" title="Correlates an accepted command with exactly one typed completion." alt="" coords="5,5,136,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,37,216,100,211,103,104,42"/>
+<area shape="rect" id="Node000003" href="$struct_runtime_source_epoch.html" title="Identifies one activation generation of an online or playback source." alt="" coords="160,5,309,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,45,237,103,232,100,233,48"/>
+<area shape="rect" id="Node000004" href="$class_session_timestamp.html" title="Exact, bounded, non&#45;negative session&#45;relative time in milliseconds." alt="" coords="333,5,466,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="368,39,257,104,255,99,363,39"/>
+</map>

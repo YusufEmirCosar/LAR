@@ -1,0 +1,25 @@
+<map id="RecordingService::recordingError" name="RecordingService::recordingError">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,193,191,234"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="52,192,49,183,57,174,73,169,98,167,125,169,142,177,137,178,123,174,98,172,74,174,60,179,55,184,57,193"/>
+<area shape="rect" id="Node000002" href="$class_recording_service.html#a5f8da97e34dd808d9f5819e0a02af42f" title=" " alt="" coords="254,127,436,153"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="168,190,287,156,282,159,170,195"/>
+<area shape="rect" id="Node000006" href="$class_recording_service.html#ac724bb3c7302c41ba74c9b686e8c1641" title=" " alt="" coords="542,202,703,228"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="191,211,527,212,526,217,191,216"/>
+<area shape="rect" id="Node000007" href="$class_recording_service.html#a92e22198dc632de37f055bfb0ab14889" title=" " alt="" coords="239,251,451,277"/>
+<area shape="poly" id="edge12_Node000001_Node000007" title=" " alt="" coords="191,230,266,247,261,248,191,235"/>
+<area shape="rect" id="Node000003" href="$class_recording_service.html#a26fbbe76f509ced7c5d86231d2cbdfc3" title=" " alt="" coords="802,30,988,56"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="356,125,413,73,453,45,498,24,541,13,585,6,674,4,758,11,829,26,824,26,757,17,674,9,586,12,542,18,500,29,456,50,416,77,360,129"/>
+<area shape="rect" id="Node000004" href="$class_recording_service.html#a9e5faab16b85d3ddc1c95f67cc72d642" title=" " alt="" coords="794,103,996,129"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="436,134,782,120,777,122,436,139"/>
+<area shape="rect" id="Node000005" href="$class_recording_service.html#ad78c4b9e8ae3320196e181369a6123ea" title=" " alt="" coords="530,63,715,103"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="410,124,517,104,512,106,411,129"/>
+<area shape="poly" id="edge9_Node000002_Node000006" title=" " alt="" coords="396,151,560,197,554,198,395,156"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="715,67,790,58,785,59,716,72"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="716,92,781,102,776,102,716,97"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="572,61,569,52,578,43,596,38,623,36,652,38,671,47,666,47,651,43,623,41,597,43,580,48,574,54,577,63"/>
+<area shape="poly" id="edge10_Node000006_Node000006" title=" " alt="" coords="577,201,569,193,574,183,593,177,623,175,657,178,675,189,670,188,656,183,623,181,594,183,578,188,574,193,583,202"/>
+<area shape="rect" id="Node000008" href="$class_session_timestamp.html#a59bee783a1170ffe8f4e7d323ef5d477" title="Converts monotonic nanoseconds using nearest&#45;millisecond rounding." alt="" coords="499,251,746,277"/>
+<area shape="poly" id="edge13_Node000007_Node000008" title=" " alt="" coords="451,262,486,264,481,264,451,267"/>
+<area shape="rect" id="Node000009" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="801,244,989,285"/>
+<area shape="poly" id="edge14_Node000008_Node000009" title=" " alt="" coords="747,262,788,264,783,264,747,267"/>
+</map>

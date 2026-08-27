@@ -1,0 +1,23 @@
+<map id="DirectApplicationRuntime::closeSession" name="DirectApplicationRuntime::closeSession">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,116,175,157"/>
+<area shape="rect" id="Node000002" href="$class_i_application_runtime.html#a8a335e653e0be8326f22b4d50759f8f7" title=" " alt="" coords="256,30,394,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,114,222,80,244,74,239,77,224,85,140,118"/>
+<area shape="rect" id="Node000003" href="$class_playback_service.html#a43fa0623a8507f5354bf5537f6619668" title=" " alt="" coords="223,95,428,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,124,210,121,205,123,176,129"/>
+<area shape="rect" id="Node000010" href="$class_i_application_runtime.html#a01f646d011f811a4eb6b1ac3faae60ec" title=" " alt="" coords="256,144,394,185"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="175,144,243,154,238,156,176,150"/>
+<area shape="rect" id="Node000011" href="$class_i_application_runtime.html#a41b69514abc23ae319eb9774f818b4b1" title=" " alt="" coords="256,210,394,250"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="134,155,224,194,246,204,240,204,222,199,134,160"/>
+<area shape="rect" id="Node000004" href="$class_i_session_reader.html#ac3309b61387f2bd803b08a3c9e64b475" title="Releases the current source and returns the reader to its empty state." alt="" coords="486,5,639,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="396,92,427,80,441,71,450,61,460,51,475,41,488,38,493,36,477,46,463,55,454,65,444,75,429,85,398,97"/>
+<area shape="rect" id="Node000005" href="$class_playback_service.html#a5e54c6eb7adf0f7fbdfbd5f403ec5d7d" title=" " alt="" coords="478,55,646,96"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="425,91,465,88,460,90,426,97"/>
+<area shape="rect" id="Node000007" href="$class_playback_service.html#a0d810aa9ebe8492aea8b82c6e429c5d6" title=" " alt="" coords="476,120,648,161"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="421,118,463,126,458,127,421,124"/>
+<area shape="rect" id="Node000009" href="$class_i_playback_clock.html#a997a42bd4efe05e9d2bcbee7550e35cb" title="Stops future ticks." alt="" coords="489,185,635,211"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="398,118,429,130,444,141,454,151,463,161,477,171,493,180,488,179,475,175,460,165,450,154,441,145,427,135,398,124"/>
+<area shape="rect" id="Node000006" href="$class_playback_service.html#a87e882d8178053a7315b5b54b461fa27" title=" " alt="" coords="696,63,877,88"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="646,73,684,75,678,76,647,78"/>
+<area shape="rect" id="Node000008" href="$class_playback_service.html#a77bbc3e3d72ff59d00b75a0d13816491" title=" " alt="" coords="700,128,873,154"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="648,138,687,141,682,141,649,143"/>
+</map>

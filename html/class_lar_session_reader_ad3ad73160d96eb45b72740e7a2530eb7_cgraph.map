@@ -1,0 +1,20 @@
+<map id="LarSessionReader::recordAt" name="LarSessionReader::recordAt">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,191,121"/>
+<area shape="rect" id="Node000002" href="$class_packet_mapping.html#ac955ded5162ee66319787462e129c407" title=" " alt="" coords="255,70,416,96"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,96,242,92,237,94,192,101"/>
+<area shape="rect" id="Node000005" href="$class_lar_session_reader.html#aa62e21e6f68343a427d2134dc21d9601" title="Returns the cached location for index after range and source validation." alt="" coords="239,120,433,145"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="191,115,226,121,221,121,191,120"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="296,69,289,62,293,52,309,46,336,44,365,46,382,56,376,56,364,51,336,49,311,51,297,56,294,61,301,70"/>
+<area shape="rect" id="Node000003" href="$class_packet_mapping.html#a37e8ae3c0071d0ed32f9075347e51cf1" title=" " alt="" coords="498,5,669,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="394,67,486,48,481,49,395,72"/>
+<area shape="rect" id="Node000004" href="$class_packet_mapping.html#ad1917abe7193f42eb04c4bc08cfdb309" title="True only when all bindings form a complete, non&#45;overlapping schema." alt="" coords="505,70,662,96"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="417,80,492,83,487,83,417,86"/>
+<area shape="rect" id="Node000006" href="$class_lar_session_reader.html#ab686230bdf9413511ab96b994d6a58da" title="Populates the bounded location cache containing index." alt="" coords="481,120,686,145"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="433,130,468,132,463,132,433,135"/>
+<area shape="rect" id="Node000007" href="$class_session_timestamp.html#a32022c7bea4a6476c0af9a5641a8a80f" title="Creates a timestamp from the unsigned representation stored by LAR1." alt="" coords="734,112,940,153"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="687,130,721,132,716,132,687,135"/>
+<area shape="rect" id="Node000008" href="$class_session_timestamp.html#a9e69c8185d47045ab21667be1a2976f7" title=" " alt="" coords="988,90,1201,116"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="940,118,969,117,975,117,940,123"/>
+<area shape="rect" id="Node000009" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="1000,140,1188,181"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="940,141,987,148,982,148,940,146"/>
+</map>

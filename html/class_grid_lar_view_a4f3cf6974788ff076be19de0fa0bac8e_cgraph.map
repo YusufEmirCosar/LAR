@@ -1,0 +1,36 @@
+<map id="GridLarView::mouseDoubleClickEvent" name="GridLarView::mouseDoubleClickEvent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,153,186,194"/>
+<area shape="rect" id="Node000002" href="$class_grid_lar_view.html#a85e7b9f7b96a4ba88aa1dacbfd940438" title=" " alt="" coords="234,161,387,186"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,171,220,172,216,175,188,176"/>
+<area shape="rect" id="Node000003" href="$class_grid_lar_view.html#acc958e5b14a7b40706c683aeb9972667" title=" " alt="" coords="440,5,617,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="320,159,366,109,398,80,434,55,445,51,441,55,436,60,402,85,370,113,325,162"/>
+<area shape="rect" id="Node000006" href="$class_grid_lar_view.html#ae881ceb85eb6ba46e090b0df190cc265" title=" " alt="" coords="450,70,606,96"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="331,158,378,132,434,106,458,99,454,103,436,111,380,137,335,162"/>
+<area shape="rect" id="Node000007" href="$class_grid_camera_transform.html#a5c309b8303e68cdcb52942d0def75837" title=" " alt="" coords="453,120,603,161"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="386,160,440,153,435,156,389,164"/>
+<area shape="rect" id="Node000008" href="$class_grid_camera_transform.html#aa5604d958750400774ee93c3629ad963" title="Sets the viewport scale in pixels per metre, clamped to its supported range." alt="" coords="453,185,603,226"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="387,182,440,191,435,193,388,187"/>
+<area shape="rect" id="Node000010" href="$class_grid_lar_view.html#a256dbfcd3ae8ddecc2529cffe30d66ef" title=" " alt="" coords="435,251,621,291"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="335,184,436,235,454,244,449,245,434,240,336,190"/>
+<area shape="rect" id="Node000012" href="$class_lar_zone_input_validator.html#a6b122729b48ca9995d79faaf3dc4c447" title=" " alt="" coords="454,419,602,459"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="323,184,503,406,498,407,321,189"/>
+<area shape="rect" id="Node000004" href="$class_grid_camera_transform.html#a3b422c89481e9e716be856509ee145e2" title=" " alt="" coords="677,5,827,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="616,23,664,25,659,27,618,28"/>
+<area shape="rect" id="Node000005" href="$class_lar_projection.html#a4e2dca65a4cdc72bf5aa871c00eda908" title=" " alt="" coords="883,5,1051,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="827,23,870,25,865,27,828,28"/>
+<area shape="rect" id="Node000009" href="$class_grid_camera_transform.html#a4353043a6dfaa1043d7e53ddcebaab75" title=" " alt="" coords="677,185,827,226"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="603,203,664,205,659,207,605,208"/>
+<area shape="rect" id="Node000011" href="$class_grid_camera_transform.html#a496283266106ec7e35fcaf163e64c379" title=" " alt="" coords="677,251,827,291"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="621,268,664,270,659,272,622,274"/>
+<area shape="rect" id="Node000013" href="$namespaceanonymous__namespace_02lar__zone__input__validator_8cpp_03.html#a9cf3c81e8f44f4a8cbbc82ecbfc662bb" title=" " alt="" coords="669,339,835,395"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="593,416,657,397,652,399,594,421"/>
+<area shape="rect" id="Node000014" href="$class_lar_geodesic_geometry.html#acc9da0b8c5204bff4c0a184ef3a0332d" title=" " alt="" coords="676,419,828,459"/>
+<area shape="poly" id="edge14_Node000012_Node000014" title=" " alt="" coords="602,436,664,438,658,440,602,442"/>
+<area shape="rect" id="Node000015" href="$namespaceanonymous__namespace_02lar__zone__input__validator_8cpp_03.html#abd9d990ceda17a2a2379e0266a48f86a" title=" " alt="" coords="669,507,835,563"/>
+<area shape="poly" id="edge15_Node000012_Node000015" title=" " alt="" coords="578,457,674,501,669,501,577,462"/>
+<area shape="rect" id="Node000016" href="$namespaceanonymous__namespace_02lar__zone__input__validator_8cpp_03.html#a6ff93d6f9fbab40e7cc2568b8f8948cf" title=" " alt="" coords="669,611,835,667"/>
+<area shape="poly" id="edge17_Node000012_Node000016" title=" " alt="" coords="551,457,605,511,671,573,704,602,699,601,668,577,601,515,549,463"/>
+<area shape="poly" id="edge13_Node000013_Node000013" title=" " alt="" coords="710,337,710,329,718,320,732,314,752,313,775,315,790,324,785,324,773,320,752,318,733,320,721,324,715,331,715,340"/>
+<area shape="poly" id="edge16_Node000015_Node000015" title=" " alt="" coords="710,505,710,497,718,488,732,482,752,481,775,483,790,493,785,492,773,488,752,486,733,488,721,492,715,499,714,508"/>
+<area shape="poly" id="edge18_Node000016_Node000016" title=" " alt="" coords="710,609,710,601,718,592,732,586,752,585,775,587,790,597,785,596,773,592,752,590,733,592,721,596,715,603,714,613"/>
+</map>

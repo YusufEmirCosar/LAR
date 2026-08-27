@@ -1,0 +1,10 @@
+<map id="lar::map::tool::PlanarPolygonMesh::empty" name="lar::map::tool::PlanarPolygonMesh::empty">
+<area shape="rect" id="Node000001" title="Reports whether triangulation produced no renderable geometry." alt="" coords="370,53,559,94"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1tool_1_1_map_mesh_compiler.html#aca89641740072be2385c33c5a77b8b48" title=" " alt="" coords="105,5,320,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="352,53,320,49,320,43,357,53"/>
+<area shape="rect" id="Node000004" href="$namespacelar_1_1map_1_1tool_1_1anonymous__namespace_02map__mesh__compiler_8cpp_03.html#aef256ce5fae44d43a541e091498511da" title=" " alt="" coords="103,94,322,150"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="357,94,323,103,322,98,352,95"/>
+<area shape="rect" id="Node000003" href="$tools_2map__asset_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,55,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,27,56,28,54,23,92,24"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="240,79,230,75,212,72,197,74,186,79,181,85,181,95,176,92,176,83,183,75,195,69,212,67,232,70,245,79"/>
+</map>

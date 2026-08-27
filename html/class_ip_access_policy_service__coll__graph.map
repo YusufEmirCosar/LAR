@@ -1,0 +1,5 @@
+<map id="IpAccessPolicyService" name="IpAccessPolicyService">
+<area shape="rect" id="Node000001" title="Application use case for obtaining a validated IP access policy." alt="" coords="17,102,173,128"/>
+<area shape="rect" id="Node000002" href="$class_i_ip_access_policy_repository.html" title="Loads and validates exact&#45;match sender policies from external storage." alt="" coords="5,5,185,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,45,98,102,92,101,93,48"/>
+</map>

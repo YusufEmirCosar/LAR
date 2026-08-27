@@ -1,0 +1,18 @@
+<map id="src/application/ports/datagram_source.h" name="src/application/ports/datagram_source.h">
+<area shape="rect" id="Node000001" title="Abstract datagram transport used by online capture." alt="" coords="283,5,421,46"/>
+<area shape="rect" id="Node000002" href="$online__capture__service_8h.html" title="UDP decoding service with rate&#45;limited state publication." alt="" coords="188,102,332,142"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="324,55,281,103,277,99,320,59"/>
+<area shape="rect" id="Node000007" href="$qt__udp__datagram__source_8h.html" title="QUdpSocket implementation of the datagram&#45;source port." alt="" coords="356,94,532,150"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="382,54,420,93,415,93,381,60"/>
+<area shape="rect" id="Node000003" href="$direct__application__runtime_8h.html" title="Synchronous IApplicationRuntime implementation for tests/embedding." alt="" coords="12,205,164,246"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,153,123,207,120,203,215,148"/>
+<area shape="rect" id="Node000005" href="$online__capture__service_8cpp.html" title=" " alt="" coords="187,205,333,246"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="262,156,262,206,258,204,258,160"/>
+<area shape="rect" id="Node000006" href="$network__runtime__worker_8cpp.html" title=" " alt="" coords="357,198,526,253"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="308,147,395,197,390,198,308,153"/>
+<area shape="rect" id="Node000004" href="$direct__application__runtime_8cpp.html" title=" " alt="" coords="5,301,171,342"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="90,260,91,302,85,300,86,263"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="445,163,444,198,440,196,441,167"/>
+<area shape="rect" id="Node000008" href="$qt__udp__datagram__source_8cpp.html" title=" " alt="" coords="550,198,725,253"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="510,155,588,197,583,197,509,160"/>
+</map>

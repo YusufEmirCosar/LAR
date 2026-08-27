@@ -1,0 +1,12 @@
+<map id="lar::map::tool::SourceMap" name="lar::map::tool::SourceMap">
+<area shape="rect" id="Node000001" title="Bounded collection of source polygons and coordinate accounting." alt="" coords="25,407,197,433"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="32,295,190,336"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,350,114,407,108,406,109,353"/>
+<area shape="rect" id="Node000003" href="$structlar_1_1map_1_1tool_1_1_source_polygon.html" title="Polygon exterior and zero or more interior hole rings." alt="" coords="14,199,208,224"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,237,114,296,108,294,110,242"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,5,217,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="108,43,104,102,106,156,111,198,106,198,100,156,99,102,107,49"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="165,102,340,128"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="141,37,237,100,232,103,142,43"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="220,139,131,200,127,196,223,134"/>
+</map>

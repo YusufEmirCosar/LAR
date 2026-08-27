@@ -1,0 +1,12 @@
+<map id="PlaneTerrainWorker::PlaneTerrainWorker" name="PlaneTerrainWorker::PlaneTerrainWorker">
+<area shape="rect" id="Node000001" title=" " alt="" coords="755,25,898,65"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#a5c8242aec92b08254db217286a0b9194" title=" " alt="" coords="502,25,707,65"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="737,45,708,48,707,42,743,45"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,29,209,69"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="503,21,454,16,355,8,257,15,181,30,179,25,256,10,355,3,454,10,508,21"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#a605af179df470891b8fa7b2433ce23cc" title="Enables DTED terrain; loading and unavailable terrain remain visibly unclassified." alt="" coords="257,25,454,65"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="484,45,455,48,454,42,489,45"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="267,90,444,131"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="512,69,436,92,435,87,507,70"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="253,86,192,72,192,67,258,85"/>
+</map>

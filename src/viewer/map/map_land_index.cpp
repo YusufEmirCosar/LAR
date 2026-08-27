@@ -21,7 +21,7 @@ int wrappedLongitudeCell(double longitudeDegrees) noexcept {
 int latitudeCell(double latitudeDegrees) noexcept {
     const double bounded = std::clamp(latitudeDegrees, -90.0, 90.0);
     const int cell = bounded >= 90.0 ? static_cast<int>(MapLandLatitudeCellCount) - 1
-                                    : static_cast<int>(std::floor(bounded)) + 90;
+                                     : static_cast<int>(std::floor(bounded)) + 90;
     return std::clamp(cell, 0, static_cast<int>(MapLandLatitudeCellCount) - 1);
 }
 
@@ -60,10 +60,10 @@ bool triangleContains(const MapMesh &mesh, std::uint32_t triangle, double latitu
                                 longitudeDegrees, latitudeDegrees);
     const double third = cross(longitude[2], latitude[2], longitude[0], latitude[0],
                                longitudeDegrees, latitudeDegrees);
-    const bool negative = first < -CoordinateEpsilon || second < -CoordinateEpsilon ||
-                          third < -CoordinateEpsilon;
-    const bool positive = first > CoordinateEpsilon || second > CoordinateEpsilon ||
-                          third > CoordinateEpsilon;
+    const bool negative =
+        first < -CoordinateEpsilon || second < -CoordinateEpsilon || third < -CoordinateEpsilon;
+    const bool positive =
+        first > CoordinateEpsilon || second > CoordinateEpsilon || third > CoordinateEpsilon;
     return !(negative && positive);
 }
 
@@ -89,8 +89,8 @@ bool mapLandIndexIsValid(const MapMesh &mesh) noexcept {
     if (expectedFirst != mesh.landTriangleReferences.size()) {
         return false;
     }
-    return std::all_of(mesh.landTriangleReferences.cbegin(),
-                       mesh.landTriangleReferences.cend(), [triangleCount](std::uint32_t triangle) {
+    return std::all_of(mesh.landTriangleReferences.cbegin(), mesh.landTriangleReferences.cend(),
+                       [triangleCount](std::uint32_t triangle) {
                            return static_cast<std::size_t>(triangle) < triangleCount;
                        });
 }
@@ -109,9 +109,8 @@ bool MapLandIndex::contains(double latitudeDegrees, double longitudeDegrees) con
         return false;
     }
     const double wrappedLongitude = MapProjection::wrapLongitude(longitudeDegrees);
-    const MapLandCellRange &range =
-        m_mesh->landCellRanges[cellIndex(wrappedLongitudeCell(wrappedLongitude),
-                                         latitudeCell(latitudeDegrees))];
+    const MapLandCellRange &range = m_mesh->landCellRanges[cellIndex(
+        wrappedLongitudeCell(wrappedLongitude), latitudeCell(latitudeDegrees))];
     const std::size_t begin = range.firstReference;
     const std::size_t end = begin + range.referenceCount;
     for (std::size_t reference = begin; reference < end; ++reference) {
@@ -125,10 +124,9 @@ bool MapLandIndex::contains(double latitudeDegrees, double longitudeDegrees) con
 
 void MapLandIndex::appendCandidates(const MapGeographicBounds &bounds,
                                     std::vector<std::uint32_t> &destination) const {
-    if (!isValid() || !std::isfinite(bounds.westDegrees) ||
-        !std::isfinite(bounds.eastDegrees) || !std::isfinite(bounds.southDegrees) ||
-        !std::isfinite(bounds.northDegrees) || bounds.westDegrees > bounds.eastDegrees ||
-        bounds.southDegrees > bounds.northDegrees ||
+    if (!isValid() || !std::isfinite(bounds.westDegrees) || !std::isfinite(bounds.eastDegrees) ||
+        !std::isfinite(bounds.southDegrees) || !std::isfinite(bounds.northDegrees) ||
+        bounds.westDegrees > bounds.eastDegrees || bounds.southDegrees > bounds.northDegrees ||
         bounds.eastDegrees - bounds.westDegrees > 360.0 || bounds.northDegrees < -90.0 ||
         bounds.southDegrees > 90.0) {
         return;

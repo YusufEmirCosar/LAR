@@ -1,0 +1,11 @@
+<map id="src/viewer/plane/glb_resource_reader.h" name="src/viewer/plane/glb_resource_reader.h">
+<area shape="rect" id="Node000001" title="Contained URI and bounded GLB&#45;buffer resolution for static glTF models." alt="" coords="145,5,283,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,95,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,48,90,89,88,85,171,45"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="118,94,208,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,45,181,83,178,79,199,48"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="232,94,297,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="228,44,251,81,246,80,225,49"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="321,94,379,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="249,44,319,86,314,86,247,49"/>
+</map>

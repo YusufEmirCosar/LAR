@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_i_session_reader.html" title="Loads, indexes, and decodes records without playback policy." alt="" coords="5,5,120,31"/>
+<area shape="rect" id="Node000001" href="$class_lar_session_reader.html" title="Validates a session once, checkpoints it sparsely, and decodes on demand." alt="" coords="168,5,296,31"/>
+<area shape="poly" id="edge72_Node000000_Node000001" title=" " alt="" coords="135,16,170,18,165,18,136,21"/>
+</map>

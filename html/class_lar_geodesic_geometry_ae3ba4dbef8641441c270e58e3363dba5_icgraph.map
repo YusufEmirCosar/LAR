@@ -1,0 +1,51 @@
+<map id="LarGeodesicGeometry::wrapLongitude" name="LarGeodesicGeometry::wrapLongitude">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1233,371,1384,412"/>
+<area shape="rect" id="Node000002" href="$class_lar_geodesic_geometry.html#ab0e974e1e3b2af5df57bf159a357b143" title=" " alt="" coords="1005,188,1156,229"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1267,361,1107,232,1108,227,1273,362"/>
+<area shape="rect" id="Node000023" href="$class_lar_projection.html#a4875d219ffbabafbeb019813cc023d82" title="Inverts the local flat projection for a finite east/north position." alt="" coords="996,371,1165,412"/>
+<area shape="poly" id="edge16_Node000001_Node000023" title=" " alt="" coords="1215,392,1166,394,1165,389,1221,391"/>
+<area shape="rect" id="Node000033" href="$class_viewport_controls.html#aa8f657b706bbe8c28902f10167d30600" title=" " alt="" coords="976,460,1185,501"/>
+<area shape="poly" id="edge21_Node000001_Node000033" title=" " alt="" coords="1243,417,1135,462,1134,457,1238,419"/>
+<area shape="rect" id="Node000003" href="$namespaceanonymous__namespace_02geodesic__zone__sampler_8cpp_03.html#a317d32d8927904290fd9ed80539470c8" title=" " alt="" coords="730,229,921,285"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="987,227,922,241,921,236,992,225"/>
+<area shape="rect" id="Node000004" href="$class_lar_geodesic_geometry.html#ae0ac37beac6b366e0fa56d04336b9030" title=" " alt="" coords="737,309,914,335"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="1039,237,987,271,929,299,892,311,891,306,927,294,984,266,1034,239"/>
+<area shape="rect" id="Node000013" href="$namespaceanonymous__namespace_02lar__parametric__zone__gpu__layer_8cpp_03.html#a85e6f5dc2564b7cdd929fde4ffcb7dab" title=" " alt="" coords="470,79,675,150"/>
+<area shape="poly" id="edge7_Node000002_Node000013" title=" " alt="" coords="1034,180,985,154,927,131,863,118,797,111,676,109,675,104,798,106,864,113,928,126,987,149,1039,180"/>
+<area shape="rect" id="Node000014" href="$class_lar_marker_layer.html#aaa3acc2a78c66055018ac024547d5218" title=" " alt="" coords="739,7,912,48"/>
+<area shape="poly" id="edge9_Node000002_Node000014" title=" " alt="" coords="1042,178,989,135,926,87,867,51,867,46,929,83,993,130,1048,178"/>
+<area shape="rect" id="Node000017" href="$class_geodesic_zone_sampler.html#a3b238e9b4105132eff53432a2d213e25" title=" " alt="" coords="749,140,902,181"/>
+<area shape="poly" id="edge12_Node000002_Node000017" title=" " alt="" coords="986,192,903,178,903,173,992,191"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="864,214,851,210,825,208,803,210,789,214,782,221,781,230,777,227,777,218,786,210,802,204,826,202,852,205,870,214"/>
+<area shape="rect" id="Node000005" href="$class_earth_camera_policy.html#afa5417a6c7c21c60b1c31c1be4ed6e81" title=" " alt="" coords="502,302,644,342"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="719,323,645,325,644,320,724,322"/>
+<area shape="rect" id="Node000006" href="$class_earth_lar_view.html#a0e809f583a4542f2eccc32c4c62ed51d" title=" " alt="" coords="251,309,412,335"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="483,323,413,325,412,320,488,321"/>
+<area shape="poly" id="edge8_Node000013_Node000013" title=" " alt="" coords="609,65,596,60,573,57,553,59,539,64,532,71,530,80,525,77,527,68,537,59,552,54,573,52,597,55,614,64"/>
+<area shape="rect" id="Node000015" href="$class_lar_marker_layer.html#af34698b9f9d6477624c9464e33a412af" title=" " alt="" coords="482,5,663,31"/>
+<area shape="poly" id="edge10_Node000014_Node000015" title=" " alt="" coords="721,25,664,24,663,19,726,23"/>
+<area shape="rect" id="Node000016" href="$class_lar_marker_layer.html#ab6f7490f14a96754b7452c86e053252b" title=" " alt="" coords="241,5,422,31"/>
+<area shape="poly" id="edge11_Node000015_Node000016" title=" " alt="" coords="465,19,424,21,421,16,469,17"/>
+<area shape="poly" id="edge15_Node000017_Node000013" title=" " alt="" coords="731,145,676,136,675,131,736,143"/>
+<area shape="rect" id="Node000018" href="$class_lar_zone_mesh_builder.html#aeae61a0b50e2824ca5cb7b32318e8ec1" title=" " alt="" coords="502,174,643,214"/>
+<area shape="poly" id="edge13_Node000017_Node000018" title=" " alt="" coords="731,174,644,188,642,182,736,172"/>
+<area shape="rect" id="Node000019" href="$class_viewport_preparation_worker.html#a70c6d90f31a6ec89cf2be630b2579331" title=" " alt="" coords="242,174,421,214"/>
+<area shape="poly" id="edge14_Node000018_Node000019" title=" " alt="" coords="485,195,422,197,421,192,490,193"/>
+<area shape="rect" id="Node000024" href="$class_plane_land_mask_builder.html#a6370f137d1388aefd95c2dc496dee19c" title=" " alt="" coords="748,359,903,400"/>
+<area shape="poly" id="edge17_Node000023_Node000024" title=" " alt="" coords="977,387,903,386,903,380,982,387"/>
+<area shape="rect" id="Node000025" href="$class_plane_terrain_patch_builder.html#a580df2736ddf2edbd9c6a4a6dafb1e14" title="Samples and triangulates one request, returning null when local terrain is absent." alt="" coords="489,379,656,420"/>
+<area shape="poly" id="edge20_Node000023_Node000025" title=" " alt="" coords="977,407,928,414,826,418,723,414,657,410,657,405,723,409,826,412,927,409,983,406"/>
+<area shape="poly" id="edge18_Node000024_Node000025" title=" " alt="" coords="730,387,657,396,657,390,735,386"/>
+<area shape="rect" id="Node000026" href="$class_plane_terrain_worker.html#ab215b14a4ab72ff79e0890675d809388" title=" " alt="" coords="264,379,398,420"/>
+<area shape="poly" id="edge19_Node000025_Node000026" title=" " alt="" coords="471,400,399,402,398,397,476,399"/>
+<area shape="rect" id="Node000034" href="$class_main_window.html#ab5c57be843395521e6c0d9a86704db0b" title=" " alt="" coords="723,474,928,514"/>
+<area shape="poly" id="edge22_Node000033_Node000034" title=" " alt="" coords="958,487,928,491,928,486,963,487"/>
+<area shape="rect" id="Node000035" href="$class_main_window.html#a04eadf0167a2fc3881f298ebb465cfb2" title=" " alt="" coords="476,519,669,544"/>
+<area shape="poly" id="edge23_Node000034_Node000035" title=" " alt="" coords="710,511,665,521,664,515,705,512"/>
+<area shape="rect" id="Node000039" href="$class_main_window.html#a1f7d2c56410fc1bfa135bb907d43313f" title=" " alt="" coords="5,519,193,544"/>
+<area shape="poly" id="edge27_Node000034_Node000039" title=" " alt="" coords="705,492,490,495,365,499,241,509,163,521,162,515,240,504,365,494,490,489,710,491"/>
+<area shape="rect" id="Node000036" href="$class_main_window.html#ad0b383c67dd28a5a887d91d581ff175c" title=" " alt="" coords="256,519,407,544"/>
+<area shape="poly" id="edge24_Node000035_Node000036" title=" " alt="" coords="458,532,408,534,407,529,463,531"/>
+<area shape="poly" id="edge26_Node000035_Node000039" title=" " alt="" coords="494,547,422,559,331,565,240,559,161,548,162,542,241,554,331,559,422,554,488,548"/>
+<area shape="poly" id="edge25_Node000036_Node000039" title=" " alt="" coords="238,532,193,534,193,529,243,531"/>
+</map>

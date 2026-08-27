@@ -63,10 +63,10 @@ bool PlaneLandMask::landAtLocal(double eastMeters, double northMeters) const noe
         return false;
     }
     const double scale = static_cast<double>(resolution) / (2.0 * halfExtentMeters);
-    const int x = std::clamp(static_cast<int>((eastMeters + halfExtentMeters) * scale), 0,
-                             resolution - 1);
-    const int y = std::clamp(static_cast<int>((northMeters + halfExtentMeters) * scale), 0,
-                             resolution - 1);
+    const int x =
+        std::clamp(static_cast<int>((eastMeters + halfExtentMeters) * scale), 0, resolution - 1);
+    const int y =
+        std::clamp(static_cast<int>((northMeters + halfExtentMeters) * scale), 0, resolution - 1);
     return texels[texelIndex(x, y, resolution)] >= 128U;
 }
 
@@ -93,9 +93,8 @@ PlaneLandMask PlaneLandMaskBuilder::build(double anchorLatitudeRadians,
     PlaneLandMask result;
     result.halfExtentMeters = halfExtentMeters;
     result.resolution = resolutionFor(halfExtentMeters);
-    if (!m_landIndex.isValid() || result.resolution <= 0 ||
-        !std::isfinite(anchorLatitudeRadians) || !std::isfinite(anchorLongitudeRadians) ||
-        !std::isfinite(projectionOriginLatitudeRadians)) {
+    if (!m_landIndex.isValid() || result.resolution <= 0 || !std::isfinite(anchorLatitudeRadians) ||
+        !std::isfinite(anchorLongitudeRadians) || !std::isfinite(projectionOriginLatitudeRadians)) {
         result.resolution = 0;
         return result;
     }
@@ -103,10 +102,8 @@ PlaneLandMask PlaneLandMaskBuilder::build(double anchorLatitudeRadians,
     const double anchor[3]{anchorLatitudeRadians, anchorLongitudeRadians, 0.0};
     std::array<GeoCoordinateRadians, 4> corners{};
     const std::array<QPointF, 4> localCorners{
-        QPointF(-halfExtentMeters, -halfExtentMeters),
-        QPointF(halfExtentMeters, -halfExtentMeters),
-        QPointF(halfExtentMeters, halfExtentMeters),
-        QPointF(-halfExtentMeters, halfExtentMeters)};
+        QPointF(-halfExtentMeters, -halfExtentMeters), QPointF(halfExtentMeters, -halfExtentMeters),
+        QPointF(halfExtentMeters, halfExtentMeters), QPointF(-halfExtentMeters, halfExtentMeters)};
     for (std::size_t index = 0U; index < corners.size(); ++index) {
         const auto coordinate = LarProjection::planeWorldToGeographic(
             localCorners[index], anchor, 0.0, projectionOriginLatitudeRadians, true);
@@ -141,12 +138,11 @@ PlaneLandMask PlaneLandMaskBuilder::build(double anchorLatitudeRadians,
         return result;
     }
 
-    const std::size_t texelCount = static_cast<std::size_t>(result.resolution) *
-                                   static_cast<std::size_t>(result.resolution);
+    const std::size_t texelCount =
+        static_cast<std::size_t>(result.resolution) * static_cast<std::size_t>(result.resolution);
     result.texels.assign(texelCount, 0U);
     const std::shared_ptr<const lar::map::MapMesh> &mesh = m_landIndex.mesh();
-    const double pixelsPerMeter =
-        static_cast<double>(result.resolution) / (2.0 * halfExtentMeters);
+    const double pixelsPerMeter = static_cast<double>(result.resolution) / (2.0 * halfExtentMeters);
     for (const std::uint32_t triangle : candidates) {
         if (cancelled && cancelled()) {
             result.resolution = 0;
@@ -174,8 +170,7 @@ PlaneLandMask PlaneLandMaskBuilder::build(double anchorLatitudeRadians,
                 position, anchor, 0.0, projectionOriginLatitudeRadians, true);
             pixel[corner] = {(local.x() + halfExtentMeters) * pixelsPerMeter,
                              (local.y() + halfExtentMeters) * pixelsPerMeter};
-            finite = finite && std::isfinite(pixel[corner][0]) &&
-                     std::isfinite(pixel[corner][1]);
+            finite = finite && std::isfinite(pixel[corner][0]) && std::isfinite(pixel[corner][1]);
         }
         if (!finite) {
             continue;
@@ -190,14 +185,14 @@ PlaneLandMask PlaneLandMaskBuilder::build(double anchorLatitudeRadians,
             minimumY >= static_cast<double>(result.resolution)) {
             continue;
         }
-        const int firstX = std::clamp(static_cast<int>(std::floor(minimumX)), 0,
-                                      result.resolution - 1);
-        const int lastX = std::clamp(static_cast<int>(std::ceil(maximumX)), 0,
-                                     result.resolution - 1);
-        const int firstY = std::clamp(static_cast<int>(std::floor(minimumY)), 0,
-                                      result.resolution - 1);
-        const int lastY = std::clamp(static_cast<int>(std::ceil(maximumY)), 0,
-                                     result.resolution - 1);
+        const int firstX =
+            std::clamp(static_cast<int>(std::floor(minimumX)), 0, result.resolution - 1);
+        const int lastX =
+            std::clamp(static_cast<int>(std::ceil(maximumX)), 0, result.resolution - 1);
+        const int firstY =
+            std::clamp(static_cast<int>(std::floor(minimumY)), 0, result.resolution - 1);
+        const int lastY =
+            std::clamp(static_cast<int>(std::ceil(maximumY)), 0, result.resolution - 1);
         for (int y = firstY; y <= lastY; ++y) {
             if (cancelled && cancelled()) {
                 result.resolution = 0;
@@ -206,17 +201,17 @@ PlaneLandMask PlaneLandMaskBuilder::build(double anchorLatitudeRadians,
             }
             const double sampleY = static_cast<double>(y) + 0.5;
             for (int x = firstX; x <= lastX; ++x) {
-                if (pointInTriangle(pixel[0], pixel[1], pixel[2],
-                                    static_cast<double>(x) + 0.5, sampleY)) {
+                if (pointInTriangle(pixel[0], pixel[1], pixel[2], static_cast<double>(x) + 0.5,
+                                    sampleY)) {
                     result.texels[texelIndex(x, y, result.resolution)] = 255U;
                 }
             }
         }
     }
 
-    const std::size_t landCount = static_cast<std::size_t>(
-        std::count_if(result.texels.cbegin(), result.texels.cend(),
-                      [](unsigned char value) { return value >= 128U; }));
+    const std::size_t landCount =
+        static_cast<std::size_t>(std::count_if(result.texels.cbegin(), result.texels.cend(),
+                                               [](unsigned char value) { return value >= 128U; }));
     if (landCount == 0U) {
         result.coverage = PlaneLandCoverage::AllWater;
         result.texels.clear();

@@ -5,10 +5,12 @@ visualization, raw-value monitoring, `.lar` session recording, and offline
 replay. The packet-monitor domain model is the `Plane` and `Target` structures
 in `src/domain/state.h`; the isolated DLZ teaching model is documented below.
 
-The complete implementation guide starts at the
-[documentation hub](docs/README.md), with architecture and UML, SOLID evidence,
-component/API and file references, runtime sequences, concurrency, protocols,
-format details, developer workflows, and quality gates.
+The complete documentation starts at the
+[documentation hub](docs/README.md), with an [operator guide](docs/USER_GUIDE.md),
+architecture and UML, component/API and file references, runtime sequences,
+protocol and session formats, a [visualization guide](docs/VISUALIZATION.md),
+[terrain/asset internals](docs/TERRAIN_AND_ASSETS.md), developer workflows,
+security, and quality gates.
 
 ## Architecture
 
@@ -30,7 +32,7 @@ presentation -> application <- infrastructure
   model and its QWidget/QPainter presentation. The three dedicated DLZ input
   fields are mapped atomically without reinterpreting ground-LAR `Target`
   fields.
-- `tools/map_asset` owns the build-time world-boundary compiler and is not
+- `tools/map_asset` owns the build-time world-boundary and indexed-land compiler and is not
   linked into the viewer.
 
 The production runtime has network, session, and persistence worker threads in
@@ -43,7 +45,8 @@ command-acceptance/completion contract for deterministic tests. See the
 [concurrency model](docs/CONCURRENCY_MODEL.md), exact
 [`LAR1` format](docs/LAR1_FORMAT.md),
 [threat model](docs/THREAT_MODEL.md),
-[map asset guide](assets/map/README.md), and current
+[map asset guide](assets/map/README.md), detailed
+[terrain and asset guide](docs/TERRAIN_AND_ASSETS.md), and current
 [quality gates](docs/QUALITY_GATES.md).
 
 ## Build
@@ -64,11 +67,11 @@ Platform prerequisites:
   and a Windows 10/11 SDK. Install the Qt `msvc2022_64` kit. A Developer
   PowerShell or Native Tools command prompt for VS 2022 is recommended. Ninja
   is not required by the Windows presets.
-- macOS: macOS 15 for the release-certified matrix; Xcode 15 or newer with
+- macOS: macOS 15 is the intended release-evidence host; Xcode 15 or newer with
   AppleClang, the macOS SDK, and Command Line Tools. Install a Qt macOS kit
   matching the machine architecture (`arm64` or `x86_64`) and make Ninja
   available on `PATH`.
-- Linux: Ubuntu 24.04 for the release-certified matrix, or a Linux system
+- Linux: Ubuntu 24.04 is the intended release-evidence host, or use a Linux system
   with a supported GCC or Clang C++17 toolchain. Install Ninja, Python 3, the
   Qt 6.10.3+ Linux development kit, and the system OpenGL plus Qt platform
   plugin dependencies required by that kit. Install both GCC and Clang when
@@ -79,7 +82,7 @@ target: `clang-format` for `check-format`, `clang-tidy` for `check-tidy`, and
 Doxygen for `check-docs`. These tools are not needed for the production
 `windows-release` build.
 
-The release-certification matrix is:
+The intended cross-platform release-evidence matrix is:
 
 | Platform | Toolchains | CI Qt |
 | --- | --- | --- |
@@ -87,9 +90,11 @@ The release-certification matrix is:
 | macOS 15 | Xcode AppleClang, warnings-as-errors | 6.11.2 |
 | Windows | Visual Studio 2022 MSVC, warnings-as-errors | 6.11.2 |
 
-Qt 6.10.3 is the source/API minimum; CI tracks the patched Qt 6.11 line. A
-platform/version outside the matrix may build, but is not release evidence until
-its strict and GPU jobs are added. See Qt's official
+Qt 6.10.3 is the source/API minimum. The only checked-in CI workflow currently
+covers Windows/MSVC with Qt 6.11.2; the GCC, Clang, and AppleClang rows describe
+evidence still required for a cross-platform release, not jobs that presently
+exist. A platform/version outside the matrix may build, but is not release
+evidence until its strict and GPU results are obtained. See Qt's official
 [release-support table](https://doc.qt.io/qt-6/qt-releases.html) and
 [Qt 6.11.2 release notice](https://www.qt.io/blog/qt-6.11.2-released).
 
@@ -180,8 +185,8 @@ LAR_SOAK_SECONDS=1800 ctest --test-dir build-ci \
 ```
 
 It exercises 100 Hz UDP, periodic snapshots, pause/resume, reset, final atomic
-save, exact replay, and a resident-memory-growth ceiling. Full required PR,
-nightly, GPU, fuzz, mutation, and release evidence is defined in
+save, exact replay, and a resident-memory-growth ceiling. Available local gates,
+current CI coverage, and additional GPU/fuzz/mutation/release evidence are defined in
 [QUALITY_GATES.md](docs/QUALITY_GATES.md).
 
 Parser fuzz targets require Clang:
@@ -405,13 +410,13 @@ is placed under the aircraft; this keeps a shoreline and its target marker in
 the same geographic position instead of mixing spherical sampling with flat
 rendering coordinates.
 
-Ocean and sea posts are classified by the compact Natural Earth-derived mask.
-Their negative DTED values remain bathymetric depth for a logarithmic
-shallow-blue to deep-navy ramp, while their rendered geometry is held at mean
-sea level. Land polygons, rather than elevation sign alone, keep depressions
-such as the Dead Sea from being colored as ocean. The existing mask is sampled
-by geographic position for DT1/DT2 terrain, so coastline classification remains
-limited by its DTED0-aligned resolution even when elevations are more detailed.
+Ocean and sea posts are classified from the same compiled Natural Earth-derived
+vector land index used by Mercator and Sphere. Plane rasterizes nearby indexed
+triangles into an adaptive local mask, so classification is independent of DTED
+level. Negative water values remain bathymetric depth for a logarithmic
+shallow-blue to deep-navy ramp while their rendered geometry stays at mean sea
+level. Polygon classification, rather than elevation sign, keeps terrestrial
+depressions such as the Dead Sea on the land pass.
 
 For absolute vertical alignment, mapped `Plane.location[2]` must use metres
 above a mean-sea-level datum compatible with the DTED files. If aircraft
@@ -422,8 +427,9 @@ MSL aircraft altitude.
 Terrain preparation is latest-only on a dedicated CPU thread. It lazily opens
 only addressed cells, bounds terrain caching by both 24 entries and 128 MiB,
 and builds a 20–60 km half-extent patch using level-aware sample spacing with a
-257-by-257 mesh cap. The water-mask cache remains capped at 24 entries. The
-patch is reused until the aircraft moves beyond 35% of its radius; OpenGL
+257-by-257 mesh cap. The adaptive land mask is a bounded 256–2,048-pixel R8
+raster and is omitted for uniform land/water patches. The patch is reused until
+the aircraft moves beyond 35% of its radius; OpenGL
 upload still occurs only in the widget's active context. DT0 is nominally
 coarse terrain (roughly kilometre-scale), while DT1/DT2 improve sampled detail
 within the mesh cap rather than forcing every source post onto the GPU.
@@ -432,7 +438,8 @@ The first valid aircraft position anchors the grid to the Earth. As subsequent
 packets move the centered aircraft, the grid slides beneath it in the opposite
 direction while retaining its ground-relative minor and major line positions.
 Target and LAR overlays use the same aircraft-relative east/north projection.
-The result remains a local flat presentation layer, not a globe.
+When terrain is ready, the target marker samples the terrain at its own
+coordinate. The result remains a local flat tactical presentation, not a globe.
 
 The target is shown as a compact red four-sided pyramid. Its base half-width is
 0.5% of the valid IZ outer radius, or IR when IZ is unavailable, and is clamped

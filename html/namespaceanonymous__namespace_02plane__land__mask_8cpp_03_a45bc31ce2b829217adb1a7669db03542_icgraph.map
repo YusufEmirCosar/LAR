@@ -1,0 +1,15 @@
+<map id="anonymous_namespace{plane_land_mask::cpp}::texelIndex" name="anonymous_namespace{plane_land_mask::cpp}::texelIndex">
+<area shape="rect" id="Node000001" title=" " alt="" coords="832,29,994,85"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="947,14,935,10,913,8,893,10,880,15,874,21,873,31,869,27,869,19,877,10,892,5,913,3,936,5,952,15"/>
+<area shape="rect" id="Node000002" href="$struct_plane_land_mask.html#ab0b20ba4bc8c1f2831bdd319f4a91776" title=" " alt="" coords="593,44,784,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="814,57,784,60,784,55,819,57"/>
+<area shape="rect" id="Node000003" href="$class_plane_terrain_patch_builder.html#a580df2736ddf2edbd9c6a4a6dafb1e14" title="Samples and triangulates one request, returning null when local terrain is absent." alt="" coords="378,37,545,78"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="575,57,546,60,546,55,580,57"/>
+<area shape="rect" id="Node000004" href="$class_plane_terrain_worker.html#ab215b14a4ab72ff79e0890675d809388" title=" " alt="" coords="196,37,330,78"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="360,58,331,60,330,55,365,57"/>
+<area shape="rect" id="Node000005" href="$class_plane_terrain_worker.html#aec2b27fc3e44e3c210ce7cca8aa4581c" title=" " alt="" coords="9,37,144,78"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="178,67,144,68,144,63,183,65"/>
+<area shape="rect" id="Node000010" href="$class_plane_terrain_worker.html#ab9214c88002fceeebfb74539c2c844ab" title=" " alt="" coords="5,102,148,143"/>
+<area shape="poly" id="edge6_Node000004_Node000010" title=" " alt="" coords="191,82,137,104,136,99,186,84"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="159,46,198,48,193,49,160,51"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="ThreadedApplicationRuntime::shutdown" name="ThreadedApplicationRuntime::shutdown">
+<area shape="rect" id="Node000001" title="Synchronously drains, joins, and destroys every owned worker." alt="" coords="258,5,446,46"/>
+<area shape="rect" id="Node000002" href="$class_threaded_application_runtime.html#a3b27dc2aada3d49a1d20e41710144f75" title=" " alt="" coords="5,5,210,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="239,26,210,28,210,23,244,26"/>
+</map>

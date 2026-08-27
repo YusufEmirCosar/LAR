@@ -1,0 +1,8 @@
+<map id="PlaneTerrainGpuLayer::hasRenderableGeometry" name="PlaneTerrainGpuLayer::hasRenderableGeometry">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,179,70"/>
+<area shape="rect" id="Node000002" href="$class_plane_terrain_gpu_layer.html#a77bc7ab9b2af508a30c1db45819e9be9" title=" " alt="" coords="227,29,376,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,47,214,49,209,50,179,52"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="265,27,263,19,269,10,282,5,301,3,322,5,336,14,331,13,321,10,301,8,283,10,273,15,268,20,270,30"/>
+<area shape="rect" id="Node000003" href="$struct_plane_terrain_patch.html#ab62d24e4661e6b0784a07ec75854b4f1" title=" " alt="" coords="424,29,559,70"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="376,47,411,50,406,50,376,52"/>
+</map>

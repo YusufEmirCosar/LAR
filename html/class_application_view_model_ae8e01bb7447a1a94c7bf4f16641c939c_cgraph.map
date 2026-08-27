@@ -1,0 +1,5 @@
+<map id="ApplicationViewModel::setProcessedPacketRate" name="ApplicationViewModel::setProcessedPacketRate">
+<area shape="rect" id="Node000001" title="Sets the current source throughput in packets or records per second." alt="" coords="5,5,184,46"/>
+<area shape="rect" id="Node000002" href="$class_application_view_model.html#a4ede6b79e944d298b52a981a8afe896d" title=" " alt="" coords="232,5,381,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,23,219,25,214,26,184,28"/>
+</map>

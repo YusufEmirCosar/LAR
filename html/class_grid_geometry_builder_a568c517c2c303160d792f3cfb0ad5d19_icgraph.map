@@ -1,0 +1,9 @@
+<map id="GridGeometryBuilder::scaleBarDistance" name="GridGeometryBuilder::scaleBarDistance">
+<area shape="rect" id="Node000001" title=" " alt="" coords="454,27,596,68"/>
+<area shape="rect" id="Node000002" href="$class_grid_lar_view.html#ab8204bf37fd85f6e47385ab20547fc25" title=" " alt="" coords="216,5,406,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="436,36,406,34,406,29,441,36"/>
+<area shape="rect" id="Node000004" href="$class_lar_navigation_overlay.html#aabbfc2725827d547c84750c428360aac" title=" " alt="" coords="238,55,384,96"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="441,59,385,69,384,63,436,59"/>
+<area shape="rect" id="Node000003" href="$class_grid_lar_view.html#aae172329db02631d16199f0e2a3cbd81" title=" " alt="" coords="5,5,168,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="198,19,169,21,168,16,203,17"/>
+</map>

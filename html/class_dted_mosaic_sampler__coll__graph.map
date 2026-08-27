@@ -1,0 +1,16 @@
+<map id="DtedMosaicSampler" name="DtedMosaicSampler">
+<area shape="rect" id="Node000001" title="Samples a logical DTED mosaic while loading only addressed tiles." alt="" coords="39,534,179,559"/>
+<area shape="rect" id="Node000002" href="$class_dted_tile_source.html" title="Resolves WGS84 positions directly to conventional eDDD/nDD.dtN paths." alt="" coords="5,430,117,455"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,467,106,533,101,533,71,471"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="141,422,373,463"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,471,164,512,129,535,126,531,161,507,215,473"/>
+<area shape="rect" id="Node000004" href="$struct_dted_cell_key.html" title="Integer south&#45;west origin used to address one DTED cell." alt="" coords="192,5,287,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="231,43,225,78,221,114,221,332,224,356,230,380,248,422,243,421,225,382,218,357,216,332,216,113,220,77,230,48"/>
+<area shape="rect" id="Node000007" href="$struct_dted_cell.html" title="Decoded DTED elevations stored as longitude profiles from south to north." alt="" coords="286,102,358,128"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="260,40,314,101,309,102,260,45"/>
+<area shape="rect" id="Node000005" href="$struct_dted_mosaic_sampler_1_1_cache_entry.html" title=" " alt="" coords="267,310,415,351"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="319,362,274,424,270,420,314,365"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="278,199,430,239"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="352,252,346,311,341,309,349,257"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="331,140,351,199,346,198,330,145"/>
+</map>

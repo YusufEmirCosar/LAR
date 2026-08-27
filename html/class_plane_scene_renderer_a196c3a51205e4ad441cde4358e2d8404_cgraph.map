@@ -1,0 +1,94 @@
+<map id="PlaneSceneRenderer::operator=" name="PlaneSceneRenderer::operator=">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,912,150,953"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_renderer.html#a512c506995494e591bca4e196ac85127" title=" " alt="" coords="404,773,548,814"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,911,96,873,119,826,152,779,173,759,196,743,237,728,271,726,351,743,414,766,409,768,349,748,271,731,238,733,199,748,176,764,156,783,124,828,101,875,87,912"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_renderer.html#a303eb0d904256d05666662ac14a59539" title=" " alt="" coords="202,283,346,323"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="83,911,259,337,264,339,88,912"/>
+<area shape="rect" id="Node000024" href="$class_plane_scene_renderer.html#ad16b6570f8c335cb73f8eab20eab1095" title=" " alt="" coords="202,643,346,683"/>
+<area shape="poly" id="edge28_Node000001_Node000024" title=" " alt="" coords="82,911,97,869,120,813,153,754,196,700,210,690,207,695,200,704,158,756,125,815,102,870,87,913"/>
+<area shape="rect" id="Node000034" href="$class_plane_scene_renderer.html#aee4dc7ce0e5756b7a0f5fd8e32b78dda" title=" " alt="" coords="198,781,350,822"/>
+<area shape="poly" id="edge43_Node000001_Node000034" title=" " alt="" coords="99,910,142,872,196,833,209,827,205,831,199,837,146,876,103,913"/>
+<area shape="rect" id="Node000035" href="$class_plane_scene_renderer.html#a29dc5ec1d6c9da01471f64c58dbb33da" title=" " alt="" coords="202,847,346,887"/>
+<area shape="poly" id="edge45_Node000001_Node000035" title=" " alt="" coords="139,909,198,891,194,895,142,914"/>
+<area shape="rect" id="Node000036" href="$class_plane_scene_renderer.html#a2c33040a35b6fcb4e4e62b9746441afe" title=" " alt="" coords="202,912,346,953"/>
+<area shape="poly" id="edge46_Node000001_Node000036" title=" " alt="" coords="149,930,188,931,184,934,151,935"/>
+<area shape="rect" id="Node000037" href="$class_plane_scene_renderer.html#aec680202e2a23b408a9bbb1cdf870593" title=" " alt="" coords="202,977,346,1018"/>
+<area shape="poly" id="edge47_Node000001_Node000037" title=" " alt="" coords="140,951,198,971,194,973,141,956"/>
+<area shape="rect" id="Node000038" href="$class_plane_scene_renderer.html#ac79a49c4dc2c7fabe417d4c5d453df93" title=" " alt="" coords="202,1043,346,1083"/>
+<area shape="poly" id="edge48_Node000001_Node000038" title=" " alt="" coords="100,951,146,989,199,1027,210,1035,205,1036,196,1032,142,993,101,956"/>
+<area shape="rect" id="Node000039" href="$class_plane_scene_renderer.html#aee75e7ec29bd8606b7051a521836a2d6" title="Sets the immutable terrain snapshot uploaded on the next paint pass." alt="" coords="202,1108,346,1149"/>
+<area shape="poly" id="edge49_Node000001_Node000039" title=" " alt="" coords="90,950,133,1020,164,1059,199,1093,207,1099,201,1100,196,1097,160,1062,129,1023,89,956"/>
+<area shape="rect" id="Node000040" href="$class_plane_scene_renderer.html#a1f620e3e5be42009c9c1f8eaeeb67d7a" title="Positions and scales the stable terrain anchor relative to the current aircraft." alt="" coords="200,1173,348,1214"/>
+<area shape="poly" id="edge50_Node000001_Node000040" title=" " alt="" coords="85,950,101,994,124,1049,157,1107,177,1134,200,1158,205,1164,199,1164,196,1162,173,1138,152,1110,119,1051,96,996,84,955"/>
+<area shape="rect" id="Node000041" href="$class_plane_scene_renderer.html#a49d1235bf4c0dc775f1fd0dd6da221c3" title="Shows DTED terrain; no land&#45;colored fallback is drawn while a patch is loading." alt="" coords="202,1239,346,1279"/>
+<area shape="poly" id="edge51_Node000001_Node000041" title=" " alt="" coords="82,950,95,1006,116,1078,150,1155,173,1191,200,1224,204,1230,199,1228,196,1227,168,1194,145,1157,111,1079,90,1007,81,956"/>
+<area shape="rect" id="Node000003" href="$class_plane_surface_gpu_layer.html#a6649e0596c335b7ad1e08fd46bb17a74" title=" " alt="" coords="611,773,767,814"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="548,791,598,793,593,795,550,796"/>
+<area shape="rect" id="Node000004" href="$class_plane_terrain_gpu_layer.html#ab1280353c664db1033eb6da292576567" title=" " alt="" coords="614,708,764,749"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="543,770,608,752,603,755,546,775"/>
+<area shape="rect" id="Node000006" href="$class_plane_terrain_gpu_layer.html#a00a4a4f28dc43bec53d297a36031da14" title=" " alt="" coords="402,5,551,46"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="278,281,292,236,316,176,350,113,372,84,396,57,404,53,401,57,400,61,376,87,355,116,321,179,297,238,283,283"/>
+<area shape="rect" id="Node000007" href="$class_plane_terrain_gpu_layer.html#a3861dd3b0b6946e8a4b1005d3ed1a85f" title=" " alt="" coords="602,95,776,135"/>
+<area shape="poly" id="edge23_Node000005_Node000007" title=" " alt="" coords="286,281,331,225,362,196,397,171,443,150,491,135,589,119,585,122,493,140,445,155,399,176,365,200,335,229,291,283"/>
+<area shape="rect" id="Node000010" href="$class_plane_surface_gpu_layer.html#a0a2ed450fdbdfe01e6528b9da15ccca7" title=" " alt="" coords="398,251,554,291"/>
+<area shape="poly" id="edge10_Node000005_Node000010" title=" " alt="" coords="344,290,385,284,381,287,348,294"/>
+<area shape="rect" id="Node000013" href="$class_plane_terrain_gpu_layer.html#a9fcce08c38c249a8442e9d5c0d39a44d" title=" " alt="" coords="402,185,551,226"/>
+<area shape="poly" id="edge13_Node000005_Node000013" title=" " alt="" coords="312,280,397,237,413,231,410,235,399,241,315,284"/>
+<area shape="rect" id="Node000016" href="$class_plane_scene_renderer.html#aaf9bbf71a092003809ff4ba881c79f2f" title=" " alt="" coords="404,381,548,422"/>
+<area shape="poly" id="edge18_Node000005_Node000016" title=" " alt="" coords="312,321,399,366,414,374,409,376,397,371,313,326"/>
+<area shape="rect" id="Node000018" href="$class_plane_scene_renderer.html#a6664f72deaa7d5079630798ade017c97" title=" " alt="" coords="404,316,548,357"/>
+<area shape="poly" id="edge20_Node000005_Node000018" title=" " alt="" coords="345,312,391,320,386,323,347,317"/>
+<area shape="rect" id="Node000019" href="$class_plane_terrain_gpu_layer.html#a6dcb7b291f2e172f85f0a4dab2197dac" title="Returns vector&#45;classified DTED/sea&#45;level height at a current Plane X/Z coordinate." alt="" coords="402,71,551,111"/>
+<area shape="poly" id="edge21_Node000005_Node000019" title=" " alt="" coords="283,281,327,208,359,166,396,128,413,117,410,122,400,132,363,169,331,211,288,283"/>
+<area shape="rect" id="Node000020" href="$class_plane_scene_renderer.html#a2fd41eb9a3f22cc1bf389ebd7e669064" title=" " alt="" coords="404,447,548,487"/>
+<area shape="poly" id="edge24_Node000005_Node000020" title=" " alt="" coords="290,321,337,375,367,405,400,432,409,438,404,440,396,436,363,409,333,379,291,326"/>
+<area shape="rect" id="Node000023" href="$class_plane_scene_renderer.html#a242bd529fb0a8699df1aedfa3a76a323" title=" " alt="" coords="404,512,548,553"/>
+<area shape="poly" id="edge27_Node000005_Node000023" title=" " alt="" coords="283,321,302,359,327,406,360,454,400,497,407,503,401,504,396,501,355,457,322,408,297,362,283,326"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="526,44,627,87,622,89,528,49"/>
+<area shape="rect" id="Node000008" href="$class_plane_terrain_gpu_layer.html#a77bc7ab9b2af508a30c1db45819e9be9" title=" " alt="" coords="824,95,973,135"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="775,113,811,114,806,116,777,117"/>
+<area shape="poly" id="edge9_Node000008_Node000008" title=" " alt="" coords="862,93,860,85,866,76,879,70,898,68,919,70,933,78,928,80,918,76,898,73,880,75,870,80,865,86,867,95"/>
+<area shape="rect" id="Node000009" href="$struct_plane_terrain_patch.html#ab62d24e4661e6b0784a07ec75854b4f1" title=" " alt="" coords="1021,156,1156,197"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="963,133,1012,150,1007,152,964,139"/>
+<area shape="rect" id="Node000011" href="$class_plane_surface_gpu_layer.html#a972e1bf9e132cd6176f4a85947e64378" title=" " alt="" coords="611,251,767,291"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="553,269,598,270,594,272,555,273"/>
+<area shape="rect" id="Node000012" href="$class_plane_surface_gpu_layer.html#a1bcf8f57da73d25059060fad462947c6" title=" " alt="" coords="611,316,767,357"/>
+<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="544,289,608,310,603,312,545,294"/>
+<area shape="poly" id="edge14_Node000013_Node000007" title=" " alt="" coords="524,183,627,140,624,144,527,187"/>
+<area shape="rect" id="Node000014" href="$class_plane_terrain_gpu_layer.html#acc14fd6629009b5a49dccce06071aafa" title=" " alt="" coords="614,185,764,226"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="550,203,601,204,597,207,552,208"/>
+<area shape="poly" id="edge16_Node000014_Node000009" title=" " alt="" coords="763,212,864,217,919,215,973,210,1021,200,1016,203,973,215,919,221,864,222,765,217"/>
+<area shape="rect" id="Node000015" href="$struct_plane_terrain_patch.html#ad06f3421baca38e8c5287cba0592be46" title=" " alt="" coords="831,160,966,201"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="762,194,818,189,813,192,765,199"/>
+<area shape="rect" id="Node000017" href="$class_plane_scene_renderer.html#a65ab44234d48b4d77ae4a107b0a64c0f" title=" " alt="" coords="617,381,761,422"/>
+<area shape="poly" id="edge19_Node000016_Node000017" title=" " alt="" coords="547,399,603,400,599,403,550,404"/>
+<area shape="poly" id="edge22_Node000019_Node000007" title=" " alt="" coords="550,97,589,102,584,105,552,102"/>
+<area shape="rect" id="Node000021" href="$struct_plane_model_mesh.html#ada14130db0049dc0de9a4ce382447426" title="Reports whether the model mesh has no renderable geometry." alt="" coords="606,450,772,476"/>
+<area shape="poly" id="edge25_Node000020_Node000021" title=" " alt="" coords="547,463,593,464,588,466,550,468"/>
+<area shape="rect" id="Node000022" href="$class_plane_scene_renderer.html#a44ca4c2f5d7f37f1d8e0015af9568865" title=" " alt="" coords="617,500,761,541"/>
+<area shape="poly" id="edge26_Node000020_Node000022" title=" " alt="" coords="548,483,604,497,599,500,549,488"/>
+<area shape="poly" id="edge29_Node000024_Node000002" title=" " alt="" coords="322,681,352,700,367,715,376,730,385,744,400,758,408,765,403,766,396,762,381,747,371,733,363,719,348,704,323,687"/>
+<area shape="poly" id="edge41_Node000024_Node000020" title=" " alt="" coords="284,641,328,572,359,533,396,498,406,494,403,498,400,502,363,537,332,575,288,644"/>
+<area shape="poly" id="edge42_Node000024_Node000023" title=" " alt="" coords="296,640,341,602,397,563,410,558,406,562,399,568,344,606,300,644"/>
+<area shape="rect" id="Node000025" href="$class_plane_scene_renderer.html#a5059f9b03c9dd5865b81abb5afab955e" title=" " alt="" coords="404,577,548,618"/>
+<area shape="poly" id="edge30_Node000024_Node000025" title=" " alt="" coords="337,640,398,622,394,625,341,644"/>
+<area shape="rect" id="Node000026" href="$class_plane_scene_renderer.html#a1e4422fb7a7634223303705a3ea95e79" title=" " alt="" coords="398,708,554,749"/>
+<area shape="poly" id="edge31_Node000024_Node000026" title=" " alt="" coords="338,681,399,702,394,704,340,686"/>
+<area shape="rect" id="Node000027" href="$class_plane_surface_gpu_layer.html#a2de66cf13917cb32cd6daca431bb53bb" title=" " alt="" coords="398,839,554,879"/>
+<area shape="poly" id="edge32_Node000024_Node000027" title=" " alt="" coords="296,681,352,744,366,767,374,787,383,805,400,824,406,830,401,830,396,828,379,808,369,789,361,770,348,747,296,686"/>
+<area shape="rect" id="Node000031" href="$class_plane_terrain_gpu_layer.html#a79da3e5c1d7f990a163a5d135de1026b" title=" " alt="" coords="402,643,551,683"/>
+<area shape="poly" id="edge37_Node000024_Node000031" title=" " alt="" coords="345,661,388,662,384,664,347,665"/>
+<area shape="poly" id="edge33_Node000027_Node000003" title=" " alt="" coords="543,836,608,818,603,820,546,841"/>
+<area shape="rect" id="Node000028" href="$class_plane_surface_gpu_layer.html#aa2363d58155909b09c367d355812bb18" title=" " alt="" coords="611,904,767,945"/>
+<area shape="poly" id="edge34_Node000027_Node000028" title=" " alt="" coords="544,877,608,898,603,899,545,883"/>
+<area shape="rect" id="Node000029" href="$class_plane_surface_gpu_layer.html#aecae4cc0982a218e20d54eddf753b492" title=" " alt="" coords="609,969,769,1010"/>
+<area shape="poly" id="edge35_Node000027_Node000029" title=" " alt="" coords="500,877,547,916,604,954,616,962,611,962,601,959,544,920,500,882"/>
+<area shape="rect" id="Node000030" href="$class_plane_surface_gpu_layer.html#a47b1e44861350ccf57f28ca9ac5f24a8" title=" " alt="" coords="611,839,767,879"/>
+<area shape="poly" id="edge36_Node000027_Node000030" title=" " alt="" coords="553,856,598,858,593,860,555,862"/>
+<area shape="poly" id="edge38_Node000031_Node000004" title=" " alt="" coords="544,681,608,702,603,704,545,686"/>
+<area shape="rect" id="Node000032" href="$class_plane_terrain_gpu_layer.html#acdc542647535984efe530d111b976cef" title=" " alt="" coords="614,643,764,683"/>
+<area shape="poly" id="edge39_Node000031_Node000032" title=" " alt="" coords="550,661,601,662,596,664,552,665"/>
+<area shape="rect" id="Node000033" href="$class_plane_terrain_gpu_layer.html#ad4ea4d5439e6b9823e3d1768da3f17d2" title=" " alt="" coords="614,577,764,618"/>
+<area shape="poly" id="edge40_Node000031_Node000033" title=" " alt="" coords="543,640,608,622,603,625,546,644"/>
+<area shape="poly" id="edge44_Node000034_Node000034" title=" " alt="" coords="236,780,235,771,241,762,254,757,274,755,295,757,309,765,304,767,294,762,274,760,255,762,244,767,240,772,242,781"/>
+</map>

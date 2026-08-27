@@ -1,0 +1,23 @@
+<map id="PlaneTerrainPatchBuilder" name="PlaneTerrainPatchBuilder">
+<area shape="rect" id="Node000001" title="Builds immutable terrain patches; instances are confined to one CPU worker thread." alt="" coords="1182,91,1349,116"/>
+<area shape="rect" id="Node000002" href="$class_dted_mosaic_sampler.html" title="Samples a logical DTED mosaic while loading only addressed tiles." alt="" coords="865,63,1004,88"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1020,80,1184,96,1179,96,1020,85"/>
+<area shape="rect" id="Node000003" href="$class_dted_tile_source.html" title="Resolves WGS84 positions directly to conventional eDDD/nDD.dtN paths." alt="" coords="556,5,667,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="682,22,756,31,834,45,893,62,888,62,833,50,755,37,682,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="495,55,727,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="743,73,867,75,862,76,743,78"/>
+<area shape="rect" id="Node000005" href="$struct_dted_cell_key.html" title="Integer south&#45;west origin used to address one DTED cell." alt="" coords="262,5,358,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="373,27,472,45,509,54,504,55,470,50,373,32"/>
+<area shape="rect" id="Node000006" href="$struct_dted_mosaic_sampler_1_1_cache_entry.html" title=" " alt="" coords="236,55,384,96"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="399,73,497,75,492,76,399,78"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,55,158,96"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="173,73,238,75,233,76,173,78"/>
+<area shape="rect" id="Node000010" href="$class_plane_land_mask_builder.html" title="Builds a bounded local raster by querying only indexed map triangles." alt="" coords="857,119,1012,144"/>
+<area shape="poly" id="edge7_Node000001_Node000010" title=" " alt="" coords="1027,128,1157,120,1194,117,1199,117,1158,125,1027,133"/>
+<area shape="rect" id="Node000011" href="$classlar_1_1map_1_1_map_land_index.html" title="Read&#45;only spatial index over the planar land triangles in one map mesh." alt="" coords="530,121,692,147"/>
+<area shape="poly" id="edge8_Node000010_Node000011" title=" " alt="" coords="707,131,860,132,855,132,707,136"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="234,120,386,161"/>
+<area shape="poly" id="edge9_Node000011_Node000012" title=" " alt="" coords="402,136,533,136,528,136,402,141"/>
+<area shape="rect" id="Node000013" href="$structlar_1_1map_1_1_map_mesh.html" title="Geographic vertices plus projection&#45;specific fill and border indices." alt="" coords="15,128,148,154"/>
+<area shape="poly" id="edge10_Node000012_Node000013" title=" " alt="" coords="164,138,236,141,230,141,164,143"/>
+</map>

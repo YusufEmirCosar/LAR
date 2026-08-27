@@ -1,0 +1,17 @@
+<map id="PlaneTerrainGpuLayer::draw" name="PlaneTerrainGpuLayer::draw">
+<area shape="rect" id="Node000001" title=" " alt="" coords="912,99,1061,139"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_renderer.html#a303eb0d904256d05666662ac14a59539" title=" " alt="" coords="717,33,861,74"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="906,93,853,77,853,72,911,93"/>
+<area shape="rect" id="Node000007" href="$class_plane_terrain_gpu_layer.html#a148a59a028ca3ca6ca94dba7fd91e5bd" title="Draws an unscaled terrain anchor (compatibility overload)." alt="" coords="714,99,864,139"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="894,119,864,122,864,116,899,119"/>
+<area shape="rect" id="Node000008" href="$class_plane_terrain_gpu_layer.html#ab7dca4bb30afb023808ed3f8d0de936c" title=" " alt="" coords="714,164,864,205"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="911,144,853,166,852,161,906,145"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title=" " alt="" coords="502,5,646,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="699,42,646,38,646,32,704,42"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title=" " alt="" coords="481,70,666,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="699,66,667,73,667,68,704,65"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="257,63,433,103"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="463,83,434,86,433,80,468,83"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,63,209,103"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="238,84,210,86,209,80,244,82"/>
+</map>

@@ -10,23 +10,14 @@ STRIP_FROM_PATH        = "@PROJECT_SOURCE_DIR@"
 
 INPUT                  = "@PROJECT_SOURCE_DIR@/src" \
                          "@PROJECT_SOURCE_DIR@/tools/map_asset" \
+                         "@PROJECT_SOURCE_DIR@/README.md" \
                          "@PROJECT_SOURCE_DIR@/ProjectSpecification.md" \
-                         "@PROJECT_SOURCE_DIR@/docs/README.md" \
-                         "@PROJECT_SOURCE_DIR@/docs/ARCHITECTURE.md" \
-                         "@PROJECT_SOURCE_DIR@/docs/COMPONENT_REFERENCE.md" \
-                         "@PROJECT_SOURCE_DIR@/docs/CONCURRENCY_MODEL.md" \
-                         "@PROJECT_SOURCE_DIR@/docs/DATA_FLOWS.md" \
-                         "@PROJECT_SOURCE_DIR@/docs/DLZ_MODEL.md" \
-                         "@PROJECT_SOURCE_DIR@/docs/DEVELOPER_GUIDE.md" \
-                         "@PROJECT_SOURCE_DIR@/docs/LAR1_FORMAT.md" \
-                         "@PROJECT_SOURCE_DIR@/docs/PROTOCOL_UNITS.md" \
-                         "@PROJECT_SOURCE_DIR@/docs/QUALITY_GATES.md" \
-                         "@PROJECT_SOURCE_DIR@/docs/SOLID_COMPLIANCE.md" \
-                         "@PROJECT_SOURCE_DIR@/docs/THREAT_MODEL.md"
+                         "@PROJECT_SOURCE_DIR@/docs" \
+                         "@PROJECT_SOURCE_DIR@/assets/README.md" \
+                         "@PROJECT_SOURCE_DIR@/assets/map/README.md"
 FILE_PATTERNS          = *.h *.hpp *.cpp *.md
 RECURSIVE              = YES
-EXCLUDE_PATTERNS       = */build-*/* */tests/* */html/* */latex/* \
-                         */src/testsender/README.md
+EXCLUDE_PATTERNS       = */build-*/* */tests/* */html/* */latex/*
 USE_MDFILE_AS_MAINPAGE = "@PROJECT_SOURCE_DIR@/docs/README.md"
 
 # Keep the source browser exhaustive without forcing prose onto trivial members.

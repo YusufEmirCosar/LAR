@@ -1,0 +1,18 @@
+<map id="PacketMapping::decode" name="PacketMapping::decode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,167,80"/>
+<area shape="rect" id="Node000002" href="$class_packet_mapping.html#ad1917abe7193f42eb04c4bc08cfdb309" title="True only when all bindings form a complete, non&#45;overlapping schema." alt="" coords="215,5,372,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,51,224,34,219,36,144,57"/>
+<area shape="rect" id="Node000003" href="$class_state_field.html#a19e5c09fa9f8306f98e3a5db2bdf1bd4" title=" " alt="" coords="224,55,362,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,65,211,67,206,68,167,70"/>
+<area shape="rect" id="Node000007" href="$class_state_validator.html#a1a89a626574779010785568b4fd81d99" title=" " alt="" coords="420,105,575,131"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="148,78,215,90,407,111,402,114,214,95,148,84"/>
+<area shape="rect" id="Node000004" href="$class_state_field.html#a518ff6ce6f1e93a5135e7274e2db7359" title=" " alt="" coords="807,56,952,82"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="352,51,420,41,515,33,589,30,664,32,759,41,814,52,809,52,758,46,664,38,589,35,515,38,420,46,353,57"/>
+<area shape="rect" id="Node000005" href="$class_state_field.html#aef3dfc4418848efa5769202f760e1e44" title=" " alt="" coords="438,56,557,82"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="363,65,425,68,420,69,363,71"/>
+<area shape="rect" id="Node000006" href="$class_state_field.html#a2dfc080fa7c4d91049a450951893646c" title=" " alt="" coords="623,56,759,82"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="558,66,610,69,605,69,558,71"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="759,66,794,69,788,69,759,71"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="576,111,664,103,758,92,804,86,809,85,759,97,664,109,576,116"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="551,102,620,86,626,86,552,107"/>
+</map>

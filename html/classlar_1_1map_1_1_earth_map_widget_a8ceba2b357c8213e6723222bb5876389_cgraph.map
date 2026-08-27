@@ -1,0 +1,15 @@
+<map id="lar::map::EarthMapWidget::resizeGL" name="lar::map::EarthMapWidget::resizeGL">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,179,79"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_camera.html#a7b051361862a20132feef31029587881" title=" " alt="" coords="227,39,399,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,56,214,59,208,59,179,62"/>
+<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_map_camera.html#a699e33e0cbd4dca626c0dfff694efced" title=" " alt="" coords="453,5,616,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="399,43,440,40,435,41,400,49"/>
+<area shape="rect" id="Node000005" href="$classlar_1_1map_1_1_map_camera.html#acd6f80d79badd22c058d5f60efc95f83" title=" " alt="" coords="447,71,622,111"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="400,69,434,76,429,76,399,74"/>
+<area shape="rect" id="Node000004" href="$classlar_1_1map_1_1_map_camera.html#a7079b884e2e9dead87376cbd91f8f774" title=" " alt="" coords="676,5,824,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="616,23,663,25,658,26,617,28"/>
+<area shape="rect" id="Node000006" href="$classlar_1_1map_1_1_map_projection.html#ae51b77201c9b343a098d386577f31c0c" title=" " alt="" coords="670,71,830,111"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="622,88,657,91,652,91,623,94"/>
+<area shape="rect" id="Node000007" href="$classlar_1_1map_1_1_map_projection.html#a07314ffecd55c0529f331a1aa41a8107" title=" " alt="" coords="878,71,1037,111"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="830,88,865,91,860,91,830,94"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="MappedPacketDecoder" name="MappedPacketDecoder">
+<area shape="rect" id="Node000001" title="Thin IPacketDecoder adapter around PacketMapping::decode()." alt="" coords="52,102,210,128"/>
+<area shape="rect" id="Node000002" href="$class_i_packet_decoder.html" title="Mutable decoder whose active PacketMapping can be replaced." alt="" coords="5,5,121,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,41,125,101,120,102,79,46"/>
+<area shape="rect" id="Node000003" href="$class_packet_mapping.html" title="Validated packet schema that decodes and encodes Plane/Target values." alt="" coords="145,5,256,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,43,142,103,138,99,180,44"/>
+</map>

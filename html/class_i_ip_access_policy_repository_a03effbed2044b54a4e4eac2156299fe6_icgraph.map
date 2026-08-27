@@ -1,0 +1,11 @@
+<map id="IIpAccessPolicyRepository::load" name="IIpAccessPolicyRepository::load">
+<area shape="rect" id="Node000001" title=" " alt="" coords="828,5,1007,46"/>
+<area shape="rect" id="Node000002" href="$class_ip_access_policy_service.html#a94b35449174bc24086b9c346d5997bec" title=" " alt="" coords="623,5,780,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="810,26,780,28,780,23,815,26"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#a49e7d78b35420d6ceb0cc678b915070b" title="Loads an IP access policy from a file and submits it for installation." alt="" coords="439,5,575,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="605,26,576,28,576,23,610,26"/>
+<area shape="rect" id="Node000004" href="$class_online_workflow_controller.html#ada3a5443fb8f57a792731b415b5cce15" title=" " alt="" coords="223,5,391,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="421,26,391,28,391,23,426,26"/>
+<area shape="rect" id="Node000005" href="$class_online_panel.html#a718a7f2c79b67e00d58efdbeedbd3ad8" title=" " alt="" coords="5,13,175,38"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="204,26,175,28,175,23,209,25"/>
+</map>

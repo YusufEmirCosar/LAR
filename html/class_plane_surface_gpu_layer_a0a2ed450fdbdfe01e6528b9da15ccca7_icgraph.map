@@ -1,0 +1,15 @@
+<map id="PlaneSurfaceGpuLayer::draw" name="PlaneSurfaceGpuLayer::draw">
+<area shape="rect" id="Node000001" title=" " alt="" coords="918,67,1073,107"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_renderer.html#a303eb0d904256d05666662ac14a59539" title=" " alt="" coords="720,33,864,74"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="900,72,864,68,864,63,905,72"/>
+<area shape="rect" id="Node000007" href="$class_plane_surface_gpu_layer.html#a085ca7434c23b58de2efff80b504e81f" title=" " alt="" coords="714,99,870,139"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="905,101,870,109,870,104,900,102"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title=" " alt="" coords="502,5,646,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="702,43,646,38,646,32,707,42"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title=" " alt="" coords="481,70,666,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="707,65,667,73,667,68,702,66"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="257,63,433,103"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="463,83,433,86,433,80,468,83"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,63,209,103"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="238,83,210,86,209,80,244,83"/>
+</map>

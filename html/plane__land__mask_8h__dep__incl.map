@@ -1,0 +1,34 @@
+<map id="src/viewer/plane/plane_land_mask.h" name="src/viewer/plane/plane_land_mask.h">
+<area shape="rect" id="Node000001" title="Adaptive local land coverage derived from the packaged world&#45;map triangles." alt="" coords="343,5,494,46"/>
+<area shape="rect" id="Node000002" href="$plane__land__mask_8cpp.html" title=" " alt="" coords="167,94,318,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="363,55,284,96,281,91,367,51"/>
+<area shape="rect" id="Node000003" href="$plane__terrain__patch_8h.html" title="Immutable CPU terrain mesh and bounded build request for Plane mode." alt="" coords="343,94,494,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="419,59,421,95,416,93,417,64"/>
+<area shape="rect" id="Node000012" href="$plane__terrain__patch__builder_8h.html" title="Bounded DTED sampling and indexed local terrain&#45;mesh construction." alt="" coords="503,183,662,223"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="461,53,508,92,546,138,574,183,568,182,541,141,504,96,461,58"/>
+<area shape="rect" id="Node000004" href="$plane__scene__widget_8h.html" title="Interactive OpenGL chase/orbit view for the centered Plane simulation." alt="" coords="93,360,245,401"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="325,141,277,162,224,190,177,227,156,248,139,272,133,294,136,317,145,339,157,360,152,359,141,341,131,318,128,294,135,270,152,245,173,223,222,185,275,157,330,138"/>
+<area shape="rect" id="Node000008" href="$plane__terrain__gpu__layer_8h.html" title="Context&#45;owned upload and draw pass for immutable DTED terrain patches." alt="" coords="325,183,477,223"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="413,148,407,184,403,181,410,152"/>
+<area shape="poly" id="edge12_Node000003_Node000012" title=" " alt="" coords="469,140,548,182,543,183,469,145"/>
+<area shape="rect" id="Node000005" href="$plane__scene__widget_8cpp.html" title=" " alt="" coords="5,449,157,489"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="141,411,103,450,99,446,136,413"/>
+<area shape="rect" id="Node000006" href="$plane__scene__widget__terrain_8cpp.html" title="DTED worker lifecycle, patch recentering, and aircraft&#45;relative placement." alt="" coords="414,449,590,489"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="260,402,429,447,424,449,259,408"/>
+<area shape="rect" id="Node000007" href="$plane__view__workspace_8cpp.html" title=" " alt="" coords="181,449,333,489"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="201,409,240,448,234,448,199,414"/>
+<area shape="rect" id="Node000009" href="$plane__scene__renderer_8h.html" title="OpenGL resources and draw passes for the centered F&#45;16 simulation." alt="" coords="149,271,301,312"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="345,232,266,273,263,269,349,229"/>
+<area shape="rect" id="Node000011" href="$plane__terrain__gpu__layer_8cpp.html" title=" " alt="" coords="325,271,477,312"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="402,237,403,272,399,270,400,241"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="206,323,184,361,180,358,202,327"/>
+<area shape="rect" id="Node000010" href="$plane__scene__renderer_8cpp.html" title=" " alt="" coords="269,360,421,401"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="265,319,321,359,315,360,264,324"/>
+<area shape="rect" id="Node000013" href="$plane__terrain__patch__builder_8cpp.html" title=" " alt="" coords="500,271,672,312"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="585,237,588,272,583,270,582,241"/>
+<area shape="rect" id="Node000014" href="$plane__terrain__worker_8h.html" title="Latest&#45;only dedicated CPU worker for DTED terrain patch preparation." alt="" coords="696,271,847,312"/>
+<area shape="poly" id="edge14_Node000012_Node000014" title=" " alt="" coords="639,227,732,271,726,271,639,233"/>
+<area shape="poly" id="edge15_Node000014_Node000006" title=" " alt="" coords="732,320,533,451,531,446,726,321"/>
+<area shape="rect" id="Node000015" href="$plane__terrain__worker_8cpp.html" title=" " alt="" coords="696,360,847,401"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="773,326,774,361,770,358,770,330"/>
+</map>

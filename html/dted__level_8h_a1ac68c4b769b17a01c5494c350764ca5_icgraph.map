@@ -1,0 +1,25 @@
+<map id="dtedLatitudeSampleCount" name="dtedLatitudeSampleCount">
+<area shape="rect" id="Node000001" title=" " alt="" coords="861,157,1032,182"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="982,142,971,138,946,135,924,138,912,142,909,148,915,157,911,155,904,148,908,138,923,132,946,130,972,133,987,143"/>
+<area shape="rect" id="Node000002" href="$dted__level_8h.html#aca427879ab50bef1e08aa9442eea5e89" title=" " alt="" coords="654,106,813,132"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="872,153,790,135,791,130,877,153"/>
+<area shape="rect" id="Node000003" href="$class_dted_cell_reader.html#a10cdaeed74a37e50d005a7a80818aa0e" title="Parses a DTED file and verifies level, dimensions, and profile checksums." alt="" coords="438,112,606,137"/>
+<area shape="poly" id="edge9_Node000001_Node000003" title=" " alt="" coords="843,163,654,147,606,140,606,135,655,142,848,162"/>
+<area shape="rect" id="Node000017" href="$struct_dted_cell.html#a9dadbcb6d8536fdff074df2b5215607f" title="Returns true when dimensions and storage form a bounded usable DTED cell." alt="" coords="680,208,787,233"/>
+<area shape="poly" id="edge10_Node000001_Node000017" title=" " alt="" coords="877,186,788,210,787,205,872,187"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="769,91,758,87,733,85,711,87,699,92,697,97,703,107,698,105,691,98,696,88,710,82,734,80,759,82,774,92"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="636,122,607,125,606,120,642,121"/>
+<area shape="rect" id="Node000004" href="$class_dted_tile_source.html#a2b89b0db2f0c8e7fe5ddad5734cfb3a4" title=" " alt="" coords="245,112,388,137"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="420,125,388,127,388,122,425,124"/>
+<area shape="rect" id="Node000005" href="$class_dted_mosaic_sampler.html#a44929b88aa05b416734a507b31424551" title=" " alt="" coords="26,5,174,46"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="278,104,194,60,168,49,167,44,196,55,283,102"/>
+<area shape="rect" id="Node000016" href="$namespaceanonymous__namespace_02plane__scene__widget__terrain_8cpp_03.html#a43699095805e832b356d470d93e4f1ae" title=" " alt="" coords="5,94,195,165"/>
+<area shape="poly" id="edge7_Node000004_Node000016" title=" " alt="" coords="227,127,196,130,194,125,232,126"/>
+<area shape="poly" id="edge8_Node000016_Node000016" title=" " alt="" coords="132,81,120,75,100,73,82,75,70,79,64,86,62,94,57,93,59,83,67,75,81,70,100,68,122,70,137,79"/>
+<area shape="rect" id="Node000018" href="$struct_dted_cell.html#a8ec96e10bbea9712838e31faa44fe41f" title="Returns one decoded elevation in metres, excluding the DTED no&#45;data sentinel." alt="" coords="456,208,588,233"/>
+<area shape="poly" id="edge11_Node000017_Node000018" title=" " alt="" coords="662,220,589,223,589,218,667,220"/>
+<area shape="rect" id="Node000019" href="$class_dted_mosaic_sampler.html#a0114733412031c2f7f8875af4914197c" title=" " alt="" coords="243,200,390,241"/>
+<area shape="poly" id="edge12_Node000018_Node000019" title=" " alt="" coords="438,220,390,223,390,218,443,220"/>
+<area shape="rect" id="Node000007" href="$class_dted_mosaic_sampler.html#a9cad4de48229805ca1ee5dd471ecfd5e" title="Returns interpolated terrain elevation, or no value when no valid post contributes." alt="" coords="26,200,174,241"/>
+<area shape="poly" id="edge13_Node000019_Node000007" title=" " alt="" coords="224,221,174,223,174,218,230,220"/>
+</map>

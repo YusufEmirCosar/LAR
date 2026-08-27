@@ -1,0 +1,5 @@
+<map id="RecordingPipelineCoordinator::shutdown" name="RecordingPipelineCoordinator::shutdown">
+<area shape="rect" id="Node000001" title="Cancels the transaction and invalidates every in&#45;flight drain or save identity." alt="" coords="224,5,417,46"/>
+<area shape="rect" id="Node000002" href="$class_recording_runtime_worker.html#acf662a2212a21238b112893150af97c0" title="Cancels the active recording transaction and invalidates pending pipeline work." alt="" coords="5,5,176,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,26,176,28,176,23,211,25"/>
+</map>

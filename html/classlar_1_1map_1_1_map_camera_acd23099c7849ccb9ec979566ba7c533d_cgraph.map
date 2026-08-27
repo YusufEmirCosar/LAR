@@ -1,0 +1,16 @@
+<map id="lar::map::MapCamera::panMercator" name="lar::map::MapCamera::panMercator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,100,153,141"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_camera.html#a7b051361862a20132feef31029587881" title=" " alt="" coords="201,71,373,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,107,188,105,182,106,154,113"/>
+<area shape="rect" id="Node000004" href="$classlar_1_1map_1_1_map_camera.html#a7079b884e2e9dead87376cbd91f8f774" title=" " alt="" coords="650,99,798,139"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="153,120,201,120,399,122,596,120,638,122,632,122,596,126,399,127,201,126,153,125"/>
+<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_map_camera.html#a699e33e0cbd4dca626c0dfff694efced" title=" " alt="" coords="427,71,590,111"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="373,88,414,91,409,91,374,94"/>
+<area shape="rect" id="Node000005" href="$classlar_1_1map_1_1_map_camera.html#acd6f80d79badd22c058d5f60efc95f83" title=" " alt="" coords="421,5,596,46"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="357,68,420,52,425,50,359,73"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="591,99,637,107,632,107,590,104"/>
+<area shape="rect" id="Node000006" href="$classlar_1_1map_1_1_map_projection.html#ae51b77201c9b343a098d386577f31c0c" title=" " alt="" coords="644,5,804,46"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="596,23,631,25,626,26,597,28"/>
+<area shape="rect" id="Node000007" href="$classlar_1_1map_1_1_map_projection.html#a07314ffecd55c0529f331a1aa41a8107" title=" " alt="" coords="852,5,1011,46"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="804,23,839,25,834,26,804,28"/>
+</map>

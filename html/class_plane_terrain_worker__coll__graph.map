@@ -1,0 +1,29 @@
+<map id="PlaneTerrainWorker" name="PlaneTerrainWorker">
+<area shape="rect" id="Node000001" title="Coalesces aircraft movement so only the newest bounded terrain patch is published." alt="" coords="1314,135,1448,160"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="1007,5,1076,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1091,12,1136,12,1187,16,1240,27,1291,46,1319,65,1342,89,1374,135,1369,133,1338,92,1315,70,1288,51,1239,32,1186,22,1136,17,1092,17"/>
+<area shape="rect" id="Node000003" href="$struct_plane_terrain_build_request.html" title="Parameters for one aircraft&#45;centered terrain build." alt="" coords="956,55,1127,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1143,71,1216,82,1290,100,1327,115,1360,134,1355,134,1325,119,1289,105,1215,87,1143,77"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="965,108,1118,134"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1133,125,1316,142,1310,142,1133,131"/>
+<area shape="rect" id="Node000005" href="$struct_dted_dataset.html" title="One lazily addressed DTED directory selected for Plane terrain." alt="" coords="994,160,1089,186"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1104,175,1192,177,1289,171,1339,161,1344,160,1290,176,1192,182,1104,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="943,210,1140,250"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1155,229,1222,222,1289,205,1331,184,1362,162,1367,160,1333,188,1291,210,1223,227,1155,234"/>
+<area shape="rect" id="Node000007" href="$classlar_1_1map_1_1_i_map_asset_source.html" title="Hides package/file lookup from EarthLarView." alt="" coords="692,217,872,243"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="888,228,945,230,940,230,888,233"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="946,275,1137,316"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1152,294,1222,283,1256,273,1288,258,1317,236,1340,209,1371,162,1375,160,1344,212,1320,240,1291,262,1258,278,1223,288,1153,300"/>
+<area shape="rect" id="Node000009" href="$class_plane_terrain_patch_builder.html" title="Builds immutable terrain patches; instances are confined to one CPU worker thread." alt="" coords="698,283,866,308"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="881,293,948,295,943,296,882,298"/>
+<area shape="rect" id="Node000010" href="$class_dted_mosaic_sampler.html" title="Samples a logical DTED mosaic while loading only addressed tiles." alt="" coords="375,255,514,280"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="530,272,701,288,696,289,530,277"/>
+<area shape="rect" id="Node000011" href="$class_dted_tile_source.html" title="Resolves WGS84 positions directly to conventional eDDD/nDD.dtN paths." alt="" coords="66,197,177,223"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="192,214,266,223,344,237,403,254,398,254,343,242,265,229,193,220"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="5,247,238,288"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="253,265,377,267,372,268,254,270"/>
+<area shape="rect" id="Node000018" href="$class_plane_land_mask_builder.html" title="Builds a bounded local raster by querying only indexed map triangles." alt="" coords="368,311,522,336"/>
+<area shape="poly" id="edge12_Node000009_Node000018" title=" " alt="" coords="537,320,668,312,707,309,712,309,668,317,537,325"/>
+<area shape="rect" id="Node000019" href="$classlar_1_1map_1_1_map_land_index.html" title="Read&#45;only spatial index over the planar land triangles in one map mesh." alt="" coords="41,312,202,338"/>
+<area shape="poly" id="edge13_Node000018_Node000019" title=" " alt="" coords="218,322,370,324,365,324,218,327"/>
+</map>

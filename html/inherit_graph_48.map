@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_i_ip_access_policy_repository.html" title="Loads and validates exact&#45;match sender policies from external storage." alt="" coords="5,5,185,31"/>
+<area shape="rect" id="Node000001" href="$class_qt_ip_access_policy_repository.html" title="Bounded Qt filesystem/parser adapter for exact IP whitelist files." alt="" coords="233,5,422,31"/>
+<area shape="poly" id="edge65_Node000000_Node000001" title=" " alt="" coords="200,16,235,18,229,18,201,21"/>
+</map>

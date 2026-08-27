@@ -1,0 +1,64 @@
+<map id="PlaneTerrainWorker::processLatest" name="PlaneTerrainWorker::processLatest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,609,140,650"/>
+<area shape="rect" id="Node000002" href="$class_plane_terrain_patch_builder.html#a580df2736ddf2edbd9c6a4a6dafb1e14" title="Samples and triangulates one request, returning null when local terrain is absent." alt="" coords="206,511,374,551"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,607,187,562,207,555,203,559,189,567,108,611"/>
+<area shape="rect" id="Node000005" href="$classlar_1_1map_1_1_map_land_index.html#a79863c5b047374d1ad3d4fdfe9845421" title=" " alt="" coords="919,17,1080,58"/>
+<area shape="poly" id="edge31_Node000001_Node000005" title=" " alt="" coords="83,608,154,493,211,412,282,323,365,233,460,149,511,111,564,76,620,46,677,22,734,7,794,3,851,5,906,14,901,16,851,11,794,8,735,13,679,27,622,51,567,81,514,115,463,153,369,237,286,327,216,415,158,496,88,610"/>
+<area shape="rect" id="Node000037" href="$classlar_1_1map_1_1_i_map_asset_source.html#a68796831e202c71e830293cc01701fd1" title=" " alt="" coords="200,576,380,617"/>
+<area shape="poly" id="edge32_Node000001_Node000037" title=" " alt="" coords="139,617,186,611,182,614,141,622"/>
+<area shape="rect" id="Node000038" href="$class_plane_terrain_worker.html#aec2b27fc3e44e3c210ce7cca8aa4581c" title=" " alt="" coords="223,641,357,682"/>
+<area shape="poly" id="edge33_Node000001_Node000038" title=" " alt="" coords="139,645,209,657,205,660,141,651"/>
+<area shape="rect" id="Node000039" href="$structlar_1_1map_1_1_map_asset_read_result.html#a4fa971a0c14aa613b6dd149e35efab10" title="Reports whether parsing produced a valid mesh." alt="" coords="188,707,392,747"/>
+<area shape="poly" id="edge35_Node000001_Node000039" title=" " alt="" coords="107,648,189,691,208,700,203,701,187,696,107,653"/>
+<area shape="rect" id="Node000003" href="$class_plane_land_mask_builder.html#a6370f137d1388aefd95c2dc496dee19c" title=" " alt="" coords="458,239,612,279"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="308,508,503,293,507,289,312,512"/>
+<area shape="rect" id="Node000008" href="$class_lar_projection.html#a4875d219ffbabafbeb019813cc023d82" title="Inverts the local flat projection for a finite east/north position." alt="" coords="678,401,848,442"/>
+<area shape="poly" id="edge21_Node000002_Node000008" title=" " alt="" coords="373,509,665,443,661,446,375,514"/>
+<area shape="rect" id="Node000012" href="$dted__level_8h.html#aefa1e3f016df8c87007499038dea1b20" title=" " alt="" coords="685,490,841,516"/>
+<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="373,523,671,507,667,510,374,529"/>
+<area shape="rect" id="Node000014" href="$struct_plane_land_mask.html#ab0b20ba4bc8c1f2831bdd319f4a91776" title=" " alt="" coords="440,681,630,706"/>
+<area shape="poly" id="edge16_Node000002_Node000014" title=" " alt="" coords="366,549,393,562,429,586,463,614,515,669,510,669,459,618,426,591,391,567,367,555"/>
+<area shape="rect" id="Node000016" href="$struct_plane_land_mask.html#ad1a14f08588f778672e872fb663d6ec4" title=" " alt="" coords="688,823,838,849"/>
+<area shape="poly" id="edge30_Node000002_Node000016" title=" " alt="" coords="374,548,394,562,409,582,416,603,418,642,420,680,427,699,442,717,464,735,486,744,508,748,530,749,577,750,603,756,632,767,647,778,656,788,666,799,680,809,694,818,689,817,677,813,662,803,652,792,643,782,629,772,602,761,577,756,530,754,507,754,485,749,462,739,438,721,423,701,415,682,413,642,411,604,404,585,390,566,374,553"/>
+<area shape="rect" id="Node000017" href="$class_dted_mosaic_sampler.html#aa772d2e928fe4a6f100a9b10bd629507" title=" " alt="" coords="462,781,609,822"/>
+<area shape="poly" id="edge20_Node000002_Node000017" title=" " alt="" coords="374,547,394,562,412,588,420,613,421,638,420,663,418,687,419,712,426,736,442,761,452,773,447,772,438,765,421,738,414,713,412,687,414,663,416,638,415,614,407,590,390,566,374,553"/>
+<area shape="rect" id="Node000018" href="$class_dted_mosaic_sampler.html#a9cad4de48229805ca1ee5dd471ecfd5e" title="Returns interpolated terrain elevation, or no value when no valid post contributes." alt="" coords="462,540,609,581"/>
+<area shape="poly" id="edge22_Node000002_Node000018" title=" " alt="" coords="373,538,448,549,443,551,375,544"/>
+<area shape="rect" id="Node000004" href="$classlar_1_1map_1_1_map_land_index.html#ab6a7cb89774684d45e13cecd52422148" title="Appends possibly duplicated candidate triangle ordinals for bounded unwrapped bounds." alt="" coords="682,75,844,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="552,237,605,183,640,153,677,126,690,121,686,124,680,131,643,157,609,187,556,240"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="542,237,560,198,589,149,628,100,651,78,677,61,732,38,791,25,849,21,905,24,900,26,849,26,791,31,734,43,680,65,654,82,631,103,593,152,565,200,547,240"/>
+<area shape="rect" id="Node000006" href="$class_lar_projection.html#a4e2dca65a4cdc72bf5aa871c00eda908" title=" " alt="" coords="679,140,847,181"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="579,236,677,191,696,186,692,189,679,196,582,240"/>
+<area shape="rect" id="Node000007" href="$classlar_1_1map_1_1_map_land_index.html#a6a9a4bea23a0975f5e124e31bc47709e" title=" " alt="" coords="682,205,844,246"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="612,245,669,238,664,241,614,250"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="555,277,609,331,643,360,680,386,691,394,686,394,677,391,640,364,606,335,555,283"/>
+<area shape="rect" id="Node000010" href="$class_plane_land_mask_builder.html#ae17ebb800bcff9f545851924233e6300" title=" " alt="" coords="686,271,840,311"/>
+<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="612,267,673,277,668,279,613,272"/>
+<area shape="rect" id="Node000011" href="$classlar_1_1map_1_1_map_projection.html#abda6cc4a42ca2edee384a3e338bbf5c1" title=" " alt="" coords="683,336,843,377"/>
+<area shape="poly" id="edge11_Node000003_Node000011" title=" " alt="" coords="581,277,679,321,697,329,691,330,677,325,582,283"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="843,73,906,60,901,62,845,78"/>
+<area shape="rect" id="Node000009" href="$class_lar_geodesic_geometry.html#ae3ba4dbef8641441c270e58e3363dba5" title=" " alt="" coords="924,401,1075,442"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="847,419,911,421,906,422,849,424"/>
+<area shape="poly" id="edge13_Node000012_Node000012" title=" " alt="" coords="725,489,718,482,722,472,738,466,763,463,791,466,807,475,801,475,789,471,763,469,739,471,726,476,723,481,730,490"/>
+<area shape="rect" id="Node000013" href="$dted__level_8h.html#af26dff08bfd8b36f22ee93aadf8901ce" title=" " alt="" coords="938,490,1061,516"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="841,500,925,502,919,504,842,506"/>
+<area shape="poly" id="edge15_Node000013_Node000013" title=" " alt="" coords="960,489,953,482,957,472,973,466,999,463,1028,466,1044,475,1039,475,1027,471,999,469,974,471,961,476,958,481,965,490"/>
+<area shape="rect" id="Node000015" href="$namespaceanonymous__namespace_02plane__land__mask_8cpp_03.html#a45bc31ce2b829217adb1a7669db03542" title=" " alt="" coords="682,743,844,799"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="576,704,631,723,670,738,664,738,629,728,576,710"/>
+<area shape="poly" id="edge19_Node000014_Node000016" title=" " alt="" coords="597,704,632,724,650,746,657,768,664,789,680,809,688,817,683,815,677,813,659,791,652,769,645,748,629,728,597,710"/>
+<area shape="poly" id="edge18_Node000015_Node000015" title=" " alt="" coords="719,741,719,733,727,724,742,718,763,716,787,719,803,729,798,728,786,724,763,722,743,724,730,728,724,735,723,744"/>
+<area shape="poly" id="edge23_Node000018_Node000012" title=" " alt="" coords="608,539,697,519,692,521,610,544"/>
+<area shape="rect" id="Node000019" href="$class_dted_mosaic_sampler.html#a0114733412031c2f7f8875af4914197c" title=" " alt="" coords="689,540,837,581"/>
+<area shape="poly" id="edge24_Node000018_Node000019" title=" " alt="" coords="608,558,676,560,671,561,609,563"/>
+<area shape="rect" id="Node000023" href="$class_dted_tile_source.html#a2262cc8c90af96d6c5b38b73ca02d58a" title=" " alt="" coords="690,605,836,630"/>
+<area shape="poly" id="edge26_Node000018_Node000023" title=" " alt="" coords="609,576,697,600,691,601,609,581"/>
+<area shape="rect" id="Node000024" href="$class_dted_mosaic_sampler.html#a6846daac445cde1ec6c433644309a5bd" title=" " alt="" coords="689,655,837,695"/>
+<area shape="poly" id="edge27_Node000018_Node000024" title=" " alt="" coords="569,579,621,609,680,641,692,648,687,648,677,645,618,614,569,584"/>
+<area shape="rect" id="Node000020" href="$struct_dted_cell.html#a8ec96e10bbea9712838e31faa44fe41f" title="Returns one decoded elevation in metres, excluding the DTED no&#45;data sentinel." alt="" coords="933,547,1066,573"/>
+<area shape="poly" id="edge25_Node000019_Node000020" title=" " alt="" coords="837,558,920,560,915,561,837,563"/>
+<area shape="rect" id="Node000025" href="$class_dted_mosaic_sampler.html#a44929b88aa05b416734a507b31424551" title=" " alt="" coords="926,627,1073,667"/>
+<area shape="poly" id="edge28_Node000024_Node000025" title=" " alt="" coords="837,664,913,657,908,658,837,669"/>
+<area shape="rect" id="Node000035" href="$class_dted_tile_source.html#a0fdda0cc9f7560a9fbf5f48b25dddd2c" title=" " alt="" coords="896,691,1103,717"/>
+<area shape="poly" id="edge29_Node000024_Node000035" title=" " alt="" coords="837,681,883,689,878,690,837,687"/>
+<area shape="poly" id="edge34_Node000038_Node000001" title=" " alt="" coords="220,645,156,636,154,630,224,642"/>
+</map>

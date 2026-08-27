@@ -1,0 +1,53 @@
+<map id="IRecordingTransaction::isActive" name="IRecordingTransaction::isActive">
+<area shape="rect" id="Node000001" title="True after a successful begin() and until cancel() releases the transaction." alt="" coords="1232,365,1384,406"/>
+<area shape="poly" id="edge14_Node000001_Node000001" title=" " alt="" coords="1345,349,1332,346,1308,344,1286,346,1272,351,1267,357,1269,366,1265,363,1262,355,1269,346,1285,341,1308,339,1333,341,1350,350"/>
+<area shape="rect" id="Node000002" href="$class_recording_service.html#a4849870db94fac0b6e060909e7332915" title="Cancels the transaction and returns to Idle." alt="" coords="990,169,1160,210"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1268,355,1100,213,1102,208,1274,355"/>
+<area shape="rect" id="Node000014" href="$class_recording_service.html#afe7401dfa1084a3e3d7dbdbd49a8fabb" title=" " alt="" coords="991,365,1160,406"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="1214,386,1160,388,1160,383,1219,385"/>
+<area shape="rect" id="Node000020" href="$class_recording_service.html#a34839e02657747aa67f48b8e6d18a3da" title=" " alt="" coords="967,470,1184,496"/>
+<area shape="poly" id="edge22_Node000001_Node000020" title=" " alt="" coords="1246,412,1109,472,1108,467,1241,413"/>
+<area shape="rect" id="Node000003" href="$class_recording_service.html#a94088791a65b91dd83b459da0b8f6c3a" title=" " alt="" coords="729,5,915,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1041,158,986,110,917,61,893,49,893,44,920,57,990,106,1046,158"/>
+<area shape="rect" id="Node000008" href="$class_direct_application_runtime.html#af389f3329701a1e9a0dc615e1cf6f4f6" title=" " alt="" coords="737,71,907,111"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="1010,163,918,127,885,115,885,109,920,122,1015,163"/>
+<area shape="rect" id="Node000009" href="$class_recording_pipeline_coordinator.html#a3b5b579bf17c17e2a6c1b0d7fd8d50fc" title="Applies the pending operation only when token matches the active drain." alt="" coords="725,136,919,177"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="972,177,919,172,919,166,977,176"/>
+<area shape="rect" id="Node000011" href="$class_direct_application_runtime.html#ad1f581119a38e9c0f28e2c1c45e24b5a" title="Shuts down the direct runtime." alt="" coords="737,201,907,242"/>
+<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="972,203,908,214,907,208,977,202"/>
+<area shape="rect" id="Node000012" href="$class_recording_pipeline_coordinator.html#a938b4eb21be43b406d4ab88be3e4d037" title="Cancels the transaction and invalidates every in&#45;flight drain or save identity." alt="" coords="725,267,919,307"/>
+<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="1014,215,920,256,885,269,884,264,918,251,1009,217"/>
+<area shape="rect" id="Node000004" href="$class_recording_pipeline_coordinator.html#a8f8fe0a915a94ddb4b1b98452b5b748b" title=" " alt="" coords="484,5,677,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="711,27,679,28,677,23,716,25"/>
+<area shape="rect" id="Node000007" href="$class_direct_application_runtime.html#ab1947fbce095c7e2578a91d60b62bd2e" title=" " alt="" coords="496,71,665,111"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="728,52,660,72,658,68,732,49"/>
+<area shape="rect" id="Node000005" href="$class_recording_runtime_worker.html#a7b606cadc9e93783b990e48399a68e96" title=" " alt="" coords="258,52,428,93"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="466,49,430,58,427,53,471,46"/>
+<area shape="rect" id="Node000006" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title=" " alt="" coords="5,248,202,289"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="304,105,132,249,128,246,305,100"/>
+<area shape="rect" id="Node000010" href="$class_recording_runtime_worker.html#aa95e5c13c8f695fd05b3228cd1027b4d" title=" " alt="" coords="258,183,428,223"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="708,169,429,197,428,192,712,166"/>
+<area shape="poly" id="edge10_Node000010_Node000006" title=" " alt="" coords="250,230,182,250,179,245,254,226"/>
+<area shape="rect" id="Node000013" href="$class_recording_runtime_worker.html#acf662a2212a21238b112893150af97c0" title="Cancels the active recording transaction and invalidates pending pipeline work." alt="" coords="496,267,666,307"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="707,288,667,290,666,284,712,286"/>
+<area shape="rect" id="Node000015" href="$class_recording_pipeline_coordinator.html#a5d4adf65fededc39ef5242805e7eeffb" title="Consumes a producer batch and acknowledges its ID exactly once." alt="" coords="725,332,919,373"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="973,373,919,368,919,362,978,372"/>
+<area shape="rect" id="Node000017" href="$class_recording_service.html#a31789e1b2374ce87e9e61d253dca1613" title=" " alt="" coords="738,397,906,438"/>
+<area shape="poly" id="edge19_Node000014_Node000017" title=" " alt="" coords="973,399,907,410,906,404,978,398"/>
+<area shape="rect" id="Node000016" href="$class_recording_runtime_worker.html#aacd8a9f67ff011851f1c871a8792f023" title=" " alt="" coords="258,313,428,354"/>
+<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="707,349,429,340,428,334,712,347"/>
+<area shape="poly" id="edge18_Node000016_Node000006" title=" " alt="" coords="249,310,181,292,180,287,254,308"/>
+<area shape="rect" id="Node000018" href="$class_direct_application_runtime.html#af7dfb47a5a42b53c0a26e62c480d9362" title=" " alt="" coords="492,387,669,427"/>
+<area shape="poly" id="edge20_Node000017_Node000018" title=" " alt="" coords="720,414,670,414,670,408,725,413"/>
+<area shape="rect" id="Node000019" href="$class_recording_service.html#a2f7614308dddf893f521332000651127" title=" " alt="" coords="496,452,665,493"/>
+<area shape="poly" id="edge21_Node000017_Node000019" title=" " alt="" coords="725,440,666,456,665,451,720,441"/>
+<area shape="rect" id="Node000021" href="$class_direct_application_runtime.html#a104614f54065ed6ac6ef3fb52c8db875" title=" " alt="" coords="737,463,907,503"/>
+<area shape="poly" id="edge23_Node000020_Node000021" title=" " alt="" coords="949,483,907,486,907,480,954,483"/>
+<area shape="rect" id="Node000022" href="$class_recording_pipeline_coordinator.html#a61aee7a56b9997f21e15b4f93c886bdd" title=" " alt="" coords="725,528,919,569"/>
+<area shape="poly" id="edge24_Node000020_Node000022" title=" " alt="" coords="1011,500,904,530,903,525,1005,501"/>
+<area shape="rect" id="Node000023" href="$class_recording_runtime_worker.html#a9188ede54293648e6d7ed0d0d3f9c3f0" title=" " alt="" coords="496,521,666,562"/>
+<area shape="poly" id="edge25_Node000022_Node000023" title=" " alt="" coords="707,545,666,547,666,541,712,545"/>
+<area shape="poly" id="edge26_Node000023_Node000006" title=" " alt="" coords="505,515,483,507,379,451,279,390,133,292,134,287,282,386,381,446,485,502,511,516"/>
+<area shape="rect" id="Node000024" href="$class_recording_runtime_worker.html#a30457a2f16339425b56245e6e331c59b" title=" " alt="" coords="250,521,436,562"/>
+<area shape="poly" id="edge27_Node000023_Node000024" title=" " alt="" coords="477,542,437,544,437,539,482,542"/>
+</map>

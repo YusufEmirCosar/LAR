@@ -1,0 +1,7 @@
+<map id="FileSessionSnapshot" name="FileSessionSnapshot">
+<area shape="rect" id="Node000001" title="Describes a stable byte prefix of a file and retains its lifetime." alt="" coords="78,117,222,143"/>
+<area shape="rect" id="Node000002" href="$class_i_session_snapshot.html" title="Opaque immutable recording snapshot." alt="" coords="5,13,133,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,48,143,116,138,117,87,53"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="157,5,309,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,57,162,119,158,115,205,59"/>
+</map>

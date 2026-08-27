@@ -1,0 +1,6 @@
+<map id="lar::gltf::GlbResourceReader::splitGlb" name="lar::gltf::GlbResourceReader::splitGlb">
+<area shape="rect" id="Node000001" title="Splits and validates a GLB 2.0 container without interpreting its JSON." alt="" coords="216,37,403,78"/>
+<area shape="rect" id="Node000002" href="$namespaceanonymous__namespace_02glb__model__reader_8cpp_03.html#a80e24fd042ee2476592ade794ddc94f6" title=" " alt="" coords="5,29,168,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,57,168,60,168,55,203,57"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="121,15,109,10,86,8,67,10,54,15,48,21,48,30,43,28,43,19,51,10,66,5,87,3,110,5,126,14"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="IpAccessPolicy::IpAccessPolicy" name="IpAccessPolicy::IpAccessPolicy">
+<area shape="rect" id="Node000001" title=" " alt="" coords="480,5,655,46"/>
+<area shape="rect" id="Node000002" href="$class_qt_ip_access_policy_repository.html#aee15a88b3c3fe7400ce56a569ec3c33a" title=" " alt="" coords="243,5,432,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="462,26,432,28,432,23,467,26"/>
+<area shape="rect" id="Node000003" href="$class_qt_ip_access_policy_repository.html#a06b0f61bc81a9e2d177fc7da97df63fd" title=" " alt="" coords="5,5,195,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="224,26,195,28,195,23,230,25"/>
+</map>

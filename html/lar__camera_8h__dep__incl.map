@@ -1,0 +1,56 @@
+<map id="src/viewer/lar_camera.h" name="src/viewer/lar_camera.h">
+<area shape="rect" id="Node000001" title="Shared viewport presentation and tracking mode enumerations." alt="" coords="552,5,713,31"/>
+<area shape="rect" id="Node000002" href="$earth__lar__view_8h.html" title="Mercator/sphere LAR page combining map, zones, and marker overlays." alt="" coords="433,256,568,297"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="561,37,512,57,456,84,404,121,382,144,364,169,357,188,364,207,378,224,395,237,436,260,430,260,392,242,374,227,360,210,352,188,359,166,378,140,401,117,453,79,510,52,566,35"/>
+<area shape="rect" id="Node000008" href="$lar__viewport_8h.html" title="Host widget that switches pages and distributes scene/camera state." alt="" coords="607,256,741,297"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="613,41,602,61,594,80,590,99,594,119,607,158,625,196,662,257,657,255,620,198,602,160,589,120,585,99,589,78,597,59,609,45"/>
+<area shape="rect" id="Node000009" href="$viewport__camera__controller_8h.html" title="Shared tracking policy independent of any viewport renderer." alt="" coords="603,79,798,120"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="653,40,686,79,681,78,652,45"/>
+<area shape="rect" id="Node000020" href="$viewport__controls_8h.html" title="UI controls for view projection and camera tracking policy." alt="" coords="1250,79,1388,120"/>
+<area shape="poly" id="edge31_Node000001_Node000020" title=" " alt="" coords="728,28,1252,89,1247,91,728,33"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title=" " alt="" coords="940,352,1120,378"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="583,292,596,294,762,319,929,342,970,352,965,352,928,348,761,324,595,300,583,298"/>
+<area shape="rect" id="Node000004" href="$earth__lar__view_8cpp.html" title=" " alt="" coords="5,345,140,386"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="415,298,283,324,152,348,141,350,140,345,151,342,282,319,421,297"/>
+<area shape="rect" id="Node000005" href="$earth__lar__view__interaction_8cpp.html" title=" " alt="" coords="164,345,365,386"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="436,302,319,347,317,342,430,303"/>
+<area shape="rect" id="Node000006" href="$earth__lar__view__rendering_8cpp.html" title=" " alt="" coords="389,345,583,386"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="497,311,491,346,487,343,493,314"/>
+<area shape="rect" id="Node000007" href="$lar__viewport_8cpp.html" title=" " alt="" coords="607,345,741,386"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="554,302,637,345,632,344,553,307"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="757,295,982,352,977,352,756,301"/>
+<area shape="poly" id="edge9_Node000008_Node000007" title=" " alt="" coords="676,311,676,346,672,343,672,314"/>
+<area shape="poly" id="edge14_Node000009_Node000002" title=" " alt="" coords="670,129,524,258,521,254,665,131"/>
+<area shape="poly" id="edge21_Node000009_Node000008" title=" " alt="" coords="697,133,679,257,675,254,693,137"/>
+<area shape="rect" id="Node000010" href="$earth__camera__policy_8h.html" title="Pure tracking, fit, zoom&#45;anchor, and scale policy for Earth views." alt="" coords="374,168,528,208"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="627,126,509,170,507,165,632,124"/>
+<area shape="rect" id="Node000012" href="$grid__camera__transform_8h.html" title="Pan, zoom, tracking, and coordinate transforms for the grid page." alt="" coords="1102,168,1272,208"/>
+<area shape="poly" id="edge15_Node000009_Node000012" title=" " alt="" coords="813,117,1090,165,1105,170,1100,170,1089,170,813,122"/>
+<area shape="rect" id="Node000016" href="$lar__viewport__page_8h.html" title="Substitutable viewport&#45;page interfaces and their shared event channel." alt="" coords="936,168,1078,208"/>
+<area shape="poly" id="edge22_Node000009_Node000016" title=" " alt="" coords="785,122,940,167,935,167,785,127"/>
+<area shape="rect" id="Node000019" href="$viewport__camera__controller_8cpp.html" title=" " alt="" coords="704,168,913,208"/>
+<area shape="poly" id="edge30_Node000009_Node000019" title=" " alt="" coords="737,127,787,168,781,167,736,132"/>
+<area shape="poly" id="edge13_Node000010_Node000002" title=" " alt="" coords="471,220,492,257,487,255,469,224"/>
+<area shape="rect" id="Node000011" href="$earth__camera__policy_8cpp.html" title=" " alt="" coords="240,256,409,297"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="413,216,354,258,352,254,408,218"/>
+<area shape="rect" id="Node000013" href="$grid__camera__transform_8cpp.html" title=" " alt="" coords="1098,256,1282,297"/>
+<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="1190,222,1191,258,1187,254,1186,226"/>
+<area shape="rect" id="Node000014" href="$grid__lar__view_8h.html" title="Painter&#45;based local Cartesian LAR viewport page." alt="" coords="940,256,1074,297"/>
+<area shape="poly" id="edge17_Node000012_Node000014" title=" " alt="" coords="1135,215,1049,258,1047,253,1130,216"/>
+<area shape="poly" id="edge18_Node000014_Node000003" title=" " alt="" coords="1018,310,1029,354,1025,351,1015,314"/>
+<area shape="poly" id="edge20_Node000014_Node000007" title=" " alt="" coords="928,299,742,349,741,344,922,300"/>
+<area shape="rect" id="Node000015" href="$grid__lar__view_8cpp.html" title=" " alt="" coords="1144,345,1278,386"/>
+<area shape="poly" id="edge19_Node000014_Node000015" title=" " alt="" coords="1068,301,1167,345,1162,344,1067,306"/>
+<area shape="poly" id="edge27_Node000016_Node000002" title=" " alt="" coords="919,209,757,236,596,259,569,264,568,259,595,254,756,231,924,208"/>
+<area shape="poly" id="edge29_Node000016_Node000008" title=" " alt="" coords="924,211,742,260,741,255,919,212"/>
+<area shape="poly" id="edge28_Node000016_Node000014" title=" " alt="" coords="1009,222,1009,258,1005,254,1005,226"/>
+<area shape="rect" id="Node000017" href="$plane__view__workspace_8h.html" title="Hosted Plane page with lower&#45;corner upload and display controls." alt="" coords="765,256,916,297"/>
+<area shape="poly" id="edge23_Node000016_Node000017" title=" " alt="" coords="958,215,879,258,877,253,953,217"/>
+<area shape="poly" id="edge24_Node000017_Node000003" title=" " alt="" coords="898,301,1006,352,1001,352,896,306"/>
+<area shape="poly" id="edge26_Node000017_Node000007" title=" " alt="" coords="792,304,712,347,711,342,787,305"/>
+<area shape="rect" id="Node000018" href="$plane__view__workspace_8cpp.html" title=" " alt="" coords="765,345,916,386"/>
+<area shape="poly" id="edge25_Node000017_Node000018" title=" " alt="" coords="842,311,842,346,839,343,839,314"/>
+<area shape="poly" id="edge32_Node000020_Node000003" title=" " alt="" coords="1327,133,1331,172,1329,216,1319,260,1309,280,1296,299,1268,312,1217,327,1093,355,1092,349,1215,322,1266,307,1292,295,1304,278,1314,258,1324,215,1326,173,1324,137"/>
+<area shape="rect" id="Node000021" href="$viewport__controls_8cpp.html" title=" " alt="" coords="1356,168,1509,208"/>
+<area shape="poly" id="edge33_Node000020_Node000021" title=" " alt="" coords="1358,127,1409,168,1404,167,1356,132"/>
+</map>

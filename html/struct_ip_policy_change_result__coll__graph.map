@@ -1,0 +1,7 @@
+<map id="IpPolicyChangeResult" name="IpPolicyChangeResult">
+<area shape="rect" id="Node000001" title="Completion payload that retains the actually applied access policy." alt="" coords="67,102,218,128"/>
+<area shape="rect" id="Node000002" href="$struct_runtime_request_id.html" title="Correlates an accepted command with exactly one typed completion." alt="" coords="5,5,136,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,41,136,101,131,102,88,46"/>
+<area shape="rect" id="Node000003" href="$class_ip_access_policy.html" title="Optional exact IP allow&#45;list used before packet decoding." alt="" coords="160,5,272,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,42,174,80,154,104,151,100,170,76,196,45"/>
+</map>

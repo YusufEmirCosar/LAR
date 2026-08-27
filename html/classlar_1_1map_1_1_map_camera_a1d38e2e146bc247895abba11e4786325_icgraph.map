@@ -1,0 +1,21 @@
+<map id="lar::map::MapCamera::visibleWorldCopiesForBounds" name="lar::map::MapCamera::visibleWorldCopiesForBounds">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1185,104,1388,145"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_camera.html#ade6f9a191965c114a14004df26d5083b" title="Returns inclusive 360&#45;degree copy indices intersecting the rotated viewport." alt="" coords="990,75,1137,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1167,109,1137,107,1138,102,1172,109"/>
+<area shape="rect" id="Node000016" href="$class_earth_lar_view.html#a34b55dbbc1595a0021a80cb94f1efe03" title=" " alt="" coords="491,136,668,177"/>
+<area shape="poly" id="edge8_Node000001_Node000016" title=" " alt="" coords="1172,130,669,155,669,150,1167,130"/>
+<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_earth_map_gpu_renderer.html#a65462bb317eb2830b4c15398dba167d9" title=" " alt="" coords="732,71,942,111"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="972,94,942,96,942,90,977,93"/>
+<area shape="rect" id="Node000004" href="$classlar_1_1map_1_1_earth_map_gpu_renderer.html#a69950dc44cc3b2d48bb59cfd06eaebc6" title=" " alt="" coords="475,5,684,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="737,66,662,49,663,44,742,66"/>
+<area shape="rect" id="Node000005" href="$classlar_1_1map_1_1_earth_map_widget.html#a4d23293f76082ff3ae3ae088d6b2326a" title=" " alt="" coords="493,71,666,111"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="714,91,667,94,667,88,719,91"/>
+<area shape="rect" id="Node000006" href="$class_earth_lar_view.html#a1b46625580e1e14ca09c5caf781135f3" title=" " alt="" coords="264,114,416,140"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="480,106,417,118,417,113,475,107"/>
+<area shape="rect" id="Node000012" href="$classlar_1_1map_1_1_earth_map_widget.html#ae9d2dda90bd17821bbf89aa5316874b6" title=" " alt="" coords="254,49,427,90"/>
+<area shape="poly" id="edge7_Node000005_Node000012" title=" " alt="" coords="475,82,428,80,427,75,480,82"/>
+<area shape="rect" id="Node000007" href="$class_earth_lar_view.html#a31a878a0e62a405d4a6b4632b5b22641" title="Maps unavailable." alt="" coords="5,140,206,165"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="246,137,206,144,206,139,251,136"/>
+<area shape="poly" id="edge10_Node000016_Node000006" title=" " alt="" coords="473,144,417,139,417,134,478,144"/>
+<area shape="poly" id="edge9_Node000016_Node000007" title=" " alt="" coords="475,158,206,156,206,151,476,153"/>
+</map>

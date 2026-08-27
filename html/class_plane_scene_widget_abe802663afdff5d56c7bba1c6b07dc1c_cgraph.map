@@ -1,0 +1,19 @@
+<map id="PlaneSceneWidget::completeTerrainPatch" name="PlaneSceneWidget::completeTerrainPatch">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,120,199,161"/>
+<area shape="rect" id="Node000002" href="$struct_plane_terrain_patch.html#ab62d24e4661e6b0784a07ec75854b4f1" title=" " alt="" coords="289,5,424,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,117,185,86,246,55,277,46,272,49,248,60,187,90,136,121"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#a4a7bba43ba244905b278bc0de801b463" title=" " alt="" coords="247,70,467,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,117,283,98,279,101,196,122"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_renderer.html#aee75e7ec29bd8606b7051a521836a2d6" title="Sets the immutable terrain snapshot uploaded on the next paint pass." alt="" coords="285,120,429,161"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="198,138,271,139,267,142,200,143"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#a4af14d7382c36b30361f6903425d2d57" title="Notifies tests and controls when terrain preparation changes readiness." alt="" coords="269,185,445,226"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="184,159,263,180,258,182,184,164"/>
+<area shape="rect" id="Node000007" href="$class_plane_scene_widget.html#acac2e8aea3714d15692458953db3f092" title=" " alt="" coords="267,251,446,291"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="129,159,183,197,248,235,266,245,260,245,245,240,180,202,128,164"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#a225e8a3370fbcc87a300691e277eb58d" title=" " alt="" coords="515,63,714,103"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="467,80,502,82,497,84,468,86"/>
+<area shape="rect" id="Node000008" href="$class_lar_projection.html#a4e2dca65a4cdc72bf5aa871c00eda908" title=" " alt="" coords="530,217,699,258"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="447,257,517,250,512,251,447,262"/>
+<area shape="rect" id="Node000009" href="$class_plane_scene_renderer.html#a1f620e3e5be42009c9c1f8eaeeb67d7a" title="Positions and scales the stable terrain anchor relative to the current aircraft." alt="" coords="540,283,689,323"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="447,279,528,292,522,292,447,285"/>
+</map>

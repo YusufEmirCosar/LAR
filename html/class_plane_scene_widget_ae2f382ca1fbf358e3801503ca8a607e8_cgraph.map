@@ -1,0 +1,11 @@
+<map id="PlaneSceneWidget::requestTerrainIfNeeded" name="PlaneSceneWidget::requestTerrainIfNeeded">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,189,111"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_renderer.html#aee75e7ec29bd8606b7051a521836a2d6" title="Sets the immutable terrain snapshot uploaded on the next paint pass." alt="" coords="253,5,397,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,68,240,49,236,52,171,73"/>
+<area shape="rect" id="Node000003" href="$class_plane_terrain_worker.html#a814ba90d464c8cadf3c7d04196a2b1f6" title=" " alt="" coords="258,71,392,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="189,88,244,90,239,92,190,94"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a4af14d7382c36b30361f6903425d2d57" title="Notifies tests and controls when terrain preparation changes readiness." alt="" coords="237,136,413,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="170,109,240,131,234,132,170,115"/>
+<area shape="rect" id="Node000004" href="$class_plane_terrain_worker.html#a3b9649a1253485fc8fd43e0ab57996a1" title=" " alt="" coords="461,71,595,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="392,88,448,91,443,91,393,94"/>
+</map>

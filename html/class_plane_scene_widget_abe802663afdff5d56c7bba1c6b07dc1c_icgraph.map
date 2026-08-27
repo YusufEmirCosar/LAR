@@ -1,0 +1,13 @@
+<map id="PlaneSceneWidget::completeTerrainPatch" name="PlaneSceneWidget::completeTerrainPatch">
+<area shape="rect" id="Node000001" title=" " alt="" coords="755,58,949,99"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#a5c8242aec92b08254db217286a0b9194" title=" " alt="" coords="502,27,707,68"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="737,64,708,63,708,58,742,64"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="267,90,444,131"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="742,85,444,107,444,102,737,86"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,29,209,69"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="511,24,454,16,355,8,257,16,181,31,179,26,256,10,355,3,454,10,516,23"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#a605af179df470891b8fa7b2433ce23cc" title="Enables DTED terrain; loading and unavailable terrain remain visibly unclassified." alt="" coords="257,25,454,65"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="484,47,455,49,454,43,489,46"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="509,72,440,92,439,87,504,73"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="253,86,192,73,192,67,258,85"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="src/viewer/viewport/lar_navigation_overlay.h" name="src/viewer/viewport/lar_navigation_overlay.h">
+<area shape="rect" id="Node000001" title="Shared scale&#45;bar and north&#45;indicator overlay for Earth pages." alt="" coords="59,5,222,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,81,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,46,71,86,68,82,114,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="104,94,176,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="142,44,143,80,138,77,139,48"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="200,94,278,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="166,44,215,84,209,84,164,49"/>
+</map>

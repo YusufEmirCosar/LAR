@@ -1,0 +1,35 @@
+<map id="LarSessionWriter::LarSessionWriter" name="LarSessionWriter::LarSessionWriter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,196,199,237"/>
+<area shape="poly" id="edge15_Node000001_Node000001" title=" " alt="" coords="59,196,57,187,64,177,79,172,102,170,127,172,143,180,138,182,126,177,102,175,80,177,67,182,62,188,64,196"/>
+<area shape="rect" id="Node000002" href="$class_lar_session_writer.html#a533fa812bbd51cb1e000ad4da41f9e8d" title=" " alt="" coords="247,77,417,103"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,194,182,157,245,120,278,107,274,111,248,125,185,162,133,198"/>
+<area shape="rect" id="Node000003" href="$class_lar_session_writer.html#ac6e577896cabfd551c69949ffcaf7055" title="Cancels and releases the active transaction." alt="" coords="488,5,655,31"/>
+<area shape="poly" id="edge12_Node000001_Node000003" title=" " alt="" coords="114,195,135,164,165,128,202,92,245,62,301,40,360,25,419,17,475,15,470,17,419,22,361,30,303,45,248,67,206,96,169,131,140,167,118,197"/>
+<area shape="rect" id="Node000008" href="$class_lar_session_writer.html#aee1ddcd1d02885f2cf09717df5d712ff" title=" " alt="" coords="252,179,412,204"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="198,204,239,201,234,203,200,209"/>
+<area shape="rect" id="Node000009" href="$class_lar_session_writer.html#a43f8bc4de9059f777647a8feec69bbcb" title="True after a successful begin() and until cancel() releases the transaction." alt="" coords="484,179,659,204"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="148,194,195,176,246,164,312,157,379,158,442,164,499,175,493,176,441,169,378,163,312,162,247,169,197,182,151,198"/>
+<area shape="rect" id="Node000010" href="$class_lar_session_writer.html#a374888c3d1634f485dadb2f4475cb535" title=" " alt="" coords="470,229,673,255"/>
+<area shape="poly" id="edge16_Node000001_Node000010" title=" " alt="" coords="199,219,456,234,453,238,199,225"/>
+<area shape="rect" id="Node000012" href="$class_lar_session_writer.html#aa3789524268e627314b78b7f0e3adfbd" title=" " alt="" coords="250,279,414,320"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="161,235,261,272,256,275,161,240"/>
+<area shape="rect" id="Node000013" href="$class_lar_session_writer.html#ab4df0044fbd62b71dae4db3098abad6d" title=" " alt="" coords="250,344,414,385"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="126,235,180,282,248,329,260,337,255,337,245,334,177,286,125,240"/>
+<area shape="rect" id="Node000014" href="$class_lar_session_writer.html#a62fb5a29b121d878ec644100e682f647" title=" " alt="" coords="253,409,410,435"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="115,235,137,271,167,313,204,357,248,395,259,403,253,402,245,399,200,361,162,317,132,274,114,240"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="365,74,464,40,493,34,488,36,466,45,368,79"/>
+<area shape="rect" id="Node000004" href="$class_packet_mapping.html#ac955ded5162ee66319787462e129c407" title=" " alt="" coords="491,79,652,104"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="417,88,478,90,473,92,418,93"/>
+<area shape="rect" id="Node000007" href="$class_session_timestamp.html#a9e69c8185d47045ab21667be1a2976f7" title=" " alt="" coords="465,128,678,154"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="396,101,495,123,490,125,396,106"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="531,78,524,70,529,60,545,54,572,52,602,55,618,64,612,65,600,60,572,57,546,59,532,64,529,69,537,79"/>
+<area shape="rect" id="Node000005" href="$class_packet_mapping.html#a37e8ae3c0071d0ed32f9075347e51cf1" title=" " alt="" coords="726,43,897,84"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="652,80,714,74,709,76,653,85"/>
+<area shape="rect" id="Node000006" href="$class_packet_mapping.html#ad1917abe7193f42eb04c4bc08cfdb309" title="True only when all bindings form a complete, non&#45;overlapping schema." alt="" coords="733,108,890,134"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="652,99,720,109,715,110,653,104"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="412,189,471,191,466,192,413,194"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="396,202,495,225,490,226,396,208"/>
+<area shape="rect" id="Node000011" href="$class_packet_mapping.html#a236b56f4963450d4f98834068cd979d4" title=" " alt="" coords="740,229,883,255"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="674,240,727,242,722,243,674,245"/>
+<area shape="poly" id="edge19_Node000014_Node000010" title=" " alt="" coords="390,406,416,395,457,365,494,330,549,269,554,266,498,334,460,369,418,399,392,411"/>
+</map>

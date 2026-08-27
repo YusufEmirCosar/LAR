@@ -1,0 +1,11 @@
+<map id="PlaneSceneWidget::cleanupGL" name="PlaneSceneWidget::cleanupGL">
+<area shape="rect" id="Node000001" title=" " alt="" coords="733,42,936,68"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#aa6cccb6ef7357cd1ef6c3760d183c15d" title=" " alt="" coords="481,13,685,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="715,41,686,40,686,35,720,41"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#ad5163938936197437fa5dc7ab058bdc1" title=" " alt="" coords="513,63,653,103"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="720,68,654,78,653,73,715,68"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="257,5,433,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="463,26,434,28,433,23,468,25"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,5,209,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="238,26,210,28,209,23,244,25"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="SourceLifecycleCoordinator::applyRecordingState" name="SourceLifecycleCoordinator::applyRecordingState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,187,75"/>
+<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#a69c66e72c1376f3ebd16d87791c99644" title=" " alt="" coords="235,35,416,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,52,222,54,217,56,187,58"/>
+<area shape="rect" id="Node000003" href="$class_source_lifecycle_coordinator.html#a17ce5b778f5c25dcf667c451910501ec" title=" " alt="" coords="471,5,652,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="416,41,458,38,453,39,417,46"/>
+<area shape="rect" id="Node000004" href="$class_mode_coordinator.html#a37cbbd4b6fa9daef34624ad223228853" title=" " alt="" coords="464,70,659,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="416,63,451,70,446,70,416,68"/>
+<area shape="rect" id="Node000005" href="$class_mode_coordinator.html#ade9dc078e2f2c1b79e974dee43230e88" title=" " alt="" coords="707,45,920,70"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="659,71,689,70,694,70,660,76"/>
+<area shape="rect" id="Node000006" href="$class_mode_coordinator.html#a1f9654679d28b6d686a3d6530bd345bb" title=" " alt="" coords="716,94,911,120"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="660,90,704,96,698,96,660,95"/>
+</map>

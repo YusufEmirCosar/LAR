@@ -1,0 +1,9 @@
+<map id="ThreadedApplicationRuntime::setPlaybackRate" name="ThreadedApplicationRuntime::setPlaybackRate">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,194,111"/>
+<area shape="rect" id="Node000002" href="$class_i_application_runtime.html#a8a335e653e0be8326f22b4d50759f8f7" title=" " alt="" coords="281,5,420,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,68,269,46,264,49,181,73"/>
+<area shape="rect" id="Node000003" href="$class_threaded_application_runtime.html#ac1acf3d9edfadb8264ce9fca78732ee5" title=" " alt="" coords="242,71,459,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,88,229,90,223,92,195,94"/>
+<area shape="rect" id="Node000004" href="$class_i_application_runtime.html#a01f646d011f811a4eb6b1ac3faae60ec" title=" " alt="" coords="281,136,420,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="181,109,269,134,264,135,180,115"/>
+</map>

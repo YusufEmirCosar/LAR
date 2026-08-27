@@ -1,0 +1,5 @@
+<map id="QtRecordingClock" name="QtRecordingClock">
+<area shape="rect" id="Node000001" title="Process&#45;wide steady&#45;clock implementation used by receipt timestamps." alt="" coords="5,79,134,105"/>
+<area shape="rect" id="Node000002" href="$class_i_recording_clock.html" title="Process&#45;wide monotonic time abstraction for deterministic recording tests." alt="" coords="10,5,129,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,45,72,79,67,78,68,48"/>
+</map>

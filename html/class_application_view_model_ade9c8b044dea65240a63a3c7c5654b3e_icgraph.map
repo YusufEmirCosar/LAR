@@ -1,0 +1,25 @@
+<map id="ApplicationViewModel::modeChanged" name="ApplicationViewModel::modeChanged">
+<area shape="rect" id="Node000001" title=" " alt="" coords="883,120,1032,161"/>
+<area shape="rect" id="Node000002" href="$class_offline_panel.html#ae7d8cf55ec83f71fca8d8ccd47b4aeae" title=" " alt="" coords="663,79,835,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="865,120,806,108,806,102,871,120"/>
+<area shape="rect" id="Node000008" href="$class_online_panel.html#a718a7f2c79b67e00d58efdbeedbd3ad8" title=" " alt="" coords="664,128,834,154"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="864,141,834,143,834,138,870,141"/>
+<area shape="rect" id="Node000009" href="$class_application_view_model.html#a3502c56814aa58fc872cfb1773ff8d3e" title=" " alt="" coords="674,178,824,218"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="871,165,825,180,824,175,865,166"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a0531fa9a3d2a53bacd3923ea4d4cef5a" title=" " alt="" coords="440,92,615,118"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="645,98,616,102,616,97,651,97"/>
+<area shape="rect" id="Node000004" href="$class_main_window.html#ad0b383c67dd28a5a887d91d581ff175c" title=" " alt="" coords="241,53,392,79"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="437,89,390,82,390,77,442,88"/>
+<area shape="rect" id="Node000007" href="$class_main_window.html#a1f7d2c56410fc1bfa135bb907d43313f" title=" " alt="" coords="5,104,193,130"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="423,110,193,117,193,112,426,105"/>
+<area shape="rect" id="Node000005" href="$class_main_window.html#a06a83ed89605f080686d28119228d695" title=" " alt="" coords="9,5,189,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="237,51,161,34,160,29,242,48"/>
+<area shape="rect" id="Node000006" href="$class_main_window.html#a8d8ba8d3381c75661f34865d3d30ef07" title=" " alt="" coords="9,55,189,80"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="223,68,190,70,188,64,228,66"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="241,85,158,106,156,101,246,82"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="649,125,611,121,611,116,654,125"/>
+<area shape="rect" id="Node000010" href="$class_application_facade.html#acc84de76e45ecc6539751a18ab2ab19d" title="Creates the main&#45;thread application facade." alt="" coords="460,178,596,218"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="657,198,596,201,596,196,662,198"/>
+<area shape="rect" id="Node000011" href="$class_application_facade.html#a32410f883b62e33c853d2f6996cf8685" title="Creates the application facade with IP access&#45;policy file support." alt="" coords="248,178,384,218"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="441,198,385,201,385,196,446,198"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="SessionTimestamp::fromStoredMilliseconds" name="SessionTimestamp::fromStoredMilliseconds">
+<area shape="rect" id="Node000001" title="Creates a timestamp from the unsigned representation stored by LAR1." alt="" coords="5,27,211,68"/>
+<area shape="rect" id="Node000002" href="$class_session_timestamp.html#a9e69c8185d47045ab21667be1a2976f7" title=" " alt="" coords="259,5,472,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,33,246,32,241,33,212,38"/>
+<area shape="rect" id="Node000003" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="271,55,460,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,56,258,63,253,64,211,61"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="DtedMosaicSampler::interpolatedElevation" name="DtedMosaicSampler::interpolatedElevation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,22,153,62"/>
+<area shape="rect" id="Node000002" href="$struct_dted_cell.html#a8ec96e10bbea9712838e31faa44fe41f" title="Returns one decoded elevation in metres, excluding the DTED no&#45;data sentinel." alt="" coords="201,29,333,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,40,188,42,182,42,153,45"/>
+<area shape="rect" id="Node000003" href="$struct_dted_cell.html#a9dadbcb6d8536fdff074df2b5215607f" title="Returns true when dimensions and storage form a bounded usable DTED cell." alt="" coords="381,29,488,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="333,40,368,42,363,42,334,45"/>
+<area shape="rect" id="Node000004" href="$dted__level_8h.html#a1ac68c4b769b17a01c5494c350764ca5" title=" " alt="" coords="536,29,708,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="489,40,523,42,518,42,489,45"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="590,28,584,21,588,11,601,5,622,3,645,5,658,15,653,14,643,10,622,8,602,10,592,15,590,20,595,30"/>
+</map>

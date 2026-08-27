@@ -1,0 +1,9 @@
+<map id="src/viewer/terrain/dted_level.h" name="src/viewer/terrain/dted_level.h">
+<area shape="rect" id="Node000001" title="Shared DTED level metadata and external terrain&#45;source configuration." alt="" coords="90,5,212,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,94,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,46,78,86,75,82,123,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="118,94,184,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,44,153,80,148,77,149,48"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="208,94,280,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="175,44,221,84,215,84,173,49"/>
+</map>

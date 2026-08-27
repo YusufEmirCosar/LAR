@@ -1,0 +1,24 @@
+<map id="PlaneTerrainGpuLayer::hasRenderableGeometry" name="PlaneTerrainGpuLayer::hasRenderableGeometry">
+<area shape="rect" id="Node000001" title=" " alt="" coords="858,92,1031,133"/>
+<area shape="rect" id="Node000002" href="$class_plane_terrain_gpu_layer.html#a00a4a4f28dc43bec53d297a36031da14" title=" " alt="" coords="660,5,810,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="877,86,786,49,787,44,882,86"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_renderer.html#a303eb0d904256d05666662ac14a59539" title=" " alt="" coords="466,77,610,118"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="840,109,611,103,610,98,845,108"/>
+<area shape="rect" id="Node000008" href="$class_plane_terrain_gpu_layer.html#a9fcce08c38c249a8442e9d5c0d39a44d" title=" " alt="" coords="660,185,810,226"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="885,139,783,187,782,182,880,140"/>
+<area shape="rect" id="Node000011" href="$class_plane_terrain_gpu_layer.html#a6dcb7b291f2e172f85f0a4dab2197dac" title="Returns vector&#45;classified DTED/sea&#45;level height at a current Plane X/Z coordinate." alt="" coords="660,120,810,161"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="840,126,810,133,809,128,845,126"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="666,51,596,79,595,74,661,53"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title=" " alt="" coords="250,49,394,90"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="447,87,395,82,395,76,452,86"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title=" " alt="" coords="230,114,415,140"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="447,110,416,117,415,112,452,109"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="5,107,182,147"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="212,128,183,130,181,124,216,126"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="669,178,659,175,570,121,571,116,662,170,675,179"/>
+<area shape="rect" id="Node000009" href="$class_plane_terrain_gpu_layer.html#a148a59a028ca3ca6ca94dba7fd91e5bd" title="Draws an unscaled terrain anchor (compatibility overload)." alt="" coords="463,171,612,211"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="642,199,613,199,613,194,648,199"/>
+<area shape="rect" id="Node000010" href="$class_plane_terrain_gpu_layer.html#ab7dca4bb30afb023808ed3f8d0de936c" title=" " alt="" coords="463,236,612,277"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="648,228,613,240,612,235,643,229"/>
+<area shape="poly" id="edge12_Node000011_Node000003" title=" " alt="" coords="643,121,610,116,610,111,648,121"/>
+</map>

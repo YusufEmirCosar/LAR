@@ -1,0 +1,24 @@
+<map id="src/viewer/map/packaged_map_asset_source.h" name="src/viewer/map/packaged_map_asset_source.h">
+<area shape="rect" id="Node000001" title="Loader for the compiled map and manifest beside an executable." alt="" coords="414,5,584,46"/>
+<area shape="rect" id="Node000002" href="$map__asset__source_8h.html" title="Source port for loading an immutable compiled world&#45;map mesh." alt="" coords="305,94,461,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="475,45,423,87,420,82,470,48"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="466,271,532,297"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="501,45,501,257,496,255,497,48"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="537,102,594,127"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="515,44,550,89,544,89,513,49"/>
+<area shape="rect" id="Node000003" href="$map__asset__reader_8h.html" title="Bounded, integrity&#45;checking parser for packaged .larmap bytes." alt="" coords="305,183,461,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="384,133,385,168,380,166,381,137"/>
+<area shape="rect" id="Node000004" href="$map__mesh_8h.html" title="CPU&#45;side vertex/index representation shared by tools and renderer." alt="" coords="40,271,208,297"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="316,226,179,269,178,264,320,222"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="232,271,350,297"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="362,222,318,263,315,259,358,225"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="412,221,471,262,466,262,411,226"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="374,271,442,297"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="390,221,402,257,397,255,388,226"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,345,70,371"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="112,297,65,337,62,333,107,298"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="94,345,154,371"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="126,295,127,330,122,328,122,299"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="178,345,236,371"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="139,295,184,334,179,335,137,300"/>
+</map>

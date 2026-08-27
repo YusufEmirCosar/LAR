@@ -1,0 +1,36 @@
+<map id="src/viewer/viewport/lar_zone_input_validator.cpp" name="src/viewer/viewport/lar_zone_input_validator.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="533,5,722,46"/>
+<area shape="rect" id="Node000002" href="$lar__zone__input__validator_8h.html" title="Projection&#45;neutral validation and normalization of LAR zone inputs." alt="" coords="308,94,465,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="571,48,457,91,455,86,576,45"/>
+<area shape="rect" id="Node000009" href="$statefield_8h.html" title="Stable identifiers and access helpers for every scalar state field." alt="" coords="136,102,267,127"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="531,48,277,101,275,95,534,44"/>
+<area shape="rect" id="Node000012" href="$lar__zone__mesh__limits_8h.html" title="Central memory, complexity, radius, and accuracy bounds for zone meshes." alt="" coords="489,94,633,135"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="615,45,587,84,584,79,611,48"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="657,102,732,127"/>
+<area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="644,44,679,90,673,89,642,49"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="755,102,812,127"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="664,44,752,94,746,94,663,49"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="837,102,933,127"/>
+<area shape="poly" id="edge18_Node000001_Node000016" title=" " alt="" coords="686,44,837,96,832,96,686,49"/>
+<area shape="rect" id="Node000003" href="$state_8h.html" title="Canonical in&#45;memory aircraft, target, and LAR state structures." alt="" coords="258,190,366,216"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="372,134,333,181,330,177,367,137"/>
+<area shape="rect" id="Node000005" href="$lar__geodesic__geometry_8h.html" title="Spherical destination&#45;point and arc tessellation utilities." alt="" coords="493,183,629,223"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="427,133,511,175,505,176,426,138"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="390,190,468,216"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="397,133,419,177,414,176,395,138"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="168,190,234,216"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="342,136,242,186,239,181,347,134"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="268,271,356,297"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="314,214,314,257,310,254,310,218"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="532,271,590,297"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="563,222,563,257,559,254,559,226"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="217,125,287,180,282,181,216,130"/>
+<area shape="poly" id="edge12_Node000009_Node000008" title=" " alt="" coords="203,125,204,175,199,174,200,130"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="79,190,144,216"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="191,126,137,181,133,177,187,129"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="5,190,56,216"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="176,130,68,185,65,181,177,125"/>
+<area shape="poly" id="edge14_Node000012_Node000005" title=" " alt="" coords="563,133,563,169,559,166,559,137"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="653,190,717,216"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="590,133,658,182,653,181,589,138"/>
+</map>

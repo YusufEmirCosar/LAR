@@ -1,0 +1,8 @@
+<map id="anonymous_namespace{plane_terrain_gpu_layer::cpp}::finitePatch" name="anonymous_namespace{plane_terrain_gpu_layer::cpp}::finitePatch">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,168,85"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="46,28,47,19,54,10,67,5,87,3,108,5,123,14,117,15,107,10,86,8,69,10,57,15,52,21,51,30"/>
+<area shape="rect" id="Node000002" href="$struct_plane_land_mask.html#ad1a14f08588f778672e872fb663d6ec4" title=" " alt="" coords="216,15,365,41"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="167,43,203,40,198,42,169,48"/>
+<area shape="rect" id="Node000003" href="$struct_plane_terrain_patch.html#ad06f3421baca38e8c5287cba0592be46" title=" " alt="" coords="223,65,358,106"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="168,66,210,74,205,74,168,71"/>
+</map>

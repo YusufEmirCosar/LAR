@@ -20,13 +20,13 @@
 #include <algorithm>
 
 PlaneViewWorkspace::PlaneViewWorkspace(QString packageDirectory, QWidget *parent)
-    : PlaneViewWorkspace(
-          packageDirectory,
-          std::make_shared<lar::map::PackagedMapAssetSource>(packageDirectory), parent) {}
+    : PlaneViewWorkspace(packageDirectory,
+                         std::make_shared<lar::map::PackagedMapAssetSource>(packageDirectory),
+                         parent) {}
 
 PlaneViewWorkspace::PlaneViewWorkspace(
-    QString packageDirectory,
-    std::shared_ptr<const lar::map::IMapAssetSource> mapAssetSource, QWidget *parent)
+    QString packageDirectory, std::shared_ptr<const lar::map::IMapAssetSource> mapAssetSource,
+    QWidget *parent)
     : QWidget(parent) {
     setObjectName(QStringLiteral("planeViewWorkspace"));
     setMinimumSize(420, 360);

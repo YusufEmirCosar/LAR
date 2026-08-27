@@ -37,13 +37,13 @@ bool validGroundPosition(double latitude, double longitude) noexcept {
 } // namespace
 
 PlaneSceneWidget::PlaneSceneWidget(QString packageDirectory, QWidget *parent)
-    : PlaneSceneWidget(
-          packageDirectory,
-          std::make_shared<lar::map::PackagedMapAssetSource>(packageDirectory), parent) {}
+    : PlaneSceneWidget(packageDirectory,
+                       std::make_shared<lar::map::PackagedMapAssetSource>(packageDirectory),
+                       parent) {}
 
-PlaneSceneWidget::PlaneSceneWidget(
-    QString packageDirectory,
-    std::shared_ptr<const lar::map::IMapAssetSource> mapAssetSource, QWidget *parent)
+PlaneSceneWidget::PlaneSceneWidget(QString packageDirectory,
+                                   std::shared_ptr<const lar::map::IMapAssetSource> mapAssetSource,
+                                   QWidget *parent)
     : QOpenGLWidget(parent), m_packageDirectory(QDir::cleanPath(std::move(packageDirectory))),
       m_mapAssetSource(std::move(mapAssetSource)),
       m_skyboxes(QDir(m_packageDirectory).filePath(QStringLiteral("assets/cubemaps"))) {

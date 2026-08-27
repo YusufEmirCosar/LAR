@@ -50,10 +50,9 @@ std::uint64_t readUint64(const unsigned char *bytes) noexcept {
 bool validCounts(std::uint64_t vertexCount, std::uint64_t mercatorIndexCount,
                  std::uint64_t sphereIndexCount, std::uint64_t borderIndexCount,
                  std::uint64_t landCellCount, std::uint64_t landReferenceCount) noexcept {
-    const bool validLandCounts =
-        (landCellCount == 0U && landReferenceCount == 0U) ||
-        (landCellCount == MapLandCellCount &&
-         landReferenceCount <= limits::MaximumLandTriangleReferenceCount);
+    const bool validLandCounts = (landCellCount == 0U && landReferenceCount == 0U) ||
+                                 (landCellCount == MapLandCellCount &&
+                                  landReferenceCount <= limits::MaximumLandTriangleReferenceCount);
     return vertexCount > 0U && vertexCount <= limits::MaximumVertexCount &&
            mercatorIndexCount > 0U && mercatorIndexCount <= limits::MaximumMercatorIndexCount &&
            mercatorIndexCount % 3U == 0U && sphereIndexCount > 0U &&
@@ -199,8 +198,7 @@ MapAssetReadResult MapAssetReader::read(QByteArrayView bytes) {
         mutableMesh->sphereFillIndices.resize(static_cast<std::size_t>(sphereIndexCount));
         mutableMesh->borderIndices.resize(static_cast<std::size_t>(borderIndexCount));
         mutableMesh->landCellRanges.resize(static_cast<std::size_t>(landCellCount));
-        mutableMesh->landTriangleReferences.resize(
-            static_cast<std::size_t>(landReferenceCount));
+        mutableMesh->landTriangleReferences.resize(static_cast<std::size_t>(landReferenceCount));
 
         std::size_t cursor = 0U;
         copyLittleEndianArray(mutableMesh->vertices, payload, cursor);

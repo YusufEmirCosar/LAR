@@ -80,11 +80,10 @@ void MainWindow::initialize(IRecordingFileDialog &recordingDialog) {
         std::make_shared<lar::map::PackagedMapAssetSource>(QCoreApplication::applicationDirPath());
     auto hudWorkspace =
         std::make_unique<dlz::presentation::HudWorkspace>(m_valuesPanel->hudControlPanel());
-    m_viewport = new LarViewport(std::make_unique<GridLarView>(),
-                                 std::make_unique<EarthLarView>(mapSource),
-                                 std::make_unique<PlaneViewWorkspace>(
-                                     QCoreApplication::applicationDirPath(), mapSource),
-                                 std::move(hudWorkspace));
+    m_viewport = new LarViewport(
+        std::make_unique<GridLarView>(), std::make_unique<EarthLarView>(mapSource),
+        std::make_unique<PlaneViewWorkspace>(QCoreApplication::applicationDirPath(), mapSource),
+        std::move(hudWorkspace));
     m_viewport->setObjectName(QStringLiteral("larViewport"));
     centralLayout->addWidget(m_viewport, 1);
     m_viewportControls = new ViewportControls(m_viewport);

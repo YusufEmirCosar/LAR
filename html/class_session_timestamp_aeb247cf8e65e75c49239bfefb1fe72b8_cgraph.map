@@ -1,0 +1,6 @@
+<map id="SessionTimestamp::zero" name="SessionTimestamp::zero">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,172,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="51,29,44,21,48,11,63,5,89,3,116,5,132,14,126,15,115,10,88,8,65,10,52,15,49,20,56,29"/>
+<area shape="rect" id="Node000002" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="220,22,408,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,40,207,42,201,42,172,45"/>
+</map>

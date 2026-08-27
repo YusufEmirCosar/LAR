@@ -1,0 +1,20 @@
+<map id="PlaneLandMaskBuilder::build" name="PlaneLandMaskBuilder::build">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,185,160,226"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_land_index.html#ab6a7cb89774684d45e13cecd52422148" title="Appends possibly duplicated candidate triangle ordinals for bounded unwrapped bounds." alt="" coords="212,5,373,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,184,141,125,172,92,206,62,226,52,222,56,209,66,175,96,145,128,100,186"/>
+<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_map_land_index.html#a79863c5b047374d1ad3d4fdfe9845421" title=" " alt="" coords="425,35,586,75"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="102,183,147,143,176,123,207,106,257,87,309,73,411,59,407,62,310,79,258,92,209,111,179,127,150,147,106,187"/>
+<area shape="rect" id="Node000004" href="$class_lar_projection.html#a4e2dca65a4cdc72bf5aa871c00eda908" title=" " alt="" coords="208,120,376,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="149,183,212,164,208,168,151,187"/>
+<area shape="rect" id="Node000005" href="$classlar_1_1map_1_1_map_land_index.html#a6a9a4bea23a0975f5e124e31bc47709e" title=" " alt="" coords="212,185,373,226"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="159,203,198,204,194,207,161,208"/>
+<area shape="rect" id="Node000006" href="$class_lar_projection.html#a4875d219ffbabafbeb019813cc023d82" title="Inverts the local flat projection for a finite east/north position." alt="" coords="208,251,377,291"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="150,224,213,244,208,247,150,229"/>
+<area shape="rect" id="Node000008" href="$class_plane_land_mask_builder.html#ae17ebb800bcff9f545851924233e6300" title=" " alt="" coords="215,316,370,357"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="106,224,153,262,209,301,222,309,216,309,206,305,150,267,106,229"/>
+<area shape="rect" id="Node000009" href="$classlar_1_1map_1_1_map_projection.html#abda6cc4a42ca2edee384a3e338bbf5c1" title=" " alt="" coords="213,381,372,422"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="96,224,141,294,172,332,209,366,218,374,212,373,206,370,169,336,136,297,94,229"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="373,34,412,41,407,43,374,39"/>
+<area shape="rect" id="Node000007" href="$class_lar_geodesic_geometry.html#ae3ba4dbef8641441c270e58e3363dba5" title=" " alt="" coords="430,251,581,291"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="377,268,417,270,412,272,378,274"/>
+</map>

@@ -1,0 +1,83 @@
+<map id="PlaneViewWorkspace" name="PlaneViewWorkspace">
+<area shape="rect" id="Node000001" title="Third top&#45;level viewport content page for the centered Plane simulation." alt="" coords="1417,759,1565,785"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="1165,687,1237,713"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1252,707,1394,739,1453,759,1448,759,1392,744,1253,712"/>
+<area shape="rect" id="Node000003" href="$class_i_lar_viewport_page.html" title="Common contract implemented by every viewport presentation page." alt="" coords="1139,737,1263,762"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1278,753,1419,766,1414,767,1279,758"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html" title="Loads packaged Plane assets and renders one orbit&#45;controlled simulation canvas." alt="" coords="1135,786,1267,812"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1282,797,1393,790,1436,785,1431,786,1393,795,1283,802"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="794,227,913,253"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="927,227,975,226,1025,233,1073,249,1094,263,1113,280,1119,292,1124,312,1128,369,1127,527,1125,685,1128,742,1137,773,1149,786,1144,785,1132,776,1123,743,1120,685,1122,527,1123,370,1118,313,1114,294,1109,283,1091,267,1070,254,1024,238,975,232,929,232"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="411,913,607,954"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="622,915,925,870,1018,853,1110,829,1169,811,1164,813,1111,835,1019,858,926,875,623,920"/>
+<area shape="rect" id="Node000031" href="$class_plane_terrain_worker.html" title="Coalesces aircraft movement so only the newest bounded terrain patch is published." alt="" coords="786,1035,920,1061"/>
+<area shape="poly" id="edge38_Node000031_Node000006" title=" " alt="" coords="622,941,691,954,758,976,805,1004,841,1035,836,1035,802,1008,756,981,690,959,623,946"/>
+<area shape="rect" id="Node000007" href="$classlar_1_1map_1_1_i_map_asset_source.html" title="Hides package/file lookup from EarthLarView." alt="" coords="31,921,212,946"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="227,931,412,932,408,935,228,936"/>
+<area shape="rect" id="Node000008" href="$class_cubemap_catalog.html" title="Naturally ordered collection of validated skybox candidates." alt="" coords="792,530,914,556"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="929,540,977,546,1026,559,1073,580,1094,595,1113,613,1126,634,1131,654,1126,694,1121,734,1125,753,1137,773,1150,786,1145,785,1133,776,1120,755,1116,734,1121,694,1125,655,1121,636,1109,616,1091,599,1070,585,1024,564,976,552,931,546"/>
+<area shape="rect" id="Node000009" href="$class_plane_scene_renderer.html" title="Owns all context&#45;bound Plane workspace GPU resources." alt="" coords="781,579,925,605"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="894,610,997,667,1056,705,1112,747,1124,761,1136,773,1158,785,1152,785,1133,777,1120,764,1109,751,1053,710,994,672,894,615"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="53,378,190,404"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="204,389,293,394,387,407,497,427,584,446,624,459,665,477,709,502,759,535,771,551,783,566,803,578,798,579,779,570,767,554,755,539,706,506,662,482,622,464,582,451,496,432,386,412,293,399,207,393"/>
+<area shape="rect" id="Node000014" href="$class_plane_surface_gpu_layer.html" title="Renders the optional local tactical surface beneath the aircraft." alt="" coords="431,355,586,381"/>
+<area shape="poly" id="edge15_Node000014_Node000010" title=" " alt="" coords="204,379,261,373,433,367,429,371,262,379,207,383"/>
+<area shape="rect" id="Node000016" href="$class_plane_terrain_gpu_layer.html" title="Uploads terrain only from an active paint context and retains CPU data across GL loss." alt="" coords="434,579,584,605"/>
+<area shape="poly" id="edge19_Node000016_Node000010" title=" " alt="" coords="204,400,319,419,364,430,388,441,399,456,404,471,402,501,400,530,403,544,413,558,440,578,434,579,409,562,399,546,395,530,397,500,399,472,395,458,385,445,362,435,318,424,206,405"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="12,512,231,552"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="245,527,355,528,484,533,621,543,758,561,817,578,811,579,756,567,621,549,484,538,355,533,247,532"/>
+<area shape="poly" id="edge16_Node000014_Node000011" title=" " alt="" coords="189,503,386,422,482,380,478,383,388,427,193,508"/>
+<area shape="poly" id="edge20_Node000016_Node000011" title=" " alt="" coords="195,555,262,571,351,583,436,589,432,592,351,588,261,576,197,560"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="5,659,238,685"/>
+<area shape="poly" id="edge11_Node000009_Node000012" title=" " alt="" coords="252,675,422,674,515,669,607,658,664,647,721,632,817,604,813,607,722,638,665,652,607,663,515,674,422,679,254,680"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="419,720,599,760"/>
+<area shape="poly" id="edge13_Node000013_Node000012" title=" " alt="" coords="174,688,262,711,342,724,420,733,416,736,341,729,261,716,176,693"/>
+<area shape="poly" id="edge21_Node000016_Node000012" title=" " alt="" coords="201,653,445,603,441,608,204,658"/>
+<area shape="poly" id="edge12_Node000009_Node000013" title=" " alt="" coords="614,734,697,727,732,720,756,711,787,688,812,658,844,607,848,603,816,661,790,692,758,716,733,725,698,732,616,739"/>
+<area shape="poly" id="edge14_Node000009_Node000014" title=" " alt="" coords="584,382,759,423,771,442,776,460,773,496,769,532,772,549,783,566,797,579,791,579,779,570,767,551,763,532,767,496,771,461,767,444,755,428,586,387"/>
+<area shape="rect" id="Node000015" href="$struct_plane_surface_gpu_layer_1_1_range.html" title=" " alt="" coords="44,293,199,334"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="214,324,433,355,429,359,216,329"/>
+<area shape="poly" id="edge18_Node000009_Node000016" title=" " alt="" coords="598,589,783,591,778,593,600,595"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="45,769,198,810"/>
+<area shape="poly" id="edge32_Node000004_Node000017" title=" " alt="" coords="212,790,262,791,1135,796,1133,801,262,796,215,795"/>
+<area shape="poly" id="edge22_Node000016_Node000017" title=" " alt="" coords="212,788,315,780,358,771,385,757,397,742,401,726,398,693,393,657,397,639,409,621,436,603,433,607,413,625,402,641,399,658,403,692,406,727,401,744,388,761,359,776,316,785,215,793"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="433,280,585,320"/>
+<area shape="poly" id="edge29_Node000004_Node000018" title=" " alt="" coords="599,295,678,300,758,316,872,348,920,362,963,378,1003,400,1040,428,1076,466,1113,516,1122,540,1125,571,1124,647,1123,722,1127,752,1137,773,1149,786,1144,785,1133,776,1122,753,1118,722,1119,647,1120,572,1117,541,1108,519,1072,469,1036,432,1000,404,961,383,918,367,871,353,756,321,677,305,601,300"/>
+<area shape="poly" id="edge23_Node000009_Node000018" title=" " alt="" coords="580,323,632,339,669,345,701,344,730,349,744,357,759,370,775,395,780,421,778,445,773,470,767,494,765,518,769,542,783,566,796,579,791,579,779,570,764,544,759,518,762,493,768,468,773,444,775,421,770,397,755,374,741,361,728,354,700,349,668,350,630,344,582,328"/>
+<area shape="rect" id="Node000019" href="$struct_plane_model_mesh.html" title="Interleaved position/normal/UV vertices, textures, and material draw ranges." alt="" coords="61,85,182,110"/>
+<area shape="poly" id="edge24_Node000018_Node000019" title=" " alt="" coords="196,99,308,111,357,124,388,141,400,156,405,172,403,204,400,235,403,250,413,265,435,283,430,284,409,268,398,252,394,235,397,203,400,173,395,159,385,145,355,129,307,117,199,103"/>
+<area shape="rect" id="Node000026" href="$struct_plane_surface_state.html" title="Immutable metric, altitude, and Earth&#45;fixed grid state consumed by the GPU layer." alt="" coords="444,853,574,878"/>
+<area shape="poly" id="edge31_Node000004_Node000026" title=" " alt="" coords="589,857,757,844,1137,805,1132,808,757,849,591,863"/>
+<area shape="poly" id="edge25_Node000009_Node000026" title=" " alt="" coords="588,852,693,835,734,826,756,818,779,795,798,767,826,706,841,647,849,608,852,603,847,648,831,707,803,770,783,798,758,823,735,831,694,841,590,857"/>
+<area shape="rect" id="Node000027" href="$struct_plane_surface_zone.html" title="One local flat LAR patch expressed in Plane&#45;scene units." alt="" coords="57,863,186,889"/>
+<area shape="poly" id="edge26_Node000026_Node000027" title=" " alt="" coords="201,874,387,871,446,870,441,872,387,877,202,879"/>
+<area shape="rect" id="Node000028" href="$struct_cubemap_faces.html" title=" " alt="" coords="452,229,566,254"/>
+<area shape="poly" id="edge27_Node000009_Node000028" title=" " alt="" coords="580,239,627,245,675,257,721,279,741,294,759,312,769,334,774,365,772,441,770,515,774,545,783,566,796,579,791,579,779,570,769,547,765,516,767,440,768,366,764,336,755,315,738,298,718,283,674,262,626,250,582,244"/>
+<area shape="rect" id="Node000029" title=" " alt="" coords="41,31,202,57"/>
+<area shape="poly" id="edge28_Node000028_Node000029" title=" " alt="" coords="208,27,255,25,303,30,349,45,370,56,389,72,402,89,407,108,402,145,398,181,401,198,413,216,431,229,454,237,449,240,428,233,409,219,396,200,392,181,397,144,401,108,397,92,385,75,367,61,347,50,302,36,255,31,211,31"/>
+<area shape="rect" id="Node000030" href="$class_plane_orbit_camera.html" title="Stores user orbit offset while automatically following aircraft heading." alt="" coords="789,947,917,973"/>
+<area shape="poly" id="edge30_Node000004_Node000030" title=" " alt="" coords="932,969,976,970,1022,967,1067,957,1109,938,1142,910,1166,875,1183,839,1194,814,1198,810,1188,841,1171,877,1145,914,1112,943,1069,962,1022,972,976,976,933,974"/>
+<area shape="poly" id="edge33_Node000004_Node000031" title=" " alt="" coords="936,1050,979,1047,1025,1038,1069,1023,1109,1000,1130,979,1148,955,1174,901,1189,849,1196,814,1200,810,1194,850,1179,903,1153,957,1134,982,1112,1004,1072,1028,1026,1044,980,1052,937,1055"/>
+<area shape="rect" id="Node000032" title=" " alt="" coords="474,1235,544,1261"/>
+<area shape="poly" id="edge34_Node000031_Node000032" title=" " alt="" coords="558,1238,654,1212,707,1191,755,1163,784,1139,809,1110,842,1063,847,1060,813,1113,788,1142,759,1168,709,1196,656,1217,559,1243"/>
+<area shape="rect" id="Node000055" href="$class_lar_viewport_page_events.html" title="QObject signal bundle exposed by non&#45;QObject page interfaces." alt="" coords="949,1235,1111,1261"/>
+<area shape="poly" id="edge46_Node000055_Node000032" title=" " alt="" coords="559,1245,952,1248,946,1248,559,1251"/>
+<area shape="rect" id="Node000033" href="$struct_plane_terrain_build_request.html" title="Parameters for one aircraft&#45;centered terrain build." alt="" coords="423,982,594,1008"/>
+<area shape="poly" id="edge35_Node000031_Node000033" title=" " alt="" coords="610,1001,757,1021,807,1034,801,1035,757,1027,610,1006"/>
+<area shape="rect" id="Node000034" title=" " alt="" coords="433,1035,585,1061"/>
+<area shape="poly" id="edge36_Node000031_Node000034" title=" " alt="" coords="600,1045,788,1047,783,1049,601,1051"/>
+<area shape="rect" id="Node000035" href="$struct_dted_dataset.html" title="One lazily addressed DTED directory selected for Plane terrain." alt="" coords="461,1159,556,1185"/>
+<area shape="poly" id="edge44_Node000004_Node000035" title=" " alt="" coords="572,1178,686,1184,756,1182,831,1175,906,1160,980,1136,1048,1102,1080,1080,1109,1055,1133,1027,1152,994,1167,959,1179,924,1192,858,1197,814,1201,810,1197,859,1184,925,1172,961,1157,997,1137,1030,1113,1059,1083,1085,1051,1107,982,1141,907,1165,831,1180,756,1187,686,1189,572,1183"/>
+<area shape="poly" id="edge37_Node000031_Node000035" title=" " alt="" coords="572,1165,661,1151,709,1138,756,1121,802,1091,837,1063,841,1060,806,1095,758,1125,711,1143,662,1156,572,1171"/>
+<area shape="rect" id="Node000036" title=" " alt="" coords="413,1085,604,1126"/>
+<area shape="poly" id="edge39_Node000031_Node000036" title=" " alt="" coords="620,1094,756,1074,810,1062,815,1061,758,1079,621,1099"/>
+<area shape="rect" id="Node000037" href="$class_plane_terrain_patch_builder.html" title="Builds immutable terrain patches; instances are confined to one CPU worker thread." alt="" coords="38,1093,205,1118"/>
+<area shape="poly" id="edge40_Node000036_Node000037" title=" " alt="" coords="221,1103,415,1104,411,1107,221,1108"/>
+<area shape="rect" id="Node000052" href="$struct_lar_scene_state.html" title="Plane, target, field availability, and scene&#45;presence flag." alt="" coords="800,178,907,204"/>
+<area shape="poly" id="edge41_Node000004_Node000052" title=" " alt="" coords="921,179,971,179,1022,185,1071,203,1093,216,1113,234,1120,248,1124,270,1129,332,1127,504,1124,676,1128,739,1132,760,1137,773,1149,786,1144,785,1132,776,1126,762,1122,740,1119,677,1122,504,1123,332,1119,271,1115,250,1109,238,1090,221,1069,207,1021,190,970,184,924,184"/>
+<area shape="rect" id="Node000053" href="$struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft." alt="" coords="482,179,536,205"/>
+<area shape="poly" id="edge42_Node000052_Node000053" title=" " alt="" coords="551,189,801,189,797,193,553,194"/>
+<area shape="rect" id="Node000054" href="$struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters." alt="" coords="480,126,538,152"/>
+<area shape="poly" id="edge43_Node000052_Node000054" title=" " alt="" coords="552,140,647,149,757,165,803,176,798,178,757,171,646,155,554,145"/>
+<area shape="poly" id="edge45_Node000001_Node000055" title=" " alt="" coords="1091,1226,1109,1215,1177,1162,1240,1101,1298,1037,1350,973,1433,858,1480,787,1484,784,1437,861,1355,976,1302,1040,1244,1105,1180,1166,1112,1220,1092,1231"/>
+</map>

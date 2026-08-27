@@ -1,0 +1,5 @@
+<map id="LarZoneDefinition" name="LarZoneDefinition">
+<area shape="rect" id="Node000001" title="Projection&#45;neutral, validated input for one radial geodesic patch." alt="" coords="22,102,145,128"/>
+<area shape="rect" id="Node000002" href="$struct_geo_coordinate_radians.html" title="Latitude/longitude pair expressed in radians." alt="" coords="5,5,162,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,45,86,102,81,101,81,48"/>
+</map>

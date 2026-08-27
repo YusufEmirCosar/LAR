@@ -11,23 +11,14 @@ STRIP_FROM_PATH        = .
 
 INPUT                  = src \
                          tools/map_asset \
+                         README.md \
                          ProjectSpecification.md \
-                         docs/README.md \
-                         docs/ARCHITECTURE.md \
-                         docs/COMPONENT_REFERENCE.md \
-                         docs/CONCURRENCY_MODEL.md \
-                         docs/DATA_FLOWS.md \
-                         docs/DLZ_MODEL.md \
-                         docs/DEVELOPER_GUIDE.md \
-                         docs/LAR1_FORMAT.md \
-                         docs/PROTOCOL_UNITS.md \
-                         docs/QUALITY_GATES.md \
-                         docs/SOLID_COMPLIANCE.md \
-                         docs/THREAT_MODEL.md
+                         docs \
+                         assets/README.md \
+                         assets/map/README.md
 FILE_PATTERNS          = *.h *.hpp *.cpp *.md
 RECURSIVE              = YES
-EXCLUDE_PATTERNS       = */build-*/* */tests/* */html/* */latex/* \
-                         */src/testsender/README.md
+EXCLUDE_PATTERNS       = */build-*/* */tests/* */html/* */latex/*
 USE_MDFILE_AS_MAINPAGE = docs/README.md
 
 # Keep the source browser exhaustive without forcing prose onto trivial members.

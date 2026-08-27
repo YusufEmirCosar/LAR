@@ -1,0 +1,5 @@
+<map id="PlaneSceneRenderer::setTerrainPlacement" name="PlaneSceneRenderer::setTerrainPlacement">
+<area shape="rect" id="Node000001" title="Positions an unscaled terrain anchor (compatibility overload)." alt="" coords="5,5,154,46"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_renderer.html#a1f620e3e5be42009c9c1f8eaeeb67d7a" title="Positions and scales the stable terrain anchor relative to the current aircraft." alt="" coords="202,5,350,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,23,189,25,183,26,154,28"/>
+</map>

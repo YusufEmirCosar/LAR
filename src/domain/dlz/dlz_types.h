@@ -59,22 +59,22 @@ struct TelemetryInputs {
 
 /** Atmospheric values used to convert Mach to velocity. */
 struct Atmosphere {
-    double rho = 1.225;              ///< Density in kilograms per cubic metre.
-    double temperature = 288.15;     ///< Absolute temperature in kelvin.
-    double pressure = 101325.0;      ///< Static pressure in pascals.
-    double speedOfSound = 340.294;   ///< Local speed of sound in metres per second.
+    double rho = 1.225;            ///< Density in kilograms per cubic metre.
+    double temperature = 288.15;   ///< Absolute temperature in kelvin.
+    double pressure = 101325.0;    ///< Static pressure in pascals.
+    double speedOfSound = 340.294; ///< Local speed of sound in metres per second.
 };
 
 /** Derived relative engagement geometry in explicit aviation units. */
 struct Geometry {
-    double rangeNm = 0.0;       ///< Shooter-to-target slant range.
-    double rangeRateKnots = 0.0; ///< Positive when opening; negative when closing.
-    double aspectRadians = 0.0; ///< 0 is head-on; pi is target heading away.
+    double rangeNm = 0.0;                  ///< Shooter-to-target slant range.
+    double rangeRateKnots = 0.0;           ///< Positive when opening; negative when closing.
+    double aspectRadians = 0.0;            ///< 0 is head-on; pi is target heading away.
     double antennaTrainAngleRadians = 0.0; ///< Angle between boresight and target LOS.
     double offBoresightRadians = 0.0;      ///< Alias of antenna train angle in this model.
-    double losAzimuthRadians = 0.0; ///< From north toward east in the local NED frame.
-    double losElevationRadians = 0.0; ///< Positive above the local horizontal plane.
-    double altitudeDifferenceFeet = 0.0; ///< Target altitude minus shooter altitude.
+    double losAzimuthRadians = 0.0;        ///< From north toward east in the local NED frame.
+    double losElevationRadians = 0.0;      ///< Positive above the local horizontal plane.
+    double altitudeDifferenceFeet = 0.0;   ///< Target altitude minus shooter altitude.
 };
 
 /** Tunable constants for the intentionally simplified teaching model. */

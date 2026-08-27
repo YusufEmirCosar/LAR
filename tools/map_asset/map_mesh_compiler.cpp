@@ -231,10 +231,9 @@ bool forEachTriangleCell(const MapMesh &mesh, std::size_t triangle, Callback cal
     const int north = boundedLatitudeCell(*maximumLatitude);
     for (int latitudeCell = south; latitudeCell <= north; ++latitudeCell) {
         for (int longitudeCell = west; longitudeCell <= east; ++longitudeCell) {
-            const std::size_t index = static_cast<std::size_t>(latitudeCell) *
-                                          MapLandLongitudeCellCount +
-                                      static_cast<std::size_t>(
-                                          normalizedLongitudeCell(longitudeCell));
+            const std::size_t index =
+                static_cast<std::size_t>(latitudeCell) * MapLandLongitudeCellCount +
+                static_cast<std::size_t>(normalizedLongitudeCell(longitudeCell));
             if (!callback(index)) {
                 return false;
             }

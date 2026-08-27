@@ -5,8 +5,8 @@
  * @brief Bounded DTED sampling and indexed local terrain-mesh construction.
  */
 
-#include "viewer/plane/plane_terrain_patch.h"
 #include "viewer/plane/plane_land_mask.h"
+#include "viewer/plane/plane_terrain_patch.h"
 #include "viewer/terrain/dted_mosaic_sampler.h"
 
 #include <functional>

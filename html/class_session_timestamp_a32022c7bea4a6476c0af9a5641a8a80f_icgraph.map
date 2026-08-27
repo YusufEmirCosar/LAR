@@ -1,0 +1,20 @@
+<map id="SessionTimestamp::fromStoredMilliseconds" name="SessionTimestamp::fromStoredMilliseconds">
+<area shape="rect" id="Node000001" title="Creates a timestamp from the unsigned representation stored by LAR1." alt="" coords="764,62,970,102"/>
+<area shape="rect" id="Node000002" href="$class_lar_session_reader.html#ab686230bdf9413511ab96b994d6a58da" title="Populates the bounded location cache containing index." alt="" coords="508,44,714,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="746,71,714,70,714,64,751,70"/>
+<area shape="rect" id="Node000006" href="$class_lar_session_reader.html#a98ee5c9e9784df0c20c39d08182da41e" title=" " alt="" coords="506,93,716,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="746,94,717,99,716,94,751,93"/>
+<area shape="rect" id="Node000003" href="$class_lar_session_reader.html#aa62e21e6f68343a427d2134dc21d9601" title="Returns the cached location for index after range and source validation." alt="" coords="264,44,458,70"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="490,57,459,59,458,54,496,56"/>
+<area shape="rect" id="Node000004" href="$class_lar_session_reader.html#ad3ad73160d96eb45b72740e7a2530eb7" title=" " alt="" coords="18,5,203,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="256,42,198,34,198,29,261,40"/>
+<area shape="rect" id="Node000005" href="$class_lar_session_reader.html#a2881208138d03bb8a2502444558111bd" title=" " alt="" coords="5,55,216,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="245,62,217,66,216,60,250,61"/>
+<area shape="rect" id="Node000007" href="$class_lar_session_reader.html#a17c27548dcf16d0c51de9c380ecca260" title=" " alt="" coords="267,93,455,119"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="488,106,456,109,455,104,493,106"/>
+<area shape="rect" id="Node000009" href="$class_lar_session_reader.html#a90f8d9ca12f06069895cf7f70c7072ee" title=" " alt="" coords="270,143,452,168"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="530,122,430,145,429,139,525,123"/>
+<area shape="rect" id="Node000008" href="$class_lar_session_reader.html#a8078f378133001adee69d237a860e570" title=" " alt="" coords="42,115,179,156"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="249,120,180,130,179,125,254,118"/>
+<area shape="poly" id="edge9_Node000009_Node000008" title=" " alt="" coords="252,147,179,144,179,138,257,147"/>
+</map>

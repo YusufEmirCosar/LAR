@@ -1,0 +1,17 @@
+<map id="lar::gltf::GlbResourceReader::readUri" name="lar::gltf::GlbResourceReader::readUri">
+<area shape="rect" id="Node000001" title="Reads one data URI or one contained external resource." alt="" coords="661,89,849,130"/>
+<area shape="rect" id="Node000002" href="$namespaceanonymous__namespace_02glb__texture__reader_8cpp_03.html#a07354df47d280575290e1ea5c089c549" title=" " alt="" coords="438,37,601,93"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="643,89,601,83,602,78,649,89"/>
+<area shape="rect" id="Node000004" href="$classlar_1_1gltf_1_1_glb_resource_reader.html#a89ebb3160881e63583f0af6ec8cd75a3" title="Resolves every declared glTF buffer under a single aggregate logical&#45;byte budget." alt="" coords="426,125,613,166"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="648,126,614,133,613,128,643,126"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="554,22,542,18,520,16,500,18,487,23,481,29,481,38,476,35,476,27,484,18,499,13,520,11,543,13,559,23"/>
+<area shape="rect" id="Node000003" href="$namespaceanonymous__namespace_02glb__texture__reader_8cpp_03.html#a562a21981436826eca669c819beda31c" title=" " alt="" coords="216,29,378,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="420,62,379,63,378,57,426,61"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="329,15,318,10,297,8,278,10,266,15,261,21,260,30,256,28,256,19,263,10,277,5,297,3,319,5,334,14"/>
+<area shape="rect" id="Node000005" href="$namespaceanonymous__namespace_02glb__model__reader_8cpp_03.html#a37cd67a1abdbfd67e513846af682aed8" title=" " alt="" coords="216,133,378,189"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="408,153,379,158,378,153,413,153"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="329,118,318,114,297,112,278,114,266,119,261,125,260,135,256,131,256,123,263,114,277,109,297,107,319,109,334,119"/>
+<area shape="rect" id="Node000006" href="$namespaceanonymous__namespace_02glb__model__reader_8cpp_03.html#a80e24fd042ee2476592ade794ddc94f6" title=" " alt="" coords="5,133,168,189"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="198,161,168,164,168,159,203,161"/>
+<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="118,119,107,114,86,112,68,114,56,119,51,125,50,134,45,132,46,123,53,114,67,109,87,107,109,109,124,118"/>
+</map>

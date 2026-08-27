@@ -1,0 +1,12 @@
+<map id="src/infrastructure/timing/qt_recording_clock.cpp" name="src/infrastructure/timing/qt_recording_clock.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="148,5,284,61"/>
+<area shape="rect" id="Node000002" href="$qt__recording__clock_8h.html" title="QElapsedTimer implementation of the recording clock port." alt="" coords="143,109,289,150"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,59,219,95,213,93,215,64"/>
+<area shape="rect" id="Node000003" href="$recording__clock_8h.html" title="Monotonic timestamp source used by RecordingService." alt="" coords="5,198,179,238"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="186,152,134,191,131,186,190,148"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="118,286,188,312"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="215,148,208,192,193,239,173,275,170,271,188,237,203,191,212,152"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="254,205,314,231"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="232,148,268,193,263,193,231,153"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="108,236,137,274,132,274,106,241"/>
+</map>

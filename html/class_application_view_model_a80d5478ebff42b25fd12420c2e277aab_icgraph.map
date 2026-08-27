@@ -1,0 +1,7 @@
+<map id="ApplicationViewModel::setRecordingDuration" name="ApplicationViewModel::setRecordingDuration">
+<area shape="rect" id="Node000001" title=" " alt="" coords="374,5,529,46"/>
+<area shape="rect" id="Node000002" href="$class_application_facade.html#acc84de76e45ecc6539751a18ab2ab19d" title="Creates the main&#45;thread application facade." alt="" coords="190,5,326,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="356,26,327,28,327,23,361,26"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#a32410f883b62e33c853d2f6996cf8685" title="Creates the application facade with IP access&#45;policy file support." alt="" coords="5,5,142,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="172,26,142,28,142,23,177,25"/>
+</map>

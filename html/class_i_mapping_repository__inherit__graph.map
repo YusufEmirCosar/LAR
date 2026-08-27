@@ -1,0 +1,5 @@
+<map id="IMappingRepository" name="IMappingRepository">
+<area shape="rect" id="Node000001" title="Creates PacketMapping values from files or JSON bytes." alt="" coords="17,5,155,31"/>
+<area shape="rect" id="Node000002" href="$class_json_mapping_repository.html" title="Parses mapping JSON and constructs validated PacketMapping values." alt="" coords="5,79,167,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,45,88,79,84,78,84,48"/>
+</map>

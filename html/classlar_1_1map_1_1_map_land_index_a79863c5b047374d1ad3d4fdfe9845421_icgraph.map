@@ -1,0 +1,17 @@
+<map id="lar::map::MapLandIndex::isValid" name="lar::map::MapLandIndex::isValid">
+<area shape="rect" id="Node000001" title=" " alt="" coords="815,113,976,154"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_land_index.html#ab6a7cb89774684d45e13cecd52422148" title="Appends possibly duplicated candidate triangle ordinals for bounded unwrapped bounds." alt="" coords="605,5,767,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="841,105,765,67,731,49,731,44,768,62,846,106"/>
+<area shape="rect" id="Node000003" href="$class_plane_land_mask_builder.html#a6370f137d1388aefd95c2dc496dee19c" title=" " alt="" coords="403,56,557,97"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="797,120,766,118,558,89,558,84,767,112,802,120"/>
+<area shape="rect" id="Node000005" href="$class_plane_terrain_worker.html#ab215b14a4ab72ff79e0890675d809388" title=" " alt="" coords="5,85,140,126"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="799,133,140,111,140,105,800,128"/>
+<area shape="rect" id="Node000012" href="$classlar_1_1map_1_1_map_land_index.html#a5b7f5eeae367d4adb649e05cd27b14f8" title="Returns whether one finite WGS84 degree coordinate lies in a land triangle." alt="" coords="605,171,767,211"/>
+<area shape="poly" id="edge6_Node000001_Node000012" title=" " alt="" coords="807,158,763,173,762,167,801,159"/>
+<area shape="rect" id="Node000013" href="$class_plane_land_mask_builder.html#a2d0c243a031a126831f8666e77bfd140" title=" " alt="" coords="609,236,763,277"/>
+<area shape="poly" id="edge7_Node000001_Node000013" title=" " alt="" coords="858,163,815,196,768,225,742,238,741,233,765,221,812,192,853,165"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="588,50,558,60,557,55,593,48"/>
+<area shape="rect" id="Node000004" href="$class_plane_terrain_patch_builder.html#a580df2736ddf2edbd9c6a4a6dafb1e14" title="Samples and triangulates one request, returning null when local terrain is absent." alt="" coords="188,56,355,97"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="385,77,356,79,355,74,390,76"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="170,92,141,98,139,93,175,89"/>
+</map>

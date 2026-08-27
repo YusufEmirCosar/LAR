@@ -1,0 +1,18 @@
+<map id="lar::map::tool::anonymous_namespace{map_mesh_compiler::cpp}::buildLandIndex" name="lar::map::tool::anonymous_namespace{map_mesh_compiler::cpp}::buildLandIndex">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,181,225,237"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="63,180,64,171,73,162,90,157,115,155,144,157,162,166,157,168,142,163,115,160,91,162,76,167,69,173,68,182"/>
+<area shape="rect" id="Node000002" href="$namespacelar_1_1map_1_1tool_1_1anonymous__namespace_02map__mesh__compiler_8cpp_03.html#afe5be6daed894d91b3fc1fce4a576fd7" title=" " alt="" coords="273,133,492,189"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="224,187,260,183,255,184,226,192"/>
+<area shape="rect" id="Node000006" href="$namespacelar_1_1map.html#afe41b5232fdccaebdd6cf304581d7bd0" title="Validates cell ranges and triangle references without allocating." alt="" coords="296,237,468,278"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="225,226,283,239,278,239,225,232"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="331,131,331,123,340,114,358,109,382,107,411,109,430,119,424,119,410,115,382,112,359,114,343,119,336,125,335,134"/>
+<area shape="rect" id="Node000003" href="$namespacelar_1_1map_1_1tool_1_1anonymous__namespace_02map__mesh__compiler_8cpp_03.html#a2fe5bd7bb550aa3e33055bd2d750480f" title=" " alt="" coords="540,29,759,85"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="451,130,539,95,554,92,559,90,541,100,452,135"/>
+<area shape="rect" id="Node000004" href="$namespacelar_1_1map_1_1tool_1_1anonymous__namespace_02map__mesh__compiler_8cpp_03.html#a3653031c73aa9cb27a5b06a0e55fb056" title=" " alt="" coords="540,133,759,189"/>
+<area shape="poly" id="edge6_Node000002_Node000004" title=" " alt="" coords="492,159,527,161,522,161,493,164"/>
+<area shape="rect" id="Node000005" href="$classlar_1_1map_1_1_map_projection.html#abda6cc4a42ca2edee384a3e338bbf5c1" title=" " alt="" coords="570,213,729,254"/>
+<area shape="poly" id="edge8_Node000002_Node000005" title=" " alt="" coords="489,187,560,208,554,208,488,192"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="598,27,598,19,608,10,625,5,650,3,678,5,697,15,692,15,677,11,650,8,626,10,610,15,603,21,603,30"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="598,131,598,123,608,114,625,109,650,107,678,109,697,119,692,119,677,115,650,112,626,114,610,119,603,125,602,135"/>
+<area shape="poly" id="edge10_Node000006_Node000006" title=" " alt="" coords="333,235,330,227,338,218,356,212,382,210,411,213,430,221,425,221,410,218,382,215,357,217,341,222,335,228,337,238"/>
+</map>

@@ -1,0 +1,25 @@
+<map id="PlaneTerrainGpuLayer::hasPatch" name="PlaneTerrainGpuLayer::hasPatch">
+<area shape="rect" id="Node000001" title=" " alt="" coords="855,92,1004,133"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="962,76,951,73,929,71,909,73,897,77,893,83,894,93,890,90,888,82,894,73,908,67,929,65,952,68,967,77"/>
+<area shape="rect" id="Node000002" href="$class_plane_terrain_gpu_layer.html#a3861dd3b0b6946e8a4b1005d3ed1a85f" title=" " alt="" coords="633,92,807,133"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="837,113,807,115,807,110,842,112"/>
+<area shape="rect" id="Node000003" href="$class_plane_terrain_gpu_layer.html#a00a4a4f28dc43bec53d297a36031da14" title=" " alt="" coords="436,5,585,46"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="652,86,562,49,562,44,658,85"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_renderer.html#a303eb0d904256d05666662ac14a59539" title=" " alt="" coords="241,77,386,118"/>
+<area shape="poly" id="edge7_Node000002_Node000004" title=" " alt="" coords="616,110,386,103,386,98,620,108"/>
+<area shape="rect" id="Node000009" href="$class_plane_terrain_gpu_layer.html#a9fcce08c38c249a8442e9d5c0d39a44d" title=" " alt="" coords="436,185,585,226"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="661,139,559,187,557,182,656,140"/>
+<area shape="rect" id="Node000012" href="$class_plane_terrain_gpu_layer.html#a6dcb7b291f2e172f85f0a4dab2197dac" title="Returns vector&#45;classified DTED/sea&#45;level height at a current Plane X/Z coordinate." alt="" coords="436,120,585,161"/>
+<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="615,126,586,133,585,128,621,125"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="436,53,372,79,370,74,441,51"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title=" " alt="" coords="26,49,170,90"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="223,87,171,82,170,76,228,85"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title=" " alt="" coords="5,114,191,140"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="223,111,192,117,190,112,228,108"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="445,178,435,175,345,121,347,116,437,170,450,179"/>
+<area shape="rect" id="Node000010" href="$class_plane_terrain_gpu_layer.html#a148a59a028ca3ca6ca94dba7fd91e5bd" title="Draws an unscaled terrain anchor (compatibility overload)." alt="" coords="239,171,388,211"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="418,199,388,199,388,194,423,199"/>
+<area shape="rect" id="Node000011" href="$class_plane_terrain_gpu_layer.html#ab7dca4bb30afb023808ed3f8d0de936c" title=" " alt="" coords="239,236,388,277"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="424,228,389,240,388,235,418,229"/>
+<area shape="poly" id="edge13_Node000012_Node000004" title=" " alt="" coords="418,121,386,116,386,111,424,121"/>
+</map>

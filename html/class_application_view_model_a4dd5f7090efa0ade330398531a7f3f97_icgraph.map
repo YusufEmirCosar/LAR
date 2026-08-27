@@ -1,0 +1,79 @@
+<map id="ApplicationViewModel::errorOccurred" name="ApplicationViewModel::errorOccurred">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1316,552,1466,592"/>
+<area shape="rect" id="Node000002" href="$class_application_view_model.html#a8b45470f469030969b5321be7b4c0e6c" title=" " alt="" coords="1119,552,1268,592"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1298,573,1269,575,1268,569,1304,571"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#aaa8bd95ed38e7f855835042c17db3338" title="Stores and emits a human&#45;readable operation error." alt="" coords="935,552,1071,592"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1101,573,1072,575,1071,569,1106,571"/>
+<area shape="rect" id="Node000004" href="$class_application_facade.html#acc84de76e45ecc6539751a18ab2ab19d" title="Creates the main&#45;thread application facade." alt="" coords="250,209,386,250"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="996,536,984,432,963,295,948,228,930,167,909,119,885,87,832,49,782,24,733,11,684,9,634,15,581,30,462,77,419,105,382,141,353,178,333,210,328,208,348,175,378,137,415,100,460,72,579,25,633,10,684,3,734,6,784,19,835,45,889,83,914,116,935,165,953,226,968,294,990,431,1001,538"/>
+<area shape="rect" id="Node000006" href="$class_application_facade.html#aa21361c4c25d06f76fabb8aa978d7f77" title="Applies the result of an asynchronous IP&#45;policy change." alt="" coords="736,97,873,138"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="999,535,993,460,976,360,962,307,942,254,917,203,885,158,866,141,865,136,889,154,921,201,947,252,967,305,981,359,998,460,1004,537"/>
+<area shape="rect" id="Node000007" href="$class_application_facade.html#a1dc41e6d7b7418d3b79087b7d24cbe1e" title="Applies the result of an asynchronous mapping&#45;load request." alt="" coords="736,262,873,303"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="991,535,977,490,955,433,925,375,885,323,863,306,862,301,889,319,929,372,960,431,982,488,996,537"/>
+<area shape="rect" id="Node000008" href="$class_application_facade.html#abaeb7a95980e0e4521275006c4137f43" title="Requests loading and validation of a packet mapping file." alt="" coords="500,86,636,127"/>
+<area shape="poly" id="edge21_Node000003_Node000008" title=" " alt="" coords="998,535,992,467,975,379,960,332,941,287,916,245,885,208,855,195,791,175,637,128,636,123,793,169,857,190,888,203,920,242,945,285,965,330,980,377,997,466,1003,537"/>
+<area shape="rect" id="Node000016" href="$class_application_facade.html#a8a7b37f032f51eaaf3ef9516f0d19009" title="Requests reset of the active recording transaction." alt="" coords="500,152,636,192"/>
+<area shape="poly" id="edge24_Node000003_Node000016" title=" " alt="" coords="997,535,988,474,970,398,955,358,937,319,913,284,885,253,868,241,843,230,778,211,637,184,636,179,779,206,845,225,870,236,888,249,918,280,941,317,960,356,975,396,994,473,1002,537"/>
+<area shape="rect" id="Node000018" href="$class_application_facade.html#a00d85ef3a4876ba065e38fbd4566c060" title="Reports successful loading of an offline session." alt="" coords="500,290,636,331"/>
+<area shape="poly" id="edge28_Node000003_Node000018" title=" " alt="" coords="983,537,944,474,917,440,885,412,824,376,758,350,693,332,637,321,635,316,694,327,760,345,826,371,888,407,921,437,949,471,988,538"/>
+<area shape="rect" id="Node000021" href="$class_application_facade.html#aef90a981dc98a6d8d92e8d2d911f74aa" title="Requests installation of an IP access policy." alt="" coords="500,356,636,396"/>
+<area shape="poly" id="edge29_Node000003_Node000021" title=" " alt="" coords="974,539,936,498,912,477,885,460,823,430,756,409,692,395,637,385,635,380,693,389,758,404,825,426,888,455,915,473,939,495,980,540"/>
+<area shape="rect" id="Node000022" href="$class_application_facade.html#a49e7d78b35420d6ceb0cc678b915070b" title="Loads an IP access policy from a file and submits it for installation." alt="" coords="250,450,386,491"/>
+<area shape="poly" id="edge20_Node000003_Node000022" title=" " alt="" coords="917,570,653,558,531,550,460,541,402,520,354,494,353,489,404,515,462,536,531,545,654,553,921,567"/>
+<area shape="rect" id="Node000025" href="$class_application_facade.html#a42f5497c396fac20046b6c11bc55ea1b" title="Saves a snapshot of the active recording without finalizing it." alt="" coords="500,421,636,462"/>
+<area shape="poly" id="edge35_Node000003_Node000025" title=" " alt="" coords="962,542,927,520,886,499,821,478,755,463,637,447,635,442,756,458,823,472,888,494,930,515,968,542"/>
+<area shape="rect" id="Node000027" href="$class_application_facade.html#a5c87f32b2373cb2bccfc6536a7a909b0" title="Finalizes the active recording and saves it to a file." alt="" coords="500,486,636,527"/>
+<area shape="poly" id="edge47_Node000003_Node000027" title=" " alt="" coords="945,546,886,527,821,515,754,509,637,506,635,501,754,504,821,510,887,521,950,544"/>
+<area shape="rect" id="Node000029" href="$class_application_facade.html#a735edf0f9883281d25d82417f74b5ac8" title="Applies the result of an asynchronous recording reset." alt="" coords="736,580,873,620"/>
+<area shape="poly" id="edge18_Node000003_Node000029" title=" " alt="" coords="917,585,874,593,872,588,922,583"/>
+<area shape="rect" id="Node000030" href="$class_application_facade.html#a77d44bff05064e9b67d829e3300797d1" title="Applies the result of an asynchronous recording save." alt="" coords="736,645,873,686"/>
+<area shape="poly" id="edge19_Node000003_Node000030" title=" " alt="" coords="948,601,888,634,860,647,857,642,886,630,953,599"/>
+<area shape="rect" id="Node000031" href="$class_application_facade.html#a764732ca1f481749552e15e5ca92b570" title="Requests loading and indexing of an offline session file." alt="" coords="736,710,873,751"/>
+<area shape="poly" id="edge22_Node000003_Node000031" title=" " alt="" coords="980,603,940,654,888,700,867,712,864,707,885,695,936,650,976,607"/>
+<area shape="rect" id="Node000033" href="$class_application_facade.html#a742c4ec566e2367fbf2739826d23b75c" title="Seeks playback using a position expressed in seconds." alt="" coords="722,799,887,825"/>
+<area shape="poly" id="edge25_Node000003_Node000033" title=" " alt="" coords="989,604,950,684,921,726,889,765,863,785,836,801,834,796,860,781,885,761,917,723,945,681,985,608"/>
+<area shape="rect" id="Node000034" href="$class_application_facade.html#a57325ab5f5f8b38ee254399a7051bb9e" title="Sets the offline playback speed." alt="" coords="736,849,873,890"/>
+<area shape="poly" id="edge30_Node000003_Node000034" title=" " alt="" coords="997,606,985,659,964,720,932,784,912,813,888,839,873,851,871,846,885,835,908,810,928,781,959,718,980,657,994,610"/>
+<area shape="rect" id="Node000037" href="$class_application_facade.html#adc175f2f68fa1f89978502dd6b4e30d0" title="Enables or disables automatic playback repeat." alt="" coords="736,914,873,955"/>
+<area shape="poly" id="edge33_Node000003_Node000037" title=" " alt="" coords="1000,606,992,670,972,749,958,790,939,831,916,869,889,903,873,916,870,911,885,900,912,866,934,828,953,788,967,747,987,669,997,610"/>
+<area shape="rect" id="Node000038" href="$class_application_facade.html#aebeaaf2506cc79e55b67e45e9acb9540" title="Requests the start of online packet capture." alt="" coords="250,964,386,1004"/>
+<area shape="poly" id="edge36_Node000003_Node000038" title=" " alt="" coords="998,606,984,695,961,804,946,858,929,905,910,944,888,969,850,988,796,1000,730,1007,658,1009,510,1004,387,994,386,989,510,999,658,1004,730,1001,795,995,848,983,885,965,905,941,924,903,941,856,956,803,979,694,995,610"/>
+<area shape="rect" id="Node000039" href="$class_application_facade.html#ab947971077fedd15ea05beebd2b59554" title="Requests the start of a recording transaction." alt="" coords="250,1029,386,1070"/>
+<area shape="poly" id="edge38_Node000003_Node000039" title=" " alt="" coords="999,605,987,704,964,825,949,885,931,939,911,982,889,1011,860,1032,830,1050,765,1075,696,1090,626,1096,558,1095,493,1089,386,1070,386,1065,494,1083,558,1089,626,1090,696,1084,764,1070,828,1045,857,1028,885,1007,907,980,926,937,944,884,959,824,981,703,996,610"/>
+<area shape="rect" id="Node000040" href="$class_application_facade.html#a694513707882ab46116c679cb888f499" title="Requests the stop of online packet capture." alt="" coords="736,1102,873,1143"/>
+<area shape="poly" id="edge40_Node000003_Node000040" title=" " alt="" coords="1003,606,998,694,982,812,967,876,947,941,922,1004,889,1063,869,1086,845,1104,843,1099,865,1082,884,1060,917,1002,942,939,962,875,976,811,993,694,1000,610"/>
+<area shape="rect" id="Node000042" href="$class_application_facade.html#a8888524626ff4b8df631ff0c3df08c45" title="Discards the active in&#45;memory recording and then stops online capture." alt="" coords="462,1181,673,1222"/>
+<area shape="poly" id="edge46_Node000003_Node000042" title=" " alt="" coords="1001,606,993,731,973,896,958,979,940,1054,917,1115,903,1139,889,1157,866,1175,841,1189,786,1208,728,1216,673,1217,673,1212,728,1211,784,1203,838,1184,863,1170,885,1153,899,1136,912,1113,935,1053,953,978,968,895,988,731,998,610"/>
+<area shape="rect" id="Node000005" href="$class_application_facade.html#a32410f883b62e33c853d2f6996cf8685" title="Creates the application facade with IP access&#45;policy file support." alt="" coords="22,209,158,250"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="232,231,160,232,157,227,236,228"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="719,264,674,257,520,241,387,234,385,229,520,236,675,252,724,262"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="772,251,720,195,698,166,688,154,673,142,637,125,635,119,676,138,692,150,702,163,724,192,777,251"/>
+<area shape="poly" id="edge9_Node000007_Node000016" title=" " alt="" coords="740,256,721,246,697,229,673,213,635,196,633,190,676,208,700,225,724,242,745,255"/>
+<area shape="poly" id="edge10_Node000007_Node000018" title=" " alt="" coords="719,294,637,305,635,300,723,291"/>
+<area shape="poly" id="edge14_Node000007_Node000021" title=" " alt="" coords="746,312,675,345,638,358,635,354,673,340,751,308"/>
+<area shape="poly" id="edge16_Node000007_Node000025" title=" " alt="" coords="776,317,734,365,706,389,676,410,638,427,635,423,673,406,703,385,730,361,779,313"/>
+<area shape="poly" id="edge17_Node000007_Node000027" title=" " alt="" coords="790,315,773,355,747,397,715,439,676,476,638,495,635,491,673,471,711,436,743,394,768,352,787,319"/>
+<area shape="poly" id="edge11_Node000018_Node000004" title=" " alt="" coords="486,286,383,253,382,248,491,284"/>
+<area shape="poly" id="edge13_Node000018_Node000018" title=" " alt="" coords="605,276,592,271,568,269,545,271,531,276,526,282,528,290,523,289,521,280,528,271,544,266,568,264,593,266,610,274"/>
+<area shape="rect" id="Node000020" href="$class_offline_panel.html#ae7d8cf55ec83f71fca8d8ccd47b4aeae" title=" " alt="" coords="232,827,404,853"/>
+<area shape="poly" id="edge12_Node000018_Node000020" title=" " alt="" coords="484,329,463,346,401,559,325,828,320,826,396,557,459,343,487,325"/>
+<area shape="poly" id="edge15_Node000021_Node000022" title=" " alt="" coords="483,403,462,412,366,452,362,448,460,407,487,399"/>
+<area shape="rect" id="Node000032" href="$class_main_window.html#af55141c0fa7ee8db51b03707324f8df6" title=" " alt="" coords="472,718,663,744"/>
+<area shape="poly" id="edge23_Node000031_Node000032" title=" " alt="" coords="718,732,664,733,663,728,723,730"/>
+<area shape="poly" id="edge26_Node000033_Node000020" title=" " alt="" coords="705,819,405,838,404,833,709,816"/>
+<area shape="poly" id="edge27_Node000033_Node000033" title=" " alt="" coords="837,784,827,780,804,778,784,780,772,785,770,790,776,799,771,798,765,791,769,781,782,775,805,773,829,775,843,784"/>
+<area shape="rect" id="Node000035" href="$class_offline_panel.html#a09a51c74eaadd4c92bdc781dff7c6d5b" title=" " alt="" coords="461,854,674,880"/>
+<area shape="poly" id="edge31_Node000034_Node000035" title=" " alt="" coords="718,869,675,871,674,865,723,868"/>
+<area shape="poly" id="edge32_Node000035_Node000020" title=" " alt="" coords="443,855,405,852,403,847,448,853"/>
+<area shape="poly" id="edge34_Node000037_Node000020" title=" " alt="" coords="718,930,597,919,460,895,400,876,350,856,349,851,402,871,462,889,598,914,723,929"/>
+<area shape="rect" id="Node000010" href="$class_online_panel.html#a718a7f2c79b67e00d58efdbeedbd3ad8" title=" " alt="" coords="5,1037,175,1062"/>
+<area shape="poly" id="edge37_Node000038_Node000010" title=" " alt="" coords="233,1010,139,1038,137,1034,237,1006"/>
+<area shape="poly" id="edge39_Node000039_Node000010" title=" " alt="" coords="232,1051,176,1052,174,1047,237,1048"/>
+<area shape="rect" id="Node000041" href="$class_recording_workflow_controller.html#a81592488d3413ea59c757db09a6eedfe" title="Confirms and prepares stopping online capture." alt="" coords="223,1094,413,1135"/>
+<area shape="poly" id="edge41_Node000040_Node000041" title=" " alt="" coords="718,1120,674,1121,414,1118,413,1113,674,1116,724,1120"/>
+<area shape="poly" id="edge43_Node000040_Node000042" title=" " alt="" coords="736,1148,675,1172,640,1183,639,1178,673,1167,731,1149"/>
+<area shape="rect" id="Node000043" href="$class_main_window.html#a9199a9a25ddc8a3987df7e62baa3e751" title=" " alt="" coords="480,1131,655,1157"/>
+<area shape="poly" id="edge45_Node000040_Node000043" title=" " alt="" coords="718,1131,656,1139,655,1134,724,1130"/>
+<area shape="poly" id="edge42_Node000041_Node000010" title=" " alt="" coords="228,1091,138,1066,138,1060,232,1088"/>
+<area shape="poly" id="edge44_Node000042_Node000041" title=" " alt="" coords="478,1176,460,1172,370,1138,371,1133,462,1167,483,1176"/>
+</map>

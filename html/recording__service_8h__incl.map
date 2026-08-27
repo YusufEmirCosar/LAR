@@ -1,0 +1,45 @@
+<map id="src/application/recording_service.h" name="src/application/recording_service.h">
+<area shape="rect" id="Node000001" title="Application&#45;layer recording session and timestamp management." alt="" coords="542,5,704,46"/>
+<area shape="rect" id="Node000002" href="$captured__packet_8h.html" title="Validated UDP payloads annotated with monotonic receipt time." alt="" coords="448,94,585,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="601,45,554,86,551,82,597,48"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="671,190,741,216"/>
+<area shape="poly" id="edge24_Node000001_Node000005" title=" " alt="" coords="626,44,635,88,651,133,666,157,684,180,679,178,662,160,646,136,630,89,624,49"/>
+<area shape="rect" id="Node000007" href="$recording__clock_8h.html" title="Monotonic timestamp source used by RecordingService." alt="" coords="661,94,834,135"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="652,44,709,85,704,85,651,49"/>
+<area shape="rect" id="Node000008" href="$recording__transaction_8h.html" title="Mutable append&#45;only recording transaction abstraction." alt="" coords="229,94,402,135"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="551,48,401,92,399,87,555,45"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="5,279,71,304"/>
+<area shape="poly" id="edge23_Node000001_Node000010" title=" " alt="" coords="540,35,389,56,303,73,217,97,160,111,114,123,94,131,75,143,58,160,40,184,32,203,30,223,33,263,28,263,24,223,27,202,36,181,54,157,72,139,92,126,112,118,159,106,216,91,301,68,389,51,544,32"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="812,279,878,304"/>
+<area shape="poly" id="edge25_Node000001_Node000016" title=" " alt="" coords="705,26,744,32,783,45,819,64,848,92,860,113,867,136,871,183,866,228,856,266,852,262,861,227,866,183,862,137,855,115,844,96,816,68,781,50,743,38,705,31"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="909,102,978,127"/>
+<area shape="poly" id="edge22_Node000001_Node000018" title=" " alt="" coords="705,43,891,91,899,96,894,96,889,97,705,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="349,190,439,216"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="491,134,425,183,422,179,487,136"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="432,279,521,304"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="514,133,485,265,481,262,510,137"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="560,133,668,183,663,184,559,138"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="764,190,834,216"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="586,131,753,180,759,184,754,184,752,185,586,136"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="760,133,787,178,782,176,758,138"/>
+<area shape="poly" id="edge19_Node000008_Node000003" title=" " alt="" coords="334,133,376,179,370,179,333,138"/>
+<area shape="rect" id="Node000009" href="$session__snapshot_8h.html" title="Type&#45;erased immutable snapshot shared with persistence workers." alt="" coords="75,183,241,223"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="278,137,208,177,205,173,282,133"/>
+<area shape="poly" id="edge20_Node000008_Node000010" title=" " alt="" coords="226,119,186,126,142,138,101,157,65,185,53,202,45,223,40,264,34,263,40,221,48,200,61,181,98,152,140,133,185,121,230,116"/>
+<area shape="rect" id="Node000012" href="$session__timestamp_8h.html" title="Exact validated session&#45;relative timestamp value object." alt="" coords="514,183,647,223"/>
+<area shape="poly" id="edge13_Node000008_Node000012" title=" " alt="" coords="376,133,509,177,504,178,375,138"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="265,190,326,216"/>
+<area shape="poly" id="edge21_Node000008_Node000017" title=" " alt="" coords="312,133,304,177,299,174,309,137"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="231,221,420,273,415,276,230,227"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="130,226,69,271,65,267,132,221"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="124,279,192,304"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="159,222,161,264,155,263,157,226"/>
+<area shape="poly" id="edge16_Node000012_Node000004" title=" " alt="" coords="559,223,504,271,501,267,555,225"/>
+<area shape="rect" id="Node000013" href="$session__limits_8h.html" title="Shared resource and duration bounds for the LAR1 session format." alt="" coords="629,271,762,312"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="607,221,660,262,655,261,606,226"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="548,279,605,304"/>
+<area shape="poly" id="edge17_Node000012_Node000015" title=" " alt="" coords="582,222,580,265,576,262,578,226"/>
+<area shape="poly" id="edge18_Node000012_Node000016" title=" " alt="" coords="641,221,799,275,794,275,640,226"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="659,360,732,386"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="697,311,697,346,693,343,693,314"/>
+</map>

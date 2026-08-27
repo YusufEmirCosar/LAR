@@ -1,0 +1,16 @@
+<map id="tools/map_asset/map_mesh_compiler.h" name="tools/map_asset/map_mesh_compiler.h">
+<area shape="rect" id="Node000001" title="Conversion from source polygons to renderer&#45;ready map meshes." alt="" coords="144,5,290,46"/>
+<area shape="rect" id="Node000002" href="$source__map_8h.html" title="Projection&#45;neutral polygon model produced from source GeoJSON." alt="" coords="5,94,109,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,49,97,89,94,85,179,44"/>
+<area shape="rect" id="Node000004" href="$map__mesh_8h.html" title="CPU&#45;side vertex/index representation shared by tools and renderer." alt="" coords="133,94,301,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="219,44,219,80,215,77,215,49"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="324,94,390,120"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="252,44,325,86,320,87,252,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="66,168,123,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="64,118,84,154,78,154,62,122"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="199,120,129,162,127,157,194,121"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="166,168,230,193"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="216,118,207,154,203,151,212,122"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="255,168,315,193"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="229,117,266,157,261,156,227,122"/>
+</map>

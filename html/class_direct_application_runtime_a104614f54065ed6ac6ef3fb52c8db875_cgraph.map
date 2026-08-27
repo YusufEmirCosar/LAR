@@ -1,0 +1,62 @@
+<map id="DirectApplicationRuntime::startRecording" name="DirectApplicationRuntime::startRecording">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,128,175,169"/>
+<area shape="rect" id="Node000002" href="$class_i_application_runtime.html#a8a335e653e0be8326f22b4d50759f8f7" title=" " alt="" coords="262,5,400,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,126,163,91,221,57,249,47,246,50,224,61,166,95,119,129"/>
+<area shape="rect" id="Node000003" href="$class_i_application_runtime.html#a96c2d9a354915e79319f34abeffdecc8" title="Completes an accepted command that has no command&#45;specific result type." alt="" coords="262,71,400,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,126,249,109,245,113,177,130"/>
+<area shape="rect" id="Node000004" href="$class_direct_application_runtime.html#a19ee8db2836b58824708a362a72fbda1" title=" " alt="" coords="774,192,944,233"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="174,143,284,142,420,145,569,154,719,171,782,187,777,188,718,176,569,159,420,150,284,147,176,148"/>
+<area shape="rect" id="Node000016" href="$class_i_application_runtime.html#a01f646d011f811a4eb6b1ac3faae60ec" title=" " alt="" coords="262,324,400,365"/>
+<area shape="poly" id="edge20_Node000001_Node000016" title=" " alt="" coords="102,166,151,238,184,277,224,310,250,325,245,326,221,315,181,281,146,241,102,171"/>
+<area shape="rect" id="Node000017" href="$class_recording_service.html#a34839e02657747aa67f48b8e6d18a3da" title=" " alt="" coords="223,274,440,300"/>
+<area shape="poly" id="edge21_Node000001_Node000017" title=" " alt="" coords="127,166,296,265,292,268,127,172"/>
+<area shape="rect" id="Node000005" href="$class_recording_service.html#a26fbbe76f509ced7c5d86231d2cbdfc3" title=" " alt="" coords="1007,413,1194,438"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="938,231,954,242,967,258,974,274,980,305,984,336,991,352,1002,368,1024,388,1051,406,1046,405,1021,392,998,371,986,354,979,338,974,306,969,276,962,261,950,246,937,236"/>
+<area shape="rect" id="Node000006" href="$class_recording_service.html#a9e5faab16b85d3ddc1c95f67cc72d642" title=" " alt="" coords="1000,332,1201,357"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="934,231,953,242,969,259,978,276,986,292,1001,308,1030,326,1025,325,998,312,982,295,973,278,965,262,950,246,933,236"/>
+<area shape="rect" id="Node000007" href="$class_recording_service.html#a82e3d26f814c7e83154c39bdf68a55fd" title=" " alt="" coords="1016,127,1184,167"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="936,189,1010,171,1005,173,937,194"/>
+<area shape="rect" id="Node000009" href="$class_recording_service.html#ac36c5351de37045fc101da63a991399d" title="Returns the elapsed time between the first and last saved packets." alt="" coords="1008,192,1193,233"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="944,210,995,212,989,213,945,215"/>
+<area shape="rect" id="Node000015" href="$class_i_application_runtime.html#abfc82e2a4cfef4760d066bd8a57e1931" title=" " alt="" coords="1018,257,1183,298"/>
+<area shape="poly" id="edge19_Node000004_Node000015" title=" " alt="" coords="937,231,1010,253,1005,253,936,236"/>
+<area shape="rect" id="Node000008" href="$class_i_recording_transaction.html#a7f97a4bf4ec37323f0cec1620ec47d7d" title=" " alt="" coords="1268,127,1420,167"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1185,144,1255,147,1250,147,1185,150"/>
+<area shape="poly" id="edge8_Node000008_Node000008" title=" " alt="" coords="1299,125,1296,117,1304,108,1320,102,1344,100,1370,102,1388,111,1382,111,1369,108,1344,105,1321,107,1307,112,1301,118,1303,127"/>
+<area shape="rect" id="Node000010" href="$class_session_timestamp.html#abdcdc65dfb0177686e5c9065caf4932f" title=" " alt="" coords="1249,245,1439,286"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="1194,230,1236,241,1231,242,1194,235"/>
+<area shape="rect" id="Node000014" href="$class_session_timestamp.html#aeb247cf8e65e75c49239bfefb1fe72b8" title=" " alt="" coords="1511,196,1677,221"/>
+<area shape="poly" id="edge18_Node000009_Node000014" title=" " alt="" coords="1193,209,1498,209,1493,210,1194,214"/>
+<area shape="rect" id="Node000011" href="$class_session_timestamp.html#afcb01ba58c3c29059a2ea8f70f829056" title=" " alt="" coords="1495,245,1693,270"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="1439,260,1482,261,1476,262,1440,265"/>
+<area shape="rect" id="Node000012" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="1749,237,1937,278"/>
+<area shape="poly" id="edge14_Node000010_Node000012" title=" " alt="" coords="1379,284,1430,310,1488,330,1547,342,1594,346,1641,342,1700,330,1752,310,1797,288,1802,286,1755,315,1701,335,1642,348,1594,351,1546,347,1487,335,1428,315,1378,289"/>
+<area shape="rect" id="Node000013" href="$class_session_timestamp.html#a9e69c8185d47045ab21667be1a2976f7" title=" " alt="" coords="1487,294,1701,320"/>
+<area shape="poly" id="edge13_Node000010_Node000013" title=" " alt="" coords="1440,279,1500,291,1495,291,1440,284"/>
+<area shape="poly" id="edge15_Node000010_Node000014" title=" " alt="" coords="1434,242,1487,230,1516,226,1521,225,1488,235,1435,247"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="1694,255,1736,257,1730,258,1694,260"/>
+<area shape="poly" id="edge16_Node000014_Node000012" title=" " alt="" coords="1663,219,1736,236,1731,236,1663,224"/>
+<area shape="poly" id="edge17_Node000014_Node000014" title=" " alt="" coords="1553,194,1545,187,1550,177,1566,171,1594,169,1625,172,1642,182,1636,181,1624,177,1594,174,1568,176,1553,181,1550,186,1558,196"/>
+<area shape="rect" id="Node000018" href="$class_i_recording_transaction.html#a98c7ffd67eff8e3c42ad2d5a2f797ed6" title=" " alt="" coords="527,463,679,503"/>
+<area shape="poly" id="edge22_Node000017_Node000018" title=" " alt="" coords="423,298,442,310,456,328,464,346,467,381,470,416,477,433,490,449,516,468,510,467,486,453,472,435,465,417,462,382,459,347,452,330,438,314,422,303"/>
+<area shape="rect" id="Node000019" href="$class_i_recording_transaction.html#a5134c9e1404a9d77a0078d78218a069a" title="True after a successful begin() and until cancel() releases the transaction." alt="" coords="527,209,679,250"/>
+<area shape="poly" id="edge23_Node000017_Node000019" title=" " alt="" coords="395,271,514,248,509,250,397,276"/>
+<area shape="rect" id="Node000020" href="$class_i_recording_clock.html#ae84877176911dcbb538060eab8de1c44" title=" " alt="" coords="488,274,718,300"/>
+<area shape="poly" id="edge25_Node000017_Node000020" title=" " alt="" coords="440,284,475,286,470,288,441,290"/>
+<area shape="rect" id="Node000021" href="$class_recording_service.html#a0a716c2fe4374fe773459319b090249f" title=" " alt="" coords="519,348,687,389"/>
+<area shape="poly" id="edge26_Node000017_Node000021" title=" " alt="" coords="394,298,441,310,534,342,529,343,439,315,394,303"/>
+<area shape="rect" id="Node000022" href="$class_recording_service.html#a5f8da97e34dd808d9f5819e0a02af42f" title=" " alt="" coords="512,413,694,438"/>
+<area shape="poly" id="edge28_Node000017_Node000022" title=" " alt="" coords="419,298,442,310,460,332,466,356,473,378,490,398,501,408,496,407,486,402,468,380,461,357,455,335,438,314,419,303"/>
+<area shape="poly" id="edge24_Node000019_Node000019" title=" " alt="" coords="555,208,553,199,561,190,578,185,603,183,631,185,649,194,643,194,629,190,603,188,579,190,564,195,558,201,560,210"/>
+<area shape="poly" id="edge27_Node000021_Node000021" title=" " alt="" coords="555,346,553,338,561,329,578,323,603,321,631,324,649,332,643,332,629,329,603,327,579,329,564,333,558,339,560,349"/>
+<area shape="poly" id="edge29_Node000022_Node000005" title=" " alt="" coords="666,436,767,455,859,461,951,455,1032,443,1038,442,952,460,859,467,766,460,666,442"/>
+<area shape="poly" id="edge30_Node000022_Node000006" title=" " alt="" coords="682,410,717,398,741,382,751,374,765,367,820,353,877,343,987,339,982,340,877,349,821,358,767,372,753,379,744,387,720,403,683,415"/>
+<area shape="rect" id="Node000023" href="$class_recording_service.html#ad78c4b9e8ae3320196e181369a6123ea" title=" " alt="" coords="766,405,952,446"/>
+<area shape="poly" id="edge31_Node000022_Node000023" title=" " alt="" coords="694,423,754,426,748,426,695,428"/>
+<area shape="rect" id="Node000024" href="$class_recording_service.html#ac724bb3c7302c41ba74c9b686e8c1641" title=" " alt="" coords="778,281,940,306"/>
+<area shape="poly" id="edge35_Node000022_Node000024" title=" " alt="" coords="694,410,717,398,733,381,740,363,748,343,765,324,784,314,789,312,768,328,753,346,745,365,737,384,720,402,695,415"/>
+<area shape="poly" id="edge32_Node000023_Node000005" title=" " alt="" coords="952,423,994,426,989,426,952,428"/>
+<area shape="poly" id="edge33_Node000023_Node000006" title=" " alt="" coords="921,402,1042,363,1048,362,922,407"/>
+<area shape="poly" id="edge34_Node000023_Node000023" title=" " alt="" coords="814,403,811,395,819,386,835,381,859,379,885,381,902,390,897,389,884,386,859,384,836,386,822,391,817,397,818,406"/>
+<area shape="poly" id="edge36_Node000024_Node000024" title=" " alt="" coords="819,280,811,272,816,262,832,256,859,254,889,257,905,267,900,266,888,262,859,259,833,262,820,266,817,272,824,281"/>
+</map>

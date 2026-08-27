@@ -1,0 +1,5 @@
+<map id="QtUdpDatagramSource::~QtUdpDatagramSource" name="QtUdpDatagramSource::~QtUdpDatagramSource">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,179,46"/>
+<area shape="rect" id="Node000002" href="$class_qt_udp_datagram_source.html#a73ee2263be5d97dea69bfe5b4eb13e6f" title="Closes the transport; repeated calls are safe." alt="" coords="227,5,384,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,23,214,25,208,26,179,28"/>
+</map>

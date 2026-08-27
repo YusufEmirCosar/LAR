@@ -1,0 +1,18 @@
+<map id="src/viewer/terrain/dted_cell.h" name="src/viewer/terrain/dted_cell.h">
+<area shape="rect" id="Node000001" title="Immutable in&#45;memory representation of one degree&#45;aligned DTED cell." alt="" coords="258,5,380,46"/>
+<area shape="rect" id="Node000002" href="$dted__level_8h.html" title="Shared DTED level metadata and external terrain&#45;source configuration." alt="" coords="84,94,212,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="278,48,202,89,199,84,282,45"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="212,183,284,208"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="306,45,277,95,264,133,255,169,251,166,259,131,272,93,301,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="287,102,351,127"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="320,44,321,87,316,85,317,49"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="375,102,441,127"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="340,44,388,91,382,91,338,49"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="465,102,522,127"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="359,44,458,94,453,95,358,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,183,94,208"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="126,134,78,175,75,170,121,136"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="118,183,184,208"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="151,133,152,168,148,166,147,137"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="174,133,224,173,218,173,172,138"/>
+</map>

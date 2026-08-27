@@ -1,0 +1,22 @@
+<map id="RecordingService::pauseRecording" name="RecordingService::pauseRecording">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,75,232,101"/>
+<area shape="rect" id="Node000002" href="$class_i_recording_clock.html#ae84877176911dcbb538060eab8de1c44" title=" " alt="" coords="567,51,797,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,81,552,67,550,72,232,86"/>
+<area shape="rect" id="Node000003" href="$class_recording_service.html#a3afe3497ce2d98a63530382489ab7187" title=" " alt="" coords="280,101,519,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,96,267,101,262,102,233,101"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="477,98,592,80,587,81,478,103"/>
+<area shape="rect" id="Node000004" href="$class_recording_service.html#a5f8da97e34dd808d9f5819e0a02af42f" title=" " alt="" coords="592,101,773,126"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="519,111,579,113,573,114,520,116"/>
+<area shape="rect" id="Node000005" href="$class_recording_service.html#a26fbbe76f509ced7c5d86231d2cbdfc3" title=" " alt="" coords="1086,45,1272,70"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="773,98,796,87,811,73,818,57,827,40,844,26,881,12,920,5,959,3,999,5,1072,18,1134,39,1129,39,1071,24,998,10,959,8,920,10,882,17,847,31,831,43,823,59,815,76,799,92,774,103"/>
+<area shape="rect" id="Node000006" href="$class_recording_service.html#a9e5faab16b85d3ddc1c95f67cc72d642" title=" " alt="" coords="1079,98,1280,124"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="773,113,1031,114,1065,115,1060,116,1031,119,774,118"/>
+<area shape="rect" id="Node000007" href="$class_recording_service.html#ad78c4b9e8ae3320196e181369a6123ea" title=" " alt="" coords="845,64,1031,105"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="773,101,833,96,827,97,774,106"/>
+<area shape="rect" id="Node000008" href="$class_recording_service.html#ac724bb3c7302c41ba74c9b686e8c1641" title=" " alt="" coords="857,203,1019,229"/>
+<area shape="poly" id="edge11_Node000004_Node000008" title=" " alt="" coords="717,124,892,197,887,197,716,130"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="1031,71,1073,69,1068,70,1032,77"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="1031,92,1066,98,1060,98,1031,97"/>
+<area shape="poly" id="edge10_Node000007_Node000007" title=" " alt="" coords="893,62,890,54,898,45,914,39,938,37,964,40,981,49,976,48,963,45,938,43,915,45,901,49,896,55,897,65"/>
+<area shape="poly" id="edge12_Node000008_Node000008" title=" " alt="" coords="898,202,890,195,895,185,911,179,938,177,968,180,984,190,979,189,967,185,938,182,912,184,899,189,896,194,903,204"/>
+</map>

@@ -139,8 +139,7 @@ void PlaneSceneRenderer::setTerrainVisible(bool visible) noexcept {
     m_terrainVisible = visible;
 }
 
-void PlaneSceneRenderer::setTerrainPlacement(const QVector2D &offsetXZ,
-                                             const QVector2D &scaleXZ,
+void PlaneSceneRenderer::setTerrainPlacement(const QVector2D &offsetXZ, const QVector2D &scaleXZ,
                                              float aircraftAltitudeScene) noexcept {
     m_terrainOffsetXZ = offsetXZ;
     m_terrainScaleXZ = scaleXZ;
@@ -467,9 +466,9 @@ bool PlaneSceneRenderer::draw(const QMatrix4x4 &view, const QMatrix4x4 &projecti
                 surfaceState.surfaceHeight = *groundHeight;
             }
             if (surfaceState.targetVisible) {
-                const std::optional<float> targetHeight = m_terrainLayer.groundHeightAt(
-                    surfaceState.targetXZ, m_terrainOffsetXZ, m_terrainScaleXZ,
-                    m_aircraftAltitudeScene);
+                const std::optional<float> targetHeight =
+                    m_terrainLayer.groundHeightAt(surfaceState.targetXZ, m_terrainOffsetXZ,
+                                                  m_terrainScaleXZ, m_aircraftAltitudeScene);
                 if (targetHeight) {
                     surfaceState.targetHeight = *targetHeight;
                 }

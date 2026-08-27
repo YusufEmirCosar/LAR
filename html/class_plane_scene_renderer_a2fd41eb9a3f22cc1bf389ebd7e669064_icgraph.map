@@ -1,0 +1,19 @@
+<map id="PlaneSceneRenderer::uploadModel" name="PlaneSceneRenderer::uploadModel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="926,56,1070,97"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_renderer.html#a303eb0d904256d05666662ac14a59539" title=" " alt="" coords="733,23,878,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="908,62,878,59,878,53,913,62"/>
+<area shape="rect" id="Node000007" href="$class_plane_scene_renderer.html#ad16b6570f8c335cb73f8eab20eab1095" title=" " alt="" coords="733,88,878,129"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="913,91,878,100,877,94,908,92"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title=" " alt="" coords="511,55,655,96"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="721,56,656,68,655,62,715,56"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title=" " alt="" coords="490,5,676,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="715,34,676,31,676,26,720,33"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="257,55,433,96"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="515,35,433,57,432,52,509,36"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,55,209,96"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="238,76,210,78,209,73,244,75"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="715,96,656,89,656,84,721,96"/>
+<area shape="rect" id="Node000008" href="$class_plane_scene_widget.html#aa6cccb6ef7357cd1ef6c3760d183c15d" title=" " alt="" coords="481,120,685,146"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="720,118,686,124,686,119,715,118"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="509,116,432,99,433,94,515,116"/>
+</map>

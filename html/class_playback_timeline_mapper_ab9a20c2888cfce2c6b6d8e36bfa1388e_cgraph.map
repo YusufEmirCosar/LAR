@@ -1,0 +1,17 @@
+<map id="PlaybackTimelineMapper::fromSlider" name="PlaybackTimelineMapper::fromSlider">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,136,173,177"/>
+<area shape="rect" id="Node000002" href="$class_session_timestamp.html#abdcdc65dfb0177686e5c9065caf4932f" title=" " alt="" coords="221,99,411,140"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,140,208,137,203,138,174,146"/>
+<area shape="rect" id="Node000006" href="$class_session_timestamp.html#aeb247cf8e65e75c49239bfefb1fe72b8" title=" " alt="" coords="482,180,649,206"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="173,160,467,183,466,188,173,166"/>
+<area shape="rect" id="Node000003" href="$class_session_timestamp.html#afcb01ba58c3c29059a2ea8f70f829056" title=" " alt="" coords="466,5,665,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="355,96,458,48,497,37,502,35,460,53,357,101"/>
+<area shape="rect" id="Node000004" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="720,48,909,89"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="411,99,459,92,586,79,707,73,702,74,586,84,459,97,412,104"/>
+<area shape="rect" id="Node000005" href="$class_session_timestamp.html#a9e69c8185d47045ab21667be1a2976f7" title=" " alt="" coords="459,107,672,132"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="411,117,446,119,441,120,412,122"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="388,138,507,175,502,175,387,143"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="632,29,708,46,702,47,632,34"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="597,177,671,142,761,98,766,96,674,147,598,182"/>
+<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="524,179,517,171,521,161,538,155,566,153,597,156,613,166,608,165,595,161,566,159,539,161,525,166,522,171,529,181"/>
+</map>

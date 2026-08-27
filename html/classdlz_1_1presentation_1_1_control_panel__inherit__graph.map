@@ -1,0 +1,5 @@
+<map id="dlz::presentation::ControlPanel" name="dlz::presentation::ControlPanel">
+<area shape="rect" id="Node000001" title="Small interactive control surface for the mandatory toy model." alt="" coords="5,79,131,120"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="32,5,104,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,44,71,79,65,78,66,48"/>
+</map>

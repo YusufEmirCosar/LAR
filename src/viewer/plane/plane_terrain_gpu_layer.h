@@ -31,8 +31,7 @@ class PlaneTerrainGpuLayer final : protected QOpenGLFunctions {
     [[nodiscard]] bool initialize(QString *errorMessage = nullptr);
     [[nodiscard]] bool draw(const QMatrix4x4 &view, const QMatrix4x4 &projection,
                             const QVector2D &offsetXZ, const QVector2D &scaleXZ,
-                            float aircraftAltitudeScene,
-                            QString *errorMessage = nullptr);
+                            float aircraftAltitudeScene, QString *errorMessage = nullptr);
     /** @brief Draws an unscaled terrain anchor (compatibility overload). */
     [[nodiscard]] bool draw(const QMatrix4x4 &view, const QMatrix4x4 &projection,
                             const QVector2D &offsetXZ, float aircraftAltitudeScene,
@@ -48,9 +47,10 @@ class PlaneTerrainGpuLayer final : protected QOpenGLFunctions {
     [[nodiscard]] std::optional<float>
     centerGroundHeight(float aircraftAltitudeScene) const noexcept;
     /** Returns vector-classified DTED/sea-level height at a current Plane X/Z coordinate. */
-    [[nodiscard]] std::optional<float>
-    groundHeightAt(const QVector2D &currentXZ, const QVector2D &offsetXZ,
-                   const QVector2D &scaleXZ, float aircraftAltitudeScene) const noexcept;
+    [[nodiscard]] std::optional<float> groundHeightAt(const QVector2D &currentXZ,
+                                                      const QVector2D &offsetXZ,
+                                                      const QVector2D &scaleXZ,
+                                                      float aircraftAltitudeScene) const noexcept;
 
   private:
     [[nodiscard]] bool compileProgram(QString *errorMessage);

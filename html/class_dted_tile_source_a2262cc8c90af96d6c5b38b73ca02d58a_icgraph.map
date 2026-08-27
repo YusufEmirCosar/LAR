@@ -1,0 +1,16 @@
+<map id="DtedTileSource::level" name="DtedTileSource::level">
+<area shape="rect" id="Node000001" title=" " alt="" coords="810,46,956,72"/>
+<area shape="rect" id="Node000002" href="$class_dted_tile_source.html#a1e850d358fa274a827ad46453df945b3" title=" " alt="" coords="593,5,762,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="792,45,762,42,762,37,797,45"/>
+<area shape="rect" id="Node000003" href="$class_dted_mosaic_sampler.html#a9cad4de48229805ca1ee5dd471ecfd5e" title="Returns interpolated terrain elevation, or no value when no valid post contributes." alt="" coords="604,71,751,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="797,72,752,82,751,77,792,73"/>
+<area shape="rect" id="Node000004" href="$class_plane_terrain_patch_builder.html#a580df2736ddf2edbd9c6a4a6dafb1e14" title="Samples and triangulates one request, returning null when local terrain is absent." alt="" coords="378,71,545,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="586,91,546,94,546,88,591,91"/>
+<area shape="rect" id="Node000005" href="$class_plane_terrain_worker.html#ab215b14a4ab72ff79e0890675d809388" title=" " alt="" coords="196,71,330,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="360,91,331,94,330,88,365,91"/>
+<area shape="rect" id="Node000006" href="$class_plane_terrain_worker.html#aec2b27fc3e44e3c210ce7cca8aa4581c" title=" " alt="" coords="9,71,144,111"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="178,101,144,102,144,97,183,99"/>
+<area shape="rect" id="Node000011" href="$class_plane_terrain_worker.html#ab9214c88002fceeebfb74539c2c844ab" title=" " alt="" coords="5,136,148,177"/>
+<area shape="poly" id="edge7_Node000005_Node000011" title=" " alt="" coords="191,116,137,138,136,133,186,118"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="159,79,198,81,193,83,160,85"/>
+</map>

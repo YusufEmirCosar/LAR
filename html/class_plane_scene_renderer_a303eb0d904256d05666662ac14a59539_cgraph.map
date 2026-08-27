@@ -1,0 +1,44 @@
+<map id="PlaneSceneRenderer::draw" name="PlaneSceneRenderer::draw">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,324,150,365"/>
+<area shape="rect" id="Node000002" href="$class_plane_terrain_gpu_layer.html#a00a4a4f28dc43bec53d297a36031da14" title=" " alt="" coords="201,267,350,307"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,321,190,310,186,314,151,326"/>
+<area shape="rect" id="Node000003" href="$class_plane_terrain_gpu_layer.html#a3861dd3b0b6946e8a4b1005d3ed1a85f" title=" " alt="" coords="401,247,574,287"/>
+<area shape="poly" id="edge19_Node000001_Node000003" title=" " alt="" coords="149,341,247,334,352,316,431,292,426,295,354,322,247,339,151,346"/>
+<area shape="rect" id="Node000006" href="$class_plane_surface_gpu_layer.html#a0a2ed450fdbdfe01e6528b9da15ccca7" title=" " alt="" coords="198,71,353,111"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="82,323,97,282,120,229,153,172,196,122,204,118,201,123,200,126,158,175,125,231,102,284,87,325"/>
+<area shape="rect" id="Node000009" href="$class_plane_terrain_gpu_layer.html#a9fcce08c38c249a8442e9d5c0d39a44d" title=" " alt="" coords="201,136,350,177"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="88,322,130,257,161,220,196,188,206,183,202,187,199,192,165,224,135,260,92,325"/>
+<area shape="rect" id="Node000012" href="$class_plane_scene_renderer.html#aaf9bbf71a092003809ff4ba881c79f2f" title=" " alt="" coords="203,447,348,487"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="103,363,148,397,199,431,211,439,206,440,196,436,145,401,103,368"/>
+<area shape="rect" id="Node000014" href="$class_plane_scene_renderer.html#a6664f72deaa7d5079630798ade017c97" title=" " alt="" coords="203,381,348,422"/>
+<area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="149,363,191,375,186,378,151,368"/>
+<area shape="rect" id="Node000015" href="$class_plane_terrain_gpu_layer.html#a6dcb7b291f2e172f85f0a4dab2197dac" title="Returns vector&#45;classified DTED/sea&#45;level height at a current Plane X/Z coordinate." alt="" coords="201,201,350,242"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="101,322,145,287,196,253,210,247,207,251,199,257,148,292,105,325"/>
+<area shape="rect" id="Node000016" href="$class_plane_scene_renderer.html#a2fd41eb9a3f22cc1bf389ebd7e669064" title=" " alt="" coords="203,512,348,553"/>
+<area shape="poly" id="edge20_Node000001_Node000016" title=" " alt="" coords="91,362,135,428,165,465,199,497,207,504,201,504,196,501,161,468,130,431,90,368"/>
+<area shape="rect" id="Node000019" href="$class_plane_scene_renderer.html#a242bd529fb0a8699df1aedfa3a76a323" title=" " alt="" coords="203,577,348,618"/>
+<area shape="poly" id="edge23_Node000001_Node000019" title=" " alt="" coords="85,362,102,405,125,458,158,513,200,562,205,569,200,568,196,566,153,516,120,460,97,407,85,367"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="350,277,388,275,383,278,352,282"/>
+<area shape="rect" id="Node000004" href="$class_plane_terrain_gpu_layer.html#a77bc7ab9b2af508a30c1db45819e9be9" title=" " alt="" coords="622,247,772,287"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="574,264,610,266,605,268,576,270"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="661,245,659,237,665,228,678,222,697,220,718,222,732,231,726,231,716,228,697,225,679,227,668,232,664,238,666,247"/>
+<area shape="rect" id="Node000005" href="$struct_plane_terrain_patch.html#ab62d24e4661e6b0784a07ec75854b4f1" title=" " alt="" coords="820,173,955,214"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="751,244,821,219,816,221,753,249"/>
+<area shape="rect" id="Node000007" href="$class_plane_surface_gpu_layer.html#a972e1bf9e132cd6176f4a85947e64378" title=" " alt="" coords="410,71,565,111"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="352,89,397,90,392,92,355,93"/>
+<area shape="rect" id="Node000008" href="$class_plane_surface_gpu_layer.html#a1bcf8f57da73d25059060fad462947c6" title=" " alt="" coords="410,5,565,46"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="342,68,407,49,402,53,345,72"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="326,175,354,187,443,238,437,239,352,192,327,180"/>
+<area shape="rect" id="Node000010" href="$class_plane_terrain_gpu_layer.html#acc14fd6629009b5a49dccce06071aafa" title=" " alt="" coords="413,136,562,177"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="350,154,399,155,395,158,352,159"/>
+<area shape="poly" id="edge12_Node000010_Node000005" title=" " alt="" coords="562,142,663,134,718,136,772,143,836,166,831,167,771,148,717,141,663,140,564,147"/>
+<area shape="rect" id="Node000011" href="$struct_plane_terrain_patch.html#ad06f3421baca38e8c5287cba0592be46" title=" " alt="" coords="629,157,765,198"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="562,161,617,168,612,170,563,167"/>
+<area shape="rect" id="Node000013" href="$class_plane_scene_renderer.html#a65ab44234d48b4d77ae4a107b0a64c0f" title=" " alt="" coords="416,447,560,487"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="347,464,403,466,397,468,348,470"/>
+<area shape="poly" id="edge18_Node000015_Node000003" title=" " alt="" coords="350,235,388,244,383,246,351,240"/>
+<area shape="rect" id="Node000017" href="$struct_plane_model_mesh.html#ada14130db0049dc0de9a4ce382447426" title="Reports whether the model mesh has no renderable geometry." alt="" coords="405,577,570,602"/>
+<area shape="poly" id="edge21_Node000016_Node000017" title=" " alt="" coords="348,549,425,572,420,572,347,554"/>
+<area shape="rect" id="Node000018" href="$class_plane_scene_renderer.html#a44ca4c2f5d7f37f1d8e0015af9568865" title=" " alt="" coords="416,512,560,553"/>
+<area shape="poly" id="edge22_Node000016_Node000018" title=" " alt="" coords="347,530,403,532,397,533,348,535"/>
+</map>

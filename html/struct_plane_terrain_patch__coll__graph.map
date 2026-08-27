@@ -1,0 +1,12 @@
+<map id="PlaneTerrainPatch" name="PlaneTerrainPatch">
+<area shape="rect" id="Node000001" title="CPU mesh whose positions are local to a stable geographic anchor." alt="" coords="535,88,662,114"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="267,5,400,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="415,27,464,37,512,52,548,68,580,88,574,87,545,73,510,57,462,42,415,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="244,56,423,82"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="439,79,537,93,532,94,439,84"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,139,153,180"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="167,146,176,145,535,105,535,110,177,150,168,151"/>
+<area shape="rect" id="Node000005" href="$struct_plane_land_mask.html" title="Immutable south&#45;to&#45;north R8 land mask for one local metric patch." alt="" coords="276,177,390,203"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="168,168,278,183,273,184,168,173"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="406,189,458,183,510,168,532,156,552,142,583,115,588,113,556,146,535,161,512,173,459,188,406,194"/>
+</map>

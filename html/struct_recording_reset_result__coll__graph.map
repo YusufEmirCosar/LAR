@@ -1,0 +1,5 @@
+<map id="RecordingResetResult" name="RecordingResetResult">
+<area shape="rect" id="Node000001" title="Completion payload for clearing the active recording transaction." alt="" coords="5,102,159,128"/>
+<area shape="rect" id="Node000002" href="$struct_runtime_request_id.html" title="Correlates an accepted command with exactly one typed completion." alt="" coords="17,5,147,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,45,85,102,79,101,80,48"/>
+</map>

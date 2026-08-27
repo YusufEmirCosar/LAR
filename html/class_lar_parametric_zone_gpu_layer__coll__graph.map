@@ -1,0 +1,11 @@
+<map id="LarParametricZoneGpuLayer" name="LarParametricZoneGpuLayer">
+<area shape="rect" id="Node000001" title="Draws regular IR/IZ zones from compact parameters and static LOD." alt="" coords="153,183,340,209"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,75,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,41,113,97,180,157,222,183,216,183,177,161,109,101,59,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,5,235,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,43,244,183,238,183,177,47"/>
+<area shape="rect" id="Node000004" href="$struct_lar_zone_draw_range.html" title="Contiguous range inside the shared zone index buffer." alt="" coords="259,5,397,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="319,45,254,184,250,181,313,46"/>
+<area shape="rect" id="Node000005" href="$struct_lar_parametric_zone_state.html" title="GPU&#45;generated geodesic parameters for one regular LAR zone." alt="" coords="420,5,582,31"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="498,44,478,105,460,136,435,162,397,177,341,187,341,182,395,172,432,157,455,133,473,103,494,48"/>
+</map>

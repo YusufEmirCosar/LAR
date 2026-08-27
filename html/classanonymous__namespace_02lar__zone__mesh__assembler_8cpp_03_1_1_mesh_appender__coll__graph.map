@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{lar_zone_mesh_assembler.cpp}::MeshAppender" name="anonymous_namespace{lar_zone_mesh_assembler.cpp}::MeshAppender">
+<area shape="rect" id="Node000001" title=" " alt="" coords="147,260,356,315"/>
+<area shape="rect" id="Node000002" href="$struct_lar_zone_mesh.html" title="Dynamic vertices/indices for zone fills and outlines." alt="" coords="201,163,302,189"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,203,254,260,249,258,250,206"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,138,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="92,40,138,88,194,137,231,162,226,163,191,141,135,91,92,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="162,5,341,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="253,45,254,163,249,162,250,49"/>
+<area shape="rect" id="Node000005" href="$struct_lar_zone_draw_range.html" title="Contiguous range inside the shared zone index buffer." alt="" coords="366,5,503,31"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="414,41,367,90,308,141,273,165,270,160,305,137,363,87,410,44"/>
+</map>

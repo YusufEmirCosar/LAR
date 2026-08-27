@@ -1,0 +1,13 @@
+<map id="PlaneTerrainGpuLayer::groundHeightAt" name="PlaneTerrainGpuLayer::groundHeightAt">
+<area shape="rect" id="Node000001" title="Returns vector&#45;classified DTED/sea&#45;level height at a current Plane X/Z coordinate." alt="" coords="907,35,1056,75"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_renderer.html#a303eb0d904256d05666662ac14a59539" title=" " alt="" coords="714,35,859,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="889,55,859,58,859,52,894,55"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title=" " alt="" coords="502,5,646,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="696,43,646,38,647,33,702,43"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title=" " alt="" coords="481,70,666,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="701,66,667,73,667,68,696,67"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="257,63,433,103"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="463,83,433,86,433,80,468,83"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,63,209,103"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="238,83,209,86,209,80,244,83"/>
+</map>

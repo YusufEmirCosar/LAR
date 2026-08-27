@@ -1,0 +1,9 @@
+<map id="src/application/mode_coordinator.cpp" name="src/application/mode_coordinator.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="35,5,176,46"/>
+<area shape="rect" id="Node000002" href="$mode__coordinator_8h.html" title="Legal application modes and validated workflow transitions." alt="" coords="5,94,206,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,44,108,79,103,78,104,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="26,168,95,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="100,119,78,156,74,153,96,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="120,168,185,193"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="114,118,139,155,133,154,112,122"/>
+</map>

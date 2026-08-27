@@ -1,0 +1,10 @@
+<map id="MetricsService::reset" name="MetricsService::reset">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,42,151,68"/>
+<area shape="rect" id="Node000002" href="$class_metrics_service.html#a38b9b66f0d81d4478059a3b1fa661835" title=" " alt="" coords="206,5,382,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,43,193,39,188,40,151,48"/>
+<area shape="rect" id="Node000003" href="$class_metrics_service.html#a719a6906f0dd2d5a37ccc5d795276011" title=" " alt="" coords="199,70,389,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,62,186,68,180,69,151,67"/>
+<area shape="rect" id="Node000004" href="$class_metrics_service.html#accc6abd355d89dfaeababda380c68af4" title="Calculates rate." alt="" coords="437,70,633,96"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="389,89,424,92,419,92,389,94"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="434,74,405,77,404,71,439,74"/>
+</map>

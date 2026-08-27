@@ -1,0 +1,11 @@
+<map id="DtedCell::valid" name="DtedCell::valid">
+<area shape="rect" id="Node000001" title="Returns true when dimensions and storage form a bounded usable DTED cell." alt="" coords="792,13,899,38"/>
+<area shape="rect" id="Node000002" href="$struct_dted_cell.html#a8ec96e10bbea9712838e31faa44fe41f" title="Returns one decoded elevation in metres, excluding the DTED no&#45;data sentinel." alt="" coords="611,13,744,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="773,26,744,28,744,23,779,26"/>
+<area shape="rect" id="Node000003" href="$class_dted_mosaic_sampler.html#a0114733412031c2f7f8875af4914197c" title=" " alt="" coords="416,5,563,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="593,26,564,28,564,23,598,26"/>
+<area shape="rect" id="Node000004" href="$class_dted_mosaic_sampler.html#a9cad4de48229805ca1ee5dd471ecfd5e" title="Returns interpolated terrain elevation, or no value when no valid post contributes." alt="" coords="221,5,368,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="398,26,369,28,369,23,403,26"/>
+<area shape="rect" id="Node000005" href="$class_plane_terrain_patch_builder.html#a580df2736ddf2edbd9c6a4a6dafb1e14" title="Samples and triangulates one request, returning null when local terrain is absent." alt="" coords="5,5,173,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="202,26,173,28,173,23,208,25"/>
+</map>

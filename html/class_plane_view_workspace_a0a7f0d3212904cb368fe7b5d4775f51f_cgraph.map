@@ -1,0 +1,7 @@
+<map id="PlaneViewWorkspace::resizeEvent" name="PlaneViewWorkspace::resizeEvent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,154,79"/>
+<area shape="rect" id="Node000002" href="$class_plane_view_workspace.html#ad26ce6ba0a80ba17cb6bc2f08b5d97ef" title=" " alt="" coords="211,5,368,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,45,198,40,193,41,155,50"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#a06d0329a16370f157f9ba011c3b73883" title="Notifies controls when optional DTED terrain visibility changes." alt="" coords="202,71,378,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,68,189,75,183,75,154,73"/>
+</map>

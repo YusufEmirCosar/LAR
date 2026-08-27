@@ -1,0 +1,12 @@
+<map id="OnlinePanel::updateRecordingControls" name="OnlinePanel::updateRecordingControls">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,203,111"/>
+<area shape="rect" id="Node000002" href="$class_application_facade.html#a5782c2df2556603ee6147f10cd0211f8" title="Reports whether a recording session exists." alt="" coords="265,5,414,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,68,253,49,248,51,181,73"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#a7277913bba1cf333db294edafd9fce31" title="Reports whether online capture is currently listening." alt="" coords="271,71,408,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="203,88,258,90,253,92,204,94"/>
+<area shape="rect" id="Node000004" href="$class_application_facade.html#a6f58372a5b0357529092761717b35cf9" title="Reports whether a recording persistence operation is pending." alt="" coords="251,136,428,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="180,109,251,131,246,132,179,115"/>
+<area shape="rect" id="Node000005" href="$recording__operation__state_8h.html#a434844ed2cfed8091ef202b256cd2024" title=" " alt="" coords="476,144,669,169"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="428,154,463,156,458,156,429,159"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="534,142,526,135,531,125,547,119,573,117,601,120,617,129,612,128,600,125,573,122,548,124,535,129,532,134,539,144"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="PlaybackService::setRate" name="PlaybackService::setRate">
+<area shape="rect" id="Node000001" title="Sets a finite, strictly positive multiplier for presentation&#45;clock progress." alt="" coords="5,5,179,31"/>
+<area shape="rect" id="Node000002" href="$class_playback_service.html#ad49bc4d961ff9e629a12a1903104f116" title=" " alt="" coords="227,5,376,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,16,214,18,209,18,179,21"/>
+</map>

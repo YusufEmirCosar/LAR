@@ -1,0 +1,20 @@
+<map id="PlaneTerrainPatch::vertexCount" name="PlaneTerrainPatch::vertexCount">
+<area shape="rect" id="Node000001" title=" " alt="" coords="844,73,979,114"/>
+<area shape="rect" id="Node000002" href="$namespaceanonymous__namespace_02plane__terrain__gpu__layer_8cpp_03.html#a3c279ee092050d4dce5c79883676af17" title=" " alt="" coords="633,29,796,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="826,78,796,75,796,69,831,78"/>
+<area shape="rect" id="Node000003" href="$class_plane_terrain_gpu_layer.html#acc14fd6629009b5a49dccce06071aafa" title=" " alt="" coords="640,109,789,150"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="831,108,790,118,789,113,826,109"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="744,14,734,10,714,8,697,10,686,15,681,21,680,31,676,27,676,19,683,10,696,5,715,3,735,5,750,15"/>
+<area shape="rect" id="Node000004" href="$class_plane_terrain_gpu_layer.html#a9fcce08c38c249a8442e9d5c0d39a44d" title=" " alt="" coords="436,109,585,150"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="622,129,586,132,586,127,627,129"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_renderer.html#a303eb0d904256d05666662ac14a59539" title=" " alt="" coords="241,44,386,84"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="430,104,377,87,377,82,435,103"/>
+<area shape="rect" id="Node000010" href="$class_plane_terrain_gpu_layer.html#a148a59a028ca3ca6ca94dba7fd91e5bd" title="Draws an unscaled terrain anchor (compatibility overload)." alt="" coords="239,109,388,150"/>
+<area shape="poly" id="edge8_Node000004_Node000010" title=" " alt="" coords="418,129,389,132,388,127,423,129"/>
+<area shape="rect" id="Node000011" href="$class_plane_terrain_gpu_layer.html#ab7dca4bb30afb023808ed3f8d0de936c" title=" " alt="" coords="239,174,388,215"/>
+<area shape="poly" id="edge9_Node000004_Node000011" title=" " alt="" coords="435,154,378,176,377,171,430,155"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title=" " alt="" coords="26,16,170,56"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="223,54,171,48,170,43,228,51"/>
+<area shape="rect" id="Node000007" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title=" " alt="" coords="5,80,191,106"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="223,77,192,83,190,78,228,75"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="PlaneSurfaceState" name="PlaneSurfaceState">
+<area shape="rect" id="Node000001" title="Immutable metric, altitude, and Earth&#45;fixed grid state consumed by the GPU layer." alt="" coords="5,122,136,148"/>
+<area shape="rect" id="Node000002" href="$struct_plane_surface_zone.html" title="One local flat LAR patch expressed in Plane&#45;scene units." alt="" coords="6,5,135,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,45,73,122,68,121,68,48"/>
+</map>

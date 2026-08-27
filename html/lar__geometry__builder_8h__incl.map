@@ -1,0 +1,7 @@
+<map id="src/viewer/lar_geometry_builder.h" name="src/viewer/lar_geometry_builder.h">
+<area shape="rect" id="Node000001" title="Local Cartesian LAR ring and sector path construction." alt="" coords="10,5,171,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,75,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,45,58,82,54,79,76,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,94,184,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="104,44,128,81,123,81,102,49"/>
+</map>

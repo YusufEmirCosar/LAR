@@ -1,0 +1,14 @@
+<map id="ApplicationFacade::setIpAccessPolicy" name="ApplicationFacade::setIpAccessPolicy">
+<area shape="rect" id="Node000001" title="Requests installation of an IP access policy." alt="" coords="847,39,983,79"/>
+<area shape="rect" id="Node000002" href="$class_application_facade.html#a49e7d78b35420d6ceb0cc678b915070b" title="Loads an IP access policy from a file and submits it for installation." alt="" coords="662,8,799,49"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="829,45,799,42,799,37,834,45"/>
+<area shape="rect" id="Node000010" href="$class_online_workflow_controller.html#aeb5923ab74347d39bd681ba875bd6de4" title=" " alt="" coords="446,71,614,111"/>
+<area shape="poly" id="edge5_Node000001_Node000010" title=" " alt="" coords="833,66,615,87,615,81,828,66"/>
+<area shape="rect" id="Node000003" href="$class_online_workflow_controller.html#ada3a5443fb8f57a792731b415b5cce15" title=" " alt="" coords="446,5,614,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="644,27,615,29,615,24,649,27"/>
+<area shape="rect" id="Node000004" href="$class_online_panel.html#a718a7f2c79b67e00d58efdbeedbd3ad8" title=" " alt="" coords="229,46,398,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="428,41,399,49,398,43,433,41"/>
+<area shape="rect" id="Node000005" href="$class_main_window.html#a0531fa9a3d2a53bacd3923ea4d4cef5a" title=" " alt="" coords="5,46,181,72"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="211,59,182,62,181,56,216,59"/>
+<area shape="poly" id="edge6_Node000010_Node000004" title=" " alt="" coords="428,76,398,74,399,69,433,76"/>
+</map>

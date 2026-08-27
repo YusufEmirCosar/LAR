@@ -1,0 +1,11 @@
+<map id="PlaneSceneWidget::resetCamera" name="PlaneSceneWidget::resetCamera">
+<area shape="rect" id="Node000001" title=" " alt="" coords="749,46,965,72"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#aacbd62a01e611d58fa81f535894256cf" title=" " alt="" coords="481,5,701,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="732,44,702,42,702,37,737,44"/>
+<area shape="rect" id="Node000005" href="$class_plane_view_workspace.html#aaf953c29b0defa37a9cfc30584ed17d4" title=" " alt="" coords="517,71,665,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="736,74,666,85,666,79,731,74"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="257,5,433,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="463,26,434,28,433,23,468,25"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,5,209,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="238,26,210,28,209,23,244,25"/>
+</map>

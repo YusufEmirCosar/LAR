@@ -1,0 +1,10 @@
+<map id="PlaneSceneWidget::terrainPatchReady" name="PlaneSceneWidget::terrainPatchReady">
+<area shape="rect" id="Node000001" title="Returns whether an immutable terrain patch is ready for GPU upload." alt="" coords="714,5,891,46"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,7,209,47"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="698,27,257,26,210,27,209,21,257,20,699,21"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title=" " alt="" coords="481,38,666,64"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="701,37,667,43,666,38,696,37"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="257,35,433,75"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="463,53,433,56,433,51,468,53"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="239,43,209,42,209,36,244,43"/>
+</map>

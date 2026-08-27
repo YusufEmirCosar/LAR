@@ -1,0 +1,11 @@
+<map id="LarViewport::mouseDoubleClickEvent" name="LarViewport::mouseDoubleClickEvent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,184,64"/>
+<area shape="rect" id="Node000002" href="$class_lar_viewport.html#a6424cabddbfc831cadf7aa55dd8ec312" title=" " alt="" coords="232,31,407,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,41,219,43,214,44,184,46"/>
+<area shape="rect" id="Node000003" href="$class_lar_viewport.html#a0a81913f3e714cd45bed865246de6a0b" title=" " alt="" coords="455,31,659,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="407,41,442,43,437,44,408,46"/>
+<area shape="rect" id="Node000004" href="$class_lar_viewport.html#a87f5ac3cf9e88e1603eb618760909944" title=" " alt="" coords="711,5,874,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="660,30,693,29,698,28,660,35"/>
+<area shape="rect" id="Node000005" href="$class_i_lar_viewport_page.html#a5bacb9c4b9fc42c6d3c772a5fca5d2f7" title=" " alt="" coords="707,55,878,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="660,51,694,57,689,57,660,57"/>
+</map>

@@ -159,12 +159,10 @@ bool PlaneTerrainGpuLayer::uploadPending(QString *errorMessage) {
     m_landMaskTexture->allocateStorage(QOpenGLTexture::Red, QOpenGLTexture::UInt8);
     m_landMaskTexture->setData(0, QOpenGLTexture::Red, QOpenGLTexture::UInt8, maskData);
     m_landMaskTexture->setWrapMode(QOpenGLTexture::ClampToEdge);
-    m_landMaskTexture->setMinMagFilters(QOpenGLTexture::Nearest,
-                                        QOpenGLTexture::Nearest);
+    m_landMaskTexture->setMinMagFilters(QOpenGLTexture::Nearest, QOpenGLTexture::Nearest);
     if (!m_landMaskTexture->isCreated() || !m_landMaskTexture->isStorageAllocated()) {
         m_landMaskTexture.reset();
-        setError(errorMessage,
-                 QStringLiteral("The Plane vector land mask could not be uploaded."));
+        setError(errorMessage, QStringLiteral("The Plane vector land mask could not be uploaded."));
         return false;
     }
     m_indexCount = static_cast<int>(m_patch->indices.size());
@@ -174,8 +172,7 @@ bool PlaneTerrainGpuLayer::uploadPending(QString *errorMessage) {
 
 bool PlaneTerrainGpuLayer::draw(const QMatrix4x4 &view, const QMatrix4x4 &projection,
                                 const QVector2D &offsetXZ, const QVector2D &scaleXZ,
-                                float aircraftAltitudeScene,
-                                QString *errorMessage) {
+                                float aircraftAltitudeScene, QString *errorMessage) {
     if (!m_ready) {
         setError(errorMessage, QStringLiteral("Plane terrain GPU resources are not ready."));
         return false;
@@ -213,13 +210,11 @@ bool PlaneTerrainGpuLayer::draw(const QMatrix4x4 &view, const QMatrix4x4 &projec
     m_program->setUniformValue("uLandMask", LandMaskTextureUnit);
     m_program->setUniformValue("uUseLandMask", mixed ? 1.0F : 0.0F);
     m_program->setUniformValue(
-        "uUniformLand",
-        m_patch->landMask.coverage == PlaneLandCoverage::AllLand ? 1.0F : 0.0F);
+        "uUniformLand", m_patch->landMask.coverage == PlaneLandCoverage::AllLand ? 1.0F : 0.0F);
     m_landMaskTexture->bind(LandMaskTextureUnit);
     const auto drawPass = [this](bool water) {
         m_program->setUniformValue("uRenderWater", water ? 1.0F : 0.0F);
-        glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(m_indexCount), GL_UNSIGNED_INT,
-                       nullptr);
+        glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(m_indexCount), GL_UNSIGNED_INT, nullptr);
     };
     if (m_patch->landMask.coverage != PlaneLandCoverage::AllWater) {
         drawPass(false);
@@ -256,8 +251,7 @@ PlaneTerrainGpuLayer::groundHeightAt(const QVector2D &currentXZ, const QVector2D
         !std::isfinite(offsetXZ.y()) || !std::isfinite(scaleXZ.x()) ||
         !std::isfinite(scaleXZ.y()) || std::abs(scaleXZ.x()) <= 1.0e-6F ||
         std::abs(scaleXZ.y()) <= 1.0e-6F || !std::isfinite(aircraftAltitudeScene) ||
-        m_patch->resolution < 2 ||
-        m_patch->sampleValidity.size() != m_patch->vertexCount()) {
+        m_patch->resolution < 2 || m_patch->sampleValidity.size() != m_patch->vertexCount()) {
         return std::nullopt;
     }
 
@@ -273,14 +267,14 @@ PlaneTerrainGpuLayer::groundHeightAt(const QVector2D &currentXZ, const QVector2D
         return -aircraftAltitudeScene;
     }
 
-    const double scale = static_cast<double>(m_patch->resolution - 1) /
-                         (2.0 * m_patch->halfExtentMeters);
+    const double scale =
+        static_cast<double>(m_patch->resolution - 1) / (2.0 * m_patch->halfExtentMeters);
     const double columnPosition = (eastMeters + m_patch->halfExtentMeters) * scale;
     const double rowPosition = (northMeters + m_patch->halfExtentMeters) * scale;
-    const int column0 = std::clamp(static_cast<int>(std::floor(columnPosition)), 0,
-                                   m_patch->resolution - 1);
-    const int row0 = std::clamp(static_cast<int>(std::floor(rowPosition)), 0,
-                                m_patch->resolution - 1);
+    const int column0 =
+        std::clamp(static_cast<int>(std::floor(columnPosition)), 0, m_patch->resolution - 1);
+    const int row0 =
+        std::clamp(static_cast<int>(std::floor(rowPosition)), 0, m_patch->resolution - 1);
     const int column1 = std::min(column0 + 1, m_patch->resolution - 1);
     const int row1 = std::min(row0 + 1, m_patch->resolution - 1);
     const auto vertex = [this](int row, int column) {
@@ -297,15 +291,14 @@ PlaneTerrainGpuLayer::groundHeightAt(const QVector2D &currentXZ, const QVector2D
         }
     }
     const auto height = [this](std::size_t sample) {
-        return static_cast<double>(
-            m_patch->vertices[sample * PlaneTerrainVertexStrideFloats + 1U]);
+        return static_cast<double>(m_patch->vertices[sample * PlaneTerrainVertexStrideFloats + 1U]);
     };
     const double columnFraction = columnPosition - static_cast<double>(column0);
     const double rowFraction = rowPosition - static_cast<double>(row0);
-    const double south = height(southWest) * (1.0 - columnFraction) +
-                         height(southEast) * columnFraction;
-    const double north = height(northWest) * (1.0 - columnFraction) +
-                         height(northEast) * columnFraction;
+    const double south =
+        height(southWest) * (1.0 - columnFraction) + height(southEast) * columnFraction;
+    const double north =
+        height(northWest) * (1.0 - columnFraction) + height(northEast) * columnFraction;
     return static_cast<float>(south * (1.0 - rowFraction) + north * rowFraction) -
            aircraftAltitudeScene;
 }

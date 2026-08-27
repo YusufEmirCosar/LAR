@@ -212,17 +212,21 @@ void ViewerTests::originalUiContractIsPreserved() {
     QCOMPARE(brand->text(), QStringLiteral("LAR PACKET MONITOR"));
     QCOMPARE(brand->alignment(), Qt::AlignCenter);
 
-    QSet<QString> groupTitles;
-    // This contract describes the left controls column. Plane owns a separate
-    // untitled overlay group inside the central viewport and must not leak into it.
+    QSet<QString> sidebarGroupTitles;
+    // This contract describes the left controls column. Viewport and Plane own
+    // separate overlay groups inside the central viewport and must not leak into it.
     for (const QGroupBox *group : controls->findChildren<QGroupBox *>()) {
-        groupTitles.insert(group->title());
+        sidebarGroupTitles.insert(group->title());
     }
-    QCOMPARE(groupTitles,
+    QCOMPARE(sidebarGroupTitles,
              QSet<QString>({QStringLiteral("Packet Mapping"), QStringLiteral("UDP Input"),
                             QStringLiteral("Save Session"), QStringLiteral("Offline Session"),
-                            QStringLiteral("Playback"), QStringLiteral("Burst"),
-                            QStringLiteral("Viewport")}));
+                            QStringLiteral("Playback"), QStringLiteral("Burst")}));
+
+    auto *viewportControls = window.findChild<QGroupBox *>(QStringLiteral("viewportControlRail"));
+    QVERIFY(viewportControls);
+    QCOMPARE(viewportControls->title(), QStringLiteral("Viewport"));
+    QVERIFY(!controls->isAncestorOf(viewportControls));
 }
 
 void ViewerTests::hudReplacesCurrentValuesColumn() {
@@ -321,8 +325,8 @@ void ViewerTests::planeZoneIndicatorTracksContainmentAndPrecedence() {
     QVERIFY(planeButton);
     QVERIFY(indicator);
     QVERIFY(content);
-    auto *planeHeader = content->findChildren<QLabel *>(QStringLiteral("entityHeader"))
-                            .value(0, nullptr);
+    auto *planeHeader =
+        content->findChildren<QLabel *>(QStringLiteral("entityHeader")).value(0, nullptr);
     QVERIFY(planeHeader);
     QCOMPARE(planeHeader->text(), QStringLiteral("Plane Data"));
     QCOMPARE(indicator->height(), 28);
@@ -348,10 +352,10 @@ void ViewerTests::planeZoneIndicatorTracksContainmentAndPrecedence() {
     target.ir_r = 1000.0;
 
     QBitArray available(StateField::Count, false);
-    for (const int field : {StateField::Location0, StateField::Location1, StateField::IzPos0,
-                            StateField::IzPos1, StateField::IzTheta1, StateField::IzTheta2,
-                            StateField::IzR1, StateField::IzR2, StateField::IrPos0,
-                            StateField::IrPos1, StateField::IrR}) {
+    for (const int field :
+         {StateField::Location0, StateField::Location1, StateField::IzPos0, StateField::IzPos1,
+          StateField::IzTheta1, StateField::IzTheta2, StateField::IzR1, StateField::IzR2,
+          StateField::IrPos0, StateField::IrPos1, StateField::IrR}) {
         available.setBit(field);
     }
 

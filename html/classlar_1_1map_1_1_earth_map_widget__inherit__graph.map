@@ -1,0 +1,9 @@
+<map id="lar::map::EarthMapWidget" name="lar::map::EarthMapWidget">
+<area shape="rect" id="Node000001" title="Owns map camera interaction and delegates drawing to the GPU renderer." alt="" coords="54,79,228,105"/>
+<area shape="rect" id="Node000004" href="$class_earth_lar_view.html" title="Earth&#45;backed viewport page with asynchronous map loading." alt="" coords="91,153,191,178"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="143,118,143,153,139,151,139,122"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,125,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,39,131,78,126,79,88,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="149,5,285,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="195,40,155,81,152,77,191,43"/>
+</map>

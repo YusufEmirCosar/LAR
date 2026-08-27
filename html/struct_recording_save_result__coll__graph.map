@@ -1,0 +1,5 @@
+<map id="RecordingSaveResult" name="RecordingSaveResult">
+<area shape="rect" id="Node000001" title="Completion payload for a snapshot or final recording save." alt="" coords="5,102,154,128"/>
+<area shape="rect" id="Node000002" href="$struct_runtime_request_id.html" title="Correlates an accepted command with exactly one typed completion." alt="" coords="14,5,145,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,45,82,102,77,101,77,48"/>
+</map>

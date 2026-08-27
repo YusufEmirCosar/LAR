@@ -1,0 +1,11 @@
+<map id="IPlaybackRuntime::pause" name="IPlaybackRuntime::pause">
+<area shape="rect" id="Node000001" title=" " alt="" coords="862,13,1033,38"/>
+<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#a6cc85bf4b7de662bb1c5f886e0c8cd8a" title="Forwards a pause request to the active playback runtime." alt="" coords="632,5,814,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="844,26,814,28,814,23,849,26"/>
+<area shape="rect" id="Node000003" href="$class_application_facade.html#ad4e0f52b0e5f314fca3165238c1e6efe" title="Pauses offline playback at its current position." alt="" coords="448,5,584,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="614,26,585,28,585,23,619,26"/>
+<area shape="rect" id="Node000004" href="$class_offline_panel.html#ae7d8cf55ec83f71fca8d8ccd47b4aeae" title=" " alt="" coords="229,13,400,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="430,26,400,28,400,23,435,26"/>
+<area shape="rect" id="Node000005" href="$class_main_window.html#a0531fa9a3d2a53bacd3923ea4d4cef5a" title=" " alt="" coords="5,13,181,38"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="211,26,181,28,181,23,216,25"/>
+</map>

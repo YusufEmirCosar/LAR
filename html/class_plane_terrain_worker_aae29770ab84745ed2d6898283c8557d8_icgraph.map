@@ -1,0 +1,12 @@
+<map id="PlaneTerrainWorker::stop" name="PlaneTerrainWorker::stop">
+<area shape="rect" id="Node000001" title=" " alt="" coords="733,33,868,74"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#af580a29966e80a4ead1db7120a97cf50" title=" " alt="" coords="481,33,685,74"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="715,54,686,56,686,51,721,53"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,5,209,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="482,30,433,24,317,18,210,21,209,16,317,13,433,19,487,29"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="257,33,433,74"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="463,54,434,56,433,51,468,53"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#ad5163938936197437fa5dc7ab058bdc1" title=" " alt="" coords="275,99,415,139"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="495,78,416,102,415,97,489,79"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="239,42,210,40,209,35,244,41"/>
+</map>

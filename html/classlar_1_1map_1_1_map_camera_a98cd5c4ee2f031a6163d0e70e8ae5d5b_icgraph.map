@@ -1,0 +1,12 @@
+<map id="lar::map::MapCamera::projectGeoToScreen" name="lar::map::MapCamera::projectGeoToScreen">
+<area shape="rect" id="Node000001" title="Projects a valid geographic coordinate and reports viewport and front hemisphere membership together ..." alt="" coords="501,89,648,130"/>
+<area shape="rect" id="Node000002" href="$namespaceanonymous__namespace_02geodesic__zone__sampler_8cpp_03.html#a317d32d8927904290fd9ed80539470c8" title=" " alt="" coords="260,29,452,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="483,88,452,83,452,77,489,88"/>
+<area shape="rect" id="Node000003" href="$namespaceanonymous__namespace_02lar__parametric__zone__gpu__layer_8cpp_03.html#af36513fd328eefcb16b7cfdfcd6ac2e3" title=" " alt="" coords="259,133,453,189"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="488,130,454,141,453,135,483,131"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="389,15,377,10,356,8,337,10,324,15,318,21,318,30,313,28,313,19,321,10,335,5,356,3,379,5,395,14"/>
+<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="389,118,377,114,356,112,337,114,324,119,318,125,318,135,313,131,313,123,321,114,335,109,356,107,379,109,395,119"/>
+<area shape="rect" id="Node000004" href="$namespaceanonymous__namespace_02lar__parametric__zone__gpu__layer_8cpp_03.html#a85e6f5dc2564b7cdd929fde4ffcb7dab" title=" " alt="" coords="5,126,211,196"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="240,161,211,164,211,159,246,161"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="145,112,132,107,108,104,88,106,74,111,66,118,64,126,59,124,62,115,71,106,87,101,108,99,133,102,151,111"/>
+</map>

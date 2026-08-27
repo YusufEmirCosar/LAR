@@ -1,0 +1,16 @@
+<map id="dlz::presentation::HudView::frameRendered" name="dlz::presentation::HudView::frameRendered">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,177,103"/>
+<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_hud_view.html#a5b51201b52af68e500d1286bced3601a" title=" " alt="" coords="225,63,369,103"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,89,212,91,207,93,178,95"/>
+<area shape="poly" id="edge8_Node000002_Node000001" title=" " alt="" coords="222,75,193,77,192,71,227,74"/>
+<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_renderer.html#af95ba48541d17a3dd1246ea446dce26c" title=" " alt="" coords="431,63,565,103"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="369,80,418,83,413,83,370,86"/>
+<area shape="rect" id="Node000004" href="$classdlz_1_1presentation_1_1_hud_renderer.html#ae68a7ab0e42b11292e70b8f46142f56c" title=" " alt="" coords="627,5,812,46"/>
+<area shape="poly" id="edge7_Node000002_Node000004" title=" " alt="" coords="367,60,417,48,516,35,614,29,609,30,517,40,417,54,368,65"/>
+<area shape="rect" id="Node000006" href="$classdlz_1_1presentation_1_1_hud_renderer.html#a591d0d593c1c42f272d691813902459f" title=" " alt="" coords="417,128,579,169"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="362,101,421,123,416,123,361,106"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="565,63,621,51,626,50,566,68"/>
+<area shape="rect" id="Node000005" href="$namespacedlz_1_1presentation.html#afaa0c485f728663b6f4c6ecae9ffcef1" title=" " alt="" coords="657,95,782,135"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="566,90,644,104,639,104,566,95"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="678,93,676,85,683,76,697,70,720,68,743,70,759,79,754,79,742,76,719,73,698,75,686,80,681,86,682,96"/>
+</map>

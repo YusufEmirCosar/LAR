@@ -1,0 +1,25 @@
+<map id="src/viewer/plane/plane_surface_projection.h" name="src/viewer/plane/plane_surface_projection.h">
+<area shape="rect" id="Node000001" title="Pure geographic&#45;to&#45;local projection and scale policy for Plane mode." alt="" coords="294,5,446,46"/>
+<area shape="rect" id="Node000002" href="$lar__geodesic__geometry_8h.html" title="Spherical destination&#45;point and arc tessellation utilities." alt="" coords="23,94,160,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="305,49,170,91,168,87,308,45"/>
+<area shape="rect" id="Node000004" href="$plane__surface__state_8h.html" title="Projection&#45;ready local ground, target, and LAR values for Plane mode." alt="" coords="229,94,359,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="355,45,323,84,319,80,351,48"/>
+<area shape="rect" id="Node000008" href="$lar__scene__state_8h.html" title="Complete immutable&#45;style scene value distributed to viewport pages." alt="" coords="404,94,534,135"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="393,44,438,84,432,84,392,49"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="558,102,624,127"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="423,44,547,92,552,95,546,95,545,96,423,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,190,63,216"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="77,138,53,179,48,176,79,133"/>
+<area shape="rect" id="Node000005" href="$plane__aircraft__scale_8h.html" title="Uses the normalized F&#45;16 mesh as Plane mode&#39;s fixed metric reference." alt="" coords="87,183,216,223"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="259,137,198,177,195,172,264,134"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="240,190,326,216"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="293,133,289,176,284,173,290,137"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="350,190,403,216"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="314,133,358,179,352,179,312,138"/>
+<area shape="rect" id="Node000009" href="$state_8h.html" title="Canonical in&#45;memory aircraft, target, and LAR state structures." alt="" coords="427,190,534,216"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="473,133,479,176,475,173,470,137"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="559,190,637,216"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="499,133,570,181,565,181,497,138"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="436,271,525,297"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="483,214,483,257,479,254,479,218"/>
+</map>

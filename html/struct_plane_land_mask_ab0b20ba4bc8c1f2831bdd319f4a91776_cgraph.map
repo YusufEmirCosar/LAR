@@ -1,0 +1,8 @@
+<map id="PlaneLandMask::landAtLocal" name="PlaneLandMask::landAtLocal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,78,196,103"/>
+<area shape="rect" id="Node000002" href="$namespaceanonymous__namespace_02plane__land__mask_8cpp_03.html#a45bc31ce2b829217adb1a7669db03542" title=" " alt="" coords="244,29,406,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,74,231,71,226,72,192,80"/>
+<area shape="rect" id="Node000003" href="$struct_plane_land_mask.html#ad1a14f08588f778672e872fb663d6ec4" title=" " alt="" coords="250,110,400,135"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="195,101,237,110,232,110,195,107"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="281,27,281,19,289,10,304,5,325,3,348,5,364,15,359,14,347,10,325,8,305,10,292,15,286,21,286,30"/>
+</map>

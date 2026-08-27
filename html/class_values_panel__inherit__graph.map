@@ -1,0 +1,5 @@
+<map id="ValuesPanel" name="ValuesPanel">
+<area shape="rect" id="Node000001" title="Owns construction and rendering of the right&#45;hand values/HUD column and Plane zone status." alt="" coords="5,79,99,105"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="18,5,86,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,45,55,79,49,78,50,48"/>
+</map>

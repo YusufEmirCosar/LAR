@@ -1,0 +1,22 @@
+<map id="lar::map::tool::anonymous_namespace{polygon_triangulator::cpp}::cross" name="lar::map::tool::anonymous_namespace{polygon_triangulator::cpp}::cross">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1059,68,1274,124"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="1207,53,1193,49,1166,47,1143,49,1128,53,1121,60,1120,69,1116,66,1116,57,1125,49,1142,43,1166,41,1194,44,1212,54"/>
+<area shape="rect" id="Node000002" href="$namespacelar_1_1map_1_1tool_1_1anonymous__namespace_02polygon__triangulator_8cpp_03.html#aa2ad8f1d19f7a35c65cafc32e4556641" title=" " alt="" coords="532,29,747,85"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="1095,61,1054,47,1010,34,943,26,874,25,808,30,748,38,747,32,808,24,874,20,943,21,1011,29,1056,42,1100,61"/>
+<area shape="rect" id="Node000005" href="$namespacelar_1_1map_1_1tool_1_1anonymous__namespace_02polygon__triangulator_8cpp_03.html#a7e72228323ce1fe9f12b359a82673dbd" title=" " alt="" coords="795,68,1011,124"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="1040,96,1011,98,1011,93,1046,96"/>
+<area shape="rect" id="Node000006" href="$namespacelar_1_1map_1_1tool_1_1anonymous__namespace_02polygon__triangulator_8cpp_03.html#a913288f4a22b5ad8749b4a32ecf839be" title=" " alt="" coords="532,133,747,189"/>
+<area shape="poly" id="edge12_Node000001_Node000006" title=" " alt="" coords="1054,127,1011,138,874,154,748,162,748,156,874,149,1010,133,1049,128"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="680,14,666,10,640,8,616,10,601,15,594,21,593,31,589,27,589,19,598,10,615,5,640,3,667,5,686,15"/>
+<area shape="rect" id="Node000003" href="$namespacelar_1_1map_1_1tool_1_1anonymous__namespace_02polygon__triangulator_8cpp_03.html#a1296f6113907717346eb359579058dfd" title=" " alt="" coords="269,81,484,137"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="514,82,485,91,484,85,519,81"/>
+<area shape="poly" id="edge8_Node000003_Node000003" title=" " alt="" coords="417,66,403,62,376,60,353,62,338,67,331,73,330,82,326,79,326,71,335,62,352,57,376,55,404,57,422,67"/>
+<area shape="rect" id="Node000004" href="$namespacelar_1_1map_1_1tool_1_1anonymous__namespace_02polygon__triangulator_8cpp_03.html#a06570efdeeecdf5409281f7774003658" title=" " alt="" coords="5,81,221,137"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="250,119,221,121,221,115,256,118"/>
+<area shape="poly" id="edge7_Node000004_Node000003" title=" " alt="" coords="236,98,271,100,266,101,236,103"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="154,67,139,62,113,60,90,62,74,67,67,73,67,82,62,80,62,71,72,62,89,57,113,55,141,57,159,66"/>
+<area shape="poly" id="edge10_Node000005_Node000002" title=" " alt="" coords="777,78,748,76,748,70,782,78"/>
+<area shape="poly" id="edge11_Node000005_Node000005" title=" " alt="" coords="944,53,929,49,903,47,880,49,864,53,857,60,856,69,852,66,852,57,862,49,879,43,903,41,931,44,949,53"/>
+<area shape="poly" id="edge14_Node000006_Node000003" title=" " alt="" coords="514,137,484,133,484,128,519,137"/>
+<area shape="poly" id="edge13_Node000006_Node000006" title=" " alt="" coords="680,118,666,114,640,112,616,114,601,119,594,125,593,135,589,131,589,123,598,114,615,109,640,107,667,109,686,119"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="MetricsService::MetricsService" name="MetricsService::MetricsService">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,209,31"/>
+<area shape="rect" id="Node000002" href="$class_metrics_service.html#accc6abd355d89dfaeababda380c68af4" title="Calculates rate." alt="" coords="257,5,453,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,16,244,18,239,18,209,21"/>
+<area shape="rect" id="Node000003" href="$class_metrics_service.html#a719a6906f0dd2d5a37ccc5d795276011" title=" " alt="" coords="501,5,691,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="454,24,488,27,482,27,454,30"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="498,9,469,12,469,7,503,9"/>
+</map>

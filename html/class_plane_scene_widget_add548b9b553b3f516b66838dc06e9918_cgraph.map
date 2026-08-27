@@ -1,0 +1,9 @@
+<map id="PlaneSceneWidget::setSurfaceVisible" name="PlaneSceneWidget::setSurfaceVisible">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,209,111"/>
+<area shape="rect" id="Node000002" href="$class_plane_orbit_camera.html#a98ce71b7312df5d7f198ef5786b8c35c" title=" " alt="" coords="257,5,453,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,68,263,49,258,52,188,73"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_renderer.html#ac79a49c4dc2c7fabe417d4c5d453df93" title=" " alt="" coords="283,71,427,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,88,270,90,265,92,209,94"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#adba85bb6c0669b6710ac34edddcb5ca0" title=" " alt="" coords="263,136,446,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="187,109,263,131,258,132,187,115"/>
+</map>

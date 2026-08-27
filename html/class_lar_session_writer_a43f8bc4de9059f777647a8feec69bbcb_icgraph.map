@@ -1,0 +1,9 @@
+<map id="LarSessionWriter::isActive" name="LarSessionWriter::isActive">
+<area shape="rect" id="Node000001" title="True after a successful begin() and until cancel() releases the transaction." alt="" coords="454,37,629,62"/>
+<area shape="rect" id="Node000002" href="$class_lar_session_writer.html#aee1ddcd1d02885f2cf09717df5d712ff" title=" " alt="" coords="247,12,406,37"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="436,38,406,36,407,31,441,38"/>
+<area shape="rect" id="Node000003" href="$class_lar_session_writer.html#abeded694865cf33dab8c5b9766a957c9" title=" " alt="" coords="5,29,199,70"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="438,52,199,52,199,47,439,47"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="228,35,200,41,199,36,234,35"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="137,14,125,10,102,8,81,10,68,15,63,21,65,29,60,28,58,19,65,10,79,5,102,3,126,5,142,14"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="IApplicationRuntime::IApplicationRuntime" name="IApplicationRuntime::IApplicationRuntime">
+<area shape="rect" id="Node000001" title=" " alt="" coords="250,39,396,79"/>
+<area shape="rect" id="Node000002" href="$class_direct_application_runtime.html#af7dfb47a5a42b53c0a26e62c480d9362" title=" " alt="" coords="15,5,192,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,46,193,42,192,36,237,45"/>
+<area shape="rect" id="Node000003" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title=" " alt="" coords="5,71,202,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,72,203,79,202,74,237,71"/>
+</map>

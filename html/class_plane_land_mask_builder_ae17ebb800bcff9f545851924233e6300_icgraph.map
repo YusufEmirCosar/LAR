@@ -1,0 +1,14 @@
+<map id="PlaneLandMaskBuilder::resolutionFor" name="PlaneLandMaskBuilder::resolutionFor">
+<area shape="rect" id="Node000001" title=" " alt="" coords="796,5,950,46"/>
+<area shape="rect" id="Node000002" href="$class_plane_land_mask_builder.html#a6370f137d1388aefd95c2dc496dee19c" title=" " alt="" coords="593,5,748,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="778,26,748,28,748,23,783,26"/>
+<area shape="rect" id="Node000003" href="$class_plane_terrain_patch_builder.html#a580df2736ddf2edbd9c6a4a6dafb1e14" title="Samples and triangulates one request, returning null when local terrain is absent." alt="" coords="378,5,545,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="575,26,546,28,546,23,581,25"/>
+<area shape="rect" id="Node000004" href="$class_plane_terrain_worker.html#ab215b14a4ab72ff79e0890675d809388" title=" " alt="" coords="196,5,330,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="360,26,331,28,330,23,365,25"/>
+<area shape="rect" id="Node000005" href="$class_plane_terrain_worker.html#aec2b27fc3e44e3c210ce7cca8aa4581c" title=" " alt="" coords="9,5,144,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="178,35,144,37,144,32,183,34"/>
+<area shape="rect" id="Node000010" href="$class_plane_terrain_worker.html#ab9214c88002fceeebfb74539c2c844ab" title=" " alt="" coords="5,71,148,111"/>
+<area shape="poly" id="edge6_Node000004_Node000010" title=" " alt="" coords="191,51,137,73,136,68,186,52"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="159,14,198,16,193,18,160,19"/>
+</map>

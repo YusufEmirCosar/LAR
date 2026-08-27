@@ -1,0 +1,14 @@
+<map id="PlaneAttitudeTransform::orientation" name="PlaneAttitudeTransform::orientation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="724,39,883,79"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="839,23,826,20,803,17,782,19,769,24,764,30,766,40,761,36,759,29,766,20,781,14,804,12,828,14,844,23"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#a313c1fce331bccf790886b80a2fc3483" title=" " alt="" coords="486,16,671,41"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="706,46,672,44,672,38,712,46"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a6387f9c3b66f950945e37e615318d0e1" title=" " alt="" coords="481,67,676,107"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="712,71,677,77,676,72,706,71"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="257,5,433,46"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="468,27,434,29,433,24,473,27"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,5,209,46"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="238,26,210,28,209,23,244,25"/>
+<area shape="rect" id="Node000006" href="$class_plane_view_workspace.html#a2ea39e4580b3c81fceabb56b8e829ed7" title=" " alt="" coords="271,71,419,111"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="463,89,420,92,420,87,468,89"/>
+</map>

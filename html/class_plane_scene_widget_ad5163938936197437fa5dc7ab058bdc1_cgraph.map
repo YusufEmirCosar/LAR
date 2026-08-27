@@ -1,0 +1,15 @@
+<map id="PlaneSceneWidget::~PlaneSceneWidget" name="PlaneSceneWidget::~PlaneSceneWidget">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,146,111"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#aa2797584070abe9d61581f39f3983e4b" title=" " alt="" coords="195,48,397,73"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,79,186,75,181,77,147,84"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#af580a29966e80a4ead1db7120a97cf50" title=" " alt="" coords="194,99,398,139"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="146,97,181,104,176,104,146,103"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_renderer.html#a512c506995494e591bca4e196ac85127" title=" " alt="" coords="446,37,590,78"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="397,56,433,58,428,59,398,62"/>
+<area shape="rect" id="Node000004" href="$class_plane_surface_gpu_layer.html#a6649e0596c335b7ad1e08fd46bb17a74" title=" " alt="" coords="638,5,794,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="590,43,626,40,621,41,591,49"/>
+<area shape="rect" id="Node000005" href="$class_plane_terrain_gpu_layer.html#ab1280353c664db1033eb6da292576567" title=" " alt="" coords="641,71,791,111"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="591,67,629,76,623,76,590,72"/>
+<area shape="rect" id="Node000007" href="$class_plane_terrain_worker.html#aae29770ab84745ed2d6898283c8557d8" title=" " alt="" coords="451,103,585,143"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="399,118,439,121,433,122,399,124"/>
+</map>

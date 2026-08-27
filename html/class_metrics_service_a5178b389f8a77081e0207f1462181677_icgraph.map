@@ -1,0 +1,5 @@
+<map id="MetricsService::shutdown" name="MetricsService::shutdown">
+<area shape="rect" id="Node000001" title="Stops rate publication before the owning worker is rehomed." alt="" coords="214,13,386,38"/>
+<area shape="rect" id="Node000002" href="$class_network_runtime_worker.html#a27cd5217467c360a9a67144db4fd0fcc" title="Stops capture and metrics and discards every queued or fenced recording batch." alt="" coords="5,5,166,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,26,166,28,166,23,201,25"/>
+</map>

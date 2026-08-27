@@ -1,0 +1,7 @@
+<map id="NetworkRuntimeWorker::reportDrainIfComplete" name="NetworkRuntimeWorker::reportDrainIfComplete">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,166,79"/>
+<area shape="rect" id="Node000002" href="$class_network_runtime_worker.html#a1bf3bc56f2b410563717af2b777fa72f" title=" " alt="" coords="214,5,374,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,44,201,40,195,42,166,49"/>
+<area shape="rect" id="Node000003" href="$class_network_runtime_worker.html#a1c147c23bce9c0775c519fcf44a4689c" title=" " alt="" coords="214,71,374,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,69,201,76,195,77,166,74"/>
+</map>

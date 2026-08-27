@@ -1,0 +1,9 @@
+<map id="ViewportFrameCounter::fps" name="ViewportFrameCounter::fps">
+<area shape="rect" id="Node000001" title=" " alt="" coords="454,35,635,60"/>
+<area shape="rect" id="Node000002" href="$class_viewport_frame_counter.html#a4bc9508232e5fc89b061d3590b4c98c8" title=" " alt="" coords="221,27,406,68"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="436,48,407,50,406,45,441,47"/>
+<area shape="rect" id="Node000003" href="$class_lar_viewport.html#a045b81df3d8d90ee257ea57ddc298ccb" title=" " alt="" coords="5,5,173,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="203,34,173,32,173,26,208,33"/>
+<area shape="rect" id="Node000004" href="$class_viewport_frame_counter.html#ab8e28bd56e89516081bcc85517b2fc97" title=" " alt="" coords="7,55,171,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="203,61,172,68,171,63,208,61"/>
+</map>

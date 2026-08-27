@@ -1,0 +1,11 @@
+<map id="DtedMosaicSampler::evictIfNeeded" name="DtedMosaicSampler::evictIfNeeded">
+<area shape="rect" id="Node000001" title=" " alt="" coords="807,5,954,46"/>
+<area shape="rect" id="Node000002" href="$class_dted_mosaic_sampler.html#a44929b88aa05b416734a507b31424551" title=" " alt="" coords="611,5,759,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="788,26,759,28,759,23,794,26"/>
+<area shape="rect" id="Node000003" href="$class_dted_mosaic_sampler.html#a6846daac445cde1ec6c433644309a5bd" title=" " alt="" coords="416,5,563,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="593,26,564,28,564,23,598,26"/>
+<area shape="rect" id="Node000004" href="$class_dted_mosaic_sampler.html#a9cad4de48229805ca1ee5dd471ecfd5e" title="Returns interpolated terrain elevation, or no value when no valid post contributes." alt="" coords="221,5,368,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="398,26,369,28,369,23,403,26"/>
+<area shape="rect" id="Node000005" href="$class_plane_terrain_patch_builder.html#a580df2736ddf2edbd9c6a4a6dafb1e14" title="Samples and triangulates one request, returning null when local terrain is absent." alt="" coords="5,5,173,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="202,26,173,28,173,23,208,25"/>
+</map>

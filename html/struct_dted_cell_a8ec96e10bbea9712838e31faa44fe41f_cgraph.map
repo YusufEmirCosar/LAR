@@ -1,0 +1,8 @@
+<map id="DtedCell::elevation" name="DtedCell::elevation">
+<area shape="rect" id="Node000001" title="Returns one decoded elevation in metres, excluding the DTED no&#45;data sentinel." alt="" coords="5,29,138,55"/>
+<area shape="rect" id="Node000002" href="$struct_dted_cell.html#a9dadbcb6d8536fdff074df2b5215607f" title="Returns true when dimensions and storage form a bounded usable DTED cell." alt="" coords="186,29,293,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,40,173,42,168,42,138,45"/>
+<area shape="rect" id="Node000003" href="$dted__level_8h.html#a1ac68c4b769b17a01c5494c350764ca5" title=" " alt="" coords="341,29,512,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="294,40,328,42,322,42,294,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="395,28,389,21,393,11,406,5,427,3,449,5,463,15,457,14,448,10,427,8,407,10,397,15,394,20,400,30"/>
+</map>

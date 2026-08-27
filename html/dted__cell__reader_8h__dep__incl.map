@@ -1,0 +1,23 @@
+<map id="src/viewer/terrain/dted_cell_reader.h" name="src/viewer/terrain/dted_cell_reader.h">
+<area shape="rect" id="Node000001" title="Bounded parser for DTED UHL, profile, elevation, and checksum records." alt="" coords="63,5,193,46"/>
+<area shape="rect" id="Node000002" href="$plane__scene__widget__terrain_8cpp.html" title="DTED worker lifecycle, patch recentering, and aircraft&#45;relative placement." alt="" coords="5,449,182,489"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,57,63,75,46,95,32,122,24,145,21,202,21,293,28,338,43,381,63,418,82,448,76,449,58,421,38,383,23,339,16,293,16,202,19,145,27,120,42,93,59,71,83,53"/>
+<area shape="rect" id="Node000003" href="$dted__cell__reader_8cpp.html" title=" " alt="" coords="56,94,200,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,59,131,94,126,93,128,64"/>
+<area shape="rect" id="Node000004" href="$dted__tile__source_8h.html" title="Deterministic DTED tile addressing without scanning the source tree." alt="" coords="224,94,355,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="178,51,255,92,251,95,179,56"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="233,145,210,163,186,184,162,216,143,252,127,289,116,327,102,397,97,449,92,447,97,396,111,326,122,287,138,249,158,213,182,181,207,159,237,141"/>
+<area shape="rect" id="Node000005" href="$dted__mosaic__sampler_8h.html" title="Bilinear DTED elevation sampler with a bounded terrain cache." alt="" coords="196,183,359,223"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="286,148,283,183,278,181,283,153"/>
+<area shape="rect" id="Node000011" href="$dted__tile__source_8cpp.html" title=" " alt="" coords="382,183,528,223"/>
+<area shape="poly" id="edge11_Node000004_Node000011" title=" " alt="" coords="340,139,420,182,415,183,340,145"/>
+<area shape="rect" id="Node000006" href="$plane__terrain__patch__builder_8h.html" title="Bounded DTED sampling and indexed local terrain&#45;mesh construction." alt="" coords="150,271,309,312"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="261,235,242,272,238,269,258,239"/>
+<area shape="rect" id="Node000010" href="$dted__mosaic__sampler_8cpp.html" title=" " alt="" coords="333,271,510,312"/>
+<area shape="poly" id="edge10_Node000005_Node000010" title=" " alt="" coords="323,229,392,270,386,271,323,234"/>
+<area shape="rect" id="Node000007" href="$plane__terrain__patch__builder_8cpp.html" title=" " alt="" coords="131,360,304,401"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="226,325,223,361,218,358,223,330"/>
+<area shape="rect" id="Node000008" href="$plane__terrain__worker_8h.html" title="Latest&#45;only dedicated CPU worker for DTED terrain patch preparation." alt="" coords="327,360,478,401"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="283,317,366,359,361,360,282,322"/>
+<area shape="poly" id="edge9_Node000008_Node000002" title=" " alt="" coords="320,405,164,451,163,446,315,405"/>
+</map>

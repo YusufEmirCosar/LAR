@@ -1,0 +1,13 @@
+<map id="RecordingService::resetRecording" name="RecordingService::resetRecording">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,226,72"/>
+<area shape="rect" id="Node000002" href="$class_i_recording_clock.html#ae84877176911dcbb538060eab8de1c44" title=" " alt="" coords="555,5,785,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,49,541,25,539,30,226,54"/>
+<area shape="rect" id="Node000003" href="$class_recording_service.html#aac45cc993940f6a4fd465e45cf5ca2b0" title=" " alt="" coords="274,72,507,98"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,67,261,72,255,73,226,72"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="442,69,554,41,594,34,589,36,556,46,444,74"/>
+<area shape="rect" id="Node000004" href="$class_recording_service.html#a0a716c2fe4374fe773459319b090249f" title=" " alt="" coords="586,79,754,120"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="507,88,573,94,568,94,508,94"/>
+<area shape="rect" id="Node000005" href="$class_i_recording_transaction.html#a312c4a904e760fe623ab41e64a3ff9eb" title=" " alt="" coords="594,144,746,185"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="438,96,584,140,579,140,438,101"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="618,77,615,69,624,60,642,54,670,53,700,55,720,64,714,63,699,60,670,58,643,60,627,65,621,70,623,80"/>
+</map>

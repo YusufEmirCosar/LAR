@@ -1,0 +1,8 @@
+<map id="PlaneSceneRenderer::PlaneSceneRenderer" name="PlaneSceneRenderer::PlaneSceneRenderer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="206,39,358,79"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="313,23,302,20,282,17,263,19,251,24,247,30,249,39,244,37,242,29,248,20,262,14,282,12,304,14,318,23"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title=" " alt="" coords="9,5,154,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,44,154,40,154,35,193,43"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_renderer.html#a3fc86f298fc2839e3b8da2e9994fb9f7" title=" " alt="" coords="5,71,158,111"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="188,74,158,81,157,76,193,73"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="ApplicationFacade::recordingChanged" name="ApplicationFacade::recordingChanged">
+<area shape="rect" id="Node000001" title="Reports whether the recording session is actively capturing packets." alt="" coords="5,29,142,70"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="38,28,37,19,42,10,55,5,74,3,94,5,107,13,102,14,92,10,73,8,56,10,46,14,42,20,43,29"/>
+<area shape="rect" id="Node000002" href="$class_application_facade.html#a08e07bdfe2b6dfbaab4cbd7063413bd3" title="Reports whether packets are currently being recorded." alt="" coords="190,29,326,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,47,177,49,171,50,142,52"/>
+<area shape="rect" id="Node000003" href="$struct_application_state.html#ac05d93f1c583cfbe0f94731d584bae39" title=" " alt="" coords="374,37,567,62"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="326,47,361,50,355,50,326,52"/>
+</map>

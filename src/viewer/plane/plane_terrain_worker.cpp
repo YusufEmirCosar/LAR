@@ -7,8 +7,7 @@
 PlaneTerrainWorker::PlaneTerrainWorker(
     DtedDataset dataset, std::shared_ptr<const lar::map::IMapAssetSource> mapAssetSource,
     QObject *parent)
-    : QObject(parent), m_dataset(std::move(dataset)),
-      m_mapAssetSource(std::move(mapAssetSource)) {
+    : QObject(parent), m_dataset(std::move(dataset)), m_mapAssetSource(std::move(mapAssetSource)) {
     connect(this, &PlaneTerrainWorker::wakeRequested, this, &PlaneTerrainWorker::processLatest,
             Qt::QueuedConnection);
 }

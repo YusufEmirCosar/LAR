@@ -1,0 +1,12 @@
+<map id="PlaybackPublicationThrottle::clear" name="PlaybackPublicationThrottle::clear">
+<area shape="rect" id="Node000001" title=" " alt="" coords="463,39,646,79"/>
+<area shape="rect" id="Node000002" href="$class_playback_runtime_worker.html#a636b6a005df22431861b5f751bbc25c6" title=" " alt="" coords="250,5,415,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="445,43,416,41,416,35,450,43"/>
+<area shape="rect" id="Node000004" href="$class_playback_runtime_worker.html#a367f82bc2fd32e66a5de05577314cf6f" title=" " alt="" coords="250,71,415,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="450,74,416,82,415,76,445,75"/>
+<area shape="rect" id="Node000003" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title=" " alt="" coords="5,5,202,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="231,26,203,28,202,23,237,25"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="242,67,177,49,178,44,247,65"/>
+<area shape="rect" id="Node000005" href="$class_playback_runtime_worker.html#a2e8822489adfd719ca6778573f37f0f6" title=" " alt="" coords="13,71,194,111"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="232,91,195,94,195,88,237,91"/>
+</map>

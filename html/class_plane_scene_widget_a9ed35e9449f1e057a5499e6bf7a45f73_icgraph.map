@@ -1,0 +1,16 @@
+<map id="PlaneSceneWidget::skyboxSelectionChanged" name="PlaneSceneWidget::skyboxSelectionChanged">
+<area shape="rect" id="Node000001" title=" " alt="" coords="990,35,1172,75"/>
+<area shape="rect" id="Node000002" href="$class_plane_view_workspace.html#ab40cdad77d90c3523d2f051c9c76b4b1" title=" " alt="" coords="763,5,912,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="971,42,912,37,912,32,977,42"/>
+<area shape="rect" id="Node000003" href="$class_plane_scene_widget.html#ac76b6b824e201788b75bd17e8cd4b5c2" title=" " alt="" coords="733,70,942,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="977,67,942,74,942,68,972,68"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#aa6cccb6ef7357cd1ef6c3760d183c15d" title=" " alt="" coords="481,20,685,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="752,67,651,48,651,43,757,66"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="257,37,433,78"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="715,78,433,65,433,60,720,76"/>
+<area shape="rect" id="Node000007" href="$class_plane_scene_widget.html#a0e31234ca39d9854cca8a3aca8402244" title=" " alt="" coords="496,120,671,161"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="765,99,672,123,671,118,760,100"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="463,45,434,51,433,46,468,44"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,37,209,78"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="238,58,210,60,209,55,244,57"/>
+</map>

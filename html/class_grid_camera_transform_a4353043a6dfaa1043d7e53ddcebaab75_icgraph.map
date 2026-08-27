@@ -1,0 +1,23 @@
+<map id="GridCameraTransform::scale" name="GridCameraTransform::scale">
+<area shape="rect" id="Node000001" title=" " alt="" coords="682,72,833,113"/>
+<area shape="rect" id="Node000002" href="$class_grid_lar_view.html#a0131ca37942fa814168cf7703b646791" title=" " alt="" coords="463,5,615,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="694,66,633,45,598,34,598,29,635,40,699,66"/>
+<area shape="rect" id="Node000004" href="$class_grid_lar_view.html#ac6b64960dc9ba786f2561b8d57fa5473" title=" " alt="" coords="450,55,628,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="664,83,628,80,628,75,670,82"/>
+<area shape="rect" id="Node000005" href="$class_grid_lar_view.html#ab8204bf37fd85f6e47385ab20547fc25" title=" " alt="" coords="444,104,634,130"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="664,103,635,109,634,104,670,102"/>
+<area shape="rect" id="Node000006" href="$class_grid_camera_transform.html#aa5604d958750400774ee93c3629ad963" title="Sets the viewport scale in pixels per metre, clamped to its supported range." alt="" coords="464,154,614,194"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="695,119,635,145,604,156,603,151,633,140,690,120"/>
+<area shape="rect" id="Node000003" href="$class_grid_lar_view.html#aae172329db02631d16199f0e2a3cbd81" title=" " alt="" coords="234,55,396,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="460,36,377,57,376,51,465,34"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="433,68,397,70,396,65,438,67"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="460,100,377,84,377,78,465,100"/>
+<area shape="rect" id="Node000007" href="$class_grid_lar_view.html#a85e7b9f7b96a4ba88aa1dacbfd940438" title=" " alt="" coords="238,132,392,158"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="446,162,392,158,392,152,451,162"/>
+<area shape="rect" id="Node000009" href="$class_grid_camera_transform.html#a9c4ba02eccf190ae02c58e569c6d2b45" title=" " alt="" coords="240,182,390,222"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="451,185,391,195,390,190,446,186"/>
+<area shape="rect" id="Node000008" href="$class_grid_lar_view.html#a4f3cf6974788ff076be19de0fa0bac8e" title=" " alt="" coords="5,124,186,165"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="220,145,187,147,186,142,225,144"/>
+<area shape="rect" id="Node000010" href="$class_grid_lar_view.html#ae819fd108e6701d37373188c57195143" title=" " alt="" coords="11,189,180,215"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="222,202,180,205,180,200,227,202"/>
+</map>

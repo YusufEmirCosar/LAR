@@ -1,0 +1,7 @@
+<map id="src/infrastructure/network/qt_udp_datagram_source.h" name="src/infrastructure/network/qt_udp_datagram_source.h">
+<area shape="rect" id="Node000001" title="QUdpSocket implementation of the datagram&#45;source port." alt="" coords="103,5,278,61"/>
+<area shape="rect" id="Node000002" href="$qt__udp__datagram__source_8cpp.html" title=" " alt="" coords="5,109,181,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,71,121,110,117,106,151,74"/>
+<area shape="rect" id="Node000003" href="$network__runtime__worker_8cpp.html" title=" " alt="" coords="205,109,373,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,70,265,109,260,108,226,75"/>
+</map>

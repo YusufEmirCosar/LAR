@@ -1,0 +1,7 @@
+<map id="src/viewer/viewport/lar_view_fit.h" name="src/viewer/viewport/lar_view_fit.h">
+<area shape="rect" id="Node000001" title="Algorithms for fitting LAR coordinates in flat and globe views." alt="" coords="135,5,269,46"/>
+<area shape="rect" id="Node000002" href="$earth__lar__view__interaction_8cpp.html" title=" " alt="" coords="5,94,207,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,56,129,96,126,91,166,58"/>
+<area shape="rect" id="Node000003" href="$lar__view__fit_8cpp.html" title=" " alt="" coords="231,94,365,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,54,279,94,274,93,234,59"/>
+</map>

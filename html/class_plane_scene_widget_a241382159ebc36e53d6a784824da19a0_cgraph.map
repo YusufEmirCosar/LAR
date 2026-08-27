@@ -1,0 +1,5 @@
+<map id="PlaneSceneWidget::resetCamera" name="PlaneSceneWidget::resetCamera">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,221,31"/>
+<area shape="rect" id="Node000002" href="$class_plane_orbit_camera.html#a64a9ced0984a3f2f4a5e11073abefe05" title=" " alt="" coords="269,5,434,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,16,256,18,250,18,221,21"/>
+</map>

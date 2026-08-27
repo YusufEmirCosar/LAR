@@ -1,0 +1,19 @@
+<map id="src/viewer/panels" name="src/viewer/panels">
+<area shape="rect" id="node1" href="dir_64d5e233d428cd7840704a21be646adc.html" title="hud" alt="" coords="27,126,69,152"/>
+<area shape="rect" id="node2" href="dir_eb3b89c640c9a51d308e65dc54244360.html" title="workflows" alt="" coords="93,126,174,152"/>
+<area shape="rect" id="node3" href="dir_a13353b2f97c281edc03f6670a2cd1e6.html" title="viewport" alt="" coords="198,126,268,152"/>
+<area shape="rect" id="node4" href="dir_762e23e774af47b5b3638be5c26845c6.html" title="panels" alt="" coords="204,52,263,78"/>
+<area shape="poly" id="edge2" href="dir_000013_000006.html" alt="" coords="204,81,85,126,83,121,203,75"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000013_000006.html" title="1" alt="" coords="86,123,93,138"/>
+<area shape="poly" id="edge5" href="dir_000013_000025.html" alt="" coords="219,78,164,119,161,114,214,80"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000013_000025.html" title="2" alt="" coords="167,114,174,129"/>
+<area shape="poly" id="edge4" href="dir_000013_000024.html" alt="" coords="235,76,236,112,231,109,232,80"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000013_000024.html" title="2" alt="" coords="238,100,245,115"/>
+<area shape="rect" id="node5" href="dir_59e154daa71ab644ff60a4d6c4d01bbf.html" title="domain" alt="" coords="292,126,356,152"/>
+<area shape="poly" id="edge1" href="dir_000013_000005.html" alt="" coords="250,76,300,117,294,116,248,81"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000013_000005.html" title="1" alt="" coords="296,100,303,115"/>
+<area shape="rect" id="node6" href="dir_844f6ab5c2ae79211596f3dcdd81adb7.html" title="application" alt="" coords="380,126,463,152"/>
+<area shape="poly" id="edge3" href="dir_000013_000000.html" alt="" coords="264,75,378,120,373,121,263,81"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000013_000000.html" title="8" alt="" coords="372,104,379,119"/>
+<area shape="rect" id="clust1" href="dir_0afc25342c548a63e1813d8fbde8101d.html" title="viewer" alt="" coords="16,16,279,162"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="dlz::presentation::HudRenderer::draw" name="dlz::presentation::HudRenderer::draw">
+<area shape="rect" id="Node000001" title=" " alt="" coords="672,5,807,46"/>
+<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_hud_view.html#a5b51201b52af68e500d1286bced3601a" title=" " alt="" coords="480,5,624,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="654,26,625,28,625,23,659,26"/>
+<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_view.html#a9e418e04071dc33ce39162200dd1a373" title=" " alt="" coords="261,5,432,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="462,35,433,37,433,32,467,35"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="448,14,482,17,477,17,448,19"/>
+<area shape="rect" id="Node000004" href="$classdlz_1_1presentation_1_1_hud_workspace.html#aec685012fec2dfb24231b60b8836444b" title=" " alt="" coords="5,5,213,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="242,26,213,28,213,23,248,26"/>
+</map>

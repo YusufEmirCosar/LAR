@@ -1,0 +1,13 @@
+<map id="SourceLifecycleCoordinator::rejectDispatch" name="SourceLifecycleCoordinator::rejectDispatch">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,187,79"/>
+<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#a17ce5b778f5c25dcf667c451910501ec" title=" " alt="" coords="235,5,416,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,43,222,40,217,42,188,48"/>
+<area shape="rect" id="Node000003" href="$class_source_lifecycle_coordinator.html#ad34fbe86cb6fe96f56d3d00d4d587a39" title=" " alt="" coords="235,71,416,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,69,222,76,217,76,187,74"/>
+<area shape="rect" id="Node000004" href="$class_source_lifecycle_coordinator.html#af8c4c5b43ccda3fdf84ed7b6931094bf" title=" " alt="" coords="464,41,645,82"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="416,77,446,75,451,75,417,82"/>
+<area shape="rect" id="Node000005" href="$class_source_lifecycle_coordinator.html#aa255c75c16a3452923516e76766ae9c9" title=" " alt="" coords="693,71,875,111"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="416,90,464,91,645,91,680,93,675,93,645,96,464,96,416,96"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="646,71,681,78,675,77,645,76"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="741,68,739,61,746,52,761,46,784,44,809,46,825,55,820,55,807,52,784,49,762,51,749,56,744,62,746,72"/>
+</map>

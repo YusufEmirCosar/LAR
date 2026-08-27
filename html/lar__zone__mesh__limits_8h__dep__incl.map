@@ -1,0 +1,27 @@
+<map id="src/viewer/viewport/lar_zone_mesh_limits.h" name="src/viewer/viewport/lar_zone_mesh_limits.h">
+<area shape="rect" id="Node000001" title="Central memory, complexity, radius, and accuracy bounds for zone meshes." alt="" coords="398,5,560,46"/>
+<area shape="rect" id="Node000002" href="$geodesic__zone__sampler_8cpp.html" title=" " alt="" coords="5,102,195,142"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="382,52,207,97,180,103,177,99,206,91,386,48"/>
+<area shape="rect" id="Node000003" href="$lar__parametric__zone__gpu__layer_8cpp.html" title=" " alt="" coords="218,94,360,150"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="423,55,346,96,343,91,428,52"/>
+<area shape="rect" id="Node000004" href="$lar__zone__input__validator_8cpp.html" title=" " alt="" coords="384,102,573,142"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="480,59,481,102,476,100,477,64"/>
+<area shape="rect" id="Node000005" href="$lar__zone__mesh__assembler_8cpp.html" title=" " alt="" coords="598,102,802,142"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="539,50,656,100,651,101,539,55"/>
+<area shape="rect" id="Node000006" href="$lar__zone__mesh__builder_8h.html" title="Bounded geodesic tessellation of Target LAR values for OpenGL." alt="" coords="826,102,995,142"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="575,42,815,91,845,101,839,101,814,97,575,47"/>
+<area shape="rect" id="Node000007" href="$lar__zone__gpu__layer_8cpp.html" title=" " alt="" coords="634,205,795,246"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="862,148,754,207,752,202,857,150"/>
+<area shape="rect" id="Node000008" href="$lar__zone__mesh__builder_8cpp.html" title=" " alt="" coords="820,205,1002,246"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="912,156,913,206,908,203,909,160"/>
+<area shape="rect" id="Node000009" href="$viewport__preparation__worker_8h.html" title="Latest&#45;only CPU preparation worker for dynamic LAR geometry." alt="" coords="1026,198,1171,253"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="961,147,1051,197,1046,197,960,152"/>
+<area shape="rect" id="Node000010" href="$earth__overlay__coordinator_8h.html" title="Latest&#45;only worker coordination for CPU fallback zone meshes." alt="" coords="912,309,1096,350"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="1065,264,1023,311,1021,306,1061,266"/>
+<area shape="rect" id="Node000018" href="$viewport__preparation__worker_8cpp.html" title=" " alt="" coords="1121,301,1266,357"/>
+<area shape="poly" id="edge12_Node000009_Node000018" title=" " alt="" coords="1135,262,1170,302,1165,300,1133,267"/>
+<area shape="rect" id="Node000011" href="$earth__lar__view_8h.html" title="Mercator/sphere LAR page combining map, zones, and marker overlays." alt="" coords="842,405,976,446"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="976,359,930,407,928,402,971,361"/>
+<area shape="rect" id="Node000017" href="$earth__overlay__coordinator_8cpp.html" title=" " alt="" coords="1001,405,1199,446"/>
+<area shape="poly" id="edge11_Node000010_Node000017" title=" " alt="" coords="1036,358,1083,405,1078,404,1034,363"/>
+</map>

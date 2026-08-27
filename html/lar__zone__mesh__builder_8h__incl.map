@@ -1,0 +1,37 @@
+<map id="src/viewer/viewport/lar_zone_mesh_builder.h" name="src/viewer/viewport/lar_zone_mesh_builder.h">
+<area shape="rect" id="Node000001" title="Bounded geodesic tessellation of Target LAR values for OpenGL." alt="" coords="539,5,707,46"/>
+<area shape="rect" id="Node000002" href="$state_8h.html" title="Canonical in&#45;memory aircraft, target, and LAR state structures." alt="" coords="426,102,534,127"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="593,45,514,96,512,91,588,48"/>
+<area shape="rect" id="Node000004" href="$map__camera_8h.html" title="Projection&#45;independent Earth map camera model and hit testing." alt="" coords="186,102,364,127"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="541,48,339,100,338,95,546,45"/>
+<area shape="rect" id="Node000010" href="$lar__zone__mesh_8h.html" title="CPU mesh and draw&#45;range representation for LAR zones." alt="" coords="558,94,688,135"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="624,44,625,80,621,77,621,49"/>
+<area shape="rect" id="Node000014" href="$lar__zone__mesh__limits_8h.html" title="Central memory, complexity, radius, and accuracy bounds for zone meshes." alt="" coords="712,94,856,135"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="660,44,737,87,732,86,659,49"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="881,102,959,127"/>
+<area shape="poly" id="edge19_Node000001_Node000016" title=" " alt="" coords="701,44,869,91,877,96,872,96,867,97,701,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="497,190,586,216"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="490,125,527,178,522,177,488,130"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,190,94,216"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="242,130,96,187,94,182,244,125"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="118,190,179,216"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="259,126,180,183,177,179,255,129"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="404,190,474,216"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="298,125,405,182,400,183,298,130"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="202,190,270,216"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="271,126,250,178,246,174,267,129"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="294,190,381,216"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="285,125,323,178,317,177,283,130"/>
+<area shape="poly" id="edge13_Node000010_Node000003" title=" " alt="" coords="607,134,564,181,561,177,602,136"/>
+<area shape="poly" id="edge14_Node000010_Node000007" title=" " alt="" coords="584,134,479,186,477,181,579,136"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="745,190,810,216"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="658,133,745,182,740,182,657,138"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="661,190,721,216"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="639,133,675,179,670,177,637,138"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="733,271,790,297"/>
+<area shape="poly" id="edge12_Node000010_Node000013" title=" " alt="" coords="624,133,631,178,638,201,650,222,665,237,682,249,721,270,715,270,679,254,661,241,646,225,633,203,626,179,621,137"/>
+<area shape="poly" id="edge18_Node000014_Node000011" title=" " alt="" coords="785,133,782,177,778,173,781,137"/>
+<area shape="rect" id="Node000015" href="$lar__geodesic__geometry_8h.html" title="Spherical destination&#45;point and arc tessellation utilities." alt="" coords="833,183,970,223"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="812,133,866,174,860,173,810,138"/>
+<area shape="poly" id="edge17_Node000015_Node000013" title=" " alt="" coords="869,223,797,266,795,261,864,225"/>
+</map>

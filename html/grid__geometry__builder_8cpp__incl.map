@@ -1,0 +1,13 @@
+<map id="src/viewer/grid_geometry_builder.cpp" name="src/viewer/grid_geometry_builder.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="115,5,282,46"/>
+<area shape="rect" id="Node000002" href="$grid__geometry__builder_8h.html" title="Adaptive grid spacing, line geometry, and distance&#45;label helpers." alt="" coords="64,94,209,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,45,161,83,157,80,183,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="233,102,290,127"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="214,44,247,89,241,89,212,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,183,78,208"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,134,69,175,66,170,110,136"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="102,183,171,208"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="138,133,139,168,134,166,134,137"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="196,183,261,208"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="160,133,205,172,200,172,158,138"/>
+</map>

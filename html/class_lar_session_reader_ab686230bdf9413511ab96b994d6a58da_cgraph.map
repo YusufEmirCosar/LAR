@@ -1,0 +1,9 @@
+<map id="LarSessionReader::ensurePage" name="LarSessionReader::ensurePage">
+<area shape="rect" id="Node000001" title="Populates the bounded location cache containing index." alt="" coords="5,35,211,60"/>
+<area shape="rect" id="Node000002" href="$class_session_timestamp.html#a32022c7bea4a6476c0af9a5641a8a80f" title="Creates a timestamp from the unsigned representation stored by LAR1." alt="" coords="259,27,464,68"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,45,245,47,240,48,212,50"/>
+<area shape="rect" id="Node000003" href="$class_session_timestamp.html#a9e69c8185d47045ab21667be1a2976f7" title=" " alt="" coords="512,5,725,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="464,33,499,32,494,32,465,38"/>
+<area shape="rect" id="Node000004" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="524,55,713,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="464,56,511,64,506,64,464,61"/>
+</map>

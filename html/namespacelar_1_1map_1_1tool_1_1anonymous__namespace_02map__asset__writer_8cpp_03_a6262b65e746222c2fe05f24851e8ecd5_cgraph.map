@@ -1,0 +1,13 @@
+<map id="lar::map::tool::anonymous_namespace{map_asset_writer::cpp}::validate" name="lar::map::tool::anonymous_namespace{map_asset_writer::cpp}::validate">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,108,208,164"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="60,108,61,98,69,89,85,84,107,82,131,84,148,93,143,94,130,90,106,87,86,89,72,94,66,100,66,109"/>
+<area shape="rect" id="Node000002" href="$structlar_1_1map_1_1_map_mesh.html#a9134847ffe3083dd71f6f70657d8f28d" title=" " alt="" coords="271,5,412,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,106,255,57,273,51,269,54,257,61,160,110"/>
+<area shape="rect" id="Node000003" href="$structlar_1_1map_1_1_map_mesh.html#a47ba9df528bea7113f0308bb7ceb93c1" title="Reports whether the mesh has no renderable projection data." alt="" coords="271,71,412,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,114,258,106,254,109,209,119"/>
+<area shape="rect" id="Node000004" href="$namespacelar_1_1map.html#afe41b5232fdccaebdd6cf304581d7bd0" title="Validates cell ranges and triangle references without allocating." alt="" coords="256,160,428,201"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="208,153,243,161,238,162,208,158"/>
+<area shape="rect" id="Node000005" href="$structlar_1_1map_1_1_map_mesh.html#a698dbe11bf32a8244d1d9b563f3c93fb" title=" " alt="" coords="271,225,412,266"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="160,162,257,210,274,219,268,219,255,215,159,167"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="298,158,295,150,303,141,318,135,342,133,367,136,384,144,379,144,366,141,342,139,319,141,306,145,301,151,303,161"/>
+</map>

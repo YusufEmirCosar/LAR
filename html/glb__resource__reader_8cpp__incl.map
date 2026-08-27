@@ -1,0 +1,35 @@
+<map id="src/viewer/plane/glb_resource_reader.cpp" name="src/viewer/plane/glb_resource_reader.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="784,5,929,46"/>
+<area shape="rect" id="Node000002" href="$glb__resource__reader_8h.html" title="Contained URI and bounded GLB&#45;buffer resolution for static glTF models." alt="" coords="168,94,340,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="781,36,594,61,356,96,355,91,593,56,786,35"/>
+<area shape="rect" id="Node000007" href="$glb__resource__limits_8h.html" title="Aggregate CPU&#45;memory limits for user&#45;selected glTF/GLB models." alt="" coords="364,94,536,135"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="781,43,552,94,551,89,786,42"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="560,102,609,127"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="786,43,705,68,622,96,620,97,619,92,620,92,704,63,781,44"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="633,102,686,127"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="811,46,699,96,698,97,696,92,697,92,806,47"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="710,102,784,127"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="834,46,775,94,773,90,829,48"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="808,102,905,127"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="858,45,859,88,855,84,855,48"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="930,102,978,127"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="880,44,932,92,927,91,878,49"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1002,102,1077,127"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="899,44,1003,95,997,94,898,49"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1101,102,1162,127"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="930,43,1008,65,1090,91,1095,96,1089,95,1088,97,1006,70,929,48"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="1185,102,1238,127"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="930,34,1047,56,1111,72,1175,91,1179,95,1173,94,1173,97,1110,77,1045,61,930,40"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1261,102,1314,127"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="930,30,1080,50,1166,68,1251,91,1255,95,1250,95,1249,97,1165,73,1079,56,930,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,183,95,208"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="204,138,96,179,95,174,202,133"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="118,183,208,208"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="234,134,190,174,187,170,229,136"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="232,183,297,208"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="258,133,263,168,259,166,255,137"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="321,183,379,208"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="279,133,326,173,321,172,277,138"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="414,183,486,208"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="452,133,452,169,448,165,448,137"/>
+</map>

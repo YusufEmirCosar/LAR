@@ -1,0 +1,21 @@
+<map id="dlz::presentation::HudWorkspace::present" name="dlz::presentation::HudWorkspace::present">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,121,167,162"/>
+<area shape="rect" id="Node000002" href="$classdlz_1_1presentation_1_1_presentation_controller.html#ae48824d760b9680a8001c8cf0bd17e14" title=" " alt="" coords="215,5,365,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,118,224,66,221,71,128,122"/>
+<area shape="rect" id="Node000003" href="$classdlz_1_1presentation_1_1_hud_view.html#aa1ba72893d7d4f7544e1a4aca5295a79" title=" " alt="" coords="221,85,358,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,125,208,118,204,122,168,129"/>
+<area shape="rect" id="Node000006" href="$classdlz_1_1presentation_1_1_presentation_controller.html#a4e5a02e5deef2efd39e72a477526eeaf" title=" " alt="" coords="215,149,365,205"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="166,153,202,160,197,162,167,158"/>
+<area shape="rect" id="Node000007" href="$classdlz_1_1presentation_1_1_presentation_controller.html#a3970ebda1f3966fbd83baf9cc85ab30e" title=" " alt="" coords="215,229,365,285"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="122,159,216,215,225,221,220,222,213,219,121,165"/>
+<area shape="rect" id="Node000004" href="$classdlz_1_1presentation_1_1_hud_view.html#a411cd997a2257b6a4ab95ea6ac3119fb" title=" " alt="" coords="413,40,609,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="358,89,400,82,395,84,360,94"/>
+<area shape="rect" id="Node000005" href="$classdlz_1_1presentation_1_1_hud_view.html#a1d3b8abd2f82714a28a4517891f91bd2" title=" " alt="" coords="444,105,578,146"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="359,109,431,117,426,119,360,114"/>
+<area shape="rect" id="Node000008" href="$classdlz_1_1presentation_1_1_presentation_controller.html#a43321c3aad465649153fe0c5101816b2" title=" " alt="" coords="436,209,586,265"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="365,248,423,245,418,246,366,253"/>
+<area shape="rect" id="Node000010" href="$classdlz_1_1presentation_1_1_presentation_controller.html#a1c2f4dbe3c7c69d8107b4b98848f8f4f" title=" " alt="" coords="424,289,599,345"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="365,275,411,289,406,289,365,280"/>
+<area shape="rect" id="Node000009" href="$classdlz_1_1presentation_1_1_presentation_controller.html#abcb0380e5c09132aa112a1ab05585eaf" title=" " alt="" coords="657,209,808,265"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="586,235,644,237,639,237,587,240"/>
+</map>

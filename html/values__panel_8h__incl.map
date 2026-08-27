@@ -1,0 +1,9 @@
+<map id="src/viewer/panels/values_panel.h" name="src/viewer/panels/values_panel.h">
+<area shape="rect" id="Node000001" title="Right&#45;hand presentation panel for decoded values and DLZ controls." alt="" coords="147,5,312,46"/>
+<area shape="rect" id="Node000002" href="$viewport__content__mode_8h.html" title="Top&#45;level selection between geographic LAR, Plane, and DLZ content." alt="" coords="5,94,171,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,46,134,88,131,84,195,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="195,102,264,127"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="231,45,232,87,227,85,227,48"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="288,102,357,127"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="251,44,302,91,296,91,250,49"/>
+</map>

@@ -48,6 +48,9 @@ water at mean sea level, and passes retained depth to the blue shader ramp.
 Changing DT0/DT1/DT2 therefore changes terrain detail without changing the
 coastline or moving a target between land and water.
 
+The complete map-package, DTED, cache, land-mask, and terrain-worker contracts
+are documented in the [terrain and asset pipeline](../docs/TERRAIN_AND_ASSETS.md).
+
 ## Plane assets
 
 `models/f16_3.glb` is the glTF 2.0 binary loaded by Plane mode. Its embedded

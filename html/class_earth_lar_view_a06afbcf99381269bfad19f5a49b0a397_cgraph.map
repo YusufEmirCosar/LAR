@@ -1,0 +1,16 @@
+<map id="EarthLarView::markFallbackGeometryDirty" name="EarthLarView::markFallbackGeometryDirty">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,191,79"/>
+<area shape="rect" id="Node000002" href="$class_earth_overlay_coordinator.html#a21299d7ff2250ab203ea6e9db1765334" title=" " alt="" coords="254,5,418,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,43,241,38,236,40,192,49"/>
+<area shape="rect" id="Node000003" href="$class_earth_lar_view.html#a07f6e850546cab4c80f9cda34444f565" title=" " alt="" coords="239,71,434,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,69,226,75,220,76,191,74"/>
+<area shape="rect" id="Node000004" href="$classlar_1_1map_1_1_earth_map_widget.html#a59f43f7b7adc4e0aab4cd7467709479f" title=" " alt="" coords="482,25,655,66"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="434,69,464,66,469,65,435,75"/>
+<area shape="rect" id="Node000005" href="$class_earth_overlay_coordinator.html#aedf8cc2051f858c3b4f1b1dd7701d978" title=" " alt="" coords="486,115,651,155"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="435,107,474,117,469,117,434,112"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="527,112,524,105,531,96,546,90,569,88,593,90,609,99,604,99,592,96,569,93,547,95,534,100,529,106,531,116"/>
+<area shape="rect" id="Node000006" href="$class_viewport_preparation_worker.html#a94eb1c1152292149a523977b8b19489b" title=" " alt="" coords="703,115,883,155"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="651,132,690,135,685,135,651,138"/>
+<area shape="rect" id="Node000007" href="$class_viewport_preparation_worker.html#a0cd67140363a9ea0c52348543e447ae4" title="Posts one coalesced, argument&#45;free worker wake&#45;up." alt="" coords="931,115,1110,155"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="883,132,918,135,912,135,883,138"/>
+</map>

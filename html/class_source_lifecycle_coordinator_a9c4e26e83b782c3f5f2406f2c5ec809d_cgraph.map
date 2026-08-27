@@ -1,0 +1,20 @@
+<map id="SourceLifecycleCoordinator::resetMetrics" name="SourceLifecycleCoordinator::resetMetrics">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,165,187,206"/>
+<area shape="rect" id="Node000002" href="$class_source_lifecycle_coordinator.html#a03ee0165d404f201e2544db08284fea0" title=" " alt="" coords="235,5,452,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,163,163,110,197,82,233,57,249,51,245,54,236,61,200,86,167,114,116,167"/>
+<area shape="rect" id="Node000003" href="$class_source_lifecycle_coordinator.html#a9eb44038d562196d53733a865d5589f3" title=" " alt="" coords="238,71,448,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,162,234,122,259,115,254,118,236,127,142,167"/>
+<area shape="rect" id="Node000004" href="$class_source_lifecycle_coordinator.html#acdf83d7d75370c38dd81dcb69898ee8f" title=" " alt="" coords="253,136,434,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,172,239,168,235,170,188,177"/>
+<area shape="rect" id="Node000006" href="$class_i_metrics_runtime.html#a9356d5008a90900c816bdb359af87fd4" title=" " alt="" coords="245,201,442,226"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="187,193,231,200,226,202,188,199"/>
+<area shape="rect" id="Node000007" href="$class_application_view_model.html#ac83707be17b48c4211eb0474a6624a89" title=" " alt="" coords="251,251,436,291"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="149,204,236,236,258,245,252,246,234,242,148,209"/>
+<area shape="rect" id="Node000009" href="$class_application_view_model.html#ae8e01bb7447a1a94c7bf4f16641c939c" title="Sets the current source throughput in packets or records per second." alt="" coords="254,316,432,357"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="117,204,169,253,201,278,236,301,251,310,245,309,233,305,198,283,165,257,116,209"/>
+<area shape="rect" id="Node000005" href="$class_source_lifecycle_coordinator.html#a17ce5b778f5c25dcf667c451910501ec" title=" " alt="" coords="500,136,681,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="434,154,487,156,482,157,435,159"/>
+<area shape="rect" id="Node000008" href="$class_application_view_model.html#a4ede6b79e944d298b52a981a8afe896d" title=" " alt="" coords="516,283,665,323"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="437,280,503,291,498,291,436,286"/>
+<area shape="poly" id="edge9_Node000009_Node000008" title=" " alt="" coords="433,322,498,315,503,315,433,327"/>
+</map>

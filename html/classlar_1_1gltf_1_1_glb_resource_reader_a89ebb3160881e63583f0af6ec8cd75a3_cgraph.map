@@ -1,0 +1,5 @@
+<map id="lar::gltf::GlbResourceReader::resolveBuffers" name="lar::gltf::GlbResourceReader::resolveBuffers">
+<area shape="rect" id="Node000001" title="Resolves every declared glTF buffer under a single aggregate logical&#45;byte budget." alt="" coords="5,5,193,46"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1gltf_1_1_glb_resource_reader.html#a9be19f4a0d0694745c7b7d7ce5520a49" title="Reads one data URI or one contained external resource." alt="" coords="241,5,428,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,23,228,25,222,26,193,28"/>
+</map>

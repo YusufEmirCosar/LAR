@@ -1,0 +1,13 @@
+<map id="lar::map::EarthMapWidget::setRotation" name="lar::map::EarthMapWidget::setRotation">
+<area shape="rect" id="Node000001" title="Centers the spherical presentation on a geographic coordinate in degrees." alt="" coords="5,39,179,79"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_earth_map_widget.html#a86b09d5aed7447ce3fc3c81f1bd44560" title=" " alt="" coords="227,5,400,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,43,214,40,209,42,180,49"/>
+<area shape="rect" id="Node000004" href="$classlar_1_1map_1_1_map_camera.html#a77395219a86be47b2fe891af4be700ce" title=" " alt="" coords="240,71,387,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="179,69,227,78,221,78,179,74"/>
+<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_map_camera.html#af281b7b5f7a8ede8b9dac8bc355e3b72" title=" " alt="" coords="454,5,601,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="400,23,441,25,436,26,400,28"/>
+<area shape="rect" id="Node000005" href="$classlar_1_1map_1_1_map_projection.html#ae51b77201c9b343a098d386577f31c0c" title=" " alt="" coords="448,71,607,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="387,88,435,91,430,91,388,94"/>
+<area shape="rect" id="Node000006" href="$classlar_1_1map_1_1_map_projection.html#a07314ffecd55c0529f331a1aa41a8107" title=" " alt="" coords="655,71,815,111"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="608,88,643,91,637,91,608,94"/>
+</map>

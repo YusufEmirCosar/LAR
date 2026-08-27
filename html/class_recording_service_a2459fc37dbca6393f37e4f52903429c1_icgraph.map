@@ -1,0 +1,15 @@
+<map id="RecordingService::createSnapshot" name="RecordingService::createSnapshot">
+<area shape="rect" id="Node000001" title=" " alt="" coords="951,71,1119,111"/>
+<area shape="rect" id="Node000002" href="$class_recording_pipeline_coordinator.html#ad89e80cc57ae04f8144c373838ecf557" title=" " alt="" coords="709,5,903,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="944,66,880,49,880,44,950,66"/>
+<area shape="rect" id="Node000006" href="$class_direct_application_runtime.html#ad60c2386c8f84d25697abb78a159452e" title=" " alt="" coords="721,71,891,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="933,91,891,94,891,88,938,91"/>
+<area shape="rect" id="Node000007" href="$class_direct_application_runtime.html#ab1947fbce095c7e2578a91d60b62bd2e" title=" " alt="" coords="721,136,891,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="950,116,880,138,880,133,944,116"/>
+<area shape="rect" id="Node000003" href="$class_recording_pipeline_coordinator.html#a3b5b579bf17c17e2a6c1b0d7fd8d50fc" title="Applies the pending operation only when token matches the active drain." alt="" coords="468,5,661,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="691,26,662,28,661,23,697,25"/>
+<area shape="rect" id="Node000004" href="$class_recording_runtime_worker.html#aa95e5c13c8f695fd05b3228cd1027b4d" title=" " alt="" coords="250,5,420,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="450,26,421,28,420,23,455,25"/>
+<area shape="rect" id="Node000005" href="$class_threaded_application_runtime.html#a64a7ffeac8da299d916f08425831c814" title=" " alt="" coords="5,5,202,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="231,27,203,28,201,23,236,25"/>
+</map>

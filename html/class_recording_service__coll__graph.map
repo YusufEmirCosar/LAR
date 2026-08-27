@@ -1,0 +1,9 @@
+<map id="RecordingService" name="RecordingService">
+<area shape="rect" id="Node000001" title="Owns recording state while delegating bytes and time to ports." alt="" coords="112,102,237,128"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,75,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,38,160,100,155,103,69,43"/>
+<area shape="rect" id="Node000003" href="$class_i_recording_transaction.html" title="Mutable transaction used while a recording is active." alt="" coords="98,5,251,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="177,45,177,103,172,100,173,48"/>
+<area shape="rect" id="Node000004" href="$class_i_recording_clock.html" title="Process&#45;wide monotonic time abstraction for deterministic recording tests." alt="" coords="276,5,394,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="317,41,272,80,219,104,217,99,269,76,312,43"/>
+</map>

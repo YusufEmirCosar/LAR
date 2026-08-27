@@ -1,0 +1,39 @@
+<map id="PlaneSceneRenderer::setTerrainPatch" name="PlaneSceneRenderer::setTerrainPatch">
+<area shape="rect" id="Node000001" title="Sets the immutable terrain snapshot uploaded on the next paint pass." alt="" coords="1256,212,1400,253"/>
+<area shape="rect" id="Node000002" href="$class_plane_scene_widget.html#ac41abb6eb0add39b310a73d3e27d7478" title=" " alt="" coords="1003,17,1208,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1308,197,1268,132,1240,97,1206,66,1187,55,1166,46,1166,40,1189,50,1210,62,1243,93,1272,129,1313,199"/>
+<area shape="rect" id="Node000004" href="$class_plane_scene_widget.html#abe802663afdff5d56c7bba1c6b07dc1c" title=" " alt="" coords="758,177,952,218"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1238,227,952,207,952,202,1243,225"/>
+<area shape="rect" id="Node000006" href="$class_plane_scene_widget.html#ac4e98551e0710d2d9566c6c54daebbfb" title="Replaces the session terrain source after validating one addressed tile." alt="" coords="5,149,209,190"/>
+<area shape="poly" id="edge14_Node000001_Node000006" title=" " alt="" coords="1273,205,1196,170,1093,130,1036,113,977,99,916,89,856,86,603,86,487,92,372,109,267,130,183,151,180,146,266,125,371,104,487,87,603,80,856,80,917,84,978,93,1037,108,1095,125,1198,165,1278,205"/>
+<area shape="rect" id="Node000009" href="$class_plane_scene_widget.html#a7cb14c31a868d84d81a36418888be91c" title="Loads a user&#45;selected .gltf or .glb model." alt="" coords="755,264,955,305"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="1238,242,956,276,955,271,1243,241"/>
+<area shape="rect" id="Node000012" href="$class_plane_scene_renderer.html#a196c3a51205e4ad441cde4358e2d8404" title=" " alt="" coords="1033,408,1178,449"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="1312,265,1271,333,1243,368,1210,397,1179,414,1177,409,1206,393,1239,364,1267,330,1308,268"/>
+<area shape="rect" id="Node000013" href="$class_plane_scene_widget.html#ae2f382ca1fbf358e3801503ca8a607e8" title=" " alt="" coords="1014,343,1197,383"/>
+<area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="1281,260,1143,345,1141,340,1276,262"/>
+<area shape="rect" id="Node000003" href="$class_plane_view_workspace.html#a31ceeceb00aeca51304f380ee19dc6e5" title=" " alt="" coords="768,5,942,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="984,28,943,30,941,24,990,27"/>
+<area shape="rect" id="Node000005" href="$class_plane_scene_widget.html#a5c8242aec92b08254db217286a0b9194" title=" " alt="" coords="502,120,707,161"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="746,174,697,164,696,159,751,173"/>
+<area shape="rect" id="Node000008" href="$class_plane_scene_widget.html#abddb7ceac1e1c8d2d551b58bf9025897" title="Notifies controls when terrain availability changes after source replacement." alt="" coords="267,177,444,218"/>
+<area shape="poly" id="edge9_Node000004_Node000008" title=" " alt="" coords="740,199,444,200,443,195,745,196"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="485,149,210,166,209,161,488,145"/>
+<area shape="rect" id="Node000007" href="$class_plane_scene_widget.html#a605af179df470891b8fa7b2433ce23cc" title="Enables DTED terrain; loading and unavailable terrain remain visibly unclassified." alt="" coords="257,289,454,330"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="563,168,389,291,386,287,558,171"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="496,166,445,180,443,175,501,163"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="249,187,210,184,208,179,254,185"/>
+<area shape="rect" id="Node000010" href="$class_plane_scene_widget.html#aa6cccb6ef7357cd1ef6c3760d183c15d" title=" " alt="" coords="502,300,707,325"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="737,298,708,303,707,298,742,297"/>
+<area shape="rect" id="Node000011" href="$class_plane_view_workspace.html#a6bffcd0d76b3d98afd81bc31230254f0" title=" " alt="" coords="526,235,683,275"/>
+<area shape="poly" id="edge13_Node000009_Node000011" title=" " alt="" coords="737,271,684,267,683,262,742,270"/>
+<area shape="poly" id="edge12_Node000010_Node000008" title=" " alt="" coords="520,295,501,289,436,256,385,221,385,216,439,251,503,285,525,294"/>
+<area shape="poly" id="edge18_Node000013_Node000006" title=" " alt="" coords="1011,387,856,417,762,426,662,430,557,427,453,412,351,386,302,367,255,344,209,310,169,268,138,226,119,193,119,188,143,223,173,265,212,306,258,339,304,362,353,381,454,407,558,421,662,425,762,421,855,411,1006,388"/>
+<area shape="poly" id="edge21_Node000013_Node000007" title=" " alt="" coords="996,383,894,399,768,407,634,404,567,397,501,384,439,361,388,333,388,328,441,357,503,379,568,391,634,399,768,401,893,393,1001,382"/>
+<area shape="poly" id="edge22_Node000013_Node000008" title=" " alt="" coords="995,369,869,375,725,374,594,364,541,354,501,340,483,327,473,312,465,297,452,279,385,221,386,216,456,276,470,294,478,310,487,323,503,335,542,349,594,359,726,369,869,370,1001,369"/>
+<area shape="poly" id="edge17_Node000013_Node000009" title=" " alt="" coords="1021,338,922,308,923,303,1027,338"/>
+<area shape="rect" id="Node000014" href="$class_plane_scene_widget.html#a6387f9c3b66f950945e37e615318d0e1" title=" " alt="" coords="757,501,953,542"/>
+<area shape="poly" id="edge19_Node000013_Node000014" title=" " alt="" coords="1011,391,1005,398,988,419,981,440,974,462,956,485,928,503,926,498,953,481,969,460,976,438,983,416,1001,394,1006,393"/>
+<area shape="rect" id="Node000015" href="$class_plane_view_workspace.html#a2ea39e4580b3c81fceabb56b8e829ed7" title=" " alt="" coords="530,501,679,542"/>
+<area shape="poly" id="edge20_Node000014_Node000015" title=" " alt="" coords="739,522,679,524,679,519,744,522"/>
+</map>

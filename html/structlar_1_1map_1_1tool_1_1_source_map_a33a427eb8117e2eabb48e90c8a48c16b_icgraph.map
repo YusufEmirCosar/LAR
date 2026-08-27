@@ -1,0 +1,9 @@
+<map id="lar::map::tool::SourceMap::empty" name="lar::map::tool::SourceMap::empty">
+<area shape="rect" id="Node000001" title="Reports whether the source map has no renderable polygon data." alt="" coords="365,39,536,79"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1tool_1_1_map_mesh_compiler.html#aca89641740072be2385c33c5a77b8b48" title=" " alt="" coords="103,5,317,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="347,45,317,43,317,38,352,45"/>
+<area shape="rect" id="Node000004" href="$structlar_1_1map_1_1tool_1_1_source_map_read_result.html#a01f07f651657f27218c7074139b258cb" title="Reports whether parsing produced a valid non&#45;empty source map." alt="" coords="124,71,296,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="352,72,296,82,296,77,347,73"/>
+<area shape="rect" id="Node000003" href="$tools_2map__asset_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,55,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,27,56,28,54,23,89,24"/>
+</map>

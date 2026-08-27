@@ -1,0 +1,7 @@
+<map id="lar::map::EarthMapWidget::setCameraBearing" name="lar::map::EarthMapWidget::setCameraBearing">
+<area shape="rect" id="Node000001" title="Sets clockwise map bearing in degrees after camera normalization." alt="" coords="5,5,179,46"/>
+<area shape="rect" id="Node000002" href="$classlar_1_1map_1_1_map_camera.html#a4804b3630b6e40a5bd3d994d0c8d6e81" title=" " alt="" coords="227,5,374,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,23,214,25,209,26,179,28"/>
+<area shape="rect" id="Node000003" href="$classlar_1_1map_1_1_map_camera.html#a389f10f6e626bdf8fc1b53294643c788" title=" " alt="" coords="422,5,569,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="374,23,409,26,403,26,375,28"/>
+</map>
