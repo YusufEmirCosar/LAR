@@ -52,13 +52,18 @@ command-acceptance/completion contract for deterministic tests. See the
 ## Build
 
 Requirements on every platform: CMake 3.24+, Qt 6.10.3+ with Core, Concurrent,
-Gui, Network, Widgets, OpenGL, and OpenGLWidgets, an OpenGL-capable system, and
-a C++17 compiler. The Qt kit must match the target platform and architecture.
-Presets with `BUILD_TESTING=ON` additionally require Qt Test. Presets with
-`LAR_ENABLE_QUALITY_TARGETS=ON` require Python 3; this is the default for the
-Unix release/developer/CI presets and for `ci-msvc`, while `windows-release`
-disables both options. The Unix presets use Ninja; the Windows presets use
-Visual Studio 2022 and its x64 MSVC toolchain.
+Gui, Network, Widgets, and OpenGLWidgets, native OpenGL development/runtime
+support, and a C++17 compiler. The Qt kit must match the target platform,
+architecture, and compiler. Presets with `BUILD_TESTING=ON` additionally require
+Qt Test. Presets with `LAR_ENABLE_QUALITY_TARGETS=ON` require Python 3; this is
+the default for the Unix release/developer/CI presets and for `ci-msvc`, while
+`windows-release` disables both options. The Unix presets use Ninja; the Windows
+presets use Visual Studio 2022 and its x64 MSVC toolchain.
+
+The presentation library calls native OpenGL functions and links CMake's
+portable `OpenGL::GL` target. CMake resolves that target to OpenGL32 on Windows,
+the OpenGL framework on macOS, and the available system OpenGL or GLVND
+implementation on Linux.
 
 Platform prerequisites:
 
@@ -98,6 +103,8 @@ evidence until its strict and GPU results are obtained. See Qt's official
 [release-support table](https://doc.qt.io/qt-6/qt-releases.html) and
 [Qt 6.11.2 release notice](https://www.qt.io/blog/qt-6.11.2-released).
 
+### Unix release build
+
 Configure from the `LAR/` project root. The build deterministically compiles
 `assets/map/world_boundaries.geojson` into a validated
 `lar_world_map.larmap`, packages it with the F-16 GLB and cubemap catalog beside
@@ -116,27 +123,175 @@ On macOS:
 open build-release/lar-viewer.app
 ```
 
-On Windows, install the matching `msvc2022_64` Qt kit and configure the
-production-only preset. Pass `Qt6_DIR` when Qt is not already discoverable:
+### Windows setup
+
+Windows builds require the Visual Studio 2022 x64 MSVC toolchain and a matching
+Qt `msvc2022_64` kit. Do not use a MinGW, Android, WebAssembly, or ARM64 Qt kit
+with the x64 Visual Studio preset.
+
+Git and CMake can be installed from PowerShell with Windows Package Manager:
 
 ```powershell
-cmake --preset windows-release -DQt6_DIR=C:/Qt/6.11.2/msvc2022_64/lib/cmake/Qt6
-cmake --build --preset windows-release --parallel
-cmake --install build-windows-release --config Release --prefix build-windows-package
-./build-windows-package/bin/lar-viewer.exe
+winget install --id Git.Git -e
+winget install --id Kitware.CMake -e
 ```
 
-The install step deploys the required Qt runtime DLLs and plugins. The strict
-test build uses `ci-msvc`; the Windows production preset disables tests and
-tool-based quality targets:
+Close and reopen PowerShell or Windows Terminal after installation, then
+verify that the updated `PATH` is visible:
 
 ```powershell
-cmake --preset ci-msvc -DQt6_DIR=C:/Qt/6.11.2/msvc2022_64/lib/cmake/Qt6
+git --version
+cmake --version
+```
+
+Install Visual Studio 2022 or Visual Studio 2022 Build Tools with the
+**Desktop development with C++** workload, MSVC v143, and a Windows 10 or 11
+SDK. A Developer PowerShell or Native Tools command prompt for VS 2022 is
+recommended. Ninja is not required by the Windows presets.
+
+Install Qt through the Qt Online Installer or Maintenance Tool and select
+**MSVC 2022 64-bit**. A typical minimum-version installation is:
+
+```text
+C:\Qt\6.10.3\msvc2022_64
+```
+
+Verify the kit's CMake package directly:
+
+```powershell
+Test-Path "C:\Qt\6.10.3\msvc2022_64\lib\cmake\Qt6\Qt6Config.cmake"
+```
+
+`True` confirms that the selected kit exists. If its location is unknown, list
+the installed Qt 6 package files:
+
+```powershell
+Get-ChildItem C:\Qt -Recurse -Filter Qt6Config.cmake -ErrorAction SilentlyContinue
+```
+
+The presence of a version directory alone does not prove that its
+`msvc2022_64` component is installed.
+
+### Windows release build
+
+`Qt6_DIR` tells CMake where to find the Qt package. Some build-time helpers are
+also linked against Qt, so the matching Qt `bin` directory must be available on
+the current process `PATH` before the build runs. `Qt6_DIR` does not update
+`PATH` by itself.
+
+Using the minimum supported Qt version:
+
+```powershell
+$env:Path = "C:\Qt\6.10.3\msvc2022_64\bin;$env:Path"
+
+cmake --preset windows-release `
+  -DQt6_DIR=C:/Qt/6.10.3/msvc2022_64/lib/cmake/Qt6
+
+cmake --build --preset windows-release --parallel
+```
+
+The preset writes the Visual Studio build tree to `build-windows-release` and
+builds the `Release` configuration. If another compatible Qt version is
+installed, use that same version in both paths. For example:
+
+```powershell
+$env:Path = "C:\Qt\6.11.2\msvc2022_64\bin;$env:Path"
+
+cmake --preset windows-release `
+  -DQt6_DIR=C:/Qt/6.11.2/msvc2022_64/lib/cmake/Qt6
+```
+
+### Windows packaging and deployment
+
+Install the successful release build into a deployable directory. Qt's Windows
+deployment script requires an **absolute** installation prefix; a bare relative
+`--prefix build-windows-package` can produce an invalid relative `qt.conf`
+deployment path.
+
+```powershell
+$packageDir = Join-Path $PWD.Path "build-windows-package"
+
+cmake --install build-windows-release `
+  --config Release `
+  --prefix "$packageDir"
+
+.\build-windows-package\bin\lar-viewer.exe
+```
+
+The install step copies the application and deploys its required Qt runtime
+DLLs and plugins. To deliberately recreate only that package directory:
+
+```powershell
+Remove-Item -Recurse -Force build-windows-package -ErrorAction SilentlyContinue
+
+$packageDir = Join-Path $PWD.Path "build-windows-package"
+
+cmake --install build-windows-release `
+  --config Release `
+  --prefix "$packageDir"
+```
+
+The complete Windows release workflow is therefore:
+
+```powershell
+$env:Path = "C:\Qt\6.10.3\msvc2022_64\bin;$env:Path"
+
+cmake --preset windows-release `
+  -DQt6_DIR=C:/Qt/6.10.3/msvc2022_64/lib/cmake/Qt6
+
+cmake --build --preset windows-release --parallel
+
+$packageDir = Join-Path $PWD.Path "build-windows-package"
+cmake --install build-windows-release `
+  --config Release `
+  --prefix "$packageDir"
+
+.\build-windows-package\bin\lar-viewer.exe
+```
+
+### Windows strict test build
+
+The `windows-release` preset intentionally disables tests and tool-based
+quality targets. Use `ci-msvc` for a strict warnings-as-errors test build:
+
+```powershell
+$env:Path = "C:\Qt\6.10.3\msvc2022_64\bin;$env:Path"
+
+cmake --preset ci-msvc `
+  -DQt6_DIR=C:/Qt/6.10.3/msvc2022_64/lib/cmake/Qt6
+
 cmake --build --preset ci-msvc --parallel
 ctest --preset ci-msvc
 ```
 
-For a debug build, use the developer preset:
+### Windows troubleshooting
+
+If CMake cannot find `Qt6Config.cmake`, verify the exact MSVC kit path with
+`Test-Path` or `Get-ChildItem`, then pass its `lib/cmake/Qt6` directory through
+`Qt6_DIR`. Do not point the preset at `mingw_64`, `llvm-mingw_64`,
+`msvc2022_arm64`, or another target-incompatible kit.
+
+An MSBuild custom step that exits with `-1073741515` could not load a required
+runtime DLL. Restore the selected kit's `bin` directory to the current
+PowerShell `PATH`, then rerun the build:
+
+```powershell
+$env:Path = "C:\Qt\6.10.3\msvc2022_64\bin;$env:Path"
+cmake --build --preset windows-release --parallel
+```
+
+Use `cmake --build --preset windows-release --verbose` to inspect the exact
+failing command when needed.
+
+An unresolved native OpenGL symbol such as `__imp_glViewport` means the final
+link is missing the portable native OpenGL dependency. The maintained build
+uses `find_package(OpenGL REQUIRED)` and publicly links `OpenGL::GL` from the
+static presentation library so the dependency reaches the executable. Do not
+replace it with a hard-coded Windows-only `opengl32` link.
+
+### Debug build
+
+For a debug build on a Unix development host, use the developer preset:
 
 ```bash
 cmake --preset dev

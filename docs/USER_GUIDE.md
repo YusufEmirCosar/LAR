@@ -29,12 +29,22 @@ On Linux:
 On Windows:
 
 ```powershell
-./build-windows-release/Release/lar-viewer.exe
+.\build-windows-package\bin\lar-viewer.exe
+```
+
+That installed package contains the required Qt DLLs and plugins. Running the
+uninstalled Visual Studio output directly is also possible while the matching
+Qt kit is on the current process `PATH`:
+
+```powershell
+$env:Path = "C:\Qt\6.10.3\msvc2022_64\bin;$env:Path"
+.\build-windows-release\Release\lar-viewer.exe
 ```
 
 The exact output path depends on the generator and whether the project was
-installed. See the [developer guide](DEVELOPER_GUIDE.md) for build and install
-commands.
+installed. See **Windows MSVC workflow** in the
+[developer guide](DEVELOPER_GUIDE.md) for the field-tested configure, build,
+deployment, and troubleshooting procedure.
 
 ## Window layout
 

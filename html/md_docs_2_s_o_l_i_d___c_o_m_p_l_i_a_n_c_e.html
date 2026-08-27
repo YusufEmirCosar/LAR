@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2_s_o_
   <div class="headertitle"><div class="title">SOLID compliance </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md180"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md191"></a></p>
 <p>This document records the current SOLID design and the checks that protect it. SOLID is treated as a set of change-safety constraints, not a requirement to create an interface for every class.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md181"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md192"></a>
 Compliance summary</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -136,7 +136,7 @@ Compliance summary</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Dependency Inversion  </td><td class="markdownTableBodyNone">Application code owns ports; concrete Qt adapters depend inward; production selection occurs in <span class="tt">main.cpp</span>/worker factories  </td><td class="markdownTableBodyNone">Include/link architecture gate and constructor injection  </td></tr>
 </table>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md182"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md193"></a>
 Single Responsibility Principle</h1>
 <p>The major responsibilities and their single owners are:</p>
 <table class="markdownTable">
@@ -190,7 +190,7 @@ Single Responsibility Principle</h1>
 <td class="markdownTableBodyNone">OpenGL drawing  </td><td class="markdownTableBodyNone">GPU layer/renderer classes  </td></tr>
 </table>
 <p>The architecture checker caps selected orchestration files and every production <span class="tt">.cpp</span> file. A growing coordinator should be split by responsibility before a limit is raised.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md183"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md194"></a>
 Open/Closed Principle</h1>
 <p>The application core is extended through these stable seams:</p>
 <div class="mermaidgraph">
@@ -235,7 +235,7 @@ classDiagram
     EarthLarView ..|&gt; ILarViewportPage</pre>
 </div>
 <p>Adding a new implementation should not require changing the consuming service. Wiring changes belong in a composition root. Domain changes that introduce new meaning—such as a new packet field—appropriately modify the field registry and validation because that is a change to the domain contract, not merely a new implementation.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md184"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md195"></a>
 Liskov Substitution Principle</h1>
 <p>Substitutability depends on behavioral contracts, not only matching method signatures. Implementations must preserve these rules:</p>
 <ul>
@@ -251,7 +251,7 @@ Liskov Substitution Principle</h1>
 <li>Dialog cancellation is represented by an empty result and has no side effect.</li>
 </ul>
 <p><span class="tt"><a class="el" href="class_direct_application_runtime.html" title="Immediate runtime adapter used by unit tests and embedders that deliberately keep every service on on...">DirectApplicationRuntime</a></span> and <span class="tt"><a class="el" href="class_threaded_application_runtime.html" title="Production runtime with four total execution threads: the caller/UI thread plus network,...">ThreadedApplicationRuntime</a></span> are the principal LSP pair. <span class="tt">tests/runtime_contract_tests.cpp</span> and <span class="tt">tests/architecture_tests.cpp</span> run the same command/result expectations against injected and production-style compositions.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md185"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md196"></a>
 Interface Segregation Principle</h1>
 <p><span class="tt"><a class="el" href="class_i_application_runtime.html" title="Composite runtime boundary used by ApplicationFacade.">IApplicationRuntime</a></span> is a QObject event boundary, but command capabilities are split so focused consumers and fakes can depend on narrow interfaces:</p>
 <ul>
@@ -264,7 +264,7 @@ Interface Segregation Principle</h1>
 <p>Lower-level ports are also separated by use case. For example, session mutation (<span class="tt"><a class="el" href="class_i_recording_transaction.html" title="Mutable transaction used while a recording is active.">IRecordingTransaction</a></span>), immutable transfer (<span class="tt"><a class="el" href="class_i_session_snapshot.html" title="Opaque immutable recording snapshot.">ISessionSnapshot</a></span>), atomic destination IO (<span class="tt"><a class="el" href="class_i_session_persistence.html" title="Persists an immutable session snapshot to a destination.">ISessionPersistence</a></span>), and random-access playback (<span class="tt"><a class="el" href="class_i_session_reader.html" title="Loads, indexes, and decodes records without playback policy.">ISessionReader</a></span>) are four contracts. An implementation never has to depend on methods it cannot sensibly support.</p>
 <p>Do not merge these interfaces merely because one production class implements several of them. Conversely, do not introduce a new interface when a value type or pure function already provides the needed seam.</p>
 <p>That second rule is important in the <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> pipeline: <span class="tt">MapLandIndex</span>, <span class="tt"><a class="el" href="class_dted_mosaic_sampler.html" title="Samples a logical DTED mosaic while loading only addressed tiles.">DtedMosaicSampler</a></span>, and immutable terrain-patch values are focused concrete presentation helpers. They do not need application-layer ports because they do not represent external business side effects or cross the application boundary.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md186"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md197"></a>
 Dependency Inversion Principle</h1>
 <p>Application services refer to application-owned abstractions:</p>
 <div class="fragment"><div class="line">OnlineCaptureService  -&gt; IDatagramSource + IPacketDecoder</div>
@@ -279,7 +279,7 @@ Dependency Inversion Principle</h1>
 <div class="line">QtSessionPersistence      -&gt; ISessionPersistence</div>
 <div class="line">ThreadedApplicationRuntime -&gt; IApplicationRuntime</div>
 </div><!-- fragment --><p>The application target links only <span class="tt">lar-domain</span> and Qt Core. It cannot link Qt Network, Widgets, OpenGL, infrastructure, or presentation. The source checker also rejects forbidden includes, so accidental concrete construction fails the repository gate before review.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md187"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md198"></a>
 Mechanical protection</h1>
 <p>Run the focused SOLID boundary evidence:</p>
 <div class="fragment"><div class="line">python3 tools/check_architecture.py .</div>
@@ -305,7 +305,7 @@ Mechanical protection</h1>
 <li>recording drains and immutable persistence preserve packet ordering;</li>
 <li>failed policy or save replacement retains the previous valid state/data.</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md188"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md199"></a>
 Review checklist for structural changes</h1>
 <p>Before merging a refactor, answer all of these with code or test evidence:</p>
 <ol type="1">

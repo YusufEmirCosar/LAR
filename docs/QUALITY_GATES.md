@@ -43,6 +43,13 @@ AppleClang, and MSVC evidence plus representative native GPU/install results.
 | `fuzz` | Clang, libFuzzer when detected, otherwise deterministic runner | Parser/domain fuzz targets |
 | `mutation` | Clang plus matching Mull frontend | Domain/application test effectiveness |
 
+For either Windows preset, `Qt6_DIR` selects the `msvc2022_64` CMake package
+but does not put its runtime DLLs on `PATH`. Build-time helpers require the
+matching Qt `bin` directory in the current PowerShell environment. Windows
+installation must also use an absolute prefix for Qt's generated deployment
+script. See **Windows MSVC workflow** in the
+[developer guide](DEVELOPER_GUIDE.md).
+
 Typical strict local run:
 
 ```bash

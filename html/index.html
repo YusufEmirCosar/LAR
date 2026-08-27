@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('index.html',''
 <div class="textblock"><p><a class="anchor" id="md_docs_2_r_e_a_d_m_e"></a></p>
 <p>This documentation describes the behavior implemented by the current source tree: mapped UDP capture, validated state publication, bounded recording, deterministic replay, geographic and 3D presentation, and the fictional DLZ teaching model.</p>
 <p>LAR Packet Monitor is an engineering and visualization tool. It is not a certified flight, navigation, fire-control, or weapon-employment system.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md171"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md182"></a>
 Choose a path</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -149,7 +149,7 @@ Choose a path</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Prepare release evidence  </td><td class="markdownTableBodyNone"><a class="el" href="md_docs_2_q_u_a_l_i_t_y___g_a_t_e_s.html" title="Quality gates">Quality gates</a>  </td></tr>
 </table>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md172"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md183"></a>
 Five-minute start</h1>
 <p>The minimum supported toolchain is CMake 3.24, C++17, and Qt 6.10.3 with Core, Concurrent, Gui, Network, Widgets, OpenGL, and OpenGLWidgets. Test builds also need Qt Test.</p>
 <div class="fragment"><div class="line">cmake --preset release</div>
@@ -164,8 +164,9 @@ Five-minute start</h1>
 <div class="line">  --interval 50</div>
 </div><!-- fragment --><p>On macOS the viewer is an application bundle:</p>
 <div class="fragment"><div class="line">open build-release/lar-viewer.app</div>
-</div><!-- fragment --><p>See the <a class="el" href="md_docs_2_u_s_e_r___g_u_i_d_e.html" title="User guide">user guide</a> for recording, replay, <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> terrain, and DLZ workflows. See the <a class="el" href="md_docs_2_d_e_v_e_l_o_p_e_r___g_u_i_d_e.html" title="Developer guide">developer guide</a> for Windows, debug, sanitizer, and repository-check commands.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md173"></a>
+</div><!-- fragment --><p>On Windows, use the Visual Studio 2022 x64 preset with a matching Qt <span class="tt">msvc2022_64</span> kit. Set both <span class="tt">Qt6_DIR</span> for configuration and the kit's <span class="tt">bin</span> directory on <span class="tt">PATH</span> for build-time helpers, then install with an absolute package prefix so Qt can deploy its runtime correctly. Follow the complete <a class="el" href="md_docs_2_d_e_v_e_l_o_p_e_r___g_u_i_d_e.html" title="Developer guide">developer guide</a>, section <b>Windows MSVC workflow</b>; the root <a class="el" href="md__r_e_a_d_m_e.html" title="LAR Packet Monitor">README</a>, section <b>Windows setup</b>, also includes first-time installation and troubleshooting commands.</p>
+<p>See the <a class="el" href="md_docs_2_u_s_e_r___g_u_i_d_e.html" title="User guide">user guide</a> for recording, replay, <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> terrain, and DLZ workflows. See the <a class="el" href="md_docs_2_d_e_v_e_l_o_p_e_r___g_u_i_d_e.html" title="Developer guide">developer guide</a> for Windows, debug, sanitizer, and repository-check commands.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md184"></a>
 System at a glance</h1>
 <div class="fragment"><div class="line">UDP datagram</div>
 <div class="line">  -&gt; exact-address policy</div>
@@ -188,9 +189,9 @@ System at a glance</h1>
 <div class="line"> </div>
 <div class="line">tools/map_asset -&gt; map-format boundary</div>
 </div><!-- fragment --><p>The production runtime owns network, session, and persistence worker threads. <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> terrain adds a presentation-owned worker only while terrain is in use. The UI thread owns widgets and every OpenGL context.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md174"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md185"></a>
 Reference set</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md175"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md186"></a>
 Product and user behavior</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -206,7 +207,7 @@ Product and user behavior</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><a class="el" href="md_docs_2_d_l_z___m_o_d_e_l.html" title="Dynamic Launch Zone teaching model">DLZ model</a>  </td><td class="markdownTableBodyNone">Inputs, equations, supported domain, temporal presentation, and caveats  </td></tr>
 </table>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md176"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md187"></a>
 Design and implementation</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -228,7 +229,7 @@ Design and implementation</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a class="el" href="md_docs_2_f_i_l_e___r_e_f_e_r_e_n_c_e.html" title="File reference">File reference</a>  </td><td class="markdownTableBodyNone">Repository map and ownership of important files  </td></tr>
 </table>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md177"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md188"></a>
 Maintenance and assurance</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -241,13 +242,13 @@ Maintenance and assurance</h2>
 <td class="markdownTableBodyNone"><a class="el" href="md_docs_2_t_h_r_e_a_t___m_o_d_e_l.html" title="Threat model">Threat model</a>  </td><td class="markdownTableBodyNone">Trust boundaries, abuse cases, controls, budgets, and residual risk  </td></tr>
 </table>
 <p>The source asset directories also have focused notes: <a class="el" href="dir_34e9a5f624ac092a9ae2401c28d616d7.html" title="/Users/kazmetred/Yazılım/ShadyTemp/Merge/LAR/assets/README.md">asset inventory</a>, <a class="el" href="dir_783095595a6323cf3726df5c30c4d0fd.html" title="/Users/kazmetred/Yazılım/ShadyTemp/Merge/LAR/assets/map/README.md">world-map attribution</a>, and <a class="el" href="dir_5ca9a0d79b5b388ccf4ce73c53df5e24.html" title="/Users/kazmetred/Yazılım/ShadyTemp/Merge/LAR/src/testsender/README.md">test-sender tutorial</a>.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md178"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md189"></a>
 Generated API website</h1>
 <p>The Doxygen website combines these authored pages with the production C++ API. Use its <b>Classes</b>, <b>Files</b>, <b>Modules</b>, and search views when you need a symbol-level reference. Public and high-risk contracts are written next to the declaration; the guides explain how those declarations collaborate over time.</p>
 <p>Generate the site from the repository root:</p>
 <div class="fragment"><div class="line">doxygen Doxyfile</div>
 </div><!-- fragment --><p>The entry page is <span class="tt">html/index.html</span>. A configured CMake build exposes the same warning-as-error generation as the <span class="tt">check-docs</span> target.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md179"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md190"></a>
 Documentation conventions</h1>
 <ul>
 <li>Protocol values are named with their exact mapping key and unit.</li>

@@ -118,11 +118,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2_c_o_
   <div class="headertitle"><div class="title">Component and API reference </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md48"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md55"></a></p>
 <p>This is the hand-written semantic index for production types. It describes why an API exists, its important entry points, and what it collaborates with. The generated Doxygen site is the exhaustive signature-level reference, including all getters, signals, slots, private members, include graphs, and inheritance graphs.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md49"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md56"></a>
 Domain</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md50"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md57"></a>
 Packet-monitor values</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -143,7 +143,7 @@ Packet-monitor values</h2>
 <td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_state_validator.html" title="Checks finite values and semantic ranges for available state fields.">StateValidator</a></span>  </td><td class="markdownTableBodyNone"><span class="tt">validate(Plane, Target, mask)</span>, <span class="tt">validate(DecodedState)</span>  </td><td class="markdownTableBodyNone">Applies scalar rules only to available fields, then cross-field invariants such as ordered IZ radii  </td></tr>
 </table>
 <p><span class="tt"><a class="el" href="class_packet_mapping.html#ac955ded5162ee66319787462e129c407">PacketMapping::decode</a></span> reads little-endian IEEE-754 values into a temporary frame. <span class="tt"><a class="el" href="class_mapped_packet_decoder.html" title="Thin IPacketDecoder adapter around PacketMapping::decode().">MappedPacketDecoder</a></span> then invokes <span class="tt"><a class="el" href="class_state_validator.html" title="Checks finite values and semantic ranges for available state fields.">StateValidator</a></span>. A failed operation does not alter the caller's output object.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md51"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md58"></a>
 DLZ teaching domain</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -170,7 +170,7 @@ DLZ teaching domain</h2>
 <td class="markdownTableBodyNone"><span class="tt">ScenarioAdapter::build</span>  </td><td class="markdownTableBodyNone"><span class="tt">(ScenarioInputs, ScenarioFrame, error) -&gt; bool</span>  </td><td class="markdownTableBodyNone">Converts compact UI inputs into one complete domain frame  </td></tr>
 </table>
 <p>The DLZ types deliberately do not alias or reinterpret <span class="tt"><a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a></span>/<span class="tt"><a class="el" href="struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters.">Target</a></span>. Only the three <span class="tt">TelemetryInputs</span> fields join <span class="tt"><a class="el" href="struct_decoded_state.html" title="One validated mapped frame and its field-availability mask.">DecodedState</a></span>.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md52"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md59"></a>
 Application values and policy</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -190,7 +190,7 @@ Application values and policy</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_request_result_gate.html" title="Correlates one latest-wins command with either synchronous or asynchronous delivery of its typed resu...">RequestResultGate</a>&lt;Result&gt;</span>  </td><td class="markdownTableBodyNone"><span class="tt">beginDispatch</span>, <span class="tt">finishDispatch</span>, <span class="tt">receive</span>, <span class="tt">clear</span>, <span class="tt">pendingRequest</span>  </td><td class="markdownTableBodyNone">Latest-wins correlation that handles direct synchronous and queued completions identically  </td></tr>
 </table>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md53"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md60"></a>
 Application ports</h1>
 <p>Ports are owned by the application layer. Concrete classes that implement them live in infrastructure or presentation.</p>
 <table class="markdownTable">
@@ -217,7 +217,7 @@ Application ports</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_i_playback_clock.html" title="Emits playback ticks at the frame rate selected by replay policy.">IPlaybackClock</a></span>  </td><td class="markdownTableBodyNone"><span class="tt">start</span>, <span class="tt">stop</span>, <span class="tt">isActive</span>; signal <span class="tt">tick</span>  </td><td class="markdownTableBodyNone">Injectable fixed-rate replay tick scheduling  </td></tr>
 </table>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md54"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md61"></a>
 Runtime boundary</h2>
 <p><span class="tt"><a class="el" href="class_i_application_runtime.html" title="Composite runtime boundary used by ApplicationFacade.">IApplicationRuntime</a></span> combines five segregated command interfaces with a typed Qt event protocol:</p>
 <table class="markdownTable">
@@ -243,7 +243,7 @@ Runtime boundary</h2>
 <li>categorized diagnostics: <span class="tt"><a class="el" href="struct_runtime_failure.html" title="Diagnostic associated with an optional request and source epoch.">RuntimeFailure</a></span> and <span class="tt"><a class="el" href="runtime__messages_8h.html#aedc7e38af05ea6b60c793290ca15eac2" title="Stable failure category used to distinguish operational and lifecycle errors.">RuntimeFailureCode</a></span>.</li>
 </ul>
 <p><span class="tt"><a class="el" href="runtime__messages_8cpp.html#a55f67dbb7306cba8ca4380e8a858f15d" title="Registers the complete queued-delivery protocol exactly once per process.">registerRuntimeMessageTypes()</a></span> registers all values used for queued delivery.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md55"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md62"></a>
 Application services and coordinators</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -269,9 +269,9 @@ Application services and coordinators</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_direct_application_runtime.html" title="Immediate runtime adapter used by unit tests and embedders that deliberately keep every service on on...">DirectApplicationRuntime</a></span>  </td><td class="markdownTableBodyNone">Full <span class="tt"><a class="el" href="class_i_application_runtime.html" title="Composite runtime boundary used by ApplicationFacade.">IApplicationRuntime</a></span>  </td><td class="markdownTableBodyNone">Synchronous adapter for tests/embedding; preserves the same request/result protocol  </td></tr>
 </table>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md56"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md63"></a>
 Infrastructure adapters</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md57"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md64"></a>
 Mapping and network</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -287,7 +287,7 @@ Mapping and network</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_qt_udp_datagram_source.html" title="Binds a UDP port and drains all pending datagrams asynchronously.">QtUdpDatagramSource</a></span>  </td><td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_i_datagram_source.html" title="Emits complete datagrams without exposing a concrete socket API.">IDatagramSource</a></span>  </td><td class="markdownTableBodyNone">Owns <span class="tt">QUdpSocket</span>, binds, drains pending datagrams, applies sender policy, timestamps receipt  </td></tr>
 </table>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md58"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md65"></a>
 Session and timing</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -305,7 +305,7 @@ Session and timing</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_qt_playback_clock.html" title="Precise Qt timer that supplies fixed-rate playback ticks.">QtPlaybackClock</a></span>  </td><td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_i_playback_clock.html" title="Emits playback ticks at the frame rate selected by replay policy.">IPlaybackClock</a></span>  </td><td class="markdownTableBodyNone">Supplies fixed-rate ticks with a precise <span class="tt">QTimer</span>  </td></tr>
 </table>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md59"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md66"></a>
 Runtime workers</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -325,7 +325,7 @@ Runtime workers</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_playback_metrics.html" title="Owns playback-only throughput counters and rate windows.">PlaybackMetrics</a></span>  </td><td class="markdownTableBodyNone">Session thread  </td><td class="markdownTableBodyNone">Counts processed records and rate independently from online metrics  </td></tr>
 </table>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md60"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md67"></a>
 Presentation shell</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -350,7 +350,7 @@ Presentation shell</h1>
 <td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_metrics_panel.html" title="Owns telemetry indicator widgets and their presentation formatting.">MetricsPanel</a></span>  </td><td class="markdownTableBodyNone">Frame/packet setters, <span class="tt">render</span>, reset signal  </td><td class="markdownTableBodyNone">Displays UI and runtime throughput  </td></tr>
 </table>
 <p>Formatting helpers are pure: <span class="tt"><a class="el" href="class_state_value_formatter.html" title="Presentation-only conversion of a state scalar to a user-facing value.">StateValueFormatter</a></span>, <span class="tt"><a class="el" href="class_playback_time_formatter.html" title="Formats exact session timestamps for presentation.">PlaybackTimeFormatter</a></span>, <span class="tt"><a class="el" href="class_playback_timeline_mapper.html" title="Pure overflow-safe mapping between exact time and an integer slider.">PlaybackTimelineMapper</a></span>, <span class="tt"><a class="el" href="class_grid_geometry_builder.html" title="Produces display-grid primitives for the painter-based viewport.">GridGeometryBuilder</a></span>, <span class="tt"><a class="el" href="class_lar_projection.html" title="Projects latitude/longitude radians to local metric east/north axes.">LarProjection</a></span>, <span class="tt"><a class="el" href="class_lar_geometry_builder.html" title="Creates painter paths for in-range and in-zone LAR geometry.">LarGeometryBuilder</a></span>, and <span class="tt"><a class="el" href="class_lar_geodesic_geometry.html" title="Builds geodesic rings and sector arcs around a geographic center.">LarGeodesicGeometry</a></span>.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md61"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md68"></a>
 Map subsystem</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -375,7 +375,7 @@ Map subsystem</h1>
 <td class="markdownTableBodyNone"><span class="tt">EarthMapWidget</span>  </td><td class="markdownTableBodyNone">Mesh installation, camera operations, interaction  </td><td class="markdownTableBodyNone">OpenGL widget delegating actual drawing to the renderer  </td></tr>
 </table>
 <p><span class="tt"><a class="el" href="map__asset__format_8h.html" title="Versioned binary .larmap header layout and field offsets.">map_asset_format.h</a></span>, <span class="tt"><a class="el" href="map__asset__limits_8h.html" title="Hard resource and coordinate limits for untrusted map assets.">map_asset_limits.h</a></span>, <span class="tt"><a class="el" href="map__mesh_8h.html" title="CPU-side vertex/index representation shared by tools and renderer.">map_mesh.h</a></span>, <span class="tt"><a class="el" href="map__palette_8h.html" title="Centralized normalized RGBA colors for world-map rendering.">map_palette.h</a></span>, and <span class="tt"><a class="el" href="map__shaders_8h.html" title="Embedded legacy and core-profile GLSL map shader sources.">map_shaders.h</a></span> centralize binary constants, resource bounds, CPU mesh data, colors, and embedded GLSL respectively.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md62"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md69"></a>
 LAR viewport subsystem</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -424,7 +424,7 @@ LAR viewport subsystem</h1>
 <td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_lar_view_fit.html" title="Stateless camera-fit calculations with dateline awareness.">LarViewFit</a></span>  </td><td class="markdownTableBodyNone">Mercator and sphere fits  </td><td class="markdownTableBodyNone">Pure camera fit policy for available LAR coordinates  </td></tr>
 </table>
 <p>Resource limits live in <span class="tt"><a class="el" href="lar__zone__mesh__limits_8h.html" title="Central memory, complexity, radius, and accuracy bounds for zone meshes.">lar_zone_mesh_limits.h</a></span> and <span class="tt"><a class="el" href="map__asset__limits_8h.html" title="Hard resource and coordinate limits for untrusted map assets.">map_asset_limits.h</a></span>; renderers never allocate directly from untrusted counts.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md63"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md70"></a>
 Plane visualization subsystem</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -456,7 +456,7 @@ Plane visualization subsystem</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt"><a class="el" href="struct_plane_model_mesh.html" title="Interleaved position/normal/UV vertices, textures, and material draw ranges.">PlaneModelMesh</a></span> / <span class="tt"><a class="el" href="struct_cubemap_faces.html">CubemapFaces</a></span>  </td><td class="markdownTableBodyNone">Immutable CPU values  </td><td class="markdownTableBodyNone">Validated geometry, decoded textures, sampler state, and cubemap handoff to the context-owned renderer  </td></tr>
 </table>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md64"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md71"></a>
 Plane terrain pipeline</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -477,7 +477,7 @@ Plane terrain pipeline</h2>
 <td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_plane_terrain_gpu_layer.html" title="Uploads terrain only from an active paint context and retains CPU data across GL loss.">PlaneTerrainGpuLayer</a></span>  </td><td class="markdownTableBodyNone"><span class="tt">initialize</span>, <span class="tt">install</span>, <span class="tt">draw</span>, <span class="tt">cleanup</span>  </td><td class="markdownTableBodyNone">Context-thread terrain buffer/texture ownership and separate land/water passes  </td></tr>
 </table>
 <p>The model uses nose <span class="tt">-Z</span>, right wing <span class="tt">+X</span>, and up <span class="tt">+Y</span>. <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> yaw, pitch, and roll arrive in radians and are applied without translating the aircraft. The optional tactical surface uses aircraft position as its local metric origin, interprets the unchanged model's forward extent as 15 m, and expands the ground and overlays around it. Available altitude sets the ground's vertical distance; the first valid geographic position anchors grid lines so later aircraft motion slides the ground beneath the centered model. This does not reintroduce a spherical Earth or a translated aircraft model.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md65"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md72"></a>
 DLZ presentation</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -497,7 +497,7 @@ DLZ presentation</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt">RenderFixture</span> helpers  </td><td class="markdownTableBodyNone">Named fixture lookup  </td><td class="markdownTableBodyNone">Deterministic visual/test states  </td></tr>
 </table>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md66"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md73"></a>
 Build-time map compiler</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">

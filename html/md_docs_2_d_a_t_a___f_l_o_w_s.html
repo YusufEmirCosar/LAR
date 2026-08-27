@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2_d_a_
   <div class="headertitle"><div class="title">Runtime data flows </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md79"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md86"></a></p>
 <p>These UML sequence diagrams show the main success paths and the guards that change them. Error paths return through the same typed completion or <span class="tt"><a class="el" href="struct_runtime_failure.html" title="Diagnostic associated with an optional request and source epoch.">RuntimeFailure</a></span> channel; output state is retained unless a complete operation succeeds.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md80"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md87"></a>
 Mapping installation and online activation</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -161,7 +161,7 @@ sequenceDiagram
     L--&gt;&gt;F: onlineStateChanged</pre>
 </div>
 <p>Mapping and policy replacement are rejected while capture is active. A failed load leaves the previous mapping installed. A failed policy replacement leaves the previous applied policy visible and active.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md81"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md88"></a>
 Datagram acceptance and presentation</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -203,7 +203,7 @@ sequenceDiagram
     end</pre>
 </div>
 <p>Every accepted raw packet remains eligible for recording even when visual publication is coalesced. A rejected packet affects neither the view model nor the recording transaction.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md82"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md89"></a>
 Recording append and backpressure</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -227,7 +227,7 @@ sequenceDiagram
     RW--&gt;&gt;N: acknowledgeRecordingBatch(batchId)</pre>
 </div>
 <p>At most eight batches are outstanding. The network side caps a batch at 2 MiB and buffered recording input at 32 MiB. If the session side cannot keep up, recording input pauses with a diagnostic rather than growing without bound. UDP display processing can continue.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md83"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md90"></a>
 Snapshot barrier</h1>
 <p>Snapshot, pause, reset, discard, and final save all use the same ordered drain barrier. Snapshot differs because post-boundary accepted packets are retained and recording resumes after the immutable prefix is captured.</p>
 <div class="mermaidgraph">
@@ -272,7 +272,7 @@ sequenceDiagram
     end</pre>
 </div>
 <p>For final save, <span class="tt">preserveIncoming</span> is false. Successful persistence completes the transaction; the facade then completes the requested online stop. Failure retains the transaction and existing destination for retry.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md84"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md91"></a>
 Offline source transition and playback</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -321,7 +321,7 @@ sequenceDiagram
     end</pre>
 </div>
 <p>Seek uses a binary search for the last timestamp at or before the requested position. Normal replay does not decode intermediate records between sampled positions. With Repeat enabled, the newly calculated cursor is reduced modulo the final timestamp before every binary search, preserving any overshoot even across multiple loops. Without Repeat, passing the final timestamp publishes completion. The separate Burst widget is an inert placeholder and dispatches no runtime command.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md85"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md92"></a>
 Source epoch rejection</h1>
 <p>Queued Qt delivery means an old worker event can physically arrive after a new source becomes active. Epoch checking makes this harmless.</p>
 <div class="mermaidgraph">
@@ -340,7 +340,7 @@ sequenceDiagram
     L-&gt;&gt;VM: accepts atomic state</pre>
 </div>
 <p>Request IDs protect command completions; source epochs protect continuing publications. They solve different races and both are required.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md86"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md93"></a>
 Build-time and runtime map flow</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -371,7 +371,7 @@ sequenceDiagram
     V--&gt;&gt;L: completeInstallation(revision, installed)</pre>
 </div>
 <p>The runtime never parses GeoJSON. The version-2 package carries both rendering geometry and the one-degree land index, so Earth and <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> share one validated coastline source. Revisions prevent a late asynchronous result from installing after invalidation or a newer request.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md87"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md94"></a>
 Plane terrain request and installation</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -400,7 +400,7 @@ sequenceDiagram
 </div>
 <p>Normal requests are aircraft-centered, use an odd 49–257 sample resolution, and clamp half-extent to 20–60 km. The builder also applies defensive 1–100 km and 17–257 limits. A patch can be reused while the aircraft remains within 35% of its half-extent, at least 90% of the requested area is covered, and scene scale still matches. Failed locations are not retried until movement exceeds the larger of 5 km or 35% of the request extent.</p>
 <p>A DT1/DT2 source change is transactional: the selected addressed cell must parse before the worker is replaced. Failure therefore preserves the previous source and visible patch. Missing terrain never creates a land-coloured flat fallback; tactical overlays may remain visible without an opaque ground.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md88"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md95"></a>
 LAR zone preparation and drawing</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -415,7 +415,7 @@ flowchart LR
     MESH --&gt; GPU[&quot;LarZoneGpuLayer fallback&quot;]</pre>
 </div>
 <p>The parametric shader path is primary. The CPU worker path produces the same bounded geodesic definitions for fallback and tests. Inputs are rejected before allocation if fields, coordinates, radii, or counts violate central limits.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md89"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md96"></a>
 DLZ input arbitration</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">

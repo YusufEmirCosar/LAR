@@ -139,7 +139,8 @@ Architecture</h1>
 <p>The production runtime has network, session, and persistence worker threads in addition to the UI thread. The direct runtime implements the same command-acceptance/completion contract for deterministic tests. See the <a class="el" href="md__project_specification.html" title="LAR Packet Monitor project specification">project specification</a>, <a class="el" href="md_docs_2_a_r_c_h_i_t_e_c_t_u_r_e.html" title="Architecture">architecture</a>, <a class="el" href="md_docs_2_s_o_l_i_d___c_o_m_p_l_i_a_n_c_e.html" title="SOLID compliance">SOLID compliance record</a>, fixed <a class="el" href="md_docs_2_p_r_o_t_o_c_o_l___u_n_i_t_s.html" title="Packet protocol and units">protocol unit contract</a>, <a class="el" href="md_docs_2_c_o_n_c_u_r_r_e_n_c_y___m_o_d_e_l.html" title="Concurrency model">concurrency model</a>, exact <a class="el" href="md_docs_2_l_a_r1___f_o_r_m_a_t.html" title="LAR1 session format"><span class="tt">LAR1</span> format</a>, <a class="el" href="md_docs_2_t_h_r_e_a_t___m_o_d_e_l.html" title="Threat model">threat model</a>, <a class="el" href="dir_783095595a6323cf3726df5c30c4d0fd.html" title="/Users/kazmetred/Yazılım/ShadyTemp/Merge/LAR/assets/map/README.md">map asset guide</a>, detailed <a class="el" href="md_docs_2_t_e_r_r_a_i_n___a_n_d___a_s_s_e_t_s.html" title="Terrain and asset pipeline">terrain and asset guide</a>, and current <a class="el" href="md_docs_2_q_u_a_l_i_t_y___g_a_t_e_s.html" title="Quality gates">quality gates</a>.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
 Build</h1>
-<p>Requirements on every platform: CMake 3.24+, Qt 6.10.3+ with Core, Concurrent, Gui, Network, Widgets, OpenGL, and OpenGLWidgets, an OpenGL-capable system, and a C++17 compiler. The Qt kit must match the target platform and architecture. Presets with <span class="tt">BUILD_TESTING=ON</span> additionally require Qt Test. Presets with <span class="tt">LAR_ENABLE_QUALITY_TARGETS=ON</span> require Python 3; this is the default for the Unix release/developer/CI presets and for <span class="tt">ci-msvc</span>, while <span class="tt">windows-release</span> disables both options. The Unix presets use Ninja; the Windows presets use Visual Studio 2022 and its x64 MSVC toolchain.</p>
+<p>Requirements on every platform: CMake 3.24+, Qt 6.10.3+ with Core, Concurrent, Gui, Network, Widgets, and OpenGLWidgets, native OpenGL development/runtime support, and a C++17 compiler. The Qt kit must match the target platform, architecture, and compiler. Presets with <span class="tt">BUILD_TESTING=ON</span> additionally require Qt Test. Presets with <span class="tt">LAR_ENABLE_QUALITY_TARGETS=ON</span> require Python 3; this is the default for the Unix release/developer/CI presets and for <span class="tt">ci-msvc</span>, while <span class="tt">windows-release</span> disables both options. The Unix presets use Ninja; the Windows presets use Visual Studio 2022 and its x64 MSVC toolchain.</p>
+<p>The presentation library calls native OpenGL functions and links CMake's portable <span class="tt">OpenGL::GL</span> target. CMake resolves that target to OpenGL32 on Windows, the OpenGL framework on macOS, and the available system OpenGL or GLVND implementation on Linux.</p>
 <p>Platform prerequisites:</p>
 <ul>
 <li>Windows: Windows 10 or 11 x64; Visual Studio 2022 or Visual Studio 2022 Build Tools with the <b>Desktop development with C++</b> workload, MSVC v143, and a Windows 10/11 SDK. Install the Qt <span class="tt">msvc2022_64</span> kit. A Developer PowerShell or Native Tools command prompt for VS 2022 is recommended. Ninja is not required by the Windows presets.</li>
@@ -159,29 +160,106 @@ Build</h1>
 <td class="markdownTableBodyNone">Windows  </td><td class="markdownTableBodyNone">Visual Studio 2022 MSVC, warnings-as-errors  </td><td class="markdownTableBodyNone">6.11.2  </td></tr>
 </table>
 <p>Qt 6.10.3 is the source/API minimum. The only checked-in CI workflow currently covers Windows/MSVC with Qt 6.11.2; the GCC, Clang, and AppleClang rows describe evidence still required for a cross-platform release, not jobs that presently exist. A platform/version outside the matrix may build, but is not release evidence until its strict and GPU results are obtained. See Qt's official <a href="https://doc.qt.io/qt-6/qt-releases.html">release-support table</a> and <a href="https://www.qt.io/blog/qt-6.11.2-released">Qt 6.11.2 release notice</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
+Unix release build</h2>
 <p>Configure from the <span class="tt">LAR/</span> project root. The build deterministically compiles <span class="tt">assets/map/world_boundaries.geojson</span> into a validated <span class="tt">lar_world_map.larmap</span>, packages it with the F-16 GLB and cubemap catalog beside the executable, and keeps all source-parser/compiler code outside the runtime link graph:</p>
 <div class="fragment"><div class="line">cmake --preset release</div>
 <div class="line">cmake --build --preset release --parallel</div>
 <div class="line">ctest --preset release</div>
 </div><!-- fragment --><p>On macOS:</p>
 <div class="fragment"><div class="line">open build-release/lar-viewer.app</div>
-</div><!-- fragment --><p>On Windows, install the matching <span class="tt">msvc2022_64</span> Qt kit and configure the production-only preset. Pass <span class="tt">Qt6_DIR</span> when Qt is not already discoverable:</p>
-<div class="fragment"><div class="line">cmake --preset windows-release -DQt6_DIR=C:/Qt/6.11.2/msvc2022_64/lib/cmake/Qt6</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
+Windows setup</h2>
+<p>Windows builds require the Visual Studio 2022 x64 MSVC toolchain and a matching Qt <span class="tt">msvc2022_64</span> kit. Do not use a MinGW, Android, WebAssembly, or ARM64 Qt kit with the x64 Visual Studio preset.</p>
+<p>Git and CMake can be installed from PowerShell with Windows Package Manager:</p>
+<div class="fragment"><div class="line">winget install --id Git.Git -e</div>
+<div class="line">winget install --id Kitware.CMake -e</div>
+</div><!-- fragment --><p>Close and reopen PowerShell or Windows Terminal after installation, then verify that the updated <span class="tt">PATH</span> is visible:</p>
+<div class="fragment"><div class="line">git --version</div>
+<div class="line">cmake --version</div>
+</div><!-- fragment --><p>Install Visual Studio 2022 or Visual Studio 2022 Build Tools with the <b>Desktop development with C++</b> workload, MSVC v143, and a Windows 10 or 11 SDK. A Developer PowerShell or Native Tools command prompt for VS 2022 is recommended. Ninja is not required by the Windows presets.</p>
+<p>Install Qt through the Qt Online Installer or Maintenance Tool and select <b>MSVC 2022 64-bit</b>. A typical minimum-version installation is:</p>
+<div class="fragment"><div class="line">C:\Qt\6.10.3\msvc2022_64</div>
+</div><!-- fragment --><p>Verify the kit's CMake package directly:</p>
+<div class="fragment"><div class="line">Test-Path &quot;C:\Qt\6.10.3\msvc2022_64\lib\cmake\Qt6\Qt6Config.cmake&quot;</div>
+</div><!-- fragment --><p><span class="tt">True</span> confirms that the selected kit exists. If its location is unknown, list the installed Qt 6 package files:</p>
+<div class="fragment"><div class="line">Get-ChildItem C:\Qt -Recurse -Filter Qt6Config.cmake -ErrorAction SilentlyContinue</div>
+</div><!-- fragment --><p>The presence of a version directory alone does not prove that its <span class="tt">msvc2022_64</span> component is installed.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
+Windows release build</h2>
+<p><span class="tt">Qt6_DIR</span> tells CMake where to find the Qt package. Some build-time helpers are also linked against Qt, so the matching Qt <span class="tt">bin</span> directory must be available on the current process <span class="tt">PATH</span> before the build runs. <span class="tt">Qt6_DIR</span> does not update <span class="tt">PATH</span> by itself.</p>
+<p>Using the minimum supported Qt version:</p>
+<div class="fragment"><div class="line">$env:Path = &quot;C:\Qt\6.10.3\msvc2022_64\bin;$env:Path&quot;</div>
+<div class="line"> </div>
+<div class="line">cmake --preset windows-release `</div>
+<div class="line">  -DQt6_DIR=C:/Qt/6.10.3/msvc2022_64/lib/cmake/Qt6</div>
+<div class="line"> </div>
 <div class="line">cmake --build --preset windows-release --parallel</div>
-<div class="line">cmake --install build-windows-release --config Release --prefix build-windows-package</div>
-<div class="line">./build-windows-package/bin/lar-viewer.exe</div>
-</div><!-- fragment --><p>The install step deploys the required Qt runtime DLLs and plugins. The strict test build uses <span class="tt">ci-msvc</span>; the Windows production preset disables tests and tool-based quality targets:</p>
-<div class="fragment"><div class="line">cmake --preset ci-msvc -DQt6_DIR=C:/Qt/6.11.2/msvc2022_64/lib/cmake/Qt6</div>
+</div><!-- fragment --><p>The preset writes the Visual Studio build tree to <span class="tt">build-windows-release</span> and builds the <span class="tt">Release</span> configuration. If another compatible Qt version is installed, use that same version in both paths. For example:</p>
+<div class="fragment"><div class="line">$env:Path = &quot;C:\Qt\6.11.2\msvc2022_64\bin;$env:Path&quot;</div>
+<div class="line"> </div>
+<div class="line">cmake --preset windows-release `</div>
+<div class="line">  -DQt6_DIR=C:/Qt/6.11.2/msvc2022_64/lib/cmake/Qt6</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
+Windows packaging and deployment</h2>
+<p>Install the successful release build into a deployable directory. Qt's Windows deployment script requires an <b>absolute</b> installation prefix; a bare relative <span class="tt">--prefix build-windows-package</span> can produce an invalid relative <span class="tt">qt.conf</span> deployment path.</p>
+<div class="fragment"><div class="line">$packageDir = Join-Path $PWD.Path &quot;build-windows-package&quot;</div>
+<div class="line"> </div>
+<div class="line">cmake --install build-windows-release `</div>
+<div class="line">  --config Release `</div>
+<div class="line">  --prefix &quot;$packageDir&quot;</div>
+<div class="line"> </div>
+<div class="line">.\build-windows-package\bin\lar-viewer.exe</div>
+</div><!-- fragment --><p>The install step copies the application and deploys its required Qt runtime DLLs and plugins. To deliberately recreate only that package directory:</p>
+<div class="fragment"><div class="line">Remove-Item -Recurse -Force build-windows-package -ErrorAction SilentlyContinue</div>
+<div class="line"> </div>
+<div class="line">$packageDir = Join-Path $PWD.Path &quot;build-windows-package&quot;</div>
+<div class="line"> </div>
+<div class="line">cmake --install build-windows-release `</div>
+<div class="line">  --config Release `</div>
+<div class="line">  --prefix &quot;$packageDir&quot;</div>
+</div><!-- fragment --><p>The complete Windows release workflow is therefore:</p>
+<div class="fragment"><div class="line">$env:Path = &quot;C:\Qt\6.10.3\msvc2022_64\bin;$env:Path&quot;</div>
+<div class="line"> </div>
+<div class="line">cmake --preset windows-release `</div>
+<div class="line">  -DQt6_DIR=C:/Qt/6.10.3/msvc2022_64/lib/cmake/Qt6</div>
+<div class="line"> </div>
+<div class="line">cmake --build --preset windows-release --parallel</div>
+<div class="line"> </div>
+<div class="line">$packageDir = Join-Path $PWD.Path &quot;build-windows-package&quot;</div>
+<div class="line">cmake --install build-windows-release `</div>
+<div class="line">  --config Release `</div>
+<div class="line">  --prefix &quot;$packageDir&quot;</div>
+<div class="line"> </div>
+<div class="line">.\build-windows-package\bin\lar-viewer.exe</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
+Windows strict test build</h2>
+<p>The <span class="tt">windows-release</span> preset intentionally disables tests and tool-based quality targets. Use <span class="tt">ci-msvc</span> for a strict warnings-as-errors test build:</p>
+<div class="fragment"><div class="line">$env:Path = &quot;C:\Qt\6.10.3\msvc2022_64\bin;$env:Path&quot;</div>
+<div class="line"> </div>
+<div class="line">cmake --preset ci-msvc `</div>
+<div class="line">  -DQt6_DIR=C:/Qt/6.10.3/msvc2022_64/lib/cmake/Qt6</div>
+<div class="line"> </div>
 <div class="line">cmake --build --preset ci-msvc --parallel</div>
 <div class="line">ctest --preset ci-msvc</div>
-</div><!-- fragment --><p>For a debug build, use the developer preset:</p>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
+Windows troubleshooting</h2>
+<p>If CMake cannot find <span class="tt">Qt6Config.cmake</span>, verify the exact MSVC kit path with <span class="tt">Test-Path</span> or <span class="tt">Get-ChildItem</span>, then pass its <span class="tt">lib/cmake/Qt6</span> directory through <span class="tt">Qt6_DIR</span>. Do not point the preset at <span class="tt">mingw_64</span>, <span class="tt">llvm-mingw_64</span>, <span class="tt">msvc2022_arm64</span>, or another target-incompatible kit.</p>
+<p>An MSBuild custom step that exits with <span class="tt">-1073741515</span> could not load a required runtime DLL. Restore the selected kit's <span class="tt">bin</span> directory to the current PowerShell <span class="tt">PATH</span>, then rerun the build:</p>
+<div class="fragment"><div class="line">$env:Path = &quot;C:\Qt\6.10.3\msvc2022_64\bin;$env:Path&quot;</div>
+<div class="line">cmake --build --preset windows-release --parallel</div>
+</div><!-- fragment --><p>Use <span class="tt">cmake --build --preset windows-release --verbose</span> to inspect the exact failing command when needed.</p>
+<p>An unresolved native OpenGL symbol such as <span class="tt">__imp_glViewport</span> means the final link is missing the portable native OpenGL dependency. The maintained build uses <span class="tt">find_package(OpenGL REQUIRED)</span> and publicly links <span class="tt">OpenGL::GL</span> from the static presentation library so the dependency reaches the executable. Do not replace it with a hard-coded Windows-only <span class="tt">opengl32</span> link.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
+Debug build</h2>
+<p>For a debug build on a Unix development host, use the developer preset:</p>
 <div class="fragment"><div class="line">cmake --preset dev</div>
 <div class="line">cmake --build --preset dev --parallel</div>
 <div class="line">ctest --preset dev</div>
 </div><!-- fragment --><p>On macOS:</p>
 <div class="fragment"><div class="line">open build-dev/lar-viewer.app</div>
 </div><!-- fragment --><p>Preset build directories contain different compiled outputs of the same source tree. They are not separate projects. List all configure/build/test presets with <span class="tt">cmake --list-presets=all</span>.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
 Quality presets and gates</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -224,7 +302,7 @@ Quality presets and gates</h2>
 </div><!-- fragment --><p>Mutation analysis requires a Mull IR frontend built for the selected Clang. Set <span class="tt">LAR_MULL_IR_FRONTEND</span> if it is not in a standard system path:</p>
 <div class="fragment"><div class="line">cmake --preset mutation -DLAR_MULL_IR_FRONTEND=/path/to/mull-ir-frontend</div>
 <div class="line">cmake --build --preset mutation --target check-mutation</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
 Online Mode</h1>
 <ol type="1">
 <li>Select <b>Online</b>.</li>
@@ -244,7 +322,7 @@ Online Mode</h1>
 <div class="line">]</div>
 </div><!-- fragment --><p><span class="tt">name</span> is an exact <span class="tt"><a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a></span> or <span class="tt"><a class="el" href="struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters.">Target</a></span> member name. <span class="tt">index</span> selects an array element and is zero for scalar members. <span class="tt">offset</span> is the byte offset in the UDP package. <span class="tt">size: 4</span> means little-endian IEEE-754 float and <span class="tt">size: 8</span> means little-endian IEEE-754 double.</p>
 <p>Entries may be reordered and members may be omitted. Omitted members appear as <span class="tt">N/A</span>. The supplied <a href="maps/full-state.json">full-state.json</a> demonstrates a complete reordered mapping.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
 Test Sender</h1>
 <div class="fragment"><div class="line">./build/lar-test-sender \</div>
 <div class="line">  --map maps/full-state.json \</div>
@@ -264,7 +342,7 @@ Test Sender</h1>
 <div class="line">./build/lar-test-sender --map maps/full-state-dlz.json \</div>
 <div class="line">  --scenario dlz-aspect-sweep --count 200 --interval 50</div>
 </div><!-- fragment --><p><span class="tt">lar-custom-test-sender</span> is a separately compiled, non-installed source template for custom state updates and malformed datagram tests. See the <a class="el" href="dir_5ca9a0d79b5b388ccf4ce73c53df5e24.html" title="/Users/kazmetred/Yazılım/ShadyTemp/Merge/LAR/src/testsender/README.md">test sender tutorial</a> for scenario details, units, mapping behavior, extension steps, and testing examples.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
 Offline Mode</h1>
 <ol type="1">
 <li>Select <b>Offline</b>.</li>
@@ -275,7 +353,7 @@ Offline Mode</h1>
 <p>Normal replay samples the session at 60 frames per second. Each sample advances the exact cursor by <span class="tt">(1 / 60) * rate</span> seconds, binary-searches for the latest entry strictly before that cursor, and displays only that entry. Stored entries between presentation samples are not decoded in sequence.</p>
 <p>The separate <b>Burst</b> panel is reserved for future whole-file statistics. Its wide lightning-icon button is currently disabled and does not affect replay or the displayed state.</p>
 <p>The mapping is embedded in the <span class="tt">.<a class="el" href="namespacelar.html">lar</a></span> file. No external JSON mapping is used during replay.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
 <span class="tt">.lar</span> Format</h1>
 <p>All fixed integers are little-endian.</p>
 <div class="fragment"><div class="line">File:</div>
@@ -290,10 +368,10 @@ Offline Mode</h1>
 <div class="line">8       4     uint32 UDP package size</div>
 <div class="line">12      N     Original validated UDP package bytes</div>
 </div><!-- fragment --><p>The package-section offset determines JSON length. Size-framed records preserve UDP boundaries, variable package lengths, trailing bytes, and original arrival timing.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
 Current Values</h1>
 <p>All 21 legacy <span class="tt"><a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a></span> and <span class="tt"><a class="el" href="struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters.">Target</a></span> members plus the three mapped DLZ inputs are listed in the <b>Current Values</b> column on the right while LAR content is active. <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> mode retitles the same packet-value stack <b><a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> Telemetry</b>; DLZ mode replaces it with the DLZ inputs and calculated values. Selecting LAR restores Current Values. Controls remain permanently on the left; neither side column can minimize, close, move, detach, or float.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
 LAR Display</h1>
 <p>The LAR display occupies the central window. The <b>Viewport</b> controls select one of three presentations:</p>
 <ul>
@@ -309,7 +387,7 @@ LAR Display</h1>
 </ul>
 <p>Dragging a followed view changes it to Free movement. The mouse wheel changes zoom, and double-click fits the current LAR data without changing the selected camera mode. IR and IZ geometry is drawn whenever the active mapping provides the required position, angle, and range values.</p>
 <p>Diagnostics are reported through the status bar so no secondary window can cover the LAR display.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md31"></a>
 Plane visualization</h1>
 <p>The top-centre <b>LAR | PLANE | DLZ</b> switch opens the <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> workspace without changing the selected LAR projection or camera. It renders the packaged F-16 from behind and above while applying the current yaw, pitch, and roll telemetry. The aircraft stays at the scene origin; this is an attitude and orientation visualization, not a translational flight simulator.</p>
 <p>The aircraft is surrounded by the selected cubemap. The <b>Skybox</b> button in the lower-right display box advances through every valid packaged six-face set and wraps back to the first set.</p>
@@ -329,7 +407,7 @@ Plane visualization</h1>
 <div class="fragment"><div class="line">cmake --build build-release --target larplane-view-tests lar-plane-view-gpu-tests</div>
 <div class="line">QT_QPA_PLATFORM=offscreen build-release/larplane-view-tests</div>
 <div class="line">LAR_RUN_PLANE_GPU_TESTS=1 build-release/lar-plane-view-gpu-tests</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
 Dynamic Launch Zone (DLZ)</h1>
 <p>The top-centre <b>LAR | PLANE | DLZ</b> switch selects the central viewport content. The <span class="tt">DLZ</span> page is a deliberately narrow air-to-air Dynamic Launch Zone lab: it draws the vertical range staple, RMAX/RPI/RNE/RMIN ticks, the NEZ band, a filtered current-range caret, and the stateful <span class="tt">SHOOT</span> cue. It is not a full F-16 cockpit display and its ranges are fictional outputs from the exact toy equations in the <a class="el" href="md_docs_2_d_l_z___m_o_d_e_l.html" title="Dynamic Launch Zone teaching model">DLZ model reference</a>. The mapped UDP/offline input contract and two-source behavior are illustrated in the <a class="el" href="md_docs_2_d_a_t_a___f_l_o_w_s.html" title="Runtime data flows">runtime data flows</a>.</p>
 <p>When DLZ is selected, the right-hand <b>DLZ Values</b> column replaces Current Values with two exclusive choices at the top: <b>UDP / Offline Replay</b> and <b>Calculation Test</b>. The first choice shows the latest complete trio from UDP or embedded replay data and has no visible sliders. The second exposes only range/aspect/altitude sliders and draws exclusively from them; incoming packets and replay operations are cached but cannot change that drawing. Both choices use the same calculated geometry and DLZ ranges. Invalid combinations keep readouts updated, clear the canvas, and show a persistent domain error until valid again. Named UDP scenarios live in <a href="src/testsender/scenarios.cpp"><span class="tt">src/testsender/scenarios.cpp</span></a>.</p>

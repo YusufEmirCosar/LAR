@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2_q_u_
   <div class="headertitle"><div class="title">Quality gates </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md156"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md167"></a></p>
 <p>This page distinguishes checks that the repository can run from checks that the currently committed GitHub workflow actually runs. A configured target is not release evidence until a suitable runner executes and retains its result.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md157"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md168"></a>
 Current automated evidence</h1>
 <p><span class="tt">.github/workflows/windows.yml</span> is the only checked-in workflow. On pushes, pull requests, and manual dispatch it uses <span class="tt">windows-latest</span>, MSVC 2022, and Qt 6.11.2 to:</p>
 <ol type="1">
@@ -131,7 +131,7 @@ Current automated evidence</h1>
 </ol>
 <p>The workflow uses read-only repository permissions and pins third-party actions to full commit hashes. It does <b>not</b> currently automate Linux, macOS, GCC, Clang, sanitizers, coverage, fuzzing, mutation, documentation generation, dependency vulnerability scanning, native GPU execution, or the extended soak. Those capabilities are described below because they are implemented locally, not because CI presently supplies their evidence.</p>
 <p>Qt 6.10.3 is the source/API and installed-SBOM minimum. The Windows workflow uses Qt 6.11.2. A cross-platform release should obtain strict GCC, Clang, AppleClang, and MSVC evidence plus representative native GPU/install results.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md158"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md169"></a>
 Configure and test presets</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -161,12 +161,13 @@ Configure and test presets</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">mutation</span>  </td><td class="markdownTableBodyNone">Clang plus matching Mull frontend  </td><td class="markdownTableBodyNone">Domain/application test effectiveness  </td></tr>
 </table>
+<p>For either Windows preset, <span class="tt">Qt6_DIR</span> selects the <span class="tt">msvc2022_64</span> CMake package but does not put its runtime DLLs on <span class="tt">PATH</span>. Build-time helpers require the matching Qt <span class="tt">bin</span> directory in the current PowerShell environment. Windows installation must also use an absolute prefix for Qt's generated deployment script. See <b>Windows MSVC workflow</b> in the <a class="el" href="md_docs_2_d_e_v_e_l_o_p_e_r___g_u_i_d_e.html" title="Developer guide">developer guide</a>.</p>
 <p>Typical strict local run:</p>
 <div class="fragment"><div class="line">cmake --preset ci-clang</div>
 <div class="line">cmake --build --preset ci-clang --parallel</div>
 <div class="line">ctest --preset ci-clang --output-on-failure</div>
 <div class="line">cmake --build build-ci-clang --target check-repository check-tidy generate-sbom</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md159"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md170"></a>
 Repository and static gates</h1>
 <p>These targets are created when <span class="tt">LAR_ENABLE_QUALITY_TARGETS=ON</span>, which is the default for normal presets.</p>
 <table class="markdownTable">
@@ -195,7 +196,7 @@ Repository and static gates</h1>
 </table>
 <p><span class="tt">check-repository</span> intentionally does not include <span class="tt">check-tidy</span>, tests, sanitizers, coverage, mutation, performance, or the install smoke; invoke those separately when they apply.</p>
 <p>If a configured tool is missing, its target fails with an explicit dependency message rather than silently passing.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md160"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md171"></a>
 Deterministic CTest suite</h1>
 <p>The release configuration currently registers 28 tests.</p>
 <table class="markdownTable">
@@ -236,7 +237,7 @@ Deterministic CTest suite</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">sanitizer</span>  </td><td class="markdownTableBodyNone">Added to all tests in sanitizer configurations  </td></tr>
 </table>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md161"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md172"></a>
 Coverage</h1>
 <p>Configure with <span class="tt">cmake --preset coverage</span>, build, then run:</p>
 <div class="fragment"><div class="line">cmake --build build-coverage --parallel</div>
@@ -251,7 +252,7 @@ Coverage</h1>
 <td class="markdownTableBodyNone"><span class="tt">src/domain/</span> + <span class="tt">src/application/</span>  </td><td class="markdownTableBodyRight">95%  </td><td class="markdownTableBodyRight">90%  </td></tr>
 </table>
 <p>Aggregate success is not a waiver for an untested parser, error path, concurrency transition, or resource bound.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md162"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md173"></a>
 Sanitizers</h1>
 <p>AddressSanitizer and UndefinedBehaviorSanitizer are combined by <span class="tt">asan-ubsan</span>; its test preset excludes <span class="tt">network|gpu|slow</span>. ThreadSanitizer has a separate <span class="tt">tsan</span> preset, selects <span class="tt">contract|concurrency</span>, uses <span class="tt">tests/tsan_suppressions.txt</span>, and stops on the first report. All sanitizer builds retain frame pointers.</p>
 <div class="fragment"><div class="line">cmake --preset asan-ubsan</div>
@@ -262,7 +263,7 @@ Sanitizers</h1>
 <div class="line">cmake --build --preset tsan --parallel</div>
 <div class="line">ctest --preset tsan --output-on-failure</div>
 </div><!-- fragment --><p>The repository contains no currently automated repeated TSan job. For release concurrency evidence, repeat runtime, source-lifecycle, recording-pipeline, playback, map-loading, and viewport-worker tests under a compatible TSan host.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md163"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md174"></a>
 Fuzzing</h1>
 <p>The <span class="tt">fuzz</span> preset builds seven targets:</p>
 <table class="markdownTable">
@@ -284,13 +285,13 @@ Fuzzing</h1>
 <td class="markdownTableBodyNone"><span class="tt">lar-dlz-solver-fuzz</span>  </td><td class="markdownTableBodyNone">DLZ numeric domain and ordering  </td></tr>
 </table>
 <p>When Clang supports libFuzzer, targets link ASan/UBSan and accept normal libFuzzer arguments/corpora. Otherwise they use <span class="tt">tests/fuzz/fuzz_standalone_main.cpp</span>, whose positional argument is a bounded iteration count. No fuzz-duration or corpus-retention policy is currently automated by the checked-in workflow.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md164"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md175"></a>
 Mutation analysis</h1>
 <p>The <span class="tt">mutation</span> preset instruments domain/application code through a Mull IR frontend matching the selected Clang. <span class="tt">check-mutation</span> runs <span class="tt">lardomain-tests</span> in strict mode and requires an 85% mutation score. Mull must be installed separately and can be selected with <span class="tt">LAR_MULL_IR_FRONTEND</span>.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md165"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md176"></a>
 Performance evidence</h1>
 <p><span class="tt">run-benchmarks</span> writes JSON metrics for mapping, recording, playback, map, and viewport operations. <span class="tt">check-performance</span> additionally requires <span class="tt">LAR_PERFORMANCE_BASELINE</span> and rejects either median or p95 latency more than 10% above that baseline. A comparison is meaningful only on a pinned runner with controlled power and thermal state.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md166"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md177"></a>
 Install and dependency evidence</h1>
 <p><span class="tt">check-install-layout</span> performs a clean temporary install and requires:</p>
 <ul>
@@ -302,14 +303,14 @@ Install and dependency evidence</h1>
 </ul>
 <p>It parses the manifest and SBOM, requires Qt 6.10.3 or newer, verifies direct Core/Concurrent/Gui/Network/Widgets/OpenGL/OpenGLWidgets relationships plus the platform and PNG/JPEG plugins, checks package URLs, and executes the installed sender's scenario listing. DTED is intentionally excluded from normal staging and install because the Level-0 tree is large and can be supplied externally.</p>
 <p>The repository generates dependency inventory but the current workflow does not run a vulnerability scanner. A release process should scan the generated SPDX file with an approved current scanner and review the result.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md167"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md178"></a>
 GPU evidence</h1>
 <p>Pure shader, renderer, projection, and asset-validation tests run without a native visible context. Native tests require:</p>
 <div class="fragment"><div class="line">LAR_RUN_MAP_GPU_TESTS=1 LAR_RUN_PLANE_GPU_TESTS=1 \</div>
 <div class="line">  ctest --test-dir build-release --output-on-failure -L gpu</div>
 </div><!-- fragment --><p>On a headless Linux runner, a software OpenGL stack may additionally require Xvfb/Mesa plus <span class="tt">LIBGL_ALWAYS_SOFTWARE=1</span> and <span class="tt">QT_OPENGL=software</span>. That setup is not present in the current workflow. Release evidence should include a native representative GPU/driver as well as any software-renderer run.</p>
 <p><span class="tt">larzone-tests</span> quantitatively checks extreme zoom. It rejects fixed topology when it cannot meet the 0.65-pixel budget, reconstructs camera-relative CPU vertices, and compares both vertex and chord error with a binary64 geodesic reference. Native GPU tests complement that proof by compiling real shaders and inspecting framebuffer output.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md168"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md179"></a>
 Operational soak</h1>
 <p>The normal <span class="tt">laroperational-soak-tests</span> run is short. Setting <span class="tt">LAR_SOAK_SECONDS=1800</span> exercises a 30-minute loopback scenario with:</p>
 <ul>
@@ -322,7 +323,7 @@ Operational soak</h1>
 <li>a resident-memory growth ceiling.</li>
 </ul>
 <p>The extended duration is opt-in and not scheduled by the current workflow.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md169"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md180"></a>
 Release evidence checklist</h1>
 <p>A release candidate should assemble evidence appropriate to the changed risk:</p>
 <ul>

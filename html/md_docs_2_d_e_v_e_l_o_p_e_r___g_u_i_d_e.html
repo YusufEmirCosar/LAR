@@ -118,20 +118,20 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2_d_e_
   <div class="headertitle"><div class="title">Developer guide </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md90"></a></p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md91"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md97"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md98"></a>
 Prerequisites</h1>
 <ul>
 <li>CMake 3.24 or newer</li>
 <li>C++17 compiler</li>
-<li>Qt 6.10.3 or newer: Core, Concurrent, Gui, Network, Widgets, OpenGL, OpenGLWidgets, and Test</li>
+<li>Qt 6.10.3 or newer: Core, Concurrent, Gui, Network, Widgets, OpenGLWidgets, and Test</li>
 <li>OpenGL development/runtime support</li>
-<li>Ninja for the checked-in presets</li>
+<li>Ninja for Unix presets; Visual Studio 2022 with MSVC v143 for Windows presets</li>
 <li>Python 3 for repository gates</li>
 <li>Optional: Doxygen and Graphviz, clang-format, clang-tidy, gcovr, Mull</li>
 </ul>
 <p>The checked-in workflow currently verifies a strict Windows/MSVC release build with Qt 6.11.2. GCC, Clang, AppleClang, sanitizers, coverage, fuzzing, mutation, and GPU tests remain configured local/preset capabilities, but they are not all automated by the current workflow. Treat compiler/Qt pins as security posture decisions; review the <a class="el" href="md_docs_2_t_h_r_e_a_t___m_o_d_e_l.html" title="Threat model">threat model</a> and regenerate/scan the componentized SBOM when changing either.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md92"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md99"></a>
 Configure, build, and test</h1>
 <div class="fragment"><div class="line">cmake --preset dev</div>
 <div class="line">cmake --build --preset dev --parallel</div>
@@ -145,7 +145,63 @@ Configure, build, and test</h1>
 <div class="line">cmake --build --preset ci-clang --parallel</div>
 <div class="line">ctest --preset ci-clang --output-on-failure</div>
 </div><!-- fragment --><p>Do not edit a <span class="tt">build-*</span> tree or generated <span class="tt">qrc_</span>, MOC, map, manifest, SBOM, or Doxygen output. Reconfigure from maintained source.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md93"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md100"></a>
+Windows MSVC workflow</h1>
+<p>The Windows presets target Visual Studio 2022 x64. Install Visual Studio 2022 or Build Tools with <b>Desktop development with C++</b>, MSVC v143, and a Windows 10 or 11 SDK. Install Qt's <b>MSVC 2022 64-bit</b> kit; MinGW, LLVM-MinGW, Android, WebAssembly, and ARM64 kits are not interchangeable with this preset.</p>
+<p>A typical minimum-version kit is <span class="tt">C:\Qt\6.10.3\msvc2022_64</span>. Confirm the CMake package before configuring:</p>
+<div class="fragment"><div class="line">Test-Path &quot;C:\Qt\6.10.3\msvc2022_64\lib\cmake\Qt6\Qt6Config.cmake&quot;</div>
+</div><!-- fragment --><p>If the location is unknown:</p>
+<div class="fragment"><div class="line">Get-ChildItem C:\Qt -Recurse -Filter Qt6Config.cmake -ErrorAction SilentlyContinue</div>
+</div><!-- fragment --><p>Two independent settings are required:</p>
+<ul>
+<li><span class="tt">Qt6_DIR</span> lets CMake locate Qt while configuring.</li>
+<li>The kit's <span class="tt">bin</span> directory on <span class="tt">PATH</span> lets build-time Qt executables start.</li>
+</ul>
+<p>Setting only <span class="tt">Qt6_DIR</span> is insufficient when an MSBuild custom step launches a Qt-linked helper. Configure and build a production release from Developer PowerShell as follows:</p>
+<div class="fragment"><div class="line">$env:Path = &quot;C:\Qt\6.10.3\msvc2022_64\bin;$env:Path&quot;</div>
+<div class="line"> </div>
+<div class="line">cmake --preset windows-release `</div>
+<div class="line">  -DQt6_DIR=C:/Qt/6.10.3/msvc2022_64/lib/cmake/Qt6</div>
+<div class="line"> </div>
+<div class="line">cmake --build --preset windows-release --parallel</div>
+</div><!-- fragment --><p>Substitute another compatible version consistently in both paths. The <span class="tt">windows-release</span> preset creates <span class="tt">build-windows-release</span>, selects Visual Studio 2022 x64, and disables tests and tool-based quality targets.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md101"></a>
+Install a deployable Windows package</h2>
+<p>Qt's generated deployment script requires an absolute installation prefix. Construct it from PowerShell's current absolute path instead of passing a bare relative <span class="tt">--prefix</span>:</p>
+<div class="fragment"><div class="line">$packageDir = Join-Path $PWD.Path &quot;build-windows-package&quot;</div>
+<div class="line"> </div>
+<div class="line">cmake --install build-windows-release `</div>
+<div class="line">  --config Release `</div>
+<div class="line">  --prefix &quot;$packageDir&quot;</div>
+<div class="line"> </div>
+<div class="line">.\build-windows-package\bin\lar-viewer.exe</div>
+</div><!-- fragment --><p>The install step copies the executable, map package, <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> assets, mappings, and required Qt runtime DLLs/plugins into the package layout. DTED trees remain external by design.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md102"></a>
+Run strict Windows tests</h2>
+<p>Use <span class="tt">ci-msvc</span> rather than <span class="tt">windows-release</span> when tests and warnings-as-errors are required:</p>
+<div class="fragment"><div class="line">$env:Path = &quot;C:\Qt\6.10.3\msvc2022_64\bin;$env:Path&quot;</div>
+<div class="line"> </div>
+<div class="line">cmake --preset ci-msvc `</div>
+<div class="line">  -DQt6_DIR=C:/Qt/6.10.3/msvc2022_64/lib/cmake/Qt6</div>
+<div class="line"> </div>
+<div class="line">cmake --build --preset ci-msvc --parallel</div>
+<div class="line">ctest --preset ci-msvc</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md103"></a>
+Diagnose Windows build failures</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Symptom  </th><th class="markdownTableHeadNone">Cause and action  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">CMake cannot find <span class="tt">Qt6Config.cmake</span>  </td><td class="markdownTableBodyNone">Verify the actual <span class="tt">msvc2022_64</span> package and pass its <span class="tt">lib/cmake/Qt6</span> directory as <span class="tt">Qt6_DIR</span>. A Qt version directory may exist without that kit.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">MSBuild custom step exits <span class="tt">-1073741515</span>  </td><td class="markdownTableBodyNone">A required runtime DLL was not found. Add the matching Qt <span class="tt">bin</span> directory to the current PowerShell <span class="tt">PATH</span>, then rebuild.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Linker reports <span class="tt">__imp_glViewport</span> or another native GL symbol  </td><td class="markdownTableBodyNone">Reconfigure with the maintained CMake files. <span class="tt">lar-presentation-widgets</span> must publicly link the portable <span class="tt">OpenGL::GL</span> target so its static-library dependency reaches the executable.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Install/deploy rejects a relative <span class="tt">qt.conf</span> path  </td><td class="markdownTableBodyNone">Use an absolute prefix such as <span class="tt">$packageDir = Join-Path $PWD.Path "build-windows-package"</span>.  </td></tr>
+</table>
+<p>Use <span class="tt">cmake --build --preset windows-release --verbose</span> to expose the failing custom or link command. The complete prerequisite installation and clean package-recreation commands are also kept in the root <a class="el" href="md__r_e_a_d_m_e.html" title="LAR Packet Monitor">README</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md104"></a>
 Repository checks</h1>
 <p>After configuring a build that has the required tools:</p>
 <div class="fragment"><div class="line">cmake --build build-dev --target check-format check-architecture \</div>
@@ -157,7 +213,7 @@ Repository checks</h1>
 <div class="line">python3 tools/check_doxygen_coverage.py .</div>
 <div class="line">python3 tools/check_doc_quality.py .</div>
 </div><!-- fragment --><p>See <a class="el" href="md_docs_2_q_u_a_l_i_t_y___g_a_t_e_s.html" title="Quality gates">Quality gates</a> for sanitizer, coverage, fuzz, mutation, performance, install, and soak workflows.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md94"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md105"></a>
 Read before changing structure</h1>
 <ol type="1">
 <li><a class="el" href="md_docs_2_a_r_c_h_i_t_e_c_t_u_r_e.html" title="Architecture">Architecture</a></li>
@@ -170,7 +226,7 @@ Read before changing structure</h1>
 <li><a class="el" href="md_docs_2_t_e_r_r_a_i_n___a_n_d___a_s_s_e_t_s.html" title="Terrain and asset pipeline">Terrain and assets</a> for map, DTED, glTF, and cubemap work</li>
 </ol>
 <p>The dependency rule is inward-only. Domain and application code must not solve a short-term problem by constructing a concrete infrastructure or widget type.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md95"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md106"></a>
 Add a packet field</h1>
 <p>Packet fields are registry changes and must be atomic across the stack:</p>
 <ol type="1">
@@ -185,7 +241,7 @@ Add a packet field</h1>
 <li>Update <span class="tt"><a class="el" href="_p_r_o_t_o_c_o_l___u_n_i_t_s_8md.html">PROTOCOL_UNITS.md</a></span>, <span class="tt"><a class="el" href="_c_o_m_p_o_n_e_n_t___r_e_f_e_r_e_n_c_e_8md.html">COMPONENT_REFERENCE.md</a></span>, and generated API comments.</li>
 </ol>
 <p>Compile-time assertions verify that every ID has a complete, unique descriptor. Do not duplicate mapping-name switches in adapters or widgets.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md96"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md107"></a>
 Add an application use case</h1>
 <ol type="1">
 <li>Identify the single policy owner and keep the service focused.</li>
@@ -198,7 +254,7 @@ Add an application use case</h1>
 <li>Run the architecture gate to verify include and CMake direction.</li>
 </ol>
 <p>If the new command joins <span class="tt"><a class="el" href="class_i_application_runtime.html" title="Composite runtime boundary used by ApplicationFacade.">IApplicationRuntime</a></span>, place it in the narrowest command slice, add a request-correlated result, register queued metatypes, and implement identical direct/threaded observable behavior.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md97"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md108"></a>
 Add or replace an adapter</h1>
 <p>An adapter must honor more than its signature. Document and test:</p>
 <ul>
@@ -211,7 +267,7 @@ Add or replace an adapter</h1>
 <li>shutdown behavior.</li>
 </ul>
 <p>Use constructor injection or a typed factory. A null test/production factory must either be rejected deterministically or replaced with the documented inert fallback and a construction diagnostic.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md98"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md109"></a>
 Add a viewport page</h1>
 <ol type="1">
 <li>Implement <span class="tt"><a class="el" href="class_i_lar_viewport_page.html" title="Common contract implemented by every viewport presentation page.">ILarViewportPage</a></span>; use <span class="tt"><a class="el" href="class_i_earth_lar_viewport_page.html" title="Extra availability and mode operations required by Earth pages.">IEarthLarViewportPage</a></span> only for map-specific capabilities.</li>
@@ -222,7 +278,7 @@ Add a viewport page</h1>
 <li>Add page, camera, worker, render-validation, and optional native GPU tests.</li>
 </ol>
 <p>Keep tracked sphere centers as doubles through <span class="tt">MapCamera</span> and marker projection. Sphere shaders receive the center as compensated high/low float parts plus precomputed latitude sine/cosine; do not collapse the center back to one float uniform, because that reintroduces close-zoom replay jitter.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md99"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md110"></a>
 Change Plane visualization assets or rendering</h1>
 <ul>
 <li>Keep the packaged runtime aircraft model under <span class="tt">assets/models</span> as the glTF 2.0 binary <span class="tt">f16_3.glb</span>. The <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> UI also accepts user-uploaded <span class="tt">.gltf</span> JSON and <span class="tt">.glb</span> binary models for the current session; uploaded files are not staged or installed as application assets. Six-face cubemap sets remain under <span class="tt">assets/cubemaps</span> as PNG files.</li>
@@ -241,13 +297,13 @@ Change Plane visualization assets or rendering</h1>
 <li>Treat <span class="tt"><a class="el" href="struct_plane.html#ad21ba46a82171666d83f38d6f19948f6" title="Latitude radians, longitude radians, altitude metres.">Plane.location</a>[2]</span> as MSL-compatible metres when placing DTED terrain. If it is unavailable, preserve only the surface's default visual clearance; do not label that fallback as a recovered absolute altitude.</li>
 <li>Update <span class="tt">lar_copy_plane_assets</span>, install rules, attribution, parser/widget tests, and the opt-in native GPU test with any asset-format change.</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md100"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md111"></a>
 Change the LAR1 format</h1>
 <p>Read <a class="el" href="md_docs_2_l_a_r1___f_o_r_m_a_t.html" title="LAR1 session format">LAR1 session format</a> first. Changes to byte layout, endianness, framing, or meaning are incompatible and require a new magic/version and parser branch. Add corruption, old-version, snapshot, persistence, exact replay, and fuzz coverage. Never make an older byte sequence silently mean something new.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md101"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md112"></a>
 Change the DLZ model</h1>
 <p>The exact fictional equations and renderer acceptance contract are in <a class="el" href="md_docs_2_d_l_z___m_o_d_e_l.html" title="Dynamic Launch Zone teaching model">DLZ model</a>. Keep raw diagnostic evaluation separate from the guarded <span class="tt">solve()</span> result. A change must preserve value-or-error behavior and strict ordering or explicitly version the teaching behavior and update tests, sender scenarios, and docs.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md102"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md113"></a>
 Map source and package changes</h1>
 <ul>
 <li>Source GeoJSON belongs only under <span class="tt">assets/map</span>.</li>
@@ -259,7 +315,7 @@ Map source and package changes</h1>
 <li>Update compiler, asset reader, map loading, and renderer validation tests.</li>
 </ul>
 <p>The viewer must not acquire a GeoJSON parser or link the map compiler support library.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md103"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md114"></a>
 Doxygen style</h1>
 <p>Every production header requires one file block immediately after <span class="tt">#pragma once</span>:</p>
 <div class="fragment"><div class="line"></div>
@@ -273,7 +329,7 @@ Doxygen style</h1>
 <div class="line">open build-release/docs/html/index.html       # macOS</div>
 <div class="line"># xdg-open build-release/docs/html/index.html # Linux</div>
 </div><!-- fragment --><p>The repository-root <span class="tt">Doxyfile</span> is also self-contained and writes <span class="tt">html/</span> when run as <span class="tt">doxygen Doxyfile</span>. Both configurations treat warnings as errors.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md104"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md115"></a>
 Test selection</h1>
 <p>Useful focused commands:</p>
 <div class="fragment"><div class="line"># Core and architecture</div>
@@ -292,7 +348,7 @@ Test selection</h1>
 <div class="line">QT_QPA_PLATFORM=offscreen ctest --test-dir build-release --output-on-failure \</div>
 <div class="line">  -R &#39;viewer|dlz-view&#39;</div>
 </div><!-- fragment --><p>Run the full deterministic suite before handoff. The native GPU tests return the configured skip code unless their <span class="tt">LAR_RUN_MAP_GPU_TESTS=1</span> or <span class="tt">LAR_RUN_PLANE_GPU_TESTS=1</span> opt-in and a usable context are available.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md105"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md116"></a>
 Safe-change checklist</h1>
 <ul>
 <li>Behavior and units match the project specification.</li>

@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2_l_a_
   <div class="headertitle"><div class="title">LAR1 session format </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md139"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md150"></a></p>
 <p><span class="tt">.<a class="el" href="namespacelar.html">lar</a></span> files are self-contained streams of validated UDP datagrams. They embed the exact canonical JSON mapping needed to decode every record. All integers are unsigned and little-endian.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md140"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md151"></a>
 File layout</h1>
 <div class="fragment"><div class="line">+0  4 bytes   ASCII magic &quot;LAR1&quot;</div>
 <div class="line">+4  4 bytes   uint32 packetSectionOffset</div>
@@ -129,13 +129,13 @@ File layout</h1>
 </div><!-- fragment --><p>The mapping length is derived, not separately stored:</p>
 <div class="fragment"><div class="line">mappingLength = packetSectionOffset - 8</div>
 </div><!-- fragment --><p><span class="tt">packetSectionOffset</span> must be greater than 8, at or before EOF, and imply a mapping no larger than 16 MiB. Empty mappings are invalid, so an offset of 8 is rejected. A valid session may contain zero packet records.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md141"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md152"></a>
 Record layout</h1>
 <div class="fragment"><div class="line">+0   8 bytes   uint64 relativeTimeMilliseconds</div>
 <div class="line">+8   4 bytes   uint32 packetSize</div>
 <div class="line">+12  N bytes   original UDP datagram bytes</div>
 </div><!-- fragment --><p>Records are concatenated without alignment or padding. <span class="tt">packetSize</span> preserves exact datagram boundaries, variable lengths, mapping gaps, and trailing unmapped bytes.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md142"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md153"></a>
 Resource limits</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -154,7 +154,7 @@ Resource limits</h1>
 <td class="markdownTableBodyNone">Timestamp ordering  </td><td class="markdownTableBodyRight">Non-decreasing; equal adjacent times are valid  </td></tr>
 </table>
 <p>The disk timestamp field can represent the full <span class="tt">uint64</span> range, but values beyond 365 days are outside the application domain and rejected. This keeps playback math, formatting, and UI ratios exact and bounded on supported platforms. Record counts and API indices use signed 64-bit values. Available storage, valid file layout, duration, and that representation are natural limits; the application imposes no separate session-record ceiling.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md143"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md154"></a>
 Writer contract</h1>
 <p><span class="tt"><a class="el" href="class_lar_session_writer.html" title="Appends timestamped packets and creates immutable file snapshots.">LarSessionWriter</a></span> implements <span class="tt"><a class="el" href="class_i_recording_transaction.html" title="Mutable transaction used while a recording is active.">IRecordingTransaction</a></span>:</p>
 <ol type="1">
@@ -166,7 +166,7 @@ Writer contract</h1>
 <li><span class="tt">cancel()</span> closes/removes transaction storage and clears all state.</li>
 </ol>
 <p>Recording timestamps represent active recording time. Paused wall-clock intervals are excluded by <span class="tt"><a class="el" href="class_recording_service.html" title="Owns recording state while delegating bytes and time to ports.">RecordingService</a></span>; receipt timestamps and drain boundaries share the process-wide monotonic nanosecond domain before conversion to exact milliseconds.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md144"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md155"></a>
 Immutable snapshots</h1>
 <p><span class="tt">createSnapshot()</span> flushes the transaction and captures:</p>
 <ul>
@@ -176,7 +176,7 @@ Immutable snapshots</h1>
 </ul>
 <p><span class="tt"><a class="el" href="class_file_session_snapshot.html#a9f0b47f8ab079d7c67eb05fa8852b09f">FileSessionSnapshot::writeTo</a></span> reads only that stable prefix. Later recording appends are outside the snapshot, and ending the live transaction cannot delete the temporary source while persistence still owns the snapshot.</p>
 <p><span class="tt"><a class="el" href="class_qt_session_persistence.html" title="Commits a snapshot with QSaveFile semantics.">QtSessionPersistence</a></span> writes the snapshot through <span class="tt">QSaveFile</span> and calls <span class="tt">commit()</span>. The observable contract is atomic replacement: success exposes the complete new file; failure preserves an existing destination.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md145"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md156"></a>
 Reader validation pass</h1>
 <p><span class="tt"><a class="el" href="class_lar_session_reader.html#a90f8d9ca12f06069895cf7f70c7072ee">LarSessionReader::loadFile</a></span> and <span class="tt">loadData</span> clear previous state before parsing. A session becomes visible only after one complete pass succeeds:</p>
 <ol type="1">
@@ -190,7 +190,7 @@ Reader validation pass</h1>
 <li>Commit the mapping, checkpoint table, source, count, duration, and valid flag atomically.</li>
 </ol>
 <p>For a file source, packet bytes are not retained in RAM after validation; <span class="tt">recordAt</span> seeks and decodes on demand. For <span class="tt">loadData</span>, the caller's byte array is retained as the random-access source. Random access scans record headers from the nearest checkpoint and caches one page of at most 4,096 locations. Playback continues to use timestamp binary search while resident index memory grows only once per checkpoint, not once per record. Source size is revalidated during random access to reject replacement or truncation after the validation pass.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md146"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md157"></a>
 Playback interpretation</h1>
 <ul>
 <li>Duration is the final record timestamp, or zero for an empty session.</li>
@@ -202,7 +202,7 @@ Playback interpretation</h1>
 <li>Burst is currently an inert presentation placeholder and has no LAR1 read or playback semantics.</li>
 <li>The online mapping is neither required nor modified by loading a session.</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md147"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md158"></a>
 Compatibility and evolution</h1>
 <p>The four-byte magic is the format version. Current readers accept only <span class="tt">LAR1</span>. There are no optional header fields or extension chunks. A future incompatible layout must use a new magic and a separate parser path; silently reinterpreting existing bytes would break deterministic replay and corruption checks.</p>
 <p>Compatible changes do not alter layout, for example:</p>
@@ -213,7 +213,7 @@ Compatibility and evolution</h1>
 <li>retaining extra unmapped/trailing datagram bytes.</li>
 </ul>
 <p>An older reader that does not recognize a newly embedded mapping key will reject that session instead of producing partial or misinterpreted state.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md148"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md159"></a>
 Worked hexadecimal example</h1>
 <p>For a compact mapping of 64 bytes, the first record begins at offset 72 (<span class="tt">0x48</span>):</p>
 <div class="fragment"><div class="line">4c 41 52 31             # &quot;LAR1&quot;</div>

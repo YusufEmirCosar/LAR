@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2_p_r_
   <div class="headertitle"><div class="title">Packet protocol and units </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md149"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md160"></a></p>
 <p>The UDP protocol is schema-driven. A JSON mapping binds packet byte ranges to the fixed scalar registry in <span class="tt"><a class="el" href="class_state_field.html" title="Reflective access to scalar members of Plane and Target.">StateField</a></span>; packets do not contain field names, units, version bytes, or record framing.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md150"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md161"></a>
 Mapping entry</h1>
 <div class="fragment"><div class="line">{</div>
 <div class="line">  &quot;name&quot;: &quot;location&quot;,</div>
@@ -143,7 +143,7 @@ Mapping entry</h1>
 <td class="markdownTableBodyNone">byte order  </td><td class="markdownTableBodyNone">Little-endian for both widths  </td></tr>
 </table>
 <p>The mapping root must be a non-empty array of objects. Mapping JSON and the resulting minimum packet size are each capped at 16 MiB. A field may occur only once and byte ranges may not overlap. Array order is irrelevant. Unmapped gaps are permitted; <span class="tt"><a class="el" href="class_packet_mapping.html#a2759cc7125955e898eff73f7532c5050">PacketMapping::encode</a></span> fills them with zero. A received packet may contain trailing bytes beyond <span class="tt">minimumPacketSize()</span> and those raw bytes are preserved when recorded.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md151"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md162"></a>
 Canonical fields</h1>
 <p>The ID order below is also the <span class="tt">QBitArray</span> availability-bit order.</p>
 <table class="markdownTable">
@@ -201,7 +201,7 @@ Canonical fields</h1>
 <p>The legacy cross-field rule is applied only when both fields are mapped:</p>
 <div class="fragment"><div class="line">Target.iz_r1 &lt; Target.iz_r2</div>
 </div><!-- fragment --><p>The three DLZ fields are atomic at schema level. A mapping may contain none of them or all three; one- or two-field DLZ mappings are rejected. This prevents a frame from combining current and stale DLZ values.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md152"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md163"></a>
 Position and angle conventions</h1>
 <ul>
 <li>Latitude is positive north and constrained to <span class="tt">[-pi/2, pi/2]</span>.</li>
@@ -213,7 +213,7 @@ Position and angle conventions</h1>
 <li>Velocity components use kilometres per hour. Geographic sender scenarios may derive them from metre/second formulas and multiply by <span class="tt">3.6</span>.</li>
 </ul>
 <p>The receiver validates protocol/domain bounds, not physical plausibility. Finite but unusually large altitude, velocity, attitude, position-radius, IZ angle, or producer-time values can remain valid if no tighter rule is listed. Rendering applies its own resource limits before geometry allocation.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md153"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md164"></a>
 Availability semantics</h1>
 <p><span class="tt"><a class="el" href="struct_decoded_state.html#a6681e9221c21a82df0e404e72e12a2ec" title="StateField IDs present in this frame.">DecodedState::availableFields</a></span> has <span class="tt"><a class="el" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a2470abbd757b3490d0301300e2eda933">StateField::Count</a></span> bits. A set bit means the active mapping supplied and the decoder validated that scalar. Unmapped storage in <span class="tt"><a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a></span>, <span class="tt"><a class="el" href="struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters.">Target</a></span>, or <span class="tt">TelemetryInputs</span> remains default-initialized but must not be treated as measured data.</p>
 <p>Consumers follow these rules:</p>
@@ -224,7 +224,7 @@ Availability semantics</h1>
 <li>The DLZ external input source is available only when all three bits are set.</li>
 <li>Availability is stored implicitly through the embedded mapping in a <span class="tt">.<a class="el" href="namespacelar.html">lar</a></span> session and recreated on replay.</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md154"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md165"></a>
 Decode transaction</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -237,7 +237,7 @@ flowchart LR
     VALID --&gt;|invalid| KEEP[&quot;retain previous caller state&quot;]</pre>
 </div>
 <p><span class="tt">size: 4</span> values are promoted to <span class="tt">double</span> after decoding, so they retain only binary32 precision. <span class="tt">size: 8</span> preserves the in-memory binary64 representation.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md155"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md166"></a>
 Supplied mappings</h1>
 <ul>
 <li><span class="tt">maps/full-state.json</span>: all 21 Plane/Target fields, deliberately reordered.</li>

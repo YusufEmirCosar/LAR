@@ -118,21 +118,24 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2_u_s_
   <div class="headertitle"><div class="title">User guide </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md223"></a></p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md224"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md234"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md235"></a>
 What the application does</h1>
 <p>LAR Packet Monitor receives UDP datagrams described by a JSON mapping, validates the decoded aircraft/target state, displays the result, optionally records the accepted raw datagrams, and replays saved sessions. The central content can be shown as a local Grid, a Mercator map, a globe, a third-person <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> scene, or a fictional Dynamic Launch Zone (DLZ) teaching display.</p>
 <p>The application does not authenticate telemetry and does not determine whether the values are physically plausible. Use it on a trusted network or through an authenticated tunnel when source integrity matters.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md225"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md236"></a>
 Start the viewer</h1>
 <p>After a release build, run the executable from <span class="tt">build-release</span>. On macOS use:</p>
 <div class="fragment"><div class="line">open build-release/lar-viewer.app</div>
 </div><!-- fragment --><p>On Linux:</p>
 <div class="fragment"><div class="line">./build-release/lar-viewer</div>
 </div><!-- fragment --><p>On Windows:</p>
-<div class="fragment"><div class="line">./build-windows-release/Release/lar-viewer.exe</div>
-</div><!-- fragment --><p>The exact output path depends on the generator and whether the project was installed. See the <a class="el" href="md_docs_2_d_e_v_e_l_o_p_e_r___g_u_i_d_e.html" title="Developer guide">developer guide</a> for build and install commands.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md226"></a>
+<div class="fragment"><div class="line">.\build-windows-package\bin\lar-viewer.exe</div>
+</div><!-- fragment --><p>That installed package contains the required Qt DLLs and plugins. Running the uninstalled Visual Studio output directly is also possible while the matching Qt kit is on the current process <span class="tt">PATH</span>:</p>
+<div class="fragment"><div class="line">$env:Path = &quot;C:\Qt\6.10.3\msvc2022_64\bin;$env:Path&quot;</div>
+<div class="line">.\build-windows-release\Release\lar-viewer.exe</div>
+</div><!-- fragment --><p>The exact output path depends on the generator and whether the project was installed. See <b>Windows MSVC workflow</b> in the <a class="el" href="md_docs_2_d_e_v_e_l_o_p_e_r___g_u_i_d_e.html" title="Developer guide">developer guide</a> for the field-tested configure, build, deployment, and troubleshooting procedure.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md237"></a>
 Window layout</h1>
 <p>The application keeps the operational controls visible:</p>
 <ul>
@@ -143,9 +146,9 @@ Window layout</h1>
 <li>The status bar reports mapping, runtime, asset, and rendering diagnostics.</li>
 </ul>
 <p>The side columns are fixed. They cannot float, detach, close, or cover the central visualization.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md227"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md238"></a>
 Online capture</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md228"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md239"></a>
 1. Load a packet mapping</h2>
 <p>Select <b>Online</b>, then <b>Select JSON Mapping</b>. The supplied mappings are:</p>
 <table class="markdownTable">
@@ -159,16 +162,16 @@ Online capture</h1>
 <td class="markdownTableBodyNone"><span class="tt">maps/full-state-dlz.json</span>  </td><td class="markdownTableBodyNone">Plane/Target state plus all DLZ inputs  </td></tr>
 </table>
 <p>A mapping defines byte offsets; the datagram contains no field names or self-description. Sender and receiver must use the same mapping. The listener button remains disabled until a mapping has loaded successfully.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md229"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md240"></a>
 2. Select the sender policy</h2>
 <p><b>Allow all</b> accepts any sender address and is the default. <b>Whitelist</b> selects a UTF-8 text file containing one numeric IPv4 or IPv6 address per line. Blank lines and lines whose first non-space character is <span class="tt">#</span> are ignored. Addresses are canonicalized and duplicates collapse.</p>
 <p>The whitelist is bounded to 1 MiB, 4,096 lines, 4,096 distinct addresses, and 256 bytes per line. It must contain at least one valid address. Policy controls are disabled while listening, and a failed replacement leaves the last successfully applied policy active.</p>
 <p>A whitelist is routing policy, not proof of identity. IP spoofing and replay remain possible on networks where an attacker can inject traffic.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md230"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md241"></a>
 3. Start the listener</h2>
 <p>Choose a port in <span class="tt">1..65535</span> (default <span class="tt">45454</span>) and select <b>Start Listener</b>. The application binds UDP, filters the sender, decodes each allowed datagram, and validates the entire candidate state before publishing it.</p>
 <p>Packets shorter than the mapping's largest <span class="tt">offset + size</span>, non-finite or out-of-range values, and schema-invalid DLZ combinations are rejected. A rejected packet neither changes the visible state nor enters a recording. Trailing bytes on a valid datagram are allowed and are preserved by recording.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md231"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md242"></a>
 4. Send test traffic</h2>
 <p>Run the maintained deterministic sender in another terminal:</p>
 <div class="fragment"><div class="line">./build-release/lar-test-sender \</div>
@@ -181,7 +184,7 @@ Online capture</h1>
 </div><!-- fragment --><p>List every built-in scenario:</p>
 <div class="fragment"><div class="line">./build-release/lar-test-sender --list-scenarios</div>
 </div><!-- fragment --><p>The <a class="el" href="dir_5ca9a0d79b5b388ccf4ce73c53df5e24.html" title="/Users/kazmetred/Yazılım/ShadyTemp/Merge/LAR/src/testsender/README.md">test-sender tutorial</a> describes each scenario and how to add one.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md232"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md243"></a>
 Recording</h1>
 <p>Recording is independent of whether a new frame is currently being painted. Every accepted raw datagram remains eligible for the recording pipeline even though high-rate visual updates are coalesced.</p>
 <p>The three icon controls under <b>Save Session</b> are:</p>
@@ -198,7 +201,7 @@ Recording</h1>
 <p>The duration label shows active recording time as <span class="tt">minutes:seconds:milliseconds</span>; paused wall time does not advance it. “Saved packages” is the number of raw accepted datagrams already appended to the working transaction.</p>
 <p>The transaction streams to temporary file storage, so the application does not keep every packet in memory. Saving uses an immutable prefix and atomic replacement. If a final save fails, the existing destination is preserved and the working session remains available for retry.</p>
 <p>Stopping the listener with an unsaved recording asks for confirmation. Cancel keeps the listener running. Confirm discards the session before the source is stopped.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md233"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md244"></a>
 Offline replay</h1>
 <p>Select <b>Offline</b>, then <b>Select .lar File</b>. A valid file supplies its own embedded mapping; an online JSON mapping is not used for replay.</p>
 <p>Playback controls provide:</p>
@@ -211,18 +214,18 @@ Offline replay</h1>
 </ul>
 <p>Playback presents at 60 ticks per second. Each tick advances the exact millisecond cursor and selects the applicable stored record with a binary search. It does not decode every record between two presentation ticks, so high-rate recordings remain responsive at high replay rates.</p>
 <p>The <b>Burst</b> control is intentionally disabled. It is a placeholder for future whole-file analysis and currently dispatches no operation.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md234"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md245"></a>
 LAR views</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md235"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md246"></a>
 Grid</h2>
 <p>Grid is a local flat Euclidean tactical plane. It uses metric east/north projection around the selected origin and does not model Earth curvature. Choose it for nearby relative geometry and an uncomplicated scale grid.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md236"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md247"></a>
 Mercator</h2>
 <p>Mercator draws the compiled world map and geodesic IR/IZ geometry. It clips the map at the supported Mercator latitude and explicitly handles the antimeridian and polar footprints. Distances are constructed on the sphere before projection.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md237"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md248"></a>
 Sphere</h2>
 <p>Sphere renders the same geographic definitions on a globe. Tracked centers stay in binary64 on the CPU and are sent to shaders as compensated high/low values to reduce close-zoom jitter.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md238"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md249"></a>
 Camera controls</h2>
 <ul>
 <li><b>Follow plane</b> centers the aircraft.</li>
@@ -234,7 +237,7 @@ Camera controls</h2>
 <li>Double-click fits the available LAR content without changing the selected tracking mode.</li>
 </ul>
 <p>Geometry appears only when every required field is available. An unmapped value is shown as <span class="tt">N/A</span>; it is never inferred from zero-initialized storage.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md239"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md250"></a>
 Plane view</h1>
 <p><a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> keeps the aircraft model at the scene origin and applies current heading/yaw, pitch, and roll. It is an attitude and relative-environment view, not a translational flight simulator.</p>
 <p>Mouse controls:</p>
@@ -255,11 +258,11 @@ Plane view</h1>
 <td class="markdownTableBodyNone"><b>Skybox</b>  </td><td class="markdownTableBodyNone">Advance through valid packaged six-face cubemap sets  </td></tr>
 </table>
 <p>The packaged F-16 is the default scale reference. Its normalized forward extent represents 15 metres; ground, target, and zone geometry scale around the unchanged model. The first valid aircraft coordinate anchors the ground grid, so subsequent movement slides the environment under the centered aircraft.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md240"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md251"></a>
 Load another model</h2>
 <p>Use <b>Upload &gt; Jet Model</b> to select <span class="tt">.gltf</span> or <span class="tt">.glb</span>. The supported subset requires static triangle meshes with float positions and normals; UVs, base-color materials, and PNG/JPEG textures are optional. A failed or unsupported model leaves the current model active.</p>
 <p>External glTF resources must remain under the selected model directory. Absolute paths, traversal, symlinks, query/fragment syntax, and oversized resources are rejected.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md241"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md252"></a>
 Use terrain</h2>
 <p>DTED Level 0 is discovered at startup. If it is unavailable, use <b>Upload &gt; DTED Folder</b>, choose Level 1 or Level 2, then select a tree whose files follow:</p>
 <div class="fragment"><div class="line">{e|w}DDD/{n|s}DD.dt1</div>
@@ -268,7 +271,7 @@ Use terrain</h2>
 <p>Terrain requires aircraft latitude and longitude. Mapped aircraft altitude is interpreted as metres above a mean-sea-level datum compatible with the DTED dataset. Without altitude, the view preserves a visual clearance relative to the sampled center; it does not claim a recovered absolute altitude.</p>
 <p>Terrain is prepared asynchronously. While it is loading or unavailable at the current coordinate, no land-colored fallback is drawn. The aircraft and skybox remain usable and the diagnostic explains the missing input or asset. If <b><a class="el" href="struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters.">Target</a></b> is also selected, its grid and overlays remain independently available.</p>
 <p>See <a class="el" href="md_docs_2_t_e_r_r_a_i_n___a_n_d___a_s_s_e_t_s.html" title="Terrain and asset pipeline">Terrain and asset pipeline</a> for DTED validation, cache bounds, land/water classification, and packaging.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md242"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md253"></a>
 DLZ view</h1>
 <p>DLZ is a deliberately fictional teaching model. It renders range ticks, the no-escape band, a filtered range caret, and a stateful SHOOT cue. It is not a real weapon model or cockpit display.</p>
 <p>The right column offers two exclusive sources:</p>
@@ -277,7 +280,7 @@ DLZ view</h1>
 <li><b>Calculation Test</b> uses only the visible range, aspect, and altitude sliders. Incoming external values are cached but cannot alter the drawing.</li>
 </ul>
 <p>Invalid or unsupported input keeps the readouts visible, clears the symbology, and shows a persistent diagnostic. Switching input mode never blends values from the two sources. Exact equations and temporal behavior are documented in the <a class="el" href="md_docs_2_d_l_z___m_o_d_e_l.html" title="Dynamic Launch Zone teaching model">DLZ model reference</a>.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md243"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md254"></a>
 Common problems</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">

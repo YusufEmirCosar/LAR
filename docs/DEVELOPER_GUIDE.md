@@ -4,10 +4,10 @@
 
 - CMake 3.24 or newer
 - C++17 compiler
-- Qt 6.10.3 or newer: Core, Concurrent, Gui, Network, Widgets, OpenGL,
+- Qt 6.10.3 or newer: Core, Concurrent, Gui, Network, Widgets,
   OpenGLWidgets, and Test
 - OpenGL development/runtime support
-- Ninja for the checked-in presets
+- Ninja for Unix presets; Visual Studio 2022 with MSVC v143 for Windows presets
 - Python 3 for repository gates
 - Optional: Doxygen and Graphviz, clang-format, clang-tidy, gcovr, Mull
 
@@ -40,6 +40,96 @@ ctest --preset ci-clang --output-on-failure
 
 Do not edit a `build-*` tree or generated `qrc_`, MOC, map, manifest, SBOM, or
 Doxygen output. Reconfigure from maintained source.
+
+## Windows MSVC workflow
+
+The Windows presets target Visual Studio 2022 x64. Install Visual Studio 2022
+or Build Tools with **Desktop development with C++**, MSVC v143, and a Windows
+10 or 11 SDK. Install Qt's **MSVC 2022 64-bit** kit; MinGW, LLVM-MinGW, Android,
+WebAssembly, and ARM64 kits are not interchangeable with this preset.
+
+A typical minimum-version kit is
+`C:\Qt\6.10.3\msvc2022_64`. Confirm the CMake package before configuring:
+
+```powershell
+Test-Path "C:\Qt\6.10.3\msvc2022_64\lib\cmake\Qt6\Qt6Config.cmake"
+```
+
+If the location is unknown:
+
+```powershell
+Get-ChildItem C:\Qt -Recurse -Filter Qt6Config.cmake -ErrorAction SilentlyContinue
+```
+
+Two independent settings are required:
+
+- `Qt6_DIR` lets CMake locate Qt while configuring.
+- The kit's `bin` directory on `PATH` lets build-time Qt executables start.
+
+Setting only `Qt6_DIR` is insufficient when an MSBuild custom step launches a
+Qt-linked helper. Configure and build a production release from Developer
+PowerShell as follows:
+
+```powershell
+$env:Path = "C:\Qt\6.10.3\msvc2022_64\bin;$env:Path"
+
+cmake --preset windows-release `
+  -DQt6_DIR=C:/Qt/6.10.3/msvc2022_64/lib/cmake/Qt6
+
+cmake --build --preset windows-release --parallel
+```
+
+Substitute another compatible version consistently in both paths. The
+`windows-release` preset creates `build-windows-release`, selects Visual Studio
+2022 x64, and disables tests and tool-based quality targets.
+
+### Install a deployable Windows package
+
+Qt's generated deployment script requires an absolute installation prefix.
+Construct it from PowerShell's current absolute path instead of passing a bare
+relative `--prefix`:
+
+```powershell
+$packageDir = Join-Path $PWD.Path "build-windows-package"
+
+cmake --install build-windows-release `
+  --config Release `
+  --prefix "$packageDir"
+
+.\build-windows-package\bin\lar-viewer.exe
+```
+
+The install step copies the executable, map package, Plane assets, mappings,
+and required Qt runtime DLLs/plugins into the package layout. DTED trees remain
+external by design.
+
+### Run strict Windows tests
+
+Use `ci-msvc` rather than `windows-release` when tests and warnings-as-errors
+are required:
+
+```powershell
+$env:Path = "C:\Qt\6.10.3\msvc2022_64\bin;$env:Path"
+
+cmake --preset ci-msvc `
+  -DQt6_DIR=C:/Qt/6.10.3/msvc2022_64/lib/cmake/Qt6
+
+cmake --build --preset ci-msvc --parallel
+ctest --preset ci-msvc
+```
+
+### Diagnose Windows build failures
+
+| Symptom | Cause and action |
+| --- | --- |
+| CMake cannot find `Qt6Config.cmake` | Verify the actual `msvc2022_64` package and pass its `lib/cmake/Qt6` directory as `Qt6_DIR`. A Qt version directory may exist without that kit. |
+| MSBuild custom step exits `-1073741515` | A required runtime DLL was not found. Add the matching Qt `bin` directory to the current PowerShell `PATH`, then rebuild. |
+| Linker reports `__imp_glViewport` or another native GL symbol | Reconfigure with the maintained CMake files. `lar-presentation-widgets` must publicly link the portable `OpenGL::GL` target so its static-library dependency reaches the executable. |
+| Install/deploy rejects a relative `qt.conf` path | Use an absolute prefix such as `$packageDir = Join-Path $PWD.Path "build-windows-package"`. |
+
+Use `cmake --build --preset windows-release --verbose` to expose the failing
+custom or link command. The complete prerequisite installation and clean
+package-recreation commands are also kept in the root [README](../README.md).
 
 ## Repository checks
 

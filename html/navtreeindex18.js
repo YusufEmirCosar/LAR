@@ -1,5 +1,16 @@
 var NAVTREEINDEX18 =
 {
+"struct_plane_terrain_build_request.html#a2bb5c3ec852f00fce9622f73b6620acc":[20,0,119,0],
+"struct_plane_terrain_build_request.html#a38699165054dac5b2bf9c9037e673aff":[20,0,119,6],
+"struct_plane_terrain_build_request.html#a38c08229dff243a0797555b62950525a":[20,0,119,4],
+"struct_plane_terrain_build_request.html#a632fc824a9438e1626b6785d98ce95c0":[20,0,119,2],
+"struct_plane_terrain_build_request.html#a989d1afd185d41d0a882f2e2d29f7e21":[20,0,119,5],
+"struct_plane_terrain_build_request.html#ac6168d33774dab8146385bda7be77ec0":[20,0,119,3],
+"struct_plane_terrain_build_request.html#ae7875afe4aeb6c667c8ba270d311790c":[20,0,119,1],
+"struct_plane_terrain_patch.html":[20,0,121],
+"struct_plane_terrain_patch.html#a00b0e61e1b87e874ba0fac20970ffa50":[20,0,121,5],
+"struct_plane_terrain_patch.html#a0bc7ed2f485fdb38d93d1ab48040c402":[20,0,121,12],
+"struct_plane_terrain_patch.html#a12ee507717802693c23715cc5883a2d3":[20,0,121,17],
 "struct_plane_terrain_patch.html#a3890c114204c63d9304c7f3e0ea9afee":[20,0,121,11],
 "struct_plane_terrain_patch.html#a39b080a9b9944b1b88d33df93768a6b0":[20,0,121,16],
 "struct_plane_terrain_patch.html#a4318335c90063271da818553acb46d4d":[20,0,121,13],
@@ -238,16 +249,5 @@ var NAVTREEINDEX18 =
 "structdlz_1_1_hud_state.html#a8bae66ed4e72daa0d813dc7961ca3f6f":[20,0,4,4,0],
 "structdlz_1_1_hud_state.html#ab777c0c6353de7786b363be8b9aa21f8":[19,0,49,8,5],
 "structdlz_1_1_hud_state.html#ab777c0c6353de7786b363be8b9aa21f8":[20,0,4,4,5],
-"structdlz_1_1_hud_state.html#af5c763ab5b1c23d7844e0058d06adfe5":[19,0,49,8,2],
-"structdlz_1_1_hud_state.html#af5c763ab5b1c23d7844e0058d06adfe5":[20,0,4,4,2],
-"structdlz_1_1_scenario_frame.html":[19,0,49,10],
-"structdlz_1_1_scenario_frame.html":[20,0,4,6],
-"structdlz_1_1_scenario_frame.html#a2353e52ee7f6e003128ec7ca194479de":[19,0,49,10,4],
-"structdlz_1_1_scenario_frame.html#a2353e52ee7f6e003128ec7ca194479de":[20,0,4,6,4],
-"structdlz_1_1_scenario_frame.html#a5fe99612f1eca66a64a70cb0cc5593cb":[19,0,49,10,0],
-"structdlz_1_1_scenario_frame.html#a5fe99612f1eca66a64a70cb0cc5593cb":[20,0,4,6,0],
-"structdlz_1_1_scenario_frame.html#a740f215bf6d26321c2d3ecd09b6bd13c":[19,0,49,10,2],
-"structdlz_1_1_scenario_frame.html#a740f215bf6d26321c2d3ecd09b6bd13c":[20,0,4,6,2],
-"structdlz_1_1_scenario_frame.html#a8e5ffc37164b4967bf98165be61bea83":[19,0,49,10,5],
-"structdlz_1_1_scenario_frame.html#a8e5ffc37164b4967bf98165be61bea83":[20,0,4,6,5]
+"structdlz_1_1_hud_state.html#af5c763ab5b1c23d7844e0058d06adfe5":[19,0,49,8,2]
 };

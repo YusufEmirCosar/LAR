@@ -5,7 +5,7 @@ var searchData=
   ['halfwidth_2',['halfWidth',['../structlar_1_1map_1_1_mercator_viewport.html#a34b8e77782e5566d85a76ffcb9b94c6c',1,'lar::map::MercatorViewport']]],
   ['halfworlddegrees_3',['HalfWorldDegrees',['../classlar_1_1map_1_1_map_projection.html#a5a15505bca3dc66ca5481106baa53d31',1,'lar::map::MapProjection']]],
   ['handle_4',['handle',['../class_source_lifecycle_coordinator.html#a5fe8ac3946fc99edecf8f2d8ca6070c3',1,'SourceLifecycleCoordinator::handle(const OnlineStartResult &amp;result)'],['../class_source_lifecycle_coordinator.html#aca7c03cf83288fd02c8c2ec13bb8fd2b',1,'SourceLifecycleCoordinator::handle(const OnlineStopResult &amp;result)'],['../class_source_lifecycle_coordinator.html#ad289bae443fa45b277710f239bf5652e',1,'SourceLifecycleCoordinator::handle(const SessionLoadResult &amp;result)'],['../class_source_lifecycle_coordinator.html#acce1a988120c5c5d1bb18056b02f9b88',1,'SourceLifecycleCoordinator::handle(const SessionCloseResult &amp;result)']]],
-  ['handoff_5',['Immutable persistence handoff',['../md_docs_2_c_o_n_c_u_r_r_e_n_c_y___m_o_d_e_l.html#autotoc_md75',1,'']]],
+  ['handoff_5',['Immutable persistence handoff',['../md_docs_2_c_o_n_c_u_r_r_e_n_c_y___m_o_d_e_l.html#autotoc_md82',1,'']]],
   ['hasanchor_6',['hasAnchor',['../struct_viewport_camera_state.html#ab79e0097fa0a74f837cf52eb29e96186',1,'ViewportCameraState']]],
   ['hasbinary_7',['hasBinary',['../structlar_1_1gltf_1_1_glb_container.html#a819f9f23fc107a9b560ed5b8980025a8',1,'lar::gltf::GlbContainer']]],
   ['hascompletedescriptors_8',['hasCompleteDescriptors',['../namespaceanonymous__namespace_02statefield_8cpp_03.html#a7dcf24f925c7f155a05b7c13662ba5ab',1,'anonymous_namespace{statefield.cpp}']]],
@@ -32,14 +32,14 @@ var searchData=
   ['headersizeoffset_29',['HeaderSizeOffset',['../namespacelar_1_1map_1_1format.html#ac8952f3747627b8ee597a7da7d890df9',1,'lar::map::format']]],
   ['headingradians_30',['headingRadians',['../class_plane_scene_widget.html#ac27069e022fa16543e3c05fd1bceb4bc',1,'PlaneSceneWidget']]],
   ['height_31',['height',['../struct_viewport_preparation_request.html#ad23fd51b3261fcd9d36a55f00a995c56',1,'ViewportPreparationRequest']]],
-  ['helpers_32',['Viewer shell and helpers',['../md_docs_2_f_i_l_e___r_e_f_e_r_e_n_c_e.html#autotoc_md128',1,'']]],
-  ['hexadecimal_20example_33',['Worked hexadecimal example',['../md_docs_2_l_a_r1___f_o_r_m_a_t.html#autotoc_md148',1,'']]],
+  ['helpers_32',['Viewer shell and helpers',['../md_docs_2_f_i_l_e___r_e_f_e_r_e_n_c_e.html#autotoc_md139',1,'']]],
+  ['hexadecimal_20example_33',['Worked hexadecimal example',['../md_docs_2_l_a_r1___f_o_r_m_a_t.html#autotoc_md159',1,'']]],
   ['holes_34',['holes',['../structlar_1_1map_1_1tool_1_1_source_polygon.html#afc9c96fda5a364240a783f0092b64923',1,'lar::map::tool::SourcePolygon']]],
   ['horizontalorbitdegrees_35',['HorizontalOrbitDegrees',['../namespaceanonymous__namespace_02plane__orbit__camera_8cpp_03.html#a484202ec051858f56c132732f295bc94',1,'anonymous_namespace{plane_orbit_camera.cpp}']]],
   ['horizontalpadding_36',['HorizontalPadding',['../namespaceanonymous__namespace_02lar__navigation__overlay_8cpp_03.html#aecbf1d2e5b9532c18ea0b7082ad2b26f',1,'anonymous_namespace{lar_navigation_overlay.cpp}']]],
   ['how_20mapping_20changes_20packets_37',['How mapping changes packets',['../dir_5ca9a0d79b5b388ccf4ce73c53df5e24.html#autotoc_md4',1,'']]],
   ['hud_38',['Hud',['../viewport__content__mode_8h.html#a53313281d648993a33e8829a31bdd239ab1f113664cdbc84e94a94c8263fa7900',1,'viewport_content_mode.h']]],
-  ['hud_20presentation_39',['DLZ HUD presentation',['../md_docs_2_f_i_l_e___r_e_f_e_r_e_n_c_e.html#autotoc_md133',1,'']]],
+  ['hud_20presentation_39',['DLZ HUD presentation',['../md_docs_2_f_i_l_e___r_e_f_e_r_e_n_c_e.html#autotoc_md144',1,'']]],
   ['hudblack_40',['HudBlack',['../namespacedlz_1_1presentation_1_1anonymous__namespace_02dlz__hud__renderer_8cpp_03.html#a907f33a9bd28c3e0f5ec38b75d9480bc',1,'dlz::presentation::anonymous_namespace{dlz_hud_renderer.cpp}']]],
   ['hudcontrolpanel_41',['hudControlPanel',['../class_values_panel.html#aa11d8c5d9f4eee3a315f43e7211a4b04',1,'ValuesPanel']]],
   ['hudgreen_42',['HudGreen',['../namespacedlz_1_1presentation_1_1anonymous__namespace_02dlz__hud__renderer_8cpp_03.html#a9e77d5daec762f019a535a01b1d98267',1,'dlz::presentation::anonymous_namespace{dlz_hud_renderer.cpp}']]],
@@ -51,5 +51,5 @@ var searchData=
   ['hudview_48',['HudView',['../classdlz_1_1presentation_1_1_hud_view.html',1,'dlz::presentation::HudView'],['../classdlz_1_1presentation_1_1_hud_view.html#aff06fea35330bec51f3083afd82c94dc',1,'dlz::presentation::HudView::HudView()']]],
   ['hudview_49',['hudView',['../classdlz_1_1presentation_1_1_hud_workspace.html#accaa70e80923acb4390012dcb841b6d7',1,'dlz::presentation::HudWorkspace']]],
   ['hudworkspace_50',['HudWorkspace',['../classdlz_1_1presentation_1_1_hud_workspace.html',1,'dlz::presentation::HudWorkspace'],['../classdlz_1_1presentation_1_1_hud_workspace.html#afb9be1db382bcd4c59eb64522d368640',1,'dlz::presentation::HudWorkspace::HudWorkspace(QWidget *parent=nullptr)'],['../classdlz_1_1presentation_1_1_hud_workspace.html#aec685012fec2dfb24231b60b8836444b',1,'dlz::presentation::HudWorkspace::HudWorkspace(ControlPanel *controlPanel, QWidget *parent=nullptr)']]],
-  ['hysteresis_51',['hysteresis',['../md_docs_2_d_l_z___m_o_d_e_l.html#autotoc_md116',1,'Scale hysteresis'],['../md_docs_2_d_l_z___m_o_d_e_l.html#autotoc_md117',1,'Shoot cue hysteresis']]]
+  ['hysteresis_51',['hysteresis',['../md_docs_2_d_l_z___m_o_d_e_l.html#autotoc_md127',1,'Scale hysteresis'],['../md_docs_2_d_l_z___m_o_d_e_l.html#autotoc_md128',1,'Shoot cue hysteresis']]]
 ];

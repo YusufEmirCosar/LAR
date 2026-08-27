@@ -118,8 +118,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2_t_e_
   <div class="headertitle"><div class="title">Terrain and asset pipeline </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md189"></a></p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md190"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md200"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md201"></a>
 Overview</h1>
 <p>The visual asset path has four distinct inputs:</p>
 <table class="markdownTable">
@@ -135,7 +135,7 @@ Overview</h1>
 <td class="markdownTableBodyNone">Six-face cubemap PNG set  </td><td class="markdownTableBodyNone">Startup and selection  </td><td class="markdownTableBodyNone">Validated skybox images  </td></tr>
 </table>
 <p>The build-time map compiler is not linked into the viewer. Runtime readers accept bounded binary/package data and publish a candidate only after complete validation.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md191"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md202"></a>
 Source asset tree</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -152,7 +152,7 @@ Source asset tree</h1>
 <td class="markdownTableBodyNone"><span class="tt">assets/ui/icons/icons.qrc</span>  </td><td class="markdownTableBodyNone">Icons and stylesheet  </td><td class="markdownTableBodyNone">Embedded as Qt resources  </td></tr>
 </table>
 <p>The <a class="el" href="dir_34e9a5f624ac092a9ae2401c28d616d7.html" title="/Users/kazmetred/Yazılım/ShadyTemp/Merge/LAR/assets/README.md">asset inventory</a> records packaging and attribution. The map source attribution is in <a class="el" href="dir_783095595a6323cf3726df5c30c4d0fd.html" title="/Users/kazmetred/Yazılım/ShadyTemp/Merge/LAR/assets/map/README.md">assets/map/README.md</a>.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md192"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md203"></a>
 World-map compilation</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -183,7 +183,7 @@ flowchart LR
 <td class="markdownTableBodyNone">Coordinates in the source  </td><td class="markdownTableBodyRight">1,500,000  </td></tr>
 </table>
 <p>The triangulator removes unsafe degeneracy, normalizes winding, unwraps antimeridian-crossing rings, bridges holes, and applies planar ear clipping. An unbridgeable hole or unsafe polygon fails the compilation; it is not emitted as partial geometry.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md193"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md204"></a>
 LRM1 map package</h1>
 <p>The current package is <b>LRM1 version 2</b>. All scalar fields are little-endian. Its fixed 80-byte header stores:</p>
 <ul>
@@ -204,7 +204,7 @@ LRM1 map package</h1>
 </ol>
 <p>The package reader checks exact file size, CRC, supported flags, checked byte arithmetic, finite coordinate bounds, index ranges, and land-index range consistency before returning a <span class="tt">MapMesh</span>. The total file limit is 64 MiB. Geometry limits include 2,000,000 vertices, 6,000,000 indices for each fill projection, 4,000,000 border indices, and 4,000,000 land-triangle references.</p>
 <p><span class="tt">PackagedMapAssetSource</span> also validates the adjacent manifest and caches the first load result. Mercator, Sphere, and <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> terrain receive the same immutable mesh.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md194"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md205"></a>
 Geographic land index</h1>
 <p><span class="tt">MapMeshCompiler</span> assigns each Mercator fill triangle to every one-degree cell touched by its geographic bounds. <span class="tt">MapLandIndex</span> uses those ranges to:</p>
 <ul>
@@ -213,7 +213,7 @@ Geographic land index</h1>
 <li>handle longitude wrapping without scanning the complete world mesh.</li>
 </ul>
 <p>This index is the common land/sea authority for Earth and <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a>. DTED elevation sign is not land classification: below-sea-level land such as the Dead Sea must remain land, and an ocean post must remain water even if its encoded elevation is unexpected.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md195"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md206"></a>
 DTED source selection</h1>
 <p><a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> starts with Level 0 and resolves its root in this order:</p>
 <ol type="1">
@@ -227,7 +227,7 @@ DTED source selection</h1>
 <div class="line">e151/s34.dt2</div>
 </div><!-- fragment --><p>Path resolution tries lower- and upper-case variants, requires a regular file, and verifies canonical containment below the selected root.</p>
 <p>The <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> upload workflow accepts Level 1 or Level 2. It scans at most 1,024 immediate longitude directories and 512 candidate files while looking for one valid addressed tile. A candidate source becomes active only after that tile passes the full reader. Cancellation or failure retains the old dataset and patch.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md196"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md207"></a>
 Supported DTED levels</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -240,7 +240,7 @@ Supported DTED levels</h1>
 <td class="markdownTableBodyRight">2  </td><td class="markdownTableBodyRight">3,601  </td><td class="markdownTableBodyRight">1 arc-second  </td><td class="markdownTableBodyRight">30 m  </td><td class="markdownTableBodyNone"><span class="tt">.dt2</span>  </td></tr>
 </table>
 <p>Longitude profile counts can be smaller near the poles. Supported longitude interval multipliers are 1, 2, 3, 4, and 6, and the declared posts must still span exactly one degree.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md197"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md208"></a>
 DTED validation</h1>
 <p><span class="tt"><a class="el" href="class_dted_cell_reader.html" title="Reads one strictly bounded DTED tile using no external terrain runtime.">DtedCellReader</a></span> streams one file and validates before publishing:</p>
 <ul>
@@ -254,7 +254,7 @@ DTED validation</h1>
 <li>signed-magnitude elevations and the <span class="tt">-32767</span> no-data sentinel.</li>
 </ul>
 <p>A limited compatibility branch recognizes physically impossible signed-magnitude values as two's-complement negative data. A parsed cell remains immutable and records its actual longitude/latitude spacing.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md198"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md209"></a>
 Mosaic sampling and cache</h1>
 <p><span class="tt"><a class="el" href="class_dted_mosaic_sampler.html" title="Samples a logical DTED mosaic while loading only addressed tiles.">DtedMosaicSampler</a></span>:</p>
 <ul>
@@ -267,7 +267,7 @@ Mosaic sampling and cache</h1>
 </ul>
 <p>The default cache is bounded by both <b>24 entries</b> and <b>128 MiB</b> of decoded elevation storage. A single currently addressed tile may exceed the byte budget without being immediately evicted; subsequent entries force eviction.</p>
 <p>Land/water classification is deliberately outside the sampler. It depends on the shared vector map, not the DTED value.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md199"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md210"></a>
 Local land mask</h1>
 <p>For each requested patch, <span class="tt"><a class="el" href="class_plane_land_mask_builder.html" title="Builds a bounded local raster by querying only indexed map triangles.">PlaneLandMaskBuilder</a></span>:</p>
 <ol type="1">
@@ -278,7 +278,7 @@ Local land mask</h1>
 </ol>
 <p>The desired density is 50 metres per texel. Resolution is a power of two from 256 through 2,048. Uniform all-land or all-water patches discard the texel array and retain only their classification.</p>
 <p>This vector-derived mask replaced the earlier generated DTED0 water-mask pack. There is no <span class="tt">assets/water</span> runtime package and no external GDAL/NumPy generation step in the current pipeline.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md200"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md211"></a>
 Terrain patch construction</h1>
 <p><span class="tt"><a class="el" href="class_plane_scene_widget.html" title="Loads packaged Plane assets and renders one orbit-controlled simulation canvas.">PlaneSceneWidget</a></span> requests an aircraft-centered patch:</p>
 <ul>
@@ -290,7 +290,7 @@ Terrain patch construction</h1>
 <p>The builder's defensive API accepts only 1–100 km half-extents and 17–257 samples. For every grid point it inverts <span class="tt"><a class="el" href="class_lar_projection.html" title="Projects latitude/longitude radians to local metric east/north axes.">LarProjection</a></span>, samples DTED, and classifies the local point through the land mask.</p>
 <p>Land vertices retain DTED elevation and receive slope-derived normals. Water vertices retain their source negative value as a <b>non-negative depth</b> attribute but are rendered geometrically at mean sea level. The shader uses a logarithmic shallow-blue to deep-navy ramp. Negative terrestrial depressions stay in the land pass.</p>
 <p>Cells with missing samples do not form triangles. The center sample must be valid, at least one triangle must exist, and the land map must be usable before an immutable <span class="tt"><a class="el" href="struct_plane_terrain_patch.html" title="CPU mesh whose positions are local to a stable geographic anchor.">PlaneTerrainPatch</a></span> is published.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md201"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md212"></a>
 Asynchronous terrain lifecycle</h1>
 <p><span class="tt"><a class="el" href="class_plane_terrain_worker.html" title="Coalesces aircraft movement so only the newest bounded terrain patch is published.">PlaneTerrainWorker</a></span> runs on <span class="tt">lar-plane-terrain-thread</span> and owns the DTED sampler, map land index, and patch builder. Submission stores only the newest request. Atomic revisions let an in-progress build observe cancellation and prevent a superseded patch from being emitted.</p>
 <p>A ready patch is reused while:</p>
@@ -301,7 +301,7 @@ Asynchronous terrain lifecycle</h1>
 </ul>
 <p>The old patch is removed after the aircraft moves beyond 80% of its extent. A failed location is not retried until movement exceeds the larger of 5 km or 35% of the failed half-extent, unless the caller forces a retry.</p>
 <p>The UI thread translates and east-rescales a reused patch for current aircraft latitude, uploads it on the next paint pass, and owns every GPU resource. The worker never accesses a widget or OpenGL object.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md202"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md213"></a>
 Terrain rendering and overlays</h1>
 <p>Terrain uses seven floats per vertex: position, normal, and water depth. A nearest-filtered R8 land mask selects two opaque passes:</p>
 <ul>
@@ -309,7 +309,7 @@ Terrain rendering and overlays</h1>
 <li>water at mean sea level with bathymetric color.</li>
 </ul>
 <p>If Terrain is selected but the patch is missing, the renderer does not draw a land-colored flat fallback. The independently selected tactical surface still draws its grid, LAR overlays, and target without an opaque false terrain surface. When a patch is present, the target marker samples its own terrain height and the grid/zone presentation uses the patch center as its overlay height.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md203"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md214"></a>
 glTF and GLB models</h1>
 <p><span class="tt"><a class="el" href="class_glb_model_reader.html" title="Parses the bounded static glTF 2.0 subset used by the plane renderer.">GlbModelReader</a></span> supports a static glTF 2.0 subset:</p>
 <ul>
@@ -324,7 +324,7 @@ glTF and GLB models</h1>
 <li>PNG and JPEG images.</li>
 </ul>
 <p>Sparse accessors, required extensions, unsupported modes/components, and unsafe buffer views are rejected. Transforms are baked into vertices, the bounds are recentered, and the largest extent is normalized to two scene units.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md204"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md215"></a>
 Model resource limits</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -351,14 +351,14 @@ Model resource limits</h2>
 <td class="markdownTableBodyNone">Indices  </td><td class="markdownTableBodyRight">1,500,000  </td></tr>
 </table>
 <p>External URI paths must be relative regular non-symlink files canonically contained below the model directory. Absolute paths, traversal, NUL, query/fragment syntax, and unsupported schemes are rejected. Resource accounting is checked before the accepted candidate replaces the active model.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md205"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md216"></a>
 Cubemap catalog</h1>
 <p>A set consists of six PNG files with one prefix:</p>
 <div class="fragment"><div class="line">&lt;name&gt;_rt.png  &lt;name&gt;_lf.png</div>
 <div class="line">&lt;name&gt;_up.png  &lt;name&gt;_dn.png</div>
 <div class="line">&lt;name&gt;_ft.png  &lt;name&gt;_bk.png</div>
 </div><!-- fragment --><p>The catalog discovers at most 256 sets, naturally sorts them, and excludes incomplete or mismatched groups. Every face must be a readable square image, no larger than 4,096 × 4,096 and 64 MiB encoded. Files are revalidated when the user selects a set so a changed package cannot bypass discovery checks.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md206"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md217"></a>
 Build, stage, and install</h1>
 <p><span class="tt">lar_copy_map_package</span> stages the compiled map and manifest beside each rendering executable. <span class="tt">lar_copy_plane_assets</span> serializes concurrent staging with a build-directory lock, replaces only its managed model/cubemap subdirectories, and copies <span class="tt">f16_3.glb</span> plus the PNG catalog.</p>
 <p>Install rules include:</p>
@@ -370,7 +370,7 @@ Build, stage, and install</h1>
 <li>SPDX SBOM.</li>
 </ul>
 <p>DTED is excluded because the development tree is approximately 1.7 GB and may have separate provenance and redistribution requirements. A deployment must mount/copy it explicitly or set <span class="tt">LAR_DTED0_ROOT</span>.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md207"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md218"></a>
 Change checklist</h1>
 <p>When changing an asset format or terrain policy:</p>
 <ol type="1">

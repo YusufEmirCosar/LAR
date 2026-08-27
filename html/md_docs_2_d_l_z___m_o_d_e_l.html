@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2_d_l_
   <div class="headertitle"><div class="title">Dynamic Launch Zone teaching model </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md106"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md117"></a></p>
 <p>The DLZ page is a deterministic visualization lab. Its equations are fictional, public, and intentionally simple. They are not missile-performance data, guidance logic, a certified aerospace model, or a flight simulator.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md107"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md118"></a>
 Isolation boundary</h1>
 <p><span class="tt">src/domain/dlz</span> owns the model. It does not reuse the ground-LAR <span class="tt"><a class="el" href="struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters.">Target</a></span> structure. Live UDP and replay carry only this atomic telemetry triple:</p>
 <table class="markdownTable">
@@ -134,7 +134,7 @@ Isolation boundary</h1>
 <td class="markdownTableBodyNone"><span class="tt">dlz_altitude_ft</span>  </td><td class="markdownTableBodyNone">feet  </td><td class="markdownTableBodyRight">0–60,000  </td></tr>
 </table>
 <p><span class="tt"><a class="el" href="struct_decoded_state.html" title="One validated mapped frame and its field-availability mask.">DecodedState</a></span> contains those values beside, not inside, the legacy <span class="tt"><a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a></span>/<span class="tt"><a class="el" href="struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters.">Target</a></span> state. A mapping must contain all three fields or none.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md108"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md119"></a>
 Domain values</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -191,7 +191,7 @@ classDiagram
 <td class="markdownTableBodyNone">UI/replay target Mach  </td><td class="markdownTableBodyRight">0.95  </td></tr>
 </table>
 <p>Reference altitude and Mach are retained in the explicit weapon value for model description and validation; the current factor formulas use the numerical 30 kft datum and shooter Mach directly.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md109"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md120"></a>
 Scenario adapter</h1>
 <p>The UI accepts range, aspect, and shooter altitude. <span class="tt">ScenarioAdapter</span> constructs a deterministic local North-East-Down-style frame:</p>
 <ul>
@@ -203,7 +203,7 @@ Scenario adapter</h1>
 <li>target defensive loading is a fixed 9 g value.</li>
 </ul>
 <p>The constructed frame is passed through the same general geometry function and guarded solver used by tests. The adapter never partially replaces its output with an invalid frame. For diagnostics, it does retain finite raw formula values when the ordering guard rejects the scenario.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md110"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md121"></a>
 Geometry</h1>
 <p>Let:</p>
 <ul>
@@ -224,7 +224,7 @@ Geometry</h1>
 <div class="line">ATA           = offBoresight</div>
 <div class="line">altitudeDiffFt = -(target.z - shooter.z) * 3.280839895...</div>
 </div><!-- fragment --><p>Positive range rate means separation is increasing; negative means closing. Geometry rejects non-finite state, non-positive atmosphere/weapon values, zero separation, and a stationary target (aspect would be undefined).</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md111"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md122"></a>
 Exact toy equations</h1>
 <p>For aspect <span class="tt">a</span> in radians, shooter altitude <span class="tt">h</span> in feet, and shooter Mach <span class="tt">M</span>:</p>
 <div class="fragment"><div class="line">fAspect = 0.30 + 0.70 * (1 + cos(a)) / 2</div>
@@ -241,7 +241,7 @@ Exact toy equations</h1>
 <div class="line">inEnvelope = currentRangeNm &gt; RMIN and currentRangeNm &lt;= RPI</div>
 <div class="line">shootCue   = inEnvelope</div>
 </div><!-- fragment --><p>The aspect factor is 1.0 head-on (<span class="tt">0°</span>) and 0.30 tail-on (<span class="tt">180°</span>). The altitude factor changes by 0.02 per thousand feet around 30 kft, clamped to 0.6–1.6.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md112"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md123"></a>
 Supported ordered domain</h1>
 <p>The renderer accepts a solution only when every value is finite and:</p>
 <div class="fragment"><div class="line">RMIN &lt; RTR &lt; RNE &lt; RPI &lt; RMAX</div>
@@ -261,7 +261,7 @@ Supported ordered domain</h1>
 <td class="markdownTableBodyNone"><span class="tt">InvalidDerivedOrdering</span>  </td><td class="markdownTableBodyNone">Finite output still failed the complete strict order  </td></tr>
 </table>
 <p><span class="tt">evaluateToyModel</span> intentionally skips the ordering guard. It exists only to keep diagnostic readouts transparent. Its output must not be rendered as a valid launch-zone solution.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md113"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md124"></a>
 Input modes</h1>
 <p>The DLZ values panel exposes exactly two sources:</p>
 <ul>
@@ -269,17 +269,17 @@ Input modes</h1>
 <li><b>Calculation Test</b> uses only local range/aspect/altitude sliders. Incoming external triples are cached so switching back is immediate, but they cannot mutate the current drawing or its filter/cue state.</li>
 </ul>
 <p>Switching source or editing a local calculation resets temporal presentation. Sequential external samples retain filter, scale hysteresis, and cue timing. Missing or invalid external input clears the frame.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md114"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md125"></a>
 Presentation state</h1>
 <p><span class="tt">PresentationController</span> converts a valid solution into stable HUD behavior:</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md115"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md126"></a>
 Range filter</h2>
 <p>The first sample is displayed exactly. Later samples use:</p>
 <div class="fragment"><div class="line">dt = clamp(dtSeconds, 0, 0.25)</div>
 <div class="line">gain = clamp(dt / 0.25, 0, 1)</div>
 <div class="line">displayed += (raw - displayed) * gain</div>
 </div><!-- fragment --><p>This is a bounded first-order filter with a nominal 0.25-second time constant.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md116"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md127"></a>
 Scale hysteresis</h2>
 <p>Available maximums are <span class="tt">10</span>, <span class="tt">20</span>, <span class="tt">40</span>, and <span class="tt">80</span> nm. Initial scale is the smallest step containing <span class="tt">max(currentRange, RMAX)</span>, capped at 80 nm.</p>
 <ul>
@@ -287,10 +287,10 @@ Scale hysteresis</h2>
 <li>a falling range moves down only when it crosses below 60% of the current scale;</li>
 <li>a range above 80 nm parks the caret at the top while preserving the raw readout.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md117"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md128"></a>
 Shoot cue hysteresis</h2>
 <p>The cue enters only when the solver cue is true and raw range is more than <span class="tt">0.10 nm</span> above RMIN and <span class="tt">0.20 nm</span> below RPI. It exits at <span class="tt">0.10 nm</span> below RMIN or <span class="tt">0.20 nm</span> above RPI, but remains active for at least <span class="tt">0.50 s</span> after entry. The visible word flashes on the first half of a <span class="tt">0.50 s</span> period.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md118"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md129"></a>
 Rendering</h2>
 <p><span class="tt">HudRenderer</span> is stateless. It draws only finite <span class="tt">Prelaunch</span> state with a valid scale. It renders:</p>
 <ul>
@@ -300,7 +300,7 @@ Rendering</h2>
 <li>scale text and the flashing <span class="tt">SHOOT</span> cue.</li>
 </ul>
 <p>Any invalid state draws <span class="tt">NO TRACK</span> or a persistent error rather than stale or unordered symbology.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md119"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md130"></a>
 Verification</h1>
 <ul>
 <li><span class="tt">tests/dlz_tests.cpp</span>: geometry, factors, ordering errors, filtering, scale, and cue timing.</li>

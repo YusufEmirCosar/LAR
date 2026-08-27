@@ -118,8 +118,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2_a_r_
   <div class="headertitle"><div class="title">Architecture </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md38"></a></p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md39"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md45"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md46"></a>
 Architectural style</h1>
 <p>LAR uses ports and adapters around a small domain and application core. Runtime control flows from presentation to application interfaces; concrete networking, filesystem, timers, and worker threads live in infrastructure. The viewer is the composition boundary where those implementations are selected.</p>
 <div class="mermaidgraph">
@@ -169,7 +169,7 @@ flowchart TB
     MAIN --&gt; RUNTIME</pre>
 </div>
 <p>Solid arrows show compile-time use. Dashed arrows show implementation of an inward-facing port. At runtime, signals and result values travel back out; that does not reverse the source dependency.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md40"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md47"></a>
 Layer rules</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -186,7 +186,7 @@ Layer rules</h1>
 <td class="markdownTableBodyNone"><span class="tt">tools/map_asset</span>  </td><td class="markdownTableBodyNone">Build-time GeoJSON parsing, triangulation, mesh compilation, package writing  </td><td class="markdownTableBodyNone"><span class="tt">lar-map-format</span>, Qt Core  </td><td class="markdownTableBodyNone">Application runtime and presentation widgets  </td></tr>
 </table>
 <p><span class="tt">tools/check_architecture.py</span> enforces forbidden includes, concrete Qt leakage, CMake link direction, and source-size ceilings. <span class="tt">tests/architecture_tests.cpp</span> exercises substitutable adapters, command/result correlation, source epochs, workflow transitions, and worker composition.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md41"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md48"></a>
 Core class UML</h1>
 <p>The diagram intentionally shows architectural relationships, not every Qt signal or helper. Generated Doxygen contains exhaustive inheritance and collaboration diagrams.</p>
 <div class="mermaidgraph">
@@ -246,7 +246,7 @@ classDiagram
     DirectApplicationRuntime ..|&gt; IApplicationRuntime
     ThreadedApplicationRuntime ..|&gt; IApplicationRuntime</pre>
 </div>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md42"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md49"></a>
 Domain and mapping model</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -299,7 +299,7 @@ classDiagram
     PacketMapping --&gt; StateValidator : validated by decoder</pre>
 </div>
 <p><span class="tt"><a class="el" href="class_packet_mapping.html" title="Validated packet schema that decodes and encodes Plane/Target values.">PacketMapping</a></span> owns an immutable, fully validated list of byte bindings and the exact source JSON. <span class="tt"><a class="el" href="class_mapped_packet_decoder.html" title="Thin IPacketDecoder adapter around PacketMapping::decode().">MappedPacketDecoder</a></span> first decodes a complete temporary <span class="tt"><a class="el" href="struct_decoded_state.html" title="One validated mapped frame and its field-availability mask.">DecodedState</a></span>, then <span class="tt"><a class="el" href="class_state_validator.html" title="Checks finite values and semantic ranges for available state fields.">StateValidator</a></span> validates only fields marked available. Callers never observe a partially updated frame.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md43"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md50"></a>
 Runtime component graph</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -328,7 +328,7 @@ flowchart LR
     UI --&gt; GPU[&quot;PlaneTerrainGpuLayer&quot;]</pre>
 </div>
 <p>The worker reads and samples files, derives normals, classifies land/water, and publishes an immutable candidate. The widget accepts only the current revision; all OpenGL upload and destruction remains on the context thread.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md44"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md51"></a>
 Composition roots</h1>
 <ul>
 <li><span class="tt"><a class="el" href="src_2viewer_2main_8cpp.html">src/viewer/main.cpp</a></span> constructs production UI-thread state, <span class="tt"><a class="el" href="class_threaded_application_runtime.html" title="Production runtime with four total execution threads: the caller/UI thread plus network,...">ThreadedApplicationRuntime</a></span>, the IP-policy repository, the application facade, and <span class="tt"><a class="el" href="class_main_window.html" title="Builds the control panels and renders ApplicationViewModel changes.">MainWindow</a></span>.</li>
@@ -337,7 +337,7 @@ Composition roots</h1>
 <li><span class="tt"><a class="el" href="tools_2map__asset_2main_8cpp.html">tools/map_asset/main.cpp</a></span> is the build-time map compiler root.</li>
 </ul>
 <p>No application service selects a concrete adapter. Dependencies are supplied through constructors or worker factories.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md45"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md52"></a>
 CMake target graph</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -378,7 +378,7 @@ flowchart BT
 <td class="markdownTableBodyNone"><span class="tt">lar-map-asset-compiler-support</span>  </td><td class="markdownTableBodyNone">GeoJSON reader and mesh compiler  </td><td class="markdownTableBodyNone">Build-time only  </td></tr>
 </table>
 <p>Although <span class="tt">lar-map-format</span> files live under <span class="tt">src/viewer/map</span>, the target is kept free of QWidget/OpenGL dependencies so the build-time compiler and parser tests can reuse it. <span class="tt">lar-map-rendering</span> contains the visual side of that subsystem. Version 2 of the package also carries a 360-by-180 one-degree land-triangle index. <span class="tt">MapLandIndex</span> exposes that immutable index to Earth and <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a>, ensuring both visualizations use the same vector coastline authority.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md46"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md53"></a>
 Stable boundaries and invariants</h1>
 <ul>
 <li>Only <span class="tt"><a class="el" href="class_application_facade.html" title="Main-thread presentation facade.">ApplicationFacade</a></span> mutates authoritative UI workflow state.</li>
@@ -395,7 +395,7 @@ Stable boundaries and invariants</h1>
 <li>The DLZ teaching model does not reinterpret the ground-LAR <span class="tt"><a class="el" href="struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters.">Target</a></span> model.</li>
 </ul>
 <p>See <a class="el" href="md_docs_2_d_a_t_a___f_l_o_w_s.html" title="Runtime data flows">Runtime data flows</a> and <a class="el" href="md_docs_2_c_o_n_c_u_r_r_e_n_c_y___m_o_d_e_l.html" title="Concurrency model">Concurrency model</a> for the temporal form of these relationships.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md47"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md54"></a>
 Safe extension points</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">

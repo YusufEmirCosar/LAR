@@ -55,6 +55,14 @@ On macOS the viewer is an application bundle:
 open build-release/lar-viewer.app
 ```
 
+On Windows, use the Visual Studio 2022 x64 preset with a matching Qt
+`msvc2022_64` kit. Set both `Qt6_DIR` for configuration and the kit's `bin`
+directory on `PATH` for build-time helpers, then install with an absolute
+package prefix so Qt can deploy its runtime correctly. Follow the complete
+[developer guide](DEVELOPER_GUIDE.md), section **Windows MSVC workflow**; the
+root [README](../README.md), section **Windows setup**, also includes first-time
+installation and troubleshooting commands.
+
 See the [user guide](USER_GUIDE.md) for recording, replay, Plane terrain, and
 DLZ workflows. See the [developer guide](DEVELOPER_GUIDE.md) for Windows,
 debug, sanitizer, and repository-check commands.

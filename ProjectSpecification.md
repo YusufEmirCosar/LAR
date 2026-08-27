@@ -121,14 +121,16 @@ adversarial tests.
 
 ## Dependency and packaging requirements
 
-- Build requirements are CMake 3.24+, C++17, and Qt 6.10.3 or newer with Core,
-  Concurrent, Gui, Network, Widgets, OpenGL, and OpenGLWidgets. Test builds also
-  require Qt Test; quality and installation checks require Python 3.
+- Build requirements are CMake 3.24+, C++17, Qt 6.10.3 or newer with Core,
+  Concurrent, Gui, Network, Widgets, and OpenGLWidgets, and native OpenGL
+  development/runtime support. Test builds also require Qt Test; quality and
+  installation checks require Python 3.
 - Automated release jobs that install Qt are pinned to Qt 6.11.2. Changing that
   pin requires strict, sanitizer, GPU, installation, and dependency-scan
   evidence.
-- Windows installations shall deploy the required Qt runtime DLLs and platform
-  plugins beside the installed application layout.
+- Windows installations shall use an absolute CMake installation prefix and
+  deploy the required Qt runtime DLLs and platform plugins beside the installed
+  application layout.
 - The installed SPDX 2.3 SBOM shall identify the application, each directly
   used Qt module, the platform plugin, PNG/JPEG image handlers, and the C++
   runtime, including exact versions, package URLs where defined, and dependency

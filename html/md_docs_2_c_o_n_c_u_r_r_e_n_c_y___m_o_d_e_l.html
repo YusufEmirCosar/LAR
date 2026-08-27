@@ -118,8 +118,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2_c_o_
   <div class="headertitle"><div class="title">Concurrency model </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md67"></a></p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md68"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md74"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md75"></a>
 Thread topology</h1>
 <p>The production application has four baseline execution threads. Qt's main thread is not owned by the runtime; the runtime owns and joins the other three. When DTED terrain is enabled, the <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> widget lazily starts and owns one bounded terrain-preparation thread at a time. A validated session source change stops that worker, invalidates stale revisions, and starts a replacement when terrain remains visible.</p>
 <table class="markdownTable">
@@ -137,7 +137,7 @@ Thread topology</h1>
 <td class="markdownTableBodyNone"><span class="tt">lar-plane-terrain-thread</span> (conditional)  </td><td class="markdownTableBodyNone"><span class="tt"><a class="el" href="class_plane_terrain_worker.html" title="Coalesces aircraft movement so only the newest bounded terrain patch is published.">PlaneTerrainWorker</a></span>, <span class="tt"><a class="el" href="class_plane_terrain_patch_builder.html" title="Builds immutable terrain patches; instances are confined to one CPU worker thread.">PlaneTerrainPatchBuilder</a></span>, <span class="tt"><a class="el" href="class_dted_mosaic_sampler.html" title="Samples a logical DTED mosaic while loading only addressed tiles.">DtedMosaicSampler</a></span>, <span class="tt"><a class="el" href="class_plane_land_mask_builder.html" title="Builds a bounded local raster by querying only indexed map triangles.">PlaneLandMaskBuilder</a></span>, shared <span class="tt">MapLandIndex</span>  </td><td class="markdownTableBodyNone">Bounded file parsing, bilinear elevation sampling, vector land/water classification, normals, bathymetry, and latest-only immutable patch publication  </td></tr>
 </table>
 <p>Recording and playback share the session thread so their mutable services are serialized. <span class="tt"><a class="el" href="class_source_lifecycle_coordinator.html" title="Single owner of online/playback activation, switching, and publications.">SourceLifecycleCoordinator</a></span> ensures only one is an active state source. Destination persistence is separate because an immutable snapshot can be safely handed off. The optional terrain worker is presentation-owned, coalesces pending aircraft positions, and performs no QWidget or OpenGL work. The UI/context thread alone uploads and destroys terrain GPU resources.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md69"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md76"></a>
 Ownership UML</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -165,7 +165,7 @@ classDiagram
     PlaybackRuntimeWorker *-- PlaybackService</pre>
 </div>
 <p>Workers are detached from any factory parent, moved before their threads start, and kept under explicit runtime ownership. Thread-affine collaborators are created by each worker's <span class="tt">initialize()</span> slot after the thread starts. Timers are QObject children rather than value members so the complete QObject tree follows every affinity move.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md70"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md77"></a>
 Command transport</h1>
 <p>All production commands cross from <span class="tt"><a class="el" href="class_threaded_application_runtime.html" title="Production runtime with four total execution threads: the caller/UI thread plus network,...">ThreadedApplicationRuntime</a></span> to workers with explicit <span class="tt">Qt::QueuedConnection</span>. Results return as registered, copyable value types. No UI object is dereferenced by a worker.</p>
 <p>The direct runtime is allowed to emit completion synchronously inside a command call. <span class="tt"><a class="el" href="class_request_result_gate.html" title="Correlates one latest-wins command with either synchronous or asynchronous delivery of its typed resu...">RequestResultGate</a>&lt;Result&gt;</span> brackets dispatch so the facade handles this case and queued delivery with the same observable semantics:</p>
@@ -176,7 +176,7 @@ Command transport</h1>
 <li>A buffered matching result is returned immediately; otherwise its ID remains pending.</li>
 <li><span class="tt">receive()</span> accepts only the pending ID and discards invalid, stale, or duplicate results.</li>
 </ol>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md71"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md78"></a>
 Source generations</h1>
 <p><span class="tt"><a class="el" href="struct_runtime_request_id.html" title="Correlates an accepted command with exactly one typed completion.">RuntimeRequestId</a></span> correlates a finite command. <span class="tt"><a class="el" href="struct_runtime_source_epoch.html" title="Identifies one activation generation of an online or playback source.">RuntimeSourceEpoch</a></span> identifies a continuing producer activation:</p>
 <div class="fragment"><div class="line">RuntimeSourceEpoch = { source: Online | Playback, generation: non-zero integer }</div>
@@ -188,7 +188,7 @@ Source generations</h1>
 <li>an older activation of the same source updating a newer one;</li>
 <li>stale close/load completions changing current mode.</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md72"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md79"></a>
 Visual publication rates</h1>
 <p>Decode and recording are not throttled together with drawing:</p>
 <ul>
@@ -197,7 +197,7 @@ Visual publication rates</h1>
 <li><span class="tt"><a class="el" href="class_playback_publication_throttle.html" title="Coalesces high-rate playback frames and positions for presentation.">PlaybackPublicationThrottle</a></span> emits only the latest sampled frame and position every 16 ms, so queued UI delivery remains bounded.</li>
 </ul>
 <p>Consequently playback totals describe sampled record changes, not every stored record crossed by a high replay rate or the number of viewport paints.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md73"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md80"></a>
 Recording batching and bounds</h1>
 <p>The network worker batches accepted packets to reduce queued-signal overhead:</p>
 <table class="markdownTable">
@@ -216,7 +216,7 @@ Recording batching and bounds</h1>
 </table>
 <p>Every batch has a monotonically increasing ID. The recording worker acknowledges the ID only after it has synchronously appended or deliberately ignored the whole batch. Outstanding IDs provide an explicit drain condition.</p>
 <p>If buffered bytes cross the limit, recording input is disabled and an error is reported after already-issued batches drain. This is intentional backpressure: the process sacrifices recording continuity rather than risk unbounded memory.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md74"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md81"></a>
 Drain barrier</h1>
 <p>Pause, reset, snapshot, final save, and discard use a tokenized barrier:</p>
 <div class="mermaidgraph">
@@ -233,7 +233,7 @@ stateDiagram-v2
 </div>
 <p>The network worker records a process-wide monotonic boundary at drain start. The recording service uses that boundary to close the active-time segment after all pre-boundary packets are appended. Stale drain tokens are ignored.</p>
 <p>For a snapshot, <span class="tt">preserveIncoming=true</span> routes post-boundary accepted packets into a separate bounded buffer. After the immutable snapshot is handed to persistence, the buffer is merged back in receipt order. Other operations drop post-boundary recording input as required by their semantics; online display capture remains independent unless final stop follows.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md75"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md82"></a>
 Immutable persistence handoff</h1>
 <p><span class="tt"><a class="el" href="class_lar_session_writer.html#aa3789524268e627314b78b7f0e3adfbd">LarSessionWriter::createSnapshot</a></span> captures a stable byte count and a shared lifetime token for its temporary file. <span class="tt"><a class="el" href="class_file_session_snapshot.html" title="Describes a stable byte prefix of a file and retains its lifetime.">FileSessionSnapshot</a></span> is const and can only write that prefix to an already-open device. The persistence worker therefore cannot race with later appends or temporary-file deletion.</p>
 <p><span class="tt"><a class="el" href="class_qt_session_persistence.html" title="Commits a snapshot with QSaveFile semantics.">QtSessionPersistence</a></span> uses <span class="tt">QSaveFile</span>:</p>
@@ -244,12 +244,12 @@ Immutable persistence handoff</h1>
 <li>leave an existing destination unchanged on any failure.</li>
 </ol>
 <p>The session thread never waits for destination IO; completion returns by queued signal with the persistence request ID.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md76"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md83"></a>
 Asynchronous viewport preparation</h1>
 <p><span class="tt"><a class="el" href="class_earth_map_load_controller.html" title="Single-flight, revision-safe asynchronous map asset loader.">EarthMapLoadController</a></span> uses a future watcher and monotonically increasing revision. A result is installable only for the current revision. Actual OpenGL upload happens on the widget/context thread, then the widget reports installation success back to the controller.</p>
 <p><span class="tt"><a class="el" href="class_earth_overlay_coordinator.html" title="Owns latest-only CPU overlay preparation and its worker-thread lifetime.">EarthOverlayCoordinator</a></span> owns a separate preparation <span class="tt">QThread</span> local to an Earth view. Requests carry revisions and use latest-only semantics. Prepared meshes are copied back and installed on the render thread. Destruction stops and joins this worker before its owning view disappears.</p>
 <p><span class="tt"><a class="el" href="class_plane_scene_widget.html" title="Loads packaged Plane assets and renders one orbit-controlled simulation canvas.">PlaneSceneWidget</a></span> creates <span class="tt"><a class="el" href="class_plane_terrain_worker.html" title="Coalesces aircraft movement so only the newest bounded terrain patch is published.">PlaneTerrainWorker</a></span> only while terrain work is needed. Each source selection and patch request has a monotonically increasing revision. New movement requests replace pending work; cancellation and source replacement invalidate older results. A DT1/DT2 directory becomes active only after its addressed cell validates, so a failed upload leaves the current terrain source and visible patch intact. The worker may read DTED and rasterize the immutable <span class="tt">MapLandIndex</span>, but it never touches a widget or OpenGL object. The widget accepts the current patch and performs GPU replacement on its own context thread.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md77"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md84"></a>
 Shutdown order</h1>
 <p><span class="tt"><a class="el" href="class_threaded_application_runtime.html#a18941be28148ca73cbe92d5db6f680a8" title="Synchronously drains, joins, and destroys every owned worker.">ThreadedApplicationRuntime::shutdown()</a></span> is idempotent and executes this order:</p>
 <ol type="1">
@@ -260,7 +260,7 @@ Shutdown order</h1>
 <li>Explicitly delete all four rehomed workers on the runtime affinity thread.</li>
 </ol>
 <p>Worker shutdown slots stop timers, close sockets/readers, clear buffers, and cancel mutable session work before event loops quit. No queued publication is accepted after the application lifecycle enters <span class="tt">ShuttingDown</span>. Shutdown does not use deferred <span class="tt">deleteLater</span> delivery after a worker event loop has exited. A failed affinity move is a fail-stop invariant violation: the process terminates instead of attempting an unsafe cross-affinity deletion in a release build.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md78"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md85"></a>
 Concurrency invariants</h1>
 <ul>
 <li>A QObject with worker affinity is only called through queued or blocking- queued delivery from another thread.</li>
