@@ -11,6 +11,7 @@
 #include "viewer/panels/offline_panel.h"
 #include "viewer/panels/online_panel.h"
 #include "viewer/panels/values_panel.h"
+#include "viewer/plane/plane_view_workspace.h"
 #include "viewer/viewport/earth_lar_view.h"
 #include "viewer/viewport/grid_lar_view.h"
 #include "viewer/viewport/lar_viewport.h"
@@ -80,7 +81,9 @@ void MainWindow::initialize(IRecordingFileDialog &recordingDialog) {
     auto hudWorkspace =
         std::make_unique<dlz::presentation::HudWorkspace>(m_valuesPanel->hudControlPanel());
     m_viewport = new LarViewport(std::make_unique<GridLarView>(),
-                                 std::make_unique<EarthLarView>(std::move(mapSource)),
+                                 std::make_unique<EarthLarView>(mapSource),
+                                 std::make_unique<PlaneViewWorkspace>(
+                                     QCoreApplication::applicationDirPath(), mapSource),
                                  std::move(hudWorkspace));
     m_viewport->setObjectName(QStringLiteral("larViewport"));
     centralLayout->addWidget(m_viewport, 1);

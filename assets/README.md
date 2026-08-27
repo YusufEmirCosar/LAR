@@ -10,8 +10,6 @@ directory.
 | `models/` | Packaged runtime aircraft models | Validated at runtime and copied/installed under `assets/models` beside executables; user-uploaded Plane models are session-only and are not staged here |
 | `cubemaps/` | Runtime six-face PNG cubemap sets | Grouped and validated before GPU upload; copied/installed under `assets/cubemaps` |
 | `DTED0/` | WGS84 DTED Level-0 elevation cells used by Plane terrain | Addressed lazily in place; not copied or installed by default because the tree is about 1.7 GB |
-| `ne_10m_land/` | Natural Earth 1:10m land polygons used to compile the water mask | Build-time source; not loaded or installed at runtime |
-| `water/` | Compact DTED0-aligned generated water mask | Validated lazily and copied/installed under `assets/water` |
 | `ui/icons/` | Qt resource collection and raster toolbar/navigation icons | Embedded in executables through `icons.qrc` |
 | `ui/styles/` | Application-wide Qt stylesheet | Embedded by the UI resource collection |
 
@@ -43,18 +41,12 @@ environment variable to an external data location. Record the dataset's
 provenance, redistribution terms, and required attribution before distributing
 these files.
 
-Negative DTED elevations are preserved as bathymetric depth. The generated
-water mask keeps below-sea-level land distinct from ocean, then Plane mode
-places classified water vertices at mean sea level and passes the retained
-depth to the blue shader ramp. Regenerate the mask with
-`tools/build_dted_water_mask.py` whenever the DTED tree or Natural Earth land
-source changes. Runtime lookup checks `LAR_DTED0_WATER_MASK`, an
-executable-adjacent `assets/water/dted0_water_mask.bin`, then the configured
-development source file.
-
-The land polygons are Natural Earth 1:10m physical vectors, version 5.1.1.
-Natural Earth publishes its data in the public domain; see its
-[terms of use](https://www.naturalearthdata.com/about/terms-of-use/).
+Negative DTED elevations are preserved as bathymetric depth. Plane mode uses
+the same compiled `lar_world_map.larmap` land triangles as Mercator and Sphere,
+builds a bounded adaptive local mask on the terrain worker, places classified
+water at mean sea level, and passes retained depth to the blue shader ramp.
+Changing DT0/DT1/DT2 therefore changes terrain detail without changing the
+coastline or moving a target between land and water.
 
 ## Plane assets
 

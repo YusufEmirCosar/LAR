@@ -4,6 +4,7 @@
 #include "viewer/map/map_asset_format.h"
 #include "viewer/map/map_asset_limits.h"
 #include "viewer/map/map_checksum.h"
+#include "viewer/map/map_land_index.h"
 
 #include <QCryptographicHash>
 #include <QFile>
@@ -68,7 +69,9 @@ bool validate(const MapMesh &mesh) {
         mesh.sphereFillIndices.size() % 3U != 0U ||
         mesh.borderIndices.size() > limits::MaximumBorderIndexCount ||
         mesh.borderIndices.size() % 2U != 0U || mesh.byteSize() > limits::MaximumPayloadBytes ||
-        mesh.byteSize() > static_cast<std::size_t>(std::numeric_limits<qsizetype>::max())) {
+        mesh.byteSize() > static_cast<std::size_t>(std::numeric_limits<qsizetype>::max()) ||
+        mesh.landTriangleReferences.size() > limits::MaximumLandTriangleReferenceCount ||
+        !mapLandIndexIsValid(mesh)) {
         return false;
     }
 
@@ -207,6 +210,11 @@ bool MapAssetWriter::write(const QString &assetPath, const QString &manifestPath
     appendArray(payload, mesh.mercatorFillIndices);
     appendArray(payload, mesh.sphereFillIndices);
     appendArray(payload, mesh.borderIndices);
+    for (const MapLandCellRange &range : mesh.landCellRanges) {
+        appendUint32(payload, range.firstReference);
+        appendUint32(payload, range.referenceCount);
+    }
+    appendArray(payload, mesh.landTriangleReferences);
 
     QByteArray asset;
     asset.reserve(static_cast<qsizetype>(format::HeaderSize) + payload.size());
@@ -218,6 +226,8 @@ bool MapAssetWriter::write(const QString &assetPath, const QString &manifestPath
     appendUint64(asset, mesh.mercatorFillIndices.size());
     appendUint64(asset, mesh.sphereFillIndices.size());
     appendUint64(asset, mesh.borderIndices.size());
+    appendUint64(asset, mesh.landCellRanges.size());
+    appendUint64(asset, mesh.landTriangleReferences.size());
     appendUint64(asset, mesh.byteSize());
     appendUint32(asset,
                  MapChecksum::crc32(reinterpret_cast<const unsigned char *>(payload.constData()),

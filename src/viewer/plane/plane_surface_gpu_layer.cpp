@@ -331,8 +331,10 @@ void PlaneSurfaceGpuLayer::draw(const PlaneSurfaceState &state, const QMatrix4x4
             std::isfinite(state.targetMarkerScale)
                 ? std::clamp(state.targetMarkerScale, 1.0F, PlaneSurfaceMaximumCoordinate)
                 : 1.0F;
+        const float targetHeight =
+            std::isfinite(state.targetHeight) ? state.targetHeight : state.surfaceHeight;
         drawShape(m_targetPyramid, GL_TRIANGLES, view, projection, targetScale, state.targetXZ,
-                  state.surfaceHeight + 0.070F, halfExtent, {0.90F, 0.20F, 0.14F, 1.0F}, false,
+                  targetHeight + 0.070F, halfExtent, {0.90F, 0.20F, 0.14F, 1.0F}, false,
                   targetScale);
     }
     glLineWidth(1.0F);

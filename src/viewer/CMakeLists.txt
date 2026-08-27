@@ -32,9 +32,6 @@ qt_add_library(lar-presentation-widgets STATIC
     src/viewer/terrain/dted_tile_source.cpp
     src/viewer/terrain/dted_mosaic_sampler.h
     src/viewer/terrain/dted_mosaic_sampler.cpp
-    src/viewer/terrain/dted_water_mask.h
-    src/viewer/terrain/dted_water_mask_source.h
-    src/viewer/terrain/dted_water_mask_source.cpp
     src/viewer/lar_camera.h
     src/viewer/lar_geodesic_geometry.h
     src/viewer/lar_geodesic_geometry.cpp
@@ -106,6 +103,8 @@ qt_add_library(lar-presentation-widgets STATIC
     src/viewer/plane/plane_surface_gpu_layer.h
     src/viewer/plane/plane_surface_gpu_layer.cpp
     src/viewer/plane/plane_terrain_patch.h
+    src/viewer/plane/plane_land_mask.h
+    src/viewer/plane/plane_land_mask.cpp
     src/viewer/plane/plane_terrain_patch_builder.h
     src/viewer/plane/plane_terrain_patch_builder.cpp
     src/viewer/plane/plane_terrain_worker.h
@@ -151,7 +150,6 @@ qt_add_library(lar-presentation-widgets STATIC
 target_include_directories(lar-presentation-widgets PUBLIC src)
 target_compile_definitions(lar-presentation-widgets PRIVATE
     "LAR_DTED0_SOURCE_DIR=\"${LAR_DTED0_ROOT}\""
-    "LAR_DTED0_WATER_MASK_SOURCE_FILE=\"${LAR_DTED0_WATER_MASK}\""
 )
 target_link_libraries(lar-presentation-widgets
     PUBLIC

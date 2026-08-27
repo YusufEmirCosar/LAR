@@ -48,13 +48,14 @@ std::size_t vertexIndex(int row, int column, int resolution) noexcept {
 } // namespace
 
 PlaneTerrainPatchBuilder::PlaneTerrainPatchBuilder(QString dtedRootDirectory,
-                                                   QString waterMaskPackPath)
+                                                   lar::map::MapLandIndex landIndex)
     : PlaneTerrainPatchBuilder(DtedDataset{std::move(dtedRootDirectory), DtedLevel::Level0},
-                               std::move(waterMaskPackPath)) {}
+                               std::move(landIndex)) {}
 
-PlaneTerrainPatchBuilder::PlaneTerrainPatchBuilder(DtedDataset dataset, QString waterMaskPackPath)
-    : m_sampler(DtedTileSource(std::move(dataset.rootDirectory), dataset.level),
-                DtedWaterMaskSource(std::move(waterMaskPackPath))),
+PlaneTerrainPatchBuilder::PlaneTerrainPatchBuilder(DtedDataset dataset,
+                                                   lar::map::MapLandIndex landIndex)
+    : m_sampler(DtedTileSource(std::move(dataset.rootDirectory), dataset.level)),
+      m_landMaskBuilder(std::move(landIndex)),
       m_level(dataset.level) {}
 
 PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequest &request,
@@ -78,6 +79,16 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
         std::isfinite(request.projectionOriginLatitudeRadians)
             ? request.projectionOriginLatitudeRadians
             : request.latitudeRadians;
+    PlaneLandMask landMask = m_landMaskBuilder.build(
+        request.latitudeRadians, request.longitudeRadians, projectionOriginLatitude,
+        request.halfExtentMeters, cancelled);
+    if (!landMask.valid()) {
+        setError(errorMessage,
+                 cancelled && cancelled()
+                     ? QStringLiteral("Terrain patch request was superseded.")
+                     : QStringLiteral("The packaged vector land map is unavailable."));
+        return nullptr;
+    }
 
     double minimumElevation = std::numeric_limits<double>::infinity();
     double maximumElevation = -std::numeric_limits<double>::infinity();
@@ -95,7 +106,7 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
             // The Plane surface, target marker, and LAR rings all use this local flat metric.
             // Sampling with a spherical destination while retaining east/north vertex coordinates
             // shifts terrain against those overlays (up to hundreds of metres at patch corners).
-            // Invert the exact renderer projection so the DTED classification belongs to the
+            // Invert the exact renderer projection so the DTED elevation belongs to the
             // geographic point represented by this vertex.
             const std::optional<GeoCoordinateRadians> coordinate =
                 LarProjection::planeWorldToGeographic({eastMeters, northMeters}, anchorPosition,
@@ -103,21 +114,23 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
             if (!coordinate) {
                 continue;
             }
-            const std::optional<DtedSurfaceSample> surface =
-                m_sampler.sampleSurfaceRadians(coordinate->latitude, coordinate->longitude);
+            const std::optional<double> sampledElevation =
+                m_sampler.sampleRadians(coordinate->latitude, coordinate->longitude);
             const std::size_t index = vertexIndex(row, column, resolution);
-            if (!surface || !std::isfinite(surface->elevationMeters) ||
-                !std::isfinite(surface->waterDepthMeters)) {
+            if (!sampledElevation || !std::isfinite(*sampledElevation)) {
                 continue;
             }
-            elevations[index] = surface->elevationMeters;
-            waterDepths[index] = surface->waterDepthMeters;
+            const bool isLand = landMask.landAtLocal(eastMeters, northMeters);
+            const double surfaceElevation = isLand ? *sampledElevation : 0.0;
+            const double waterDepth = isLand ? 0.0 : std::max(0.0, -*sampledElevation);
+            elevations[index] = *sampledElevation;
+            waterDepths[index] = waterDepth;
             valid[index] = 1U;
-            water[index] = surface->water ? 1U : 0U;
-            minimumElevation = std::min(minimumElevation, surface->elevationMeters);
-            maximumElevation = std::max(maximumElevation, surface->elevationMeters);
-            maximumWaterDepth = std::max(maximumWaterDepth, surface->waterDepthMeters);
-            waterSamples += surface->water ? 1U : 0U;
+            water[index] = isLand ? 0U : 1U;
+            minimumElevation = std::min(minimumElevation, surfaceElevation);
+            maximumElevation = std::max(maximumElevation, surfaceElevation);
+            maximumWaterDepth = std::max(maximumWaterDepth, waterDepth);
+            waterSamples += isLand ? 0U : 1U;
             ++validSamples;
         }
     }
@@ -142,42 +155,50 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
     patch->metersPerSceneUnit = request.metersPerSceneUnit;
     patch->minimumElevationMeters = minimumElevation;
     patch->maximumElevationMeters = maximumElevation;
-    patch->centerElevationMeters = elevations[centerOffset];
+    patch->centerElevationMeters =
+        water[centerOffset] != 0U ? 0.0 : elevations[centerOffset];
     patch->maximumWaterDepthMeters = maximumWaterDepth;
     patch->validSampleCount = validSamples;
     patch->waterSampleCount = waterSamples;
     patch->resolution = resolution;
     patch->sourceLevel = m_level;
+    patch->landMask = std::move(landMask);
     patch->vertices.reserve(sampleCount * PlaneTerrainVertexStrideFloats);
 
     for (int row = 0; row < resolution; ++row) {
         for (int column = 0; column < resolution; ++column) {
             const std::size_t index = vertexIndex(row, column, resolution);
             const double center = elevations[index];
-            const int leftColumn =
-                column > 0 && valid[vertexIndex(row, column - 1, resolution)] ? column - 1 : column;
+            const auto usableNeighbor = [&valid, &water, index, resolution](int neighborRow,
+                                                                            int neighborColumn) {
+                const std::size_t neighbor =
+                    vertexIndex(neighborRow, neighborColumn, resolution);
+                return valid[neighbor] != 0U && water[neighbor] == water[index];
+            };
+            const int leftColumn = column > 0 && usableNeighbor(row, column - 1)
+                                       ? column - 1
+                                       : column;
             const int rightColumn =
-                column + 1 < resolution && valid[vertexIndex(row, column + 1, resolution)]
+                column + 1 < resolution && usableNeighbor(row, column + 1)
                     ? column + 1
                     : column;
-            const int southRow =
-                row > 0 && valid[vertexIndex(row - 1, column, resolution)] ? row - 1 : row;
+            const int southRow = row > 0 && usableNeighbor(row - 1, column) ? row - 1 : row;
             const int northRow =
-                row + 1 < resolution && valid[vertexIndex(row + 1, column, resolution)] ? row + 1
-                                                                                        : row;
+                row + 1 < resolution && usableNeighbor(row + 1, column) ? row + 1 : row;
             const double eastSpan =
                 std::max(sampleSpacing, (rightColumn - leftColumn) * sampleSpacing);
             const double northSpan = std::max(sampleSpacing, (northRow - southRow) * sampleSpacing);
-            const double eastSlope = valid[index] != 0U
+            const double eastSlope = valid[index] != 0U && water[index] == 0U
                                          ? (elevations[vertexIndex(row, rightColumn, resolution)] -
                                             elevations[vertexIndex(row, leftColumn, resolution)]) /
                                                eastSpan
                                          : 0.0;
             const double northSlope =
-                valid[index] != 0U ? (elevations[vertexIndex(northRow, column, resolution)] -
-                                      elevations[vertexIndex(southRow, column, resolution)]) /
-                                         northSpan
-                                   : 0.0;
+                valid[index] != 0U && water[index] == 0U
+                    ? (elevations[vertexIndex(northRow, column, resolution)] -
+                       elevations[vertexIndex(southRow, column, resolution)]) /
+                          northSpan
+                    : 0.0;
             const double normalLength =
                 std::sqrt(eastSlope * eastSlope + 1.0 + northSlope * northSlope);
             const double eastMeters = -request.halfExtentMeters + sampleSpacing * column;
@@ -189,7 +210,6 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
                                     static_cast<float>(-eastSlope / normalLength),
                                     static_cast<float>(1.0 / normalLength),
                                     static_cast<float>(northSlope / normalLength),
-                                    water[index] != 0U ? 1.0F : 0.0F,
                                     static_cast<float>(waterDepths[index])});
         }
     }
@@ -218,6 +238,7 @@ PlaneTerrainPatchPtr PlaneTerrainPatchBuilder::build(const PlaneTerrainBuildRequ
                                    .arg(dtedLevelDisplayName(m_level)));
         return nullptr;
     }
+    patch->sampleValidity = std::move(valid);
     setError(errorMessage, {});
     return patch;
 }

@@ -20,6 +20,7 @@ constexpr std::size_t MaximumVertexCount = 2'000'000ULL;
 constexpr std::size_t MaximumMercatorIndexCount = 6'000'000ULL;
 constexpr std::size_t MaximumSphereIndexCount = 6'000'000ULL;
 constexpr std::size_t MaximumBorderIndexCount = 4'000'000ULL;
+constexpr std::size_t MaximumLandTriangleReferenceCount = 4'000'000ULL;
 
 constexpr double MaximumAbsoluteLongitude = 540.0;
 constexpr double MaximumAbsoluteLatitude = 90.0;

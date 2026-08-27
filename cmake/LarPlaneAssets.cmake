@@ -1,13 +1,12 @@
 include_guard(GLOBAL)
 
-# Copies the packaged F-16, cubemaps, and compact water mask beside an executable.
+# Copies the packaged F-16 and cubemaps beside an executable.
 function(lar_copy_plane_assets target_name)
     file(GLOB plane_cubemap_files CONFIGURE_DEPENDS
         "${PROJECT_SOURCE_DIR}/assets/cubemaps/*.png"
     )
     set_property(TARGET ${target_name} APPEND PROPERTY LINK_DEPENDS
         "${PROJECT_SOURCE_DIR}/assets/models/f16_3.glb"
-        "${PROJECT_SOURCE_DIR}/assets/water/dted0_water_mask.bin"
         ${plane_cubemap_files}
     )
     add_custom_command(

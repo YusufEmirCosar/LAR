@@ -24,12 +24,6 @@ DtedMosaicSampler::DtedMosaicSampler(DtedTileSource source, std::size_t cacheCap
     : m_source(std::move(source)), m_cacheCapacity(std::max<std::size_t>(1U, cacheCapacity)),
       m_cacheByteCapacity(std::max<std::size_t>(1U, cacheByteCapacity)) {}
 
-DtedMosaicSampler::DtedMosaicSampler(DtedTileSource source, DtedWaterMaskSource waterMaskSource,
-                                     std::size_t cacheCapacity, std::size_t cacheByteCapacity)
-    : m_source(std::move(source)), m_waterMaskSource(std::move(waterMaskSource)),
-      m_cacheCapacity(std::max<std::size_t>(1U, cacheCapacity)),
-      m_cacheByteCapacity(std::max<std::size_t>(1U, cacheByteCapacity)) {}
-
 std::shared_ptr<const DtedCell> DtedMosaicSampler::cellFor(const DtedCellKey &key) {
     ++m_accessCounter;
     const auto found = m_cache.find(key);
@@ -49,32 +43,7 @@ std::shared_ptr<const DtedCell> DtedMosaicSampler::cellFor(const DtedCellKey &ke
     return cell;
 }
 
-std::shared_ptr<const DtedWaterMaskCell>
-DtedMosaicSampler::waterMaskFor(const DtedCellKey &key, const DtedCell &terrainCell) {
-    if (!m_waterMaskSource.isAvailable()) {
-        return nullptr;
-    }
-    ++m_accessCounter;
-    const auto found = m_waterMaskCache.find(key);
-    if (found != m_waterMaskCache.end()) {
-        found->second.access = m_accessCounter;
-        return found->second.cell;
-    }
-    DtedWaterMaskReadResult result = m_waterMaskSource.load(key);
-    std::shared_ptr<const DtedWaterMaskCell> cell = result.cell;
-    if (m_source.level() == DtedLevel::Level0 && cell != nullptr &&
-        (cell->longitudeSampleCount != terrainCell.longitudeSampleCount ||
-         cell->latitudeSampleCount != terrainCell.latitudeSampleCount)) {
-        cell.reset();
-    }
-    m_waterMaskCache.emplace(key, WaterMaskCacheEntry{cell, m_accessCounter});
-    evictIfNeeded();
-    return cell;
-}
-
 void DtedMosaicSampler::evictIfNeeded() {
-    // One access counter orders both caches. Terrain obeys count and byte
-    // budgets; masks have no retained byte accounting and obey the count budget.
     while (m_cache.size() > m_cacheCapacity ||
            (m_cachedTerrainBytes > m_cacheByteCapacity && m_cache.size() > 1U)) {
         auto oldest = m_cache.begin();
@@ -85,16 +54,6 @@ void DtedMosaicSampler::evictIfNeeded() {
         }
         m_cachedTerrainBytes -= oldest->second.bytes;
         m_cache.erase(oldest);
-    }
-    while (m_waterMaskCache.size() > m_cacheCapacity) {
-        auto oldest = m_waterMaskCache.begin();
-        for (auto iterator = std::next(m_waterMaskCache.begin());
-             iterator != m_waterMaskCache.end(); ++iterator) {
-            if (iterator->second.access < oldest->second.access) {
-                oldest = iterator;
-            }
-        }
-        m_waterMaskCache.erase(oldest);
     }
 }
 
@@ -133,9 +92,7 @@ DtedMosaicSampler::positionFor(double latitudeRadians, double longitudeRadians) 
     return result;
 }
 
-std::optional<double> DtedMosaicSampler::interpolatedElevation(const SamplePosition &position,
-                                                               const DtedWaterMaskCell *mask,
-                                                               std::optional<bool> water) {
+std::optional<double> DtedMosaicSampler::interpolatedElevation(const SamplePosition &position) {
     const DtedCell &cell = *position.cell;
     const int longitude0 = position.longitude0;
     const int longitude1 = position.longitude1;
@@ -147,20 +104,6 @@ std::optional<double> DtedMosaicSampler::interpolatedElevation(const SamplePosit
     const std::array<std::optional<double>, 4> samples{
         cell.elevation(longitude0, latitude0), cell.elevation(longitude1, latitude0),
         cell.elevation(longitude0, latitude1), cell.elevation(longitude1, latitude1)};
-    const auto maskWater = [&cell, mask](int longitudeIndex,
-                                         int latitudeIndex) -> std::optional<bool> {
-        if (mask == nullptr) {
-            return std::nullopt;
-        }
-        const double longitudeCellFraction = static_cast<double>(longitudeIndex) /
-                                             static_cast<double>(cell.longitudeSampleCount - 1);
-        const double latitudeCellFraction =
-            static_cast<double>(latitudeIndex) / static_cast<double>(cell.latitudeSampleCount - 1);
-        return mask->waterAtFraction(longitudeCellFraction, latitudeCellFraction);
-    };
-    const std::array<std::optional<bool>, 4> classifications{
-        maskWater(longitude0, latitude0), maskWater(longitude1, latitude0),
-        maskWater(longitude0, latitude1), maskWater(longitude1, latitude1)};
     const std::array<double, 4> weights{(1.0 - longitudeFraction) * (1.0 - latitudeFraction),
                                         longitudeFraction * (1.0 - latitudeFraction),
                                         (1.0 - longitudeFraction) * latitudeFraction,
@@ -168,9 +111,7 @@ std::optional<double> DtedMosaicSampler::interpolatedElevation(const SamplePosit
     double weightedElevation = 0.0;
     double validWeight = 0.0;
     for (std::size_t index = 0; index < samples.size(); ++index) {
-        const bool classificationMatches =
-            !water || (classifications[index] && *classifications[index] == *water);
-        if (samples[index] && classificationMatches) {
+        if (samples[index]) {
             weightedElevation += *samples[index] * weights[index];
             validWeight += weights[index];
         }
@@ -178,9 +119,8 @@ std::optional<double> DtedMosaicSampler::interpolatedElevation(const SamplePosit
     if (validWeight <= std::numeric_limits<double>::epsilon()) {
         return std::nullopt;
     }
-    // Void or classification-mismatched posts contribute neither value nor
-    // weight, so divide by the remaining weight rather than depressing the
-    // surface toward zero.
+    // Void posts contribute neither value nor weight, so divide by the
+    // remaining weight rather than depressing the surface toward zero.
     return weightedElevation / validWeight;
 }
 
@@ -198,39 +138,4 @@ std::optional<double> DtedMosaicSampler::sampleRadians(double latitudeRadians,
     }
     m_lastError.clear();
     return elevation;
-}
-
-std::optional<DtedSurfaceSample> DtedMosaicSampler::sampleSurfaceRadians(double latitudeRadians,
-                                                                         double longitudeRadians) {
-    const std::optional<SamplePosition> position = positionFor(latitudeRadians, longitudeRadians);
-    if (!position) {
-        return std::nullopt;
-    }
-    const std::shared_ptr<const DtedWaterMaskCell> mask =
-        waterMaskFor(position->key, *position->cell);
-    bool water = false;
-    if (mask != nullptr) {
-        const double longitudeCellFraction =
-            (static_cast<double>(position->longitude0) + position->longitudeFraction) /
-            static_cast<double>(position->cell->longitudeSampleCount - 1);
-        const double latitudeCellFraction =
-            (static_cast<double>(position->latitude0) + position->latitudeFraction) /
-            static_cast<double>(position->cell->latitudeSampleCount - 1);
-        water = mask->waterAtFraction(longitudeCellFraction, latitudeCellFraction).value_or(false);
-    }
-    std::optional<double> elevation =
-        mask != nullptr ? interpolatedElevation(*position, mask.get(), water) : std::nullopt;
-    // Classification boundaries can leave all four weighted posts on the other
-    // side of the mask. Prefer a continuous terrain value over a sampling hole.
-    if (!elevation) {
-        elevation = interpolatedElevation(*position);
-    }
-    if (!elevation) {
-        m_lastError = QStringLiteral("%1 samples at the requested coordinate contain no data.")
-                          .arg(dtedLevelDisplayName(m_source.level()));
-        return std::nullopt;
-    }
-    m_lastError.clear();
-    return DtedSurfaceSample{water ? 0.0 : *elevation, water ? std::max(0.0, -*elevation) : 0.0,
-                             water};
 }

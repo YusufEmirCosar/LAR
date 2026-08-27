@@ -111,7 +111,6 @@ def main() -> int:
     required = (
         viewer,
         viewer_asset_root / "models" / "f16_3.glb",
-        viewer_asset_root / "water" / "dted0_water_mask.bin",
         sender_path,
         prefix / "bin" / "lar_world_map.larmap",
         prefix / "bin" / "lar_world_map.manifest.json",

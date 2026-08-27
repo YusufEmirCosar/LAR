@@ -6,6 +6,7 @@
  */
 
 #include "viewer/plane/plane_terrain_patch.h"
+#include "viewer/plane/plane_land_mask.h"
 #include "viewer/terrain/dted_mosaic_sampler.h"
 
 #include <functional>
@@ -13,8 +14,8 @@
 /** @brief Builds immutable terrain patches; instances are confined to one CPU worker thread. */
 class PlaneTerrainPatchBuilder final {
   public:
-    explicit PlaneTerrainPatchBuilder(QString dtedRootDirectory, QString waterMaskPackPath = {});
-    PlaneTerrainPatchBuilder(DtedDataset dataset, QString waterMaskPackPath = {});
+    PlaneTerrainPatchBuilder(QString dtedRootDirectory, lar::map::MapLandIndex landIndex);
+    PlaneTerrainPatchBuilder(DtedDataset dataset, lar::map::MapLandIndex landIndex);
 
     /** @brief Samples and triangulates one request, returning null when local terrain is absent. */
     [[nodiscard]] PlaneTerrainPatchPtr build(const PlaneTerrainBuildRequest &request,
@@ -27,5 +28,6 @@ class PlaneTerrainPatchBuilder final {
 
   private:
     DtedMosaicSampler m_sampler;
+    PlaneLandMaskBuilder m_landMaskBuilder;
     DtedLevel m_level = DtedLevel::Level0;
 };

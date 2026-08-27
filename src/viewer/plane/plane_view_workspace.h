@@ -6,6 +6,7 @@
  */
 
 #include "viewer/viewport/lar_viewport_page.h"
+#include "viewer/map/map_asset_source.h"
 
 #include <QWidget>
 
@@ -21,6 +22,9 @@ class PlaneViewWorkspace final : public QWidget, public ILarViewportPage {
 
   public:
     explicit PlaneViewWorkspace(QString packageDirectory, QWidget *parent = nullptr);
+    PlaneViewWorkspace(QString packageDirectory,
+                       std::shared_ptr<const lar::map::IMapAssetSource> mapAssetSource,
+                       QWidget *parent = nullptr);
 
     QWidget &widget() noexcept override {
         return *this;

@@ -5,6 +5,7 @@
  * @brief Immutable CPU terrain mesh and bounded build request for Plane mode.
  */
 
+#include "viewer/plane/plane_land_mask.h"
 #include "viewer/terrain/dted_level.h"
 
 #include <QMetaType>
@@ -16,8 +17,8 @@
 #include <memory>
 #include <vector>
 
-/** Position, normal, water mask, and bathymetric depth floats stored per terrain vertex. */
-inline constexpr std::size_t PlaneTerrainVertexStrideFloats = 8U;
+/** Position, normal, and bathymetric-depth floats stored per terrain vertex. */
+inline constexpr std::size_t PlaneTerrainVertexStrideFloats = 7U;
 
 /** @brief Parameters for one aircraft-centered terrain build. */
 struct PlaneTerrainBuildRequest final {
@@ -35,6 +36,8 @@ struct PlaneTerrainBuildRequest final {
 struct PlaneTerrainPatch final {
     std::vector<float> vertices;
     std::vector<std::uint32_t> indices;
+    std::vector<unsigned char> sampleValidity;
+    PlaneLandMask landMask;
     double anchorLatitudeRadians = 0.0;
     double anchorLongitudeRadians = 0.0;
     // All local east/north coordinates use this fixed latitude scale. Keeping it stable while

@@ -3,6 +3,7 @@
 
 #include "polygon_triangulator.h"
 #include "viewer/map/map_asset_limits.h"
+#include "viewer/map/map_land_index.h"
 #include "viewer/map/map_projection.h"
 
 #include <algorithm>
@@ -180,6 +181,125 @@ bool checkedAppendCount(std::size_t current, std::size_t addition, std::size_t m
     return addition <= maximum && current <= maximum - addition;
 }
 
+int normalizedLongitudeCell(int longitudeDegrees) noexcept {
+    int normalized = (longitudeDegrees + 180) % static_cast<int>(MapLandLongitudeCellCount);
+    if (normalized < 0) {
+        normalized += static_cast<int>(MapLandLongitudeCellCount);
+    }
+    return normalized;
+}
+
+int boundedLatitudeCell(double latitudeDegrees) noexcept {
+    if (latitudeDegrees >= 90.0) {
+        return static_cast<int>(MapLandLatitudeCellCount) - 1;
+    }
+    return std::clamp(static_cast<int>(std::floor(latitudeDegrees)) + 90, 0,
+                      static_cast<int>(MapLandLatitudeCellCount) - 1);
+}
+
+template <typename Callback>
+bool forEachTriangleCell(const MapMesh &mesh, std::size_t triangle, Callback callback) {
+    const std::size_t indexOffset = triangle * 3U;
+    if (indexOffset + 2U >= mesh.mercatorFillIndices.size()) {
+        return false;
+    }
+    std::array<double, 3> longitude{};
+    std::array<double, 3> latitude{};
+    for (std::size_t corner = 0U; corner < 3U; ++corner) {
+        const std::size_t vertex = mesh.mercatorFillIndices[indexOffset + corner];
+        const std::size_t vertexOffset = vertex * 3U;
+        if (vertexOffset + 1U >= mesh.vertices.size()) {
+            return false;
+        }
+        longitude[corner] = mesh.vertices[vertexOffset];
+        latitude[corner] = mesh.vertices[vertexOffset + 1U];
+    }
+    longitude[1] = MapProjection::unwrapLongitude(longitude[1], longitude[0]);
+    longitude[2] = MapProjection::unwrapLongitude(longitude[2], longitude[0]);
+    const auto [minimumLongitude, maximumLongitude] =
+        std::minmax_element(longitude.cbegin(), longitude.cend());
+    const auto [minimumLatitude, maximumLatitude] =
+        std::minmax_element(latitude.cbegin(), latitude.cend());
+    if (*maximumLongitude - *minimumLongitude > 360.0 || *minimumLatitude < -90.0 ||
+        *maximumLatitude > 90.0) {
+        return false;
+    }
+
+    const int west = static_cast<int>(std::floor(*minimumLongitude));
+    const int east = static_cast<int>(std::floor(*maximumLongitude));
+    const int south = boundedLatitudeCell(*minimumLatitude);
+    const int north = boundedLatitudeCell(*maximumLatitude);
+    for (int latitudeCell = south; latitudeCell <= north; ++latitudeCell) {
+        for (int longitudeCell = west; longitudeCell <= east; ++longitudeCell) {
+            const std::size_t index = static_cast<std::size_t>(latitudeCell) *
+                                          MapLandLongitudeCellCount +
+                                      static_cast<std::size_t>(
+                                          normalizedLongitudeCell(longitudeCell));
+            if (!callback(index)) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+bool buildLandIndex(MapMesh &mesh) {
+    if (mesh.mercatorFillIndices.empty() || mesh.mercatorFillIndices.size() % 3U != 0U) {
+        return false;
+    }
+    std::vector<std::uint32_t> counts(MapLandCellCount, 0U);
+    std::size_t referenceCount = 0U;
+    const std::size_t triangleCount = mesh.mercatorFillIndices.size() / 3U;
+    for (std::size_t triangle = 0U; triangle < triangleCount; ++triangle) {
+        const bool counted = forEachTriangleCell(mesh, triangle, [&](std::size_t cell) {
+            if (counts[cell] == std::numeric_limits<std::uint32_t>::max() ||
+                referenceCount >= limits::MaximumLandTriangleReferenceCount) {
+                return false;
+            }
+            ++counts[cell];
+            ++referenceCount;
+            return true;
+        });
+        if (!counted) {
+            return false;
+        }
+    }
+
+    mesh.landCellRanges.resize(MapLandCellCount);
+    std::size_t firstReference = 0U;
+    for (std::size_t cell = 0U; cell < MapLandCellCount; ++cell) {
+        if (firstReference > std::numeric_limits<std::uint32_t>::max()) {
+            return false;
+        }
+        mesh.landCellRanges[cell] = {static_cast<std::uint32_t>(firstReference), counts[cell]};
+        firstReference += counts[cell];
+    }
+    if (firstReference != referenceCount) {
+        return false;
+    }
+
+    mesh.landTriangleReferences.resize(referenceCount);
+    std::vector<std::uint32_t> cursors(MapLandCellCount, 0U);
+    for (std::size_t cell = 0U; cell < MapLandCellCount; ++cell) {
+        cursors[cell] = mesh.landCellRanges[cell].firstReference;
+    }
+    for (std::size_t triangle = 0U; triangle < triangleCount; ++triangle) {
+        const bool stored = forEachTriangleCell(mesh, triangle, [&](std::size_t cell) {
+            const std::size_t destination = cursors[cell]++;
+            if (destination >= mesh.landTriangleReferences.size() ||
+                triangle > std::numeric_limits<std::uint32_t>::max()) {
+                return false;
+            }
+            mesh.landTriangleReferences[destination] = static_cast<std::uint32_t>(triangle);
+            return true;
+        });
+        if (!stored) {
+            return false;
+        }
+    }
+    return mapLandIndexIsValid(mesh);
+}
+
 } // namespace
 
 MapMeshCompileResult MapMeshCompiler::compile(const SourceMap &source) {
@@ -253,7 +373,8 @@ MapMeshCompileResult MapMeshCompiler::compile(const SourceMap &source) {
         return {{}, QStringLiteral("The compiled map dimensions are invalid.")};
     }
 
-    if (output.empty() || output.byteSize() > limits::MaximumPayloadBytes) {
+    if (output.empty() || !buildLandIndex(output) ||
+        output.byteSize() > limits::MaximumPayloadBytes) {
         return {{}, QStringLiteral("Map compilation produced no valid bounded mesh.")};
     }
     return {std::move(output), {}};

@@ -6,18 +6,22 @@
  */
 
 #include "viewer/plane/plane_terrain_patch_builder.h"
+#include "viewer/map/map_asset_source.h"
 
 #include <QMutex>
 #include <QObject>
 
 #include <atomic>
+#include <memory>
 
 /** @brief Coalesces aircraft movement so only the newest bounded terrain patch is published. */
 class PlaneTerrainWorker final : public QObject {
     Q_OBJECT
 
   public:
-    PlaneTerrainWorker(DtedDataset dataset, QString waterMaskPackPath, QObject *parent = nullptr);
+    PlaneTerrainWorker(DtedDataset dataset,
+                       std::shared_ptr<const lar::map::IMapAssetSource> mapAssetSource,
+                       QObject *parent = nullptr);
 
     void submit(PlaneTerrainBuildRequest request);
     void stop() noexcept;
@@ -36,5 +40,9 @@ class PlaneTerrainWorker final : public QObject {
     std::atomic<quint64> m_latestRevision{0};
     std::atomic_bool m_stopped{false};
     std::atomic_bool m_wakePosted{false};
-    PlaneTerrainPatchBuilder m_builder;
+    DtedDataset m_dataset;
+    std::shared_ptr<const lar::map::IMapAssetSource> m_mapAssetSource;
+    std::unique_ptr<PlaneTerrainPatchBuilder> m_builder;
+    QString m_builderError;
+    bool m_builderInitializationAttempted = false;
 };

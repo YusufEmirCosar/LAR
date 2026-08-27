@@ -24,8 +24,6 @@ option(LAR_ENABLE_QUALITY_TARGETS "Define Python/tool-based quality targets" ON)
 include(CTest)
 set(LAR_DTED0_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/assets/DTED0" CACHE PATH
     "Development DTED0 root used by Plane terrain (not copied into build outputs)")
-set(LAR_DTED0_WATER_MASK "${CMAKE_CURRENT_SOURCE_DIR}/assets/water/dted0_water_mask.bin"
-    CACHE FILEPATH "DTED0-aligned water-mask pack used by Plane terrain")
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(LarWarnings)
@@ -96,10 +94,6 @@ install(FILES
 install(FILES
     assets/models/f16_3.glb
     DESTINATION bin/assets/models
-)
-install(FILES
-    "${LAR_DTED0_WATER_MASK}"
-    DESTINATION bin/assets/water
 )
 install(DIRECTORY
     assets/cubemaps/

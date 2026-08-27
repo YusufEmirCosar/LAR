@@ -1,11 +1,14 @@
 #include "domain/statefield.h"
 #include "viewer/lar_projection.h"
+#include "viewer/map/map_land_index.h"
+#include "viewer/map/packaged_map_asset_source.h"
 #include "viewer/plane/cubemap_catalog.h"
 #include "viewer/plane/glb_model_reader.h"
 #include "viewer/plane/glb_resource_reader.h"
 #include "viewer/plane/glb_texture_reader.h"
 #include "viewer/plane/plane_aircraft_scale.h"
 #include "viewer/plane/plane_attitude_transform.h"
+#include "viewer/plane/plane_land_mask.h"
 #include "viewer/plane/plane_orbit_camera.h"
 #include "viewer/plane/plane_scene_widget.h"
 #include "viewer/plane/plane_surface_projection.h"
@@ -13,7 +16,6 @@
 #include "viewer/plane/plane_view_workspace.h"
 #include "viewer/terrain/dted_cell_reader.h"
 #include "viewer/terrain/dted_mosaic_sampler.h"
-#include "viewer/terrain/dted_water_mask_source.h"
 
 #include "support/dted_fixture.h"
 
@@ -47,6 +49,16 @@ namespace {
 
 QString sourcePath(const QString &relative) {
     return QDir(QStringLiteral(LAR_TEST_SOURCE_DIR)).filePath(relative);
+}
+
+std::shared_ptr<const lar::map::IMapAssetSource> packagedMapSource() {
+    static const auto source = std::make_shared<lar::map::PackagedMapAssetSource>(
+        QStringLiteral(LAR_TEST_MAP_PACKAGE_DIR));
+    return source;
+}
+
+lar::map::MapLandIndex packagedLandIndex() {
+    return lar::map::MapLandIndex(packagedMapSource()->load().mesh);
 }
 
 bool closeVector(const QVector3D &actual, const QVector3D &expected, float tolerance = 0.0001F) {
@@ -265,10 +277,9 @@ class PlaneViewTests final : public QObject {
     void projectsExtremeAltitudeWithinGpuLimits();
     void readsAndValidatesVariableWidthDted0Cells();
     void readsAndValidatesDted1AndDted2Cells();
-    void readsAndValidatesDtedWaterMaskPack();
     void addressesAndSamplesDted0WithoutScanning();
     void addressesAndSamplesHighResolutionDtedWithBoundedCache();
-    void samplesBathymetryAsSeaLevelWater();
+    void buildsAdaptiveLandMaskFromEarthMap();
     void buildsBoundedLocalTerrainPatch();
     void buildsFlatDepthColoredWaterPatch();
     void widgetPreparesTerrainAsynchronously();
@@ -858,37 +869,6 @@ void PlaneViewTests::readsAndValidatesDted1AndDted2Cells() {
     QVERIFY(level2.cell->storageBytes() > 4'000'000U);
 }
 
-void PlaneViewTests::readsAndValidatesDtedWaterMaskPack() {
-    const QString packPath = sourcePath(QStringLiteral("assets/water/dted0_water_mask.bin"));
-    const DtedWaterMaskSource source(packPath);
-    QVERIFY2(source.isAvailable(), qPrintable(source.initializationError()));
-
-    const DtedWaterMaskReadResult ocean = source.load({-30, 30});
-    QVERIFY2(ocean.succeeded(), qPrintable(ocean.message));
-    QCOMPARE(ocean.cell->coverage, DtedWaterCoverage::Water);
-    QCOMPARE(ocean.cell->water(60, 60), std::optional<bool>(true));
-
-    const DtedWaterMaskReadResult land = source.load({35, 39});
-    QVERIFY2(land.succeeded(), qPrintable(land.message));
-    QCOMPARE(land.cell->coverage, DtedWaterCoverage::Land);
-    QCOMPARE(land.cell->water(60, 60), std::optional<bool>(false));
-
-    const DtedWaterMaskReadResult coast = source.load({25, 35});
-    QVERIFY2(coast.succeeded(), qPrintable(coast.message));
-    QCOMPARE(coast.cell->coverage, DtedWaterCoverage::Mixed);
-    QCOMPARE(coast.cell->water(0, 0), std::optional<bool>(false));
-    QCOMPARE(coast.cell->water(60, 60), std::optional<bool>(true));
-    QVERIFY(coast.cell->waterAtFraction(0.5, 0.5).has_value());
-
-    QTemporaryFile invalidPack;
-    QVERIFY(invalidPack.open());
-    QCOMPARE(invalidPack.write(QByteArrayLiteral("not-a-water-mask")), 16);
-    invalidPack.flush();
-    const DtedWaterMaskSource invalidSource(invalidPack.fileName());
-    QVERIFY(!invalidSource.isAvailable());
-    QVERIFY(!invalidSource.initializationError().isEmpty());
-}
-
 void PlaneViewTests::addressesAndSamplesDted0WithoutScanning() {
     const QString root = sourcePath(QStringLiteral("assets/DTED0"));
     DtedTileSource source(root);
@@ -920,61 +900,52 @@ void PlaneViewTests::addressesAndSamplesHighResolutionDtedWithBoundedCache() {
     QVERIFY(dted_test_fixture::writeCell(directory.path(), DtedLevel::Level1, westCell, 1, -2500));
     QVERIFY(dted_test_fixture::writeCell(directory.path(), DtedLevel::Level1, eastCell, 1, -1500));
 
-    const QString mask = sourcePath(QStringLiteral("assets/water/dted0_water_mask.bin"));
-    DtedMosaicSampler sampler(DtedTileSource(directory.path(), DtedLevel::Level1),
-                              DtedWaterMaskSource(mask), 4U, 3U * 1024U * 1024U);
-    const std::optional<DtedSurfaceSample> west =
-        sampler.sampleSurfaceRadians(qDegreesToRadians(30.5), qDegreesToRadians(-29.5));
+    DtedMosaicSampler sampler(DtedTileSource(directory.path(), DtedLevel::Level1), 4U,
+                              3U * 1024U * 1024U);
+    const std::optional<double> west =
+        sampler.sampleRadians(qDegreesToRadians(30.5), qDegreesToRadians(-29.5));
     QVERIFY2(west.has_value(), qPrintable(sampler.lastError()));
-    QVERIFY(west->water);
-    QCOMPARE(west->elevationMeters, 0.0);
-    QCOMPARE(west->waterDepthMeters, 2500.0);
+    QCOMPARE(*west, -2500.0);
 
-    const std::optional<DtedSurfaceSample> east =
-        sampler.sampleSurfaceRadians(qDegreesToRadians(30.5), qDegreesToRadians(-28.5));
+    const std::optional<double> east =
+        sampler.sampleRadians(qDegreesToRadians(30.5), qDegreesToRadians(-28.5));
     QVERIFY2(east.has_value(), qPrintable(sampler.lastError()));
-    QVERIFY(east->water);
-    QCOMPARE(east->waterDepthMeters, 1500.0);
+    QCOMPARE(*east, -1500.0);
     QCOMPARE(sampler.cachedTileCount(), std::size_t(1));
     QVERIFY(sampler.cachedTerrainBytes() <= 3U * 1024U * 1024U);
-    QVERIFY(sampler.cachedWaterMaskTileCount() <= 4U);
 }
 
-void PlaneViewTests::samplesBathymetryAsSeaLevelWater() {
-    const QString root = sourcePath(QStringLiteral("assets/DTED0"));
-    const QString mask = sourcePath(QStringLiteral("assets/water/dted0_water_mask.bin"));
-    DtedMosaicSampler sampler(DtedTileSource(root), DtedWaterMaskSource(mask), 2U);
-    QVERIFY(sampler.waterMaskAvailable());
+void PlaneViewTests::buildsAdaptiveLandMaskFromEarthMap() {
+    const lar::map::MapAssetReadResult map = packagedMapSource()->load();
+    QVERIFY2(map.succeeded(), qPrintable(map.message));
+    const lar::map::MapLandIndex landIndex(map.mesh);
+    QVERIFY(landIndex.isValid());
 
-    const std::optional<DtedSurfaceSample> ocean =
-        sampler.sampleSurfaceRadians(qDegreesToRadians(30.5), qDegreesToRadians(-29.5));
-    QVERIFY2(ocean.has_value(), qPrintable(sampler.lastError()));
-    QVERIFY(ocean->water);
-    QCOMPARE(ocean->elevationMeters, 0.0);
-    QVERIFY(ocean->waterDepthMeters > 3000.0);
-    QVERIFY(ocean->waterDepthMeters < 5000.0);
+    constexpr double TargetLatitudeDegrees = 41.00658939751302;
+    constexpr double TargetLongitudeDegrees = 28.945827810009188;
+    QVERIFY(!landIndex.contains(TargetLatitudeDegrees, TargetLongitudeDegrees));
+    QVERIFY(landIndex.contains(41.0134, 28.9550));
 
-    const std::optional<DtedSurfaceSample> land =
-        sampler.sampleSurfaceRadians(qDegreesToRadians(39.5), qDegreesToRadians(35.5));
-    QVERIFY2(land.has_value(), qPrintable(sampler.lastError()));
-    QVERIFY(!land->water);
-    QCOMPARE(land->waterDepthMeters, 0.0);
-    QVERIFY(std::abs(land->elevationMeters - 1178.0) < 0.1);
+    PlaneLandMaskBuilder builder(landIndex);
+    const double latitude = qDegreesToRadians(TargetLatitudeDegrees);
+    const double longitude = qDegreesToRadians(TargetLongitudeDegrees);
+    const PlaneLandMask mask = builder.build(latitude, longitude, latitude, 20'000.0);
+    QVERIFY(mask.valid());
+    QCOMPARE(mask.coverage, PlaneLandCoverage::Mixed);
+    QCOMPARE(mask.resolution, 1024);
+    QCOMPARE(mask.storageBytes(), std::size_t(1024 * 1024));
+    QVERIFY(!mask.landAtLocal(0.0, 0.0));
 
-    const std::optional<DtedSurfaceSample> belowSeaLevelLand =
-        sampler.sampleSurfaceRadians(qDegreesToRadians(31.5), qDegreesToRadians(35.5));
-    QVERIFY2(belowSeaLevelLand.has_value(), qPrintable(sampler.lastError()));
-    QVERIFY(!belowSeaLevelLand->water);
-    QVERIFY(belowSeaLevelLand->elevationMeters < -400.0);
-    QCOMPARE(belowSeaLevelLand->waterDepthMeters, 0.0);
-    QVERIFY(sampler.cachedTileCount() <= 2U);
-    QVERIFY(sampler.cachedWaterMaskTileCount() <= 2U);
+    const double nearbyLand[3]{qDegreesToRadians(41.0134), qDegreesToRadians(28.9550), 0.0};
+    const double anchor[3]{latitude, longitude, 0.0};
+    const QPointF nearby =
+        LarProjection::geographicToPlaneWorld(nearbyLand, anchor, 0.0, latitude, true);
+    QVERIFY(mask.landAtLocal(nearby.x(), nearby.y()));
 }
 
 void PlaneViewTests::buildsBoundedLocalTerrainPatch() {
-    PlaneTerrainPatchBuilder builder(
-        sourcePath(QStringLiteral("assets/DTED0")),
-        sourcePath(QStringLiteral("assets/water/dted0_water_mask.bin")));
+    PlaneTerrainPatchBuilder builder(sourcePath(QStringLiteral("assets/DTED0")),
+                                     packagedLandIndex());
     PlaneTerrainBuildRequest request;
     request.latitudeRadians = qDegreesToRadians(39.5);
     request.longitudeRadians = qDegreesToRadians(35.5);
@@ -991,6 +962,7 @@ void PlaneViewTests::buildsBoundedLocalTerrainPatch() {
     QVERIFY(patch->centerElevationMeters <= patch->maximumElevationMeters);
     QVERIFY(std::abs(patch->centerElevationMeters - 1178.0) < 0.1);
     QCOMPARE(patch->waterSampleCount, std::size_t(0));
+    QCOMPARE(patch->landMask.coverage, PlaneLandCoverage::AllLand);
     for (std::size_t offset = 0; offset < patch->vertices.size();
          offset += PlaneTerrainVertexStrideFloats) {
         const double length =
@@ -1011,9 +983,8 @@ void PlaneViewTests::buildsBoundedLocalTerrainPatch() {
 }
 
 void PlaneViewTests::buildsFlatDepthColoredWaterPatch() {
-    PlaneTerrainPatchBuilder builder(
-        sourcePath(QStringLiteral("assets/DTED0")),
-        sourcePath(QStringLiteral("assets/water/dted0_water_mask.bin")));
+    PlaneTerrainPatchBuilder builder(sourcePath(QStringLiteral("assets/DTED0")),
+                                     packagedLandIndex());
     PlaneTerrainBuildRequest request;
     request.latitudeRadians = qDegreesToRadians(30.5);
     request.longitudeRadians = qDegreesToRadians(-29.5);
@@ -1028,19 +999,19 @@ void PlaneViewTests::buildsFlatDepthColoredWaterPatch() {
     QCOMPARE(patch->minimumElevationMeters, 0.0);
     QCOMPARE(patch->maximumElevationMeters, 0.0);
     QCOMPARE(patch->centerElevationMeters, 0.0);
+    QCOMPARE(patch->landMask.coverage, PlaneLandCoverage::AllWater);
     QVERIFY(patch->maximumWaterDepthMeters > 3000.0);
     for (std::size_t offset = 0; offset < patch->vertices.size();
          offset += PlaneTerrainVertexStrideFloats) {
-        QCOMPARE(patch->vertices[offset + 1U], 0.0F);
-        QCOMPARE(patch->vertices[offset + 6U], 1.0F);
-        QVERIFY(patch->vertices[offset + 7U] > 3000.0F);
+        QVERIFY(patch->vertices[offset + 1U] < 0.0F);
+        QVERIFY(patch->vertices[offset + 6U] > 3000.0F);
     }
 }
 
 void PlaneViewTests::widgetPreparesTerrainAsynchronously() {
-    PlaneSceneWidget widget(QStringLiteral(LAR_TEST_SOURCE_DIR));
+    PlaneSceneWidget widget(QStringLiteral(LAR_TEST_SOURCE_DIR), packagedMapSource());
     QVERIFY(widget.terrainAvailable());
-    QVERIFY(widget.terrainWaterMaskAvailable());
+    QVERIFY(widget.terrainLandMapAvailable());
     LarSceneState scene;
     scene.hasScene = true;
     scene.availableFields = QBitArray(StateField::Count);
@@ -1065,7 +1036,7 @@ void PlaneViewTests::widgetReplacesTerrainSourceForSession() {
     QVERIFY(
         dted_test_fixture::writeCell(level1Directory.path(), DtedLevel::Level1, {35, 39}, 1, 1600));
 
-    PlaneSceneWidget widget(QStringLiteral(LAR_TEST_SOURCE_DIR));
+    PlaneSceneWidget widget(QStringLiteral(LAR_TEST_SOURCE_DIR), packagedMapSource());
     QCOMPARE(dtedLevelNumber(widget.terrainLevel()), 0);
     QSignalSpy sourceSpy(&widget, &PlaneSceneWidget::terrainSourceChanged);
     QSignalSpy diagnosticSpy(&widget, &PlaneSceneWidget::diagnosticRaised);

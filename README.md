@@ -452,24 +452,18 @@ F-16 remains the default; use **Jet Model** in the lower-left **Upload** box to
 replace it for the current session. **DTED Folder** similarly selects an
 external DT1/DT2 tree for the session; restarting restores normal DT0 source
 discovery.
-They and the compact generated water mask are copied beside every executable
-that renders or tests the Plane scene and installed beneath `bin/assets`. The
-much larger `assets/DTED0` tree and user-selected DT1/DT2 trees are not copied
-or installed by default. Plane mode checks `LAR_DTED0_ROOT`, then an
-executable-adjacent `assets/DTED0`, then the CMake `LAR_DTED0_ROOT` development
-path. The mask independently checks `LAR_DTED0_WATER_MASK`, its packaged path,
-then the CMake-configured development mask file. Invalid or missing assets
-leave the rest of the application usable.
+The model and cubemaps are copied beside every executable that renders or tests
+the Plane scene and installed beneath `bin/assets`. The much larger
+`assets/DTED0` tree and user-selected DT1/DT2 trees are not copied or installed
+by default. Plane mode checks `LAR_DTED0_ROOT`, then an executable-adjacent
+`assets/DTED0`, then the CMake `LAR_DTED0_ROOT` development path. Invalid or
+missing assets leave the rest of the application usable.
 
-Regenerate the mask after replacing DTED0 or the Natural Earth source:
-
-```bash
-python3 tools/build_dted_water_mask.py \
-  --dted-root assets/DTED0 \
-  --land assets/ne_10m_land/ne_10m_land.shp \
-  --output assets/water/dted0_water_mask.bin \
-  --force
-```
+Land/water comes from the same compiled `lar_world_map.larmap` used by Mercator
+and Sphere. A 1-degree triangle index in that asset lets Plane build a bounded
+adaptive local R8 mask on its terrain worker. DTED remains elevation-only, so
+uploading DT1 or DT2 improves relief without substituting a lower-resolution
+coastline or changing target classification.
 
 Run the focused CPU/widget and opt-in native GPU checks with:
 

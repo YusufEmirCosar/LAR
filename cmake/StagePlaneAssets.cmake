@@ -27,7 +27,6 @@ file(REMOVE_RECURSE
 file(MAKE_DIRECTORY
     "${LAR_PLANE_ASSET_DESTINATION}/cubemaps"
     "${LAR_PLANE_ASSET_DESTINATION}/models"
-    "${LAR_PLANE_ASSET_DESTINATION}/water"
 )
 file(COPY
     "${LAR_PLANE_ASSET_SOURCE}/models/f16_3.glb"
@@ -36,8 +35,4 @@ file(COPY
 file(COPY
     "${LAR_PLANE_ASSET_SOURCE}/cubemaps/"
     DESTINATION "${LAR_PLANE_ASSET_DESTINATION}/cubemaps"
-)
-file(COPY
-    "${LAR_PLANE_ASSET_SOURCE}/water/dted0_water_mask.bin"
-    DESTINATION "${LAR_PLANE_ASSET_DESTINATION}/water"
 )

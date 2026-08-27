@@ -10,7 +10,6 @@
 #include "viewer/plane/plane_terrain_worker.h"
 #include "viewer/terrain/dted_cell_reader.h"
 #include "viewer/terrain/dted_tile_source.h"
-#include "viewer/terrain/dted_water_mask_source.h"
 
 #include <QDir>
 #include <QDirIterator>
@@ -44,25 +43,6 @@ QString defaultTerrainRootDirectory(const QString &packageDirectory) {
 #ifdef LAR_DTED0_SOURCE_DIR
     const QString source = QDir::cleanPath(QString::fromUtf8(LAR_DTED0_SOURCE_DIR));
     if (QFileInfo(source).isDir()) {
-        return source;
-    }
-#endif
-    return QDir::cleanPath(packaged);
-}
-
-QString terrainWaterMaskFile(const QString &packageDirectory) {
-    const QString overridePath = qEnvironmentVariable("LAR_DTED0_WATER_MASK");
-    if (!overridePath.isEmpty()) {
-        return QDir::cleanPath(overridePath);
-    }
-    const QString packaged =
-        QDir(packageDirectory).filePath(QStringLiteral("assets/water/dted0_water_mask.bin"));
-    if (QFileInfo(packaged).isFile()) {
-        return QDir::cleanPath(packaged);
-    }
-#ifdef LAR_DTED0_WATER_MASK_SOURCE_FILE
-    const QString source = QDir::cleanPath(QString::fromUtf8(LAR_DTED0_WATER_MASK_SOURCE_FILE));
-    if (QFileInfo(source).isFile()) {
         return source;
     }
 #endif
@@ -178,11 +158,7 @@ void PlaneSceneWidget::initializeTerrainSource() {
     qRegisterMetaType<PlaneTerrainPatchPtr>("PlaneTerrainPatchPtr");
     qRegisterMetaType<DtedLevel>("DtedLevel");
     m_terrainDataset = {defaultTerrainRootDirectory(m_packageDirectory), DtedLevel::Level0};
-    m_terrainWaterMaskFile = terrainWaterMaskFile(m_packageDirectory);
     m_terrainAvailable = QFileInfo(m_terrainDataset.rootDirectory).isDir();
-    const DtedWaterMaskSource waterMaskSource(m_terrainWaterMaskFile);
-    m_terrainWaterMaskAvailable = waterMaskSource.isAvailable();
-    m_terrainWaterMaskError = waterMaskSource.initializationError();
 }
 
 void PlaneSceneWidget::startTerrainWorker() {
@@ -190,7 +166,7 @@ void PlaneSceneWidget::startTerrainWorker() {
         return;
     }
     m_terrainThread.setObjectName(QStringLiteral("lar-plane-terrain-thread"));
-    m_terrainWorker = new PlaneTerrainWorker(m_terrainDataset, m_terrainWaterMaskFile);
+    m_terrainWorker = new PlaneTerrainWorker(m_terrainDataset, m_mapAssetSource);
     m_terrainWorker->moveToThread(&m_terrainThread);
     connect(m_terrainWorker, &PlaneTerrainWorker::patchReady, this,
             &PlaneSceneWidget::completeTerrainPatch, Qt::QueuedConnection);
@@ -204,11 +180,11 @@ void PlaneSceneWidget::setTerrainVisible(bool visible) {
         emit terrainVisibilityChanged(false);
         return;
     }
-    if (visible && !m_terrainWaterMaskAvailable) {
-        setDiagnostic(
-            m_terrainWaterMaskError.isEmpty()
-                ? QStringLiteral("DTED water mask is unavailable; ocean shading is disabled.")
-                : m_terrainWaterMaskError);
+    if (visible && m_mapAssetSource == nullptr) {
+        setDiagnostic(QStringLiteral(
+            "The shared vector land map is unavailable; terrain cannot be classified."));
+        emit terrainVisibilityChanged(false);
+        return;
     }
     if (m_terrainVisible == visible) {
         if (visible) {

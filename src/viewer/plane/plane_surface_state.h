@@ -9,6 +9,8 @@
 
 #include <QVector2D>
 
+#include <limits>
+
 /** Half-count of prebuilt grid lines on each side of the aircraft. */
 inline constexpr int PlaneSurfaceGridHalfLineCount = 600;
 /** Maximum finite coordinate accepted by the Plane surface renderer. */
@@ -36,6 +38,8 @@ struct PlaneSurfaceState final {
     double gridSpacingMeters = 4.0;
     float gridSpacingSceneUnits = 0.5F;
     float targetMarkerScale = 0.4F;
+    /** Target-specific terrain/sea height; NaN falls back to the tactical-plane height. */
+    float targetHeight = std::numeric_limits<float>::quiet_NaN();
     float surfaceHalfExtent = 300.0F;
     float surfaceHeight = -1.3F;
     bool geographicAnchorValid = false;

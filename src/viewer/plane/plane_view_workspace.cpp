@@ -1,6 +1,7 @@
 
 #include "viewer/plane/plane_view_workspace.h"
 
+#include "viewer/map/packaged_map_asset_source.h"
 #include "viewer/plane/plane_scene_widget.h"
 
 #include <QCoreApplication>
@@ -19,11 +20,19 @@
 #include <algorithm>
 
 PlaneViewWorkspace::PlaneViewWorkspace(QString packageDirectory, QWidget *parent)
+    : PlaneViewWorkspace(
+          packageDirectory,
+          std::make_shared<lar::map::PackagedMapAssetSource>(packageDirectory), parent) {}
+
+PlaneViewWorkspace::PlaneViewWorkspace(
+    QString packageDirectory,
+    std::shared_ptr<const lar::map::IMapAssetSource> mapAssetSource, QWidget *parent)
     : QWidget(parent) {
     setObjectName(QStringLiteral("planeViewWorkspace"));
     setMinimumSize(420, 360);
     setFocusPolicy(Qt::StrongFocus);
-    m_sceneWidget = new PlaneSceneWidget(std::move(packageDirectory), this);
+    m_sceneWidget =
+        new PlaneSceneWidget(std::move(packageDirectory), std::move(mapAssetSource), this);
     m_sceneWidget->setGeometry(rect());
     if (QGuiApplication::platformName() == QStringLiteral("offscreen")) {
         m_sceneWidget->hide();

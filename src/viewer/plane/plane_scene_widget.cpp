@@ -3,6 +3,7 @@
 
 #include "domain/statefield.h"
 #include "viewer/grid_geometry_builder.h"
+#include "viewer/map/packaged_map_asset_source.h"
 #include "viewer/plane/glb_model_reader.h"
 #include "viewer/plane/plane_aircraft_scale.h"
 #include "viewer/plane/plane_attitude_transform.h"
@@ -36,7 +37,15 @@ bool validGroundPosition(double latitude, double longitude) noexcept {
 } // namespace
 
 PlaneSceneWidget::PlaneSceneWidget(QString packageDirectory, QWidget *parent)
+    : PlaneSceneWidget(
+          packageDirectory,
+          std::make_shared<lar::map::PackagedMapAssetSource>(packageDirectory), parent) {}
+
+PlaneSceneWidget::PlaneSceneWidget(
+    QString packageDirectory,
+    std::shared_ptr<const lar::map::IMapAssetSource> mapAssetSource, QWidget *parent)
     : QOpenGLWidget(parent), m_packageDirectory(QDir::cleanPath(std::move(packageDirectory))),
+      m_mapAssetSource(std::move(mapAssetSource)),
       m_skyboxes(QDir(m_packageDirectory).filePath(QStringLiteral("assets/cubemaps"))) {
     setObjectName(QStringLiteral("planeSceneWidget"));
     setMouseTracking(true);

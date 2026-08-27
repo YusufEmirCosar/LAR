@@ -213,7 +213,9 @@ void ViewerTests::originalUiContractIsPreserved() {
     QCOMPARE(brand->alignment(), Qt::AlignCenter);
 
     QSet<QString> groupTitles;
-    for (const QGroupBox *group : window.findChildren<QGroupBox *>()) {
+    // This contract describes the left controls column. Plane owns a separate
+    // untitled overlay group inside the central viewport and must not leak into it.
+    for (const QGroupBox *group : controls->findChildren<QGroupBox *>()) {
         groupTitles.insert(group->title());
     }
     QCOMPARE(groupTitles,

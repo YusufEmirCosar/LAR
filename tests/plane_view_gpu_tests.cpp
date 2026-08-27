@@ -75,6 +75,19 @@ int deepWaterPixelCount(const QImage &image) {
     return count;
 }
 
+int landPixelCount(const QImage &image) {
+    int count = 0;
+    for (int y = image.height() * 45 / 100; y < image.height() * 90 / 100; ++y) {
+        for (int x = image.width() * 5 / 100; x < image.width() * 95 / 100; ++x) {
+            const QColor color = image.pixelColor(x, y);
+            if (color.green() > color.red() + 12 && color.green() > color.blue() + 8) {
+                ++count;
+            }
+        }
+    }
+    return count;
+}
+
 bool waitForFrame(PlaneSceneWidget &widget) {
     bool rendered = false;
     const QMetaObject::Connection connection = QObject::connect(
@@ -129,6 +142,22 @@ LarSceneState deepOceanScene() {
     scene.target.ir_pos[1] = scene.plane.location[1];
     scene.target.iz_pos[0] = scene.plane.location[0];
     scene.target.iz_pos[1] = scene.plane.location[1];
+    return scene;
+}
+
+LarSceneState nearShoreScene() {
+    const auto radians = [](double degrees) { return degrees * Pi / 180.0; };
+    LarSceneState scene = representativeScene(3000.0);
+    scene.plane.location[0] = radians(41.0134);
+    scene.plane.location[1] = radians(28.9550);
+    scene.plane.euler[0] = radians(-135.0);
+    scene.target.ir_pos[0] = radians(41.00658939751302);
+    scene.target.ir_pos[1] = radians(28.945827810009188);
+    scene.target.iz_pos[0] = scene.target.ir_pos[0];
+    scene.target.iz_pos[1] = scene.target.ir_pos[1];
+    scene.target.ir_r = 4000.0;
+    scene.target.iz_r1 = 1000.0;
+    scene.target.iz_r2 = 5000.0;
     return scene;
 }
 
@@ -263,13 +292,30 @@ int main(int argc, char *argv[]) {
         std::cerr << "FAILED: Restoring the default DT0 source did not render.\n";
         return 1;
     }
+    widget.setSceneState(nearShoreScene());
+    if (!waitForTerrain(widget)) {
+        std::cerr << "FAILED: Mixed vector-coast terrain did not prepare and render.\n";
+        return 1;
+    }
+    const QImage nearShoreFrame = widget.grabFramebuffer();
+    const int nearShoreWater = deepWaterPixelCount(nearShoreFrame);
+    const int nearShoreLand = landPixelCount(nearShoreFrame);
+    if (nearShoreFrame.isNull() || nearShoreFrame == level1Frame || nearShoreWater < 100 ||
+        nearShoreLand < 100) {
+        std::cerr << "FAILED: Mixed vector-coast land/water passes did not render "
+                  << "(null=" << nearShoreFrame.isNull()
+                  << ", unchanged=" << (nearShoreFrame == level1Frame)
+                  << ", waterPixels=" << nearShoreWater << ", landPixels=" << nearShoreLand
+                  << ").\n";
+        return 1;
+    }
     widget.setSceneState(deepOceanScene());
     if (!waitForTerrain(widget)) {
         std::cerr << "FAILED: DTED0 bathymetry did not prepare and render.\n";
         return 1;
     }
     const QImage waterFrame = widget.grabFramebuffer();
-    if (waterFrame.isNull() || waterFrame == terrainFrame ||
+    if (waterFrame.isNull() || waterFrame == nearShoreFrame ||
         deepWaterPixelCount(waterFrame) < waterFrame.width() * waterFrame.height() / 100) {
         std::cerr << "FAILED: Deep-ocean terrain did not render with a blue depth ramp.\n";
         return 1;

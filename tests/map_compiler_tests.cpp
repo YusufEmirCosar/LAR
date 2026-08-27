@@ -128,6 +128,8 @@ void MapCompilerTests::compilerIsDeterministic() {
     QCOMPARE(first.mesh.mercatorFillIndices, second.mesh.mercatorFillIndices);
     QCOMPARE(first.mesh.sphereFillIndices, second.mesh.sphereFillIndices);
     QCOMPARE(first.mesh.borderIndices, second.mesh.borderIndices);
+    QCOMPARE(first.mesh.landCellRanges, second.mesh.landCellRanges);
+    QCOMPARE(first.mesh.landTriangleReferences, second.mesh.landTriangleReferences);
 }
 
 void MapCompilerTests::writerStagesBothFilesBeforeReplacingExistingAsset() {

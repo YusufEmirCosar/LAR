@@ -2,6 +2,8 @@
 # dependency and is shared by the viewer, tests, and build-time asset tooling.
 qt_add_library(lar-map-format STATIC
     src/viewer/map/map_mesh.h
+    src/viewer/map/map_land_index.h
+    src/viewer/map/map_land_index.cpp
     src/viewer/map/map_asset_limits.h
     src/viewer/map/map_asset_format.h
     src/viewer/map/map_checksum.h

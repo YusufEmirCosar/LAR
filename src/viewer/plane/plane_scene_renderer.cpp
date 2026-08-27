@@ -446,7 +446,7 @@ bool PlaneSceneRenderer::draw(const QMatrix4x4 &view, const QMatrix4x4 &projecti
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     drawSkybox(view, projection);
     bool terrainDrawn = false;
-    if (m_terrainVisible && m_terrainLayer.hasPatch()) {
+    if (m_terrainVisible) {
         if (!m_terrainLayer.draw(view, projection, m_terrainOffsetXZ, m_terrainScaleXZ,
                                  m_aircraftAltitudeScene, errorMessage)) {
             return false;
@@ -465,6 +465,14 @@ bool PlaneSceneRenderer::draw(const QMatrix4x4 &view, const QMatrix4x4 &projecti
                 m_terrainLayer.centerGroundHeight(m_aircraftAltitudeScene);
             if (groundHeight) {
                 surfaceState.surfaceHeight = *groundHeight;
+            }
+            if (surfaceState.targetVisible) {
+                const std::optional<float> targetHeight = m_terrainLayer.groundHeightAt(
+                    surfaceState.targetXZ, m_terrainOffsetXZ, m_terrainScaleXZ,
+                    m_aircraftAltitudeScene);
+                if (targetHeight) {
+                    surfaceState.targetHeight = *targetHeight;
+                }
             }
         }
         m_surfaceLayer.draw(surfaceState, view, projection, drawFlatGround, m_surfaceVisible);

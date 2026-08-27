@@ -341,7 +341,9 @@ qt_add_executable(larplane-view-tests
 )
 target_compile_definitions(larplane-view-tests PRIVATE
     "LAR_TEST_SOURCE_DIR=\"${CMAKE_CURRENT_SOURCE_DIR}\""
+    "LAR_TEST_MAP_PACKAGE_DIR=\"${LAR_GENERATED_MAP_DIR}\""
 )
+add_dependencies(larplane-view-tests lar-map-asset)
 target_link_libraries(larplane-view-tests PRIVATE
     lar-presentation-widgets
     lar-domain
@@ -392,6 +394,7 @@ target_link_libraries(larviewer-tests PRIVATE
     Qt6::Test
 )
 add_test(NAME larviewer-tests COMMAND larviewer-tests)
+lar_copy_map_package(larviewer-tests)
 lar_copy_plane_assets(larviewer-tests)
 set_tests_properties(larviewer-tests PROPERTIES
     ENVIRONMENT "QT_QPA_PLATFORM=offscreen"
@@ -426,6 +429,7 @@ target_link_libraries(lar-plane-view-gpu-tests PRIVATE
     Qt6::Widgets
 )
 lar_copy_plane_assets(lar-plane-view-gpu-tests)
+lar_copy_map_package(lar-plane-view-gpu-tests)
 add_test(NAME lar-plane-view-gpu-tests COMMAND lar-plane-view-gpu-tests)
 set_tests_properties(lar-plane-view-gpu-tests PROPERTIES
     SKIP_RETURN_CODE 77

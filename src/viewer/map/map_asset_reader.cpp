@@ -4,6 +4,7 @@
 #include "viewer/map/map_asset_format.h"
 #include "viewer/map/map_asset_limits.h"
 #include "viewer/map/map_checksum.h"
+#include "viewer/map/map_land_index.h"
 
 #include <QtEndian>
 
@@ -47,12 +48,18 @@ std::uint64_t readUint64(const unsigned char *bytes) noexcept {
 }
 
 bool validCounts(std::uint64_t vertexCount, std::uint64_t mercatorIndexCount,
-                 std::uint64_t sphereIndexCount, std::uint64_t borderIndexCount) noexcept {
+                 std::uint64_t sphereIndexCount, std::uint64_t borderIndexCount,
+                 std::uint64_t landCellCount, std::uint64_t landReferenceCount) noexcept {
+    const bool validLandCounts =
+        (landCellCount == 0U && landReferenceCount == 0U) ||
+        (landCellCount == MapLandCellCount &&
+         landReferenceCount <= limits::MaximumLandTriangleReferenceCount);
     return vertexCount > 0U && vertexCount <= limits::MaximumVertexCount &&
            mercatorIndexCount > 0U && mercatorIndexCount <= limits::MaximumMercatorIndexCount &&
            mercatorIndexCount % 3U == 0U && sphereIndexCount > 0U &&
            sphereIndexCount <= limits::MaximumSphereIndexCount && sphereIndexCount % 3U == 0U &&
-           borderIndexCount <= limits::MaximumBorderIndexCount && borderIndexCount % 2U == 0U;
+           borderIndexCount <= limits::MaximumBorderIndexCount && borderIndexCount % 2U == 0U &&
+           validLandCounts;
 }
 
 template <typename Value>
@@ -132,10 +139,13 @@ MapAssetReadResult MapAssetReader::read(QByteArrayView bytes) {
     const std::uint64_t mercatorIndexCount = readUint64(data + format::MercatorIndexCountOffset);
     const std::uint64_t sphereIndexCount = readUint64(data + format::SphereIndexCountOffset);
     const std::uint64_t borderIndexCount = readUint64(data + format::BorderIndexCountOffset);
+    const std::uint64_t landCellCount = readUint64(data + format::LandCellCountOffset);
+    const std::uint64_t landReferenceCount = readUint64(data + format::LandReferenceCountOffset);
     const std::uint64_t declaredPayloadSize = readUint64(data + format::PayloadSizeOffset);
     const std::uint32_t expectedCrc = readUint32(data + format::PayloadCrcOffset);
 
-    if (!validCounts(vertexCount, mercatorIndexCount, sphereIndexCount, borderIndexCount)) {
+    if (!validCounts(vertexCount, mercatorIndexCount, sphereIndexCount, borderIndexCount,
+                     landCellCount, landReferenceCount)) {
         return failure(MapAssetError::Limits,
                        QStringLiteral("The packaged map exceeds geometry limits."));
     }
@@ -144,6 +154,9 @@ MapAssetReadResult MapAssetReader::read(QByteArrayView bytes) {
     std::size_t mercatorBytes = 0U;
     std::size_t sphereBytes = 0U;
     std::size_t borderBytes = 0U;
+    std::size_t landCellValueCount = 0U;
+    std::size_t landCellBytes = 0U;
+    std::size_t landReferenceBytes = 0U;
     std::size_t expectedPayloadSize = 0U;
     std::size_t expectedFileSize = 0U;
     if (!checkedMultiply(static_cast<std::size_t>(vertexCount), 3U, vertexFloatCount) ||
@@ -154,9 +167,15 @@ MapAssetReadResult MapAssetReader::read(QByteArrayView bytes) {
                          sphereBytes) ||
         !checkedMultiply(static_cast<std::size_t>(borderIndexCount), sizeof(std::uint32_t),
                          borderBytes) ||
+        !checkedMultiply(static_cast<std::size_t>(landCellCount), 2U, landCellValueCount) ||
+        !checkedMultiply(landCellValueCount, sizeof(std::uint32_t), landCellBytes) ||
+        !checkedMultiply(static_cast<std::size_t>(landReferenceCount), sizeof(std::uint32_t),
+                         landReferenceBytes) ||
         !checkedAdd(vertexBytes, mercatorBytes, expectedPayloadSize) ||
         !checkedAdd(expectedPayloadSize, sphereBytes, expectedPayloadSize) ||
         !checkedAdd(expectedPayloadSize, borderBytes, expectedPayloadSize) ||
+        !checkedAdd(expectedPayloadSize, landCellBytes, expectedPayloadSize) ||
+        !checkedAdd(expectedPayloadSize, landReferenceBytes, expectedPayloadSize) ||
         expectedPayloadSize > limits::MaximumPayloadBytes ||
         declaredPayloadSize != expectedPayloadSize ||
         !checkedAdd(static_cast<std::size_t>(format::HeaderSize), expectedPayloadSize,
@@ -179,21 +198,33 @@ MapAssetReadResult MapAssetReader::read(QByteArrayView bytes) {
         mutableMesh->mercatorFillIndices.resize(static_cast<std::size_t>(mercatorIndexCount));
         mutableMesh->sphereFillIndices.resize(static_cast<std::size_t>(sphereIndexCount));
         mutableMesh->borderIndices.resize(static_cast<std::size_t>(borderIndexCount));
+        mutableMesh->landCellRanges.resize(static_cast<std::size_t>(landCellCount));
+        mutableMesh->landTriangleReferences.resize(
+            static_cast<std::size_t>(landReferenceCount));
 
         std::size_t cursor = 0U;
         copyLittleEndianArray(mutableMesh->vertices, payload, cursor);
         copyLittleEndianArray(mutableMesh->mercatorFillIndices, payload, cursor);
         copyLittleEndianArray(mutableMesh->sphereFillIndices, payload, cursor);
         copyLittleEndianArray(mutableMesh->borderIndices, payload, cursor);
+        for (MapLandCellRange &range : mutableMesh->landCellRanges) {
+            range.firstReference = readUint32(payload + cursor);
+            cursor += sizeof(std::uint32_t);
+            range.referenceCount = readUint32(payload + cursor);
+            cursor += sizeof(std::uint32_t);
+        }
+        copyLittleEndianArray(mutableMesh->landTriangleReferences, payload, cursor);
 
         if (cursor != expectedPayloadSize || !verticesAreValid(*mutableMesh)) {
             return failure(MapAssetError::Format,
                            QStringLiteral("The packaged map contains invalid vertices."));
         }
         const std::size_t loadedVertexCount = mutableMesh->vertexCount();
+        const bool validLandIndex =
+            mutableMesh->landCellRanges.empty() || mapLandIndexIsValid(*mutableMesh);
         if (!indicesAreValid(mutableMesh->mercatorFillIndices, loadedVertexCount) ||
             !indicesAreValid(mutableMesh->sphereFillIndices, loadedVertexCount) ||
-            !indicesAreValid(mutableMesh->borderIndices, loadedVertexCount)) {
+            !indicesAreValid(mutableMesh->borderIndices, loadedVertexCount) || !validLandIndex) {
 
             return failure(MapAssetError::Format,
                            QStringLiteral("The packaged map contains invalid indices."));

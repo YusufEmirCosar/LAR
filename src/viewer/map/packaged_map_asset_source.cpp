@@ -4,6 +4,7 @@
 #include "viewer/map/map_asset_format.h"
 #include "viewer/map/map_asset_limits.h"
 #include "viewer/map/map_asset_reader.h"
+#include "viewer/map/map_land_index.h"
 
 #include <QCryptographicHash>
 #include <QDir>
@@ -86,6 +87,11 @@ QString PackagedMapAssetSource::manifestPath() const {
 }
 
 MapAssetReadResult PackagedMapAssetSource::load() const {
+    std::call_once(m_loadOnce, [this] { m_cachedResult = loadUncached(); });
+    return m_cachedResult;
+}
+
+MapAssetReadResult PackagedMapAssetSource::loadUncached() const {
     const QFileInfo directoryInfo(m_packageDirectory);
     const QString canonicalDirectory = directoryInfo.canonicalFilePath();
     if (!directoryInfo.exists() || !directoryInfo.isDir() || directoryInfo.isSymLink() ||
@@ -155,7 +161,12 @@ MapAssetReadResult PackagedMapAssetSource::load() const {
                        QStringLiteral("The packaged map integrity check failed."));
     }
 
-    return MapAssetReader::read(QByteArrayView(assetBytes));
+    MapAssetReadResult result = MapAssetReader::read(QByteArrayView(assetBytes));
+    if (result.succeeded() && !mapLandIndexIsValid(*result.mesh)) {
+        return failure(MapAssetError::Format,
+                       QStringLiteral("The packaged map has no valid land index."));
+    }
+    return result;
 }
 
 } // namespace lar::map

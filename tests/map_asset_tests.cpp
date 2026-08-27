@@ -1,6 +1,7 @@
 #include "viewer/map/map_asset_format.h"
 #include "viewer/map/map_asset_reader.h"
 #include "viewer/map/map_checksum.h"
+#include "viewer/map/map_land_index.h"
 #include "viewer/map/map_projection.h"
 #include "viewer/map/packaged_map_asset_source.h"
 
@@ -38,6 +39,7 @@ class MapAssetTests final : public QObject {
     void packagedDirectoryRejectsSymlinks();
     void mercatorProjectionRoundTrips();
     void longitudeWrappingUsesNearestWorldCopy();
+    void packagedLandIndexClassifiesIstanbulCoast();
 };
 
 QByteArray packagedAssetBytes() {
@@ -56,7 +58,12 @@ void MapAssetTests::packagedAssetPassesIntegrityAndFormatValidation() {
     QCOMPARE(result.mesh->mercatorFillIndices.size(), std::size_t(1594269));
     QCOMPARE(result.mesh->sphereFillIndices.size(), std::size_t(1832433));
     QCOMPARE(result.mesh->borderIndices.size(), std::size_t(1088096));
+    QCOMPARE(result.mesh->landCellRanges.size(), lar::map::MapLandCellCount);
+    QCOMPARE(result.mesh->landTriangleReferences.size(), std::size_t(879801));
     QVERIFY(result.mesh->byteSize() < 40U * 1024U * 1024U);
+    const auto cached = source.load();
+    QVERIFY(cached.succeeded());
+    QCOMPARE(cached.mesh, result.mesh);
 }
 
 void MapAssetTests::malformedHeaderIsRejectedBeforeAllocation() {
@@ -267,6 +274,18 @@ void MapAssetTests::longitudeWrappingUsesNearestWorldCopy() {
     QCOMPARE(MapProjection::wrapLongitude(-181.0), 179.0);
     QCOMPARE(MapProjection::unwrapLongitude(-179.0, 179.0), 181.0);
     QCOMPARE(MapProjection::unwrapLongitude(179.0, -179.0), -181.0);
+}
+
+void MapAssetTests::packagedLandIndexClassifiesIstanbulCoast() {
+    const PackagedMapAssetSource source(QStringLiteral(LAR_TEST_MAP_PACKAGE_DIR));
+    const auto result = source.load();
+    QVERIFY2(result.succeeded(), qPrintable(result.message));
+    const lar::map::MapLandIndex index(result.mesh);
+    QVERIFY(index.isValid());
+
+    // Regression from the near-shore session that exposed the DTED0 mask mismatch.
+    QVERIFY(!index.contains(41.00658939751302, 28.945827810009188));
+    QVERIFY(index.contains(41.0134, 28.9550));
 }
 
 QTEST_APPLESS_MAIN(MapAssetTests)

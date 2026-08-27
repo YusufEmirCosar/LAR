@@ -6,6 +6,7 @@
  */
 
 #include "viewer/lar_geodesic_geometry.h"
+#include "viewer/map/map_asset_source.h"
 #include "viewer/plane/cubemap_catalog.h"
 #include "viewer/plane/plane_orbit_camera.h"
 #include "viewer/plane/plane_scene_renderer.h"
@@ -30,6 +31,9 @@ class PlaneSceneWidget final : public QOpenGLWidget {
 
   public:
     explicit PlaneSceneWidget(QString packageDirectory, QWidget *parent = nullptr);
+    PlaneSceneWidget(QString packageDirectory,
+                     std::shared_ptr<const lar::map::IMapAssetSource> mapAssetSource,
+                     QWidget *parent = nullptr);
     ~PlaneSceneWidget() override;
 
     void setSceneState(const LarSceneState &state);
@@ -91,9 +95,9 @@ class PlaneSceneWidget final : public QOpenGLWidget {
     [[nodiscard]] const QString &terrainRootDirectory() const noexcept {
         return m_terrainDataset.rootDirectory;
     }
-    /** @brief Returns whether the compact DTED-aligned water mask passed validation. */
-    [[nodiscard]] bool terrainWaterMaskAvailable() const noexcept {
-        return m_terrainWaterMaskAvailable;
+    /** @brief Returns whether Plane has the shared vector-map source used by Earth views. */
+    [[nodiscard]] bool terrainLandMapAvailable() const noexcept {
+        return m_mapAssetSource != nullptr;
     }
     /** @brief Returns whether an immutable terrain patch is ready for GPU upload. */
     [[nodiscard]] bool terrainPatchReady() const noexcept {
@@ -143,6 +147,7 @@ class PlaneSceneWidget final : public QOpenGLWidget {
     void stopTerrainWorker() noexcept;
 
     QString m_packageDirectory;
+    std::shared_ptr<const lar::map::IMapAssetSource> m_mapAssetSource;
     CubemapCatalog m_skyboxes;
     PlaneSceneRenderer m_renderer;
     std::shared_ptr<const PlaneModelMesh> m_model;
@@ -158,8 +163,6 @@ class PlaneSceneWidget final : public QOpenGLWidget {
     QPointF m_lastMousePosition;
     QString m_diagnostic;
     DtedDataset m_terrainDataset;
-    QString m_terrainWaterMaskFile;
-    QString m_terrainWaterMaskError;
     QMetaObject::Connection m_contextConnection;
     quint64 m_terrainRevision = 0;
     double m_pendingTerrainHalfExtent = 0.0;
@@ -172,6 +175,5 @@ class PlaneSceneWidget final : public QOpenGLWidget {
     bool m_surfaceVisible = false;
     bool m_terrainVisible = false;
     bool m_terrainAvailable = false;
-    bool m_terrainWaterMaskAvailable = false;
     bool m_terrainPending = false;
 };

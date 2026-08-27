@@ -9,6 +9,8 @@
 
 #include <QString>
 
+#include <mutex>
+
 namespace lar::map {
 
 /** @brief Resolves package paths, validates the manifest, and reads the mesh. */
@@ -22,7 +24,11 @@ class PackagedMapAssetSource final : public IMapAssetSource {
     [[nodiscard]] QString manifestPath() const;
 
   private:
+    [[nodiscard]] MapAssetReadResult loadUncached() const;
+
     QString m_packageDirectory;
+    mutable std::once_flag m_loadOnce;
+    mutable MapAssetReadResult m_cachedResult;
 };
 
 } // namespace lar::map

@@ -17,6 +17,7 @@
 #include <optional>
 
 class QOpenGLShaderProgram;
+class QOpenGLTexture;
 
 /** @brief Uploads terrain only from an active paint context and retains CPU data across GL loss. */
 class PlaneTerrainGpuLayer final : protected QOpenGLFunctions {
@@ -46,6 +47,10 @@ class PlaneTerrainGpuLayer final : protected QOpenGLFunctions {
     }
     [[nodiscard]] std::optional<float>
     centerGroundHeight(float aircraftAltitudeScene) const noexcept;
+    /** Returns vector-classified DTED/sea-level height at a current Plane X/Z coordinate. */
+    [[nodiscard]] std::optional<float>
+    groundHeightAt(const QVector2D &currentXZ, const QVector2D &offsetXZ,
+                   const QVector2D &scaleXZ, float aircraftAltitudeScene) const noexcept;
 
   private:
     [[nodiscard]] bool compileProgram(QString *errorMessage);
@@ -53,6 +58,7 @@ class PlaneTerrainGpuLayer final : protected QOpenGLFunctions {
     [[nodiscard]] bool uploadPending(QString *errorMessage);
 
     std::unique_ptr<QOpenGLShaderProgram> m_program;
+    std::unique_ptr<QOpenGLTexture> m_landMaskTexture;
     QOpenGLBuffer m_vertices;
     QOpenGLBuffer m_indices{QOpenGLBuffer::IndexBuffer};
     QOpenGLVertexArrayObject m_array;

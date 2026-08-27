@@ -2,6 +2,7 @@
 #include "viewer/viewport/lar_viewport.h"
 
 #include "viewer/hud/dlz_hud_workspace.h"
+#include "viewer/map/packaged_map_asset_source.h"
 #include "viewer/plane/plane_view_workspace.h"
 #include "viewer/viewport/earth_lar_view.h"
 #include "viewer/viewport/grid_lar_view.h"
@@ -31,12 +32,17 @@ LarViewport::LarViewport(std::unique_ptr<ILarViewportPage> gridPage,
     if (gridPage == nullptr) {
         gridPage = std::make_unique<GridLarView>();
     }
+    std::shared_ptr<const lar::map::IMapAssetSource> defaultMapSource;
+    if (earthPage == nullptr || planePage == nullptr) {
+        defaultMapSource = std::make_shared<lar::map::PackagedMapAssetSource>(
+            QCoreApplication::applicationDirPath());
+    }
     if (earthPage == nullptr) {
-        earthPage =
-            std::make_unique<EarthLarView>(std::shared_ptr<const lar::map::IMapAssetSource>{});
+        earthPage = std::make_unique<EarthLarView>(defaultMapSource);
     }
     if (planePage == nullptr) {
-        planePage = std::make_unique<PlaneViewWorkspace>(QCoreApplication::applicationDirPath());
+        planePage = std::make_unique<PlaneViewWorkspace>(QCoreApplication::applicationDirPath(),
+                                                         defaultMapSource);
     }
     if (hudPage == nullptr) {
         hudPage = std::make_unique<dlz::presentation::HudWorkspace>();
