@@ -152,6 +152,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abac2cc602224c43b2a4ea8031e1fb051" id="r_abac2cc602224c43b2a4ea8031e1fb051"><td class="memItemLeft">qint64&#160;</td><td class="memItemRight"><a class="el" href="#abac2cc602224c43b2a4ea8031e1fb051">recordCount</a> () const noexcept override</td></tr>
 <tr class="memdesc:abac2cc602224c43b2a4ea8031e1fb051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of records validated in the loaded session.  <br /></td></tr>
 <tr class="memitem:aba8680cbd1cfb842af5dacf92d81a99d" id="r_aba8680cbd1cfb842af5dacf92d81a99d"><td class="memItemLeft"><a class="el" href="class_session_timestamp.html">SessionTimestamp</a>&#160;</td><td class="memItemRight"><a class="el" href="#aba8680cbd1cfb842af5dacf92d81a99d">duration</a> () const noexcept override</td></tr>
+<tr class="memitem:ad1e400a7ff9da50e329646e12f5aec5c" id="r_ad1e400a7ff9da50e329646e12f5aec5c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad1e400a7ff9da50e329646e12f5aec5c">findRecordAtOrBefore</a> (<a class="el" href="class_session_timestamp.html">SessionTimestamp</a> position, qint64 *index, QString *error=nullptr) const override</td></tr>
+<tr class="memdesc:ad1e400a7ff9da50e329646e12f5aec5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the newest record at or before a playback position.  <br /></td></tr>
 <tr class="memitem:a2881208138d03bb8a2502444558111bd" id="r_a2881208138d03bb8a2502444558111bd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2881208138d03bb8a2502444558111bd">timestampAt</a> (qint64 index, <a class="el" href="class_session_timestamp.html">SessionTimestamp</a> *timestamp, QString *error=nullptr) const override</td></tr>
 <tr class="memitem:ad3ad73160d96eb45b72740e7a2530eb7" id="r_ad3ad73160d96eb45b72740e7a2530eb7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad3ad73160d96eb45b72740e7a2530eb7">recordAt</a> (qint64 index, <a class="el" href="struct_session_state_item.html">SessionStateItem</a> *item, QString *error=nullptr) const override</td></tr>
 <tr class="memitem:a98b8ba5d1d8bc7061c8d57df1b37b199" id="r_a98b8ba5d1d8bc7061c8d57df1b37b199"><td class="memItemLeft">const <a class="el" href="class_packet_mapping.html">PacketMapping</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a98b8ba5d1d8bc7061c8d57df1b37b199">mapping</a> () const noexcept</td></tr>
@@ -186,9 +188,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Validates a session once, checkpoints it sparsely, and decodes on demand. </p>
-<p>The reader deliberately has no record-count policy limit. A checkpoint is retained for every 4,096 records and only one page of record locations is cached, preventing an attacker-controlled record count from creating a full per-record memory index. Like QFile, random-access methods are confined to the reader's owning thread. </p>
+<p>The reader deliberately has no record-count policy limit. A timestamp and header offset are retained for every 4,096 records, and only one page of record locations is cached. The two-level lookup therefore avoids both a full per-record memory index and cross-page seek amplification. Like QFile, random-access methods are confined to the reader's owning thread. </p>
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00023">23</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00024">24</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a869f28036577e47804f190af5bcabacc" name="a869f28036577e47804f190af5bcabacc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a869f28036577e47804f190af5bcabacc">&#9670;&#160;</a></span>LarSessionReader()</h2>
@@ -298,11 +300,11 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   36</span>    <a class="code hl_variable" href="#a2b4e9571c0fd934bb26c90606ce9b73f">m_sourceFile</a> = std::move(file);</div>
 <div class="line"><span class="lineno">   37</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   38</span>}</div>
-<div class="ttc" id="aclass_lar_session_reader_html_a2b4e9571c0fd934bb26c90606ce9b73f"><div class="ttname"><a href="#a2b4e9571c0fd934bb26c90606ce9b73f">LarSessionReader::m_sourceFile</a></div><div class="ttdeci">std::unique_ptr&lt; QFile &gt; m_sourceFile</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00076">lar_session_reader.h:76</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_a2b4e9571c0fd934bb26c90606ce9b73f"><div class="ttname"><a href="#a2b4e9571c0fd934bb26c90606ce9b73f">LarSessionReader::m_sourceFile</a></div><div class="ttdeci">std::unique_ptr&lt; QFile &gt; m_sourceFile</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00080">lar_session_reader.h:80</a></div></div>
 <div class="ttc" id="aclass_lar_session_reader_html_a98ee5c9e9784df0c20c39d08182da41e"><div class="ttname"><a href="#a98ee5c9e9784df0c20c39d08182da41e">LarSessionReader::parseStream</a></div><div class="ttdeci">bool parseStream(QIODevice *device, QString *error)</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8cpp_source.html#l00056">lar_session_reader.cpp:56</a></div></div>
 <div class="ttc" id="aclass_lar_session_reader_html_af63512c571a1dad969b763210a21928c"><div class="ttname"><a href="#af63512c571a1dad969b763210a21928c">LarSessionReader::close</a></div><div class="ttdeci">void close() noexcept override</div><div class="ttdoc">Releases the source, sparse index, decoded mapping, and cached record page.</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8cpp_source.html#l00169">lar_session_reader.cpp:169</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00076">m_sourceFile</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
+<p class="reference">References <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00080">m_sourceFile</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a8078f378133001adee69d237a860e570">~LarSessionReader()</a>.</p>
 <div class="dynheader">
@@ -363,9 +365,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   52</span>    <a class="code hl_variable" href="#ac798d677936a2d41b224a882c07efc3b">m_sourceData</a> = data;</div>
 <div class="line"><span class="lineno">   53</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   54</span>}</div>
-<div class="ttc" id="aclass_lar_session_reader_html_ac798d677936a2d41b224a882c07efc3b"><div class="ttname"><a href="#ac798d677936a2d41b224a882c07efc3b">LarSessionReader::m_sourceData</a></div><div class="ttdeci">QByteArray m_sourceData</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00075">lar_session_reader.h:75</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_ac798d677936a2d41b224a882c07efc3b"><div class="ttname"><a href="#ac798d677936a2d41b224a882c07efc3b">LarSessionReader::m_sourceData</a></div><div class="ttdeci">QByteArray m_sourceData</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00079">lar_session_reader.h:79</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00075">m_sourceData</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
+<p class="reference">References <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00079">m_sourceData</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a8078f378133001adee69d237a860e570">~LarSessionReader()</a>.</p>
 <div class="dynheader">
@@ -425,17 +427,17 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  182</span>    <a class="code hl_variable" href="#a6a969e1e5a733b75213b58b8a4ac0e63">m_duration</a> = {};</div>
 <div class="line"><span class="lineno">  183</span>    <a class="code hl_variable" href="#a138b0d1fc45a3c3d770907d70bd6faf2">m_isValid</a> = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  184</span>}</div>
-<div class="ttc" id="aclass_lar_session_reader_html_a0e992dc5667cf0946de77d4f1faa0b54"><div class="ttname"><a href="#a0e992dc5667cf0946de77d4f1faa0b54">LarSessionReader::m_mapping</a></div><div class="ttdeci">PacketMapping m_mapping</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00073">lar_session_reader.h:73</a></div></div>
-<div class="ttc" id="aclass_lar_session_reader_html_a138b0d1fc45a3c3d770907d70bd6faf2"><div class="ttname"><a href="#a138b0d1fc45a3c3d770907d70bd6faf2">LarSessionReader::m_isValid</a></div><div class="ttdeci">bool m_isValid</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00080">lar_session_reader.h:80</a></div></div>
-<div class="ttc" id="aclass_lar_session_reader_html_a5c32613986be24ffdd3807de65fa7bab"><div class="ttname"><a href="#a5c32613986be24ffdd3807de65fa7bab">LarSessionReader::m_checkpoints</a></div><div class="ttdeci">QVector&lt; Checkpoint &gt; m_checkpoints</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00070">lar_session_reader.h:70</a></div></div>
-<div class="ttc" id="aclass_lar_session_reader_html_a6a969e1e5a733b75213b58b8a4ac0e63"><div class="ttname"><a href="#a6a969e1e5a733b75213b58b8a4ac0e63">LarSessionReader::m_duration</a></div><div class="ttdeci">SessionTimestamp m_duration</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00079">lar_session_reader.h:79</a></div></div>
-<div class="ttc" id="aclass_lar_session_reader_html_a9c60c7a7d235a0397fe519ad9296033c"><div class="ttname"><a href="#a9c60c7a7d235a0397fe519ad9296033c">LarSessionReader::m_sourceSize</a></div><div class="ttdeci">qint64 m_sourceSize</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00077">lar_session_reader.h:77</a></div></div>
-<div class="ttc" id="aclass_lar_session_reader_html_aa615d646a95d5647e973ac72ccb3999d"><div class="ttname"><a href="#aa615d646a95d5647e973ac72ccb3999d">LarSessionReader::m_pageFirstRecord</a></div><div class="ttdeci">qint64 m_pageFirstRecord</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00072">lar_session_reader.h:72</a></div></div>
-<div class="ttc" id="aclass_lar_session_reader_html_aab75f9d36175723fa34436a7a96955b5"><div class="ttname"><a href="#aab75f9d36175723fa34436a7a96955b5">LarSessionReader::m_mappingJson</a></div><div class="ttdeci">QByteArray m_mappingJson</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00074">lar_session_reader.h:74</a></div></div>
-<div class="ttc" id="aclass_lar_session_reader_html_abae3596fd00c0c973a45b85f30aae13b"><div class="ttname"><a href="#abae3596fd00c0c973a45b85f30aae13b">LarSessionReader::m_recordCount</a></div><div class="ttdeci">qint64 m_recordCount</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00078">lar_session_reader.h:78</a></div></div>
-<div class="ttc" id="aclass_lar_session_reader_html_adca86ffe5a0884f6d3cd29763d08e858"><div class="ttname"><a href="#adca86ffe5a0884f6d3cd29763d08e858">LarSessionReader::m_page</a></div><div class="ttdeci">QVector&lt; RecordIndex &gt; m_page</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00071">lar_session_reader.h:71</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_a0e992dc5667cf0946de77d4f1faa0b54"><div class="ttname"><a href="#a0e992dc5667cf0946de77d4f1faa0b54">LarSessionReader::m_mapping</a></div><div class="ttdeci">PacketMapping m_mapping</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00077">lar_session_reader.h:77</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_a138b0d1fc45a3c3d770907d70bd6faf2"><div class="ttname"><a href="#a138b0d1fc45a3c3d770907d70bd6faf2">LarSessionReader::m_isValid</a></div><div class="ttdeci">bool m_isValid</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00084">lar_session_reader.h:84</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_a5c32613986be24ffdd3807de65fa7bab"><div class="ttname"><a href="#a5c32613986be24ffdd3807de65fa7bab">LarSessionReader::m_checkpoints</a></div><div class="ttdeci">QVector&lt; Checkpoint &gt; m_checkpoints</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00074">lar_session_reader.h:74</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_a6a969e1e5a733b75213b58b8a4ac0e63"><div class="ttname"><a href="#a6a969e1e5a733b75213b58b8a4ac0e63">LarSessionReader::m_duration</a></div><div class="ttdeci">SessionTimestamp m_duration</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00083">lar_session_reader.h:83</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_a9c60c7a7d235a0397fe519ad9296033c"><div class="ttname"><a href="#a9c60c7a7d235a0397fe519ad9296033c">LarSessionReader::m_sourceSize</a></div><div class="ttdeci">qint64 m_sourceSize</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00081">lar_session_reader.h:81</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_aa615d646a95d5647e973ac72ccb3999d"><div class="ttname"><a href="#aa615d646a95d5647e973ac72ccb3999d">LarSessionReader::m_pageFirstRecord</a></div><div class="ttdeci">qint64 m_pageFirstRecord</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00076">lar_session_reader.h:76</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_aab75f9d36175723fa34436a7a96955b5"><div class="ttname"><a href="#aab75f9d36175723fa34436a7a96955b5">LarSessionReader::m_mappingJson</a></div><div class="ttdeci">QByteArray m_mappingJson</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00078">lar_session_reader.h:78</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_abae3596fd00c0c973a45b85f30aae13b"><div class="ttname"><a href="#abae3596fd00c0c973a45b85f30aae13b">LarSessionReader::m_recordCount</a></div><div class="ttdeci">qint64 m_recordCount</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00082">lar_session_reader.h:82</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_adca86ffe5a0884f6d3cd29763d08e858"><div class="ttname"><a href="#adca86ffe5a0884f6d3cd29763d08e858">LarSessionReader::m_page</a></div><div class="ttdeci">QVector&lt; RecordIndex &gt; m_page</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00075">lar_session_reader.h:75</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="lar__session__reader_8h_source.html#l00070">m_checkpoints</a>, <a class="el" href="lar__session__reader_8h_source.html#l00079">m_duration</a>, <a class="el" href="lar__session__reader_8h_source.html#l00080">m_isValid</a>, <a class="el" href="lar__session__reader_8h_source.html#l00073">m_mapping</a>, <a class="el" href="lar__session__reader_8h_source.html#l00074">m_mappingJson</a>, <a class="el" href="lar__session__reader_8h_source.html#l00071">m_page</a>, <a class="el" href="lar__session__reader_8h_source.html#l00072">m_pageFirstRecord</a>, <a class="el" href="lar__session__reader_8h_source.html#l00078">m_recordCount</a>, <a class="el" href="lar__session__reader_8h_source.html#l00075">m_sourceData</a>, <a class="el" href="lar__session__reader_8h_source.html#l00076">m_sourceFile</a>, and <a class="el" href="lar__session__reader_8h_source.html#l00077">m_sourceSize</a>.</p>
+<p class="reference">References <a class="el" href="lar__session__reader_8h_source.html#l00074">m_checkpoints</a>, <a class="el" href="lar__session__reader_8h_source.html#l00083">m_duration</a>, <a class="el" href="lar__session__reader_8h_source.html#l00084">m_isValid</a>, <a class="el" href="lar__session__reader_8h_source.html#l00077">m_mapping</a>, <a class="el" href="lar__session__reader_8h_source.html#l00078">m_mappingJson</a>, <a class="el" href="lar__session__reader_8h_source.html#l00075">m_page</a>, <a class="el" href="lar__session__reader_8h_source.html#l00076">m_pageFirstRecord</a>, <a class="el" href="lar__session__reader_8h_source.html#l00082">m_recordCount</a>, <a class="el" href="lar__session__reader_8h_source.html#l00079">m_sourceData</a>, <a class="el" href="lar__session__reader_8h_source.html#l00080">m_sourceFile</a>, and <a class="el" href="lar__session__reader_8h_source.html#l00081">m_sourceSize</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00040">loadData()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00019">loadFile()</a>, and <a class="el" href="#a8078f378133001adee69d237a860e570">~LarSessionReader()</a>.</p>
 <div class="dynheader">
@@ -473,14 +475,14 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="class_i_session_reader.html#af00a0907067a1e6a74d1ad64d911a22b">ISessionReader</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00032">32</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                           {</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a138b0d1fc45a3c3d770907d70bd6faf2">m_isValid</a>;</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00033">33</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>                                           {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a138b0d1fc45a3c3d770907d70bd6faf2">m_isValid</a>;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="lar__session__reader_8h_source.html#l00032">isValid()</a>, and <a class="el" href="lar__session__reader_8h_source.html#l00080">m_isValid</a>.</p>
+<p class="reference">References <a class="el" href="lar__session__reader_8h_source.html#l00033">isValid()</a>, and <a class="el" href="lar__session__reader_8h_source.html#l00084">m_isValid</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lar__session__reader_8h_source.html#l00032">isValid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lar__session__reader_8h_source.html#l00033">isValid()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -521,12 +523,12 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="class_i_session_reader.html#ab5e822b6c4f84d5ed97ec944f823a91c">ISessionReader</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00035">35</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                 {</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#abae3596fd00c0c973a45b85f30aae13b">m_recordCount</a>;</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00036">36</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>                                                 {</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#abae3596fd00c0c973a45b85f30aae13b">m_recordCount</a>;</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="lar__session__reader_8h_source.html#l00078">m_recordCount</a>.</p>
+<p class="reference">References <a class="el" href="lar__session__reader_8h_source.html#l00082">m_recordCount</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
 <div class="dynheader">
@@ -562,18 +564,128 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="class_i_session_reader.html#a325284789d5b91e1f8aceb1e6f54d1fe">ISessionReader</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00038">38</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                        {</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a6a969e1e5a733b75213b58b8a4ac0e63">m_duration</a>;</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00039">39</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>                                                        {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a6a969e1e5a733b75213b58b8a4ac0e63">m_duration</a>;</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="lar__session__reader_8h_source.html#l00079">m_duration</a>.</p>
+<p class="reference">References <a class="el" href="lar__session__reader_8h_source.html#l00083">m_duration</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_lar_session_reader_aba8680cbd1cfb842af5dacf92d81a99d_icgraph.svg" width="100%" height="364"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ad1e400a7ff9da50e329646e12f5aec5c" name="ad1e400a7ff9da50e329646e12f5aec5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1e400a7ff9da50e329646e12f5aec5c">&#9670;&#160;</a></span>findRecordAtOrBefore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LarSessionReader::findRecordAtOrBefore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_session_timestamp.html">SessionTimestamp</a></td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">qint64 *</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *</td>          <td class="paramname"><span class="paramname"><em>error</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds the newest record at or before a playback position. </p>
+<p>Implementations may use their native sparse index so playback does not need to perform arbitrary per-record timestamp reads. If <code class="param">position</code> is earlier than every record, the first record is returned to preserve the playback service's start-of-session clamp.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>Exact inclusive timestamp bound. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">index</td><td>Selected zero-based record index. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional diagnostic populated on failure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for a valid non-empty session and output; otherwise <span class="tt">false</span>. </dd></dl>
+
+<p>Implements <a class="el" href="class_i_session_reader.html#a5d41a2e921dc3c9aa2cb1ad18cb6cff7">ISessionReader</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8cpp_source.html#l00296">296</a> of file <a class="el" href="lar__session__reader_8cpp_source.html">lar_session_reader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  297</span>                                                                  {</div>
+<div class="line"><span class="lineno">  298</span>    <span class="keywordflow">if</span> (!index) {</div>
+<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">if</span> (error)</div>
+<div class="line"><span class="lineno">  300</span>            *error = QStringLiteral(<span class="stringliteral">&quot;Session record-index output is null&quot;</span>);</div>
+<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  302</span>    }</div>
+<div class="line"><span class="lineno">  303</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a138b0d1fc45a3c3d770907d70bd6faf2">m_isValid</a>) {</div>
+<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">if</span> (error)</div>
+<div class="line"><span class="lineno">  305</span>            *error = QStringLiteral(<span class="stringliteral">&quot;Session reader is not valid&quot;</span>);</div>
+<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  307</span>    }</div>
+<div class="line"><span class="lineno">  308</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abae3596fd00c0c973a45b85f30aae13b">m_recordCount</a> &lt;= 0 || <a class="code hl_variable" href="#a5c32613986be24ffdd3807de65fa7bab">m_checkpoints</a>.isEmpty()) {</div>
+<div class="line"><span class="lineno">  309</span>        <span class="keywordflow">if</span> (error)</div>
+<div class="line"><span class="lineno">  310</span>            *error = QStringLiteral(<span class="stringliteral">&quot;Session contains no records&quot;</span>);</div>
+<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  312</span>    }</div>
+<div class="line"><span class="lineno">  313</span> </div>
+<div class="line"><span class="lineno">  314</span>    <span class="comment">// Checkpoint timestamps form a compact first-level index. Choosing the</span></div>
+<div class="line"><span class="lineno">  315</span>    <span class="comment">// last page whose first timestamp is eligible avoids the former pattern</span></div>
+<div class="line"><span class="lineno">  316</span>    <span class="comment">// of rebuilding a different 4,096-record page for every binary-search</span></div>
+<div class="line"><span class="lineno">  317</span>    <span class="comment">// probe across the complete file.</span></div>
+<div class="line"><span class="lineno">  318</span>    qsizetype checkpointLow = 0;</div>
+<div class="line"><span class="lineno">  319</span>    qsizetype checkpointHigh = <a class="code hl_variable" href="#a5c32613986be24ffdd3807de65fa7bab">m_checkpoints</a>.size();</div>
+<div class="line"><span class="lineno">  320</span>    <span class="keywordflow">while</span> (checkpointLow &lt; checkpointHigh) {</div>
+<div class="line"><span class="lineno">  321</span>        <span class="keyword">const</span> qsizetype middle = checkpointLow + (checkpointHigh - checkpointLow) / 2;</div>
+<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a5c32613986be24ffdd3807de65fa7bab">m_checkpoints</a>.at(middle).timestamp &lt;= position)</div>
+<div class="line"><span class="lineno">  323</span>            checkpointLow = middle + 1;</div>
+<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  325</span>            checkpointHigh = middle;</div>
+<div class="line"><span class="lineno">  326</span>    }</div>
+<div class="line"><span class="lineno">  327</span>    <span class="keyword">const</span> qsizetype checkpointIndex = checkpointLow == 0 ? 0 : checkpointLow - 1;</div>
+<div class="line"><span class="lineno">  328</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_lar_session_reader_1_1_checkpoint.html">Checkpoint</a> &amp;checkpoint = <a class="code hl_variable" href="#a5c32613986be24ffdd3807de65fa7bab">m_checkpoints</a>.at(checkpointIndex);</div>
+<div class="line"><span class="lineno">  329</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="#ab686230bdf9413511ab96b994d6a58da">ensurePage</a>(checkpoint.recordIndex, error))</div>
+<div class="line"><span class="lineno">  330</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  331</span> </div>
+<div class="line"><span class="lineno">  332</span>    <span class="comment">// The second-level search is entirely in the one bounded location page.</span></div>
+<div class="line"><span class="lineno">  333</span>    <span class="comment">// Upper-bound semantics select the last duplicate timestamp, including</span></div>
+<div class="line"><span class="lineno">  334</span>    <span class="comment">// duplicates that cross a page boundary.</span></div>
+<div class="line"><span class="lineno">  335</span>    qsizetype pageLow = 0;</div>
+<div class="line"><span class="lineno">  336</span>    qsizetype pageHigh = <a class="code hl_variable" href="#adca86ffe5a0884f6d3cd29763d08e858">m_page</a>.size();</div>
+<div class="line"><span class="lineno">  337</span>    <span class="keywordflow">while</span> (pageLow &lt; pageHigh) {</div>
+<div class="line"><span class="lineno">  338</span>        <span class="keyword">const</span> qsizetype middle = pageLow + (pageHigh - pageLow) / 2;</div>
+<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#adca86ffe5a0884f6d3cd29763d08e858">m_page</a>.at(middle).timestamp &lt;= position)</div>
+<div class="line"><span class="lineno">  340</span>            pageLow = middle + 1;</div>
+<div class="line"><span class="lineno">  341</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  342</span>            pageHigh = middle;</div>
+<div class="line"><span class="lineno">  343</span>    }</div>
+<div class="line"><span class="lineno">  344</span>    <span class="keyword">const</span> qsizetype pageIndex = pageLow == 0 ? 0 : pageLow - 1;</div>
+<div class="line"><span class="lineno">  345</span>    *index = <a class="code hl_variable" href="#aa615d646a95d5647e973ac72ccb3999d">m_pageFirstRecord</a> + <span class="keyword">static_cast&lt;</span>qint64<span class="keyword">&gt;</span>(pageIndex);</div>
+<div class="line"><span class="lineno">  346</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  347</span>}</div>
+<div class="ttc" id="aclass_lar_session_reader_html_ab686230bdf9413511ab96b994d6a58da"><div class="ttname"><a href="#ab686230bdf9413511ab96b994d6a58da">LarSessionReader::ensurePage</a></div><div class="ttdeci">bool ensurePage(qint64 index, QString *error) const</div><div class="ttdoc">Populates the bounded location cache containing index.</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8cpp_source.html#l00186">lar_session_reader.cpp:186</a></div></div>
+<div class="ttc" id="astruct_lar_session_reader_1_1_checkpoint_html"><div class="ttname"><a href="struct_lar_session_reader_1_1_checkpoint.html">LarSessionReader::Checkpoint</a></div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00058">lar_session_reader.h:58</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00074">m_checkpoints</a>, <a class="el" href="lar__session__reader_8h_source.html#l00084">m_isValid</a>, <a class="el" href="lar__session__reader_8h_source.html#l00075">m_page</a>, <a class="el" href="lar__session__reader_8h_source.html#l00076">m_pageFirstRecord</a>, <a class="el" href="lar__session__reader_8h_source.html#l00082">m_recordCount</a>, and <a class="el" href="lar__session__reader_8h_source.html#l00059">LarSessionReader::Checkpoint::recordIndex</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_lar_session_reader_ad1e400a7ff9da50e329646e12f5aec5c_cgraph.svg" width="100%" height="376"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -612,23 +724,23 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="class_i_session_reader.html#a69f42c52fb49b0be8e7f2098f406fef6">ISessionReader</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8cpp_source.html#l00345">345</a> of file <a class="el" href="lar__session__reader_8cpp_source.html">lar_session_reader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  346</span>                                                         {</div>
-<div class="line"><span class="lineno">  347</span>    <span class="keywordflow">if</span> (!timestamp) {</div>
-<div class="line"><span class="lineno">  348</span>        <span class="keywordflow">if</span> (error)</div>
-<div class="line"><span class="lineno">  349</span>            *error = QStringLiteral(<span class="stringliteral">&quot;Session timestamp output is null&quot;</span>);</div>
-<div class="line"><span class="lineno">  350</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  351</span>    }</div>
-<div class="line"><span class="lineno">  352</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_lar_session_reader_1_1_record_index.html">RecordIndex</a> *record = <a class="code hl_function" href="#aa62e21e6f68343a427d2134dc21d9601">locationAt</a>(index, error);</div>
-<div class="line"><span class="lineno">  353</span>    <span class="keywordflow">if</span> (!record)</div>
-<div class="line"><span class="lineno">  354</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  355</span>    *timestamp = record-&gt;timestamp;</div>
-<div class="line"><span class="lineno">  356</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  357</span>}</div>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8cpp_source.html#l00398">398</a> of file <a class="el" href="lar__session__reader_8cpp_source.html">lar_session_reader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  399</span>                                                         {</div>
+<div class="line"><span class="lineno">  400</span>    <span class="keywordflow">if</span> (!timestamp) {</div>
+<div class="line"><span class="lineno">  401</span>        <span class="keywordflow">if</span> (error)</div>
+<div class="line"><span class="lineno">  402</span>            *error = QStringLiteral(<span class="stringliteral">&quot;Session timestamp output is null&quot;</span>);</div>
+<div class="line"><span class="lineno">  403</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  404</span>    }</div>
+<div class="line"><span class="lineno">  405</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_lar_session_reader_1_1_record_index.html">RecordIndex</a> *record = <a class="code hl_function" href="#aa62e21e6f68343a427d2134dc21d9601">locationAt</a>(index, error);</div>
+<div class="line"><span class="lineno">  406</span>    <span class="keywordflow">if</span> (!record)</div>
+<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  408</span>    *timestamp = record-&gt;timestamp;</div>
+<div class="line"><span class="lineno">  409</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  410</span>}</div>
 <div class="ttc" id="aclass_lar_session_reader_html_aa62e21e6f68343a427d2134dc21d9601"><div class="ttname"><a href="#aa62e21e6f68343a427d2134dc21d9601">LarSessionReader::locationAt</a></div><div class="ttdeci">const RecordIndex * locationAt(qint64 index, QString *error) const</div><div class="ttdoc">Returns the cached location for index after range and source validation.</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8cpp_source.html#l00278">lar_session_reader.cpp:278</a></div></div>
-<div class="ttc" id="astruct_lar_session_reader_1_1_record_index_html"><div class="ttname"><a href="struct_lar_session_reader_1_1_record_index.html">LarSessionReader::RecordIndex</a></div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00049">lar_session_reader.h:49</a></div></div>
+<div class="ttc" id="astruct_lar_session_reader_1_1_record_index_html"><div class="ttname"><a href="struct_lar_session_reader_1_1_record_index.html">LarSessionReader::RecordIndex</a></div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00052">lar_session_reader.h:52</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="lar__session__reader_8cpp_source.html#l00278">locationAt()</a>, and <a class="el" href="lar__session__reader_8h_source.html#l00050">LarSessionReader::RecordIndex::timestamp</a>.</p>
+<p class="reference">References <a class="el" href="lar__session__reader_8cpp_source.html#l00278">locationAt()</a>, and <a class="el" href="lar__session__reader_8h_source.html#l00053">LarSessionReader::RecordIndex::timestamp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -671,60 +783,60 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="class_i_session_reader.html#a4dfbbaba3951f2c30c77319d53c42b19">ISessionReader</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8cpp_source.html#l00296">296</a> of file <a class="el" href="lar__session__reader_8cpp_source.html">lar_session_reader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  296</span>                                                                                          {</div>
-<div class="line"><span class="lineno">  297</span>    <span class="keywordflow">if</span> (!item) {</div>
-<div class="line"><span class="lineno">  298</span>        <span class="keywordflow">if</span> (error)</div>
-<div class="line"><span class="lineno">  299</span>            *error = QStringLiteral(<span class="stringliteral">&quot;Session record output is null&quot;</span>);</div>
-<div class="line"><span class="lineno">  300</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  301</span>    }</div>
-<div class="line"><span class="lineno">  302</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_lar_session_reader_1_1_record_index.html">RecordIndex</a> *location = <a class="code hl_function" href="#aa62e21e6f68343a427d2134dc21d9601">locationAt</a>(index, error);</div>
-<div class="line"><span class="lineno">  303</span>    <span class="keywordflow">if</span> (!location)</div>
-<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  305</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_lar_session_reader_1_1_record_index.html">RecordIndex</a> record = *location;</div>
-<div class="line"><span class="lineno">  306</span> </div>
-<div class="line"><span class="lineno">  307</span>    QByteArray packet;</div>
-<div class="line"><span class="lineno">  308</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2b4e9571c0fd934bb26c90606ce9b73f">m_sourceFile</a>) {</div>
-<div class="line"><span class="lineno">  309</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a2b4e9571c0fd934bb26c90606ce9b73f">m_sourceFile</a>-&gt;seek(record.payloadOffset)) {</div>
-<div class="line"><span class="lineno">  310</span>            <span class="keywordflow">if</span> (error)</div>
-<div class="line"><span class="lineno">  311</span>                *error = <a class="code hl_variable" href="#a2b4e9571c0fd934bb26c90606ce9b73f">m_sourceFile</a>-&gt;errorString();</div>
-<div class="line"><span class="lineno">  312</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  313</span>        }</div>
-<div class="line"><span class="lineno">  314</span>        packet = <a class="code hl_variable" href="#a2b4e9571c0fd934bb26c90606ce9b73f">m_sourceFile</a>-&gt;read(record.payloadSize);</div>
-<div class="line"><span class="lineno">  315</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  316</span>        <span class="keywordflow">if</span> (record.payloadOffset &lt; 0 ||</div>
-<div class="line"><span class="lineno">  317</span>            record.payloadOffset &gt; qint64(<a class="code hl_variable" href="#ac798d677936a2d41b224a882c07efc3b">m_sourceData</a>.size()) - qint64(record.payloadSize)) {</div>
-<div class="line"><span class="lineno">  318</span> </div>
-<div class="line"><span class="lineno">  319</span>            <span class="keywordflow">if</span> (error)</div>
-<div class="line"><span class="lineno">  320</span>                *error = QStringLiteral(<span class="stringliteral">&quot;Session record range is invalid&quot;</span>);</div>
-<div class="line"><span class="lineno">  321</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  322</span>        }</div>
-<div class="line"><span class="lineno">  323</span>        packet = <a class="code hl_variable" href="#ac798d677936a2d41b224a882c07efc3b">m_sourceData</a>.mid(record.payloadOffset, record.payloadSize);</div>
-<div class="line"><span class="lineno">  324</span>    }</div>
-<div class="line"><span class="lineno">  325</span>    <span class="keywordflow">if</span> (packet.size() != qint64(record.payloadSize)) {</div>
-<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">if</span> (error) {</div>
-<div class="line"><span class="lineno">  327</span>            *error = QStringLiteral(<span class="stringliteral">&quot;Session record payload could not be read completely&quot;</span>);</div>
-<div class="line"><span class="lineno">  328</span>        }</div>
-<div class="line"><span class="lineno">  329</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  330</span>    }</div>
-<div class="line"><span class="lineno">  331</span> </div>
-<div class="line"><span class="lineno">  332</span>    SessionStateItem decoded;</div>
-<div class="line"><span class="lineno">  333</span>    decoded.<a class="code hl_variable" href="struct_session_state_item.html#a813152fe8dab8ad366acb4faf8e4f00c">timestamp</a> = record.timestamp;</div>
-<div class="line"><span class="lineno">  334</span>    QString decodeError;</div>
-<div class="line"><span class="lineno">  335</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a0e992dc5667cf0946de77d4f1faa0b54">m_mapping</a>.<a class="code hl_function" href="class_packet_mapping.html#ac955ded5162ee66319787462e129c407">decode</a>(packet, &amp;decoded.<a class="code hl_variable" href="struct_session_state_item.html#a69ef9c3ddafd959e361192f58994725a">state</a>, &amp;decodeError)) {</div>
-<div class="line"><span class="lineno">  336</span>        <span class="keywordflow">if</span> (error) {</div>
-<div class="line"><span class="lineno">  337</span>            *error = QStringLiteral(<span class="stringliteral">&quot;Session record cannot be decoded: %1&quot;</span>).arg(decodeError);</div>
-<div class="line"><span class="lineno">  338</span>        }</div>
-<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  340</span>    }</div>
-<div class="line"><span class="lineno">  341</span>    *item = std::move(decoded);</div>
-<div class="line"><span class="lineno">  342</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  343</span>}</div>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8cpp_source.html#l00349">349</a> of file <a class="el" href="lar__session__reader_8cpp_source.html">lar_session_reader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  349</span>                                                                                          {</div>
+<div class="line"><span class="lineno">  350</span>    <span class="keywordflow">if</span> (!item) {</div>
+<div class="line"><span class="lineno">  351</span>        <span class="keywordflow">if</span> (error)</div>
+<div class="line"><span class="lineno">  352</span>            *error = QStringLiteral(<span class="stringliteral">&quot;Session record output is null&quot;</span>);</div>
+<div class="line"><span class="lineno">  353</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  354</span>    }</div>
+<div class="line"><span class="lineno">  355</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_lar_session_reader_1_1_record_index.html">RecordIndex</a> *location = <a class="code hl_function" href="#aa62e21e6f68343a427d2134dc21d9601">locationAt</a>(index, error);</div>
+<div class="line"><span class="lineno">  356</span>    <span class="keywordflow">if</span> (!location)</div>
+<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  358</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_lar_session_reader_1_1_record_index.html">RecordIndex</a> record = *location;</div>
+<div class="line"><span class="lineno">  359</span> </div>
+<div class="line"><span class="lineno">  360</span>    QByteArray packet;</div>
+<div class="line"><span class="lineno">  361</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a2b4e9571c0fd934bb26c90606ce9b73f">m_sourceFile</a>) {</div>
+<div class="line"><span class="lineno">  362</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a2b4e9571c0fd934bb26c90606ce9b73f">m_sourceFile</a>-&gt;seek(record.payloadOffset)) {</div>
+<div class="line"><span class="lineno">  363</span>            <span class="keywordflow">if</span> (error)</div>
+<div class="line"><span class="lineno">  364</span>                *error = <a class="code hl_variable" href="#a2b4e9571c0fd934bb26c90606ce9b73f">m_sourceFile</a>-&gt;errorString();</div>
+<div class="line"><span class="lineno">  365</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  366</span>        }</div>
+<div class="line"><span class="lineno">  367</span>        packet = <a class="code hl_variable" href="#a2b4e9571c0fd934bb26c90606ce9b73f">m_sourceFile</a>-&gt;read(record.payloadSize);</div>
+<div class="line"><span class="lineno">  368</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  369</span>        <span class="keywordflow">if</span> (record.payloadOffset &lt; 0 ||</div>
+<div class="line"><span class="lineno">  370</span>            record.payloadOffset &gt; qint64(<a class="code hl_variable" href="#ac798d677936a2d41b224a882c07efc3b">m_sourceData</a>.size()) - qint64(record.payloadSize)) {</div>
+<div class="line"><span class="lineno">  371</span> </div>
+<div class="line"><span class="lineno">  372</span>            <span class="keywordflow">if</span> (error)</div>
+<div class="line"><span class="lineno">  373</span>                *error = QStringLiteral(<span class="stringliteral">&quot;Session record range is invalid&quot;</span>);</div>
+<div class="line"><span class="lineno">  374</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  375</span>        }</div>
+<div class="line"><span class="lineno">  376</span>        packet = <a class="code hl_variable" href="#ac798d677936a2d41b224a882c07efc3b">m_sourceData</a>.mid(record.payloadOffset, record.payloadSize);</div>
+<div class="line"><span class="lineno">  377</span>    }</div>
+<div class="line"><span class="lineno">  378</span>    <span class="keywordflow">if</span> (packet.size() != qint64(record.payloadSize)) {</div>
+<div class="line"><span class="lineno">  379</span>        <span class="keywordflow">if</span> (error) {</div>
+<div class="line"><span class="lineno">  380</span>            *error = QStringLiteral(<span class="stringliteral">&quot;Session record payload could not be read completely&quot;</span>);</div>
+<div class="line"><span class="lineno">  381</span>        }</div>
+<div class="line"><span class="lineno">  382</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  383</span>    }</div>
+<div class="line"><span class="lineno">  384</span> </div>
+<div class="line"><span class="lineno">  385</span>    SessionStateItem decoded;</div>
+<div class="line"><span class="lineno">  386</span>    decoded.<a class="code hl_variable" href="struct_session_state_item.html#a813152fe8dab8ad366acb4faf8e4f00c">timestamp</a> = record.timestamp;</div>
+<div class="line"><span class="lineno">  387</span>    QString decodeError;</div>
+<div class="line"><span class="lineno">  388</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a0e992dc5667cf0946de77d4f1faa0b54">m_mapping</a>.<a class="code hl_function" href="class_packet_mapping.html#ac955ded5162ee66319787462e129c407">decode</a>(packet, &amp;decoded.<a class="code hl_variable" href="struct_session_state_item.html#a69ef9c3ddafd959e361192f58994725a">state</a>, &amp;decodeError)) {</div>
+<div class="line"><span class="lineno">  389</span>        <span class="keywordflow">if</span> (error) {</div>
+<div class="line"><span class="lineno">  390</span>            *error = QStringLiteral(<span class="stringliteral">&quot;Session record cannot be decoded: %1&quot;</span>).arg(decodeError);</div>
+<div class="line"><span class="lineno">  391</span>        }</div>
+<div class="line"><span class="lineno">  392</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  393</span>    }</div>
+<div class="line"><span class="lineno">  394</span>    *item = std::move(decoded);</div>
+<div class="line"><span class="lineno">  395</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  396</span>}</div>
 <div class="ttc" id="aclass_packet_mapping_html_ac955ded5162ee66319787462e129c407"><div class="ttname"><a href="class_packet_mapping.html#ac955ded5162ee66319787462e129c407">PacketMapping::decode</a></div><div class="ttdeci">bool decode(const QByteArray &amp;packet, Plane *plane, Target *target, QBitArray *availableFields, QString *error=nullptr) const</div><div class="ttdef"><b>Definition</b> <a href="packet__mapping_8cpp_source.html#l00082">packet_mapping.cpp:82</a></div></div>
 <div class="ttc" id="astruct_session_state_item_html_a69ef9c3ddafd959e361192f58994725a"><div class="ttname"><a href="struct_session_state_item.html#a69ef9c3ddafd959e361192f58994725a">SessionStateItem::state</a></div><div class="ttdeci">DecodedState state</div><div class="ttdef"><b>Definition</b> <a href="session__reader_8h_source.html#l00018">session_reader.h:18</a></div></div>
 <div class="ttc" id="astruct_session_state_item_html_a813152fe8dab8ad366acb4faf8e4f00c"><div class="ttname"><a href="struct_session_state_item.html#a813152fe8dab8ad366acb4faf8e4f00c">SessionStateItem::timestamp</a></div><div class="ttdeci">SessionTimestamp timestamp</div><div class="ttdef"><b>Definition</b> <a href="session__reader_8h_source.html#l00019">session_reader.h:19</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="packet__mapping_8cpp_source.html#l00082">PacketMapping::decode()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00278">locationAt()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00073">m_mapping</a>, <a class="el" href="lar__session__reader_8h_source.html#l00075">m_sourceData</a>, <a class="el" href="lar__session__reader_8h_source.html#l00076">m_sourceFile</a>, <a class="el" href="lar__session__reader_8h_source.html#l00051">LarSessionReader::RecordIndex::payloadOffset</a>, <a class="el" href="lar__session__reader_8h_source.html#l00052">LarSessionReader::RecordIndex::payloadSize</a>, <a class="el" href="session__reader_8h_source.html#l00018">SessionStateItem::state</a>, <a class="el" href="lar__session__reader_8h_source.html#l00050">LarSessionReader::RecordIndex::timestamp</a>, and <a class="el" href="session__reader_8h_source.html#l00019">SessionStateItem::timestamp</a>.</p>
+<p class="reference">References <a class="el" href="packet__mapping_8cpp_source.html#l00082">PacketMapping::decode()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00278">locationAt()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00077">m_mapping</a>, <a class="el" href="lar__session__reader_8h_source.html#l00079">m_sourceData</a>, <a class="el" href="lar__session__reader_8h_source.html#l00080">m_sourceFile</a>, <a class="el" href="lar__session__reader_8h_source.html#l00054">LarSessionReader::RecordIndex::payloadOffset</a>, <a class="el" href="lar__session__reader_8h_source.html#l00055">LarSessionReader::RecordIndex::payloadSize</a>, <a class="el" href="session__reader_8h_source.html#l00018">SessionStateItem::state</a>, <a class="el" href="lar__session__reader_8h_source.html#l00053">LarSessionReader::RecordIndex::timestamp</a>, and <a class="el" href="session__reader_8h_source.html#l00019">SessionStateItem::timestamp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -756,12 +868,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00044">44</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                  {</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a0e992dc5667cf0946de77d4f1faa0b54">m_mapping</a>;</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00047">47</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                  {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a0e992dc5667cf0946de77d4f1faa0b54">m_mapping</a>;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="lar__session__reader_8h_source.html#l00073">m_mapping</a>.</p>
+<p class="reference">References <a class="el" href="lar__session__reader_8h_source.html#l00077">m_mapping</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
 <div class="dynheader">
@@ -897,7 +1009,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  150</span>        hasPreviousTime = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  151</span>        <a class="code hl_function" href="#aba8680cbd1cfb842af5dacf92d81a99d">duration</a> = item.<a class="code hl_variable" href="struct_session_state_item.html#a813152fe8dab8ad366acb4faf8e4f00c">timestamp</a>;</div>
 <div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#abac2cc602224c43b2a4ea8031e1fb051">recordCount</a> % <a class="code hl_variable" href="#a1ffe5594ef1069a73a115b751ba81f0b">RecordsPerPage</a> == 0)</div>
-<div class="line"><span class="lineno">  153</span>            checkpoints.append(<a class="code hl_struct" href="struct_lar_session_reader_1_1_checkpoint.html">Checkpoint</a>{<a class="code hl_function" href="#abac2cc602224c43b2a4ea8031e1fb051">recordCount</a>, headerOffset});</div>
+<div class="line"><span class="lineno">  153</span>            checkpoints.append(<a class="code hl_struct" href="struct_lar_session_reader_1_1_checkpoint.html">Checkpoint</a>{<a class="code hl_function" href="#abac2cc602224c43b2a4ea8031e1fb051">recordCount</a>, headerOffset, item.<a class="code hl_variable" href="struct_session_state_item.html#a813152fe8dab8ad366acb4faf8e4f00c">timestamp</a>});</div>
 <div class="line"><span class="lineno">  154</span>        ++<a class="code hl_function" href="#abac2cc602224c43b2a4ea8031e1fb051">recordCount</a>;</div>
 <div class="line"><span class="lineno">  155</span>    }</div>
 <div class="line"><span class="lineno">  156</span> </div>
@@ -913,19 +1025,18 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  166</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  167</span>}</div>
 <div class="ttc" id="aclass_json_mapping_repository_html_add89ca1802d56959d87408c174e80a35"><div class="ttname"><a href="class_json_mapping_repository.html#add89ca1802d56959d87408c174e80a35">JsonMappingRepository::loadJson</a></div><div class="ttdeci">bool loadJson(const QByteArray &amp;json, PacketMapping *mapping, QString *error=nullptr) override</div><div class="ttdef"><b>Definition</b> <a href="json__mapping__repository_8cpp_source.html#l00049">json_mapping_repository.cpp:49</a></div></div>
-<div class="ttc" id="aclass_lar_session_reader_html_a1ffe5594ef1069a73a115b751ba81f0b"><div class="ttname"><a href="#a1ffe5594ef1069a73a115b751ba81f0b">LarSessionReader::RecordsPerPage</a></div><div class="ttdeci">static constexpr qint64 RecordsPerPage</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00060">lar_session_reader.h:60</a></div></div>
-<div class="ttc" id="aclass_lar_session_reader_html_a98b8ba5d1d8bc7061c8d57df1b37b199"><div class="ttname"><a href="#a98b8ba5d1d8bc7061c8d57df1b37b199">LarSessionReader::mapping</a></div><div class="ttdeci">const PacketMapping &amp; mapping() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00044">lar_session_reader.h:44</a></div></div>
-<div class="ttc" id="aclass_lar_session_reader_html_aba8680cbd1cfb842af5dacf92d81a99d"><div class="ttname"><a href="#aba8680cbd1cfb842af5dacf92d81a99d">LarSessionReader::duration</a></div><div class="ttdeci">SessionTimestamp duration() const noexcept override</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00038">lar_session_reader.h:38</a></div></div>
-<div class="ttc" id="aclass_lar_session_reader_html_abac2cc602224c43b2a4ea8031e1fb051"><div class="ttname"><a href="#abac2cc602224c43b2a4ea8031e1fb051">LarSessionReader::recordCount</a></div><div class="ttdeci">qint64 recordCount() const noexcept override</div><div class="ttdoc">Returns the number of records validated in the loaded session.</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00035">lar_session_reader.h:35</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_a1ffe5594ef1069a73a115b751ba81f0b"><div class="ttname"><a href="#a1ffe5594ef1069a73a115b751ba81f0b">LarSessionReader::RecordsPerPage</a></div><div class="ttdeci">static constexpr qint64 RecordsPerPage</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00064">lar_session_reader.h:64</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_a98b8ba5d1d8bc7061c8d57df1b37b199"><div class="ttname"><a href="#a98b8ba5d1d8bc7061c8d57df1b37b199">LarSessionReader::mapping</a></div><div class="ttdeci">const PacketMapping &amp; mapping() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00047">lar_session_reader.h:47</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_aba8680cbd1cfb842af5dacf92d81a99d"><div class="ttname"><a href="#aba8680cbd1cfb842af5dacf92d81a99d">LarSessionReader::duration</a></div><div class="ttdeci">SessionTimestamp duration() const noexcept override</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00039">lar_session_reader.h:39</a></div></div>
+<div class="ttc" id="aclass_lar_session_reader_html_abac2cc602224c43b2a4ea8031e1fb051"><div class="ttname"><a href="#abac2cc602224c43b2a4ea8031e1fb051">LarSessionReader::recordCount</a></div><div class="ttdeci">qint64 recordCount() const noexcept override</div><div class="ttdoc">Returns the number of records validated in the loaded session.</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00036">lar_session_reader.h:36</a></div></div>
 <div class="ttc" id="aclass_session_timestamp_html_a32022c7bea4a6476c0af9a5641a8a80f"><div class="ttname"><a href="class_session_timestamp.html#a32022c7bea4a6476c0af9a5641a8a80f">SessionTimestamp::fromStoredMilliseconds</a></div><div class="ttdeci">static constexpr std::optional&lt; SessionTimestamp &gt; fromStoredMilliseconds(quint64 milliseconds) noexcept</div><div class="ttdoc">Creates a timestamp from the unsigned representation stored by LAR1.</div><div class="ttdef"><b>Definition</b> <a href="session__timestamp_8h_source.html#l00061">session_timestamp.h:61</a></div></div>
 <div class="ttc" id="anamespaceanonymous__namespace_02lar__session__reader_8cpp_03_html_a990908759dc7803180ad1f06136a9517"><div class="ttname"><a href="namespaceanonymous__namespace_02lar__session__reader_8cpp_03.html#a990908759dc7803180ad1f06136a9517">anonymous_namespace{lar_session_reader.cpp}::configureStream</a></div><div class="ttdeci">void configureStream(QDataStream &amp;stream)</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8cpp_source.html#l00011">lar_session_reader.cpp:11</a></div></div>
 <div class="ttc" id="anamespacelar_1_1session_html_a4471eb35180a74d857a0a15a7040d9dc"><div class="ttname"><a href="namespacelar_1_1session.html#a4471eb35180a74d857a0a15a7040d9dc">lar::session::HeaderSize</a></div><div class="ttdeci">constexpr qint64 HeaderSize</div><div class="ttdoc">Fixed bytes occupied by the magic and first-record offset.</div><div class="ttdef"><b>Definition</b> <a href="session__limits_8h_source.html#l00026">session_limits.h:26</a></div></div>
 <div class="ttc" id="anamespacelar_1_1session_html_a6abe85efca7dfdb299fa68b128979cc7"><div class="ttname"><a href="namespacelar_1_1session.html#a6abe85efca7dfdb299fa68b128979cc7">lar::session::MaximumPacketSize</a></div><div class="ttdeci">constexpr quint32 MaximumPacketSize</div><div class="ttdoc">Maximum accepted payload size for one packet record, in bytes.</div><div class="ttdef"><b>Definition</b> <a href="session__limits_8h_source.html#l00030">session_limits.h:30</a></div></div>
 <div class="ttc" id="anamespacelar_1_1session_html_a6f3ac2ec34a0cd2c97322c33c69c5f93"><div class="ttname"><a href="namespacelar_1_1session.html#a6f3ac2ec34a0cd2c97322c33c69c5f93">lar::session::MaximumDurationMilliseconds</a></div><div class="ttdeci">constexpr quint64 MaximumDurationMilliseconds</div><div class="ttdef"><b>Definition</b> <a href="session__limits_8h_source.html#l00035">session_limits.h:35</a></div></div>
 <div class="ttc" id="anamespacelar_1_1session_html_a9016e1f12c576d606e522026e391fc48"><div class="ttname"><a href="namespacelar_1_1session.html#a9016e1f12c576d606e522026e391fc48">lar::session::MaximumMappingSize</a></div><div class="ttdeci">constexpr quint32 MaximumMappingSize</div><div class="ttdoc">Maximum accepted canonical mapping JSON size, in bytes.</div><div class="ttdef"><b>Definition</b> <a href="session__limits_8h_source.html#l00028">session_limits.h:28</a></div></div>
-<div class="ttc" id="astruct_lar_session_reader_1_1_checkpoint_html"><div class="ttname"><a href="struct_lar_session_reader_1_1_checkpoint.html">LarSessionReader::Checkpoint</a></div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8h_source.html#l00055">lar_session_reader.h:55</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="packet__mapping_8cpp_source.html#l00082">PacketMapping::decode()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00038">duration()</a>, <a class="el" href="session__timestamp_8h_source.html#l00061">SessionTimestamp::fromStoredMilliseconds()</a>, <a class="el" href="session__limits_8h_source.html#l00026">lar::session::HeaderSize</a>, <a class="el" href="json__mapping__repository_8cpp_source.html#l00049">JsonMappingRepository::loadJson()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00070">m_checkpoints</a>, <a class="el" href="lar__session__reader_8h_source.html#l00079">m_duration</a>, <a class="el" href="lar__session__reader_8h_source.html#l00080">m_isValid</a>, <a class="el" href="lar__session__reader_8h_source.html#l00073">m_mapping</a>, <a class="el" href="lar__session__reader_8h_source.html#l00074">m_mappingJson</a>, <a class="el" href="lar__session__reader_8h_source.html#l00071">m_page</a>, <a class="el" href="lar__session__reader_8h_source.html#l00072">m_pageFirstRecord</a>, <a class="el" href="lar__session__reader_8h_source.html#l00078">m_recordCount</a>, <a class="el" href="lar__session__reader_8h_source.html#l00077">m_sourceSize</a>, <a class="el" href="lar__session__reader_8h_source.html#l00044">mapping()</a>, <a class="el" href="session__limits_8h_source.html#l00035">lar::session::MaximumDurationMilliseconds</a>, <a class="el" href="session__limits_8h_source.html#l00028">lar::session::MaximumMappingSize</a>, <a class="el" href="session__limits_8h_source.html#l00030">lar::session::MaximumPacketSize</a>, <a class="el" href="lar__session__reader_8h_source.html#l00035">recordCount()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00060">RecordsPerPage</a>, <a class="el" href="session__reader_8h_source.html#l00018">SessionStateItem::state</a>, and <a class="el" href="session__reader_8h_source.html#l00019">SessionStateItem::timestamp</a>.</p>
+<p class="reference">References <a class="el" href="packet__mapping_8cpp_source.html#l00082">PacketMapping::decode()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00039">duration()</a>, <a class="el" href="session__timestamp_8h_source.html#l00061">SessionTimestamp::fromStoredMilliseconds()</a>, <a class="el" href="session__limits_8h_source.html#l00026">lar::session::HeaderSize</a>, <a class="el" href="json__mapping__repository_8cpp_source.html#l00049">JsonMappingRepository::loadJson()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00074">m_checkpoints</a>, <a class="el" href="lar__session__reader_8h_source.html#l00083">m_duration</a>, <a class="el" href="lar__session__reader_8h_source.html#l00084">m_isValid</a>, <a class="el" href="lar__session__reader_8h_source.html#l00077">m_mapping</a>, <a class="el" href="lar__session__reader_8h_source.html#l00078">m_mappingJson</a>, <a class="el" href="lar__session__reader_8h_source.html#l00075">m_page</a>, <a class="el" href="lar__session__reader_8h_source.html#l00076">m_pageFirstRecord</a>, <a class="el" href="lar__session__reader_8h_source.html#l00082">m_recordCount</a>, <a class="el" href="lar__session__reader_8h_source.html#l00081">m_sourceSize</a>, <a class="el" href="lar__session__reader_8h_source.html#l00047">mapping()</a>, <a class="el" href="session__limits_8h_source.html#l00035">lar::session::MaximumDurationMilliseconds</a>, <a class="el" href="session__limits_8h_source.html#l00028">lar::session::MaximumMappingSize</a>, <a class="el" href="session__limits_8h_source.html#l00030">lar::session::MaximumPacketSize</a>, <a class="el" href="lar__session__reader_8h_source.html#l00036">recordCount()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00064">RecordsPerPage</a>, <a class="el" href="session__reader_8h_source.html#l00018">SessionStateItem::state</a>, and <a class="el" href="session__reader_8h_source.html#l00019">SessionStateItem::timestamp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00040">loadData()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00019">loadFile()</a>.</p>
 <div class="dynheader">
@@ -1063,9 +1174,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  275</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  276</span>}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="session__timestamp_8h_source.html#l00061">SessionTimestamp::fromStoredMilliseconds()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00057">LarSessionReader::Checkpoint::headerOffset</a>, <a class="el" href="lar__session__reader_8h_source.html#l00070">m_checkpoints</a>, <a class="el" href="lar__session__reader_8h_source.html#l00071">m_page</a>, <a class="el" href="lar__session__reader_8h_source.html#l00072">m_pageFirstRecord</a>, <a class="el" href="lar__session__reader_8h_source.html#l00078">m_recordCount</a>, <a class="el" href="lar__session__reader_8h_source.html#l00075">m_sourceData</a>, <a class="el" href="lar__session__reader_8h_source.html#l00076">m_sourceFile</a>, <a class="el" href="lar__session__reader_8h_source.html#l00077">m_sourceSize</a>, <a class="el" href="session__limits_8h_source.html#l00030">lar::session::MaximumPacketSize</a>, <a class="el" href="lar__session__reader_8h_source.html#l00056">LarSessionReader::Checkpoint::recordIndex</a>, and <a class="el" href="lar__session__reader_8h_source.html#l00060">RecordsPerPage</a>.</p>
+<p class="reference">References <a class="el" href="session__timestamp_8h_source.html#l00061">SessionTimestamp::fromStoredMilliseconds()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00060">LarSessionReader::Checkpoint::headerOffset</a>, <a class="el" href="lar__session__reader_8h_source.html#l00074">m_checkpoints</a>, <a class="el" href="lar__session__reader_8h_source.html#l00075">m_page</a>, <a class="el" href="lar__session__reader_8h_source.html#l00076">m_pageFirstRecord</a>, <a class="el" href="lar__session__reader_8h_source.html#l00082">m_recordCount</a>, <a class="el" href="lar__session__reader_8h_source.html#l00079">m_sourceData</a>, <a class="el" href="lar__session__reader_8h_source.html#l00080">m_sourceFile</a>, <a class="el" href="lar__session__reader_8h_source.html#l00081">m_sourceSize</a>, <a class="el" href="session__limits_8h_source.html#l00030">lar::session::MaximumPacketSize</a>, <a class="el" href="lar__session__reader_8h_source.html#l00059">LarSessionReader::Checkpoint::recordIndex</a>, and <a class="el" href="lar__session__reader_8h_source.html#l00064">RecordsPerPage</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00278">locationAt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00296">findRecordAtOrBefore()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00278">locationAt()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1074,7 +1185,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_lar_session_reader_ab686230bdf9413511ab96b994d6a58da_icgraph.svg" width="100%" height="364"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_lar_session_reader_ab686230bdf9413511ab96b994d6a58da_icgraph.svg" width="100%" height="394"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -1125,11 +1236,10 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  292</span>    }</div>
 <div class="line"><span class="lineno">  293</span>    <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="#adca86ffe5a0884f6d3cd29763d08e858">m_page</a>.at(<span class="keyword">static_cast&lt;</span>qsizetype<span class="keyword">&gt;</span>(pageIndex));</div>
 <div class="line"><span class="lineno">  294</span>}</div>
-<div class="ttc" id="aclass_lar_session_reader_html_ab686230bdf9413511ab96b994d6a58da"><div class="ttname"><a href="#ab686230bdf9413511ab96b994d6a58da">LarSessionReader::ensurePage</a></div><div class="ttdeci">bool ensurePage(qint64 index, QString *error) const</div><div class="ttdoc">Populates the bounded location cache containing index.</div><div class="ttdef"><b>Definition</b> <a href="lar__session__reader_8cpp_source.html#l00186">lar_session_reader.cpp:186</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00080">m_isValid</a>, <a class="el" href="lar__session__reader_8h_source.html#l00071">m_page</a>, and <a class="el" href="lar__session__reader_8h_source.html#l00072">m_pageFirstRecord</a>.</p>
+<p class="reference">References <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00084">m_isValid</a>, <a class="el" href="lar__session__reader_8h_source.html#l00075">m_page</a>, and <a class="el" href="lar__session__reader_8h_source.html#l00076">m_pageFirstRecord</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00296">recordAt()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00345">timestampAt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00349">recordAt()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00398">timestampAt()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1164,7 +1274,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00060">60</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00064">64</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
 
@@ -1190,9 +1300,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00070">70</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00074">74</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00296">findRecordAtOrBefore()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
 
 </div>
 </div>
@@ -1216,9 +1326,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00071">71</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00075">75</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00278">locationAt()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00296">findRecordAtOrBefore()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00278">locationAt()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
 
 </div>
 </div>
@@ -1242,9 +1352,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00072">72</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00076">76</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00278">locationAt()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00296">findRecordAtOrBefore()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00278">locationAt()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
 
 </div>
 </div>
@@ -1268,9 +1378,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00073">73</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00077">77</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00044">mapping()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00296">recordAt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00047">mapping()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00349">recordAt()</a>.</p>
 
 </div>
 </div>
@@ -1294,7 +1404,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00074">74</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00078">78</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
 
@@ -1320,9 +1430,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00075">75</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00079">79</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00040">loadData()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00296">recordAt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00040">loadData()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00349">recordAt()</a>.</p>
 
 </div>
 </div>
@@ -1346,9 +1456,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00076">76</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00080">80</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00019">loadFile()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00296">recordAt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00019">loadFile()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00349">recordAt()</a>.</p>
 
 </div>
 </div>
@@ -1372,7 +1482,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00077">77</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00081">81</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
 
@@ -1398,9 +1508,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00078">78</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00082">82</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>, and <a class="el" href="lar__session__reader_8h_source.html#l00035">recordCount()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00186">ensurePage()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00296">findRecordAtOrBefore()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>, and <a class="el" href="lar__session__reader_8h_source.html#l00036">recordCount()</a>.</p>
 
 </div>
 </div>
@@ -1424,9 +1534,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00079">79</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00083">83</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00038">duration()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00039">duration()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
 
 </div>
 </div>
@@ -1450,9 +1560,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00080">80</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lar__session__reader_8h_source.html#l00084">84</a> of file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00032">isValid()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00278">locationAt()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lar__session__reader_8cpp_source.html#l00169">close()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00296">findRecordAtOrBefore()</a>, <a class="el" href="lar__session__reader_8h_source.html#l00033">isValid()</a>, <a class="el" href="lar__session__reader_8cpp_source.html#l00278">locationAt()</a>, and <a class="el" href="lar__session__reader_8cpp_source.html#l00056">parseStream()</a>.</p>
 
 </div>
 </div>

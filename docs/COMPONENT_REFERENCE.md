@@ -69,7 +69,7 @@ live in infrastructure or presentation.
 | `IRecordingTransaction` | `begin`, `append`, `reset`, `createSnapshot`, `cancel`, `isActive`, `recordCount` | Append-only active session with immutable snapshots |
 | `ISessionSnapshot` | `writeTo` | Type-erased immutable bytes; persistence must not downcast |
 | `ISessionPersistence` | `save` | Complete atomic replace or preserve previous destination |
-| `ISessionReader` | `loadFile`, `loadData`, `close`, `isValid`, `recordCount`, `duration`, `timestampAt`, `recordAt` | Fully validate/index before exposing random access |
+| `ISessionReader` | `loadFile`, `loadData`, `close`, `isValid`, `recordCount`, `duration`, `findRecordAtOrBefore`, `timestampAt`, `recordAt` | Fully validate/index before exposing random access and native timestamp selection |
 | `IPlaybackClock` | `start`, `stop`, `isActive`; signal `tick` | Injectable fixed-rate replay tick scheduling |
 
 ### Runtime boundary
@@ -118,7 +118,7 @@ be discarded.
 | `MetricsService` | `recordDatagramAttempted`, `recordPacketProcessed`, `recordPlaybackPackets`, `reset` | Publishes totals and elapsed-time-normalized rate |
 | `RecordingService` | Start/pause/resume/reset/snapshot/complete/cancel; single and batch record methods | Owns active-time segments; delegates bytes and clock to ports |
 | `RecordingPipelineCoordinator` | Recording commands, input batches/drain callbacks, persistence callback, shutdown | Sole drain/persist state machine; publishes immutable snapshot requests |
-| `PlaybackService` | `loadSession`, `loadData`, `closeSession`, play/pause/stop/seek/rate/repeat | Advances a 60 Hz exact cursor, binary-searches a strict predecessor, and decodes at most one selected record per tick |
+| `PlaybackService` | `loadSession`, `loadData`, `closeSession`, play/pause/stop/seek/rate/repeat | Advances a 60 Hz exact cursor, requests a strict predecessor from the reader's native index, and decodes at most one selected record per tick |
 | `DirectApplicationRuntime` | Full `IApplicationRuntime` | Synchronous adapter for tests/embedding; preserves the same request/result protocol |
 
 ## Infrastructure adapters
@@ -140,7 +140,7 @@ be discarded.
 | `LarSessionWriter` | `IRecordingTransaction` | Streams LAR1 bytes to temporary storage and creates stable prefix snapshots |
 | `FileSessionSnapshot` | `ISessionSnapshot` | Retains temporary-file lifetime and writes exactly a captured byte prefix |
 | `QtSessionPersistence` | `ISessionPersistence` | Uses `QSaveFile` commit semantics |
-| `LarSessionReader` | `ISessionReader` | Validates every header/mapping/record, stores 4,096-record checkpoints plus one location page, decodes records lazily without a product count cap |
+| `LarSessionReader` | `ISessionReader` | Validates every header/mapping/record, stores timestamp-and-offset checkpoints per 4,096 records, searches one bounded location page, and decodes lazily without a product count cap |
 | `QtRecordingClock` | `IRecordingClock` | Uses process-wide `steady_clock` nanoseconds |
 | `QtPlaybackClock` | `IPlaybackClock` | Supplies fixed-rate ticks with a precise `QTimer` |
 

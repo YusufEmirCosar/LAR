@@ -314,13 +314,15 @@ sequenceDiagram
     P-&gt;&gt;S: play()
     loop 60 Hz replay ticks
         S-&gt;&gt;S: next = current + (1000 / 60) * rate
-        S-&gt;&gt;RD: binary-search strict predecessor timestamp
+        S-&gt;&gt;RD: find record strictly before next
+        RD-&gt;&gt;RD: search checkpoint timestamps
+        RD-&gt;&gt;RD: load/search at most one bounded page
         RD--&gt;&gt;S: decode at most one selected record
         S--&gt;&gt;T: selected frame + exact position
         T--&gt;&gt;VM: latest epoch-tagged publication every 16 ms
     end</pre>
 </div>
-<p>Seek uses a binary search for the last timestamp at or before the requested position. Normal replay does not decode intermediate records between sampled positions. With Repeat enabled, the newly calculated cursor is reduced modulo the final timestamp before every binary search, preserving any overshoot even across multiple loops. Without Repeat, passing the final timestamp publishes completion. The separate Burst widget is an inert placeholder and dispatches no runtime command.</p>
+<p>Seek uses the same two-level sparse index to select the last timestamp at or before the requested position. Normal replay does not decode intermediate records between sampled positions. With Repeat enabled, the newly calculated cursor is reduced modulo the final timestamp before every lookup, preserving any overshoot even across multiple loops. Without Repeat, passing the final timestamp publishes completion. The separate Burst widget is an inert placeholder and dispatches no runtime command.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md92"></a>
 Source epoch rejection</h1>
 <p>Queued Qt delivery means an old worker event can physically arrive after a new source becomes active. Epoch checking makes this harmless.</p>

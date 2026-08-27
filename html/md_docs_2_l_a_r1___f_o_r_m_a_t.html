@@ -186,10 +186,10 @@ Reader validation pass</h1>
 <li>For every record, verify a complete 12-byte record header.</li>
 <li>Enforce duration, non-decreasing time, payload size, and remaining bytes.</li>
 <li>Read and decode every packet with the embedded <span class="tt"><a class="el" href="class_packet_mapping.html" title="Validated packet schema that decodes and encodes Plane/Target values.">PacketMapping</a></span>; any invalid stored domain value rejects the entire session.</li>
-<li>Store the header offset of every 4,096th record as a sparse checkpoint.</li>
+<li>Store the timestamp and header offset of every 4,096th record as a sparse checkpoint.</li>
 <li>Commit the mapping, checkpoint table, source, count, duration, and valid flag atomically.</li>
 </ol>
-<p>For a file source, packet bytes are not retained in RAM after validation; <span class="tt">recordAt</span> seeks and decodes on demand. For <span class="tt">loadData</span>, the caller's byte array is retained as the random-access source. Random access scans record headers from the nearest checkpoint and caches one page of at most 4,096 locations. Playback continues to use timestamp binary search while resident index memory grows only once per checkpoint, not once per record. Source size is revalidated during random access to reject replacement or truncation after the validation pass.</p>
+<p>For a file source, packet bytes are not retained in RAM after validation; <span class="tt">recordAt</span> seeks and decodes on demand. For <span class="tt">loadData</span>, the caller's byte array is retained as the random-access source. Random access scans record headers from the selected checkpoint and caches one page of at most 4,096 locations. For a playback lookup, the reader first binary-searches checkpoint timestamps in memory, materializes at most the selected page, and then binary-searches that page in memory. Sequential playback normally reuses the same page. Resident index memory therefore grows once per checkpoint, not once per record. Source size is revalidated during random access to reject replacement or truncation after the validation pass.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md157"></a>
 Playback interpretation</h1>
 <ul>
@@ -197,8 +197,8 @@ Playback interpretation</h1>
 <li>Seek selects the last record whose timestamp is less than or equal to the requested exact time.</li>
 <li>Stop publishes the first record and resets position to zero.</li>
 <li>Play advances an exact cursor by <span class="tt">(1000 / 60) * positiveRate</span> milliseconds on every presentation tick.</li>
-<li>Each play tick binary-searches the index and decodes at most the last record strictly before the advanced cursor. It does not iterate through skipped records.</li>
-<li>Playback finishes after the cursor advances beyond the final timestamp. With Repeat enabled and a positive final timestamp, each newly calculated cursor is first reduced modulo that final timestamp and the wrapped value is binary-searched. This preserves overshoot across one or multiple loops.</li>
+<li>Each play tick performs one two-level sparse-index lookup and decodes at most the last record strictly before the advanced cursor. It does not iterate through skipped records or probe unrelated file pages.</li>
+<li>Playback finishes after the cursor advances beyond the final timestamp. With Repeat enabled and a positive final timestamp, each newly calculated cursor is first reduced modulo that final timestamp and the wrapped value is looked up. This preserves overshoot across one or multiple loops.</li>
 <li>Burst is currently an inert presentation placeholder and has no LAR1 read or playback semantics.</li>
 <li>The online mapping is neither required nor modified by loading a session.</li>
 </ul>

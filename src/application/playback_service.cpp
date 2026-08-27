@@ -215,27 +215,24 @@ bool PlaybackService::findFrameBefore(long double targetMilliseconds, qint64 *in
         return false;
     }
 
-    // Upper-bound search: low becomes the first timestamp not strictly before
-    // the target, so low - 1 is the presentation frame for that clock instant.
-    qint64 low = 0;
-    qint64 high = m_reader.recordCount();
-    while (low < high) {
-        const qint64 middle = low + (high - low) / 2;
-        SessionTimestamp timestamp;
-        if (!readTimestamp(middle, &timestamp))
-            return false;
-        if (static_cast<long double>(timestamp.milliseconds()) < targetMilliseconds)
-            low = middle + 1;
-        else
-            high = middle;
+    // No record can precede zero. The historical behavior clamps this case to
+    // the first record rather than selecting later records with timestamp zero.
+    if (targetMilliseconds <= 0.0L) {
+        *index = 0;
+        return true;
     }
-    *index = std::max<qint64>(0, low - 1);
-    return true;
-}
 
-bool PlaybackService::readTimestamp(qint64 index, SessionTimestamp *timestamp) {
+    // Stored timestamps are integral milliseconds. Therefore the greatest
+    // timestamp strictly below x is ceil(x) - 1. Passing that inclusive bound
+    // lets the reader use its two-level sparse index and materialize at most
+    // one location page per lookup.
+    const long double inclusiveMilliseconds =
+        std::min(std::ceil(targetMilliseconds) - 1.0L,
+                 static_cast<long double>(SessionTimestamp::maximum().milliseconds()));
+    const SessionTimestamp position =
+        SessionTimestamp::clampedMilliseconds(static_cast<qint64>(inclusiveMilliseconds));
     QString error;
-    if (m_reader.timestampAt(index, timestamp, &error))
+    if (m_reader.findRecordAtOrBefore(position, index, &error))
         return true;
     failPlayback(error);
     return false;

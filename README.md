@@ -444,9 +444,11 @@ The maintained DLZ UDP scenarios use the dedicated three-field mappings:
    Overshoot is retained even if one frame crosses multiple replay lengths.
 
 Normal replay samples the session at 60 frames per second. Each sample advances
-the exact cursor by `(1 / 60) * rate` seconds, binary-searches for the latest
-entry strictly before that cursor, and displays only that entry. Stored entries
-between presentation samples are not decoded in sequence.
+the exact cursor by `(1 / 60) * rate` seconds and displays the latest entry
+strictly before that cursor. Selection uses a two-level sparse timestamp index:
+an in-memory checkpoint search chooses one 4,096-record page, followed by an
+in-memory search inside that cached page. Stored entries between presentation
+samples are not decoded in sequence.
 
 The separate **Burst** panel is reserved for future whole-file statistics. Its
 wide lightning-icon button is currently disabled and does not affect replay or

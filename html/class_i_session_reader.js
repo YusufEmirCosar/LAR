@@ -7,6 +7,7 @@ var class_i_session_reader =
     [ "isValid", "class_i_session_reader.html#af00a0907067a1e6a74d1ad64d911a22b", null ],
     [ "recordCount", "class_i_session_reader.html#ab5e822b6c4f84d5ed97ec944f823a91c", null ],
     [ "duration", "class_i_session_reader.html#a325284789d5b91e1f8aceb1e6f54d1fe", null ],
+    [ "findRecordAtOrBefore", "class_i_session_reader.html#a5d41a2e921dc3c9aa2cb1ad18cb6cff7", null ],
     [ "timestampAt", "class_i_session_reader.html#a69f42c52fb49b0be8e7f2098f406fef6", null ],
     [ "recordAt", "class_i_session_reader.html#a4dfbbaba3951f2c30c77319d53c42b19", null ]
 ];

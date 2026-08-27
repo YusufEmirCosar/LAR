@@ -15,10 +15,11 @@
 /**
  * @brief Validates a session once, checkpoints it sparsely, and decodes on demand.
  *
- * The reader deliberately has no record-count policy limit. A checkpoint is retained
- * for every 4,096 records and only one page of record locations is cached, preventing
- * an attacker-controlled record count from creating a full per-record memory index.
- * Like QFile, random-access methods are confined to the reader's owning thread.
+ * The reader deliberately has no record-count policy limit. A timestamp and
+ * header offset are retained for every 4,096 records, and only one page of
+ * record locations is cached. The two-level lookup therefore avoids both a
+ * full per-record memory index and cross-page seek amplification. Like QFile,
+ * random-access methods are confined to the reader's owning thread.
  */
 class LarSessionReader final : public ISessionReader {
   public:
@@ -38,6 +39,8 @@ class LarSessionReader final : public ISessionReader {
     SessionTimestamp duration() const noexcept override {
         return m_duration;
     }
+    bool findRecordAtOrBefore(SessionTimestamp position, qint64 *index,
+                              QString *error = nullptr) const override;
     bool timestampAt(qint64 index, SessionTimestamp *timestamp,
                      QString *error = nullptr) const override;
     bool recordAt(qint64 index, SessionStateItem *item, QString *error = nullptr) const override;
@@ -55,6 +58,7 @@ class LarSessionReader final : public ISessionReader {
     struct Checkpoint {
         qint64 recordIndex = 0;
         qint64 headerOffset = 0;
+        SessionTimestamp timestamp;
     };
 
     static constexpr qint64 RecordsPerPage = 4096;

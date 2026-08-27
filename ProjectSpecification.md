@@ -39,10 +39,11 @@ and verification information lives in the [documentation hub](docs/README.md).
 - There is no product maximum for records per session. Capacity is governed by
   available storage, the `LAR1` byte layout, the supported duration, and the
   signed 64-bit application index range. The reader shall not retain one index
-  entry per record: it keeps one checkpoint per 4,096 records and a single
-  4,096-record location page.
-- Playback shall use exact millisecond timestamps, logarithmic record selection,
-  and decode at most the selected record on each presentation tick.
+  entry per record: it keeps one timestamp-and-offset checkpoint per 4,096
+  records and a single 4,096-record location page.
+- Playback shall use exact millisecond timestamps, select the page from the
+  sparse timestamp checkpoints, search only that bounded page, and decode at
+  most the selected record on each presentation tick.
 
 ### Visualization
 

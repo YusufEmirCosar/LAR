@@ -28,7 +28,6 @@ var class_playback_service =
     [ "publishDecodedFrame", "class_playback_service.html#a7e69f8510d01eb4ef307c70cb5c3a56b", null ],
     [ "publishReplayFrame", "class_playback_service.html#a481e02ab61a303ad278cc269b4fe7bd4", null ],
     [ "findFrameBefore", "class_playback_service.html#af7dcd8ae996bb015d78e185add1c9b1d", null ],
-    [ "readTimestamp", "class_playback_service.html#a16470626e933666ce7a717287056067b", null ],
     [ "resetToFirstFrame", "class_playback_service.html#ad5ebc3fdc21007bb3cd1b165caa3d679", null ],
     [ "finishPlayback", "class_playback_service.html#a9a341b7a275a1e1f18bb1e89a582736c", null ],
     [ "failPlayback", "class_playback_service.html#a48014a7e0b93ca7827e9bb45043576e1", null ],

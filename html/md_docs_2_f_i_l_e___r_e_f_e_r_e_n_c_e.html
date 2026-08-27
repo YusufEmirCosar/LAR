@@ -263,7 +263,7 @@ Application source</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt">src/application/recording_pipeline_coordinator.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Drain, batch, snapshot, persistence, retry, and finalization policy  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><span class="tt">src/application/playback_service.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Fixed-step indexed playback, binary-search sampling, seek, rate, and repeat policy  </td></tr>
+<td class="markdownTableBodyNone"><span class="tt">src/application/playback_service.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Fixed-step indexed playback, strict/inclusive timestamp selection, seek, rate, and repeat policy  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt">src/application/direct_application_runtime.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Single-thread runtime implementation used by tests/embedders  </td></tr>
 </table>
@@ -323,7 +323,7 @@ Infrastructure source</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt">src/infrastructure/session/qt_session_persistence.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Atomic <span class="tt">QSaveFile</span> snapshot commit  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><span class="tt">src/infrastructure/session/lar_session_reader.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Full LAR1 validator with 4,096-record sparse checkpoints, one page cache, and lazy packet decode  </td></tr>
+<td class="markdownTableBodyNone"><span class="tt">src/infrastructure/session/lar_session_reader.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Full LAR1 validator with timestamped 4,096-record sparse checkpoints, two-level lookup, one page cache, and lazy packet decode  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt">src/infrastructure/timing/qt_recording_clock.{h,cpp}</span>  </td><td class="markdownTableBodyNone"><span class="tt">steady_clock</span> recording-clock adapter  </td></tr>
 <tr class="markdownTableRowEven">

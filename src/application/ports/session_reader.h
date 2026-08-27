@@ -35,6 +35,21 @@ class ISessionReader {
     /** @brief Returns the number of records validated in the loaded session. */
     virtual qint64 recordCount() const noexcept = 0;
     virtual SessionTimestamp duration() const noexcept = 0;
+    /**
+     * @brief Finds the newest record at or before a playback position.
+     *
+     * Implementations may use their native sparse index so playback does not
+     * need to perform arbitrary per-record timestamp reads. If @p position is
+     * earlier than every record, the first record is returned to preserve the
+     * playback service's start-of-session clamp.
+     *
+     * @param[in] position Exact inclusive timestamp bound.
+     * @param[out] index Selected zero-based record index.
+     * @param[out] error Optional diagnostic populated on failure.
+     * @return `true` for a valid non-empty session and output; otherwise `false`.
+     */
+    virtual bool findRecordAtOrBefore(SessionTimestamp position, qint64 *index,
+                                      QString *error = nullptr) const = 0;
     virtual bool timestampAt(qint64 index, SessionTimestamp *timestamp,
                              QString *error = nullptr) const = 0;
     virtual bool recordAt(qint64 index, SessionStateItem *item, QString *error = nullptr) const = 0;

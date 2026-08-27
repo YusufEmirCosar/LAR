@@ -1,5 +1,7 @@
 var NAVTREEINDEX20 =
 {
+"structlar_1_1map_1_1tool_1_1anonymous__namespace_02map__asset__writer_8cpp_03_1_1_previous_file.html#ab6972d00f60c1a879ee6a9a21b195ed0":[20,0,5,1,0,0,0,0],
+"structlar_1_1map_1_1tool_1_1anonymous__namespace_02polygon__triangulator_8cpp_03_1_1_ring_node.html":[19,0,50,1,9,3,0],
 "structlar_1_1map_1_1tool_1_1anonymous__namespace_02polygon__triangulator_8cpp_03_1_1_ring_node.html":[20,0,5,1,0,1,0],
 "structlar_1_1map_1_1tool_1_1anonymous__namespace_02polygon__triangulator_8cpp_03_1_1_ring_node.html#a2d43c26c562ecf36d40c9abd1d24cc1e":[19,0,50,1,9,3,0,1],
 "structlar_1_1map_1_1tool_1_1anonymous__namespace_02polygon__triangulator_8cpp_03_1_1_ring_node.html#a2d43c26c562ecf36d40c9abd1d24cc1e":[20,0,5,1,0,1,0,1],

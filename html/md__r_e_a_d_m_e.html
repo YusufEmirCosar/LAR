@@ -350,7 +350,7 @@ Offline Mode</h1>
 <li>Use Play/Pause, Stop, timeline seek, and enter any positive floating-point playback rate.</li>
 <li>Toggle the reset-icon <b>Repeat</b> control to wrap each newly calculated replay time modulo the final entry timestamp before selecting the displayed entry. Overshoot is retained even if one frame crosses multiple replay lengths.</li>
 </ol>
-<p>Normal replay samples the session at 60 frames per second. Each sample advances the exact cursor by <span class="tt">(1 / 60) * rate</span> seconds, binary-searches for the latest entry strictly before that cursor, and displays only that entry. Stored entries between presentation samples are not decoded in sequence.</p>
+<p>Normal replay samples the session at 60 frames per second. Each sample advances the exact cursor by <span class="tt">(1 / 60) * rate</span> seconds and displays the latest entry strictly before that cursor. Selection uses a two-level sparse timestamp index: an in-memory checkpoint search chooses one 4,096-record page, followed by an in-memory search inside that cached page. Stored entries between presentation samples are not decoded in sequence.</p>
 <p>The separate <b>Burst</b> panel is reserved for future whole-file statistics. Its wide lightning-icon button is currently disabled and does not affect replay or the displayed state.</p>
 <p>The mapping is embedded in the <span class="tt">.<a class="el" href="namespacelar.html">lar</a></span> file. No external JSON mapping is used during replay.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md28"></a>

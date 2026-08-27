@@ -111,8 +111,9 @@ signatures. Implementations must preserve these rules:
 - Runtime implementations may complete synchronously or asynchronously without
   changing observable application behavior.
 - `ISessionReader` exposes only fully validated sessions; its Qt adapter uses
-  sparse checkpoints and one bounded location page rather than a per-record
-  memory index.
+  timestamped sparse checkpoints and one bounded location page rather than a
+  per-record memory index. Its native timestamp-selection operation prevents
+  callers from defeating that paging strategy through arbitrary probes.
 - `IRecordingTransaction` timestamps are non-decreasing and snapshots are
   immutable after publication.
 - `ISessionPersistence` either commits the complete snapshot or preserves the

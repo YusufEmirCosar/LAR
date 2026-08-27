@@ -101,8 +101,9 @@ and validation. A `LAR1` record payload is limited to 16 MiB; embedded mapping
 data is limited to 16 MiB; timestamps are non-decreasing and limited to 365
 days. There is deliberately no arbitrary maximum record count.
 
-The session reader performs a complete validation pass, stores one checkpoint
-per 4,096 records, and caches at most one 4,096-record location page. Thus file
+The session reader performs a complete validation pass, stores one timestamp
+and header-offset checkpoint per 4,096 records, and caches at most one
+4,096-record location page. Thus file
 size and validation time can grow with a session, while resident index memory
 does not grow one entry per record. Counts and indices use signed 64-bit values;
 the byte layout, storage, duration, and that representation are the remaining

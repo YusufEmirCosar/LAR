@@ -105,9 +105,11 @@ Decode and recording are not throttled together with drawing:
 - `OnlineCaptureService` emits every accepted `CapturedPacket` immediately for
   recording and metrics, but publishes only the latest `DecodedState` every
   16 ms.
-- `PlaybackService` performs one logarithmic timestamp lookup per 60 Hz replay
-  tick and decodes at most the selected record. It counts a record only when
-  the displayed index changes.
+- `PlaybackService` requests one timestamp selection per 60 Hz replay tick.
+  `LarSessionReader` binary-searches its compact checkpoint timestamps, loads at
+  most the selected 4,096-record page when it is not already cached, and then
+  searches that page in memory. It decodes at most the selected record and
+  counts a record only when the displayed index changes.
 - `PlaybackPublicationThrottle` emits only the latest sampled frame and
   position every 16 ms, so queued UI delivery remains bounded.
 

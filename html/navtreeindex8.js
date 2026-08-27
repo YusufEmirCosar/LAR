@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"classdlz_1_1presentation_1_1_control_panel.html#ada5ffd51470699b6d48882fbcb31f953":[19,0,49,3,4,30],
 "classdlz_1_1presentation_1_1_control_panel.html#ada5ffd51470699b6d48882fbcb31f953":[20,0,4,0,0,30],
 "classdlz_1_1presentation_1_1_control_panel.html#adcad5046cbca3fc648374fc94b5d5cb8":[19,0,49,3,4,8],
 "classdlz_1_1presentation_1_1_control_panel.html#adcad5046cbca3fc648374fc94b5d5cb8":[20,0,4,0,0,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "classlar_1_1map_1_1_earth_map_gpu_renderer.html#aa78763d539c9f8ae7908ca3b3d4459fb":[20,0,5,1,1,4],
 "classlar_1_1map_1_1_earth_map_gpu_renderer.html#ab3115dbfb54fe8facdbeb44723734c40":[19,0,50,1,10,39],
 "classlar_1_1map_1_1_earth_map_gpu_renderer.html#ab3115dbfb54fe8facdbeb44723734c40":[20,0,5,1,1,39],
-"classlar_1_1map_1_1_earth_map_gpu_renderer.html#abd3677656cb1df31d507ff98b550388e":[19,0,50,1,10,37],
-"classlar_1_1map_1_1_earth_map_gpu_renderer.html#abd3677656cb1df31d507ff98b550388e":[20,0,5,1,1,37]
+"classlar_1_1map_1_1_earth_map_gpu_renderer.html#abd3677656cb1df31d507ff98b550388e":[19,0,50,1,10,37]
 };

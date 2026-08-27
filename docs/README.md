@@ -80,7 +80,8 @@ UDP datagram
 
 LAR1 session
   -> complete structural validation
-  -> sparse checkpoints and one record-location page
+  -> timestamped sparse checkpoints and one record-location page
+  -> two-level bounded timestamp lookup
   -> sampled 60 Hz playback
   -> the same DecodedState and presentation path
 ```

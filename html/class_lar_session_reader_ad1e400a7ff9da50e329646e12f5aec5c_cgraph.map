@@ -1,0 +1,11 @@
+<map id="LarSessionReader::findRecordAtOrBefore" name="LarSessionReader::findRecordAtOrBefore">
+<area shape="rect" id="Node000001" title="Finds the newest record at or before a playback position." alt="" coords="5,27,205,68"/>
+<area shape="rect" id="Node000002" href="$class_lar_session_reader.html#ab686230bdf9413511ab96b994d6a58da" title="Populates the bounded location cache containing index." alt="" coords="253,35,458,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,45,240,47,235,48,206,50"/>
+<area shape="rect" id="Node000003" href="$class_session_timestamp.html#a32022c7bea4a6476c0af9a5641a8a80f" title="Creates a timestamp from the unsigned representation stored by LAR1." alt="" coords="506,27,711,68"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="458,45,493,47,487,48,459,50"/>
+<area shape="rect" id="Node000004" href="$class_session_timestamp.html#a9e69c8185d47045ab21667be1a2976f7" title=" " alt="" coords="759,5,973,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="711,33,741,32,746,32,712,38"/>
+<area shape="rect" id="Node000005" href="$class_session_timestamp.html#adc21abc1a6730f873208b13edc77f94a" title="Constructs the zero timestamp." alt="" coords="772,55,960,96"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="712,56,759,64,753,64,712,61"/>
+</map>

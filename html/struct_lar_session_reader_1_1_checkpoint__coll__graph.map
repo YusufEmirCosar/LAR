@@ -1,0 +1,5 @@
+<map id="LarSessionReader::Checkpoint" name="LarSessionReader::Checkpoint">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,102,208,128"/>
+<area shape="rect" id="Node000002" href="$class_session_timestamp.html" title="Exact, bounded, non&#45;negative session&#45;relative time in milliseconds." alt="" coords="40,5,173,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,45,109,102,104,101,104,48"/>
+</map>

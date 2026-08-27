@@ -141,6 +141,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab5e822b6c4f84d5ed97ec944f823a91c" id="r_ab5e822b6c4f84d5ed97ec944f823a91c"><td class="memItemLeft">virtual qint64&#160;</td><td class="memItemRight"><a class="el" href="#ab5e822b6c4f84d5ed97ec944f823a91c">recordCount</a> () const noexcept=0</td></tr>
 <tr class="memdesc:ab5e822b6c4f84d5ed97ec944f823a91c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of records validated in the loaded session.  <br /></td></tr>
 <tr class="memitem:a325284789d5b91e1f8aceb1e6f54d1fe" id="r_a325284789d5b91e1f8aceb1e6f54d1fe"><td class="memItemLeft">virtual <a class="el" href="class_session_timestamp.html">SessionTimestamp</a>&#160;</td><td class="memItemRight"><a class="el" href="#a325284789d5b91e1f8aceb1e6f54d1fe">duration</a> () const noexcept=0</td></tr>
+<tr class="memitem:a5d41a2e921dc3c9aa2cb1ad18cb6cff7" id="r_a5d41a2e921dc3c9aa2cb1ad18cb6cff7"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a5d41a2e921dc3c9aa2cb1ad18cb6cff7">findRecordAtOrBefore</a> (<a class="el" href="class_session_timestamp.html">SessionTimestamp</a> position, qint64 *index, QString *error=nullptr) const =0</td></tr>
+<tr class="memdesc:a5d41a2e921dc3c9aa2cb1ad18cb6cff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the newest record at or before a playback position.  <br /></td></tr>
 <tr class="memitem:a69f42c52fb49b0be8e7f2098f406fef6" id="r_a69f42c52fb49b0be8e7f2098f406fef6"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a69f42c52fb49b0be8e7f2098f406fef6">timestampAt</a> (qint64 index, <a class="el" href="class_session_timestamp.html">SessionTimestamp</a> *timestamp, QString *error=nullptr) const =0</td></tr>
 <tr class="memitem:a4dfbbaba3951f2c30c77319d53c42b19" id="r_a4dfbbaba3951f2c30c77319d53c42b19"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a4dfbbaba3951f2c30c77319d53c42b19">recordAt</a> (qint64 index, <a class="el" href="struct_session_state_item.html">SessionStateItem</a> *item, QString *error=nullptr) const =0</td></tr>
 </table>
@@ -316,7 +318,7 @@ Here is the caller graph for this function:</div>
 
 <p class="reference">References <a class="el" href="#af00a0907067a1e6a74d1ad64d911a22b">isValid()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="playback__service_8cpp_source.html#l00212">PlaybackService::findFrameBefore()</a>, <a class="el" href="playback__service_8h_source.html#l00055">PlaybackService::isLoaded()</a>, <a class="el" href="#af00a0907067a1e6a74d1ad64d911a22b">isValid()</a>, <a class="el" href="playback__service_8cpp_source.html#l00131">PlaybackService::onClockTick()</a>, <a class="el" href="playback__service_8cpp_source.html#l00061">PlaybackService::play()</a>, <a class="el" href="playback__service_8cpp_source.html#l00191">PlaybackService::publishDecodedFrame()</a>, <a class="el" href="playback__service_8cpp_source.html#l00176">PlaybackService::publishFrame()</a>, <a class="el" href="playback__service_8cpp_source.html#l00244">PlaybackService::resetToFirstFrame()</a>, <a class="el" href="playback__service_8cpp_source.html#l00098">PlaybackService::seek()</a>, and <a class="el" href="playback__service_8cpp_source.html#l00081">PlaybackService::stop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="playback__service_8cpp_source.html#l00212">PlaybackService::findFrameBefore()</a>, <a class="el" href="playback__service_8h_source.html#l00055">PlaybackService::isLoaded()</a>, <a class="el" href="#af00a0907067a1e6a74d1ad64d911a22b">isValid()</a>, <a class="el" href="playback__service_8cpp_source.html#l00131">PlaybackService::onClockTick()</a>, <a class="el" href="playback__service_8cpp_source.html#l00061">PlaybackService::play()</a>, <a class="el" href="playback__service_8cpp_source.html#l00191">PlaybackService::publishDecodedFrame()</a>, <a class="el" href="playback__service_8cpp_source.html#l00176">PlaybackService::publishFrame()</a>, <a class="el" href="playback__service_8cpp_source.html#l00241">PlaybackService::resetToFirstFrame()</a>, <a class="el" href="playback__service_8cpp_source.html#l00098">PlaybackService::seek()</a>, and <a class="el" href="playback__service_8cpp_source.html#l00081">PlaybackService::stop()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -359,7 +361,7 @@ Here is the caller graph for this function:</div>
 
 <p class="reference">References <a class="el" href="#ab5e822b6c4f84d5ed97ec944f823a91c">recordCount()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="playback__service_8cpp_source.html#l00212">PlaybackService::findFrameBefore()</a>, <a class="el" href="playback__service_8cpp_source.html#l00030">PlaybackService::loadData()</a>, <a class="el" href="playback__service_8cpp_source.html#l00012">PlaybackService::loadSession()</a>, <a class="el" href="playback__service_8cpp_source.html#l00131">PlaybackService::onClockTick()</a>, <a class="el" href="playback__service_8cpp_source.html#l00061">PlaybackService::play()</a>, <a class="el" href="playback__service_8cpp_source.html#l00191">PlaybackService::publishDecodedFrame()</a>, <a class="el" href="playback__service_8cpp_source.html#l00176">PlaybackService::publishFrame()</a>, <a class="el" href="#ab5e822b6c4f84d5ed97ec944f823a91c">recordCount()</a>, <a class="el" href="playback__service_8h_source.html#l00073">PlaybackService::recordCount()</a>, <a class="el" href="playback__service_8cpp_source.html#l00244">PlaybackService::resetToFirstFrame()</a>, <a class="el" href="playback__service_8cpp_source.html#l00098">PlaybackService::seek()</a>, and <a class="el" href="playback__service_8cpp_source.html#l00081">PlaybackService::stop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="playback__service_8cpp_source.html#l00212">PlaybackService::findFrameBefore()</a>, <a class="el" href="playback__service_8cpp_source.html#l00030">PlaybackService::loadData()</a>, <a class="el" href="playback__service_8cpp_source.html#l00012">PlaybackService::loadSession()</a>, <a class="el" href="playback__service_8cpp_source.html#l00131">PlaybackService::onClockTick()</a>, <a class="el" href="playback__service_8cpp_source.html#l00061">PlaybackService::play()</a>, <a class="el" href="playback__service_8cpp_source.html#l00191">PlaybackService::publishDecodedFrame()</a>, <a class="el" href="playback__service_8cpp_source.html#l00176">PlaybackService::publishFrame()</a>, <a class="el" href="#ab5e822b6c4f84d5ed97ec944f823a91c">recordCount()</a>, <a class="el" href="playback__service_8h_source.html#l00073">PlaybackService::recordCount()</a>, <a class="el" href="playback__service_8cpp_source.html#l00241">PlaybackService::resetToFirstFrame()</a>, <a class="el" href="playback__service_8cpp_source.html#l00098">PlaybackService::seek()</a>, and <a class="el" href="playback__service_8cpp_source.html#l00081">PlaybackService::stop()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -400,7 +402,7 @@ Here is the caller graph for this function:</div>
 
 <p class="reference">References <a class="el" href="#a325284789d5b91e1f8aceb1e6f54d1fe">duration()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a325284789d5b91e1f8aceb1e6f54d1fe">duration()</a>, <a class="el" href="playback__service_8h_source.html#l00064">PlaybackService::duration()</a>, <a class="el" href="playback__service_8cpp_source.html#l00253">PlaybackService::finishPlayback()</a>, <a class="el" href="playback__service_8cpp_source.html#l00131">PlaybackService::onClockTick()</a>, <a class="el" href="playback__service_8cpp_source.html#l00061">PlaybackService::play()</a>, and <a class="el" href="playback__service_8cpp_source.html#l00098">PlaybackService::seek()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a325284789d5b91e1f8aceb1e6f54d1fe">duration()</a>, <a class="el" href="playback__service_8h_source.html#l00064">PlaybackService::duration()</a>, <a class="el" href="playback__service_8cpp_source.html#l00250">PlaybackService::finishPlayback()</a>, <a class="el" href="playback__service_8cpp_source.html#l00131">PlaybackService::onClockTick()</a>, <a class="el" href="playback__service_8cpp_source.html#l00061">PlaybackService::play()</a>, and <a class="el" href="playback__service_8cpp_source.html#l00098">PlaybackService::seek()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -410,6 +412,68 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_i_session_reader_a325284789d5b91e1f8aceb1e6f54d1fe_icgraph.svg" width="100%" height="580"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a5d41a2e921dc3c9aa2cb1ad18cb6cff7" name="a5d41a2e921dc3c9aa2cb1ad18cb6cff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d41a2e921dc3c9aa2cb1ad18cb6cff7">&#9670;&#160;</a></span>findRecordAtOrBefore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISessionReader::findRecordAtOrBefore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_session_timestamp.html">SessionTimestamp</a></td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">qint64 *</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *</td>          <td class="paramname"><span class="paramname"><em>error</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds the newest record at or before a playback position. </p>
+<p>Implementations may use their native sparse index so playback does not need to perform arbitrary per-record timestamp reads. If <code class="param">position</code> is earlier than every record, the first record is returned to preserve the playback service's start-of-session clamp.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>Exact inclusive timestamp bound. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">index</td><td>Selected zero-based record index. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional diagnostic populated on failure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for a valid non-empty session and output; otherwise <span class="tt">false</span>. </dd></dl>
+
+<p>Implemented in <a class="el" href="class_lar_session_reader.html#ad1e400a7ff9da50e329646e12f5aec5c">LarSessionReader</a>.</p>
+
+<p class="reference">References <a class="el" href="#a5d41a2e921dc3c9aa2cb1ad18cb6cff7">findRecordAtOrBefore()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="playback__service_8cpp_source.html#l00212">PlaybackService::findFrameBefore()</a>, and <a class="el" href="#a5d41a2e921dc3c9aa2cb1ad18cb6cff7">findRecordAtOrBefore()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_i_session_reader_a5d41a2e921dc3c9aa2cb1ad18cb6cff7_cgraph.svg" width="196" height="76"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_i_session_reader_a5d41a2e921dc3c9aa2cb1ad18cb6cff7_icgraph.svg" width="100%" height="506"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -450,7 +514,7 @@ Here is the caller graph for this function:</div>
 
 <p class="reference">References <a class="el" href="#a69f42c52fb49b0be8e7f2098f406fef6">timestampAt()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="playback__service_8cpp_source.html#l00236">PlaybackService::readTimestamp()</a>, and <a class="el" href="#a69f42c52fb49b0be8e7f2098f406fef6">timestampAt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a69f42c52fb49b0be8e7f2098f406fef6">timestampAt()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -459,7 +523,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_i_session_reader_a69f42c52fb49b0be8e7f2098f406fef6_icgraph.svg" width="100%" height="420"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_i_session_reader_a69f42c52fb49b0be8e7f2098f406fef6_icgraph.svg" width="207" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

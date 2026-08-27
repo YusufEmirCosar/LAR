@@ -150,7 +150,7 @@ bool LarSessionReader::parseStream(QIODevice *device, QString *error) {
         hasPreviousTime = true;
         duration = item.timestamp;
         if (recordCount % RecordsPerPage == 0)
-            checkpoints.append(Checkpoint{recordCount, headerOffset});
+            checkpoints.append(Checkpoint{recordCount, headerOffset, item.timestamp});
         ++recordCount;
     }
 
@@ -291,6 +291,59 @@ const LarSessionReader::RecordIndex *LarSessionReader::locationAt(qint64 index,
         return nullptr;
     }
     return &m_page.at(static_cast<qsizetype>(pageIndex));
+}
+
+bool LarSessionReader::findRecordAtOrBefore(SessionTimestamp position, qint64 *index,
+                                            QString *error) const {
+    if (!index) {
+        if (error)
+            *error = QStringLiteral("Session record-index output is null");
+        return false;
+    }
+    if (!m_isValid) {
+        if (error)
+            *error = QStringLiteral("Session reader is not valid");
+        return false;
+    }
+    if (m_recordCount <= 0 || m_checkpoints.isEmpty()) {
+        if (error)
+            *error = QStringLiteral("Session contains no records");
+        return false;
+    }
+
+    // Checkpoint timestamps form a compact first-level index. Choosing the
+    // last page whose first timestamp is eligible avoids the former pattern
+    // of rebuilding a different 4,096-record page for every binary-search
+    // probe across the complete file.
+    qsizetype checkpointLow = 0;
+    qsizetype checkpointHigh = m_checkpoints.size();
+    while (checkpointLow < checkpointHigh) {
+        const qsizetype middle = checkpointLow + (checkpointHigh - checkpointLow) / 2;
+        if (m_checkpoints.at(middle).timestamp <= position)
+            checkpointLow = middle + 1;
+        else
+            checkpointHigh = middle;
+    }
+    const qsizetype checkpointIndex = checkpointLow == 0 ? 0 : checkpointLow - 1;
+    const Checkpoint &checkpoint = m_checkpoints.at(checkpointIndex);
+    if (!ensurePage(checkpoint.recordIndex, error))
+        return false;
+
+    // The second-level search is entirely in the one bounded location page.
+    // Upper-bound semantics select the last duplicate timestamp, including
+    // duplicates that cross a page boundary.
+    qsizetype pageLow = 0;
+    qsizetype pageHigh = m_page.size();
+    while (pageLow < pageHigh) {
+        const qsizetype middle = pageLow + (pageHigh - pageLow) / 2;
+        if (m_page.at(middle).timestamp <= position)
+            pageLow = middle + 1;
+        else
+            pageHigh = middle;
+    }
+    const qsizetype pageIndex = pageLow == 0 ? 0 : pageLow - 1;
+    *index = m_pageFirstRecord + static_cast<qint64>(pageIndex);
+    return true;
 }
 
 bool LarSessionReader::recordAt(qint64 index, SessionStateItem *item, QString *error) const {

@@ -102,7 +102,7 @@ implementation files are listed explicitly.
 | `src/application/online_capture_service.{h,cpp}` | Datagram decode, recording publication, and visual coalescing |
 | `src/application/recording_service.{h,cpp}` | Recording transaction state and active-time calculation |
 | `src/application/recording_pipeline_coordinator.{h,cpp}` | Drain, batch, snapshot, persistence, retry, and finalization policy |
-| `src/application/playback_service.{h,cpp}` | Fixed-step indexed playback, binary-search sampling, seek, rate, and repeat policy |
+| `src/application/playback_service.{h,cpp}` | Fixed-step indexed playback, strict/inclusive timestamp selection, seek, rate, and repeat policy |
 | `src/application/direct_application_runtime.{h,cpp}` | Single-thread runtime implementation used by tests/embedders |
 
 ### Application ports and runtime protocol
@@ -136,7 +136,7 @@ implementation files are listed explicitly.
 | `src/infrastructure/session/lar_session_writer.{h,cpp}` | Streaming temporary-file LAR1 transaction |
 | `src/infrastructure/session/file_session_snapshot.{h,cpp}` | Immutable retained file-prefix snapshot |
 | `src/infrastructure/session/qt_session_persistence.{h,cpp}` | Atomic `QSaveFile` snapshot commit |
-| `src/infrastructure/session/lar_session_reader.{h,cpp}` | Full LAR1 validator with 4,096-record sparse checkpoints, one page cache, and lazy packet decode |
+| `src/infrastructure/session/lar_session_reader.{h,cpp}` | Full LAR1 validator with timestamped 4,096-record sparse checkpoints, two-level lookup, one page cache, and lazy packet decode |
 | `src/infrastructure/timing/qt_recording_clock.{h,cpp}` | `steady_clock` recording-clock adapter |
 | `src/infrastructure/timing/qt_playback_clock.{h,cpp}` | Precise `QTimer` playback-clock adapter |
 | `src/infrastructure/runtime/network_runtime_worker.{h,cpp}` | Network-thread composition, commands, capture batching, metrics |

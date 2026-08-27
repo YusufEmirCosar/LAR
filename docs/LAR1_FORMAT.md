@@ -101,17 +101,21 @@ A session becomes visible only after one complete pass succeeds:
 5. Enforce duration, non-decreasing time, payload size, and remaining bytes.
 6. Read and decode every packet with the embedded `PacketMapping`; any invalid
    stored domain value rejects the entire session.
-7. Store the header offset of every 4,096th record as a sparse checkpoint.
+7. Store the timestamp and header offset of every 4,096th record as a sparse
+   checkpoint.
 8. Commit the mapping, checkpoint table, source, count, duration, and valid flag
    atomically.
 
 For a file source, packet bytes are not retained in RAM after validation;
 `recordAt` seeks and decodes on demand. For `loadData`, the caller's byte array
 is retained as the random-access source. Random access scans record headers from
-the nearest checkpoint and caches one page of at most 4,096 locations. Playback
-continues to use timestamp binary search while resident index memory grows only
-once per checkpoint, not once per record. Source size is revalidated during
-random access to reject replacement or truncation after the validation pass.
+the selected checkpoint and caches one page of at most 4,096 locations. For a
+playback lookup, the reader first binary-searches checkpoint timestamps in
+memory, materializes at most the selected page, and then binary-searches that
+page in memory. Sequential playback normally reuses the same page. Resident
+index memory therefore grows once per checkpoint, not once per record. Source
+size is revalidated during random access to reject replacement or truncation
+after the validation pass.
 
 ## Playback interpretation
 
@@ -121,13 +125,13 @@ random access to reject replacement or truncation after the validation pass.
 - Stop publishes the first record and resets position to zero.
 - Play advances an exact cursor by `(1000 / 60) * positiveRate` milliseconds on
   every presentation tick.
-- Each play tick binary-searches the index and decodes at most the last record
-  strictly before the advanced cursor. It does not iterate through skipped
-  records.
+- Each play tick performs one two-level sparse-index lookup and decodes at most
+  the last record strictly before the advanced cursor. It does not iterate
+  through skipped records or probe unrelated file pages.
 - Playback finishes after the cursor advances beyond the final timestamp.
   With Repeat enabled and a positive final timestamp, each newly calculated
   cursor is first reduced modulo that final timestamp and the wrapped value is
-  binary-searched. This preserves overshoot across one or multiple loops.
+  looked up. This preserves overshoot across one or multiple loops.
 - Burst is currently an inert presentation placeholder and has no LAR1 read or
   playback semantics.
 - The online mapping is neither required nor modified by loading a session.

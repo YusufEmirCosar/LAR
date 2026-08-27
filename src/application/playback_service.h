@@ -90,7 +90,6 @@ class PlaybackService final : public QObject {
     void publishDecodedFrame(qint64 index, const SessionStateItem &item);
     bool publishReplayFrame(qint64 index);
     bool findFrameBefore(long double targetMilliseconds, qint64 *index);
-    bool readTimestamp(qint64 index, SessionTimestamp *timestamp);
     bool resetToFirstFrame();
     void finishPlayback();
     void failPlayback(const QString &error);

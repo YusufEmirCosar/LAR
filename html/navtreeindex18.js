@@ -1,5 +1,7 @@
 var NAVTREEINDEX18 =
 {
+"struct_plane_surface_zone.html#afe1d6b235460d045e68361521c598490":[20,0,118,1],
+"struct_plane_terrain_build_request.html":[20,0,119],
 "struct_plane_terrain_build_request.html#a2bb5c3ec852f00fce9622f73b6620acc":[20,0,119,0],
 "struct_plane_terrain_build_request.html#a38699165054dac5b2bf9c9037e673aff":[20,0,119,6],
 "struct_plane_terrain_build_request.html#a38c08229dff243a0797555b62950525a":[20,0,119,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "structdlz_1_1_hud_state.html#a5c16b038e3c3106ac00daebea862462b":[20,0,4,4,3],
 "structdlz_1_1_hud_state.html#a8bae66ed4e72daa0d813dc7961ca3f6f":[19,0,49,8,0],
 "structdlz_1_1_hud_state.html#a8bae66ed4e72daa0d813dc7961ca3f6f":[20,0,4,4,0],
-"structdlz_1_1_hud_state.html#ab777c0c6353de7786b363be8b9aa21f8":[19,0,49,8,5],
-"structdlz_1_1_hud_state.html#ab777c0c6353de7786b363be8b9aa21f8":[20,0,4,4,5],
-"structdlz_1_1_hud_state.html#af5c763ab5b1c23d7844e0058d06adfe5":[19,0,49,8,2]
+"structdlz_1_1_hud_state.html#ab777c0c6353de7786b363be8b9aa21f8":[19,0,49,8,5]
 };

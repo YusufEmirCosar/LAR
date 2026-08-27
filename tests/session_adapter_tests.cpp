@@ -156,7 +156,8 @@ void SessionAdapterTests::sparseIndexCrossesPageBoundaries() {
     QVERIFY2(writer.begin(mapping.json(), &error), qPrintable(error));
     for (qint64 index = 0; index < RecordCount; ++index) {
         target.time = static_cast<double>(index);
-        QVERIFY2(writer.append(SessionTimestamp::clampedMilliseconds(index),
+        const qint64 timestamp = index == 4096 ? 4095 : index;
+        QVERIFY2(writer.append(SessionTimestamp::clampedMilliseconds(timestamp),
                                mapping.encode(plane, target), &error),
                  qPrintable(error));
     }
@@ -174,9 +175,19 @@ void SessionAdapterTests::sparseIndexCrossesPageBoundaries() {
     for (const qint64 index : {qint64(4096), qint64(0), qint64(4095), RecordCount - 1}) {
         SessionStateItem item;
         QVERIFY2(reader.recordAt(index, &item, &error), qPrintable(error));
-        QCOMPARE(item.timestamp.milliseconds(), index);
+        QCOMPARE(item.timestamp.milliseconds(), index == 4096 ? qint64(4095) : index);
         QCOMPARE(item.state.target.time, static_cast<double>(index));
     }
+
+    qint64 selectedIndex = -1;
+    QVERIFY2(reader.findRecordAtOrBefore(SessionTimestamp::clampedMilliseconds(4094),
+                                         &selectedIndex, &error),
+             qPrintable(error));
+    QCOMPARE(selectedIndex, qint64(4094));
+    QVERIFY2(reader.findRecordAtOrBefore(SessionTimestamp::clampedMilliseconds(4095),
+                                         &selectedIndex, &error),
+             qPrintable(error));
+    QCOMPARE(selectedIndex, qint64(4096));
 }
 
 QTEST_GUILESS_MAIN(SessionAdapterTests)

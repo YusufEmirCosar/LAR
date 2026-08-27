@@ -214,20 +214,22 @@ sequenceDiagram
     P->>S: play()
     loop 60 Hz replay ticks
         S->>S: next = current + (1000 / 60) * rate
-        S->>RD: binary-search strict predecessor timestamp
+        S->>RD: find record strictly before next
+        RD->>RD: search checkpoint timestamps
+        RD->>RD: load/search at most one bounded page
         RD-->>S: decode at most one selected record
         S-->>T: selected frame + exact position
         T-->>VM: latest epoch-tagged publication every 16 ms
     end
 ```
 
-Seek uses a binary search for the last timestamp at or before the requested
-position. Normal replay does not decode intermediate records between sampled
-positions. With Repeat enabled, the newly calculated cursor is reduced modulo
-the final timestamp before every binary search, preserving any overshoot even
-across multiple loops. Without Repeat, passing the final timestamp publishes
-completion. The separate Burst widget is an inert placeholder and dispatches
-no runtime command.
+Seek uses the same two-level sparse index to select the last timestamp at or
+before the requested position. Normal replay does not decode intermediate
+records between sampled positions. With Repeat enabled, the newly calculated
+cursor is reduced modulo the final timestamp before every lookup, preserving
+any overshoot even across multiple loops. Without Repeat, passing the final
+timestamp publishes completion. The separate Burst widget is an inert
+placeholder and dispatches no runtime command.
 
 ## Source epoch rejection
 

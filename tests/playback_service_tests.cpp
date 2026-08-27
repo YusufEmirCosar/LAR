@@ -5,8 +5,9 @@ class PlaybackServiceTests final : public QObject {
 
   private slots:
     void initTestCase();
-    void replayAdvancesByFrameStepAndBinarySearchesSelectedRecord();
-    void repeatWrapsNextTimestampBeforeBinarySearch();
+    void replayAdvancesByFrameStepAndUsesBoundedReaderLookup();
+    void seekIsInclusiveWhileReplaySelectionRemainsStrict();
+    void repeatWrapsNextTimestampBeforeLookup();
     void playbackStopsOnExplicitReaderFailure();
     void playbackRejectsNonFiniteSeekAtEveryBoundary();
 };
@@ -18,7 +19,7 @@ void PlaybackServiceTests::initTestCase() {
     qRegisterMetaType<IpAccessPolicy>("IpAccessPolicy");
 }
 
-void PlaybackServiceTests::replayAdvancesByFrameStepAndBinarySearchesSelectedRecord() {
+void PlaybackServiceTests::replayAdvancesByFrameStepAndUsesBoundedReaderLookup() {
     constexpr int RecordCount = 1024;
     FakeSessionReader reader;
     reader.items.resize(RecordCount);
@@ -34,6 +35,7 @@ void PlaybackServiceTests::replayAdvancesByFrameStepAndBinarySearchesSelectedRec
     QCOMPARE(frameSpy.size(), 1);
     QVERIFY(playback.setRate(30.0));
 
+    const quint64 lookupsBeforeFrame = reader.findRecordCalls;
     const quint64 timestampReadsBeforeFrame = reader.timestampAtCalls;
     const quint64 recordReadsBeforeFrame = reader.recordAtCalls;
     playback.play();
@@ -44,7 +46,8 @@ void PlaybackServiceTests::replayAdvancesByFrameStepAndBinarySearchesSelectedRec
     QCOMPARE(frameSpy.size(), 2);
     QCOMPARE(qvariant_cast<DecodedState>(frameSpy.constLast().at(0)).target.time, 499.0);
     QCOMPARE(reader.recordAtCalls - recordReadsBeforeFrame, quint64(1));
-    QVERIFY(reader.timestampAtCalls - timestampReadsBeforeFrame <= quint64(11));
+    QCOMPARE(reader.findRecordCalls - lookupsBeforeFrame, quint64(1));
+    QCOMPARE(reader.timestampAtCalls - timestampReadsBeforeFrame, quint64(0));
     QCOMPARE(finishedSpy.size(), 0);
 
     clock.advanceFrames();
@@ -60,7 +63,29 @@ void PlaybackServiceTests::replayAdvancesByFrameStepAndBinarySearchesSelectedRec
     QVERIFY(!clock.isActive());
 }
 
-void PlaybackServiceTests::repeatWrapsNextTimestampBeforeBinarySearch() {
+void PlaybackServiceTests::seekIsInclusiveWhileReplaySelectionRemainsStrict() {
+    FakeSessionReader reader;
+    reader.items = {stateItem(0.0, 10.0), stateItem(0.5, 20.0), stateItem(0.5, 30.0),
+                    stateItem(1.0, 40.0)};
+    FakePlaybackClock clock;
+    PlaybackService playback(reader, clock);
+    QSignalSpy frameSpy(&playback, &PlaybackService::frameReady);
+
+    QString error;
+    QVERIFY(playback.loadData(QByteArrayLiteral("session"), &error));
+    playback.seek(sessionTimestamp(0.5));
+    QCOMPARE(playback.position().milliseconds(), qint64(500));
+    QCOMPARE(qvariant_cast<DecodedState>(frameSpy.constLast().at(0)).target.time, 30.0);
+
+    playback.stop();
+    QVERIFY(playback.setRate(30.0));
+    playback.play();
+    clock.advanceFrames();
+    QCOMPARE(playback.position().milliseconds(), qint64(500));
+    QCOMPARE(qvariant_cast<DecodedState>(frameSpy.constLast().at(0)).target.time, 10.0);
+}
+
+void PlaybackServiceTests::repeatWrapsNextTimestampBeforeLookup() {
     FakeSessionReader reader;
     reader.items = {stateItem(0.0, 10.0), stateItem(0.020, 20.0), stateItem(0.055, 30.0)};
     FakePlaybackClock clock;

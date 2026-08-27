@@ -226,6 +226,26 @@ class FakeSessionReader final : public ISessionReader {
     SessionTimestamp duration() const noexcept override {
         return items.isEmpty() ? SessionTimestamp{} : items.constLast().timestamp;
     }
+    bool findRecordAtOrBefore(SessionTimestamp position, qint64 *index,
+                              QString *error) const override {
+        if (!valid || !index || items.isEmpty()) {
+            if (error)
+                *error = QStringLiteral("invalid record lookup");
+            return false;
+        }
+        ++findRecordCalls;
+        qint64 low = 0;
+        qint64 high = items.size();
+        while (low < high) {
+            const qint64 middle = low + (high - low) / 2;
+            if (items.at(static_cast<qsizetype>(middle)).timestamp <= position)
+                low = middle + 1;
+            else
+                high = middle;
+        }
+        *index = low == 0 ? 0 : low - 1;
+        return true;
+    }
     bool timestampAt(qint64 index, SessionTimestamp *timestamp, QString *error) const override {
         if (!valid || !timestamp || index < 0 || index >= items.size()) {
             if (error)
@@ -255,6 +275,7 @@ class FakeSessionReader final : public ISessionReader {
     bool valid = false;
     QVector<SessionStateItem> items;
     int failingRecordIndex = -1;
+    mutable quint64 findRecordCalls = 0;
     mutable quint64 timestampAtCalls = 0;
     mutable quint64 recordAtCalls = 0;
 };
