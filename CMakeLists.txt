@@ -21,11 +21,14 @@ option(LAR_ENABLE_COVERAGE "Enable GCC/gcov coverage instrumentation" OFF)
 option(LAR_ENABLE_MUTATION "Enable Mull mutation instrumentation" OFF)
 option(LAR_BUILD_FUZZERS "Build parser fuzz targets" OFF)
 option(LAR_ENABLE_QUALITY_TARGETS "Define Python/tool-based quality targets" ON)
+
 include(CTest)
+
 set(LAR_DTED0_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/assets/DTED0" CACHE PATH
     "Development DTED0 root used by Plane terrain (not copied into build outputs)")
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
 include(LarWarnings)
 include(LarSanitizers)
 include(LarCoverage)
@@ -44,6 +47,7 @@ lar_configure_hardening()
 lar_detect_libfuzzer()
 lar_configure_map_assets()
 
+# Qt dependencies
 find_package(Qt6 6.10.3 REQUIRED COMPONENTS
     Core
     Concurrent
@@ -52,9 +56,21 @@ find_package(Qt6 6.10.3 REQUIRED COMPONENTS
     Widgets
     OpenGLWidgets
 )
+
+# Native OpenGL dependency.
+#
+# Use CMake's portable OpenGL target instead of linking directly against a
+# platform-specific library such as opengl32.lib.
+#
+# Windows -> OpenGL32
+# macOS   -> OpenGL framework
+# Linux   -> system OpenGL / GLVND implementation
+find_package(OpenGL REQUIRED)
+
 if(BUILD_TESTING)
     find_package(Qt6 6.10.3 REQUIRED COMPONENTS Test)
 endif()
+
 lar_configure_sbom()
 
 include("${PROJECT_SOURCE_DIR}/src/viewer/map/CMakeLists.txt")
@@ -63,43 +79,63 @@ include("${PROJECT_SOURCE_DIR}/src/domain/CMakeLists.txt")
 include("${PROJECT_SOURCE_DIR}/src/application/CMakeLists.txt")
 include("${PROJECT_SOURCE_DIR}/src/infrastructure/CMakeLists.txt")
 include("${PROJECT_SOURCE_DIR}/src/viewer/CMakeLists.txt")
+
+# lar-presentation-widgets uses native OpenGL functions such as glViewport().
+#
+# PUBLIC is intentional because this is a static library and the final
+# executable must also receive the native OpenGL link dependency.
+target_link_libraries(lar-presentation-widgets
+    PUBLIC
+        OpenGL::GL
+)
+
 if(BUILD_TESTING)
     include("${PROJECT_SOURCE_DIR}/tests/CMakeLists.txt")
 endif()
 
 lar_apply_project_defaults()
+
 if(LAR_ENABLE_QUALITY_TARGETS)
     include(LarQualityTargets)
 endif()
 
 file(COPY maps DESTINATION "${CMAKE_BINARY_DIR}")
 
-install(TARGETS lar-viewer lar-test-sender
+install(TARGETS
+    lar-viewer
+    lar-test-sender
     BUNDLE DESTINATION .
     RUNTIME DESTINATION bin
 )
+
 if(WIN32)
     qt_generate_deploy_app_script(
         TARGET lar-viewer
         OUTPUT_SCRIPT lar_viewer_deploy_script
         NO_TRANSLATIONS
     )
+
     install(SCRIPT "${lar_viewer_deploy_script}")
 endif()
+
 install(FILES
     "${LAR_MAP_ASSET_FILE}"
     "${LAR_MAP_MANIFEST_FILE}"
     DESTINATION bin
 )
+
 install(FILES
     assets/models/f16_3.glb
     DESTINATION bin/assets/models
 )
+
 install(DIRECTORY
     assets/cubemaps/
     DESTINATION bin/assets/cubemaps
-    FILES_MATCHING PATTERN "*.png"
+    FILES_MATCHING
+        PATTERN "*.png"
 )
+
 install(FILES
     maps/full-state.json
     maps/dlz-inputs.json
