@@ -123,7 +123,10 @@ e151/s34.dt2
 ```
 
 Path resolution tries lower- and upper-case variants, requires a regular file,
-and verifies canonical containment below the selected root.
+and verifies canonical containment below the selected root. Root paths first
+normalize native separators. Containment is then evaluated from the canonical
+relative path, so Windows backslashes, drive-letter casing, sibling-directory
+prefixes, and symlink escapes are handled without string-prefix ambiguity.
 
 The Plane upload workflow accepts Level 1 or Level 2. It scans at most 1,024
 immediate longitude directories and 512 candidate files while looking for one

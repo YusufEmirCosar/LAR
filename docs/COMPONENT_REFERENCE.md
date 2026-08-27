@@ -244,7 +244,7 @@ Resource limits live in `lar_zone_mesh_limits.h` and
 | Component | Important operations | Responsibility |
 | --- | --- | --- |
 | `DtedCellReader` | `readFile`, profile parsing | Validates UHL/DSI/ACC records, level-specific dimensions, profile sequence/checksum, coordinates, signed-magnitude samples, and no-data values |
-| `DtedTileSource` | `pathFor`, `load` | Converts WGS84 degree keys to canonical DT0/DT1/DT2 paths while containing reads beneath the selected root |
+| `DtedTileSource` | `pathFor`, `load` | Converts WGS84 degree keys to canonical DT0/DT1/DT2 paths and applies platform-aware canonical-relative containment beneath the selected root |
 | `DtedMosaicSampler` | `sample` | Bilinear elevation sampling across cell boundaries with a 24-entry/128-MiB LRU and bounded negative lookups |
 | `PlaneLandMaskBuilder` | `build` | Rasterizes candidate `MapLandIndex` triangles into an adaptive local R8 mask; collapses uniform all-land/all-water results |
 | `PlaneTerrainPatchBuilder` | `build` | Samples a bounded local tangent grid, derives normals and water depth, and emits one immutable CPU patch |

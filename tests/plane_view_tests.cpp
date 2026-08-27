@@ -276,6 +276,8 @@ class PlaneViewTests final : public QObject {
     void projectsAltitudeWithoutAircraftGroundPosition();
     void projectsExtremeAltitudeWithinGpuLimits();
     void readsAndValidatesVariableWidthDted0Cells();
+    void loadsContainedDtedThroughNativePathSyntax();
+    void rejectsDtedFileSymlinkOutsideRoot();
     void readsAndValidatesDted1AndDted2Cells();
     void addressesAndSamplesDted0WithoutScanning();
     void addressesAndSamplesHighResolutionDtedWithBoundedCache();
@@ -828,6 +830,44 @@ void PlaneViewTests::readsAndValidatesVariableWidthDted0Cells() {
         DtedCellReader::readFile(invalidSpanFile.fileName());
     QVERIFY(!invalidSpanResult.succeeded());
     QVERIFY(invalidSpanResult.message.contains(QStringLiteral("one degree")));
+}
+
+void PlaneViewTests::loadsContainedDtedThroughNativePathSyntax() {
+    QTemporaryDir directory;
+    QVERIFY(directory.isValid());
+    const QString nativeRoot = QDir::toNativeSeparators(directory.path());
+    const DtedCellKey key{29, 41};
+    QVERIFY(dted_test_fixture::writeCell(nativeRoot, DtedLevel::Level0, key, 1, 321));
+
+    const DtedTileSource source(nativeRoot, DtedLevel::Level0);
+    QVERIFY(source.isAvailable());
+    const DtedCellReadResult result = source.load(key);
+    QVERIFY2(result.succeeded(), qPrintable(result.message));
+    QCOMPARE(result.cell->key, key);
+    QCOMPARE(qRound(*result.cell->elevation(60, 60)), 321);
+}
+
+void PlaneViewTests::rejectsDtedFileSymlinkOutsideRoot() {
+    QTemporaryDir directory;
+    QVERIFY(directory.isValid());
+    const QDir workspace(directory.path());
+    const QString root = workspace.filePath(QStringLiteral("root"));
+    const QString outside = workspace.filePath(QStringLiteral("outside"));
+    QVERIFY(QDir().mkpath(root));
+    QVERIFY(QDir().mkpath(outside));
+
+    const DtedCellKey key{29, 41};
+    QVERIFY(dted_test_fixture::writeCell(outside, DtedLevel::Level0, key, 1, 654));
+    const QString outsideFile = DtedTileSource(outside).pathFor(key);
+    const QString linkedFile = DtedTileSource(root).pathFor(key);
+    QVERIFY(QDir().mkpath(QFileInfo(linkedFile).absolutePath()));
+    if (!QFile::link(outsideFile, linkedFile) || !QFileInfo(linkedFile).isFile()) {
+        QSKIP("The test filesystem cannot create a transparent file symlink");
+    }
+
+    const DtedCellReadResult result = DtedTileSource(root).load(key);
+    QVERIFY(!result.succeeded());
+    QVERIFY(result.message.contains(QStringLiteral("outside the selected root")));
 }
 
 void PlaneViewTests::readsAndValidatesDted1AndDted2Cells() {

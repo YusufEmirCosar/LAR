@@ -225,7 +225,7 @@ DTED source selection</h1>
 <div class="fragment"><div class="line">e035/n39.dt0</div>
 <div class="line">w123/n48.dt1</div>
 <div class="line">e151/s34.dt2</div>
-</div><!-- fragment --><p>Path resolution tries lower- and upper-case variants, requires a regular file, and verifies canonical containment below the selected root.</p>
+</div><!-- fragment --><p>Path resolution tries lower- and upper-case variants, requires a regular file, and verifies canonical containment below the selected root. Root paths first normalize native separators. Containment is then evaluated from the canonical relative path, so Windows backslashes, drive-letter casing, sibling-directory prefixes, and symlink escapes are handled without string-prefix ambiguity.</p>
 <p>The <a class="el" href="struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft.">Plane</a> upload workflow accepts Level 1 or Level 2. It scans at most 1,024 immediate longitude directories and 512 candidate files while looking for one valid addressed tile. A candidate source becomes active only after that tile passes the full reader. Cancellation or failure retains the old dataset and patch.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md207"></a>
 Supported DTED levels</h1>

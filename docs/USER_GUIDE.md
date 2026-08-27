@@ -258,7 +258,9 @@ files follow:
 
 The chosen directory is validated and used in place for this session. It is not
 copied into the application. Cancelling either dialog or choosing an invalid
-tree leaves the active source unchanged.
+tree leaves the active source unchanged. Windows paths may use normal native
+backslashes; the application normalizes them before checking that each tile
+remains inside the chosen directory.
 
 Terrain requires aircraft latitude and longitude. Mapped aircraft altitude is
 interpreted as metres above a mean-sea-level datum compatible with the DTED

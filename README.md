@@ -550,7 +550,9 @@ DTED Level 1 or Level 2, then choose a folder whose cells use
 `{e|w}DDD/{n|s}DD.dt1` or `.dt2`; the validated folder becomes the source for
 the current session without being copied. The format prompt and folder picker
 can both be cancelled without changing the active source. An invalid folder
-also leaves the current source and patch intact.
+also leaves the current source and patch intact. Native Windows folder
+separators and drive-letter casing are normalized before canonical containment
+is checked.
 
 DTED horizontal coordinates remain WGS84, elevations are interpreted as metres
 above the tile's declared mean-sea-level datum, and the aircraft stays at the

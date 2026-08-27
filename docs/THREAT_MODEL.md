@@ -169,11 +169,13 @@ as coastline classification.
 
 DTED roots are user-selected directory boundaries. Coordinates resolve only to
 the fixed `{e|w}DDD/{n|s}DD.dt0|dt1|dt2` layout; a canonical regular file must
-remain beneath the canonical selected root. The parser streams UHL, DSI, ACC,
-and elevation profiles and validates declared origins, level dimensions,
-profile order, checksums, signed-magnitude samples, and the `-32767` no-data
-sentinel before publishing a cell. The mosaic cache is capped at 24 entries and
-128 MiB, including bounded negative lookups.
+remain beneath the canonical selected root. The containment decision uses a
+normalized canonical relative path rather than a separator-sensitive string
+prefix, retaining the boundary on both Unix and Windows. The parser streams
+UHL, DSI, ACC, and elevation profiles and validates declared origins, level
+dimensions, profile order, checksums, signed-magnitude samples, and the
+`-32767` no-data sentinel before publishing a cell. The mosaic cache is capped
+at 24 entries and 128 MiB, including bounded negative lookups.
 
 Terrain requests cap spatial extent and sample resolution before allocation.
 The land raster is power-of-two R8 at 256–2,048 pixels, or a constant when the

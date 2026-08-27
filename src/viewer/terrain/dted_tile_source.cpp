@@ -20,7 +20,7 @@ double normalizedLongitudeDegrees(double degrees) noexcept {
 } // namespace
 
 DtedTileSource::DtedTileSource(QString rootDirectory, DtedLevel level)
-    : m_rootDirectory(QDir::cleanPath(std::move(rootDirectory))),
+    : m_rootDirectory(QDir::cleanPath(QDir::fromNativeSeparators(std::move(rootDirectory)))),
       m_canonicalRootDirectory(QFileInfo(m_rootDirectory).canonicalFilePath()), m_level(level) {}
 
 bool DtedTileSource::isAvailable() const {
@@ -34,8 +34,21 @@ bool DtedTileSource::containsFile(const QString &path) const {
     }
     const QFileInfo fileInfo(path);
     const QString canonicalFile = fileInfo.canonicalFilePath();
-    const QString rootPrefix = QDir::cleanPath(m_canonicalRootDirectory) + QDir::separator();
-    return fileInfo.isFile() && !canonicalFile.isEmpty() && canonicalFile.startsWith(rootPrefix);
+    if (!fileInfo.isFile() || canonicalFile.isEmpty()) {
+        return false;
+    }
+
+    // QDir paths use forward slashes internally even on Windows, whereas
+    // QDir::separator() returns the native backslash there. Comparing a path
+    // against a prefix built with the native separator therefore rejected
+    // valid Windows tiles. A canonical relative path also gives the boundary
+    // check platform-aware drive-letter and case handling without admitting a
+    // sibling directory or a symlink target above the selected root.
+    const QString relative = QDir::cleanPath(
+        QDir::fromNativeSeparators(QDir(m_canonicalRootDirectory).relativeFilePath(canonicalFile)));
+    return !relative.isEmpty() && !QDir::isAbsolutePath(relative) &&
+           relative != QStringLiteral(".") && relative != QStringLiteral("..") &&
+           !relative.startsWith(QStringLiteral("../"));
 }
 
 QString DtedTileSource::pathFor(const DtedCellKey &key) const {
