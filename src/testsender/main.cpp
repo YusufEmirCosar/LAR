@@ -92,6 +92,13 @@ int main(int argc, char *argv[]) {
     TestSenderScenarios::initialize(scenario, &state.plane, &state.target, &state.dlzInputs);
 
     QUdpSocket socket;
+    const QHostAddress localAddress =
+        destination.protocol() == QHostAddress::IPv6Protocol ? QHostAddress::AnyIPv6
+                                                              : QHostAddress::AnyIPv4;
+    if (!socket.bind(localAddress, 0)) {
+        QTextStream(stderr) << "UDP bind failed: " << socket.errorString() << '\n';
+        return 1;
+    }
     QTimer timer;
     timer.setTimerType(Qt::PreciseTimer);
     int sent = 0;
