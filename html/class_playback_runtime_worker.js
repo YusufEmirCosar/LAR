@@ -23,11 +23,15 @@ var class_playback_runtime_worker =
     [ "playbackPlayingChanged", "class_playback_runtime_worker.html#af7fb2601eef9fbb46972869673ac6ca5", null ],
     [ "playbackFinished", "class_playback_runtime_worker.html#a994bb0569c0addfff05cc069da1d596d", null ],
     [ "runtimeError", "class_playback_runtime_worker.html#aaa750e73b3f79d0c341ffdd33f912732", null ],
+    [ "clearDeferredPublication", "class_playback_runtime_worker.html#a84809a485c7d694cbefda87229026858", null ],
+    [ "flushDeferredPublication", "class_playback_runtime_worker.html#a442250e93a09ec825dd3565df590922d", null ],
     [ "m_reader", "class_playback_runtime_worker.html#a8827454e5f81892fe463acf7d8294981", null ],
     [ "m_clockFactory", "class_playback_runtime_worker.html#a611bffa4cda5a6eb584f0fa80d5cd0bd", null ],
     [ "m_clock", "class_playback_runtime_worker.html#a5ae6e0428cc8822317a46724c0f4f3ec", null ],
     [ "m_playback", "class_playback_runtime_worker.html#a11e52a0306e2bc52f9624a4206569b7f", null ],
-    [ "m_publication", "class_playback_runtime_worker.html#a1e450d8ef67308b15c32c8093aea8e50", null ],
     [ "m_metrics", "class_playback_runtime_worker.html#ad506db945de7fa2adc4003c4ae916295", null ],
-    [ "m_stateGeneration", "class_playback_runtime_worker.html#ac95dadbd2b06c2458714d14879a8bada", null ]
+    [ "m_deferredState", "class_playback_runtime_worker.html#a8f41afe71dc82b8840646bdb3524b8a8", null ],
+    [ "m_deferredPosition", "class_playback_runtime_worker.html#ac0e6dd831c5718791d64b00c55d58c0f", null ],
+    [ "m_stateGeneration", "class_playback_runtime_worker.html#ac95dadbd2b06c2458714d14879a8bada", null ],
+    [ "m_publicationDeferred", "class_playback_runtime_worker.html#a63573d63f9a4d72720608f131223d4f9", null ]
 ];

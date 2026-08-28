@@ -290,7 +290,7 @@ Mutation analysis</h1>
 <p>The <span class="tt">mutation</span> preset instruments domain/application code through a Mull IR frontend matching the selected Clang. <span class="tt">check-mutation</span> runs <span class="tt">lardomain-tests</span> in strict mode and requires an 85% mutation score. Mull must be installed separately and can be selected with <span class="tt">LAR_MULL_IR_FRONTEND</span>.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md176"></a>
 Performance evidence</h1>
-<p><span class="tt">run-benchmarks</span> writes JSON metrics for mapping, recording, playback, map, and viewport operations. <span class="tt">check-performance</span> additionally requires <span class="tt">LAR_PERFORMANCE_BASELINE</span> and rejects either median or p95 latency more than 10% above that baseline. A comparison is meaningful only on a pinned runner with controlled power and thermal state.</p>
+<p><span class="tt">run-benchmarks</span> writes JSON metrics for mapping, recording, playback, map, and viewport operations. The session benchmark includes alternating random access across former 4,096-record page boundaries, so a regression to repeated page reconstruction is directly visible. <span class="tt">check-performance</span> additionally requires <span class="tt">LAR_PERFORMANCE_BASELINE</span> and rejects either median or p95 latency more than 10% above that baseline. A comparison is meaningful only on a pinned runner with controlled power and thermal state.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md177"></a>
 Install and dependency evidence</h1>
 <p><span class="tt">check-install-layout</span> performs a clean temporary install and requires:</p>

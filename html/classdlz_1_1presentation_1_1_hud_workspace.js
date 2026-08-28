@@ -11,6 +11,8 @@ var classdlz_1_1presentation_1_1_hud_workspace =
     [ "clearExternalInputs", "classdlz_1_1presentation_1_1_hud_workspace.html#a365b1bab1d7695e1ed8db3023413ca24", null ],
     [ "frameRendered", "classdlz_1_1presentation_1_1_hud_workspace.html#a1a845ea43564740c0b1604942ebd9175", null ],
     [ "diagnosticRaised", "classdlz_1_1presentation_1_1_hud_workspace.html#a33bf0345b5e07d56f8af527bc50cadf7", null ],
+    [ "showEvent", "classdlz_1_1presentation_1_1_hud_workspace.html#a77fdf34eba1a4c0d47de45cb5bab408d", null ],
+    [ "hideEvent", "classdlz_1_1presentation_1_1_hud_workspace.html#ab2b2140048d404087bf063f969932848", null ],
     [ "rebuildFromControls", "classdlz_1_1presentation_1_1_hud_workspace.html#a0fc4d8836facedbfb974f790999b8031", null ],
     [ "tick", "classdlz_1_1presentation_1_1_hud_workspace.html#af1ca70733865aad221a2e501b4f56fa8", null ],
     [ "rebuild", "classdlz_1_1presentation_1_1_hud_workspace.html#a622f9724a812e8564fa34383c26240be", null ],

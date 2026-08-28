@@ -13,7 +13,7 @@ terrain remains visible.
 | --- | --- | --- |
 | UI / caller | `ApplicationFacade`, `SourceLifecycleCoordinator`, `ApplicationViewModel`, `MainWindow`, all widgets, `ThreadedApplicationRuntime` relay | User commands, lifecycle intent, accepted result filtering, presentation only |
 | `lar-network-thread` | `NetworkRuntimeWorker`, `QtUdpDatagramSource`, `OnlineCaptureService`, online `MetricsService`, active decoder/repository | UDP receive, policy filter, mapping install, decode/validate, visual coalescing, recording batching |
-| `lar-session-thread` | `RecordingRuntimeWorker`, `RecordingService`, `RecordingPipelineCoordinator`, `PlaybackRuntimeWorker`, `PlaybackService`, reader/clock/throttle/metrics | Recording append and barriers; session parse/sparse paging/decode; playback scheduling |
+| `lar-session-thread` | `RecordingRuntimeWorker`, `RecordingService`, `RecordingPipelineCoordinator`, `PlaybackRuntimeWorker`, `PlaybackService`, reader/clock/metrics | Recording append and barriers; session parse, resident-or-sparse indexing, decode, and playback scheduling |
 | `lar-persistence-thread` | `PersistenceRuntimeWorker`, `QtSessionPersistence` | Slow destination writes and atomic commit |
 | `lar-plane-terrain-thread` (conditional) | `PlaneTerrainWorker`, `PlaneTerrainPatchBuilder`, `DtedMosaicSampler`, `PlaneLandMaskBuilder`, shared `MapLandIndex` | Bounded file parsing, bilinear elevation sampling, vector land/water classification, normals, bathymetry, and latest-only immutable patch publication |
 
@@ -106,12 +106,18 @@ Decode and recording are not throttled together with drawing:
   recording and metrics, but publishes only the latest `DecodedState` every
   16 ms.
 - `PlaybackService` requests one timestamp selection per 60 Hz replay tick.
-  `LarSessionReader` binary-searches its compact checkpoint timestamps, loads at
-  most the selected 4,096-record page when it is not already cached, and then
-  searches that page in memory. It decodes at most the selected record and
-  counts a record only when the displayed index changes.
-- `PlaybackPublicationThrottle` emits only the latest sampled frame and
-  position every 16 ms, so queued UI delivery remains bounded.
+  `LarSessionReader` directly binary-searches its bounded complete index when
+  available. If that index exceeded its memory budget during validation, the
+  reader binary-searches compact checkpoint timestamps, loads at most the
+  selected 4,096-record page when needed, and searches that page in memory. It
+  decodes at most the selected record and counts a record only when the
+  displayed index changes.
+- `PlaybackRuntimeWorker` forwards each changed sampled frame and exact
+  position on that same replay tick. There is no second publication timer whose
+  phase can suppress otherwise valid 60 Hz samples.
+- `LarViewport` retains the latest scene centrally and applies each live update
+  only to the visible Grid, Earth, Plane, or DLZ page. A newly selected page is
+  synchronized before it becomes visible.
 
 Consequently playback totals describe sampled record changes, not every stored
 record crossed by a high replay rate or the number of viewport paints.

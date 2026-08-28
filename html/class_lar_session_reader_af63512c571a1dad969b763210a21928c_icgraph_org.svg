@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Releases the source, sparse index, decoded mapping, and cached record page.">
+<g id="a_Node000001"><a xlink:title="Releases every source, index, decoded mapping, and cached record page.">
 <polygon fill="#999999" stroke="#666666" points="441,-57.25 315.5,-57.25 315.5,-38 441,-38 441,-57.25"/>
 <text xml:space="preserve" text-anchor="middle" x="378.25" y="-43.75" font-family="Helvetica,sans-Serif" font-size="10.00">LarSessionReader::close</text>
 </a>

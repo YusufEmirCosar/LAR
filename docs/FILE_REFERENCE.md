@@ -136,14 +136,13 @@ implementation files are listed explicitly.
 | `src/infrastructure/session/lar_session_writer.{h,cpp}` | Streaming temporary-file LAR1 transaction |
 | `src/infrastructure/session/file_session_snapshot.{h,cpp}` | Immutable retained file-prefix snapshot |
 | `src/infrastructure/session/qt_session_persistence.{h,cpp}` | Atomic `QSaveFile` snapshot commit |
-| `src/infrastructure/session/lar_session_reader.{h,cpp}` | Full LAR1 validator with timestamped 4,096-record sparse checkpoints, two-level lookup, one page cache, and lazy packet decode |
+| `src/infrastructure/session/lar_session_reader.{h,cpp}` | Full LAR1 validator with bounded source/index residency, timestamped 4,096-record checkpoint/page fallback, and lazy packet decode |
 | `src/infrastructure/timing/qt_recording_clock.{h,cpp}` | `steady_clock` recording-clock adapter |
 | `src/infrastructure/timing/qt_playback_clock.{h,cpp}` | Precise `QTimer` playback-clock adapter |
 | `src/infrastructure/runtime/network_runtime_worker.{h,cpp}` | Network-thread composition, commands, capture batching, metrics |
 | `src/infrastructure/runtime/recording_runtime_worker.{h,cpp}` | Session-thread recording composition and protocol translation |
-| `src/infrastructure/runtime/playback_runtime_worker.{h,cpp}` | Session-thread reader/playback composition and protocol translation |
+| `src/infrastructure/runtime/playback_runtime_worker.{h,cpp}` | Session-thread reader/playback composition with replay-tick-aligned state and position publication |
 | `src/infrastructure/runtime/persistence_runtime_worker.{h,cpp}` | Persistence-thread atomic snapshot saves |
-| `src/infrastructure/runtime/playback_publication_throttle.{h,cpp}` | Latest-frame/position coalescing before UI delivery |
 | `src/infrastructure/runtime/playback_metrics.{h,cpp}` | Playback processed-record totals and rate windows |
 | `src/infrastructure/runtime/threaded_application_runtime.{h,cpp}` | Production worker construction, affinity, relay, lifecycle, shutdown |
 
@@ -212,7 +211,7 @@ implementation files are listed explicitly.
 | `src/viewer/viewport/lar_viewport_page.h` | Base and Earth-specific page interfaces plus event relay |
 | `src/viewer/viewport/viewport_content_mode.h` | LAR, Plane, and DLZ content enum |
 | `src/viewer/viewport/viewport_content_switch.{h,cpp}` | Accessible three-button content switch |
-| `src/viewer/viewport/lar_viewport.{h,cpp}` | Grid/Earth/Plane/DLZ host, page switching, state/camera delegation |
+| `src/viewer/viewport/lar_viewport.{h,cpp}` | Grid/Earth/Plane/DLZ host with active-page-only live updates and pre-switch synchronization |
 | `src/viewer/viewport/viewport_controls.{h,cpp}` | Projection/tracking/rotation/fit controls |
 | `src/viewer/viewport/viewport_camera_controller.{h,cpp}` | Projection-neutral tracking/free/rotation camera policy |
 | `src/viewer/viewport/grid_camera_transform.{h,cpp}` | Grid world/screen transforms, pan, zoom |
@@ -270,7 +269,7 @@ implementation files are listed explicitly.
 | Path | Purpose |
 | --- | --- |
 | `src/viewer/hud/dlz_control_panel.{h,cpp}` | Input mode, scenario sliders, readouts, persistent diagnostics |
-| `src/viewer/hud/dlz_hud_workspace.{h,cpp}` | Input arbitration, domain rebuild, temporal tick/presentation coordination |
+| `src/viewer/hud/dlz_hud_workspace.{h,cpp}` | Input arbitration, domain rebuild, and visibility-scoped temporal tick/presentation coordination |
 | `src/viewer/hud/dlz_presentation_controller.{h,cpp}` | Filtering, scale selection, mode timing, shoot-cue state |
 | `src/viewer/hud/dlz_range_scale.{h,cpp}` | Range-to-pixel conversion and hysteretic scale steps |
 | `src/viewer/hud/dlz_hud_view.{h,cpp}` | Paint-ready state widget |

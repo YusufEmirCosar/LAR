@@ -152,6 +152,39 @@ int main(int argc, char **argv) {
             numericSink = numericSink + static_cast<double>(reader.recordCount());
     });
 
+    // Exercise non-local replay jumps across the former 4,096-record page
+    // boundaries. This specifically guards the high-rate playback path rather
+    // than measuring only sequential access inside the first cache page.
+    constexpr int RandomAccessRecordCount = 16'385;
+    for (int index = 1000; index < RandomAccessRecordCount; ++index) {
+        const auto timestamp = SessionTimestamp::fromMilliseconds(qint64(index) * 10);
+        if (!timestamp || !writer.append(*timestamp, packet, &error)) {
+            qCritical().noquote() << error;
+            return 2;
+        }
+    }
+    reader.close();
+    if (!writer.createSnapshot(&snapshot, &error) ||
+        !QtSessionPersistence().save(snapshot, sessionPath, &error) ||
+        !reader.loadFile(sessionPath, &error)) {
+        qCritical().noquote() << error;
+        return 2;
+    }
+    qint64 randomAccessOperation = 0;
+    const BenchmarkSummary randomAccessSummary = measure(25, 100, [&] {
+        static constexpr qint64 FormerPageStarts[]{0, 4096, 8192, 12'288, 16'384};
+        const qint64 requested =
+            FormerPageStarts[randomAccessOperation % std::size(FormerPageStarts)];
+        ++randomAccessOperation;
+        qint64 selected = -1;
+        SessionStateItem selectedItem;
+        if (reader.findRecordAtOrBefore(SessionTimestamp::clampedMilliseconds(requested * 10),
+                                        &selected, &error) &&
+            reader.recordAt(selected, &selectedItem, &error)) {
+            numericSink = numericSink + selectedItem.state.target.time;
+        }
+    });
+
     lar::map::PackagedMapAssetSource mapSource(QStringLiteral(LAR_TEST_MAP_PACKAGE_DIR));
     const BenchmarkSummary mapLoadSummary = measure(11, 1, [&] {
         const lar::map::MapAssetReadResult result = mapSource.load();
@@ -174,6 +207,8 @@ int main(int argc, char **argv) {
         {QStringLiteral("packet_decode"), metric(decodeSummary, QStringLiteral("ns"))},
         {QStringLiteral("snapshot_prepare"), metric(snapshotSummary, QStringLiteral("ns"))},
         {QStringLiteral("session_load"), metric(sessionLoadSummary, QStringLiteral("us"), 1000.0)},
+        {QStringLiteral("session_random_access"),
+         metric(randomAccessSummary, QStringLiteral("ns"))},
         {QStringLiteral("map_load"), metric(mapLoadSummary, QStringLiteral("us"), 1000.0)},
         {QStringLiteral("mesh_build"), metric(meshSummary, QStringLiteral("us"), 1000.0)},
     };

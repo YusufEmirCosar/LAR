@@ -140,8 +140,8 @@ Recording and playback</h2>
 <li>Recording shall preserve the canonical mapping and the exact accepted UDP datagram boundaries in the versioned <span class="tt">LAR1</span> stream.</li>
 <li>Recording timestamps shall use active recording time; paused intervals shall not advance them, and adjacent records may have equal timestamps.</li>
 <li>A snapshot shall represent an immutable file prefix. Saving shall use atomic replacement and preserve an existing destination if commit fails.</li>
-<li>There is no product maximum for records per session. Capacity is governed by available storage, the <span class="tt">LAR1</span> byte layout, the supported duration, and the signed 64-bit application index range. The reader shall not retain one index entry per record: it keeps one timestamp-and-offset checkpoint per 4,096 records and a single 4,096-record location page.</li>
-<li>Playback shall use exact millisecond timestamps, select the page from the sparse timestamp checkpoints, search only that bounded page, and decode at most the selected record on each presentation tick.</li>
+<li>There is no product maximum for records per session. Capacity is governed by available storage, the <span class="tt">LAR1</span> byte layout, the supported duration, and the signed 64-bit application index range. The reader shall apply independent, explicit memory budgets: file sources no larger than 512 MiB may become an immutable resident snapshot, and a complete record-location index may occupy at most 128 MiB. It shall retain one timestamp-and-offset checkpoint per 4,096 records and a single bounded location page as the fallback when the complete index budget is exceeded.</li>
+<li>Playback shall use exact millisecond timestamps, use the complete resident index when available or the bounded sparse fallback otherwise, and decode at most the selected record on each presentation tick. A changed sampled state and its exact position shall be published on that same tick.</li>
 </ul>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md38"></a>
 Visualization</h2>
@@ -150,6 +150,7 @@ Visualization</h2>
 <li>Earth-zone boundaries shall use geodesic construction. The adaptive renderer's projected curve-error target is 0.65 pixel.</li>
 <li>The fixed-topology parametric GPU path may be selected only when its projected topology and float-coordinate error fit the same pixel budget. Numerically sensitive, polar, or extreme-zoom cases shall fall back to camera-relative, adaptively sampled CPU geometry.</li>
 <li>GPU resources shall be created, used, and destroyed only while their owning OpenGL context is current.</li>
+<li>Only the active viewport page shall consume each live scene-state update. Hidden pages shall synchronize from the latest retained state before they become visible.</li>
 <li>The DLZ view shall remain clearly identified as a deterministic fictional teaching model.</li>
 </ul>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md39"></a>

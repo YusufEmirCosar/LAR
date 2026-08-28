@@ -101,13 +101,18 @@ and validation. A `LAR1` record payload is limited to 16 MiB; embedded mapping
 data is limited to 16 MiB; timestamps are non-decreasing and limited to 365
 days. There is deliberately no arbitrary maximum record count.
 
-The session reader performs a complete validation pass, stores one timestamp
-and header-offset checkpoint per 4,096 records, and caches at most one
-4,096-record location page. Thus file
-size and validation time can grow with a session, while resident index memory
-does not grow one entry per record. Counts and indices use signed 64-bit values;
-the byte layout, storage, duration, and that representation are the remaining
-natural limits. Saves use immutable snapshots and `QSaveFile` commit semantics.
+The session reader performs a complete validation pass and always stores one
+timestamp-and-header-offset checkpoint per 4,096 records. `loadFile` may retain
+at most 512 MiB as an immutable source snapshot, and the complete per-record
+location index has a separate 128 MiB cap. If the index cap would be exceeded,
+the reader discards that index and caches at most one 4,096-record location
+page; sources above the snapshot cap remain file-backed. File-backed random
+access revalidates source size, while cached sources cannot be changed through
+the original path after validation. Thus memory use is explicitly bounded
+without imposing an arbitrary record-count limit. Counts and indices use
+signed 64-bit values; the byte layout, storage, duration, and that
+representation are the remaining natural limits. Saves use immutable snapshots
+and `QSaveFile` commit semantics.
 
 Sessions do not carry a signature or origin proof. Structurally valid tampering
 cannot be distinguished from legitimate capture; distribute trusted evidence

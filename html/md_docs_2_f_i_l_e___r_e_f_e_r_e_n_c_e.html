@@ -323,7 +323,7 @@ Infrastructure source</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt">src/infrastructure/session/qt_session_persistence.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Atomic <span class="tt">QSaveFile</span> snapshot commit  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><span class="tt">src/infrastructure/session/lar_session_reader.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Full LAR1 validator with timestamped 4,096-record sparse checkpoints, two-level lookup, one page cache, and lazy packet decode  </td></tr>
+<td class="markdownTableBodyNone"><span class="tt">src/infrastructure/session/lar_session_reader.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Full LAR1 validator with bounded source/index residency, timestamped 4,096-record checkpoint/page fallback, and lazy packet decode  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt">src/infrastructure/timing/qt_recording_clock.{h,cpp}</span>  </td><td class="markdownTableBodyNone"><span class="tt">steady_clock</span> recording-clock adapter  </td></tr>
 <tr class="markdownTableRowEven">
@@ -333,14 +333,12 @@ Infrastructure source</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">src/infrastructure/runtime/recording_runtime_worker.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Session-thread recording composition and protocol translation  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><span class="tt">src/infrastructure/runtime/playback_runtime_worker.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Session-thread reader/playback composition and protocol translation  </td></tr>
+<td class="markdownTableBodyNone"><span class="tt">src/infrastructure/runtime/playback_runtime_worker.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Session-thread reader/playback composition with replay-tick-aligned state and position publication  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">src/infrastructure/runtime/persistence_runtime_worker.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Persistence-thread atomic snapshot saves  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><span class="tt">src/infrastructure/runtime/playback_publication_throttle.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Latest-frame/position coalescing before UI delivery  </td></tr>
-<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">src/infrastructure/runtime/playback_metrics.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Playback processed-record totals and rate windows  </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">src/infrastructure/runtime/threaded_application_runtime.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Production worker construction, affinity, relay, lifecycle, shutdown  </td></tr>
 </table>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md139"></a>
@@ -459,7 +457,7 @@ Viewport subsystem</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">src/viewer/viewport/viewport_content_switch.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Accessible three-button content switch  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><span class="tt">src/viewer/viewport/lar_viewport.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Grid/Earth/Plane/DLZ host, page switching, state/camera delegation  </td></tr>
+<td class="markdownTableBodyNone"><span class="tt">src/viewer/viewport/lar_viewport.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Grid/Earth/Plane/DLZ host with active-page-only live updates and pre-switch synchronization  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">src/viewer/viewport/viewport_controls.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Projection/tracking/rotation/fit controls  </td></tr>
 <tr class="markdownTableRowOdd">
@@ -567,7 +565,7 @@ DLZ HUD presentation</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt">src/viewer/hud/dlz_control_panel.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Input mode, scenario sliders, readouts, persistent diagnostics  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><span class="tt">src/viewer/hud/dlz_hud_workspace.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Input arbitration, domain rebuild, temporal tick/presentation coordination  </td></tr>
+<td class="markdownTableBodyNone"><span class="tt">src/viewer/hud/dlz_hud_workspace.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Input arbitration, domain rebuild, and visibility-scoped temporal tick/presentation coordination  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt">src/viewer/hud/dlz_presentation_controller.{h,cpp}</span>  </td><td class="markdownTableBodyNone">Filtering, scale selection, mode timing, shoot-cue state  </td></tr>
 <tr class="markdownTableRowEven">

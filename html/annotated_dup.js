@@ -208,7 +208,6 @@ var annotated_dup =
     [ "PlaybackFinishedEvent", "struct_playback_finished_event.html", "struct_playback_finished_event" ],
     [ "PlaybackMetrics", "class_playback_metrics.html", "class_playback_metrics" ],
     [ "PlaybackPositionEvent", "struct_playback_position_event.html", "struct_playback_position_event" ],
-    [ "PlaybackPublicationThrottle", "class_playback_publication_throttle.html", "class_playback_publication_throttle" ],
     [ "PlaybackRuntimeWorker", "class_playback_runtime_worker.html", "class_playback_runtime_worker" ],
     [ "PlaybackService", "class_playback_service.html", "class_playback_service" ],
     [ "PlaybackStateEvent", "struct_playback_state_event.html", "struct_playback_state_event" ],

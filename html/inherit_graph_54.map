@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="Node000000" href="$class_i_recording_clock.html" title="Process&#45;wide monotonic time abstraction for deterministic recording tests." alt="" coords="5,5,124,31"/>
 <area shape="rect" id="Node000001" href="$class_qt_recording_clock.html" title="Process&#45;wide steady&#45;clock implementation used by receipt timestamps." alt="" coords="172,5,300,31"/>
-<area shape="poly" id="edge68_Node000000_Node000001" title=" " alt="" coords="139,16,174,18,168,18,139,21"/>
+<area shape="poly" id="edge67_Node000000_Node000001" title=" " alt="" coords="139,16,174,18,168,18,139,21"/>
 </map>

@@ -203,7 +203,7 @@ flowchart LR
     RT --> FW["PersistenceRuntimeWorker\npersistence thread"]
     NW -->|"validated CapturedPacket batches"| RW
     RW -->|"immutable SessionSnapshot"| FW
-    PW -->|"coalesced StateEvent"| RT
+    PW -->|"60 Hz sampled StateEvent"| RT
     NW -->|"coalesced StateEvent"| RT
     RT -->|"epoch-tagged events"| UI
 ```

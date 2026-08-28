@@ -184,7 +184,6 @@ sequenceDiagram
     participant P as PlaybackRuntimeWorker
     participant RD as LarSessionReader
     participant S as PlaybackService
-    participant T as PlaybackPublicationThrottle
     participant VM as ApplicationViewModel
 
     User->>F: loadSession(path)
@@ -199,7 +198,7 @@ sequenceDiagram
     P->>S: loadSession(path)
     S->>RD: loadFile(path)
     
-    RD->>RD: validate header, mapping, records, build index
+    RD->>RD: validate and build bounded resident index plus sparse fallback
     
     RD-->>S: valid reader or error
     S->>RD: recordAt(0)
@@ -215,21 +214,20 @@ sequenceDiagram
     loop 60 Hz replay ticks
         S->>S: next = current + (1000 / 60) * rate
         S->>RD: find record strictly before next
-        RD->>RD: search checkpoint timestamps
-        RD->>RD: load/search at most one bounded page
+        RD->>RD: search resident index or checkpoint/page fallback
         RD-->>S: decode at most one selected record
-        S-->>T: selected frame + exact position
-        T-->>VM: latest epoch-tagged publication every 16 ms
+        S-->>P: selected frame + exact position
+        P-->>VM: epoch-tagged publication on the same tick
     end
 ```
 
-Seek uses the same two-level sparse index to select the last timestamp at or
-before the requested position. Normal replay does not decode intermediate
-records between sampled positions. With Repeat enabled, the newly calculated
-cursor is reduced modulo the final timestamp before every lookup, preserving
-any overshoot even across multiple loops. Without Repeat, passing the final
-timestamp publishes completion. The separate Burst widget is an inert
-placeholder and dispatches no runtime command.
+Seek uses the same resident-index or sparse-fallback lookup to select the last
+timestamp at or before the requested position. Normal replay does not decode
+intermediate records between sampled positions. With Repeat enabled, the newly
+calculated cursor is reduced modulo the final timestamp before every lookup,
+preserving any overshoot even across multiple loops. Without Repeat, passing
+the final timestamp publishes completion. The separate Burst widget is an
+inert placeholder and dispatches no runtime command.
 
 ## Source epoch rejection
 

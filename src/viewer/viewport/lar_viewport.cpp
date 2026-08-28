@@ -124,7 +124,6 @@ LarViewport::LarViewport(std::unique_ptr<ILarViewportPage> gridPage,
                 &LarViewport::diagnosticRaised);
     }
 
-    distributeCameraState();
     showActivePage();
 }
 
@@ -133,6 +132,14 @@ ILarViewportPage &LarViewport::activePage() noexcept {
         return *m_gridPage;
     }
     return *m_earthPage;
+}
+
+ILarViewportPage *LarViewport::activeScenePage() noexcept {
+    if (m_contentMode == ViewportContentMode::Plane)
+        return m_planePage;
+    if (m_contentMode == ViewportContentMode::Lar)
+        return &activePage();
+    return nullptr;
 }
 
 QWidget &LarViewport::activePageWidget() noexcept {
@@ -150,6 +157,9 @@ void LarViewport::showActivePage() {
     const bool planeActive = m_contentMode == ViewportContentMode::Plane;
     const bool larActive = m_contentMode == ViewportContentMode::Lar;
     const bool gridActive = larActive && m_viewMode == LarViewMode::Grid;
+    // Synchronize while the destination is still hidden so switching pages can
+    // never reveal stale telemetry from an earlier activation.
+    synchronizeActivePage();
     m_gridPage->widget().setVisible(gridActive);
     m_earthPage->widget().setVisible(larActive && !gridActive);
     m_planePage->widget().setVisible(planeActive);
@@ -165,21 +175,45 @@ void LarViewport::showActivePage() {
     page.update();
 }
 
-void LarViewport::distributeCameraState() {
-    const ViewportCameraState &state = m_cameraController.state();
-    m_gridPage->setCameraState(state);
-    m_earthPage->setCameraState(state);
-    m_planePage->setCameraState(state);
+void LarViewport::applyCameraStateToActivePage() {
+    if (ILarViewportPage *page = activeScenePage())
+        page->setCameraState(m_cameraController.state());
+}
+
+void LarViewport::applySceneStateToActivePage() {
+    ILarViewportPage *page = activeScenePage();
+    if (page == nullptr || !m_hasReceivedSceneState)
+        return;
+    if (m_scene.hasScene)
+        page->setSceneState(m_scene);
+    else
+        page->clearScene();
+}
+
+void LarViewport::applyDlzInputsToActivePage() {
+    if (m_contentMode != ViewportContentMode::Hud || !m_hasReceivedDlzInputs)
+        return;
+    if (auto *hud = qobject_cast<dlz::presentation::HudWorkspace *>(m_hudPage)) {
+        if (m_dlzInputsAvailable)
+            hud->setExternalInputs(m_dlzInputs, true, m_dlzSource);
+        else
+            hud->clearExternalInputs();
+    }
+}
+
+void LarViewport::synchronizeActivePage() {
+    applyCameraStateToActivePage();
+    applySceneStateToActivePage();
+    applyDlzInputsToActivePage();
 }
 
 void LarViewport::setState(const Plane &plane, const Target &target,
                            const QBitArray &availableFields) {
     m_scene = {plane, target, availableFields, true};
+    m_hasReceivedSceneState = true;
     m_cameraController.setScene(plane, target, availableFields);
-    distributeCameraState();
-    m_gridPage->setSceneState(m_scene);
-    m_earthPage->setSceneState(m_scene);
-    m_planePage->setSceneState(m_scene);
+    applyCameraStateToActivePage();
+    applySceneStateToActivePage();
     if (!m_hasInitialFit && m_contentMode == ViewportContentMode::Lar) {
         fitToData();
     }
@@ -187,22 +221,23 @@ void LarViewport::setState(const Plane &plane, const Target &target,
 
 void LarViewport::setDlzInputs(const dlz::TelemetryInputs &inputs, bool available,
                                const QString &source) {
-    if (auto *hud = qobject_cast<dlz::presentation::HudWorkspace *>(m_hudPage)) {
-        hud->setExternalInputs(inputs, available, source);
-    }
+    m_dlzInputs = inputs;
+    m_dlzSource = source;
+    m_dlzInputsAvailable = available;
+    m_hasReceivedDlzInputs = true;
+    applyDlzInputsToActivePage();
 }
 
 void LarViewport::clearState() {
     m_scene = {};
+    m_hasReceivedSceneState = true;
+    m_dlzInputs = {};
+    m_dlzSource.clear();
+    m_dlzInputsAvailable = false;
+    m_hasReceivedDlzInputs = true;
     m_hasInitialFit = false;
     m_cameraController.clearScene();
-    m_gridPage->clearScene();
-    m_earthPage->clearScene();
-    m_planePage->clearScene();
-    if (auto *hud = qobject_cast<dlz::presentation::HudWorkspace *>(m_hudPage)) {
-        hud->clearExternalInputs();
-    }
-    distributeCameraState();
+    synchronizeActivePage();
 }
 
 void LarViewport::resetTotalFrameCount() {
@@ -228,7 +263,6 @@ void LarViewport::setViewMode(LarViewMode mode) {
     if (mode != LarViewMode::Grid) {
         m_earthPage->setEarthViewMode(mode);
     }
-    distributeCameraState();
     showActivePage();
     m_hasInitialFit = false;
     if (m_scene.hasScene && m_contentMode == ViewportContentMode::Lar) {
@@ -277,11 +311,11 @@ void LarViewport::setCameraTrackingMode(CameraTrackingMode mode) {
     }
     if (mode == CameraTrackingMode::FollowPlane && m_cameraController.turnWithPlane()) {
         m_cameraController.setTurnWithPlane(false);
-        distributeCameraState();
+        applyCameraStateToActivePage();
         emit turnWithPlaneChanged(false);
     }
     m_cameraController.setMode(mode);
-    distributeCameraState();
+    applyCameraStateToActivePage();
     emit cameraTrackingModeChanged(mode);
 }
 
@@ -290,7 +324,7 @@ void LarViewport::setTurnWithPlane(bool enabled) {
         return;
     }
     m_cameraController.setTurnWithPlane(enabled);
-    distributeCameraState();
+    applyCameraStateToActivePage();
     emit turnWithPlaneChanged(enabled);
 }
 

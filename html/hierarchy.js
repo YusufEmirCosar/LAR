@@ -197,7 +197,6 @@ var hierarchy =
       [ "PersistenceRuntimeWorker", "class_persistence_runtime_worker.html", null ],
       [ "PlaneTerrainWorker", "class_plane_terrain_worker.html", null ],
       [ "PlaybackMetrics", "class_playback_metrics.html", null ],
-      [ "PlaybackPublicationThrottle", "class_playback_publication_throttle.html", null ],
       [ "PlaybackRuntimeWorker", "class_playback_runtime_worker.html", null ],
       [ "PlaybackService", "class_playback_service.html", null ],
       [ "RecordingPipelineCoordinator", "class_recording_pipeline_coordinator.html", null ],

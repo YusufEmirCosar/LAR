@@ -22,7 +22,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Bounded parser with sparse, paged random access for .lar session files.">
+<g id="a_Node000001"><a xlink:title="Bounded parser with resident and sparse random access for .lar files.">
 <polygon fill="#999999" stroke="#666666" points="186,-119.5 80.75,-119.5 80.75,-77.75 186,-77.75 186,-119.5"/>
 <text xml:space="preserve" text-anchor="start" x="88.75" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">src/infrastructure</text>
 <text xml:space="preserve" text-anchor="start" x="88.75" y="-94.75" font-family="Helvetica,sans-Serif" font-size="10.00">/session/lar_session</text>

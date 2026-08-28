@@ -178,10 +178,11 @@ System at a glance</h1>
 <div class="line"> </div>
 <div class="line">LAR1 session</div>
 <div class="line">  -&gt; complete structural validation</div>
-<div class="line">  -&gt; timestamped sparse checkpoints and one record-location page</div>
-<div class="line">  -&gt; two-level bounded timestamp lookup</div>
+<div class="line">  -&gt; bounded immutable source cache and complete record index when they fit</div>
+<div class="line">  -&gt; timestamped checkpoints and one bounded location page as fallback</div>
+<div class="line">  -&gt; resident or sparse timestamp lookup</div>
 <div class="line">  -&gt; sampled 60 Hz playback</div>
-<div class="line">  -&gt; the same DecodedState and presentation path</div>
+<div class="line">  -&gt; same-tick DecodedState publication to the active viewport page</div>
 </div><!-- fragment --><p>Source dependencies point inward:</p>
 <div class="fragment"><div class="line">viewer/presentation -&gt; application &lt;- infrastructure</div>
 <div class="line">                              |</div>

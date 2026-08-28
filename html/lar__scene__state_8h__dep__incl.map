@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="594,53,525,96,523,91,589,55"/>
 <area shape="rect" id="Node000006" href="$plane__surface__projection_8h.html" title="Pure geographic&#45;to&#45;local projection and scale policy for Plane mode." alt="" coords="189,94,341,135"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="554,47,342,98,340,93,558,45"/>
-<area shape="rect" id="Node000008" href="$lar__viewport_8h.html" title="Host widget that switches pages and distributes scene/camera state." alt="" coords="791,183,926,223"/>
+<area shape="rect" id="Node000008" href="$lar__viewport_8h.html" title="Host widget that switches pages and presents state only on the active page." alt="" coords="791,183,926,223"/>
 <area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="675,53,837,182,831,182,674,58"/>
 <area shape="rect" id="Node000011" href="$lar__viewport__page_8h.html" title="Substitutable viewport&#45;page interfaces and their shared event channel." alt="" coords="788,94,929,135"/>
 <area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="702,49,811,93,806,94,702,55"/>

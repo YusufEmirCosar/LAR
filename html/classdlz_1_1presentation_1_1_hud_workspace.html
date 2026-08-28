@@ -148,6 +148,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1a845ea43564740c0b1604942ebd9175" id="r_a1a845ea43564740c0b1604942ebd9175"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1a845ea43564740c0b1604942ebd9175">frameRendered</a> ()</td></tr>
 <tr class="memitem:a33bf0345b5e07d56f8af527bc50cadf7" id="r_a33bf0345b5e07d56f8af527bc50cadf7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a33bf0345b5e07d56f8af527bc50cadf7">diagnosticRaised</a> (const QString &amp;message)</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a77fdf34eba1a4c0d47de45cb5bab408d" id="r_a77fdf34eba1a4c0d47de45cb5bab408d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a77fdf34eba1a4c0d47de45cb5bab408d">showEvent</a> (QShowEvent *event) override</td></tr>
+<tr class="memitem:ab2b2140048d404087bf063f969932848" id="r_ab2b2140048d404087bf063f969932848"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab2b2140048d404087bf063f969932848">hideEvent</a> (QHideEvent *event) override</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a0fc4d8836facedbfb974f790999b8031" id="r_a0fc4d8836facedbfb974f790999b8031"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0fc4d8836facedbfb974f790999b8031">rebuildFromControls</a> ()</td></tr>
@@ -173,8 +178,9 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Hosted HUD page containing the DLZ canvas and its control binding. </p>
+<p>The temporal presentation timer runs only while the page is visible. Hidden pages retain their most recent inputs without issuing redundant paint work. </p>
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00021">21</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00028">28</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afb9be1db382bcd4c59eb64522d368640" name="afb9be1db382bcd4c59eb64522d368640"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb9be1db382bcd4c59eb64522d368640">&#9670;&#160;</a></span>HudWorkspace() <span class="overload">[1/2]</span></h2>
@@ -199,13 +205,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00011">11</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>: <a class="code hl_function" href="#afb9be1db382bcd4c59eb64522d368640">HudWorkspace</a>(<span class="keyword">nullptr</span>, parent) {}</div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_afb9be1db382bcd4c59eb64522d368640"><div class="ttname"><a href="#afb9be1db382bcd4c59eb64522d368640">dlz::presentation::HudWorkspace::HudWorkspace</a></div><div class="ttdeci">HudWorkspace(QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8cpp_source.html#l00011">dlz_hud_workspace.cpp:11</a></div></div>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">13</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>: <a class="code hl_function" href="#afb9be1db382bcd4c59eb64522d368640">HudWorkspace</a>(<span class="keyword">nullptr</span>, parent) {}</div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_afb9be1db382bcd4c59eb64522d368640"><div class="ttname"><a href="#afb9be1db382bcd4c59eb64522d368640">dlz::presentation::HudWorkspace::HudWorkspace</a></div><div class="ttdeci">HudWorkspace(QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8cpp_source.html#l00013">dlz_hud_workspace.cpp:13</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00011">HudWorkspace()</a>.</p>
+<p class="reference">References <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00011">HudWorkspace()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -246,41 +252,40 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">13</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>    : QWidget(parent), <a class="code hl_variable" href="#ac6964b93978e4aaa0684d466b71378cc">m_inputs</a>{}, <a class="code hl_variable" href="#ad02c50b4a248e3117fa12d33e54b4970">m_calculationInputs</a>{} {</div>
-<div class="line"><span class="lineno">   15</span>    setObjectName(QStringLiteral(<span class="stringliteral">&quot;dlzHudWorkspace&quot;</span>));</div>
-<div class="line"><span class="lineno">   16</span>    setMinimumSize(420, 360);</div>
-<div class="line"><span class="lineno">   17</span>    setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);</div>
-<div class="line"><span class="lineno">   18</span> </div>
-<div class="line"><span class="lineno">   19</span>    <span class="keyword">auto</span> *layout = <span class="keyword">new</span> QVBoxLayout(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   20</span>    layout-&gt;setContentsMargins(0, 0, 0, 0);</div>
-<div class="line"><span class="lineno">   21</span>    layout-&gt;setSpacing(0);</div>
-<div class="line"><span class="lineno">   22</span>    <a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a> = <span class="keyword">new</span> <a class="code hl_function" href="classdlz_1_1presentation_1_1_hud_view.html#aff06fea35330bec51f3083afd82c94dc">HudView</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   23</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a> = <a class="code hl_function" href="#acc35d09f857f66c23a0ae51845a48f10">controlPanel</a> != <span class="keyword">nullptr</span> ? <a class="code hl_function" href="#acc35d09f857f66c23a0ae51845a48f10">controlPanel</a> : <span class="keyword">new</span> <a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#ad2c9070616837a5a5e9fe9f492655e5e">ControlPanel</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   24</span>    layout-&gt;addWidget(<a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a>, 1);</div>
-<div class="line"><span class="lineno">   25</span>    <span class="comment">// MainWindow hosts the panel in its existing right-hand values column.</span></div>
-<div class="line"><span class="lineno">   26</span>    <span class="comment">// Keep a private fallback only for standalone workspace users and tests;</span></div>
-<div class="line"><span class="lineno">   27</span>    <span class="comment">// it must not float over the canvas when the workspace is shown.</span></div>
-<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="#acc35d09f857f66c23a0ae51845a48f10">controlPanel</a> == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;setVisible(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-<div class="line"><span class="lineno">   31</span> </div>
-<div class="line"><span class="lineno">   32</span>    <a class="code hl_variable" href="#ab0db60d30ba0b0fbbdb5576650a86185">m_timer</a> = <span class="keyword">new</span> QTimer(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   33</span>    <a class="code hl_variable" href="#ab0db60d30ba0b0fbbdb5576650a86185">m_timer</a>-&gt;setInterval(16);</div>
-<div class="line"><span class="lineno">   34</span>    connect(<a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>, &amp;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#adcad5046cbca3fc648374fc94b5d5cb8">ControlPanel::inputsChanged</a>, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#a0fc4d8836facedbfb974f790999b8031">HudWorkspace::rebuildFromControls</a>);</div>
-<div class="line"><span class="lineno">   35</span>    connect(<a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>, &amp;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#ada13f800c4d17636fee18db46038e4a5">ControlPanel::inputModeRequested</a>, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#a0218f554ab3f899caca9baed2c8be0c1">HudWorkspace::setInputMode</a>);</div>
-<div class="line"><span class="lineno">   36</span>    connect(<a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a>, &amp;<a class="code hl_function" href="classdlz_1_1presentation_1_1_hud_view.html#a9e418e04071dc33ce39162200dd1a373">HudView::frameRendered</a>, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#a1a845ea43564740c0b1604942ebd9175">HudWorkspace::frameRendered</a>);</div>
-<div class="line"><span class="lineno">   37</span>    connect(<a class="code hl_variable" href="#ab0db60d30ba0b0fbbdb5576650a86185">m_timer</a>, &amp;QTimer::timeout, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#af1ca70733865aad221a2e501b4f56fa8">HudWorkspace::tick</a>);</div>
-<div class="line"><span class="lineno">   38</span> </div>
-<div class="line"><span class="lineno">   39</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#a6083a49f63ded26f1db223113517c2c7">setInputs</a>(<a class="code hl_variable" href="#ad02c50b4a248e3117fa12d33e54b4970">m_calculationInputs</a>);</div>
-<div class="line"><span class="lineno">   40</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#a08af72a0d72e2b6b8a4295541360ec8e">setInputMode</a>(<a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a>);</div>
-<div class="line"><span class="lineno">   41</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#ab64eecd8987376c20e66dbe9cdab628a">setExternalInputs</a>({}, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   42</span>    <a class="code hl_variable" href="#abe32b697bd94b80128960d56849811ec">m_clock</a>.start();</div>
-<div class="line"><span class="lineno">   43</span>    <a class="code hl_variable" href="#a67f99cd2d81ee8cd4a32eaba9daeed4f">m_lastTickNanoseconds</a> = <a class="code hl_variable" href="#abe32b697bd94b80128960d56849811ec">m_clock</a>.nsecsElapsed();</div>
-<div class="line"><span class="lineno">   44</span>    <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#abcb0380e5c09132aa112a1ab05585eaf">reset</a>();</div>
-<div class="line"><span class="lineno">   45</span>    <a class="code hl_function" href="#a622f9724a812e8564fa34383c26240be">rebuild</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   46</span>    <a class="code hl_variable" href="#ab0db60d30ba0b0fbbdb5576650a86185">m_timer</a>-&gt;start();</div>
-<div class="line"><span class="lineno">   47</span>}</div>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">15</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    : QWidget(parent), <a class="code hl_variable" href="#ac6964b93978e4aaa0684d466b71378cc">m_inputs</a>{}, <a class="code hl_variable" href="#ad02c50b4a248e3117fa12d33e54b4970">m_calculationInputs</a>{} {</div>
+<div class="line"><span class="lineno">   17</span>    setObjectName(QStringLiteral(<span class="stringliteral">&quot;dlzHudWorkspace&quot;</span>));</div>
+<div class="line"><span class="lineno">   18</span>    setMinimumSize(420, 360);</div>
+<div class="line"><span class="lineno">   19</span>    setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);</div>
+<div class="line"><span class="lineno">   20</span> </div>
+<div class="line"><span class="lineno">   21</span>    <span class="keyword">auto</span> *layout = <span class="keyword">new</span> QVBoxLayout(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   22</span>    layout-&gt;setContentsMargins(0, 0, 0, 0);</div>
+<div class="line"><span class="lineno">   23</span>    layout-&gt;setSpacing(0);</div>
+<div class="line"><span class="lineno">   24</span>    <a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a> = <span class="keyword">new</span> <a class="code hl_function" href="classdlz_1_1presentation_1_1_hud_view.html#aff06fea35330bec51f3083afd82c94dc">HudView</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a> = <a class="code hl_function" href="#acc35d09f857f66c23a0ae51845a48f10">controlPanel</a> != <span class="keyword">nullptr</span> ? <a class="code hl_function" href="#acc35d09f857f66c23a0ae51845a48f10">controlPanel</a> : <span class="keyword">new</span> <a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#ad2c9070616837a5a5e9fe9f492655e5e">ControlPanel</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   26</span>    layout-&gt;addWidget(<a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a>, 1);</div>
+<div class="line"><span class="lineno">   27</span>    <span class="comment">// MainWindow hosts the panel in its existing right-hand values column.</span></div>
+<div class="line"><span class="lineno">   28</span>    <span class="comment">// Keep a private fallback only for standalone workspace users and tests;</span></div>
+<div class="line"><span class="lineno">   29</span>    <span class="comment">// it must not float over the canvas when the workspace is shown.</span></div>
+<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="#acc35d09f857f66c23a0ae51845a48f10">controlPanel</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>    <a class="code hl_variable" href="#ab0db60d30ba0b0fbbdb5576650a86185">m_timer</a> = <span class="keyword">new</span> QTimer(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   35</span>    <a class="code hl_variable" href="#ab0db60d30ba0b0fbbdb5576650a86185">m_timer</a>-&gt;setInterval(16);</div>
+<div class="line"><span class="lineno">   36</span>    connect(<a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>, &amp;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#adcad5046cbca3fc648374fc94b5d5cb8">ControlPanel::inputsChanged</a>, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#a0fc4d8836facedbfb974f790999b8031">HudWorkspace::rebuildFromControls</a>);</div>
+<div class="line"><span class="lineno">   37</span>    connect(<a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>, &amp;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#ada13f800c4d17636fee18db46038e4a5">ControlPanel::inputModeRequested</a>, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#a0218f554ab3f899caca9baed2c8be0c1">HudWorkspace::setInputMode</a>);</div>
+<div class="line"><span class="lineno">   38</span>    connect(<a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a>, &amp;<a class="code hl_function" href="classdlz_1_1presentation_1_1_hud_view.html#a9e418e04071dc33ce39162200dd1a373">HudView::frameRendered</a>, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#a1a845ea43564740c0b1604942ebd9175">HudWorkspace::frameRendered</a>);</div>
+<div class="line"><span class="lineno">   39</span>    connect(<a class="code hl_variable" href="#ab0db60d30ba0b0fbbdb5576650a86185">m_timer</a>, &amp;QTimer::timeout, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#af1ca70733865aad221a2e501b4f56fa8">HudWorkspace::tick</a>);</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#a6083a49f63ded26f1db223113517c2c7">setInputs</a>(<a class="code hl_variable" href="#ad02c50b4a248e3117fa12d33e54b4970">m_calculationInputs</a>);</div>
+<div class="line"><span class="lineno">   42</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#a08af72a0d72e2b6b8a4295541360ec8e">setInputMode</a>(<a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a>);</div>
+<div class="line"><span class="lineno">   43</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#ab64eecd8987376c20e66dbe9cdab628a">setExternalInputs</a>({}, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   44</span>    <a class="code hl_variable" href="#abe32b697bd94b80128960d56849811ec">m_clock</a>.start();</div>
+<div class="line"><span class="lineno">   45</span>    <a class="code hl_variable" href="#a67f99cd2d81ee8cd4a32eaba9daeed4f">m_lastTickNanoseconds</a> = <a class="code hl_variable" href="#abe32b697bd94b80128960d56849811ec">m_clock</a>.nsecsElapsed();</div>
+<div class="line"><span class="lineno">   46</span>    <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#abcb0380e5c09132aa112a1ab05585eaf">reset</a>();</div>
+<div class="line"><span class="lineno">   47</span>    <a class="code hl_function" href="#a622f9724a812e8564fa34383c26240be">rebuild</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   48</span>}</div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_control_panel_html_a08af72a0d72e2b6b8a4295541360ec8e"><div class="ttname"><a href="classdlz_1_1presentation_1_1_control_panel.html#a08af72a0d72e2b6b8a4295541360ec8e">dlz::presentation::ControlPanel::setInputMode</a></div><div class="ttdeci">void setInputMode(InputMode mode)</div><div class="ttdef"><b>Definition</b> <a href="dlz__control__panel_8cpp_source.html#l00247">dlz_control_panel.cpp:247</a></div></div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_control_panel_html_a6083a49f63ded26f1db223113517c2c7"><div class="ttname"><a href="classdlz_1_1presentation_1_1_control_panel.html#a6083a49f63ded26f1db223113517c2c7">dlz::presentation::ControlPanel::setInputs</a></div><div class="ttdeci">void setInputs(const dlz::ScenarioInputs &amp;inputs)</div><div class="ttdef"><b>Definition</b> <a href="dlz__control__panel_8cpp_source.html#l00274">dlz_control_panel.cpp:274</a></div></div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_control_panel_html_ab64eecd8987376c20e66dbe9cdab628a"><div class="ttname"><a href="classdlz_1_1presentation_1_1_control_panel.html#ab64eecd8987376c20e66dbe9cdab628a">dlz::presentation::ControlPanel::setExternalInputs</a></div><div class="ttdeci">void setExternalInputs(const dlz::TelemetryInputs &amp;inputs, bool available, const QString &amp;source={})</div><div class="ttdef"><b>Definition</b> <a href="dlz__control__panel_8cpp_source.html#l00259">dlz_control_panel.cpp:259</a></div></div>
@@ -289,24 +294,24 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_control_panel_html_adcad5046cbca3fc648374fc94b5d5cb8"><div class="ttname"><a href="classdlz_1_1presentation_1_1_control_panel.html#adcad5046cbca3fc648374fc94b5d5cb8">dlz::presentation::ControlPanel::inputsChanged</a></div><div class="ttdeci">void inputsChanged()</div></div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_view_html_a9e418e04071dc33ce39162200dd1a373"><div class="ttname"><a href="classdlz_1_1presentation_1_1_hud_view.html#a9e418e04071dc33ce39162200dd1a373">dlz::presentation::HudView::frameRendered</a></div><div class="ttdeci">void frameRendered()</div></div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_view_html_aff06fea35330bec51f3083afd82c94dc"><div class="ttname"><a href="classdlz_1_1presentation_1_1_hud_view.html#aff06fea35330bec51f3083afd82c94dc">dlz::presentation::HudView::HudView</a></div><div class="ttdeci">HudView(QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__view_8cpp_source.html#l00008">dlz_hud_view.cpp:8</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a0218f554ab3f899caca9baed2c8be0c1"><div class="ttname"><a href="#a0218f554ab3f899caca9baed2c8be0c1">dlz::presentation::HudWorkspace::setInputMode</a></div><div class="ttdeci">void setInputMode(ControlPanel::InputMode mode)</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8cpp_source.html#l00049">dlz_hud_workspace.cpp:49</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a0fc4d8836facedbfb974f790999b8031"><div class="ttname"><a href="#a0fc4d8836facedbfb974f790999b8031">dlz::presentation::HudWorkspace::rebuildFromControls</a></div><div class="ttdeci">void rebuildFromControls()</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8cpp_source.html#l00104">dlz_hud_workspace.cpp:104</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a183076b9dcc42001acd11419bd9aaf9c"><div class="ttname"><a href="#a183076b9dcc42001acd11419bd9aaf9c">dlz::presentation::HudWorkspace::m_hudView</a></div><div class="ttdeci">HudView * m_hudView</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00059">dlz_hud_workspace.h:59</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a0218f554ab3f899caca9baed2c8be0c1"><div class="ttname"><a href="#a0218f554ab3f899caca9baed2c8be0c1">dlz::presentation::HudWorkspace::setInputMode</a></div><div class="ttdeci">void setInputMode(ControlPanel::InputMode mode)</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8cpp_source.html#l00061">dlz_hud_workspace.cpp:61</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a0fc4d8836facedbfb974f790999b8031"><div class="ttname"><a href="#a0fc4d8836facedbfb974f790999b8031">dlz::presentation::HudWorkspace::rebuildFromControls</a></div><div class="ttdeci">void rebuildFromControls()</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8cpp_source.html#l00116">dlz_hud_workspace.cpp:116</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a183076b9dcc42001acd11419bd9aaf9c"><div class="ttname"><a href="#a183076b9dcc42001acd11419bd9aaf9c">dlz::presentation::HudWorkspace::m_hudView</a></div><div class="ttdeci">HudView * m_hudView</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00070">dlz_hud_workspace.h:70</a></div></div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a1a845ea43564740c0b1604942ebd9175"><div class="ttname"><a href="#a1a845ea43564740c0b1604942ebd9175">dlz::presentation::HudWorkspace::frameRendered</a></div><div class="ttdeci">void frameRendered()</div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a5b77060e10e2414016827adf1563845f"><div class="ttname"><a href="#a5b77060e10e2414016827adf1563845f">dlz::presentation::HudWorkspace::m_controller</a></div><div class="ttdeci">PresentationController m_controller</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00068">dlz_hud_workspace.h:68</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a622f9724a812e8564fa34383c26240be"><div class="ttname"><a href="#a622f9724a812e8564fa34383c26240be">dlz::presentation::HudWorkspace::rebuild</a></div><div class="ttdeci">void rebuild(bool resetTemporal)</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8cpp_source.html#l00115">dlz_hud_workspace.cpp:115</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a67f99cd2d81ee8cd4a32eaba9daeed4f"><div class="ttname"><a href="#a67f99cd2d81ee8cd4a32eaba9daeed4f">dlz::presentation::HudWorkspace::m_lastTickNanoseconds</a></div><div class="ttdeci">qint64 m_lastTickNanoseconds</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00063">dlz_hud_workspace.h:63</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a685efed797ee59fa55f791a6263a58f7"><div class="ttname"><a href="#a685efed797ee59fa55f791a6263a58f7">dlz::presentation::HudWorkspace::m_controlPanel</a></div><div class="ttdeci">ControlPanel * m_controlPanel</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00060">dlz_hud_workspace.h:60</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_ab0db60d30ba0b0fbbdb5576650a86185"><div class="ttname"><a href="#ab0db60d30ba0b0fbbdb5576650a86185">dlz::presentation::HudWorkspace::m_timer</a></div><div class="ttdeci">QTimer * m_timer</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00061">dlz_hud_workspace.h:61</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_abe32b697bd94b80128960d56849811ec"><div class="ttname"><a href="#abe32b697bd94b80128960d56849811ec">dlz::presentation::HudWorkspace::m_clock</a></div><div class="ttdeci">QElapsedTimer m_clock</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00062">dlz_hud_workspace.h:62</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_ac6964b93978e4aaa0684d466b71378cc"><div class="ttname"><a href="#ac6964b93978e4aaa0684d466b71378cc">dlz::presentation::HudWorkspace::m_inputs</a></div><div class="ttdeci">dlz::ScenarioInputs m_inputs</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00064">dlz_hud_workspace.h:64</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_acc35d09f857f66c23a0ae51845a48f10"><div class="ttname"><a href="#acc35d09f857f66c23a0ae51845a48f10">dlz::presentation::HudWorkspace::controlPanel</a></div><div class="ttdeci">ControlPanel * controlPanel() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00031">dlz_hud_workspace.h:31</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_ad02c50b4a248e3117fa12d33e54b4970"><div class="ttname"><a href="#ad02c50b4a248e3117fa12d33e54b4970">dlz::presentation::HudWorkspace::m_calculationInputs</a></div><div class="ttdeci">dlz::ScenarioInputs m_calculationInputs</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00065">dlz_hud_workspace.h:65</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_af1ca70733865aad221a2e501b4f56fa8"><div class="ttname"><a href="#af1ca70733865aad221a2e501b4f56fa8">dlz::presentation::HudWorkspace::tick</a></div><div class="ttdeci">void tick()</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8cpp_source.html#l00156">dlz_hud_workspace.cpp:156</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_af37a01325057b95300503f2d57ef71b7"><div class="ttname"><a href="#af37a01325057b95300503f2d57ef71b7">dlz::presentation::HudWorkspace::m_inputMode</a></div><div class="ttdeci">ControlPanel::InputMode m_inputMode</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00069">dlz_hud_workspace.h:69</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a5b77060e10e2414016827adf1563845f"><div class="ttname"><a href="#a5b77060e10e2414016827adf1563845f">dlz::presentation::HudWorkspace::m_controller</a></div><div class="ttdeci">PresentationController m_controller</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00079">dlz_hud_workspace.h:79</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a622f9724a812e8564fa34383c26240be"><div class="ttname"><a href="#a622f9724a812e8564fa34383c26240be">dlz::presentation::HudWorkspace::rebuild</a></div><div class="ttdeci">void rebuild(bool resetTemporal)</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8cpp_source.html#l00127">dlz_hud_workspace.cpp:127</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a67f99cd2d81ee8cd4a32eaba9daeed4f"><div class="ttname"><a href="#a67f99cd2d81ee8cd4a32eaba9daeed4f">dlz::presentation::HudWorkspace::m_lastTickNanoseconds</a></div><div class="ttdeci">qint64 m_lastTickNanoseconds</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00074">dlz_hud_workspace.h:74</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a685efed797ee59fa55f791a6263a58f7"><div class="ttname"><a href="#a685efed797ee59fa55f791a6263a58f7">dlz::presentation::HudWorkspace::m_controlPanel</a></div><div class="ttdeci">ControlPanel * m_controlPanel</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00071">dlz_hud_workspace.h:71</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_ab0db60d30ba0b0fbbdb5576650a86185"><div class="ttname"><a href="#ab0db60d30ba0b0fbbdb5576650a86185">dlz::presentation::HudWorkspace::m_timer</a></div><div class="ttdeci">QTimer * m_timer</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00072">dlz_hud_workspace.h:72</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_abe32b697bd94b80128960d56849811ec"><div class="ttname"><a href="#abe32b697bd94b80128960d56849811ec">dlz::presentation::HudWorkspace::m_clock</a></div><div class="ttdeci">QElapsedTimer m_clock</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00073">dlz_hud_workspace.h:73</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_ac6964b93978e4aaa0684d466b71378cc"><div class="ttname"><a href="#ac6964b93978e4aaa0684d466b71378cc">dlz::presentation::HudWorkspace::m_inputs</a></div><div class="ttdeci">dlz::ScenarioInputs m_inputs</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00075">dlz_hud_workspace.h:75</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_acc35d09f857f66c23a0ae51845a48f10"><div class="ttname"><a href="#acc35d09f857f66c23a0ae51845a48f10">dlz::presentation::HudWorkspace::controlPanel</a></div><div class="ttdeci">ControlPanel * controlPanel() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00038">dlz_hud_workspace.h:38</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_ad02c50b4a248e3117fa12d33e54b4970"><div class="ttname"><a href="#ad02c50b4a248e3117fa12d33e54b4970">dlz::presentation::HudWorkspace::m_calculationInputs</a></div><div class="ttdeci">dlz::ScenarioInputs m_calculationInputs</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00076">dlz_hud_workspace.h:76</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_af1ca70733865aad221a2e501b4f56fa8"><div class="ttname"><a href="#af1ca70733865aad221a2e501b4f56fa8">dlz::presentation::HudWorkspace::tick</a></div><div class="ttdeci">void tick()</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8cpp_source.html#l00168">dlz_hud_workspace.cpp:168</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_af37a01325057b95300503f2d57ef71b7"><div class="ttname"><a href="#af37a01325057b95300503f2d57ef71b7">dlz::presentation::HudWorkspace::m_inputMode</a></div><div class="ttdeci">ControlPanel::InputMode m_inputMode</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00080">dlz_hud_workspace.h:80</a></div></div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_presentation_controller_html_abcb0380e5c09132aa112a1ab05585eaf"><div class="ttname"><a href="classdlz_1_1presentation_1_1_presentation_controller.html#abcb0380e5c09132aa112a1ab05585eaf">dlz::presentation::PresentationController::reset</a></div><div class="ttdeci">void reset(double forcedScaleMaximumNm=0.0) noexcept</div><div class="ttdef"><b>Definition</b> <a href="dlz__presentation__controller_8cpp_source.html#l00020">dlz_presentation_controller.cpp:20</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="dlz__control__panel_8cpp_source.html#l00019">dlz::presentation::ControlPanel::ControlPanel()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00031">controlPanel()</a>, <a class="el" href="classdlz_1_1presentation_1_1_hud_view.html#a9e418e04071dc33ce39162200dd1a373">dlz::presentation::HudView::frameRendered()</a>, <a class="el" href="#a1a845ea43564740c0b1604942ebd9175">frameRendered()</a>, <a class="el" href="dlz__hud__view_8cpp_source.html#l00008">dlz::presentation::HudView::HudView()</a>, <a class="el" href="classdlz_1_1presentation_1_1_control_panel.html#ada13f800c4d17636fee18db46038e4a5">dlz::presentation::ControlPanel::inputModeRequested()</a>, <a class="el" href="classdlz_1_1presentation_1_1_control_panel.html#adcad5046cbca3fc648374fc94b5d5cb8">dlz::presentation::ControlPanel::inputsChanged()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00065">m_calculationInputs</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00062">m_clock</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00068">m_controller</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00060">m_controlPanel</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00059">m_hudView</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00069">m_inputMode</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00064">m_inputs</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00063">m_lastTickNanoseconds</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00061">m_timer</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">rebuild()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">rebuildFromControls()</a>, <a class="el" href="dlz__presentation__controller_8cpp_source.html#l00020">dlz::presentation::PresentationController::reset()</a>, <a class="el" href="dlz__control__panel_8cpp_source.html#l00259">dlz::presentation::ControlPanel::setExternalInputs()</a>, <a class="el" href="dlz__control__panel_8cpp_source.html#l00247">dlz::presentation::ControlPanel::setInputMode()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00049">setInputMode()</a>, <a class="el" href="dlz__control__panel_8cpp_source.html#l00274">dlz::presentation::ControlPanel::setInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00156">tick()</a>.</p>
+<p class="reference">References <a class="el" href="dlz__control__panel_8cpp_source.html#l00019">dlz::presentation::ControlPanel::ControlPanel()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00038">controlPanel()</a>, <a class="el" href="classdlz_1_1presentation_1_1_hud_view.html#a9e418e04071dc33ce39162200dd1a373">dlz::presentation::HudView::frameRendered()</a>, <a class="el" href="#a1a845ea43564740c0b1604942ebd9175">frameRendered()</a>, <a class="el" href="dlz__hud__view_8cpp_source.html#l00008">dlz::presentation::HudView::HudView()</a>, <a class="el" href="classdlz_1_1presentation_1_1_control_panel.html#ada13f800c4d17636fee18db46038e4a5">dlz::presentation::ControlPanel::inputModeRequested()</a>, <a class="el" href="classdlz_1_1presentation_1_1_control_panel.html#adcad5046cbca3fc648374fc94b5d5cb8">dlz::presentation::ControlPanel::inputsChanged()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00076">m_calculationInputs</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00073">m_clock</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00079">m_controller</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00071">m_controlPanel</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00070">m_hudView</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00080">m_inputMode</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00075">m_inputs</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00074">m_lastTickNanoseconds</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00072">m_timer</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">rebuild()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00116">rebuildFromControls()</a>, <a class="el" href="dlz__presentation__controller_8cpp_source.html#l00020">dlz::presentation::PresentationController::reset()</a>, <a class="el" href="dlz__control__panel_8cpp_source.html#l00259">dlz::presentation::ControlPanel::setExternalInputs()</a>, <a class="el" href="dlz__control__panel_8cpp_source.html#l00247">dlz::presentation::ControlPanel::setInputMode()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00061">setInputMode()</a>, <a class="el" href="dlz__control__panel_8cpp_source.html#l00274">dlz::presentation::ControlPanel::setInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00168">tick()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -339,12 +344,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00028">28</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                      {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a>;</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00035">35</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                                      {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a>;</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="dlz__hud__workspace_8h_source.html#l00059">m_hudView</a>.</p>
+<p class="reference">References <a class="el" href="dlz__hud__workspace_8h_source.html#l00070">m_hudView</a>.</p>
 
 </div>
 </div>
@@ -371,14 +376,14 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00031">31</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>;</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00038">38</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>;</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="dlz__hud__workspace_8h_source.html#l00060">m_controlPanel</a>.</p>
+<p class="reference">References <a class="el" href="dlz__hud__workspace_8h_source.html#l00071">m_controlPanel</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -410,12 +415,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00034">34</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                             {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac6964b93978e4aaa0684d466b71378cc">m_inputs</a>;</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00041">41</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                             {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac6964b93978e4aaa0684d466b71378cc">m_inputs</a>;</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="dlz__hud__workspace_8h_source.html#l00064">m_inputs</a>.</p>
+<p class="reference">References <a class="el" href="dlz__hud__workspace_8h_source.html#l00075">m_inputs</a>.</p>
 
 </div>
 </div>
@@ -442,12 +447,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00037">37</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                     {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a>;</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00044">44</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                     {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a>;</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="dlz__hud__workspace_8h_source.html#l00069">m_inputMode</a>.</p>
+<p class="reference">References <a class="el" href="dlz__hud__workspace_8h_source.html#l00080">m_inputMode</a>.</p>
 
 </div>
 </div>
@@ -466,38 +471,38 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00049">49</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                          {</div>
-<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a> == mode) {</div>
-<div class="line"><span class="lineno">   51</span>        <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#a08af72a0d72e2b6b8a4295541360ec8e">setInputMode</a>(mode);</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-<div class="line"><span class="lineno">   54</span>    <a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a> = mode;</div>
-<div class="line"><span class="lineno">   55</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#a08af72a0d72e2b6b8a4295541360ec8e">setInputMode</a>(mode);</div>
-<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a> == <a class="code hl_enumvalue" href="classdlz_1_1presentation_1_1_control_panel.html#afbe376c00506cacde3ce50e0423412b1a7fcf864a8c3f9578a1c1e193ab5d10db">ControlPanel::InputMode::SliderTest</a>) {</div>
-<div class="line"><span class="lineno">   57</span>        <a class="code hl_variable" href="#ac6964b93978e4aaa0684d466b71378cc">m_inputs</a> = <a class="code hl_variable" href="#ad02c50b4a248e3117fa12d33e54b4970">m_calculationInputs</a>;</div>
-<div class="line"><span class="lineno">   58</span>        <a class="code hl_function" href="#a622f9724a812e8564fa34383c26240be">rebuild</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a6c4fbc1507ddc64b5d67562e0270801f">m_externalAvailable</a>) {</div>
-<div class="line"><span class="lineno">   62</span>        <a class="code hl_function" href="#a365b1bab1d7695e1ed8db3023413ca24">clearExternalInputs</a>();</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
-<div class="line"><span class="lineno">   65</span>    <a class="code hl_variable" href="#ac6964b93978e4aaa0684d466b71378cc">m_inputs</a> = {<a class="code hl_variable" href="#a234f66dda676516eeb33dc64b9b3f4ee">m_externalInputs</a>.<a class="code hl_variable" href="structdlz_1_1_telemetry_inputs.html#a7b61d2e4181845bc50e76daaf9571bab">rangeNm</a>, <a class="code hl_variable" href="#a234f66dda676516eeb33dc64b9b3f4ee">m_externalInputs</a>.<a class="code hl_variable" href="structdlz_1_1_telemetry_inputs.html#a8c3d5220aaaccda2e4ddbf7acf1a99ea">aspectDegrees</a>,</div>
-<div class="line"><span class="lineno">   66</span>                <a class="code hl_variable" href="#a234f66dda676516eeb33dc64b9b3f4ee">m_externalInputs</a>.<a class="code hl_variable" href="structdlz_1_1_telemetry_inputs.html#a8d412548a009513e7a4fa62b108b57ab">altitudeFeet</a>, 0.90, 0.95};</div>
-<div class="line"><span class="lineno">   67</span>    <a class="code hl_function" href="#a622f9724a812e8564fa34383c26240be">rebuild</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   68</span>}</div>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00061">61</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>                                                          {</div>
+<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a> == mode) {</div>
+<div class="line"><span class="lineno">   63</span>        <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#a08af72a0d72e2b6b8a4295541360ec8e">setInputMode</a>(mode);</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="line"><span class="lineno">   66</span>    <a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a> = mode;</div>
+<div class="line"><span class="lineno">   67</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#a08af72a0d72e2b6b8a4295541360ec8e">setInputMode</a>(mode);</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a> == <a class="code hl_enumvalue" href="classdlz_1_1presentation_1_1_control_panel.html#afbe376c00506cacde3ce50e0423412b1a7fcf864a8c3f9578a1c1e193ab5d10db">ControlPanel::InputMode::SliderTest</a>) {</div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_variable" href="#ac6964b93978e4aaa0684d466b71378cc">m_inputs</a> = <a class="code hl_variable" href="#ad02c50b4a248e3117fa12d33e54b4970">m_calculationInputs</a>;</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_function" href="#a622f9724a812e8564fa34383c26240be">rebuild</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a6c4fbc1507ddc64b5d67562e0270801f">m_externalAvailable</a>) {</div>
+<div class="line"><span class="lineno">   74</span>        <a class="code hl_function" href="#a365b1bab1d7695e1ed8db3023413ca24">clearExternalInputs</a>();</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+<div class="line"><span class="lineno">   77</span>    <a class="code hl_variable" href="#ac6964b93978e4aaa0684d466b71378cc">m_inputs</a> = {<a class="code hl_variable" href="#a234f66dda676516eeb33dc64b9b3f4ee">m_externalInputs</a>.<a class="code hl_variable" href="structdlz_1_1_telemetry_inputs.html#a7b61d2e4181845bc50e76daaf9571bab">rangeNm</a>, <a class="code hl_variable" href="#a234f66dda676516eeb33dc64b9b3f4ee">m_externalInputs</a>.<a class="code hl_variable" href="structdlz_1_1_telemetry_inputs.html#a8c3d5220aaaccda2e4ddbf7acf1a99ea">aspectDegrees</a>,</div>
+<div class="line"><span class="lineno">   78</span>                <a class="code hl_variable" href="#a234f66dda676516eeb33dc64b9b3f4ee">m_externalInputs</a>.<a class="code hl_variable" href="structdlz_1_1_telemetry_inputs.html#a8d412548a009513e7a4fa62b108b57ab">altitudeFeet</a>, 0.90, 0.95};</div>
+<div class="line"><span class="lineno">   79</span>    <a class="code hl_function" href="#a622f9724a812e8564fa34383c26240be">rebuild</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   80</span>}</div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_control_panel_html_afbe376c00506cacde3ce50e0423412b1a7fcf864a8c3f9578a1c1e193ab5d10db"><div class="ttname"><a href="classdlz_1_1presentation_1_1_control_panel.html#afbe376c00506cacde3ce50e0423412b1a7fcf864a8c3f9578a1c1e193ab5d10db">dlz::presentation::ControlPanel::InputMode::SliderTest</a></div><div class="ttdeci">@ SliderTest</div><div class="ttdef"><b>Definition</b> <a href="dlz__control__panel_8h_source.html#l00028">dlz_control_panel.h:28</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a234f66dda676516eeb33dc64b9b3f4ee"><div class="ttname"><a href="#a234f66dda676516eeb33dc64b9b3f4ee">dlz::presentation::HudWorkspace::m_externalInputs</a></div><div class="ttdeci">dlz::TelemetryInputs m_externalInputs</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00066">dlz_hud_workspace.h:66</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a365b1bab1d7695e1ed8db3023413ca24"><div class="ttname"><a href="#a365b1bab1d7695e1ed8db3023413ca24">dlz::presentation::HudWorkspace::clearExternalInputs</a></div><div class="ttdeci">void clearExternalInputs(const QString &amp;message={})</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8cpp_source.html#l00092">dlz_hud_workspace.cpp:92</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a6c4fbc1507ddc64b5d67562e0270801f"><div class="ttname"><a href="#a6c4fbc1507ddc64b5d67562e0270801f">dlz::presentation::HudWorkspace::m_externalAvailable</a></div><div class="ttdeci">bool m_externalAvailable</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00070">dlz_hud_workspace.h:70</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a234f66dda676516eeb33dc64b9b3f4ee"><div class="ttname"><a href="#a234f66dda676516eeb33dc64b9b3f4ee">dlz::presentation::HudWorkspace::m_externalInputs</a></div><div class="ttdeci">dlz::TelemetryInputs m_externalInputs</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00077">dlz_hud_workspace.h:77</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a365b1bab1d7695e1ed8db3023413ca24"><div class="ttname"><a href="#a365b1bab1d7695e1ed8db3023413ca24">dlz::presentation::HudWorkspace::clearExternalInputs</a></div><div class="ttdeci">void clearExternalInputs(const QString &amp;message={})</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8cpp_source.html#l00104">dlz_hud_workspace.cpp:104</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a6c4fbc1507ddc64b5d67562e0270801f"><div class="ttname"><a href="#a6c4fbc1507ddc64b5d67562e0270801f">dlz::presentation::HudWorkspace::m_externalAvailable</a></div><div class="ttdeci">bool m_externalAvailable</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00081">dlz_hud_workspace.h:81</a></div></div>
 <div class="ttc" id="astructdlz_1_1_telemetry_inputs_html_a7b61d2e4181845bc50e76daaf9571bab"><div class="ttname"><a href="structdlz_1_1_telemetry_inputs.html#a7b61d2e4181845bc50e76daaf9571bab">dlz::TelemetryInputs::rangeNm</a></div><div class="ttdeci">double rangeNm</div><div class="ttdoc">Slant range in nautical miles.</div><div class="ttdef"><b>Definition</b> <a href="dlz__types_8h_source.html#l00055">dlz_types.h:55</a></div></div>
 <div class="ttc" id="astructdlz_1_1_telemetry_inputs_html_a8c3d5220aaaccda2e4ddbf7acf1a99ea"><div class="ttname"><a href="structdlz_1_1_telemetry_inputs.html#a8c3d5220aaaccda2e4ddbf7acf1a99ea">dlz::TelemetryInputs::aspectDegrees</a></div><div class="ttdeci">double aspectDegrees</div><div class="ttdoc">Target aspect in the closed range 0..180 degrees.</div><div class="ttdef"><b>Definition</b> <a href="dlz__types_8h_source.html#l00056">dlz_types.h:56</a></div></div>
 <div class="ttc" id="astructdlz_1_1_telemetry_inputs_html_a8d412548a009513e7a4fa62b108b57ab"><div class="ttname"><a href="structdlz_1_1_telemetry_inputs.html#a8d412548a009513e7a4fa62b108b57ab">dlz::TelemetryInputs::altitudeFeet</a></div><div class="ttdeci">double altitudeFeet</div><div class="ttdoc">Shooter altitude in feet.</div><div class="ttdef"><b>Definition</b> <a href="dlz__types_8h_source.html#l00057">dlz_types.h:57</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="dlz__types_8h_source.html#l00057">dlz::TelemetryInputs::altitudeFeet</a>, <a class="el" href="dlz__types_8h_source.html#l00056">dlz::TelemetryInputs::aspectDegrees</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00092">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00065">m_calculationInputs</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00060">m_controlPanel</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00070">m_externalAvailable</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00066">m_externalInputs</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00069">m_inputMode</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00064">m_inputs</a>, <a class="el" href="dlz__types_8h_source.html#l00055">dlz::TelemetryInputs::rangeNm</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">rebuild()</a>, <a class="el" href="dlz__control__panel_8cpp_source.html#l00247">dlz::presentation::ControlPanel::setInputMode()</a>, and <a class="el" href="dlz__control__panel_8h_source.html#l00028">dlz::presentation::ControlPanel::SliderTest</a>.</p>
+<p class="reference">References <a class="el" href="dlz__types_8h_source.html#l00057">dlz::TelemetryInputs::altitudeFeet</a>, <a class="el" href="dlz__types_8h_source.html#l00056">dlz::TelemetryInputs::aspectDegrees</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00076">m_calculationInputs</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00071">m_controlPanel</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00081">m_externalAvailable</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00077">m_externalInputs</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00080">m_inputMode</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00075">m_inputs</a>, <a class="el" href="dlz__types_8h_source.html#l00055">dlz::TelemetryInputs::rangeNm</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">rebuild()</a>, <a class="el" href="dlz__control__panel_8cpp_source.html#l00247">dlz::presentation::ControlPanel::setInputMode()</a>, and <a class="el" href="dlz__control__panel_8h_source.html#l00028">dlz::presentation::ControlPanel::SliderTest</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -535,31 +540,31 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00070">70</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                                            {</div>
-<div class="line"><span class="lineno">   72</span>    <a class="code hl_variable" href="#a234f66dda676516eeb33dc64b9b3f4ee">m_externalInputs</a> = inputs;</div>
-<div class="line"><span class="lineno">   73</span>    <a class="code hl_variable" href="#a6c4fbc1507ddc64b5d67562e0270801f">m_externalAvailable</a> = <a class="code hl_function" href="namespaceanonymous__namespace_02plane__attitude__transform_8cpp_03.html#a19bd63736036d4ddcda63de9d152769a">available</a>;</div>
-<div class="line"><span class="lineno">   74</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#ab64eecd8987376c20e66dbe9cdab628a">setExternalInputs</a>(inputs, available, source);</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>    <span class="comment">// Incoming frames are cached while the local calculation mode is active;</span></div>
-<div class="line"><span class="lineno">   77</span>    <span class="comment">// they must not alter the slider-driven drawing or its temporal state.</span></div>
-<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a> != <a class="code hl_enumvalue" href="classdlz_1_1presentation_1_1_control_panel.html#afbe376c00506cacde3ce50e0423412b1a739e0f43ed51f62a9f88bb595187b902">ControlPanel::InputMode::UdpOrReplay</a>) {</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
-<div class="line"><span class="lineno">   81</span>    <span class="keywordflow">if</span> (!available) {</div>
-<div class="line"><span class="lineno">   82</span>        <a class="code hl_function" href="#a365b1bab1d7695e1ed8db3023413ca24">clearExternalInputs</a>();</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   84</span>    }</div>
-<div class="line"><span class="lineno">   85</span>    <a class="code hl_variable" href="#ac6964b93978e4aaa0684d466b71378cc">m_inputs</a> = {inputs.<a class="code hl_variable" href="structdlz_1_1_telemetry_inputs.html#a7b61d2e4181845bc50e76daaf9571bab">rangeNm</a>, inputs.<a class="code hl_variable" href="structdlz_1_1_telemetry_inputs.html#a8c3d5220aaaccda2e4ddbf7acf1a99ea">aspectDegrees</a>, inputs.<a class="code hl_variable" href="structdlz_1_1_telemetry_inputs.html#a8d412548a009513e7a4fa62b108b57ab">altitudeFeet</a>, 0.90, 0.95};</div>
-<div class="line"><span class="lineno">   86</span>    <span class="comment">// A sequential external sample retains filter, scale, and cue state. The</span></div>
-<div class="line"><span class="lineno">   87</span>    <span class="comment">// controller is reset only when the source/mode changes or the stream is</span></div>
-<div class="line"><span class="lineno">   88</span>    <span class="comment">// cleared; resetTemporal is reserved for those discontinuities.</span></div>
-<div class="line"><span class="lineno">   89</span>    <a class="code hl_function" href="#a622f9724a812e8564fa34383c26240be">rebuild</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   90</span>}</div>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00082">82</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                            {</div>
+<div class="line"><span class="lineno">   84</span>    <a class="code hl_variable" href="#a234f66dda676516eeb33dc64b9b3f4ee">m_externalInputs</a> = inputs;</div>
+<div class="line"><span class="lineno">   85</span>    <a class="code hl_variable" href="#a6c4fbc1507ddc64b5d67562e0270801f">m_externalAvailable</a> = <a class="code hl_function" href="namespaceanonymous__namespace_02plane__attitude__transform_8cpp_03.html#a19bd63736036d4ddcda63de9d152769a">available</a>;</div>
+<div class="line"><span class="lineno">   86</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#ab64eecd8987376c20e66dbe9cdab628a">setExternalInputs</a>(inputs, available, source);</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    <span class="comment">// Incoming frames are cached while the local calculation mode is active;</span></div>
+<div class="line"><span class="lineno">   89</span>    <span class="comment">// they must not alter the slider-driven drawing or its temporal state.</span></div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a> != <a class="code hl_enumvalue" href="classdlz_1_1presentation_1_1_control_panel.html#afbe376c00506cacde3ce50e0423412b1a739e0f43ed51f62a9f88bb595187b902">ControlPanel::InputMode::UdpOrReplay</a>) {</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">if</span> (!available) {</div>
+<div class="line"><span class="lineno">   94</span>        <a class="code hl_function" href="#a365b1bab1d7695e1ed8db3023413ca24">clearExternalInputs</a>();</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="line"><span class="lineno">   97</span>    <a class="code hl_variable" href="#ac6964b93978e4aaa0684d466b71378cc">m_inputs</a> = {inputs.<a class="code hl_variable" href="structdlz_1_1_telemetry_inputs.html#a7b61d2e4181845bc50e76daaf9571bab">rangeNm</a>, inputs.<a class="code hl_variable" href="structdlz_1_1_telemetry_inputs.html#a8c3d5220aaaccda2e4ddbf7acf1a99ea">aspectDegrees</a>, inputs.<a class="code hl_variable" href="structdlz_1_1_telemetry_inputs.html#a8d412548a009513e7a4fa62b108b57ab">altitudeFeet</a>, 0.90, 0.95};</div>
+<div class="line"><span class="lineno">   98</span>    <span class="comment">// A sequential external sample retains filter, scale, and cue state. The</span></div>
+<div class="line"><span class="lineno">   99</span>    <span class="comment">// controller is reset only when the source/mode changes or the stream is</span></div>
+<div class="line"><span class="lineno">  100</span>    <span class="comment">// cleared; resetTemporal is reserved for those discontinuities.</span></div>
+<div class="line"><span class="lineno">  101</span>    <a class="code hl_function" href="#a622f9724a812e8564fa34383c26240be">rebuild</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  102</span>}</div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_control_panel_html_afbe376c00506cacde3ce50e0423412b1a739e0f43ed51f62a9f88bb595187b902"><div class="ttname"><a href="classdlz_1_1presentation_1_1_control_panel.html#afbe376c00506cacde3ce50e0423412b1a739e0f43ed51f62a9f88bb595187b902">dlz::presentation::ControlPanel::InputMode::UdpOrReplay</a></div><div class="ttdeci">@ UdpOrReplay</div><div class="ttdef"><b>Definition</b> <a href="dlz__control__panel_8h_source.html#l00028">dlz_control_panel.h:28</a></div></div>
 <div class="ttc" id="anamespaceanonymous__namespace_02plane__attitude__transform_8cpp_03_html_a19bd63736036d4ddcda63de9d152769a"><div class="ttname"><a href="namespaceanonymous__namespace_02plane__attitude__transform_8cpp_03.html#a19bd63736036d4ddcda63de9d152769a">anonymous_namespace{plane_attitude_transform.cpp}::available</a></div><div class="ttdeci">bool available(const QBitArray &amp;fields, int field) noexcept</div><div class="ttdef"><b>Definition</b> <a href="plane__attitude__transform_8cpp_source.html#l00012">plane_attitude_transform.cpp:12</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="dlz__types_8h_source.html#l00057">dlz::TelemetryInputs::altitudeFeet</a>, <a class="el" href="dlz__types_8h_source.html#l00056">dlz::TelemetryInputs::aspectDegrees</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00092">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00060">m_controlPanel</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00070">m_externalAvailable</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00066">m_externalInputs</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00069">m_inputMode</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00064">m_inputs</a>, <a class="el" href="dlz__types_8h_source.html#l00055">dlz::TelemetryInputs::rangeNm</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">rebuild()</a>, <a class="el" href="dlz__control__panel_8cpp_source.html#l00259">dlz::presentation::ControlPanel::setExternalInputs()</a>, and <a class="el" href="dlz__control__panel_8h_source.html#l00028">dlz::presentation::ControlPanel::UdpOrReplay</a>.</p>
+<p class="reference">References <a class="el" href="dlz__types_8h_source.html#l00057">dlz::TelemetryInputs::altitudeFeet</a>, <a class="el" href="dlz__types_8h_source.html#l00056">dlz::TelemetryInputs::aspectDegrees</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00071">m_controlPanel</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00081">m_externalAvailable</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00077">m_externalInputs</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00080">m_inputMode</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00075">m_inputs</a>, <a class="el" href="dlz__types_8h_source.html#l00055">dlz::TelemetryInputs::rangeNm</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">rebuild()</a>, <a class="el" href="dlz__control__panel_8cpp_source.html#l00259">dlz::presentation::ControlPanel::setExternalInputs()</a>, and <a class="el" href="dlz__control__panel_8h_source.html#l00028">dlz::presentation::ControlPanel::UdpOrReplay</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -583,25 +588,25 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00092">92</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                                                             {</div>
-<div class="line"><span class="lineno">   93</span>    Q_UNUSED(message)</div>
-<div class="line"><span class="lineno">   94</span>    <a class="code hl_variable" href="#a6c4fbc1507ddc64b5d67562e0270801f">m_externalAvailable</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   95</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#ab64eecd8987376c20e66dbe9cdab628a">setExternalInputs</a>({}, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a> != <a class="code hl_enumvalue" href="classdlz_1_1presentation_1_1_control_panel.html#afbe376c00506cacde3ce50e0423412b1a739e0f43ed51f62a9f88bb595187b902">ControlPanel::InputMode::UdpOrReplay</a>) {</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
-<div class="line"><span class="lineno">   99</span>    <a class="code hl_variable" href="#a80f2bb657a4bd6d020993450d186d47e">m_hasFrame</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  100</span>    <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#a43321c3aad465649153fe0c5101816b2">clear</a>();</div>
-<div class="line"><span class="lineno">  101</span>    <a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_hud_view.html#a91a974861186d9a78bb83ea9618dd525">clearFrame</a>();</div>
-<div class="line"><span class="lineno">  102</span>}</div>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">104</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>                                                             {</div>
+<div class="line"><span class="lineno">  105</span>    Q_UNUSED(message)</div>
+<div class="line"><span class="lineno">  106</span>    <a class="code hl_variable" href="#a6c4fbc1507ddc64b5d67562e0270801f">m_externalAvailable</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  107</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#ab64eecd8987376c20e66dbe9cdab628a">setExternalInputs</a>({}, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a> != <a class="code hl_enumvalue" href="classdlz_1_1presentation_1_1_control_panel.html#afbe376c00506cacde3ce50e0423412b1a739e0f43ed51f62a9f88bb595187b902">ControlPanel::InputMode::UdpOrReplay</a>) {</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="line"><span class="lineno">  111</span>    <a class="code hl_variable" href="#a80f2bb657a4bd6d020993450d186d47e">m_hasFrame</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  112</span>    <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#a43321c3aad465649153fe0c5101816b2">clear</a>();</div>
+<div class="line"><span class="lineno">  113</span>    <a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_hud_view.html#a91a974861186d9a78bb83ea9618dd525">clearFrame</a>();</div>
+<div class="line"><span class="lineno">  114</span>}</div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_view_html_a91a974861186d9a78bb83ea9618dd525"><div class="ttname"><a href="classdlz_1_1presentation_1_1_hud_view.html#a91a974861186d9a78bb83ea9618dd525">dlz::presentation::HudView::clearFrame</a></div><div class="ttdeci">void clearFrame()</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__view_8cpp_source.html#l00025">dlz_hud_view.cpp:25</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a80f2bb657a4bd6d020993450d186d47e"><div class="ttname"><a href="#a80f2bb657a4bd6d020993450d186d47e">dlz::presentation::HudWorkspace::m_hasFrame</a></div><div class="ttdeci">bool m_hasFrame</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00071">dlz_hud_workspace.h:71</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a80f2bb657a4bd6d020993450d186d47e"><div class="ttname"><a href="#a80f2bb657a4bd6d020993450d186d47e">dlz::presentation::HudWorkspace::m_hasFrame</a></div><div class="ttdeci">bool m_hasFrame</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00082">dlz_hud_workspace.h:82</a></div></div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_presentation_controller_html_a43321c3aad465649153fe0c5101816b2"><div class="ttname"><a href="classdlz_1_1presentation_1_1_presentation_controller.html#a43321c3aad465649153fe0c5101816b2">dlz::presentation::PresentationController::clear</a></div><div class="ttdeci">void clear() noexcept</div><div class="ttdef"><b>Definition</b> <a href="dlz__presentation__controller_8cpp_source.html#l00035">dlz_presentation_controller.cpp:35</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="dlz__presentation__controller_8cpp_source.html#l00035">dlz::presentation::PresentationController::clear()</a>, <a class="el" href="dlz__hud__view_8cpp_source.html#l00025">dlz::presentation::HudView::clearFrame()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00068">m_controller</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00060">m_controlPanel</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00070">m_externalAvailable</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00071">m_hasFrame</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00059">m_hudView</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00069">m_inputMode</a>, <a class="el" href="dlz__control__panel_8cpp_source.html#l00259">dlz::presentation::ControlPanel::setExternalInputs()</a>, and <a class="el" href="dlz__control__panel_8h_source.html#l00028">dlz::presentation::ControlPanel::UdpOrReplay</a>.</p>
+<p class="reference">References <a class="el" href="dlz__presentation__controller_8cpp_source.html#l00035">dlz::presentation::PresentationController::clear()</a>, <a class="el" href="dlz__hud__view_8cpp_source.html#l00025">dlz::presentation::HudView::clearFrame()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00079">m_controller</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00071">m_controlPanel</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00081">m_externalAvailable</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00082">m_hasFrame</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00070">m_hudView</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00080">m_inputMode</a>, <a class="el" href="dlz__control__panel_8cpp_source.html#l00259">dlz::presentation::ControlPanel::setExternalInputs()</a>, and <a class="el" href="dlz__control__panel_8h_source.html#l00028">dlz::presentation::ControlPanel::UdpOrReplay</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00070">setExternalInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00049">setInputMode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00082">setExternalInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00061">setInputMode()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -630,7 +635,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -654,11 +659,92 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00147">present()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">rebuild()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">rebuildFromControls()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00156">tick()</a>.</p>
+<p class="reference">References <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00056">hideEvent()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00159">present()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">rebuild()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00116">rebuildFromControls()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00050">showEvent()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00168">tick()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classdlz_1_1presentation_1_1_hud_workspace_a33bf0345b5e07d56f8af527bc50cadf7_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a77fdf34eba1a4c0d47de45cb5bab408d" name="a77fdf34eba1a4c0d47de45cb5bab408d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77fdf34eba1a4c0d47de45cb5bab408d">&#9670;&#160;</a></span>showEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dlz::presentation::HudWorkspace::showEvent </td>
+          <td>(</td>
+          <td class="paramtype">QShowEvent *</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00050">50</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>                                              {</div>
+<div class="line"><span class="lineno">   51</span>    QWidget::showEvent(event);</div>
+<div class="line"><span class="lineno">   52</span>    <a class="code hl_variable" href="#a67f99cd2d81ee8cd4a32eaba9daeed4f">m_lastTickNanoseconds</a> = <a class="code hl_variable" href="#abe32b697bd94b80128960d56849811ec">m_clock</a>.nsecsElapsed();</div>
+<div class="line"><span class="lineno">   53</span>    <a class="code hl_variable" href="#ab0db60d30ba0b0fbbdb5576650a86185">m_timer</a>-&gt;start();</div>
+<div class="line"><span class="lineno">   54</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="dlz__hud__workspace_8h_source.html#l00073">m_clock</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00074">m_lastTickNanoseconds</a>, and <a class="el" href="dlz__hud__workspace_8h_source.html#l00072">m_timer</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a33bf0345b5e07d56f8af527bc50cadf7">diagnosticRaised()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classdlz_1_1presentation_1_1_hud_workspace_a77fdf34eba1a4c0d47de45cb5bab408d_icgraph.svg" width="460" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab2b2140048d404087bf063f969932848" name="ab2b2140048d404087bf063f969932848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b2140048d404087bf063f969932848">&#9670;&#160;</a></span>hideEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dlz::presentation::HudWorkspace::hideEvent </td>
+          <td>(</td>
+          <td class="paramtype">QHideEvent *</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00056">56</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>                                              {</div>
+<div class="line"><span class="lineno">   57</span>    <a class="code hl_variable" href="#ab0db60d30ba0b0fbbdb5576650a86185">m_timer</a>-&gt;stop();</div>
+<div class="line"><span class="lineno">   58</span>    QWidget::hideEvent(event);</div>
+<div class="line"><span class="lineno">   59</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="dlz__hud__workspace_8h_source.html#l00072">m_timer</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a33bf0345b5e07d56f8af527bc50cadf7">diagnosticRaised()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classdlz_1_1presentation_1_1_hud_workspace_ab2b2140048d404087bf063f969932848_icgraph.svg" width="454" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -686,22 +772,22 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">104</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  104</span>                                       {</div>
-<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a> != <a class="code hl_enumvalue" href="classdlz_1_1presentation_1_1_control_panel.html#afbe376c00506cacde3ce50e0423412b1a7fcf864a8c3f9578a1c1e193ab5d10db">ControlPanel::InputMode::SliderTest</a>) {</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  107</span>    }</div>
-<div class="line"><span class="lineno">  108</span>    <a class="code hl_variable" href="#ad02c50b4a248e3117fa12d33e54b4970">m_calculationInputs</a> = <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#a4612716beec462828b0827fa7ad9664e">inputs</a>();</div>
-<div class="line"><span class="lineno">  109</span>    <a class="code hl_variable" href="#ac6964b93978e4aaa0684d466b71378cc">m_inputs</a> = <a class="code hl_variable" href="#ad02c50b4a248e3117fa12d33e54b4970">m_calculationInputs</a>;</div>
-<div class="line"><span class="lineno">  110</span>    <span class="comment">// A slider edit is a new calculation, not a temporal sample of the old</span></div>
-<div class="line"><span class="lineno">  111</span>    <span class="comment">// one. Reset filtering, scale hysteresis, and cue timing together.</span></div>
-<div class="line"><span class="lineno">  112</span>    <a class="code hl_function" href="#a622f9724a812e8564fa34383c26240be">rebuild</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  113</span>}</div>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00116">116</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>                                       {</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a> != <a class="code hl_enumvalue" href="classdlz_1_1presentation_1_1_control_panel.html#afbe376c00506cacde3ce50e0423412b1a7fcf864a8c3f9578a1c1e193ab5d10db">ControlPanel::InputMode::SliderTest</a>) {</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="line"><span class="lineno">  120</span>    <a class="code hl_variable" href="#ad02c50b4a248e3117fa12d33e54b4970">m_calculationInputs</a> = <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#a4612716beec462828b0827fa7ad9664e">inputs</a>();</div>
+<div class="line"><span class="lineno">  121</span>    <a class="code hl_variable" href="#ac6964b93978e4aaa0684d466b71378cc">m_inputs</a> = <a class="code hl_variable" href="#ad02c50b4a248e3117fa12d33e54b4970">m_calculationInputs</a>;</div>
+<div class="line"><span class="lineno">  122</span>    <span class="comment">// A slider edit is a new calculation, not a temporal sample of the old</span></div>
+<div class="line"><span class="lineno">  123</span>    <span class="comment">// one. Reset filtering, scale hysteresis, and cue timing together.</span></div>
+<div class="line"><span class="lineno">  124</span>    <a class="code hl_function" href="#a622f9724a812e8564fa34383c26240be">rebuild</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  125</span>}</div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_control_panel_html_a4612716beec462828b0827fa7ad9664e"><div class="ttname"><a href="classdlz_1_1presentation_1_1_control_panel.html#a4612716beec462828b0827fa7ad9664e">dlz::presentation::ControlPanel::inputs</a></div><div class="ttdeci">dlz::ScenarioInputs inputs() const</div><div class="ttdef"><b>Definition</b> <a href="dlz__control__panel_8cpp_source.html#l00242">dlz_control_panel.cpp:242</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="dlz__control__panel_8cpp_source.html#l00242">dlz::presentation::ControlPanel::inputs()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00065">m_calculationInputs</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00060">m_controlPanel</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00069">m_inputMode</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00064">m_inputs</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">rebuild()</a>, and <a class="el" href="dlz__control__panel_8h_source.html#l00028">dlz::presentation::ControlPanel::SliderTest</a>.</p>
+<p class="reference">References <a class="el" href="dlz__control__panel_8cpp_source.html#l00242">dlz::presentation::ControlPanel::inputs()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00076">m_calculationInputs</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00071">m_controlPanel</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00080">m_inputMode</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00075">m_inputs</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">rebuild()</a>, and <a class="el" href="dlz__control__panel_8h_source.html#l00028">dlz::presentation::ControlPanel::SliderTest</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a33bf0345b5e07d56f8af527bc50cadf7">diagnosticRaised()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a33bf0345b5e07d56f8af527bc50cadf7">diagnosticRaised()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -738,18 +824,18 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00156">156</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>                        {</div>
-<div class="line"><span class="lineno">  157</span>    <span class="keyword">const</span> qint64 now = <a class="code hl_variable" href="#abe32b697bd94b80128960d56849811ec">m_clock</a>.nsecsElapsed();</div>
-<div class="line"><span class="lineno">  158</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> dt = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(now - <a class="code hl_variable" href="#a67f99cd2d81ee8cd4a32eaba9daeed4f">m_lastTickNanoseconds</a>) / 1.0e9;</div>
-<div class="line"><span class="lineno">  159</span>    <a class="code hl_variable" href="#a67f99cd2d81ee8cd4a32eaba9daeed4f">m_lastTickNanoseconds</a> = now;</div>
-<div class="line"><span class="lineno">  160</span>    <a class="code hl_function" href="#afb799959b6a1f5055a960535a31071b1">present</a>(std::clamp(dt, 0.0, 0.25));</div>
-<div class="line"><span class="lineno">  161</span>}</div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_afb799959b6a1f5055a960535a31071b1"><div class="ttname"><a href="#afb799959b6a1f5055a960535a31071b1">dlz::presentation::HudWorkspace::present</a></div><div class="ttdeci">void present(double dtSeconds)</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8cpp_source.html#l00147">dlz_hud_workspace.cpp:147</a></div></div>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00168">168</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  168</span>                        {</div>
+<div class="line"><span class="lineno">  169</span>    <span class="keyword">const</span> qint64 now = <a class="code hl_variable" href="#abe32b697bd94b80128960d56849811ec">m_clock</a>.nsecsElapsed();</div>
+<div class="line"><span class="lineno">  170</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> dt = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(now - <a class="code hl_variable" href="#a67f99cd2d81ee8cd4a32eaba9daeed4f">m_lastTickNanoseconds</a>) / 1.0e9;</div>
+<div class="line"><span class="lineno">  171</span>    <a class="code hl_variable" href="#a67f99cd2d81ee8cd4a32eaba9daeed4f">m_lastTickNanoseconds</a> = now;</div>
+<div class="line"><span class="lineno">  172</span>    <a class="code hl_function" href="#afb799959b6a1f5055a960535a31071b1">present</a>(std::clamp(dt, 0.0, 0.25));</div>
+<div class="line"><span class="lineno">  173</span>}</div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_afb799959b6a1f5055a960535a31071b1"><div class="ttname"><a href="#afb799959b6a1f5055a960535a31071b1">dlz::presentation::HudWorkspace::present</a></div><div class="ttdeci">void present(double dtSeconds)</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8cpp_source.html#l00159">dlz_hud_workspace.cpp:159</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="dlz__hud__workspace_8h_source.html#l00062">m_clock</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00063">m_lastTickNanoseconds</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00147">present()</a>.</p>
+<p class="reference">References <a class="el" href="dlz__hud__workspace_8h_source.html#l00073">m_clock</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00074">m_lastTickNanoseconds</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00159">present()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a33bf0345b5e07d56f8af527bc50cadf7">diagnosticRaised()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a33bf0345b5e07d56f8af527bc50cadf7">diagnosticRaised()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -786,49 +872,49 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">115</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                                             {</div>
-<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">if</span> (resetTemporal) {</div>
-<div class="line"><span class="lineno">  117</span>        <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#abcb0380e5c09132aa112a1ab05585eaf">reset</a>();</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
-<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a> == <a class="code hl_enumvalue" href="classdlz_1_1presentation_1_1_control_panel.html#afbe376c00506cacde3ce50e0423412b1a739e0f43ed51f62a9f88bb595187b902">ControlPanel::InputMode::UdpOrReplay</a> &amp;&amp; !<a class="code hl_variable" href="#a6c4fbc1507ddc64b5d67562e0270801f">m_externalAvailable</a>) {</div>
-<div class="line"><span class="lineno">  120</span>        <a class="code hl_variable" href="#a80f2bb657a4bd6d020993450d186d47e">m_hasFrame</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  121</span>        <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#a43321c3aad465649153fe0c5101816b2">clear</a>();</div>
-<div class="line"><span class="lineno">  122</span>        <a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_hud_view.html#a91a974861186d9a78bb83ea9618dd525">clearFrame</a>();</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>    dlz::ScenarioFrame frame;</div>
-<div class="line"><span class="lineno">  127</span>    QString error;</div>
-<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="classdlz_1_1_scenario_adapter.html#a74b77d4b2f7fb4a7957fb00dc7379890">dlz::ScenarioAdapter::build</a>(<a class="code hl_variable" href="#ac6964b93978e4aaa0684d466b71378cc">m_inputs</a>, &amp;frame, &amp;error)) {</div>
-<div class="line"><span class="lineno">  129</span>        <span class="comment">// Keep finite geometry and candidate readouts live while withholding</span></div>
-<div class="line"><span class="lineno">  130</span>        <span class="comment">// an invalid solver result from the renderer.</span></div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (frame.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a2353e52ee7f6e003128ec7ca194479de">geometry</a>.<a class="code hl_variable" href="structdlz_1_1_geometry.html#a3c82eca0036f6ecd956f99f3f7db5d28">rangeNm</a> &gt; 0.0) {</div>
-<div class="line"><span class="lineno">  132</span>            <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#a48cb3dd0aa0897e9f25bd6275da211dc">setGeometryReadout</a>(frame.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a2353e52ee7f6e003128ec7ca194479de">geometry</a>, frame.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a8e5ffc37164b4967bf98165be61bea83">solution</a>);</div>
-<div class="line"><span class="lineno">  133</span>        }</div>
-<div class="line"><span class="lineno">  134</span>        <a class="code hl_variable" href="#a80f2bb657a4bd6d020993450d186d47e">m_hasFrame</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  135</span>        <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#a43321c3aad465649153fe0c5101816b2">clear</a>();</div>
-<div class="line"><span class="lineno">  136</span>        <a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_hud_view.html#aa3f0a4a7ea8f7b890777c4a538c515f4">setError</a>(</div>
-<div class="line"><span class="lineno">  137</span>            error.isEmpty() ? QStringLiteral(<span class="stringliteral">&quot;DLZ calculation input is outside its ordered domain&quot;</span>)</div>
-<div class="line"><span class="lineno">  138</span>                            : error);</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  140</span>    }</div>
-<div class="line"><span class="lineno">  141</span>    <a class="code hl_variable" href="#a79c11f713861128537cbc92892cf38db">m_frame</a> = frame;</div>
-<div class="line"><span class="lineno">  142</span>    <a class="code hl_variable" href="#a80f2bb657a4bd6d020993450d186d47e">m_hasFrame</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  143</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#a48cb3dd0aa0897e9f25bd6275da211dc">setGeometryReadout</a>(<a class="code hl_variable" href="#a79c11f713861128537cbc92892cf38db">m_frame</a>.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a2353e52ee7f6e003128ec7ca194479de">geometry</a>, <a class="code hl_variable" href="#a79c11f713861128537cbc92892cf38db">m_frame</a>.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a8e5ffc37164b4967bf98165be61bea83">solution</a>);</div>
-<div class="line"><span class="lineno">  144</span>    <a class="code hl_function" href="#afb799959b6a1f5055a960535a31071b1">present</a>(0.0);</div>
-<div class="line"><span class="lineno">  145</span>}</div>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">127</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>                                             {</div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">if</span> (resetTemporal) {</div>
+<div class="line"><span class="lineno">  129</span>        <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#abcb0380e5c09132aa112a1ab05585eaf">reset</a>();</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af37a01325057b95300503f2d57ef71b7">m_inputMode</a> == <a class="code hl_enumvalue" href="classdlz_1_1presentation_1_1_control_panel.html#afbe376c00506cacde3ce50e0423412b1a739e0f43ed51f62a9f88bb595187b902">ControlPanel::InputMode::UdpOrReplay</a> &amp;&amp; !<a class="code hl_variable" href="#a6c4fbc1507ddc64b5d67562e0270801f">m_externalAvailable</a>) {</div>
+<div class="line"><span class="lineno">  132</span>        <a class="code hl_variable" href="#a80f2bb657a4bd6d020993450d186d47e">m_hasFrame</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  133</span>        <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#a43321c3aad465649153fe0c5101816b2">clear</a>();</div>
+<div class="line"><span class="lineno">  134</span>        <a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_hud_view.html#a91a974861186d9a78bb83ea9618dd525">clearFrame</a>();</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>    dlz::ScenarioFrame frame;</div>
+<div class="line"><span class="lineno">  139</span>    QString error;</div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="classdlz_1_1_scenario_adapter.html#a74b77d4b2f7fb4a7957fb00dc7379890">dlz::ScenarioAdapter::build</a>(<a class="code hl_variable" href="#ac6964b93978e4aaa0684d466b71378cc">m_inputs</a>, &amp;frame, &amp;error)) {</div>
+<div class="line"><span class="lineno">  141</span>        <span class="comment">// Keep finite geometry and candidate readouts live while withholding</span></div>
+<div class="line"><span class="lineno">  142</span>        <span class="comment">// an invalid solver result from the renderer.</span></div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">if</span> (frame.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a2353e52ee7f6e003128ec7ca194479de">geometry</a>.<a class="code hl_variable" href="structdlz_1_1_geometry.html#a3c82eca0036f6ecd956f99f3f7db5d28">rangeNm</a> &gt; 0.0) {</div>
+<div class="line"><span class="lineno">  144</span>            <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#a48cb3dd0aa0897e9f25bd6275da211dc">setGeometryReadout</a>(frame.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a2353e52ee7f6e003128ec7ca194479de">geometry</a>, frame.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a8e5ffc37164b4967bf98165be61bea83">solution</a>);</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>        <a class="code hl_variable" href="#a80f2bb657a4bd6d020993450d186d47e">m_hasFrame</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  147</span>        <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#a43321c3aad465649153fe0c5101816b2">clear</a>();</div>
+<div class="line"><span class="lineno">  148</span>        <a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_hud_view.html#aa3f0a4a7ea8f7b890777c4a538c515f4">setError</a>(</div>
+<div class="line"><span class="lineno">  149</span>            error.isEmpty() ? QStringLiteral(<span class="stringliteral">&quot;DLZ calculation input is outside its ordered domain&quot;</span>)</div>
+<div class="line"><span class="lineno">  150</span>                            : error);</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  152</span>    }</div>
+<div class="line"><span class="lineno">  153</span>    <a class="code hl_variable" href="#a79c11f713861128537cbc92892cf38db">m_frame</a> = frame;</div>
+<div class="line"><span class="lineno">  154</span>    <a class="code hl_variable" href="#a80f2bb657a4bd6d020993450d186d47e">m_hasFrame</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  155</span>    <a class="code hl_variable" href="#a685efed797ee59fa55f791a6263a58f7">m_controlPanel</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_control_panel.html#a48cb3dd0aa0897e9f25bd6275da211dc">setGeometryReadout</a>(<a class="code hl_variable" href="#a79c11f713861128537cbc92892cf38db">m_frame</a>.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a2353e52ee7f6e003128ec7ca194479de">geometry</a>, <a class="code hl_variable" href="#a79c11f713861128537cbc92892cf38db">m_frame</a>.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a8e5ffc37164b4967bf98165be61bea83">solution</a>);</div>
+<div class="line"><span class="lineno">  156</span>    <a class="code hl_function" href="#afb799959b6a1f5055a960535a31071b1">present</a>(0.0);</div>
+<div class="line"><span class="lineno">  157</span>}</div>
 <div class="ttc" id="aclassdlz_1_1_scenario_adapter_html_a74b77d4b2f7fb4a7957fb00dc7379890"><div class="ttname"><a href="classdlz_1_1_scenario_adapter.html#a74b77d4b2f7fb4a7957fb00dc7379890">dlz::ScenarioAdapter::build</a></div><div class="ttdeci">static bool build(const ScenarioInputs &amp;inputs, ScenarioFrame *frame, QString *error=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="dlz__scenario__adapter_8cpp_source.html#l00048">dlz_scenario_adapter.cpp:48</a></div></div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_control_panel_html_a48cb3dd0aa0897e9f25bd6275da211dc"><div class="ttname"><a href="classdlz_1_1presentation_1_1_control_panel.html#a48cb3dd0aa0897e9f25bd6275da211dc">dlz::presentation::ControlPanel::setGeometryReadout</a></div><div class="ttdeci">void setGeometryReadout(const dlz::Geometry &amp;geometry, const dlz::Solution &amp;solution)</div><div class="ttdef"><b>Definition</b> <a href="dlz__control__panel_8cpp_source.html#l00284">dlz_control_panel.cpp:284</a></div></div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_view_html_aa3f0a4a7ea8f7b890777c4a538c515f4"><div class="ttname"><a href="classdlz_1_1presentation_1_1_hud_view.html#aa3f0a4a7ea8f7b890777c4a538c515f4">dlz::presentation::HudView::setError</a></div><div class="ttdeci">void setError(const QString &amp;message)</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__view_8cpp_source.html#l00031">dlz_hud_view.cpp:31</a></div></div>
-<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a79c11f713861128537cbc92892cf38db"><div class="ttname"><a href="#a79c11f713861128537cbc92892cf38db">dlz::presentation::HudWorkspace::m_frame</a></div><div class="ttdeci">dlz::ScenarioFrame m_frame</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00067">dlz_hud_workspace.h:67</a></div></div>
+<div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_workspace_html_a79c11f713861128537cbc92892cf38db"><div class="ttname"><a href="#a79c11f713861128537cbc92892cf38db">dlz::presentation::HudWorkspace::m_frame</a></div><div class="ttdeci">dlz::ScenarioFrame m_frame</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__workspace_8h_source.html#l00078">dlz_hud_workspace.h:78</a></div></div>
 <div class="ttc" id="astructdlz_1_1_geometry_html_a3c82eca0036f6ecd956f99f3f7db5d28"><div class="ttname"><a href="structdlz_1_1_geometry.html#a3c82eca0036f6ecd956f99f3f7db5d28">dlz::Geometry::rangeNm</a></div><div class="ttdeci">double rangeNm</div><div class="ttdoc">Shooter-to-target slant range.</div><div class="ttdef"><b>Definition</b> <a href="dlz__types_8h_source.html#l00070">dlz_types.h:70</a></div></div>
 <div class="ttc" id="astructdlz_1_1_scenario_frame_html_a2353e52ee7f6e003128ec7ca194479de"><div class="ttname"><a href="structdlz_1_1_scenario_frame.html#a2353e52ee7f6e003128ec7ca194479de">dlz::ScenarioFrame::geometry</a></div><div class="ttdeci">Geometry geometry</div><div class="ttdef"><b>Definition</b> <a href="dlz__scenario__adapter_8h_source.html#l00030">dlz_scenario_adapter.h:30</a></div></div>
 <div class="ttc" id="astructdlz_1_1_scenario_frame_html_a8e5ffc37164b4967bf98165be61bea83"><div class="ttname"><a href="structdlz_1_1_scenario_frame.html#a8e5ffc37164b4967bf98165be61bea83">dlz::ScenarioFrame::solution</a></div><div class="ttdeci">Solution solution</div><div class="ttdef"><b>Definition</b> <a href="dlz__scenario__adapter_8h_source.html#l00031">dlz_scenario_adapter.h:31</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="dlz__scenario__adapter_8cpp_source.html#l00048">dlz::ScenarioAdapter::build()</a>, <a class="el" href="dlz__presentation__controller_8cpp_source.html#l00035">dlz::presentation::PresentationController::clear()</a>, <a class="el" href="dlz__hud__view_8cpp_source.html#l00025">dlz::presentation::HudView::clearFrame()</a>, <a class="el" href="dlz__scenario__adapter_8h_source.html#l00030">dlz::ScenarioFrame::geometry</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00068">m_controller</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00060">m_controlPanel</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00070">m_externalAvailable</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00067">m_frame</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00071">m_hasFrame</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00059">m_hudView</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00069">m_inputMode</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00064">m_inputs</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00147">present()</a>, <a class="el" href="dlz__types_8h_source.html#l00070">dlz::Geometry::rangeNm</a>, <a class="el" href="dlz__presentation__controller_8cpp_source.html#l00020">dlz::presentation::PresentationController::reset()</a>, <a class="el" href="dlz__hud__view_8cpp_source.html#l00031">dlz::presentation::HudView::setError()</a>, <a class="el" href="dlz__control__panel_8cpp_source.html#l00284">dlz::presentation::ControlPanel::setGeometryReadout()</a>, <a class="el" href="dlz__scenario__adapter_8h_source.html#l00031">dlz::ScenarioFrame::solution</a>, and <a class="el" href="dlz__control__panel_8h_source.html#l00028">dlz::presentation::ControlPanel::UdpOrReplay</a>.</p>
+<p class="reference">References <a class="el" href="dlz__scenario__adapter_8cpp_source.html#l00048">dlz::ScenarioAdapter::build()</a>, <a class="el" href="dlz__presentation__controller_8cpp_source.html#l00035">dlz::presentation::PresentationController::clear()</a>, <a class="el" href="dlz__hud__view_8cpp_source.html#l00025">dlz::presentation::HudView::clearFrame()</a>, <a class="el" href="dlz__scenario__adapter_8h_source.html#l00030">dlz::ScenarioFrame::geometry</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00079">m_controller</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00071">m_controlPanel</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00081">m_externalAvailable</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00078">m_frame</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00082">m_hasFrame</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00070">m_hudView</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00080">m_inputMode</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00075">m_inputs</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00159">present()</a>, <a class="el" href="dlz__types_8h_source.html#l00070">dlz::Geometry::rangeNm</a>, <a class="el" href="dlz__presentation__controller_8cpp_source.html#l00020">dlz::presentation::PresentationController::reset()</a>, <a class="el" href="dlz__hud__view_8cpp_source.html#l00031">dlz::presentation::HudView::setError()</a>, <a class="el" href="dlz__control__panel_8cpp_source.html#l00284">dlz::presentation::ControlPanel::setGeometryReadout()</a>, <a class="el" href="dlz__scenario__adapter_8h_source.html#l00031">dlz::ScenarioFrame::solution</a>, and <a class="el" href="dlz__control__panel_8h_source.html#l00028">dlz::presentation::ControlPanel::UdpOrReplay</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a33bf0345b5e07d56f8af527bc50cadf7">diagnosticRaised()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">rebuildFromControls()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00070">setExternalInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00049">setInputMode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a33bf0345b5e07d56f8af527bc50cadf7">diagnosticRaised()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00116">rebuildFromControls()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00082">setExternalInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00061">setInputMode()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -865,15 +951,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00147">147</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                           {</div>
-<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a80f2bb657a4bd6d020993450d186d47e">m_hasFrame</a>) {</div>
-<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  150</span>    }</div>
-<div class="line"><span class="lineno">  151</span>    <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#a3970ebda1f3966fbd83baf9cc85ab30e">update</a>(<a class="code hl_variable" href="#a79c11f713861128537cbc92892cf38db">m_frame</a>.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a8e5ffc37164b4967bf98165be61bea83">solution</a>, <a class="code hl_variable" href="#a79c11f713861128537cbc92892cf38db">m_frame</a>.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a2353e52ee7f6e003128ec7ca194479de">geometry</a>.<a class="code hl_variable" href="structdlz_1_1_geometry.html#a3c82eca0036f6ecd956f99f3f7db5d28">rangeNm</a>, <a class="code hl_variable" href="#a79c11f713861128537cbc92892cf38db">m_frame</a>.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a2353e52ee7f6e003128ec7ca194479de">geometry</a>.<a class="code hl_variable" href="structdlz_1_1_geometry.html#a242a8c083ebada4b91ff55eed7820c24">rangeRateKnots</a>,</div>
-<div class="line"><span class="lineno">  152</span>                        <a class="code hl_enumvalue" href="namespacedlz.html#a8e9c52c1f8fa0e2629ae27283d407561abe0579749c20486be0dea4f1b5fd4b14">dlz::HudMode::Prelaunch</a>, dtSeconds);</div>
-<div class="line"><span class="lineno">  153</span>    <a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_hud_view.html#aa1ba72893d7d4f7544e1a4aca5295a79">setFrame</a>(<a class="code hl_variable" href="#a79c11f713861128537cbc92892cf38db">m_frame</a>.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a8e5ffc37164b4967bf98165be61bea83">solution</a>, <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#a4e5a02e5deef2efd39e72a477526eeaf">state</a>(), <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#ae48824d760b9680a8001c8cf0bd17e14">displayedRangeNm</a>());</div>
-<div class="line"><span class="lineno">  154</span>}</div>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00159">159</a> of file <a class="el" href="dlz__hud__workspace_8cpp_source.html">dlz_hud_workspace.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>                                           {</div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a80f2bb657a4bd6d020993450d186d47e">m_hasFrame</a>) {</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  162</span>    }</div>
+<div class="line"><span class="lineno">  163</span>    <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#a3970ebda1f3966fbd83baf9cc85ab30e">update</a>(<a class="code hl_variable" href="#a79c11f713861128537cbc92892cf38db">m_frame</a>.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a8e5ffc37164b4967bf98165be61bea83">solution</a>, <a class="code hl_variable" href="#a79c11f713861128537cbc92892cf38db">m_frame</a>.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a2353e52ee7f6e003128ec7ca194479de">geometry</a>.<a class="code hl_variable" href="structdlz_1_1_geometry.html#a3c82eca0036f6ecd956f99f3f7db5d28">rangeNm</a>, <a class="code hl_variable" href="#a79c11f713861128537cbc92892cf38db">m_frame</a>.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a2353e52ee7f6e003128ec7ca194479de">geometry</a>.<a class="code hl_variable" href="structdlz_1_1_geometry.html#a242a8c083ebada4b91ff55eed7820c24">rangeRateKnots</a>,</div>
+<div class="line"><span class="lineno">  164</span>                        <a class="code hl_enumvalue" href="namespacedlz.html#a8e9c52c1f8fa0e2629ae27283d407561abe0579749c20486be0dea4f1b5fd4b14">dlz::HudMode::Prelaunch</a>, dtSeconds);</div>
+<div class="line"><span class="lineno">  165</span>    <a class="code hl_variable" href="#a183076b9dcc42001acd11419bd9aaf9c">m_hudView</a>-&gt;<a class="code hl_function" href="classdlz_1_1presentation_1_1_hud_view.html#aa1ba72893d7d4f7544e1a4aca5295a79">setFrame</a>(<a class="code hl_variable" href="#a79c11f713861128537cbc92892cf38db">m_frame</a>.<a class="code hl_variable" href="structdlz_1_1_scenario_frame.html#a8e5ffc37164b4967bf98165be61bea83">solution</a>, <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#a4e5a02e5deef2efd39e72a477526eeaf">state</a>(), <a class="code hl_variable" href="#a5b77060e10e2414016827adf1563845f">m_controller</a>.<a class="code hl_function" href="classdlz_1_1presentation_1_1_presentation_controller.html#ae48824d760b9680a8001c8cf0bd17e14">displayedRangeNm</a>());</div>
+<div class="line"><span class="lineno">  166</span>}</div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_hud_view_html_aa1ba72893d7d4f7544e1a4aca5295a79"><div class="ttname"><a href="classdlz_1_1presentation_1_1_hud_view.html#aa1ba72893d7d4f7544e1a4aca5295a79">dlz::presentation::HudView::setFrame</a></div><div class="ttdeci">void setFrame(const dlz::Solution &amp;solution, const dlz::HudState &amp;hudState, double displayedRangeNm)</div><div class="ttdef"><b>Definition</b> <a href="dlz__hud__view_8cpp_source.html#l00015">dlz_hud_view.cpp:15</a></div></div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_presentation_controller_html_a3970ebda1f3966fbd83baf9cc85ab30e"><div class="ttname"><a href="classdlz_1_1presentation_1_1_presentation_controller.html#a3970ebda1f3966fbd83baf9cc85ab30e">dlz::presentation::PresentationController::update</a></div><div class="ttdeci">void update(const dlz::Solution &amp;solution, double rawRangeNm, double rawRangeRateKnots, dlz::HudMode mode, double dtSeconds) noexcept</div><div class="ttdef"><b>Definition</b> <a href="dlz__presentation__controller_8cpp_source.html#l00040">dlz_presentation_controller.cpp:40</a></div></div>
 <div class="ttc" id="aclassdlz_1_1presentation_1_1_presentation_controller_html_a4e5a02e5deef2efd39e72a477526eeaf"><div class="ttname"><a href="classdlz_1_1presentation_1_1_presentation_controller.html#a4e5a02e5deef2efd39e72a477526eeaf">dlz::presentation::PresentationController::state</a></div><div class="ttdeci">const dlz::HudState &amp; state() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="dlz__presentation__controller_8h_source.html#l00023">dlz_presentation_controller.h:23</a></div></div>
@@ -881,9 +967,9 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="anamespacedlz_html_a8e9c52c1f8fa0e2629ae27283d407561abe0579749c20486be0dea4f1b5fd4b14"><div class="ttname"><a href="namespacedlz.html#a8e9c52c1f8fa0e2629ae27283d407561abe0579749c20486be0dea4f1b5fd4b14">dlz::HudMode::Prelaunch</a></div><div class="ttdeci">@ Prelaunch</div><div class="ttdef"><b>Definition</b> <a href="dlz__types_8h_source.html#l00102">dlz_types.h:102</a></div></div>
 <div class="ttc" id="astructdlz_1_1_geometry_html_a242a8c083ebada4b91ff55eed7820c24"><div class="ttname"><a href="structdlz_1_1_geometry.html#a242a8c083ebada4b91ff55eed7820c24">dlz::Geometry::rangeRateKnots</a></div><div class="ttdeci">double rangeRateKnots</div><div class="ttdoc">Positive when opening; negative when closing.</div><div class="ttdef"><b>Definition</b> <a href="dlz__types_8h_source.html#l00071">dlz_types.h:71</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="dlz__presentation__controller_8h_source.html#l00026">dlz::presentation::PresentationController::displayedRangeNm()</a>, <a class="el" href="dlz__scenario__adapter_8h_source.html#l00030">dlz::ScenarioFrame::geometry</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00068">m_controller</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00067">m_frame</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00071">m_hasFrame</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00059">m_hudView</a>, <a class="el" href="dlz__types_8h_source.html#l00102">dlz::Prelaunch</a>, <a class="el" href="dlz__types_8h_source.html#l00070">dlz::Geometry::rangeNm</a>, <a class="el" href="dlz__types_8h_source.html#l00071">dlz::Geometry::rangeRateKnots</a>, <a class="el" href="dlz__hud__view_8cpp_source.html#l00015">dlz::presentation::HudView::setFrame()</a>, <a class="el" href="dlz__scenario__adapter_8h_source.html#l00031">dlz::ScenarioFrame::solution</a>, <a class="el" href="dlz__presentation__controller_8h_source.html#l00023">dlz::presentation::PresentationController::state()</a>, and <a class="el" href="dlz__presentation__controller_8cpp_source.html#l00040">dlz::presentation::PresentationController::update()</a>.</p>
+<p class="reference">References <a class="el" href="dlz__presentation__controller_8h_source.html#l00026">dlz::presentation::PresentationController::displayedRangeNm()</a>, <a class="el" href="dlz__scenario__adapter_8h_source.html#l00030">dlz::ScenarioFrame::geometry</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00079">m_controller</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00078">m_frame</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00082">m_hasFrame</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00070">m_hudView</a>, <a class="el" href="dlz__types_8h_source.html#l00102">dlz::Prelaunch</a>, <a class="el" href="dlz__types_8h_source.html#l00070">dlz::Geometry::rangeNm</a>, <a class="el" href="dlz__types_8h_source.html#l00071">dlz::Geometry::rangeRateKnots</a>, <a class="el" href="dlz__hud__view_8cpp_source.html#l00015">dlz::presentation::HudView::setFrame()</a>, <a class="el" href="dlz__scenario__adapter_8h_source.html#l00031">dlz::ScenarioFrame::solution</a>, <a class="el" href="dlz__presentation__controller_8h_source.html#l00023">dlz::presentation::PresentationController::state()</a>, and <a class="el" href="dlz__presentation__controller_8cpp_source.html#l00040">dlz::presentation::PresentationController::update()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a33bf0345b5e07d56f8af527bc50cadf7">diagnosticRaised()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">rebuild()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00156">tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a33bf0345b5e07d56f8af527bc50cadf7">diagnosticRaised()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">rebuild()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00168">tick()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -918,9 +1004,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00059">59</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00070">70</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00092">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00028">hudView()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00147">present()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">rebuild()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00035">hudView()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00159">present()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">rebuild()</a>.</p>
 
 </div>
 </div>
@@ -944,9 +1030,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00060">60</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00071">71</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00092">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00031">controlPanel()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">rebuild()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">rebuildFromControls()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00070">setExternalInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00049">setInputMode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00038">controlPanel()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">rebuild()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00116">rebuildFromControls()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00082">setExternalInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00061">setInputMode()</a>.</p>
 
 </div>
 </div>
@@ -970,9 +1056,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00061">61</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00072">72</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00056">hideEvent()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00050">showEvent()</a>.</p>
 
 </div>
 </div>
@@ -996,9 +1082,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00062">62</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00073">73</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00156">tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00050">showEvent()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00168">tick()</a>.</p>
 
 </div>
 </div>
@@ -1022,9 +1108,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00063">63</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00074">74</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00156">tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00050">showEvent()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00168">tick()</a>.</p>
 
 </div>
 </div>
@@ -1048,9 +1134,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00064">64</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00075">75</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">rebuild()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">rebuildFromControls()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00034">scenarioInputs()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00070">setExternalInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00049">setInputMode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">rebuild()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00116">rebuildFromControls()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00041">scenarioInputs()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00082">setExternalInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00061">setInputMode()</a>.</p>
 
 </div>
 </div>
@@ -1074,9 +1160,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00065">65</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00076">76</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">rebuildFromControls()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00049">setInputMode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00116">rebuildFromControls()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00061">setInputMode()</a>.</p>
 
 </div>
 </div>
@@ -1100,9 +1186,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00066">66</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00077">77</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00070">setExternalInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00049">setInputMode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00082">setExternalInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00061">setInputMode()</a>.</p>
 
 </div>
 </div>
@@ -1126,9 +1212,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00067">67</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00078">78</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00147">present()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">rebuild()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00159">present()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">rebuild()</a>.</p>
 
 </div>
 </div>
@@ -1152,9 +1238,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00068">68</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00079">79</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00092">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00147">present()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">rebuild()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00159">present()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">rebuild()</a>.</p>
 
 </div>
 </div>
@@ -1178,9 +1264,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00069">69</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00080">80</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00092">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00013">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00037">inputMode()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">rebuild()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">rebuildFromControls()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00070">setExternalInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00049">setInputMode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00015">HudWorkspace()</a>, <a class="el" href="dlz__hud__workspace_8h_source.html#l00044">inputMode()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">rebuild()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00116">rebuildFromControls()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00082">setExternalInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00061">setInputMode()</a>.</p>
 
 </div>
 </div>
@@ -1204,9 +1290,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00070">70</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00081">81</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00092">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">rebuild()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00070">setExternalInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00049">setInputMode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">rebuild()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00082">setExternalInputs()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00061">setInputMode()</a>.</p>
 
 </div>
 </div>
@@ -1230,9 +1316,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00071">71</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dlz__hud__workspace_8h_source.html#l00082">82</a> of file <a class="el" href="dlz__hud__workspace_8h_source.html">dlz_hud_workspace.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00092">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00147">present()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00115">rebuild()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00104">clearExternalInputs()</a>, <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00159">present()</a>, and <a class="el" href="dlz__hud__workspace_8cpp_source.html#l00127">rebuild()</a>.</p>
 
 </div>
 </div>

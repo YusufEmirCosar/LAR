@@ -1,0 +1,13 @@
+<map id="LarViewport::applySceneStateToActivePage" name="LarViewport::applySceneStateToActivePage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,203,112"/>
+<area shape="rect" id="Node000002" href="$class_lar_viewport.html#ad944123ddb792fff3c069a101edc8667" title=" " alt="" coords="251,5,451,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,68,250,40,278,34,274,36,251,45,164,73"/>
+<area shape="rect" id="Node000004" href="$class_i_lar_viewport_page.html#a603f882a5b662c86d67474ccfe37bfd8" title=" " alt="" coords="252,79,450,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="203,89,239,91,234,92,204,94"/>
+<area shape="rect" id="Node000005" href="$class_i_lar_viewport_page.html#a20580de17fae7d4c87c00a6cd9854771" title=" " alt="" coords="257,152,444,193"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="169,110,275,146,270,148,168,115"/>
+<area shape="rect" id="Node000003" href="$class_lar_viewport.html#a87f5ac3cf9e88e1603eb618760909944" title=" " alt="" coords="499,5,662,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="451,16,486,18,480,19,452,21"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="312,78,305,70,310,60,325,54,351,52,379,55,395,64,389,64,377,60,351,57,326,59,313,64,311,69,317,79"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="308,150,305,143,313,133,328,128,351,126,376,128,392,137,387,137,374,133,351,131,329,133,316,138,311,144,312,153"/>
+</map>

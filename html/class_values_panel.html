@@ -181,56 +181,56 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="values__panel_8cpp_source.html#l00125">125</a> of file <a class="el" href="values__panel_8cpp_source.html">values_panel.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>                                        : QFrame(parent) {</div>
-<div class="line"><span class="lineno">  126</span>    setObjectName(QStringLiteral(<span class="stringliteral">&quot;currentValuesColumn&quot;</span>));</div>
-<div class="line"><span class="lineno">  127</span>    setMinimumWidth(330);</div>
-<div class="line"><span class="lineno">  128</span>    setMaximumWidth(410);</div>
-<div class="line"><span class="lineno">  129</span>    <span class="keyword">auto</span> *layout = <span class="keyword">new</span> QVBoxLayout(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  130</span>    layout-&gt;setContentsMargins(0, 0, 0, 0);</div>
-<div class="line"><span class="lineno">  131</span>    layout-&gt;setSpacing(0);</div>
-<div class="line"><span class="lineno">  132</span> </div>
-<div class="line"><span class="lineno">  133</span>    <a class="code hl_variable" href="#a718e7280f033ea31ea4e4a115cbd2299">m_title</a> = <span class="keyword">new</span> QLabel(QStringLiteral(<span class="stringliteral">&quot;Plane Telemetry&quot;</span>));</div>
-<div class="line"><span class="lineno">  134</span>    <a class="code hl_variable" href="#a718e7280f033ea31ea4e4a115cbd2299">m_title</a>-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;columnTitle&quot;</span>));</div>
-<div class="line"><span class="lineno">  135</span>    <a class="code hl_variable" href="#a718e7280f033ea31ea4e4a115cbd2299">m_title</a>-&gt;setContentsMargins(10, 8, 10, 8);</div>
-<div class="line"><span class="lineno">  136</span> </div>
-<div class="line"><span class="lineno">  137</span>    <span class="keyword">auto</span> *valuesScroll = <span class="keyword">new</span> QScrollArea;</div>
-<div class="line"><span class="lineno">  138</span>    valuesScroll-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;currentValuesScroll&quot;</span>));</div>
-<div class="line"><span class="lineno">  139</span>    valuesScroll-&gt;setWidget(<a class="code hl_function" href="#a23abb686455dd38be90c5299c66941a7">buildCurrentValues</a>());</div>
-<div class="line"><span class="lineno">  140</span>    valuesScroll-&gt;setWidgetResizable(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  141</span>    valuesScroll-&gt;setFrameShape(QFrame::NoFrame);</div>
-<div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>    <span class="keyword">auto</span> *hudContent = <span class="keyword">new</span> QWidget;</div>
-<div class="line"><span class="lineno">  144</span>    hudContent-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;hudValuesContent&quot;</span>));</div>
-<div class="line"><span class="lineno">  145</span>    <span class="keyword">auto</span> *hudLayout = <span class="keyword">new</span> QVBoxLayout(hudContent);</div>
-<div class="line"><span class="lineno">  146</span>    hudLayout-&gt;setContentsMargins(12, 10, 12, 12);</div>
-<div class="line"><span class="lineno">  147</span>    hudLayout-&gt;setSpacing(0);</div>
-<div class="line"><span class="lineno">  148</span>    <a class="code hl_variable" href="#a5e2ceec2132c0a828cd34c6c0cee1635">m_hudControlPanel</a> = <span class="keyword">new</span> dlz::presentation::ControlPanel(hudContent);</div>
-<div class="line"><span class="lineno">  149</span>    hudLayout-&gt;addWidget(<a class="code hl_variable" href="#a5e2ceec2132c0a828cd34c6c0cee1635">m_hudControlPanel</a>);</div>
-<div class="line"><span class="lineno">  150</span>    hudLayout-&gt;addStretch(1);</div>
-<div class="line"><span class="lineno">  151</span> </div>
-<div class="line"><span class="lineno">  152</span>    <span class="keyword">auto</span> *hudScroll = <span class="keyword">new</span> QScrollArea;</div>
-<div class="line"><span class="lineno">  153</span>    hudScroll-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;hudValuesScroll&quot;</span>));</div>
-<div class="line"><span class="lineno">  154</span>    hudScroll-&gt;setWidget(hudContent);</div>
-<div class="line"><span class="lineno">  155</span>    hudScroll-&gt;setWidgetResizable(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  156</span>    hudScroll-&gt;setFrameShape(QFrame::NoFrame);</div>
-<div class="line"><span class="lineno">  157</span> </div>
-<div class="line"><span class="lineno">  158</span>    <a class="code hl_variable" href="#a16a53549f25f650ec8852980b9de6074">m_stack</a> = <span class="keyword">new</span> QStackedWidget;</div>
-<div class="line"><span class="lineno">  159</span>    <a class="code hl_variable" href="#a16a53549f25f650ec8852980b9de6074">m_stack</a>-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;currentValuesStack&quot;</span>));</div>
-<div class="line"><span class="lineno">  160</span>    <a class="code hl_variable" href="#a16a53549f25f650ec8852980b9de6074">m_stack</a>-&gt;addWidget(valuesScroll);</div>
-<div class="line"><span class="lineno">  161</span>    <a class="code hl_variable" href="#a16a53549f25f650ec8852980b9de6074">m_stack</a>-&gt;addWidget(hudScroll);</div>
-<div class="line"><span class="lineno">  162</span>    layout-&gt;addWidget(<a class="code hl_variable" href="#a718e7280f033ea31ea4e4a115cbd2299">m_title</a>);</div>
-<div class="line"><span class="lineno">  163</span>    layout-&gt;addWidget(<a class="code hl_variable" href="#a16a53549f25f650ec8852980b9de6074">m_stack</a>, 1);</div>
-<div class="line"><span class="lineno">  164</span>    <a class="code hl_function" href="#abda2b91da3c65c1c5edb7528f9fd3d7a">setContentMode</a>(<a class="code hl_enumvalue" href="viewport__content__mode_8h.html#a53313281d648993a33e8829a31bdd239a9a292ddb06458a5232bb7bfdcc199bfa">ViewportContentMode::Lar</a>);</div>
-<div class="line"><span class="lineno">  165</span>}</div>
+<p class="definition">Definition at line <a class="el" href="values__panel_8cpp_source.html#l00127">127</a> of file <a class="el" href="values__panel_8cpp_source.html">values_panel.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>                                        : QFrame(parent) {</div>
+<div class="line"><span class="lineno">  128</span>    setObjectName(QStringLiteral(<span class="stringliteral">&quot;currentValuesColumn&quot;</span>));</div>
+<div class="line"><span class="lineno">  129</span>    setMinimumWidth(330);</div>
+<div class="line"><span class="lineno">  130</span>    setMaximumWidth(410);</div>
+<div class="line"><span class="lineno">  131</span>    <span class="keyword">auto</span> *layout = <span class="keyword">new</span> QVBoxLayout(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  132</span>    layout-&gt;setContentsMargins(0, 0, 0, 0);</div>
+<div class="line"><span class="lineno">  133</span>    layout-&gt;setSpacing(0);</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>    <a class="code hl_variable" href="#a718e7280f033ea31ea4e4a115cbd2299">m_title</a> = <span class="keyword">new</span> QLabel(QStringLiteral(<span class="stringliteral">&quot;Plane Telemetry&quot;</span>));</div>
+<div class="line"><span class="lineno">  136</span>    <a class="code hl_variable" href="#a718e7280f033ea31ea4e4a115cbd2299">m_title</a>-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;columnTitle&quot;</span>));</div>
+<div class="line"><span class="lineno">  137</span>    <a class="code hl_variable" href="#a718e7280f033ea31ea4e4a115cbd2299">m_title</a>-&gt;setContentsMargins(10, 8, 10, 8);</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>    <span class="keyword">auto</span> *valuesScroll = <span class="keyword">new</span> QScrollArea;</div>
+<div class="line"><span class="lineno">  140</span>    valuesScroll-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;currentValuesScroll&quot;</span>));</div>
+<div class="line"><span class="lineno">  141</span>    valuesScroll-&gt;setWidget(<a class="code hl_function" href="#a23abb686455dd38be90c5299c66941a7">buildCurrentValues</a>());</div>
+<div class="line"><span class="lineno">  142</span>    valuesScroll-&gt;setWidgetResizable(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  143</span>    valuesScroll-&gt;setFrameShape(QFrame::NoFrame);</div>
+<div class="line"><span class="lineno">  144</span> </div>
+<div class="line"><span class="lineno">  145</span>    <span class="keyword">auto</span> *hudContent = <span class="keyword">new</span> QWidget;</div>
+<div class="line"><span class="lineno">  146</span>    hudContent-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;hudValuesContent&quot;</span>));</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keyword">auto</span> *hudLayout = <span class="keyword">new</span> QVBoxLayout(hudContent);</div>
+<div class="line"><span class="lineno">  148</span>    hudLayout-&gt;setContentsMargins(12, 10, 12, 12);</div>
+<div class="line"><span class="lineno">  149</span>    hudLayout-&gt;setSpacing(0);</div>
+<div class="line"><span class="lineno">  150</span>    <a class="code hl_variable" href="#a5e2ceec2132c0a828cd34c6c0cee1635">m_hudControlPanel</a> = <span class="keyword">new</span> dlz::presentation::ControlPanel(hudContent);</div>
+<div class="line"><span class="lineno">  151</span>    hudLayout-&gt;addWidget(<a class="code hl_variable" href="#a5e2ceec2132c0a828cd34c6c0cee1635">m_hudControlPanel</a>);</div>
+<div class="line"><span class="lineno">  152</span>    hudLayout-&gt;addStretch(1);</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>    <span class="keyword">auto</span> *hudScroll = <span class="keyword">new</span> QScrollArea;</div>
+<div class="line"><span class="lineno">  155</span>    hudScroll-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;hudValuesScroll&quot;</span>));</div>
+<div class="line"><span class="lineno">  156</span>    hudScroll-&gt;setWidget(hudContent);</div>
+<div class="line"><span class="lineno">  157</span>    hudScroll-&gt;setWidgetResizable(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  158</span>    hudScroll-&gt;setFrameShape(QFrame::NoFrame);</div>
+<div class="line"><span class="lineno">  159</span> </div>
+<div class="line"><span class="lineno">  160</span>    <a class="code hl_variable" href="#a16a53549f25f650ec8852980b9de6074">m_stack</a> = <span class="keyword">new</span> QStackedWidget;</div>
+<div class="line"><span class="lineno">  161</span>    <a class="code hl_variable" href="#a16a53549f25f650ec8852980b9de6074">m_stack</a>-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;currentValuesStack&quot;</span>));</div>
+<div class="line"><span class="lineno">  162</span>    <a class="code hl_variable" href="#a16a53549f25f650ec8852980b9de6074">m_stack</a>-&gt;addWidget(valuesScroll);</div>
+<div class="line"><span class="lineno">  163</span>    <a class="code hl_variable" href="#a16a53549f25f650ec8852980b9de6074">m_stack</a>-&gt;addWidget(hudScroll);</div>
+<div class="line"><span class="lineno">  164</span>    layout-&gt;addWidget(<a class="code hl_variable" href="#a718e7280f033ea31ea4e4a115cbd2299">m_title</a>);</div>
+<div class="line"><span class="lineno">  165</span>    layout-&gt;addWidget(<a class="code hl_variable" href="#a16a53549f25f650ec8852980b9de6074">m_stack</a>, 1);</div>
+<div class="line"><span class="lineno">  166</span>    <a class="code hl_function" href="#abda2b91da3c65c1c5edb7528f9fd3d7a">setContentMode</a>(<a class="code hl_enumvalue" href="viewport__content__mode_8h.html#a53313281d648993a33e8829a31bdd239a9a292ddb06458a5232bb7bfdcc199bfa">ViewportContentMode::Lar</a>);</div>
+<div class="line"><span class="lineno">  167</span>}</div>
 <div class="ttc" id="aclass_values_panel_html_a16a53549f25f650ec8852980b9de6074"><div class="ttname"><a href="#a16a53549f25f650ec8852980b9de6074">ValuesPanel::m_stack</a></div><div class="ttdeci">QStackedWidget * m_stack</div><div class="ttdef"><b>Definition</b> <a href="values__panel_8h_source.html#l00038">values_panel.h:38</a></div></div>
-<div class="ttc" id="aclass_values_panel_html_a23abb686455dd38be90c5299c66941a7"><div class="ttname"><a href="#a23abb686455dd38be90c5299c66941a7">ValuesPanel::buildCurrentValues</a></div><div class="ttdeci">QWidget * buildCurrentValues()</div><div class="ttdef"><b>Definition</b> <a href="values__panel_8cpp_source.html#l00167">values_panel.cpp:167</a></div></div>
+<div class="ttc" id="aclass_values_panel_html_a23abb686455dd38be90c5299c66941a7"><div class="ttname"><a href="#a23abb686455dd38be90c5299c66941a7">ValuesPanel::buildCurrentValues</a></div><div class="ttdeci">QWidget * buildCurrentValues()</div><div class="ttdef"><b>Definition</b> <a href="values__panel_8cpp_source.html#l00169">values_panel.cpp:169</a></div></div>
 <div class="ttc" id="aclass_values_panel_html_a5e2ceec2132c0a828cd34c6c0cee1635"><div class="ttname"><a href="#a5e2ceec2132c0a828cd34c6c0cee1635">ValuesPanel::m_hudControlPanel</a></div><div class="ttdeci">dlz::presentation::ControlPanel * m_hudControlPanel</div><div class="ttdef"><b>Definition</b> <a href="values__panel_8h_source.html#l00039">values_panel.h:39</a></div></div>
 <div class="ttc" id="aclass_values_panel_html_a718e7280f033ea31ea4e4a115cbd2299"><div class="ttname"><a href="#a718e7280f033ea31ea4e4a115cbd2299">ValuesPanel::m_title</a></div><div class="ttdeci">QLabel * m_title</div><div class="ttdef"><b>Definition</b> <a href="values__panel_8h_source.html#l00036">values_panel.h:36</a></div></div>
-<div class="ttc" id="aclass_values_panel_html_abda2b91da3c65c1c5edb7528f9fd3d7a"><div class="ttname"><a href="#abda2b91da3c65c1c5edb7528f9fd3d7a">ValuesPanel::setContentMode</a></div><div class="ttdeci">void setContentMode(ViewportContentMode mode)</div><div class="ttdef"><b>Definition</b> <a href="values__panel_8cpp_source.html#l00275">values_panel.cpp:275</a></div></div>
+<div class="ttc" id="aclass_values_panel_html_abda2b91da3c65c1c5edb7528f9fd3d7a"><div class="ttname"><a href="#abda2b91da3c65c1c5edb7528f9fd3d7a">ValuesPanel::setContentMode</a></div><div class="ttdeci">void setContentMode(ViewportContentMode mode)</div><div class="ttdef"><b>Definition</b> <a href="values__panel_8cpp_source.html#l00277">values_panel.cpp:277</a></div></div>
 <div class="ttc" id="aviewport__content__mode_8h_html_a53313281d648993a33e8829a31bdd239a9a292ddb06458a5232bb7bfdcc199bfa"><div class="ttname"><a href="viewport__content__mode_8h.html#a53313281d648993a33e8829a31bdd239a9a292ddb06458a5232bb7bfdcc199bfa">ViewportContentMode::Lar</a></div><div class="ttdeci">@ Lar</div><div class="ttdef"><b>Definition</b> <a href="viewport__content__mode_8h_source.html#l00009">viewport_content_mode.h:9</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="values__panel_8cpp_source.html#l00167">buildCurrentValues()</a>, <a class="el" href="viewport__content__mode_8h_source.html#l00009">Lar</a>, <a class="el" href="values__panel_8h_source.html#l00039">m_hudControlPanel</a>, <a class="el" href="values__panel_8h_source.html#l00038">m_stack</a>, <a class="el" href="values__panel_8h_source.html#l00036">m_title</a>, and <a class="el" href="values__panel_8cpp_source.html#l00275">setContentMode()</a>.</p>
+<p class="reference">References <a class="el" href="values__panel_8cpp_source.html#l00169">buildCurrentValues()</a>, <a class="el" href="viewport__content__mode_8h_source.html#l00009">Lar</a>, <a class="el" href="values__panel_8h_source.html#l00039">m_hudControlPanel</a>, <a class="el" href="values__panel_8h_source.html#l00038">m_stack</a>, <a class="el" href="values__panel_8h_source.html#l00036">m_title</a>, and <a class="el" href="values__panel_8cpp_source.html#l00277">setContentMode()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -294,25 +294,25 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="values__panel_8cpp_source.html#l00275">275</a> of file <a class="el" href="values__panel_8cpp_source.html">values_panel.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  275</span>                                                         {</div>
-<div class="line"><span class="lineno">  276</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> hud = mode == <a class="code hl_enumvalue" href="viewport__content__mode_8h.html#a53313281d648993a33e8829a31bdd239ab1f113664cdbc84e94a94c8263fa7900">ViewportContentMode::Hud</a>;</div>
-<div class="line"><span class="lineno">  277</span>    <a class="code hl_variable" href="#a16a53549f25f650ec8852980b9de6074">m_stack</a>-&gt;setCurrentIndex(hud ? 1 : 0);</div>
-<div class="line"><span class="lineno">  278</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  279</span>        <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>-&gt;setVisible(!hud);</div>
-<div class="line"><span class="lineno">  280</span>    }</div>
-<div class="line"><span class="lineno">  281</span>    <span class="keywordflow">if</span> (hud) {</div>
-<div class="line"><span class="lineno">  282</span>        <a class="code hl_variable" href="#a718e7280f033ea31ea4e4a115cbd2299">m_title</a>-&gt;setText(QStringLiteral(<span class="stringliteral">&quot;DLZ Values&quot;</span>));</div>
-<div class="line"><span class="lineno">  283</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  284</span>        <a class="code hl_variable" href="#a718e7280f033ea31ea4e4a115cbd2299">m_title</a>-&gt;setText(QStringLiteral(<span class="stringliteral">&quot;Plane Telemetry&quot;</span>));</div>
-<div class="line"><span class="lineno">  285</span>    }</div>
-<div class="line"><span class="lineno">  286</span>}</div>
+<p class="definition">Definition at line <a class="el" href="values__panel_8cpp_source.html#l00277">277</a> of file <a class="el" href="values__panel_8cpp_source.html">values_panel.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  277</span>                                                         {</div>
+<div class="line"><span class="lineno">  278</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> hud = mode == <a class="code hl_enumvalue" href="viewport__content__mode_8h.html#a53313281d648993a33e8829a31bdd239ab1f113664cdbc84e94a94c8263fa7900">ViewportContentMode::Hud</a>;</div>
+<div class="line"><span class="lineno">  279</span>    <a class="code hl_variable" href="#a16a53549f25f650ec8852980b9de6074">m_stack</a>-&gt;setCurrentIndex(hud ? 1 : 0);</div>
+<div class="line"><span class="lineno">  280</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  281</span>        <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>-&gt;setVisible(!hud);</div>
+<div class="line"><span class="lineno">  282</span>    }</div>
+<div class="line"><span class="lineno">  283</span>    <span class="keywordflow">if</span> (hud) {</div>
+<div class="line"><span class="lineno">  284</span>        <a class="code hl_variable" href="#a718e7280f033ea31ea4e4a115cbd2299">m_title</a>-&gt;setText(QStringLiteral(<span class="stringliteral">&quot;DLZ Values&quot;</span>));</div>
+<div class="line"><span class="lineno">  285</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  286</span>        <a class="code hl_variable" href="#a718e7280f033ea31ea4e4a115cbd2299">m_title</a>-&gt;setText(QStringLiteral(<span class="stringliteral">&quot;Plane Telemetry&quot;</span>));</div>
+<div class="line"><span class="lineno">  287</span>    }</div>
+<div class="line"><span class="lineno">  288</span>}</div>
 <div class="ttc" id="aclass_values_panel_html_ab07f4b9fe31987e78967e6cff1cbc456"><div class="ttname"><a href="#ab07f4b9fe31987e78967e6cff1cbc456">ValuesPanel::m_planeZoneIndicator</a></div><div class="ttdeci">QLabel * m_planeZoneIndicator</div><div class="ttdef"><b>Definition</b> <a href="values__panel_8h_source.html#l00037">values_panel.h:37</a></div></div>
 <div class="ttc" id="aviewport__content__mode_8h_html_a53313281d648993a33e8829a31bdd239ab1f113664cdbc84e94a94c8263fa7900"><div class="ttname"><a href="viewport__content__mode_8h.html#a53313281d648993a33e8829a31bdd239ab1f113664cdbc84e94a94c8263fa7900">ViewportContentMode::Hud</a></div><div class="ttdeci">@ Hud</div><div class="ttdef"><b>Definition</b> <a href="viewport__content__mode_8h_source.html#l00009">viewport_content_mode.h:9</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="viewport__content__mode_8h_source.html#l00009">Hud</a>, <a class="el" href="values__panel_8h_source.html#l00037">m_planeZoneIndicator</a>, <a class="el" href="values__panel_8h_source.html#l00038">m_stack</a>, and <a class="el" href="values__panel_8h_source.html#l00036">m_title</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mainwindow_8cpp_source.html#l00055">MainWindow::initialize()</a>, and <a class="el" href="values__panel_8cpp_source.html#l00125">ValuesPanel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mainwindow_8cpp_source.html#l00055">MainWindow::initialize()</a>, and <a class="el" href="values__panel_8cpp_source.html#l00127">ValuesPanel()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -336,25 +336,29 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="values__panel_8cpp_source.html#l00288">288</a> of file <a class="el" href="values__panel_8cpp_source.html">values_panel.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  288</span>                                                              {</div>
-<div class="line"><span class="lineno">  289</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  290</span>        <a class="code hl_function" href="namespaceanonymous__namespace_02values__panel_8cpp_03.html#ad682bb4e8b0a5bd4d162e5090fabca8e">setPlaneZoneIndicator</a>(<a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>, <a class="code hl_function" href="namespaceanonymous__namespace_02values__panel_8cpp_03.html#a962f2106f80664729fd9e7b54b8800f5">planeZoneStatus</a>(viewModel));</div>
-<div class="line"><span class="lineno">  291</span>    }</div>
-<div class="line"><span class="lineno">  292</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <span class="keywordtype">id</span> = 0; <span class="keywordtype">id</span> &lt; <a class="code hl_variable" href="#ae33414bb28fe25daf559cd2094b90e82">m_valueLabels</a>.size(); ++id) {</div>
-<div class="line"><span class="lineno">  293</span>        QLabel *label = <a class="code hl_variable" href="#ae33414bb28fe25daf559cd2094b90e82">m_valueLabels</a>[id];</div>
-<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">if</span> (!label)</div>
-<div class="line"><span class="lineno">  295</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  296</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceanonymous__namespace_02plane__attitude__transform_8cpp_03.html#a19bd63736036d4ddcda63de9d152769a">available</a> = viewModel.<a class="code hl_function" href="class_application_view_model.html#a16052595ca7fab2eb359492ddc7b8532">hasState</a>() &amp;&amp; <span class="keywordtype">id</span> &lt; viewModel.<a class="code hl_function" href="class_application_view_model.html#a029191b923ea987e670d1fdfd326f5d1">availableFields</a>().size() &amp;&amp;</div>
-<div class="line"><span class="lineno">  297</span>                               viewModel.<a class="code hl_function" href="class_application_view_model.html#a029191b923ea987e670d1fdfd326f5d1">availableFields</a>().testBit(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  298</span>        <span class="keywordflow">if</span> (!available) {</div>
-<div class="line"><span class="lineno">  299</span>            label-&gt;setText(QStringLiteral(<span class="stringliteral">&quot;N/A&quot;</span>));</div>
-<div class="line"><span class="lineno">  300</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  301</span>        }</div>
-<div class="line"><span class="lineno">  302</span>        <span class="keyword">const</span> <span class="keyword">auto</span> value = <a class="code hl_function" href="class_state_field.html#a2dfc080fa7c4d91049a450951893646c">StateField::tryValue</a>(viewModel.<a class="code hl_function" href="class_application_view_model.html#a3b45f906174fe2f6dad2187af8307aff">decodedState</a>(), <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  303</span>        label-&gt;setText(value ? <a class="code hl_function" href="class_state_value_formatter.html#a5c859d24f4344d96bc7d48c10c55b99f">StateValueFormatter::format</a>(<span class="keywordtype">id</span>, *value) : QStringLiteral(<span class="stringliteral">&quot;N/A&quot;</span>));</div>
-<div class="line"><span class="lineno">  304</span>    }</div>
-<div class="line"><span class="lineno">  305</span>}</div>
+<p class="definition">Definition at line <a class="el" href="values__panel_8cpp_source.html#l00290">290</a> of file <a class="el" href="values__panel_8cpp_source.html">values_panel.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  290</span>                                                              {</div>
+<div class="line"><span class="lineno">  291</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  292</span>        <a class="code hl_function" href="namespaceanonymous__namespace_02values__panel_8cpp_03.html#ad682bb4e8b0a5bd4d162e5090fabca8e">setPlaneZoneIndicator</a>(<a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>, <a class="code hl_function" href="namespaceanonymous__namespace_02values__panel_8cpp_03.html#a962f2106f80664729fd9e7b54b8800f5">planeZoneStatus</a>(viewModel));</div>
+<div class="line"><span class="lineno">  293</span>    }</div>
+<div class="line"><span class="lineno">  294</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <span class="keywordtype">id</span> = 0; <span class="keywordtype">id</span> &lt; <a class="code hl_variable" href="#ae33414bb28fe25daf559cd2094b90e82">m_valueLabels</a>.size(); ++id) {</div>
+<div class="line"><span class="lineno">  295</span>        QLabel *label = <a class="code hl_variable" href="#ae33414bb28fe25daf559cd2094b90e82">m_valueLabels</a>[id];</div>
+<div class="line"><span class="lineno">  296</span>        <span class="keywordflow">if</span> (!label)</div>
+<div class="line"><span class="lineno">  297</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  298</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceanonymous__namespace_02plane__attitude__transform_8cpp_03.html#a19bd63736036d4ddcda63de9d152769a">available</a> = viewModel.<a class="code hl_function" href="class_application_view_model.html#a16052595ca7fab2eb359492ddc7b8532">hasState</a>() &amp;&amp; <span class="keywordtype">id</span> &lt; viewModel.<a class="code hl_function" href="class_application_view_model.html#a029191b923ea987e670d1fdfd326f5d1">availableFields</a>().size() &amp;&amp;</div>
+<div class="line"><span class="lineno">  299</span>                               viewModel.<a class="code hl_function" href="class_application_view_model.html#a029191b923ea987e670d1fdfd326f5d1">availableFields</a>().testBit(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  300</span>        <span class="keywordflow">if</span> (!available) {</div>
+<div class="line"><span class="lineno">  301</span>            <span class="keywordflow">if</span> (label-&gt;text() != QStringLiteral(<span class="stringliteral">&quot;N/A&quot;</span>))</div>
+<div class="line"><span class="lineno">  302</span>                label-&gt;setText(QStringLiteral(<span class="stringliteral">&quot;N/A&quot;</span>));</div>
+<div class="line"><span class="lineno">  303</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  304</span>        }</div>
+<div class="line"><span class="lineno">  305</span>        <span class="keyword">const</span> <span class="keyword">auto</span> value = <a class="code hl_function" href="class_state_field.html#a2dfc080fa7c4d91049a450951893646c">StateField::tryValue</a>(viewModel.<a class="code hl_function" href="class_application_view_model.html#a3b45f906174fe2f6dad2187af8307aff">decodedState</a>(), <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  306</span>        <span class="keyword">const</span> QString text =</div>
+<div class="line"><span class="lineno">  307</span>            value ? <a class="code hl_function" href="class_state_value_formatter.html#a5c859d24f4344d96bc7d48c10c55b99f">StateValueFormatter::format</a>(<span class="keywordtype">id</span>, *value) : QStringLiteral(<span class="stringliteral">&quot;N/A&quot;</span>);</div>
+<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">if</span> (label-&gt;text() != text)</div>
+<div class="line"><span class="lineno">  309</span>            label-&gt;setText(text);</div>
+<div class="line"><span class="lineno">  310</span>    }</div>
+<div class="line"><span class="lineno">  311</span>}</div>
 <div class="ttc" id="aclass_application_view_model_html_a029191b923ea987e670d1fdfd326f5d1"><div class="ttname"><a href="class_application_view_model.html#a029191b923ea987e670d1fdfd326f5d1">ApplicationViewModel::availableFields</a></div><div class="ttdeci">const QBitArray &amp; availableFields() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="application__view__model_8h_source.html#l00032">application_view_model.h:32</a></div></div>
 <div class="ttc" id="aclass_application_view_model_html_a16052595ca7fab2eb359492ddc7b8532"><div class="ttname"><a href="class_application_view_model.html#a16052595ca7fab2eb359492ddc7b8532">ApplicationViewModel::hasState</a></div><div class="ttdeci">bool hasState() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="application__view__model_8h_source.html#l00041">application_view_model.h:41</a></div></div>
 <div class="ttc" id="aclass_application_view_model_html_a3b45f906174fe2f6dad2187af8307aff"><div class="ttname"><a href="class_application_view_model.html#a3b45f906174fe2f6dad2187af8307aff">ApplicationViewModel::decodedState</a></div><div class="ttdeci">const DecodedState &amp; decodedState() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="application__view__model_8h_source.html#l00038">application_view_model.h:38</a></div></div>
@@ -404,114 +408,114 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="values__panel_8cpp_source.html#l00167">167</a> of file <a class="el" href="values__panel_8cpp_source.html">values_panel.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>                                         {</div>
-<div class="line"><span class="lineno">  168</span>    <span class="keyword">auto</span> *content = <span class="keyword">new</span> QWidget;</div>
-<div class="line"><span class="lineno">  169</span>    content-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;currentValuesContent&quot;</span>));</div>
-<div class="line"><span class="lineno">  170</span>    <span class="keyword">auto</span> *layout = <span class="keyword">new</span> QVBoxLayout(content);</div>
-<div class="line"><span class="lineno">  171</span>    layout-&gt;setContentsMargins(12, 10, 12, 12);</div>
-<div class="line"><span class="lineno">  172</span>    layout-&gt;setSizeConstraint(QLayout::SetMinimumSize);</div>
-<div class="line"><span class="lineno">  173</span>    <span class="keyword">auto</span> *grid = <span class="keyword">new</span> QGridLayout;</div>
-<div class="line"><span class="lineno">  174</span>    grid-&gt;setContentsMargins(0, 0, 0, 0);</div>
-<div class="line"><span class="lineno">  175</span>    grid-&gt;setHorizontalSpacing(12);</div>
-<div class="line"><span class="lineno">  176</span>    grid-&gt;setVerticalSpacing(4);</div>
-<div class="line"><span class="lineno">  177</span>    grid-&gt;setColumnStretch(0, 1);</div>
-<div class="line"><span class="lineno">  178</span>    grid-&gt;setColumnMinimumWidth(1, 132);</div>
-<div class="line"><span class="lineno">  179</span> </div>
-<div class="line"><span class="lineno">  180</span>    <span class="keywordtype">int</span> row = 0;</div>
-<div class="line"><span class="lineno">  181</span>    <span class="keyword">const</span> <span class="keyword">auto</span> addEntityHeader = [&amp;](<span class="keyword">const</span> QString &amp;text) {</div>
-<div class="line"><span class="lineno">  182</span>        <span class="keyword">auto</span> *header = <span class="keyword">new</span> QLabel(text);</div>
-<div class="line"><span class="lineno">  183</span>        header-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;entityHeader&quot;</span>));</div>
-<div class="line"><span class="lineno">  184</span>        header-&gt;setFixedHeight(36);</div>
-<div class="line"><span class="lineno">  185</span>        header-&gt;setAlignment(Qt::AlignLeft | Qt::AlignVCenter);</div>
-<div class="line"><span class="lineno">  186</span>        grid-&gt;addWidget(header, row++, 0, 1, 2);</div>
-<div class="line"><span class="lineno">  187</span>    };</div>
-<div class="line"><span class="lineno">  188</span>    <span class="keyword">const</span> <span class="keyword">auto</span> addGroupHeader = [&amp;](<span class="keyword">const</span> QString &amp;text) {</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keyword">auto</span> *header = <span class="keyword">new</span> QLabel(text);</div>
-<div class="line"><span class="lineno">  190</span>        header-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;valueGroupHeader&quot;</span>));</div>
-<div class="line"><span class="lineno">  191</span>        header-&gt;setFixedHeight(30);</div>
-<div class="line"><span class="lineno">  192</span>        header-&gt;setAlignment(Qt::AlignLeft | Qt::AlignVCenter);</div>
-<div class="line"><span class="lineno">  193</span>        grid-&gt;addWidget(header, row++, 0, 1, 2);</div>
-<div class="line"><span class="lineno">  194</span>    };</div>
-<div class="line"><span class="lineno">  195</span> </div>
-<div class="line"><span class="lineno">  196</span>    QFont valueFont = QFontDatabase::systemFont(QFontDatabase::FixedFont);</div>
-<div class="line"><span class="lineno">  197</span>    valueFont.setStyleHint(QFont::Monospace);</div>
-<div class="line"><span class="lineno">  198</span>    valueFont.setFixedPitch(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  199</span>    <a class="code hl_variable" href="#ae33414bb28fe25daf559cd2094b90e82">m_valueLabels</a>.fill(<span class="keyword">nullptr</span>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a2470abbd757b3490d0301300e2eda933">StateField::Count</a>);</div>
-<div class="line"><span class="lineno">  200</span>    <span class="keyword">const</span> <span class="keyword">auto</span> addValue = [&amp;](<span class="keywordtype">int</span> id) {</div>
-<div class="line"><span class="lineno">  201</span>        <span class="keyword">auto</span> *name = <span class="keyword">new</span> QLabel(<a class="code hl_function" href="class_state_field.html#ac26168bf318ebf24c4378ee8813ede50">StateField::presentationName</a>(<span class="keywordtype">id</span>));</div>
-<div class="line"><span class="lineno">  202</span>        name-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;valueName&quot;</span>));</div>
-<div class="line"><span class="lineno">  203</span>        name-&gt;setFixedHeight(28);</div>
-<div class="line"><span class="lineno">  204</span>        name-&gt;setAlignment(Qt::AlignLeft | Qt::AlignVCenter);</div>
-<div class="line"><span class="lineno">  205</span>        <span class="keyword">auto</span> *value = <span class="keyword">new</span> QLabel(QStringLiteral(<span class="stringliteral">&quot;N/A&quot;</span>));</div>
-<div class="line"><span class="lineno">  206</span>        value-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;currentValue&quot;</span>));</div>
-<div class="line"><span class="lineno">  207</span>        value-&gt;setProperty(<span class="stringliteral">&quot;fieldId&quot;</span>, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  208</span>        value-&gt;setFont(valueFont);</div>
-<div class="line"><span class="lineno">  209</span>        value-&gt;setFixedHeight(28);</div>
-<div class="line"><span class="lineno">  210</span>        value-&gt;setMinimumWidth(132);</div>
-<div class="line"><span class="lineno">  211</span>        value-&gt;setAlignment(Qt::AlignLeft | Qt::AlignVCenter);</div>
-<div class="line"><span class="lineno">  212</span>        value-&gt;setTextInteractionFlags(Qt::TextSelectableByMouse);</div>
-<div class="line"><span class="lineno">  213</span>        <a class="code hl_variable" href="#ae33414bb28fe25daf559cd2094b90e82">m_valueLabels</a>[id] = value;</div>
-<div class="line"><span class="lineno">  214</span>        grid-&gt;addWidget(name, row, 0);</div>
-<div class="line"><span class="lineno">  215</span>        grid-&gt;addWidget(value, row++, 1);</div>
-<div class="line"><span class="lineno">  216</span>    };</div>
-<div class="line"><span class="lineno">  217</span>    <span class="keyword">const</span> <span class="keyword">auto</span> addDivider = [&amp;] {</div>
-<div class="line"><span class="lineno">  218</span>        <span class="keyword">auto</span> *divider = <span class="keyword">new</span> QFrame;</div>
-<div class="line"><span class="lineno">  219</span>        divider-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;entityDivider&quot;</span>));</div>
-<div class="line"><span class="lineno">  220</span>        divider-&gt;setFrameShape(QFrame::HLine);</div>
-<div class="line"><span class="lineno">  221</span>        grid-&gt;addWidget(divider, row++, 0, 1, 2);</div>
-<div class="line"><span class="lineno">  222</span>    };</div>
-<div class="line"><span class="lineno">  223</span> </div>
-<div class="line"><span class="lineno">  224</span>    <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a> = <span class="keyword">new</span> QLabel;</div>
-<div class="line"><span class="lineno">  225</span>    <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;planeZoneIndicator&quot;</span>));</div>
-<div class="line"><span class="lineno">  226</span>    <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>-&gt;setAccessibleName(QStringLiteral(<span class="stringliteral">&quot;Plane zone status&quot;</span>));</div>
-<div class="line"><span class="lineno">  227</span>    <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>-&gt;setFixedHeight(28);</div>
-<div class="line"><span class="lineno">  228</span>    <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>-&gt;setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);</div>
-<div class="line"><span class="lineno">  229</span>    <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>-&gt;setAlignment(Qt::AlignCenter);</div>
-<div class="line"><span class="lineno">  230</span>    <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>-&gt;setVisible(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  231</span>    <a class="code hl_function" href="namespaceanonymous__namespace_02values__panel_8cpp_03.html#ad682bb4e8b0a5bd4d162e5090fabca8e">setPlaneZoneIndicator</a>(<a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>, <a class="code hl_enumvalue" href="namespaceanonymous__namespace_02values__panel_8cpp_03.html#a25aeae07bed0cd63f3a3e60a812fbaa9a76fbf0ccd7fcd64879c2ff2119dc15a4">PlaneZoneStatus::Outside</a>);</div>
-<div class="line"><span class="lineno">  232</span>    grid-&gt;addWidget(<a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>, row++, 0, 1, 2);</div>
-<div class="line"><span class="lineno">  233</span>    addEntityHeader(QStringLiteral(<span class="stringliteral">&quot;Plane Data&quot;</span>));</div>
-<div class="line"><span class="lineno">  234</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;Location&quot;</span>));</div>
-<div class="line"><span class="lineno">  235</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <span class="keywordtype">id</span> : {<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a9f23121614dd1ca7bc06301553cb733a">StateField::Location0</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a32dcb4b417a26d3eb953ad9e8128939a">StateField::Location1</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a4ae642002024effdd9e64b65cb20f7c0">StateField::Location2</a>})</div>
-<div class="line"><span class="lineno">  236</span>        addValue(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  237</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;Euler (Rotation)&quot;</span>));</div>
-<div class="line"><span class="lineno">  238</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <span class="keywordtype">id</span> : {<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a12c7cb8e94c4c1479f582ded8f96d219">StateField::Euler0</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1ad03fa40ebbaf7b1d3280c5aaee6520c6">StateField::Euler1</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1af458ad6c5380f00d73f04cf884d51364">StateField::Euler2</a>})</div>
-<div class="line"><span class="lineno">  239</span>        addValue(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  240</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;Velocity&quot;</span>));</div>
-<div class="line"><span class="lineno">  241</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <span class="keywordtype">id</span> : {<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a829540ced8c9cd6d89940d2e7db92167">StateField::Velocity0</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1ab184dbc68f0a0e952c74bba1b964e71e">StateField::Velocity1</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a10235c77be991c4dc45d28dcf1c0bd3c">StateField::Velocity2</a>})</div>
-<div class="line"><span class="lineno">  242</span>        addValue(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  243</span> </div>
-<div class="line"><span class="lineno">  244</span>    addDivider();</div>
-<div class="line"><span class="lineno">  245</span>    addEntityHeader(QStringLiteral(<span class="stringliteral">&quot;Target Data&quot;</span>));</div>
-<div class="line"><span class="lineno">  246</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;In-Zone Center&quot;</span>));</div>
-<div class="line"><span class="lineno">  247</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <span class="keywordtype">id</span> : {<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1af80581baa2fa289f86f65120f8bc4670">StateField::IzPos0</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1ace104f8e6119a4f191c5669648535f96">StateField::IzPos1</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a9c619b07de2f401a8c1b66dadb58ec69">StateField::IzPos2</a>})</div>
-<div class="line"><span class="lineno">  248</span>        addValue(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  249</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;In-Range Center&quot;</span>));</div>
-<div class="line"><span class="lineno">  250</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <span class="keywordtype">id</span> : {<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a60bbc4a5a90e898ec5304c0c84c3ac4b">StateField::IrPos0</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a4c2aed92a342fbe531580d68360ed68e">StateField::IrPos1</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a61a78b614fae8b3fac92227beb4de869">StateField::IrPos2</a>})</div>
-<div class="line"><span class="lineno">  251</span>        addValue(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  252</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;In-Zone Angles&quot;</span>));</div>
-<div class="line"><span class="lineno">  253</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a5e24b355cb37794a3f37b9e536c1bebb">StateField::IzTheta1</a>);</div>
-<div class="line"><span class="lineno">  254</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a1121ce3d5e8b7479fa941328f3ea9ab0">StateField::IzTheta2</a>);</div>
-<div class="line"><span class="lineno">  255</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;In-Zone Range&quot;</span>));</div>
-<div class="line"><span class="lineno">  256</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a7dbed64a234d5c5cc2141fc6a15674e3">StateField::IzR1</a>);</div>
-<div class="line"><span class="lineno">  257</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1ac5bc3e720514af555136a451e8ac9580">StateField::IzR2</a>);</div>
-<div class="line"><span class="lineno">  258</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;In-Range&quot;</span>));</div>
-<div class="line"><span class="lineno">  259</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a8d5f69ff68a39054059679aa4987aac8">StateField::IrR</a>);</div>
-<div class="line"><span class="lineno">  260</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;Packet&quot;</span>));</div>
-<div class="line"><span class="lineno">  261</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a10b89ffe1f9ddf1d73282e3010103190">StateField::Time</a>);</div>
-<div class="line"><span class="lineno">  262</span> </div>
-<div class="line"><span class="lineno">  263</span>    addDivider();</div>
-<div class="line"><span class="lineno">  264</span>    addEntityHeader(QStringLiteral(<span class="stringliteral">&quot;DLZ Data&quot;</span>));</div>
-<div class="line"><span class="lineno">  265</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;Telemetry&quot;</span>));</div>
-<div class="line"><span class="lineno">  266</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a9204dc3c2601784d4400a1c4bc940b34">StateField::DlzRangeNm</a>);</div>
-<div class="line"><span class="lineno">  267</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1afa38fbaef3bfffd82af1258fcc90fae0">StateField::DlzAspectDegrees</a>);</div>
-<div class="line"><span class="lineno">  268</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a4ca0cbf0ff9453c775d9e452de7ef1fa">StateField::DlzAltitudeFeet</a>);</div>
-<div class="line"><span class="lineno">  269</span> </div>
-<div class="line"><span class="lineno">  270</span>    layout-&gt;addLayout(grid);</div>
-<div class="line"><span class="lineno">  271</span>    layout-&gt;addStretch();</div>
-<div class="line"><span class="lineno">  272</span>    <span class="keywordflow">return</span> content;</div>
-<div class="line"><span class="lineno">  273</span>}</div>
+<p class="definition">Definition at line <a class="el" href="values__panel_8cpp_source.html#l00169">169</a> of file <a class="el" href="values__panel_8cpp_source.html">values_panel.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  169</span>                                         {</div>
+<div class="line"><span class="lineno">  170</span>    <span class="keyword">auto</span> *content = <span class="keyword">new</span> QWidget;</div>
+<div class="line"><span class="lineno">  171</span>    content-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;currentValuesContent&quot;</span>));</div>
+<div class="line"><span class="lineno">  172</span>    <span class="keyword">auto</span> *layout = <span class="keyword">new</span> QVBoxLayout(content);</div>
+<div class="line"><span class="lineno">  173</span>    layout-&gt;setContentsMargins(12, 10, 12, 12);</div>
+<div class="line"><span class="lineno">  174</span>    layout-&gt;setSizeConstraint(QLayout::SetMinimumSize);</div>
+<div class="line"><span class="lineno">  175</span>    <span class="keyword">auto</span> *grid = <span class="keyword">new</span> QGridLayout;</div>
+<div class="line"><span class="lineno">  176</span>    grid-&gt;setContentsMargins(0, 0, 0, 0);</div>
+<div class="line"><span class="lineno">  177</span>    grid-&gt;setHorizontalSpacing(12);</div>
+<div class="line"><span class="lineno">  178</span>    grid-&gt;setVerticalSpacing(4);</div>
+<div class="line"><span class="lineno">  179</span>    grid-&gt;setColumnStretch(0, 1);</div>
+<div class="line"><span class="lineno">  180</span>    grid-&gt;setColumnMinimumWidth(1, 132);</div>
+<div class="line"><span class="lineno">  181</span> </div>
+<div class="line"><span class="lineno">  182</span>    <span class="keywordtype">int</span> row = 0;</div>
+<div class="line"><span class="lineno">  183</span>    <span class="keyword">const</span> <span class="keyword">auto</span> addEntityHeader = [&amp;](<span class="keyword">const</span> QString &amp;text) {</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keyword">auto</span> *header = <span class="keyword">new</span> QLabel(text);</div>
+<div class="line"><span class="lineno">  185</span>        header-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;entityHeader&quot;</span>));</div>
+<div class="line"><span class="lineno">  186</span>        header-&gt;setFixedHeight(36);</div>
+<div class="line"><span class="lineno">  187</span>        header-&gt;setAlignment(Qt::AlignLeft | Qt::AlignVCenter);</div>
+<div class="line"><span class="lineno">  188</span>        grid-&gt;addWidget(header, row++, 0, 1, 2);</div>
+<div class="line"><span class="lineno">  189</span>    };</div>
+<div class="line"><span class="lineno">  190</span>    <span class="keyword">const</span> <span class="keyword">auto</span> addGroupHeader = [&amp;](<span class="keyword">const</span> QString &amp;text) {</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keyword">auto</span> *header = <span class="keyword">new</span> QLabel(text);</div>
+<div class="line"><span class="lineno">  192</span>        header-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;valueGroupHeader&quot;</span>));</div>
+<div class="line"><span class="lineno">  193</span>        header-&gt;setFixedHeight(30);</div>
+<div class="line"><span class="lineno">  194</span>        header-&gt;setAlignment(Qt::AlignLeft | Qt::AlignVCenter);</div>
+<div class="line"><span class="lineno">  195</span>        grid-&gt;addWidget(header, row++, 0, 1, 2);</div>
+<div class="line"><span class="lineno">  196</span>    };</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>    QFont valueFont = QFontDatabase::systemFont(QFontDatabase::FixedFont);</div>
+<div class="line"><span class="lineno">  199</span>    valueFont.setStyleHint(QFont::Monospace);</div>
+<div class="line"><span class="lineno">  200</span>    valueFont.setFixedPitch(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  201</span>    <a class="code hl_variable" href="#ae33414bb28fe25daf559cd2094b90e82">m_valueLabels</a>.fill(<span class="keyword">nullptr</span>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a2470abbd757b3490d0301300e2eda933">StateField::Count</a>);</div>
+<div class="line"><span class="lineno">  202</span>    <span class="keyword">const</span> <span class="keyword">auto</span> addValue = [&amp;](<span class="keywordtype">int</span> id) {</div>
+<div class="line"><span class="lineno">  203</span>        <span class="keyword">auto</span> *name = <span class="keyword">new</span> QLabel(<a class="code hl_function" href="class_state_field.html#ac26168bf318ebf24c4378ee8813ede50">StateField::presentationName</a>(<span class="keywordtype">id</span>));</div>
+<div class="line"><span class="lineno">  204</span>        name-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;valueName&quot;</span>));</div>
+<div class="line"><span class="lineno">  205</span>        name-&gt;setFixedHeight(28);</div>
+<div class="line"><span class="lineno">  206</span>        name-&gt;setAlignment(Qt::AlignLeft | Qt::AlignVCenter);</div>
+<div class="line"><span class="lineno">  207</span>        <span class="keyword">auto</span> *value = <span class="keyword">new</span> QLabel(QStringLiteral(<span class="stringliteral">&quot;N/A&quot;</span>));</div>
+<div class="line"><span class="lineno">  208</span>        value-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;currentValue&quot;</span>));</div>
+<div class="line"><span class="lineno">  209</span>        value-&gt;setProperty(<span class="stringliteral">&quot;fieldId&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  210</span>        value-&gt;setFont(valueFont);</div>
+<div class="line"><span class="lineno">  211</span>        value-&gt;setFixedHeight(28);</div>
+<div class="line"><span class="lineno">  212</span>        value-&gt;setMinimumWidth(132);</div>
+<div class="line"><span class="lineno">  213</span>        value-&gt;setAlignment(Qt::AlignLeft | Qt::AlignVCenter);</div>
+<div class="line"><span class="lineno">  214</span>        value-&gt;setTextInteractionFlags(Qt::TextSelectableByMouse);</div>
+<div class="line"><span class="lineno">  215</span>        <a class="code hl_variable" href="#ae33414bb28fe25daf559cd2094b90e82">m_valueLabels</a>[id] = value;</div>
+<div class="line"><span class="lineno">  216</span>        grid-&gt;addWidget(name, row, 0);</div>
+<div class="line"><span class="lineno">  217</span>        grid-&gt;addWidget(value, row++, 1);</div>
+<div class="line"><span class="lineno">  218</span>    };</div>
+<div class="line"><span class="lineno">  219</span>    <span class="keyword">const</span> <span class="keyword">auto</span> addDivider = [&amp;] {</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keyword">auto</span> *divider = <span class="keyword">new</span> QFrame;</div>
+<div class="line"><span class="lineno">  221</span>        divider-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;entityDivider&quot;</span>));</div>
+<div class="line"><span class="lineno">  222</span>        divider-&gt;setFrameShape(QFrame::HLine);</div>
+<div class="line"><span class="lineno">  223</span>        grid-&gt;addWidget(divider, row++, 0, 1, 2);</div>
+<div class="line"><span class="lineno">  224</span>    };</div>
+<div class="line"><span class="lineno">  225</span> </div>
+<div class="line"><span class="lineno">  226</span>    <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a> = <span class="keyword">new</span> QLabel;</div>
+<div class="line"><span class="lineno">  227</span>    <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;planeZoneIndicator&quot;</span>));</div>
+<div class="line"><span class="lineno">  228</span>    <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>-&gt;setAccessibleName(QStringLiteral(<span class="stringliteral">&quot;Plane zone status&quot;</span>));</div>
+<div class="line"><span class="lineno">  229</span>    <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>-&gt;setFixedHeight(28);</div>
+<div class="line"><span class="lineno">  230</span>    <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>-&gt;setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);</div>
+<div class="line"><span class="lineno">  231</span>    <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>-&gt;setAlignment(Qt::AlignCenter);</div>
+<div class="line"><span class="lineno">  232</span>    <a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  233</span>    <a class="code hl_function" href="namespaceanonymous__namespace_02values__panel_8cpp_03.html#ad682bb4e8b0a5bd4d162e5090fabca8e">setPlaneZoneIndicator</a>(<a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>, <a class="code hl_enumvalue" href="namespaceanonymous__namespace_02values__panel_8cpp_03.html#a25aeae07bed0cd63f3a3e60a812fbaa9a76fbf0ccd7fcd64879c2ff2119dc15a4">PlaneZoneStatus::Outside</a>);</div>
+<div class="line"><span class="lineno">  234</span>    grid-&gt;addWidget(<a class="code hl_variable" href="#ab07f4b9fe31987e78967e6cff1cbc456">m_planeZoneIndicator</a>, row++, 0, 1, 2);</div>
+<div class="line"><span class="lineno">  235</span>    addEntityHeader(QStringLiteral(<span class="stringliteral">&quot;Plane Data&quot;</span>));</div>
+<div class="line"><span class="lineno">  236</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;Location&quot;</span>));</div>
+<div class="line"><span class="lineno">  237</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <span class="keywordtype">id</span> : {<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a9f23121614dd1ca7bc06301553cb733a">StateField::Location0</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a32dcb4b417a26d3eb953ad9e8128939a">StateField::Location1</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a4ae642002024effdd9e64b65cb20f7c0">StateField::Location2</a>})</div>
+<div class="line"><span class="lineno">  238</span>        addValue(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  239</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;Euler (Rotation)&quot;</span>));</div>
+<div class="line"><span class="lineno">  240</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <span class="keywordtype">id</span> : {<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a12c7cb8e94c4c1479f582ded8f96d219">StateField::Euler0</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1ad03fa40ebbaf7b1d3280c5aaee6520c6">StateField::Euler1</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1af458ad6c5380f00d73f04cf884d51364">StateField::Euler2</a>})</div>
+<div class="line"><span class="lineno">  241</span>        addValue(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  242</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;Velocity&quot;</span>));</div>
+<div class="line"><span class="lineno">  243</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <span class="keywordtype">id</span> : {<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a829540ced8c9cd6d89940d2e7db92167">StateField::Velocity0</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1ab184dbc68f0a0e952c74bba1b964e71e">StateField::Velocity1</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a10235c77be991c4dc45d28dcf1c0bd3c">StateField::Velocity2</a>})</div>
+<div class="line"><span class="lineno">  244</span>        addValue(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  245</span> </div>
+<div class="line"><span class="lineno">  246</span>    addDivider();</div>
+<div class="line"><span class="lineno">  247</span>    addEntityHeader(QStringLiteral(<span class="stringliteral">&quot;Target Data&quot;</span>));</div>
+<div class="line"><span class="lineno">  248</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;In-Zone Center&quot;</span>));</div>
+<div class="line"><span class="lineno">  249</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <span class="keywordtype">id</span> : {<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1af80581baa2fa289f86f65120f8bc4670">StateField::IzPos0</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1ace104f8e6119a4f191c5669648535f96">StateField::IzPos1</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a9c619b07de2f401a8c1b66dadb58ec69">StateField::IzPos2</a>})</div>
+<div class="line"><span class="lineno">  250</span>        addValue(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  251</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;In-Range Center&quot;</span>));</div>
+<div class="line"><span class="lineno">  252</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <span class="keywordtype">id</span> : {<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a60bbc4a5a90e898ec5304c0c84c3ac4b">StateField::IrPos0</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a4c2aed92a342fbe531580d68360ed68e">StateField::IrPos1</a>, <a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a61a78b614fae8b3fac92227beb4de869">StateField::IrPos2</a>})</div>
+<div class="line"><span class="lineno">  253</span>        addValue(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  254</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;In-Zone Angles&quot;</span>));</div>
+<div class="line"><span class="lineno">  255</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a5e24b355cb37794a3f37b9e536c1bebb">StateField::IzTheta1</a>);</div>
+<div class="line"><span class="lineno">  256</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a1121ce3d5e8b7479fa941328f3ea9ab0">StateField::IzTheta2</a>);</div>
+<div class="line"><span class="lineno">  257</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;In-Zone Range&quot;</span>));</div>
+<div class="line"><span class="lineno">  258</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a7dbed64a234d5c5cc2141fc6a15674e3">StateField::IzR1</a>);</div>
+<div class="line"><span class="lineno">  259</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1ac5bc3e720514af555136a451e8ac9580">StateField::IzR2</a>);</div>
+<div class="line"><span class="lineno">  260</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;In-Range&quot;</span>));</div>
+<div class="line"><span class="lineno">  261</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a8d5f69ff68a39054059679aa4987aac8">StateField::IrR</a>);</div>
+<div class="line"><span class="lineno">  262</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;Packet&quot;</span>));</div>
+<div class="line"><span class="lineno">  263</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a10b89ffe1f9ddf1d73282e3010103190">StateField::Time</a>);</div>
+<div class="line"><span class="lineno">  264</span> </div>
+<div class="line"><span class="lineno">  265</span>    addDivider();</div>
+<div class="line"><span class="lineno">  266</span>    addEntityHeader(QStringLiteral(<span class="stringliteral">&quot;DLZ Data&quot;</span>));</div>
+<div class="line"><span class="lineno">  267</span>    addGroupHeader(QStringLiteral(<span class="stringliteral">&quot;Telemetry&quot;</span>));</div>
+<div class="line"><span class="lineno">  268</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a9204dc3c2601784d4400a1c4bc940b34">StateField::DlzRangeNm</a>);</div>
+<div class="line"><span class="lineno">  269</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1afa38fbaef3bfffd82af1258fcc90fae0">StateField::DlzAspectDegrees</a>);</div>
+<div class="line"><span class="lineno">  270</span>    addValue(<a class="code hl_enumvalue" href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a4ca0cbf0ff9453c775d9e452de7ef1fa">StateField::DlzAltitudeFeet</a>);</div>
+<div class="line"><span class="lineno">  271</span> </div>
+<div class="line"><span class="lineno">  272</span>    layout-&gt;addLayout(grid);</div>
+<div class="line"><span class="lineno">  273</span>    layout-&gt;addStretch();</div>
+<div class="line"><span class="lineno">  274</span>    <span class="keywordflow">return</span> content;</div>
+<div class="line"><span class="lineno">  275</span>}</div>
 <div class="ttc" id="aclass_state_field_html_a532fee1937b71728f5fd7f0dbc4517b1a10235c77be991c4dc45d28dcf1c0bd3c"><div class="ttname"><a href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a10235c77be991c4dc45d28dcf1c0bd3c">StateField::Velocity2</a></div><div class="ttdeci">@ Velocity2</div><div class="ttdef"><b>Definition</b> <a href="statefield_8h_source.html#l00033">statefield.h:33</a></div></div>
 <div class="ttc" id="aclass_state_field_html_a532fee1937b71728f5fd7f0dbc4517b1a10b89ffe1f9ddf1d73282e3010103190"><div class="ttname"><a href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a10b89ffe1f9ddf1d73282e3010103190">StateField::Time</a></div><div class="ttdeci">@ Time</div><div class="ttdef"><b>Definition</b> <a href="statefield_8h_source.html#l00045">statefield.h:45</a></div></div>
 <div class="ttc" id="aclass_state_field_html_a532fee1937b71728f5fd7f0dbc4517b1a1121ce3d5e8b7479fa941328f3ea9ab0"><div class="ttname"><a href="class_state_field.html#a532fee1937b71728f5fd7f0dbc4517b1a1121ce3d5e8b7479fa941328f3ea9ab0">StateField::IzTheta2</a></div><div class="ttdeci">@ IzTheta2</div><div class="ttdef"><b>Definition</b> <a href="statefield_8h_source.html#l00041">statefield.h:41</a></div></div>
@@ -542,7 +546,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="statefield_8h_source.html#l00049">StateField::Count</a>, <a class="el" href="statefield_8h_source.html#l00048">StateField::DlzAltitudeFeet</a>, <a class="el" href="statefield_8h_source.html#l00047">StateField::DlzAspectDegrees</a>, <a class="el" href="statefield_8h_source.html#l00046">StateField::DlzRangeNm</a>, <a class="el" href="statefield_8h_source.html#l00028">StateField::Euler0</a>, <a class="el" href="statefield_8h_source.html#l00029">StateField::Euler1</a>, <a class="el" href="statefield_8h_source.html#l00030">StateField::Euler2</a>, <a class="el" href="statefield_8h_source.html#l00037">StateField::IrPos0</a>, <a class="el" href="statefield_8h_source.html#l00038">StateField::IrPos1</a>, <a class="el" href="statefield_8h_source.html#l00039">StateField::IrPos2</a>, <a class="el" href="statefield_8h_source.html#l00044">StateField::IrR</a>, <a class="el" href="statefield_8h_source.html#l00034">StateField::IzPos0</a>, <a class="el" href="statefield_8h_source.html#l00035">StateField::IzPos1</a>, <a class="el" href="statefield_8h_source.html#l00036">StateField::IzPos2</a>, <a class="el" href="statefield_8h_source.html#l00042">StateField::IzR1</a>, <a class="el" href="statefield_8h_source.html#l00043">StateField::IzR2</a>, <a class="el" href="statefield_8h_source.html#l00040">StateField::IzTheta1</a>, <a class="el" href="statefield_8h_source.html#l00041">StateField::IzTheta2</a>, <a class="el" href="statefield_8h_source.html#l00025">StateField::Location0</a>, <a class="el" href="statefield_8h_source.html#l00026">StateField::Location1</a>, <a class="el" href="statefield_8h_source.html#l00027">StateField::Location2</a>, <a class="el" href="values__panel_8h_source.html#l00037">m_planeZoneIndicator</a>, <a class="el" href="values__panel_8h_source.html#l00040">m_valueLabels</a>, <a class="el" href="values__panel_8cpp_source.html#l00026">anonymous_namespace{values_panel.cpp}::Outside</a>, <a class="el" href="statefield_8cpp_source.html#l00182">StateField::presentationName()</a>, <a class="el" href="statefield_8h_source.html#l00045">StateField::Time</a>, <a class="el" href="statefield_8h_source.html#l00031">StateField::Velocity0</a>, <a class="el" href="statefield_8h_source.html#l00032">StateField::Velocity1</a>, and <a class="el" href="statefield_8h_source.html#l00033">StateField::Velocity2</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="values__panel_8cpp_source.html#l00125">ValuesPanel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="values__panel_8cpp_source.html#l00127">ValuesPanel()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -579,7 +583,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="values__panel_8h_source.html#l00036">36</a> of file <a class="el" href="values__panel_8h_source.html">values_panel.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="values__panel_8cpp_source.html#l00275">setContentMode()</a>, and <a class="el" href="values__panel_8cpp_source.html#l00125">ValuesPanel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="values__panel_8cpp_source.html#l00277">setContentMode()</a>, and <a class="el" href="values__panel_8cpp_source.html#l00127">ValuesPanel()</a>.</p>
 
 </div>
 </div>
@@ -605,7 +609,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="values__panel_8h_source.html#l00037">37</a> of file <a class="el" href="values__panel_8h_source.html">values_panel.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="values__panel_8cpp_source.html#l00167">buildCurrentValues()</a>, <a class="el" href="values__panel_8cpp_source.html#l00288">render()</a>, and <a class="el" href="values__panel_8cpp_source.html#l00275">setContentMode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="values__panel_8cpp_source.html#l00169">buildCurrentValues()</a>, <a class="el" href="values__panel_8cpp_source.html#l00290">render()</a>, and <a class="el" href="values__panel_8cpp_source.html#l00277">setContentMode()</a>.</p>
 
 </div>
 </div>
@@ -631,7 +635,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="values__panel_8h_source.html#l00038">38</a> of file <a class="el" href="values__panel_8h_source.html">values_panel.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="values__panel_8cpp_source.html#l00275">setContentMode()</a>, and <a class="el" href="values__panel_8cpp_source.html#l00125">ValuesPanel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="values__panel_8cpp_source.html#l00277">setContentMode()</a>, and <a class="el" href="values__panel_8cpp_source.html#l00127">ValuesPanel()</a>.</p>
 
 </div>
 </div>
@@ -657,7 +661,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="values__panel_8h_source.html#l00039">39</a> of file <a class="el" href="values__panel_8h_source.html">values_panel.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="values__panel_8h_source.html#l00026">hudControlPanel()</a>, and <a class="el" href="values__panel_8cpp_source.html#l00125">ValuesPanel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="values__panel_8h_source.html#l00026">hudControlPanel()</a>, and <a class="el" href="values__panel_8cpp_source.html#l00127">ValuesPanel()</a>.</p>
 
 </div>
 </div>
@@ -683,7 +687,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="values__panel_8h_source.html#l00040">40</a> of file <a class="el" href="values__panel_8h_source.html">values_panel.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="values__panel_8cpp_source.html#l00167">buildCurrentValues()</a>, and <a class="el" href="values__panel_8cpp_source.html#l00288">render()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="values__panel_8cpp_source.html#l00169">buildCurrentValues()</a>, and <a class="el" href="values__panel_8cpp_source.html#l00290">render()</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,7 @@
 var NAVTREEINDEX19 =
 {
+"structdlz_1_1_hud_state.html#a8bae66ed4e72daa0d813dc7961ca3f6f":[20,0,4,4,0],
+"structdlz_1_1_hud_state.html#ab777c0c6353de7786b363be8b9aa21f8":[19,0,49,8,5],
 "structdlz_1_1_hud_state.html#ab777c0c6353de7786b363be8b9aa21f8":[20,0,4,4,5],
 "structdlz_1_1_hud_state.html#af5c763ab5b1c23d7844e0058d06adfe5":[19,0,49,8,2],
 "structdlz_1_1_hud_state.html#af5c763ab5b1c23d7844e0058d06adfe5":[20,0,4,4,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX19 =
 "structlar_1_1map_1_1tool_1_1_source_polygon.html#afc9c96fda5a364240a783f0092b64923":[20,0,5,1,0,11,1],
 "structlar_1_1map_1_1tool_1_1anonymous__namespace_02map__asset__writer_8cpp_03_1_1_previous_file.html":[19,0,50,1,9,1,0],
 "structlar_1_1map_1_1tool_1_1anonymous__namespace_02map__asset__writer_8cpp_03_1_1_previous_file.html":[20,0,5,1,0,0,0],
-"structlar_1_1map_1_1tool_1_1anonymous__namespace_02map__asset__writer_8cpp_03_1_1_previous_file.html#a146be700bcdd9912b493cc6a6370b3c0":[19,0,50,1,9,1,0,1],
-"structlar_1_1map_1_1tool_1_1anonymous__namespace_02map__asset__writer_8cpp_03_1_1_previous_file.html#a146be700bcdd9912b493cc6a6370b3c0":[20,0,5,1,0,0,0,1],
-"structlar_1_1map_1_1tool_1_1anonymous__namespace_02map__asset__writer_8cpp_03_1_1_previous_file.html#ab6972d00f60c1a879ee6a9a21b195ed0":[19,0,50,1,9,1,0,0]
+"structlar_1_1map_1_1tool_1_1anonymous__namespace_02map__asset__writer_8cpp_03_1_1_previous_file.html#a146be700bcdd9912b493cc6a6370b3c0":[19,0,50,1,9,1,0,1]
 };

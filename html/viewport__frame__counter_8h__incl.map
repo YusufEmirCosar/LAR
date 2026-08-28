@@ -1,7 +1,9 @@
 <map id="src/viewer/viewport_frame_counter.h" name="src/viewer/viewport_frame_counter.h">
-<area shape="rect" id="Node000001" title="Rolling FPS and total rendered&#45;frame counter for viewport pages." alt="" coords="18,5,152,46"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,75,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,45,57,82,52,79,72,48"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="98,94,163,120"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="98,44,119,80,113,80,95,49"/>
+<area shape="rect" id="Node000001" title="Rolling FPS and total rendered&#45;frame counter for viewport pages." alt="" coords="108,5,243,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,117,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,46,92,87,90,83,145,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="141,94,210,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,44,178,80,173,77,174,48"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="234,94,298,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="199,44,244,84,238,83,197,49"/>
 </map>

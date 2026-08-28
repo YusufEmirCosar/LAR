@@ -1,0 +1,22 @@
+<map id="LarViewport::synchronizeActivePage" name="LarViewport::synchronizeActivePage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,174,111"/>
+<area shape="rect" id="Node000002" href="$class_lar_viewport.html#a2856d0ecb8bcee63d92b425f9977a733" title=" " alt="" coords="233,5,408,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,68,233,49,229,52,165,73"/>
+<area shape="rect" id="Node000006" href="$class_lar_viewport.html#a7a92bc0804805ccb963842d91b2299ec" title=" " alt="" coords="228,71,413,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="173,88,215,90,210,92,175,94"/>
+<area shape="rect" id="Node000007" href="$class_lar_viewport.html#afa902bb3e1d2abe26c728c1677915528" title=" " alt="" coords="222,136,419,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="164,109,234,130,229,132,164,115"/>
+<area shape="rect" id="Node000003" href="$class_lar_viewport.html#ad944123ddb792fff3c069a101edc8667" title=" " alt="" coords="467,70,667,96"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="408,43,496,65,491,67,409,49"/>
+<area shape="rect" id="Node000005" href="$class_viewport_camera_controller.html#a1ae2d70894db28fff6474920cdbd7d65" title=" " alt="" coords="480,5,654,46"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="408,23,467,25,461,26,409,28"/>
+<area shape="rect" id="Node000004" href="$class_lar_viewport.html#a87f5ac3cf9e88e1603eb618760909944" title=" " alt="" coords="715,70,879,96"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="667,80,702,83,697,83,668,86"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="382,133,466,104,495,99,490,101,468,110,384,138"/>
+<area shape="rect" id="Node000008" href="$class_i_lar_viewport_page.html#a603f882a5b662c86d67474ccfe37bfd8" title=" " alt="" coords="468,144,666,169"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="419,154,455,156,450,157,420,159"/>
+<area shape="rect" id="Node000009" href="$class_i_lar_viewport_page.html#a20580de17fae7d4c87c00a6cd9854771" title=" " alt="" coords="474,217,661,258"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="385,175,491,212,486,212,384,180"/>
+<area shape="poly" id="edge9_Node000008_Node000008" title=" " alt="" coords="529,142,522,135,526,125,542,119,567,117,595,120,611,129,606,128,594,125,567,122,543,124,530,129,527,134,534,144"/>
+<area shape="poly" id="edge11_Node000009_Node000009" title=" " alt="" coords="524,215,522,207,529,198,544,193,567,191,592,193,608,202,603,201,591,198,567,196,545,198,532,203,527,209,529,218"/>
+</map>

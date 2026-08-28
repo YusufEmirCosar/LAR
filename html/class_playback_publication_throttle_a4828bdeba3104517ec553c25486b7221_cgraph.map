@@ -1,9 +1,0 @@
-<map id="PlaybackPublicationThrottle::PlaybackPublicationThrottle" name="PlaybackPublicationThrottle::PlaybackPublicationThrottle">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,197,79"/>
-<area shape="rect" id="Node000002" href="$class_playback_publication_throttle.html#a7c07fc3fc2e5898e4e84e66e91755832" title="Publishes the latest coalesced state and position." alt="" coords="245,39,428,79"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,56,231,59,226,59,198,62"/>
-<area shape="rect" id="Node000003" href="$class_playback_publication_throttle.html#af000e76f267a9852463d72f4f3bdbea9" title=" " alt="" coords="476,5,659,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="428,43,463,41,458,42,428,48"/>
-<area shape="rect" id="Node000004" href="$class_playback_publication_throttle.html#a56a7c271ef755b7ce7e33edd98c57053" title=" " alt="" coords="476,71,659,111"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="428,69,463,76,458,76,428,74"/>
-</map>

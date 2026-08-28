@@ -187,7 +187,9 @@ separately and can be selected with `LAR_MULL_IR_FRONTEND`.
 ## Performance evidence
 
 `run-benchmarks` writes JSON metrics for mapping, recording, playback, map, and
-viewport operations. `check-performance` additionally requires
+viewport operations. The session benchmark includes alternating random access
+across former 4,096-record page boundaries, so a regression to repeated page
+reconstruction is directly visible. `check-performance` additionally requires
 `LAR_PERFORMANCE_BASELINE` and rejects either median or p95 latency more than
 10% above that baseline. A comparison is meaningful only on a pinned runner
 with controlled power and thermal state.

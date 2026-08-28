@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="417,55,322,103,320,99,422,52"/>
 <area shape="rect" id="Node000007" href="$playback__runtime__worker_8h.html" title="Session&#45;thread worker that owns playback services and clocks." alt="" coords="387,94,561,150"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="475,59,476,95,472,92,473,64"/>
-<area shape="rect" id="Node000009" href="$lar__session__reader_8h.html" title="Bounded parser with sparse, paged random access for .lar session files." alt="" coords="598,94,739,150"/>
+<area shape="rect" id="Node000009" href="$lar__session__reader_8h.html" title="Bounded parser with resident and sparse random access for .lar files." alt="" coords="598,94,739,150"/>
 <area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="529,50,615,93,610,94,528,56"/>
 <area shape="rect" id="Node000003" href="$direct__application__runtime_8h.html" title="Synchronous IApplicationRuntime implementation for tests/embedding." alt="" coords="190,205,342,246"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="277,155,271,206,266,203,274,159"/>

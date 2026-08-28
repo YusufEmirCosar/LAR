@@ -102,7 +102,7 @@
 <!-- Node9 -->
 <g id="Node000009" class="node">
 <title>Node9</title>
-<g id="a_Node000009"><a xlink:href="lar__session__reader_8h.html" target="_top" xlink:title="Bounded parser with sparse, paged random access for .lar session files.">
+<g id="a_Node000009"><a xlink:href="lar__session__reader_8h.html" target="_top" xlink:title="Bounded parser with resident and sparse random access for .lar files.">
 <polygon fill="white" stroke="#666666" points="550.12,-186 444.88,-186 444.88,-144.25 550.12,-144.25 550.12,-186"/>
 <text xml:space="preserve" text-anchor="start" x="452.88" y="-172.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/infrastructure</text>
 <text xml:space="preserve" text-anchor="start" x="452.88" y="-161.25" font-family="Helvetica,sans-Serif" font-size="10.00">/session/lar_session</text>

@@ -2,7 +2,7 @@
 
 /**
  * @file lar_viewport.h
- * @brief Host widget that switches pages and distributes scene/camera state.
+ * @brief Host widget that switches pages and presents state only on the active page.
  */
 
 #include "domain/dlz/dlz_types.h"
@@ -14,6 +14,7 @@
 #include "viewer/viewport_frame_counter.h"
 
 #include <QBitArray>
+#include <QString>
 #include <QWidget>
 
 #include <memory>
@@ -25,8 +26,10 @@ class QResizeEvent;
 /**
  * @brief Stable viewport boundary for Grid, Mercator, and Sphere modes.
  *
- * The host owns the concrete pages, routes presentation changes, and guards
- * input forwarding against ignored-event propagation loops.
+ * The host owns the concrete pages, retains the latest shared scene, updates
+ * only the visible presentation page, and guards input forwarding against
+ * ignored-event propagation loops. A newly selected page is synchronized
+ * before it becomes visible.
  */
 class LarViewport final : public QWidget {
     Q_OBJECT
@@ -90,13 +93,19 @@ class LarViewport final : public QWidget {
 
   private:
     ILarViewportPage &activePage() noexcept;
+    ILarViewportPage *activeScenePage() noexcept;
     QWidget &activePageWidget() noexcept;
     void showActivePage();
-    void distributeCameraState();
+    void applyCameraStateToActivePage();
+    void applySceneStateToActivePage();
+    void applyDlzInputsToActivePage();
+    void synchronizeActivePage();
     void raiseOverlayWidget() noexcept;
     void forwardEvent(QEvent &event);
 
     LarSceneState m_scene;
+    dlz::TelemetryInputs m_dlzInputs;
+    QString m_dlzSource;
     ViewportFrameCounter m_frameCounter;
     ILarViewportPage *m_gridPage = nullptr;
     IEarthLarViewportPage *m_earthPage = nullptr;
@@ -108,5 +117,8 @@ class LarViewport final : public QWidget {
     ViewportCameraController m_cameraController;
     QWidget *m_overlayWidget = nullptr;
     bool m_hasInitialFit = false;
+    bool m_hasReceivedSceneState = false;
+    bool m_dlzInputsAvailable = false;
+    bool m_hasReceivedDlzInputs = false;
     bool m_forwardingInputEvent = false;
 };

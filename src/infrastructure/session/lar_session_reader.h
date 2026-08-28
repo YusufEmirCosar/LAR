@@ -2,7 +2,7 @@
 
 /**
  * @file lar_session_reader.h
- * @brief Bounded parser with sparse, paged random access for .lar session files.
+ * @brief Bounded parser with resident and sparse random access for .lar files.
  */
 
 #include "application/ports/session_reader.h"
@@ -13,13 +13,15 @@
 #include <memory>
 
 /**
- * @brief Validates a session once, checkpoints it sparsely, and decodes on demand.
+ * @brief Validates a session once, indexes it, and decodes selected records on demand.
  *
- * The reader deliberately has no record-count policy limit. A timestamp and
- * header offset are retained for every 4,096 records, and only one page of
- * record locations is cached. The two-level lookup therefore avoids both a
- * full per-record memory index and cross-page seek amplification. Like QFile,
- * random-access methods are confined to the reader's owning thread.
+ * The reader has no record-count policy limit. Normal recordings retain an
+ * immutable source snapshot plus a complete per-record location index, making
+ * high-rate random access independent of file-system seek performance.
+ * Resource limits are adaptive: oversized sources remain file-backed and
+ * indexes exceeding the resident-index budget fall back to timestamped
+ * checkpoints plus one page covering at most 4,096 records. Random-access
+ * methods remain confined to the reader's owning thread.
  */
 class LarSessionReader final : public ISessionReader {
   public:
@@ -28,7 +30,7 @@ class LarSessionReader final : public ISessionReader {
 
     bool loadFile(const QString &path, QString *error = nullptr) override;
     bool loadData(const QByteArray &data, QString *error = nullptr) override;
-    /** Releases the source, sparse index, decoded mapping, and cached record page. */
+    /** Releases every source, index, decoded mapping, and cached record page. */
     void close() noexcept override;
     bool isValid() const noexcept override {
         return m_isValid;
@@ -72,6 +74,7 @@ class LarSessionReader final : public ISessionReader {
     const RecordIndex *locationAt(qint64 index, QString *error) const;
 
     QVector<Checkpoint> m_checkpoints;
+    QVector<RecordIndex> m_residentIndex;
     mutable QVector<RecordIndex> m_page;
     mutable qint64 m_pageFirstRecord = -1;
     PacketMapping m_mapping;
@@ -81,5 +84,6 @@ class LarSessionReader final : public ISessionReader {
     qint64 m_sourceSize = 0;
     qint64 m_recordCount = 0;
     SessionTimestamp m_duration;
+    bool m_residentIndexAvailable = false;
     bool m_isValid = false;
 };

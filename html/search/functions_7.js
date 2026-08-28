@@ -18,12 +18,13 @@ var searchData=
   ['hasvalue_15',['hasValue',['../structdlz_1_1_dlz_solve_result.html#a358a649f55ca9881f4d51f729148ecc6',1,'dlz::DlzSolveResult']]],
   ['haszones_16',['hasZones',['../class_lar_parametric_zone_gpu_layer.html#ac44830326739de9d4f29a9d2107f7b45',1,'LarParametricZoneGpuLayer']]],
   ['headingradians_17',['headingRadians',['../class_plane_scene_widget.html#ac27069e022fa16543e3c05fd1bceb4bc',1,'PlaneSceneWidget']]],
-  ['hudblack_18',['HudBlack',['../namespacedlz_1_1presentation_1_1anonymous__namespace_02dlz__hud__renderer_8cpp_03.html#a907f33a9bd28c3e0f5ec38b75d9480bc',1,'dlz::presentation::anonymous_namespace{dlz_hud_renderer.cpp}']]],
-  ['hudcontrolpanel_19',['hudControlPanel',['../class_values_panel.html#aa11d8c5d9f4eee3a315f43e7211a4b04',1,'ValuesPanel']]],
-  ['hudgreen_20',['HudGreen',['../namespacedlz_1_1presentation_1_1anonymous__namespace_02dlz__hud__renderer_8cpp_03.html#a9e77d5daec762f019a535a01b1d98267',1,'dlz::presentation::anonymous_namespace{dlz_hud_renderer.cpp}']]],
-  ['hudgreendim_21',['HudGreenDim',['../namespacedlz_1_1presentation_1_1anonymous__namespace_02dlz__hud__renderer_8cpp_03.html#aa04293278082477f3e6a6532c52704ee',1,'dlz::presentation::anonymous_namespace{dlz_hud_renderer.cpp}']]],
-  ['hudstate_22',['hudState',['../classdlz_1_1presentation_1_1_hud_view.html#a1d3b8abd2f82714a28a4517891f91bd2',1,'dlz::presentation::HudView']]],
-  ['hudview_23',['HudView',['../classdlz_1_1presentation_1_1_hud_view.html#aff06fea35330bec51f3083afd82c94dc',1,'dlz::presentation::HudView']]],
-  ['hudview_24',['hudView',['../classdlz_1_1presentation_1_1_hud_workspace.html#accaa70e80923acb4390012dcb841b6d7',1,'dlz::presentation::HudWorkspace']]],
-  ['hudworkspace_25',['HudWorkspace',['../classdlz_1_1presentation_1_1_hud_workspace.html#afb9be1db382bcd4c59eb64522d368640',1,'dlz::presentation::HudWorkspace::HudWorkspace(QWidget *parent=nullptr)'],['../classdlz_1_1presentation_1_1_hud_workspace.html#aec685012fec2dfb24231b60b8836444b',1,'dlz::presentation::HudWorkspace::HudWorkspace(ControlPanel *controlPanel, QWidget *parent=nullptr)']]]
+  ['hideevent_18',['hideEvent',['../classdlz_1_1presentation_1_1_hud_workspace.html#ab2b2140048d404087bf063f969932848',1,'dlz::presentation::HudWorkspace']]],
+  ['hudblack_19',['HudBlack',['../namespacedlz_1_1presentation_1_1anonymous__namespace_02dlz__hud__renderer_8cpp_03.html#a907f33a9bd28c3e0f5ec38b75d9480bc',1,'dlz::presentation::anonymous_namespace{dlz_hud_renderer.cpp}']]],
+  ['hudcontrolpanel_20',['hudControlPanel',['../class_values_panel.html#aa11d8c5d9f4eee3a315f43e7211a4b04',1,'ValuesPanel']]],
+  ['hudgreen_21',['HudGreen',['../namespacedlz_1_1presentation_1_1anonymous__namespace_02dlz__hud__renderer_8cpp_03.html#a9e77d5daec762f019a535a01b1d98267',1,'dlz::presentation::anonymous_namespace{dlz_hud_renderer.cpp}']]],
+  ['hudgreendim_22',['HudGreenDim',['../namespacedlz_1_1presentation_1_1anonymous__namespace_02dlz__hud__renderer_8cpp_03.html#aa04293278082477f3e6a6532c52704ee',1,'dlz::presentation::anonymous_namespace{dlz_hud_renderer.cpp}']]],
+  ['hudstate_23',['hudState',['../classdlz_1_1presentation_1_1_hud_view.html#a1d3b8abd2f82714a28a4517891f91bd2',1,'dlz::presentation::HudView']]],
+  ['hudview_24',['HudView',['../classdlz_1_1presentation_1_1_hud_view.html#aff06fea35330bec51f3083afd82c94dc',1,'dlz::presentation::HudView']]],
+  ['hudview_25',['hudView',['../classdlz_1_1presentation_1_1_hud_workspace.html#accaa70e80923acb4390012dcb841b6d7',1,'dlz::presentation::HudWorkspace']]],
+  ['hudworkspace_26',['HudWorkspace',['../classdlz_1_1presentation_1_1_hud_workspace.html#afb9be1db382bcd4c59eb64522d368640',1,'dlz::presentation::HudWorkspace::HudWorkspace(QWidget *parent=nullptr)'],['../classdlz_1_1presentation_1_1_hud_workspace.html#aec685012fec2dfb24231b60b8836444b',1,'dlz::presentation::HudWorkspace::HudWorkspace(ControlPanel *controlPanel, QWidget *parent=nullptr)']]]
 ];

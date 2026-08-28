@@ -284,7 +284,6 @@ sequenceDiagram
     participant P as PlaybackRuntimeWorker
     participant RD as LarSessionReader
     participant S as PlaybackService
-    participant T as PlaybackPublicationThrottle
     participant VM as ApplicationViewModel
 
     User-&gt;&gt;F: loadSession(path)
@@ -299,7 +298,7 @@ sequenceDiagram
     P-&gt;&gt;S: loadSession(path)
     S-&gt;&gt;RD: loadFile(path)
     
-    RD-&gt;&gt;RD: validate header, mapping, records, build index
+    RD-&gt;&gt;RD: validate and build bounded resident index plus sparse fallback
     
     RD--&gt;&gt;S: valid reader or error
     S-&gt;&gt;RD: recordAt(0)
@@ -315,14 +314,13 @@ sequenceDiagram
     loop 60 Hz replay ticks
         S-&gt;&gt;S: next = current + (1000 / 60) * rate
         S-&gt;&gt;RD: find record strictly before next
-        RD-&gt;&gt;RD: search checkpoint timestamps
-        RD-&gt;&gt;RD: load/search at most one bounded page
+        RD-&gt;&gt;RD: search resident index or checkpoint/page fallback
         RD--&gt;&gt;S: decode at most one selected record
-        S--&gt;&gt;T: selected frame + exact position
-        T--&gt;&gt;VM: latest epoch-tagged publication every 16 ms
+        S--&gt;&gt;P: selected frame + exact position
+        P--&gt;&gt;VM: epoch-tagged publication on the same tick
     end</pre>
 </div>
-<p>Seek uses the same two-level sparse index to select the last timestamp at or before the requested position. Normal replay does not decode intermediate records between sampled positions. With Repeat enabled, the newly calculated cursor is reduced modulo the final timestamp before every lookup, preserving any overshoot even across multiple loops. Without Repeat, passing the final timestamp publishes completion. The separate Burst widget is an inert placeholder and dispatches no runtime command.</p>
+<p>Seek uses the same resident-index or sparse-fallback lookup to select the last timestamp at or before the requested position. Normal replay does not decode intermediate records between sampled positions. With Repeat enabled, the newly calculated cursor is reduced modulo the final timestamp before every lookup, preserving any overshoot even across multiple loops. Without Repeat, passing the final timestamp publishes completion. The separate Burst widget is an inert placeholder and dispatches no runtime command.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md92"></a>
 Source epoch rejection</h1>
 <p>Queued Qt delivery means an old worker event can physically arrive after a new source becomes active. Epoch checking makes this harmless.</p>

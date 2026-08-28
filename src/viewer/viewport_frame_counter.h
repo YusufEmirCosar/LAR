@@ -5,6 +5,7 @@
  * @brief Rolling FPS and total rendered-frame counter for viewport pages.
  */
 
+#include <QElapsedTimer>
 #include <QObject>
 #include <QTimer>
 
@@ -31,6 +32,7 @@ class ViewportFrameCounter final : public QObject {
 
   private:
     QTimer m_fpsTimer;
+    QElapsedTimer m_sampleClock;
     int m_drawOperations = 0;
     int m_fps = 0;
     quint64 m_totalFrames = 0;

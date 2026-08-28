@@ -38,12 +38,16 @@ and verification information lives in the [documentation hub](docs/README.md).
   replacement and preserve an existing destination if commit fails.
 - There is no product maximum for records per session. Capacity is governed by
   available storage, the `LAR1` byte layout, the supported duration, and the
-  signed 64-bit application index range. The reader shall not retain one index
-  entry per record: it keeps one timestamp-and-offset checkpoint per 4,096
-  records and a single 4,096-record location page.
-- Playback shall use exact millisecond timestamps, select the page from the
-  sparse timestamp checkpoints, search only that bounded page, and decode at
-  most the selected record on each presentation tick.
+  signed 64-bit application index range. The reader shall apply independent,
+  explicit memory budgets: file sources no larger than 512 MiB may become an
+  immutable resident snapshot, and a complete record-location index may occupy
+  at most 128 MiB. It shall retain one timestamp-and-offset checkpoint per
+  4,096 records and a single bounded location page as the fallback when the
+  complete index budget is exceeded.
+- Playback shall use exact millisecond timestamps, use the complete resident
+  index when available or the bounded sparse fallback otherwise, and decode at
+  most the selected record on each presentation tick. A changed sampled state
+  and its exact position shall be published on that same tick.
 
 ### Visualization
 
@@ -57,6 +61,9 @@ and verification information lives in the [documentation hub](docs/README.md).
   adaptively sampled CPU geometry.
 - GPU resources shall be created, used, and destroyed only while their owning
   OpenGL context is current.
+- Only the active viewport page shall consume each live scene-state update.
+  Hidden pages shall synchronize from the latest retained state before they
+  become visible.
 - The DLZ view shall remain clearly identified as a deterministic fictional
   teaching model.
 

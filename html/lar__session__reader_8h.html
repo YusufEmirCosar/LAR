@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('lar__session__
 </div><!--header-->
 <div class="contents">
 
-<p>Bounded parser with sparse, paged random access for .lar session files.  
+<p>Bounded parser with resident and sparse random access for .lar files.
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="session__reader_8h_source.html">application/ports/session_reader.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="packet__mapping_8h_source.html">domain/packet_mapping.h</a>&quot;</code><br />
@@ -141,12 +141,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:LarSessionReader" id="r_LarSessionReader"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_lar_session_reader.html">LarSessionReader</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates a session once, checkpoints it sparsely, and decodes on demand.  <a href="class_lar_session_reader.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates a session once, indexes it, and decodes selected records on demand.  <a href="class_lar_session_reader.html#details">More...</a><br /></td></tr>
 <tr class="memitem:LarSessionReader_3A_3ARecordIndex" id="r_LarSessionReader_3A_3ARecordIndex"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_lar_session_reader_1_1_record_index.html">LarSessionReader::RecordIndex</a></td></tr>
 <tr class="memitem:LarSessionReader_3A_3ACheckpoint" id="r_LarSessionReader_3A_3ACheckpoint"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_lar_session_reader_1_1_checkpoint.html">LarSessionReader::Checkpoint</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Bounded parser with sparse, paged random access for .lar session files. </p>
+<div class="textblock"><p>Bounded parser with resident and sparse random access for .lar files. </p>
 
 <p class="definition">Definition in file <a class="el" href="lar__session__reader_8h_source.html">lar_session_reader.h</a>.</p>
 </div></div><!-- contents -->

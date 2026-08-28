@@ -8,6 +8,7 @@ var class_viewport_frame_counter =
     [ "framesPerSecondChanged", "class_viewport_frame_counter.html#a4bc9508232e5fc89b061d3590b4c98c8", null ],
     [ "totalFrameCountChanged", "class_viewport_frame_counter.html#a97edcf6d4d065ca1b9d1307d4a394051", null ],
     [ "m_fpsTimer", "class_viewport_frame_counter.html#a028812203c2b2a1e25c22eb1f0018a9d", null ],
+    [ "m_sampleClock", "class_viewport_frame_counter.html#a8457bf96e91e11ebd0c94477ac4f9420", null ],
     [ "m_drawOperations", "class_viewport_frame_counter.html#ac2ee28651d68df5dcf8fe8fdb3e13fb8", null ],
     [ "m_fps", "class_viewport_frame_counter.html#a832c149991211915b6cc14b00364eeca", null ],
     [ "m_totalFrames", "class_viewport_frame_counter.html#a60ddfe349cd30324110f062c3e44330e", null ]

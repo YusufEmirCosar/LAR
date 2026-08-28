@@ -3,7 +3,6 @@
 
 #include "application/playback_service.h"
 #include "infrastructure/runtime/playback_metrics.h"
-#include "infrastructure/runtime/playback_publication_throttle.h"
 #include "infrastructure/session/lar_session_reader.h"
 #include "infrastructure/timing/qt_playback_clock.h"
 
@@ -52,20 +51,31 @@ void PlaybackRuntimeWorker::initialize() {
                            QStringLiteral("Playback clock factory returned null")});
     }
     m_playback = new PlaybackService(*m_reader, *m_clock, this);
-    m_publication = new PlaybackPublicationThrottle(this);
     m_metrics = new PlaybackMetrics(this);
 
-    connect(m_playback, &PlaybackService::frameReady, m_publication,
-            &PlaybackPublicationThrottle::captureFrame);
-    connect(m_playback, &PlaybackService::positionChanged, m_publication,
-            &PlaybackPublicationThrottle::capturePosition);
+    // PlaybackService already samples at the presentation rate. Forwarding the
+    // sampled frame on that same tick avoids beating a separate 16 ms timer
+    // against the 60 Hz clock and silently coalescing otherwise valid frames.
+    connect(m_playback, &PlaybackService::frameReady, this, [this](const DecodedState &state) {
+        if (m_publicationDeferred) {
+            m_deferredState = state;
+            return;
+        }
+        emit stateReady({{RuntimeStateSource::Playback, m_stateGeneration}, state});
+    });
+    connect(m_playback, &PlaybackService::positionChanged, this, [this](SessionTimestamp position) {
+        if (m_publicationDeferred) {
+            m_deferredPosition = position;
+            return;
+        }
+        emit playbackPositionChanged({{RuntimeStateSource::Playback, m_stateGeneration}, position});
+    });
     connect(m_playback, &PlaybackService::recordsProcessed, m_metrics, &PlaybackMetrics::record);
     connect(m_playback, &PlaybackService::playingChanged, this, [this](bool playing) {
         m_metrics->setActive(playing);
         emit playbackPlayingChanged({{RuntimeStateSource::Playback, m_stateGeneration}, playing});
     });
     connect(m_playback, &PlaybackService::playbackFinished, this, [this] {
-        m_publication->publish();
         m_metrics->finish();
         emit playbackFinished({{RuntimeStateSource::Playback, m_stateGeneration}});
     });
@@ -75,27 +85,19 @@ void PlaybackRuntimeWorker::initialize() {
                            RuntimeFailureCode::Operational,
                            message});
     });
-    connect(m_publication, &PlaybackPublicationThrottle::stateReady, this,
-            [this](const DecodedState &state) {
-                emit stateReady({{RuntimeStateSource::Playback, m_stateGeneration}, state});
-            });
-    connect(m_publication, &PlaybackPublicationThrottle::positionChanged, this,
-            [this](SessionTimestamp position) {
-                emit playbackPositionChanged(
-                    {{RuntimeStateSource::Playback, m_stateGeneration}, position});
-            });
     connect(m_metrics, &PlaybackMetrics::metricsChanged, this, [this](quint64 count, quint64 rate) {
         emit metricsChanged({{RuntimeStateSource::Playback, m_stateGeneration}, count, rate});
     });
-    m_publication->start();
 }
 
 void PlaybackRuntimeWorker::loadSession(const QString &path, quint64 generation,
                                         RuntimeRequestId request) {
     initialize();
     m_stateGeneration = generation != 0 ? generation : m_stateGeneration + 1;
+    m_publicationDeferred = true;
+    clearDeferredPublication();
     m_playback->closeSession();
-    m_publication->clear();
+    clearDeferredPublication();
     m_metrics->reset();
 
     QString error;
@@ -108,17 +110,22 @@ void PlaybackRuntimeWorker::loadSession(const QString &path, quint64 generation,
                               loaded ? m_playback->duration() : SessionTimestamp{},
                               error});
 
+    m_publicationDeferred = false;
     if (loaded)
-        m_publication->publish();
+        flushDeferredPublication();
+    else
+        clearDeferredPublication();
 }
 
 void PlaybackRuntimeWorker::closeSession(quint64 generation, RuntimeRequestId request) {
     initialize();
     const RuntimeSourceEpoch epoch{RuntimeStateSource::Playback,
                                    generation != 0 ? generation : m_stateGeneration};
+    m_publicationDeferred = true;
     m_playback->closeSession();
     m_metrics->setActive(false);
-    m_publication->clear();
+    clearDeferredPublication();
+    m_publicationDeferred = false;
     emit sessionClosed({request, epoch, true, {}});
 }
 
@@ -145,10 +152,8 @@ void PlaybackRuntimeWorker::pause(RuntimeRequestId request) {
 void PlaybackRuntimeWorker::stop(RuntimeRequestId request) {
     initialize();
     const bool succeeded = m_playback->isLoaded();
-    if (succeeded) {
+    if (succeeded)
         m_playback->stop();
-        m_publication->publish();
-    }
     emit commandFinished({request, RuntimeCommandKind::PlaybackStop, succeeded,
                           succeeded ? QString{} : QStringLiteral("No playback session is loaded")});
 }
@@ -156,10 +161,8 @@ void PlaybackRuntimeWorker::stop(RuntimeRequestId request) {
 void PlaybackRuntimeWorker::seek(SessionTimestamp position, RuntimeRequestId request) {
     initialize();
     const bool eligible = m_playback->isLoaded() && m_playback->recordCount() > 0;
-    if (eligible) {
+    if (eligible)
         m_playback->seek(position);
-        m_publication->publish();
-    }
     const bool succeeded = eligible && m_playback->isLoaded();
     emit commandFinished(
         {request, RuntimeCommandKind::PlaybackSeek, succeeded,
@@ -189,7 +192,25 @@ void PlaybackRuntimeWorker::resetMetrics(RuntimeRequestId request) {
 void PlaybackRuntimeWorker::shutdown() {
     if (!m_playback)
         return;
-    m_publication->stop();
     m_metrics->shutdown();
+    m_publicationDeferred = true;
     m_playback->closeSession();
+    clearDeferredPublication();
+    m_publicationDeferred = false;
+}
+
+void PlaybackRuntimeWorker::clearDeferredPublication() noexcept {
+    m_deferredState.reset();
+    m_deferredPosition.reset();
+}
+
+void PlaybackRuntimeWorker::flushDeferredPublication() {
+    const auto state = std::exchange(m_deferredState, std::nullopt);
+    const auto position = std::exchange(m_deferredPosition, std::nullopt);
+    if (state)
+        emit stateReady({{RuntimeStateSource::Playback, m_stateGeneration}, *state});
+    if (position) {
+        emit playbackPositionChanged(
+            {{RuntimeStateSource::Playback, m_stateGeneration}, *position});
+    }
 }

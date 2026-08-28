@@ -26,8 +26,6 @@ qt_add_library(lar-infrastructure-qt STATIC
     src/infrastructure/runtime/network_runtime_worker.cpp
     src/infrastructure/runtime/recording_runtime_worker.h
     src/infrastructure/runtime/recording_runtime_worker.cpp
-    src/infrastructure/runtime/playback_publication_throttle.h
-    src/infrastructure/runtime/playback_publication_throttle.cpp
     src/infrastructure/runtime/playback_metrics.h
     src/infrastructure/runtime/playback_metrics.cpp
     src/infrastructure/runtime/playback_runtime_worker.h
@@ -39,4 +37,3 @@ qt_add_library(lar-infrastructure-qt STATIC
 )
 target_include_directories(lar-infrastructure-qt PUBLIC src)
 target_link_libraries(lar-infrastructure-qt PUBLIC lar-application lar-domain Qt6::Core Qt6::Network)
-

@@ -6,7 +6,7 @@
 <area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="721,55,626,137,565,185,562,180,622,133,716,57"/>
 <area shape="rect" id="Node000010" href="$grid__camera__transform_8h.html" title="Pan, zoom, tracking, and coordinate transforms for the grid page." alt="" coords="926,94,1095,135"/>
 <area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="826,49,955,93,949,94,826,54"/>
-<area shape="rect" id="Node000014" href="$lar__viewport_8h.html" title="Host widget that switches pages and distributes scene/camera state." alt="" coords="630,183,764,223"/>
+<area shape="rect" id="Node000014" href="$lar__viewport_8h.html" title="Host widget that switches pages and presents state only on the active page." alt="" coords="630,183,764,223"/>
 <area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="740,59,728,95,703,184,699,181,723,93,736,62"/>
 <area shape="rect" id="Node000015" href="$lar__viewport__page_8h.html" title="Substitutable viewport&#45;page interfaces and their shared event channel." alt="" coords="737,94,878,135"/>
 <area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="775,57,798,94,793,93,773,62"/>

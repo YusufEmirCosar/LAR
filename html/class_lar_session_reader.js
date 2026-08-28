@@ -19,6 +19,7 @@ var class_lar_session_reader =
     [ "locationAt", "class_lar_session_reader.html#aa62e21e6f68343a427d2134dc21d9601", null ],
     [ "RecordsPerPage", "class_lar_session_reader.html#a1ffe5594ef1069a73a115b751ba81f0b", null ],
     [ "m_checkpoints", "class_lar_session_reader.html#a5c32613986be24ffdd3807de65fa7bab", null ],
+    [ "m_residentIndex", "class_lar_session_reader.html#a14f0c48cfa72941ff3dc634b0c82f786", null ],
     [ "m_page", "class_lar_session_reader.html#adca86ffe5a0884f6d3cd29763d08e858", null ],
     [ "m_pageFirstRecord", "class_lar_session_reader.html#aa615d646a95d5647e973ac72ccb3999d", null ],
     [ "m_mapping", "class_lar_session_reader.html#a0e992dc5667cf0946de77d4f1faa0b54", null ],
@@ -28,5 +29,6 @@ var class_lar_session_reader =
     [ "m_sourceSize", "class_lar_session_reader.html#a9c60c7a7d235a0397fe519ad9296033c", null ],
     [ "m_recordCount", "class_lar_session_reader.html#abae3596fd00c0c973a45b85f30aae13b", null ],
     [ "m_duration", "class_lar_session_reader.html#a6a969e1e5a733b75213b58b8a4ac0e63", null ],
+    [ "m_residentIndexAvailable", "class_lar_session_reader.html#ab477349aa511a3e66e1ebd0b5a1731a5", null ],
     [ "m_isValid", "class_lar_session_reader.html#a138b0d1fc45a3c3d770907d70bd6faf2", null ]
 ];

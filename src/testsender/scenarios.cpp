@@ -459,7 +459,8 @@ void update(const QString &name, int packetIndex, double elapsedSeconds, Plane *
 
 } // namespace TestSenderScenarios
 
-//./build-release/lar-test-sender --map maps/full-state-dlz.json --scenario coordinated-turn --host 127.0.0.1 --port 45454 --count 100000 --interval 2
+//./build-release/lar-test-sender --map maps/full-state-dlz.json --scenario coordinated-turn --host
+// 127.0.0.1 --port 45454 --count 100000 --interval 2
 //./build-release/lar-test-sender --map maps/full-state.json --scenario polar-lar-stress --host
 // 127.0.0.1 --port 45454 --count 100000 --interval 2
 

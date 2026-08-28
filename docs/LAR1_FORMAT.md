@@ -102,20 +102,28 @@ A session becomes visible only after one complete pass succeeds:
 6. Read and decode every packet with the embedded `PacketMapping`; any invalid
    stored domain value rejects the entire session.
 7. Store the timestamp and header offset of every 4,096th record as a sparse
-   checkpoint.
-8. Commit the mapping, checkpoint table, source, count, duration, and valid flag
-   atomically.
+   checkpoint. In parallel, retain every record location while the complete
+   index remains within its 128 MiB budget.
+8. For `loadFile`, retain a validated file as an immutable byte snapshot and
+   close the original handle when the source is no larger than 512 MiB.
+9. Commit the mapping, checkpoint table, optional complete index, selected
+   random-access source, count, duration, and valid flag atomically.
 
-For a file source, packet bytes are not retained in RAM after validation;
-`recordAt` seeks and decodes on demand. For `loadData`, the caller's byte array
-is retained as the random-access source. Random access scans record headers from
-the selected checkpoint and caches one page of at most 4,096 locations. For a
-playback lookup, the reader first binary-searches checkpoint timestamps in
-memory, materializes at most the selected page, and then binary-searches that
-page in memory. Sequential playback normally reuses the same page. Resident
-index memory therefore grows once per checkpoint, not once per record. Source
-size is revalidated during random access to reject replacement or truncation
-after the validation pass.
+The source and index budgets are independent. A file no larger than 512 MiB is
+read from its immutable in-memory snapshot after validation; a larger file
+remains file-backed. `loadData` retains the caller-supplied byte array because
+it is already an in-memory source. The reader retains a complete per-record
+location index while it fits within 128 MiB, regardless of source type. This
+fast path makes `recordAt` direct and lets timestamp selection binary-search the
+complete index without reconstructing pages.
+
+If the complete index would exceed its budget, the reader discards it and uses
+the checkpoint table plus one cached page of at most 4,096 locations. A lookup
+then binary-searches checkpoint timestamps, materializes only the selected
+page, and binary-searches that page. Sequential playback normally reuses the
+same page. A file-backed source is size-checked during random access so growth
+or truncation after validation is rejected; a cached source is independent of
+later changes to the original file.
 
 ## Playback interpretation
 
@@ -125,9 +133,9 @@ after the validation pass.
 - Stop publishes the first record and resets position to zero.
 - Play advances an exact cursor by `(1000 / 60) * positiveRate` milliseconds on
   every presentation tick.
-- Each play tick performs one two-level sparse-index lookup and decodes at most
-  the last record strictly before the advanced cursor. It does not iterate
-  through skipped records or probe unrelated file pages.
+- Each play tick performs one native resident-index or sparse-fallback lookup
+  and decodes at most the last record strictly before the advanced cursor. It
+  does not iterate through skipped records or probe unrelated file pages.
 - Playback finishes after the cursor advances beyond the final timestamp.
   With Repeat enabled and a positive final timestamp, each newly calculated
   cursor is first reduced modulo that final timestamp and the wrapped value is

@@ -31,6 +31,32 @@ bool LarSessionReader::loadFile(const QString &path, QString *error) {
             *error = file->errorString();
         return false;
     }
+
+    // Most recordings are small enough to become immutable playback
+    // snapshots. Besides removing platform-specific QFile seek costs, this
+    // ensures playback observes exactly the bytes that passed validation.
+    const qint64 sourceSize = file->size();
+    if (sourceSize >= 0 && sourceSize <= lar::session::MaximumResidentSourceBytes) {
+        QByteArray source = file->readAll();
+        if (qint64(source.size()) != sourceSize) {
+            if (error)
+                *error = file->errorString().isEmpty()
+                             ? QStringLiteral("Session file could not be cached completely")
+                             : file->errorString();
+            return false;
+        }
+        QBuffer buffer(&source);
+        if (!buffer.open(QIODevice::ReadOnly)) {
+            if (error)
+                *error = QStringLiteral("Cannot open the cached session data");
+            return false;
+        }
+        if (!parseStream(&buffer, error))
+            return false;
+        m_sourceData = std::move(source);
+        return true;
+    }
+
     if (!parseStream(file.get(), error))
         return false;
     m_sourceFile = std::move(file);
@@ -94,6 +120,17 @@ bool LarSessionReader::parseStream(QIODevice *device, QString *error) {
     qint64 recordCount = 0;
     SessionTimestamp duration;
     QVector<Checkpoint> checkpoints;
+    QVector<RecordIndex> residentIndex;
+    const qint64 maximumResidentRecords =
+        lar::session::MaximumResidentRecordIndexBytes / qint64(sizeof(RecordIndex));
+    constexpr qint64 IndexReserveChunkRecords = 262'144;
+    const qint64 minimumRecordBytes =
+        qint64(sizeof(quint64) + sizeof(quint32)) + qMax(1, mapping.minimumPacketSize());
+    const qint64 possibleRecordCount =
+        qMax<qint64>(0, device->size() - qint64(packetOffset)) / minimumRecordBytes;
+    residentIndex.reserve(static_cast<qsizetype>(
+        qMin(qMin(possibleRecordCount, maximumResidentRecords), IndexReserveChunkRecords)));
+    bool retainResidentIndex = true;
     while (!device->atEnd()) {
         const qint64 headerOffset = device->pos();
         if (device->size() - device->pos() < qint64(sizeof(quint64) + sizeof(quint32))) {
@@ -127,6 +164,7 @@ bool LarSessionReader::parseStream(QIODevice *device, QString *error) {
                 *error = QStringLiteral("Invalid or truncated UDP package payload");
             return false;
         }
+        const qint64 payloadOffset = device->pos();
         const QByteArray packet = device->read(packetSize);
         SessionStateItem item;
         const auto timestamp = SessionTimestamp::fromStoredMilliseconds(relativeTimeMs);
@@ -151,12 +189,32 @@ bool LarSessionReader::parseStream(QIODevice *device, QString *error) {
         duration = item.timestamp;
         if (recordCount % RecordsPerPage == 0)
             checkpoints.append(Checkpoint{recordCount, headerOffset, item.timestamp});
+        if (retainResidentIndex) {
+            if (recordCount >= maximumResidentRecords) {
+                // Preserve support for very large valid recordings without an
+                // unbounded index allocation. Their sparse fallback remains
+                // correct, while ordinary recordings keep constant-time access.
+                residentIndex.clear();
+                residentIndex.squeeze();
+                retainResidentIndex = false;
+            } else {
+                if (residentIndex.size() == residentIndex.capacity()) {
+                    const qint64 nextCapacity =
+                        qMin(maximumResidentRecords,
+                             qint64(residentIndex.capacity()) + IndexReserveChunkRecords);
+                    residentIndex.reserve(static_cast<qsizetype>(nextCapacity));
+                }
+                residentIndex.append(RecordIndex{item.timestamp, payloadOffset, packetSize});
+            }
+        }
         ++recordCount;
     }
 
     m_mapping = std::move(mapping);
     m_mappingJson = mappingJson;
     m_checkpoints = std::move(checkpoints);
+    m_residentIndex = std::move(residentIndex);
+    m_residentIndexAvailable = retainResidentIndex;
     m_page.clear();
     m_pageFirstRecord = -1;
     m_sourceSize = device->size();
@@ -168,6 +226,8 @@ bool LarSessionReader::parseStream(QIODevice *device, QString *error) {
 
 void LarSessionReader::close() noexcept {
     m_checkpoints.clear();
+    m_residentIndex.clear();
+    m_residentIndexAvailable = false;
     m_page.clear();
     m_pageFirstRecord = -1;
     m_mapping = {};
@@ -282,6 +342,19 @@ const LarSessionReader::RecordIndex *LarSessionReader::locationAt(qint64 index,
             *error = QStringLiteral("Session reader is not valid");
         return nullptr;
     }
+    if (index < 0 || index >= m_recordCount) {
+        if (error)
+            *error = QStringLiteral("Session record index is out of range");
+        return nullptr;
+    }
+    if (m_residentIndexAvailable) {
+        if (index >= m_residentIndex.size()) {
+            if (error)
+                *error = QStringLiteral("Session resident index is inconsistent");
+            return nullptr;
+        }
+        return &m_residentIndex.at(static_cast<qsizetype>(index));
+    }
     if (!ensurePage(index, error))
         return nullptr;
     const qint64 pageIndex = index - m_pageFirstRecord;
@@ -309,6 +382,20 @@ bool LarSessionReader::findRecordAtOrBefore(SessionTimestamp position, qint64 *i
         if (error)
             *error = QStringLiteral("Session contains no records");
         return false;
+    }
+
+    if (m_residentIndexAvailable) {
+        qsizetype low = 0;
+        qsizetype high = m_residentIndex.size();
+        while (low < high) {
+            const qsizetype middle = low + (high - low) / 2;
+            if (m_residentIndex.at(middle).timestamp <= position)
+                low = middle + 1;
+            else
+                high = middle;
+        }
+        *index = static_cast<qint64>(low == 0 ? 0 : low - 1);
+        return true;
     }
 
     // Checkpoint timestamps form a compact first-level index. Choosing the

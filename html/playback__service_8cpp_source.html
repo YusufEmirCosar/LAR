@@ -373,8 +373,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('playback__serv
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="comment">// Stored timestamps are integral milliseconds. Therefore the greatest</span></div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="comment">// timestamp strictly below x is ceil(x) - 1. Passing that inclusive bound</span></div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="comment">// lets the reader use its two-level sparse index and materialize at most</span></div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="comment">// one location page per lookup.</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="comment">// lets the reader use its native resident-or-sparse lookup and materialize</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="comment">// at most one selected record per lookup.</span></div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">double</span> inclusiveMilliseconds =</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        std::min(std::ceil(targetMilliseconds) - 1.0L,</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                 <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">double</span><span class="keyword">&gt;</span>(<a class="code hl_function" href="class_session_timestamp.html#afcb01ba58c3c29059a2ea8f70f829056">SessionTimestamp::maximum</a>().milliseconds()));</div>

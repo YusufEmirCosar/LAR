@@ -80,10 +80,11 @@ UDP datagram
 
 LAR1 session
   -> complete structural validation
-  -> timestamped sparse checkpoints and one record-location page
-  -> two-level bounded timestamp lookup
+  -> bounded immutable source cache and complete record index when they fit
+  -> timestamped checkpoints and one bounded location page as fallback
+  -> resident or sparse timestamp lookup
   -> sampled 60 Hz playback
-  -> the same DecodedState and presentation path
+  -> same-tick DecodedState publication to the active viewport page
 ```
 
 Source dependencies point inward:

@@ -224,8 +224,8 @@ bool PlaybackService::findFrameBefore(long double targetMilliseconds, qint64 *in
 
     // Stored timestamps are integral milliseconds. Therefore the greatest
     // timestamp strictly below x is ceil(x) - 1. Passing that inclusive bound
-    // lets the reader use its two-level sparse index and materialize at most
-    // one location page per lookup.
+    // lets the reader use its native resident-or-sparse lookup and materialize
+    // at most one selected record per lookup.
     const long double inclusiveMilliseconds =
         std::min(std::ceil(targetMilliseconds) - 1.0L,
                  static_cast<long double>(SessionTimestamp::maximum().milliseconds()));

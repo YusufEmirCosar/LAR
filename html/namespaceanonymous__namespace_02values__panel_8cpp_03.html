@@ -516,14 +516,16 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  111</span>        border = QStringLiteral(<span class="stringliteral">&quot;#e0a3ad&quot;</span>);</div>
 <div class="line"><span class="lineno">  112</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  113</span>    }</div>
-<div class="line"><span class="lineno">  114</span>    indicator-&gt;setText(text);</div>
-<div class="line"><span class="lineno">  115</span>    indicator-&gt;setToolTip(QStringLiteral(<span class="stringliteral">&quot;Plane area: %1&quot;</span>).arg(text));</div>
-<div class="line"><span class="lineno">  116</span>    indicator-&gt;setStyleSheet(</div>
-<div class="line"><span class="lineno">  117</span>        QStringLiteral(<span class="stringliteral">&quot;QLabel#planeZoneIndicator { background-color: %1; color: #ffffff; &quot;</span></div>
-<div class="line"><span class="lineno">  118</span>                       <span class="stringliteral">&quot;border: 1px solid %2; border-radius: 0px; font-weight: 700; }&quot;</span>)</div>
-<div class="line"><span class="lineno">  119</span>            .arg(background, border));</div>
-<div class="line"><span class="lineno">  120</span>    indicator-&gt;setProperty(<span class="stringliteral">&quot;zoneStatus&quot;</span>, text);</div>
-<div class="line"><span class="lineno">  121</span>}</div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">if</span> (indicator-&gt;property(<span class="stringliteral">&quot;zoneStatus&quot;</span>).toString() == text)</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  116</span>    indicator-&gt;setText(text);</div>
+<div class="line"><span class="lineno">  117</span>    indicator-&gt;setToolTip(QStringLiteral(<span class="stringliteral">&quot;Plane area: %1&quot;</span>).arg(text));</div>
+<div class="line"><span class="lineno">  118</span>    indicator-&gt;setStyleSheet(</div>
+<div class="line"><span class="lineno">  119</span>        QStringLiteral(<span class="stringliteral">&quot;QLabel#planeZoneIndicator { background-color: %1; color: #ffffff; &quot;</span></div>
+<div class="line"><span class="lineno">  120</span>                       <span class="stringliteral">&quot;border: 1px solid %2; border-radius: 0px; font-weight: 700; }&quot;</span>)</div>
+<div class="line"><span class="lineno">  121</span>            .arg(background, border));</div>
+<div class="line"><span class="lineno">  122</span>    indicator-&gt;setProperty(<span class="stringliteral">&quot;zoneStatus&quot;</span>, text);</div>
+<div class="line"><span class="lineno">  123</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="values__panel_8cpp_source.html#l00026">InRange</a>, <a class="el" href="values__panel_8cpp_source.html#l00026">InZone</a>, <a class="el" href="values__panel_8cpp_source.html#l00026">Outside</a>, and <a class="el" href="values__panel_8cpp_source.html#l00093">setPlaneZoneIndicator()</a>.</p>
 

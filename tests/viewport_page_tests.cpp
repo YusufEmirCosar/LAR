@@ -177,14 +177,16 @@ void ViewportPageTests::hostUsesInjectedPages() {
     fields.setBit(StateField::Location1);
     host.setState(plane, target, fields);
     QCOMPARE(gridObserver->sceneUpdates, 1);
-    QCOMPARE(earthObserver->sceneUpdates, 1);
-    QCOMPARE(planeObserver->sceneUpdates, 1);
+    QCOMPARE(earthObserver->sceneUpdates, 0);
+    QCOMPARE(planeObserver->sceneUpdates, 0);
     QVERIFY(gridObserver->cameraUpdates >= 1);
-    QVERIFY(earthObserver->cameraUpdates >= 1);
+    QCOMPARE(earthObserver->cameraUpdates, 0);
 
     host.setViewMode(LarViewMode::Sphere);
     QCOMPARE(earthObserver->availabilityChecks, 1);
     QCOMPARE(earthObserver->selectedMode, LarViewMode::Sphere);
+    QCOMPARE(earthObserver->sceneUpdates, 1);
+    QCOMPARE(gridObserver->sceneUpdates, 1);
     QVERIFY(earthObserver->fitCount >= 1);
 
     host.setContentMode(ViewportContentMode::Plane);
@@ -193,11 +195,22 @@ void ViewportPageTests::hostUsesInjectedPages() {
     QVERIFY(gridObserver->isHidden());
     QVERIFY(earthObserver->isHidden());
     QCOMPARE(host.viewMode(), LarViewMode::Sphere);
+    QCOMPARE(planeObserver->sceneUpdates, 1);
+
+    plane.location[0] = 0.25;
+    host.setState(plane, target, fields);
+    QCOMPARE(planeObserver->sceneUpdates, 2);
+    QCOMPARE(gridObserver->sceneUpdates, 1);
+    QCOMPARE(earthObserver->sceneUpdates, 1);
 
     host.clearState();
-    QCOMPARE(gridObserver->clearCount, 1);
-    QCOMPARE(earthObserver->clearCount, 1);
     QCOMPARE(planeObserver->clearCount, 1);
+    QCOMPARE(gridObserver->clearCount, 0);
+    QCOMPARE(earthObserver->clearCount, 0);
+
+    host.setContentMode(ViewportContentMode::Lar);
+    QCOMPARE(earthObserver->clearCount, 1);
+    QCOMPARE(gridObserver->clearCount, 0);
 }
 
 void ViewportPageTests::pagesConsumeLeftButtonRelease() {

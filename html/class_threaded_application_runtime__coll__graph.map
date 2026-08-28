@@ -1,109 +1,104 @@
 <map id="ThreadedApplicationRuntime" name="ThreadedApplicationRuntime">
-<area shape="rect" id="Node000001" title="Production runtime with four total execution threads: the caller/UI thread plus network,..." alt="" coords="1436,1301,1624,1326"/>
-<area shape="rect" id="Node000002" href="$class_i_application_runtime.html" title="Composite runtime boundary used by ApplicationFacade." alt="" coords="324,1638,462,1664"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="477,1649,627,1645,822,1630,930,1616,1039,1597,1148,1571,1253,1539,1337,1506,1370,1485,1410,1454,1445,1421,1476,1385,1518,1328,1523,1325,1480,1388,1449,1425,1414,1458,1373,1489,1339,1510,1255,1544,1150,1577,1040,1602,930,1621,823,1635,627,1651,478,1655"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="55,754,125,780"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,792,156,1159,201,1434,212,1447,224,1456,249,1468,276,1479,289,1488,301,1503,312,1530,313,1554,314,1577,325,1603,343,1621,365,1637,360,1638,339,1625,320,1606,309,1579,308,1554,307,1531,296,1506,285,1492,273,1483,247,1472,221,1461,208,1451,196,1436,150,1160,95,798"/>
-<area shape="rect" id="Node000010" href="$class_network_runtime_worker.html" title="Owns all live&#45;capture objects on the dedicated network thread." alt="" coords="1084,397,1244,422"/>
-<area shape="poly" id="edge10_Node000010_Node000003" title=" " alt="" coords="106,740,144,693,169,669,197,649,230,633,258,627,322,619,687,566,926,530,1049,506,1080,487,1108,464,1153,421,1150,425,1112,468,1083,491,1051,511,927,535,688,571,323,624,259,632,232,638,200,653,173,673,148,696,111,742"/>
-<area shape="rect" id="Node000015" href="$class_i_datagram_source.html" title="Emits complete datagrams without exposing a concrete socket API." alt="" coords="332,382,455,408"/>
-<area shape="poly" id="edge16_Node000015_Node000003" title=" " alt="" coords="98,739,135,649,163,594,196,543,226,505,253,478,321,427,362,406,359,410,324,432,256,482,230,509,201,546,168,597,140,651,103,741"/>
-<area shape="rect" id="Node000016" href="$class_metrics_service.html" title="Counts packet attempts and publishes a once&#45;per&#45;second rate." alt="" coords="339,333,448,358"/>
-<area shape="poly" id="edge18_Node000016_Node000003" title=" " alt="" coords="94,738,107,686,128,619,157,546,196,476,225,439,251,413,281,391,321,367,347,357,343,361,324,372,284,396,254,417,229,442,201,479,162,548,133,621,112,688,99,739"/>
-<area shape="rect" id="Node000017" href="$class_online_capture_service.html" title="Converts incoming datagrams into validated states for the UI." alt="" coords="717,201,865,226"/>
-<area shape="poly" id="edge20_Node000017_Node000003" title=" " alt="" coords="91,738,100,675,118,590,150,498,171,453,196,411,228,369,258,336,288,310,320,289,354,272,393,258,487,230,546,217,607,210,718,208,714,211,607,215,547,222,489,235,394,263,356,277,323,294,292,314,262,340,232,372,201,414,176,455,154,500,124,592,105,676,96,739"/>
-<area shape="rect" id="Node000024" href="$class_recording_runtime_worker.html" title="Session&#45;thread host for the recording pipeline only." alt="" coords="1079,1301,1249,1326"/>
-<area shape="poly" id="edge31_Node000024_Node000003" title=" " alt="" coords="102,792,134,854,181,932,211,972,245,1010,282,1044,324,1073,371,1095,413,1107,452,1111,490,1110,571,1106,618,1108,671,1116,781,1142,865,1165,948,1195,1051,1241,1103,1270,1147,1300,1141,1300,1101,1274,1048,1245,946,1200,864,1170,779,1147,670,1122,617,1113,571,1111,490,1116,452,1116,412,1112,369,1100,321,1077,279,1049,241,1014,207,975,177,935,130,856,103,797"/>
-<area shape="rect" id="Node000029" href="$class_recording_service.html" title="Owns recording state while delegating bytes and time to ports." alt="" coords="331,1342,456,1368"/>
-<area shape="poly" id="edge37_Node000029_Node000003" title=" " alt="" coords="92,793,99,872,114,978,127,1036,146,1095,170,1152,201,1204,223,1228,245,1241,271,1253,300,1271,380,1341,375,1342,297,1276,268,1258,243,1246,220,1232,197,1207,165,1154,141,1097,122,1038,109,979,93,872,91,798"/>
-<area shape="rect" id="Node000030" href="$class_recording_pipeline_coordinator.html" title="Application&#45;layer state machine for the asynchronous recording pipeline." alt="" coords="694,1238,888,1264"/>
-<area shape="poly" id="edge41_Node000030_Node000003" title=" " alt="" coords="91,793,97,862,111,950,125,996,144,1040,168,1081,200,1117,258,1159,311,1182,364,1191,417,1191,532,1185,598,1189,671,1203,762,1237,757,1238,670,1208,597,1194,532,1190,417,1197,363,1196,310,1187,255,1163,197,1121,164,1085,139,1043,120,997,106,951,92,863,91,798"/>
-<area shape="rect" id="Node000033" href="$class_playback_runtime_worker.html" title="Session&#45;thread host for session loading and playback only." alt="" coords="1081,779,1246,805"/>
-<area shape="poly" id="edge46_Node000033_Node000003" title=" " alt="" coords="112,742,151,710,197,681,231,667,258,659,322,650,480,622,605,608,665,607,730,610,888,630,973,646,1009,659,1051,682,1083,705,1112,731,1155,779,1149,779,1109,735,1080,709,1048,687,1006,664,972,651,887,635,729,615,665,612,605,613,481,627,323,655,259,665,233,672,200,685,154,714,117,745"/>
-<area shape="rect" id="Node000036" href="$class_i_playback_clock.html" title="Emits playback ticks at the frame rate selected by replay policy." alt="" coords="337,821,450,846"/>
-<area shape="poly" id="edge50_Node000036_Node000003" title=" " alt="" coords="139,775,338,819,334,823,141,780"/>
-<area shape="rect" id="Node000037" href="$class_playback_service.html" title="Implements indexed session replay on a fixed&#45;rate presentation clock." alt="" coords="731,909,851,934"/>
-<area shape="poly" id="edge52_Node000037_Node000003" title=" " alt="" coords="118,787,183,835,271,893,376,950,432,974,489,992,539,1004,579,1008,620,1005,670,992,700,981,728,965,776,933,772,937,731,969,702,985,671,997,620,1010,579,1014,538,1009,487,997,430,979,373,955,268,898,180,839,120,792"/>
-<area shape="rect" id="Node000038" href="$class_playback_publication_throttle.html" title="Coalesces high&#45;rate playback frames and positions for presentation." alt="" coords="699,722,883,748"/>
-<area shape="poly" id="edge57_Node000038_Node000003" title=" " alt="" coords="139,762,700,737,697,741,141,767"/>
-<area shape="rect" id="Node000039" href="$class_playback_metrics.html" title="Owns playback&#45;only throughput counters and rate windows." alt="" coords="520,634,638,660"/>
-<area shape="poly" id="edge61_Node000039_Node000003" title=" " alt="" coords="125,745,198,712,284,689,372,671,521,651,518,654,373,676,285,694,200,717,130,748"/>
-<area shape="rect" id="Node000040" href="$class_persistence_runtime_worker.html" title="Serializes persistence requests away from capture and the UI." alt="" coords="1074,1503,1254,1529"/>
-<area shape="poly" id="edge63_Node000040_Node000003" title=" " alt="" coords="95,793,141,1105,172,1271,187,1330,201,1362,247,1387,342,1429,489,1490,567,1505,648,1516,809,1526,956,1526,1076,1523,1071,1524,956,1532,809,1532,647,1521,566,1510,487,1495,340,1434,245,1392,197,1366,182,1332,167,1273,136,1106,95,798"/>
-<area shape="rect" id="Node000004" href="$class_i_mapping_capture_runtime.html" title="Command port for mapping, access policy, and online capture." alt="" coords="5,1605,175,1630"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="190,1626,326,1642,322,1645,191,1631"/>
-<area shape="rect" id="Node000005" href="$class_i_recording_runtime.html" title="Command port for the active recording transaction." alt="" coords="23,1654,157,1680"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="172,1660,325,1653,322,1656,173,1665"/>
-<area shape="rect" id="Node000006" href="$class_i_playback_runtime.html" title="Command port for session loading and playback control." alt="" coords="26,1703,154,1729"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="167,1697,332,1662,328,1666,168,1702"/>
-<area shape="rect" id="Node000007" href="$class_i_metrics_runtime.html" title="Command port for clearing source throughput counters." alt="" coords="31,1753,149,1778"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="154,1745,174,1739,236,1718,298,1694,364,1665,369,1663,300,1699,238,1723,175,1744,156,1750"/>
-<area shape="rect" id="Node000008" href="$class_i_application_lifetime.html" title="Minimal lifecycle port for deterministic worker shutdown." alt="" coords="22,1802,158,1828"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="162,1795,230,1771,297,1737,345,1698,379,1665,383,1662,348,1702,300,1741,232,1776,163,1800"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="14,1555,166,1581"/>
-<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="174,1582,299,1614,362,1637,356,1638,298,1619,174,1587"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1180,434,1285,638,1352,782,1414,931,1453,1041,1487,1150,1528,1301,1523,1299,1482,1151,1448,1043,1410,933,1347,784,1280,640,1179,439"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="705,435,877,475"/>
-<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="892,444,1049,426,1089,422,1084,424,1050,431,894,449"/>
-<area shape="rect" id="Node000012" href="$class_i_mapping_repository.html" title="Creates PacketMapping values from files or JSON bytes." alt="" coords="325,442,462,468"/>
-<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="476,453,706,453,702,457,479,457"/>
-<area shape="rect" id="Node000013" title=" " alt="" coords="709,63,873,103"/>
-<area shape="poly" id="edge13_Node000010_Node000013" title=" " alt="" coords="871,106,964,148,1010,177,1052,210,1092,258,1124,311,1147,360,1161,397,1155,396,1142,362,1119,314,1088,261,1048,214,1007,181,961,153,873,112"/>
-<area shape="rect" id="Node000014" href="$class_i_packet_decoder.html" title="Mutable decoder whose active PacketMapping can be replaced." alt="" coords="336,23,451,49"/>
-<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="465,28,564,26,618,29,671,36,709,46,747,61,742,63,708,51,670,42,617,34,564,31,468,32"/>
-<area shape="poly" id="edge22_Node000017_Node000014" title=" " alt="" coords="443,52,489,65,540,71,582,70,623,73,672,90,779,200,774,201,669,94,622,78,582,76,540,76,487,70,446,57"/>
-<area shape="poly" id="edge15_Node000010_Node000015" title=" " alt="" coords="470,393,1050,403,1086,405,1081,408,1050,408,472,398"/>
-<area shape="poly" id="edge21_Node000017_Node000015" title=" " alt="" coords="454,375,669,312,681,300,692,286,773,225,769,229,696,290,685,304,672,316,458,379"/>
-<area shape="poly" id="edge17_Node000010_Node000016" title=" " alt="" coords="462,343,722,351,886,363,1050,383,1108,395,1103,397,1049,388,885,369,722,357,465,348"/>
-<area shape="poly" id="edge23_Node000017_Node000016" title=" " alt="" coords="421,321,452,301,487,283,537,269,578,264,619,262,670,253,758,225,754,229,671,258,619,267,578,270,538,274,489,288,455,305,425,325"/>
-<area shape="poly" id="edge19_Node000010_Node000017" title=" " alt="" coords="875,228,964,254,1009,273,1051,295,1084,319,1113,346,1155,396,1150,396,1109,350,1080,323,1048,300,1006,278,962,259,877,233"/>
-<area shape="rect" id="Node000018" href="$class_packet_mapping.html" title="Validated packet schema that decodes and encodes Plane/Target values." alt="" coords="338,103,449,129"/>
-<area shape="poly" id="edge24_Node000017_Node000018" title=" " alt="" coords="463,115,564,124,618,133,671,147,727,171,773,199,768,201,725,176,669,152,617,139,563,129,466,120"/>
-<area shape="rect" id="Node000019" href="$struct_decoded_state.html" title="One validated mapped frame and its field&#45;availability mask." alt="" coords="341,153,446,178"/>
-<area shape="poly" id="edge25_Node000017_Node000019" title=" " alt="" coords="460,171,671,196,719,203,714,206,670,202,462,176"/>
-<area shape="poly" id="edge58_Node000038_Node000019" title=" " alt="" coords="410,190,441,249,467,320,471,392,472,511,476,629,482,671,490,694,503,702,523,708,575,714,671,716,701,722,697,724,670,722,574,719,522,713,501,707,486,697,477,673,471,630,466,512,465,392,461,321,437,251,410,195"/>
-<area shape="rect" id="Node000020" href="$struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft." alt="" coords="63,159,117,185"/>
-<area shape="poly" id="edge26_Node000019_Node000020" title=" " alt="" coords="131,171,299,169,343,167,339,171,299,174,134,175"/>
-<area shape="rect" id="Node000021" href="$struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters." alt="" coords="61,53,119,78"/>
-<area shape="poly" id="edge27_Node000019_Node000021" title=" " alt="" coords="133,62,172,64,215,70,259,83,300,103,309,113,313,122,317,131,324,140,343,151,338,153,321,144,312,134,309,124,305,116,297,108,257,88,214,76,171,69,136,67"/>
-<area shape="rect" id="Node000022" href="$structdlz_1_1_telemetry_inputs.html" title="The three packet/replay inputs consumed by the DLZ workspace." alt="" coords="20,106,160,132"/>
-<area shape="poly" id="edge28_Node000019_Node000022" title=" " alt="" coords="174,128,299,146,343,154,339,157,298,151,177,132"/>
-<area shape="rect" id="Node000023" href="$class_ip_access_policy.html" title="Optional exact IP allow&#45;list used before packet decoding." alt="" coords="735,499,847,525"/>
-<area shape="poly" id="edge29_Node000010_Node000023" title=" " alt="" coords="861,506,952,494,1001,484,1049,470,1100,446,1146,421,1142,425,1103,451,1051,475,1003,489,953,499,864,511"/>
-<area shape="poly" id="edge30_Node000001_Node000024" title=" " alt="" coords="1264,1311,1438,1313,1433,1314,1265,1316"/>
-<area shape="rect" id="Node000025" title=" " alt="" coords="488,1440,670,1481"/>
-<area shape="poly" id="edge32_Node000024_Node000025" title=" " alt="" coords="685,1463,767,1461,860,1452,957,1433,1004,1419,1049,1401,1079,1383,1106,1363,1148,1328,1152,1325,1110,1367,1081,1388,1051,1405,1006,1424,958,1438,861,1458,768,1467,686,1468"/>
-<area shape="rect" id="Node000026" href="$class_i_recording_transaction.html" title="Mutable transaction used while a recording is active." alt="" coords="14,1463,166,1489"/>
-<area shape="poly" id="edge33_Node000025_Node000026" title=" " alt="" coords="181,1471,489,1461,486,1465,183,1476"/>
-<area shape="poly" id="edge38_Node000029_Node000026" title=" " alt="" coords="137,1455,360,1366,358,1371,140,1459"/>
-<area shape="rect" id="Node000027" title=" " alt="" coords="488,1335,670,1375"/>
-<area shape="poly" id="edge34_Node000024_Node000027" title=" " alt="" coords="685,1345,1080,1318,1076,1321,686,1350"/>
-<area shape="rect" id="Node000028" href="$class_i_recording_clock.html" title="Process&#45;wide monotonic time abstraction for deterministic recording tests." alt="" coords="31,1315,149,1341"/>
-<area shape="poly" id="edge35_Node000027_Node000028" title=" " alt="" coords="163,1321,304,1318,384,1321,464,1327,496,1333,491,1335,464,1332,384,1326,304,1324,166,1326"/>
-<area shape="poly" id="edge39_Node000029_Node000028" title=" " alt="" coords="151,1343,199,1351,267,1356,333,1357,329,1360,267,1361,198,1357,153,1348"/>
-<area shape="poly" id="edge36_Node000024_Node000029" title=" " alt="" coords="458,1369,488,1374,887,1373,1012,1351,1119,1326,1114,1328,1013,1356,888,1378,488,1379,460,1374"/>
-<area shape="poly" id="edge42_Node000030_Node000029" title=" " alt="" coords="459,1335,741,1263,737,1266,461,1340"/>
-<area shape="poly" id="edge40_Node000024_Node000030" title=" " alt="" coords="887,1264,1086,1299,1081,1301,887,1270"/>
-<area shape="rect" id="Node000031" href="$struct_runtime_request_id.html" title="Correlates an accepted command with exactly one typed completion." alt="" coords="328,1238,458,1264"/>
-<area shape="poly" id="edge43_Node000030_Node000031" title=" " alt="" coords="473,1248,696,1249,692,1252,475,1253"/>
-<area shape="rect" id="Node000032" href="$class_session_timestamp.html" title="Exact, bounded, non&#45;negative session&#45;relative time in milliseconds." alt="" coords="327,1037,460,1062"/>
-<area shape="poly" id="edge44_Node000030_Node000032" title=" " alt="" coords="427,1068,489,1102,539,1123,580,1135,621,1148,672,1170,729,1204,775,1237,770,1238,726,1208,669,1175,619,1153,579,1140,538,1128,487,1107,428,1074"/>
-<area shape="poly" id="edge55_Node000037_Node000032" title=" " alt="" coords="459,1064,508,1071,562,1073,617,1069,669,1053,708,1028,740,994,765,961,781,937,785,933,769,963,744,998,711,1032,671,1058,618,1074,562,1079,507,1076,461,1069"/>
-<area shape="poly" id="edge59_Node000038_Node000032" title=" " alt="" coords="458,1030,591,992,645,975,669,965,683,940,688,915,685,889,679,864,673,838,671,812,676,785,692,758,711,746,707,750,696,762,681,787,676,812,678,837,685,863,691,889,693,915,688,942,672,969,647,980,593,997,461,1034"/>
-<area shape="poly" id="edge45_Node000001_Node000033" title=" " alt="" coords="1184,815,1522,1300,1517,1300,1182,820"/>
-<area shape="rect" id="Node000034" title=" " alt="" coords="706,772,876,813"/>
-<area shape="poly" id="edge47_Node000033_Node000034" title=" " alt="" coords="891,790,1083,791,1079,793,893,795"/>
-<area shape="rect" id="Node000035" href="$class_i_session_reader.html" title="Loads, indexes, and decodes records without playback policy." alt="" coords="336,771,450,797"/>
-<area shape="poly" id="edge48_Node000034_Node000035" title=" " alt="" coords="465,783,707,789,703,792,467,788"/>
-<area shape="poly" id="edge53_Node000037_Node000035" title=" " alt="" coords="448,800,465,806,489,815,751,907,746,910,487,820,463,811,450,805"/>
-<area shape="poly" id="edge49_Node000033_Node000036" title=" " alt="" coords="464,827,563,826,618,829,671,836,695,845,748,852,791,853,887,845,1008,826,1114,804,1109,807,1009,831,888,850,791,858,748,857,694,850,670,841,617,834,563,831,467,831"/>
-<area shape="poly" id="edge54_Node000037_Node000036" title=" " alt="" coords="414,856,448,888,468,902,489,913,551,929,616,936,677,934,733,931,728,933,678,940,616,941,550,935,487,918,465,906,445,892,415,861"/>
-<area shape="poly" id="edge51_Node000033_Node000037" title=" " alt="" coords="866,926,909,927,956,923,1004,915,1049,899,1082,879,1111,853,1152,808,1155,804,1115,857,1085,883,1051,904,1005,920,957,929,910,932,867,931"/>
-<area shape="poly" id="edge56_Node000033_Node000038" title=" " alt="" coords="897,742,1050,763,1114,778,1109,780,1049,768,899,747"/>
-<area shape="poly" id="edge60_Node000033_Node000039" title=" " alt="" coords="653,652,868,678,974,696,1051,716,1106,746,1150,779,1144,779,1103,750,1049,721,973,702,867,684,655,657"/>
-<area shape="poly" id="edge62_Node000001_Node000040" title=" " alt="" coords="1201,1493,1502,1328,1507,1326,1203,1498"/>
-<area shape="rect" id="Node000041" title=" " alt="" coords="706,1557,876,1598"/>
-<area shape="poly" id="edge64_Node000040_Node000041" title=" " alt="" coords="891,1574,969,1568,1049,1555,1093,1542,1130,1531,1136,1529,1095,1548,1050,1561,970,1573,892,1579"/>
-<area shape="rect" id="Node000042" href="$class_i_session_persistence.html" title="Persists an immutable session snapshot to a destination." alt="" coords="323,1566,464,1592"/>
-<area shape="poly" id="edge65_Node000041_Node000042" title=" " alt="" coords="479,1576,708,1577,703,1579,480,1581"/>
+<area shape="rect" id="Node000001" title="Production runtime with four total execution threads: the caller/UI thread plus network,..." alt="" coords="1436,1020,1624,1046"/>
+<area shape="rect" id="Node000002" href="$class_i_application_runtime.html" title="Composite runtime boundary used by ApplicationFacade." alt="" coords="324,177,462,203"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="458,205,542,231,648,268,772,318,907,380,1045,456,1114,499,1181,546,1245,596,1306,650,1363,707,1414,769,1458,838,1491,910,1515,975,1528,1021,1523,1019,1510,976,1486,912,1453,840,1410,772,1359,711,1302,654,1242,600,1177,550,1111,503,1043,461,905,385,770,323,647,273,540,236,460,210"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="55,964,125,990"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,948,89,862,102,741,115,674,135,606,162,540,196,479,208,465,221,456,247,445,272,435,297,414,307,396,311,381,320,343,355,263,386,201,385,206,359,265,325,344,316,382,312,398,301,417,275,440,249,450,224,460,212,469,201,482,166,542,140,607,121,675,107,742,95,863,93,948"/>
+<area shape="rect" id="Node000010" href="$class_network_runtime_worker.html" title="Owns all live&#45;capture objects on the dedicated network thread." alt="" coords="1084,673,1244,699"/>
+<area shape="poly" id="edge10_Node000010_Node000003" title=" " alt="" coords="115,953,203,888,261,854,322,826,404,801,476,786,540,780,601,778,728,777,801,773,887,761,969,745,1049,724,1130,698,1126,701,1050,729,970,750,888,766,802,778,728,783,601,783,541,785,477,792,406,806,324,831,263,858,206,892,120,956"/>
+<area shape="rect" id="Node000015" href="$class_i_datagram_source.html" title="Emits complete datagrams without exposing a concrete socket API." alt="" coords="332,651,455,676"/>
+<area shape="poly" id="edge16_Node000015_Node000003" title=" " alt="" coords="99,949,136,870,163,825,197,783,237,747,281,717,362,675,359,679,284,721,240,752,201,787,168,828,140,873,104,951"/>
+<area shape="rect" id="Node000016" href="$class_metrics_service.html" title="Counts packet attempts and publishes a once&#45;per&#45;second rate." alt="" coords="339,460,448,486"/>
+<area shape="poly" id="edge18_Node000016_Node000003" title=" " alt="" coords="91,948,103,850,124,720,138,654,155,594,174,546,197,512,221,499,257,488,340,476,337,480,258,494,223,504,200,516,179,548,160,596,143,655,129,721,108,851,97,949"/>
+<area shape="rect" id="Node000017" href="$class_online_capture_service.html" title="Converts incoming datagrams into validated states for the UI." alt="" coords="717,539,865,564"/>
+<area shape="poly" id="edge20_Node000017_Node000003" title=" " alt="" coords="93,948,113,863,131,808,154,749,184,690,222,634,267,585,321,547,376,523,434,509,494,503,554,503,611,508,663,516,748,537,744,539,662,521,610,513,553,508,495,508,435,514,378,528,324,551,271,589,226,638,189,693,159,752,136,810,119,865,99,949"/>
+<area shape="rect" id="Node000024" href="$class_recording_runtime_worker.html" title="Session&#45;thread host for the recording pipeline only." alt="" coords="1079,1533,1249,1559"/>
+<area shape="poly" id="edge31_Node000024_Node000003" title=" " alt="" coords="95,1003,107,1061,126,1133,156,1211,177,1248,201,1282,228,1311,255,1328,324,1354,418,1382,494,1393,572,1400,671,1413,778,1429,863,1439,946,1454,1051,1485,1101,1507,1144,1533,1139,1532,1099,1512,1049,1490,945,1459,862,1444,778,1434,670,1418,571,1405,494,1399,417,1387,322,1359,252,1333,225,1315,197,1285,172,1251,152,1213,121,1135,102,1062,95,1008"/>
+<area shape="rect" id="Node000029" href="$class_recording_service.html" title="Owns recording state while delegating bytes and time to ports." alt="" coords="331,1565,456,1591"/>
+<area shape="poly" id="edge37_Node000029_Node000003" title=" " alt="" coords="93,1002,106,1115,125,1269,139,1346,157,1417,177,1476,201,1515,221,1529,254,1542,333,1565,328,1567,252,1547,219,1534,197,1519,172,1478,151,1419,134,1347,120,1269,100,1116,93,1007"/>
+<area shape="rect" id="Node000030" href="$class_recording_pipeline_coordinator.html" title="Application&#45;layer state machine for the asynchronous recording pipeline." alt="" coords="694,1489,888,1515"/>
+<area shape="poly" id="edge41_Node000030_Node000003" title=" " alt="" coords="91,1003,96,1083,110,1189,123,1247,142,1305,168,1361,201,1411,227,1439,254,1455,323,1474,420,1494,519,1504,613,1507,696,1508,691,1509,613,1513,519,1509,420,1499,322,1479,252,1459,224,1443,197,1414,163,1363,137,1307,118,1249,105,1190,91,1083,90,1008"/>
+<area shape="rect" id="Node000033" href="$class_playback_runtime_worker.html" title="Session&#45;thread host for session loading and playback only." alt="" coords="1081,1020,1246,1046"/>
+<area shape="poly" id="edge46_Node000033_Node000003" title=" " alt="" coords="117,997,157,1026,200,1053,276,1089,339,1109,404,1120,488,1129,647,1143,712,1146,773,1145,832,1140,896,1128,1049,1086,1098,1066,1143,1045,1138,1048,1100,1071,1051,1091,897,1134,833,1145,773,1151,712,1152,647,1149,488,1134,403,1125,337,1114,274,1094,197,1058,154,1031,119,1002"/>
+<area shape="rect" id="Node000036" href="$class_i_playback_clock.html" title="Emits playback ticks at the frame rate selected by replay policy." alt="" coords="337,913,450,939"/>
+<area shape="poly" id="edge50_Node000036_Node000003" title=" " alt="" coords="138,966,198,956,338,933,334,937,199,961,142,970"/>
+<area shape="rect" id="Node000037" href="$class_playback_service.html" title="Implements indexed session replay on a fixed&#45;rate presentation clock." alt="" coords="731,963,851,988"/>
+<area shape="poly" id="edge52_Node000037_Node000003" title=" " alt="" coords="140,974,732,973,729,978,141,979"/>
+<area shape="rect" id="Node000038" href="$class_playback_metrics.html" title="Owns playback&#45;only throughput counters and rate windows." alt="" coords="520,1104,638,1130"/>
+<area shape="poly" id="edge57_Node000038_Node000003" title=" " alt="" coords="138,993,225,1024,323,1056,427,1082,522,1104,517,1107,426,1088,322,1061,223,1029,140,998"/>
+<area shape="rect" id="Node000039" href="$class_persistence_runtime_worker.html" title="Serializes persistence requests away from capture and the UI." alt="" coords="1074,1207,1254,1232"/>
+<area shape="poly" id="edge59_Node000039_Node000003" title=" " alt="" coords="102,1002,134,1065,181,1146,211,1187,245,1227,282,1264,324,1295,377,1322,433,1343,491,1356,550,1364,611,1366,671,1363,790,1346,901,1319,1000,1287,1079,1255,1138,1232,1133,1234,1081,1260,1001,1292,903,1324,791,1351,672,1368,611,1371,550,1369,490,1362,431,1348,375,1327,321,1299,279,1268,241,1231,206,1191,176,1148,129,1068,103,1007"/>
+<area shape="rect" id="Node000004" href="$class_i_mapping_capture_runtime.html" title="Command port for mapping, access policy, and online capture." alt="" coords="5,104,175,130"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="176,131,299,158,355,175,350,178,298,163,179,136"/>
+<area shape="rect" id="Node000005" href="$class_i_recording_runtime.html" title="Command port for the active recording transaction." alt="" coords="23,153,157,179"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="171,170,326,183,322,187,174,175"/>
+<area shape="rect" id="Node000006" href="$class_i_playback_runtime.html" title="Command port for session loading and playback control." alt="" coords="26,203,154,228"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="168,207,326,194,322,198,171,211"/>
+<area shape="rect" id="Node000007" href="$class_i_metrics_runtime.html" title="Command port for clearing source throughput counters." alt="" coords="31,252,149,278"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="158,246,339,202,336,206,162,250"/>
+<area shape="rect" id="Node000008" href="$class_i_application_lifetime.html" title="Minimal lifecycle port for deterministic worker shutdown." alt="" coords="22,5,158,31"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="172,24,238,39,270,52,300,68,330,93,355,123,388,177,383,177,351,126,327,97,297,72,268,56,236,44,174,28"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="14,55,166,80"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="152,83,175,89,239,106,300,129,341,152,376,176,371,178,338,156,298,134,237,111,174,94,155,87"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1191,707,1518,1019,1512,1020,1189,712"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="705,826,877,866"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="892,856,931,856,972,852,1011,843,1048,828,1086,800,1117,764,1140,727,1155,702,1158,698,1145,730,1121,767,1090,804,1051,833,1013,848,972,857,932,861,894,861"/>
+<area shape="rect" id="Node000012" href="$class_i_mapping_repository.html" title="Creates PacketMapping values from files or JSON bytes." alt="" coords="325,841,462,867"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="477,850,707,846,702,850,479,855"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="709,711,873,752"/>
+<area shape="poly" id="edge13_Node000010_Node000013" title=" " alt="" coords="887,721,1049,703,1089,698,1084,701,1050,708,889,726"/>
+<area shape="rect" id="Node000014" href="$class_i_packet_decoder.html" title="Mutable decoder whose active PacketMapping can be replaced." alt="" coords="336,720,451,746"/>
+<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="447,748,488,756,579,763,670,756,711,751,706,754,671,761,579,769,488,761,450,753"/>
+<area shape="poly" id="edge22_Node000017_Node000014" title=" " alt="" coords="465,724,584,706,636,692,669,674,677,663,681,652,680,627,679,602,683,589,692,576,718,561,715,565,696,580,688,591,685,603,685,627,686,652,682,665,672,678,638,697,585,711,468,729"/>
+<area shape="poly" id="edge15_Node000010_Node000015" title=" " alt="" coords="470,663,1050,680,1086,682,1081,684,1050,685,472,668"/>
+<area shape="poly" id="edge21_Node000017_Node000015" title=" " alt="" coords="468,649,583,626,634,612,669,599,681,588,693,576,727,563,723,567,696,580,684,592,672,603,635,618,584,631,472,653"/>
+<area shape="poly" id="edge17_Node000010_Node000016" title=" " alt="" coords="461,457,582,441,656,437,735,438,817,446,899,461,978,487,1051,525,1091,560,1122,601,1145,641,1160,673,1155,672,1141,643,1118,604,1087,563,1048,530,976,492,897,467,816,451,735,444,656,443,582,447,464,461"/>
+<area shape="poly" id="edge23_Node000017_Node000016" title=" " alt="" coords="462,475,562,486,671,506,760,537,755,539,670,511,561,491,465,480"/>
+<area shape="poly" id="edge19_Node000010_Node000017" title=" " alt="" coords="880,550,965,561,1009,572,1051,588,1083,606,1112,629,1154,673,1149,673,1108,633,1080,611,1049,593,1007,577,964,566,882,555"/>
+<area shape="rect" id="Node000018" href="$class_packet_mapping.html" title="Validated packet schema that decodes and encodes Plane/Target values." alt="" coords="338,561,449,587"/>
+<area shape="poly" id="edge24_Node000017_Node000018" title=" " alt="" coords="463,571,670,563,719,559,714,562,671,568,466,576"/>
+<area shape="rect" id="Node000019" href="$struct_decoded_state.html" title="One validated mapped frame and its field&#45;availability mask." alt="" coords="341,356,446,382"/>
+<area shape="poly" id="edge25_Node000017_Node000019" title=" " alt="" coords="459,379,563,406,618,426,672,450,704,471,734,494,780,538,774,538,731,498,701,475,669,455,616,431,561,411,462,384"/>
+<area shape="rect" id="Node000020" href="$struct_plane.html" title="Represents the position, attitude, and velocity of the aircraft." alt="" coords="63,301,117,327"/>
+<area shape="poly" id="edge26_Node000019_Node000020" title=" " alt="" coords="131,315,210,323,299,338,355,354,350,357,298,343,210,329,134,320"/>
+<area shape="rect" id="Node000021" href="$struct_target.html" title="Target position and Launch Acceptable Region (LAR) parameters." alt="" coords="61,352,119,378"/>
+<area shape="poly" id="edge27_Node000019_Node000021" title=" " alt="" coords="133,363,343,366,339,370,136,368"/>
+<area shape="rect" id="Node000022" href="$structdlz_1_1_telemetry_inputs.html" title="The three packet/replay inputs consumed by the DLZ workspace." alt="" coords="20,405,160,431"/>
+<area shape="poly" id="edge28_Node000019_Node000022" title=" " alt="" coords="173,410,298,393,353,380,350,384,299,398,177,415"/>
+<area shape="rect" id="Node000023" href="$class_ip_access_policy.html" title="Optional exact IP allow&#45;list used before packet decoding." alt="" coords="735,591,847,616"/>
+<area shape="poly" id="edge29_Node000010_Node000023" title=" " alt="" coords="862,609,953,622,1050,642,1133,672,1128,673,1049,647,952,627,864,614"/>
+<area shape="poly" id="edge30_Node000001_Node000024" title=" " alt="" coords="1181,1519,1517,1047,1522,1045,1185,1522"/>
+<area shape="rect" id="Node000025" title=" " alt="" coords="488,1626,670,1666"/>
+<area shape="poly" id="edge32_Node000024_Node000025" title=" " alt="" coords="686,1651,767,1651,859,1645,956,1631,1049,1605,1099,1582,1140,1560,1145,1559,1102,1586,1051,1610,957,1636,860,1650,767,1656,686,1656"/>
+<area shape="rect" id="Node000026" href="$class_i_recording_transaction.html" title="Mutable transaction used while a recording is active." alt="" coords="14,1592,166,1618"/>
+<area shape="poly" id="edge33_Node000025_Node000026" title=" " alt="" coords="180,1618,199,1620,351,1633,490,1642,485,1644,351,1638,198,1625,182,1623"/>
+<area shape="poly" id="edge38_Node000029_Node000026" title=" " alt="" coords="181,1594,333,1582,329,1585,183,1599"/>
+<area shape="rect" id="Node000027" title=" " alt="" coords="488,1716,670,1757"/>
+<area shape="poly" id="edge34_Node000024_Node000027" title=" " alt="" coords="686,1731,768,1722,861,1707,957,1681,1004,1664,1048,1644,1080,1624,1108,1601,1149,1561,1154,1558,1112,1605,1083,1628,1051,1649,1006,1669,959,1686,862,1712,768,1728,686,1736"/>
+<area shape="rect" id="Node000028" href="$class_i_recording_clock.html" title="Process&#45;wide monotonic time abstraction for deterministic recording tests." alt="" coords="31,1699,149,1724"/>
+<area shape="poly" id="edge35_Node000027_Node000028" title=" " alt="" coords="147,1726,199,1737,274,1744,351,1746,485,1745,490,1744,351,1751,274,1749,198,1742,146,1732"/>
+<area shape="poly" id="edge39_Node000029_Node000028" title=" " alt="" coords="164,1711,231,1704,265,1695,297,1682,326,1661,350,1637,382,1593,387,1590,354,1640,329,1666,300,1686,267,1700,232,1709,165,1717"/>
+<area shape="poly" id="edge36_Node000024_Node000029" title=" " alt="" coords="471,1574,670,1568,1081,1550,1076,1552,670,1573,471,1579"/>
+<area shape="poly" id="edge42_Node000030_Node000029" title=" " alt="" coords="471,1570,566,1560,670,1541,755,1516,760,1515,671,1546,567,1565,472,1576"/>
+<area shape="poly" id="edge40_Node000024_Node000030" title=" " alt="" coords="903,1513,1081,1536,1076,1536,903,1518"/>
+<area shape="rect" id="Node000031" href="$struct_runtime_request_id.html" title="Correlates an accepted command with exactly one typed completion." alt="" coords="328,1439,458,1464"/>
+<area shape="poly" id="edge43_Node000030_Node000031" title=" " alt="" coords="474,1459,696,1489,692,1491,474,1464"/>
+<area shape="rect" id="Node000032" href="$class_session_timestamp.html" title="Exact, bounded, non&#45;negative session&#45;relative time in milliseconds." alt="" coords="327,1259,460,1284"/>
+<area shape="poly" id="edge44_Node000030_Node000032" title=" " alt="" coords="437,1289,546,1342,672,1413,729,1452,775,1489,770,1488,726,1456,669,1418,543,1347,437,1294"/>
+<area shape="poly" id="edge55_Node000037_Node000032" title=" " alt="" coords="475,1271,532,1269,590,1265,638,1255,656,1248,668,1239,678,1221,682,1193,681,1122,679,1050,682,1021,692,999,710,985,733,978,729,981,712,990,696,1002,687,1022,684,1050,686,1122,688,1193,683,1222,672,1243,659,1253,640,1260,590,1270,533,1275,477,1276"/>
+<area shape="poly" id="edge45_Node000001_Node000033" title=" " alt="" coords="1261,1030,1439,1032,1433,1034,1263,1035"/>
+<area shape="rect" id="Node000034" title=" " alt="" coords="706,1012,876,1053"/>
+<area shape="poly" id="edge47_Node000033_Node000034" title=" " alt="" coords="891,1030,1083,1032,1078,1034,893,1035"/>
+<area shape="rect" id="Node000035" href="$class_i_session_reader.html" title="Loads, indexes, and decodes records without playback policy." alt="" coords="336,1020,450,1046"/>
+<area shape="poly" id="edge48_Node000034_Node000035" title=" " alt="" coords="432,1050,489,1069,539,1078,579,1080,670,1069,740,1052,735,1055,671,1074,579,1085,538,1083,487,1074,433,1055"/>
+<area shape="poly" id="edge53_Node000037_Node000035" title=" " alt="" coords="465,1038,564,1037,618,1030,669,1016,681,1008,693,999,733,986,729,989,696,1003,684,1012,671,1021,619,1035,565,1042,467,1043"/>
+<area shape="poly" id="edge49_Node000033_Node000036" title=" " alt="" coords="464,911,488,908,612,905,772,912,930,929,998,942,1051,957,1106,986,1150,1019,1144,1019,1103,991,1049,962,996,947,929,935,771,917,612,910,488,913,466,915"/>
+<area shape="poly" id="edge54_Node000037_Node000036" title=" " alt="" coords="465,932,733,967,729,970,466,938"/>
+<area shape="poly" id="edge51_Node000033_Node000037" title=" " alt="" coords="865,979,954,989,1050,1004,1114,1019,1108,1020,1049,1009,954,995,866,985"/>
+<area shape="poly" id="edge56_Node000033_Node000038" title=" " alt="" coords="653,1110,764,1100,887,1085,1003,1065,1107,1045,1102,1047,1004,1070,888,1090,764,1105,655,1115"/>
+<area shape="poly" id="edge58_Node000001_Node000039" title=" " alt="" coords="1203,1197,1501,1047,1505,1045,1206,1202"/>
+<area shape="rect" id="Node000040" title=" " alt="" coords="706,1199,876,1240"/>
+<area shape="poly" id="edge60_Node000039_Node000040" title=" " alt="" coords="891,1217,1076,1219,1071,1220,893,1222"/>
+<area shape="rect" id="Node000041" href="$class_i_session_persistence.html" title="Persists an immutable session snapshot to a destination." alt="" coords="323,1188,464,1214"/>
+<area shape="poly" id="edge61_Node000040_Node000041" title=" " alt="" coords="479,1202,707,1214,703,1217,480,1207"/>
 </map>

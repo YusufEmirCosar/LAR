@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"struct_application_state.html#a0e39c30bef1bf644a0780493e110893d":[20,0,8,6],
+"struct_application_state.html#a1d9341a90e7bd606e0107bbd42dae5dc":[20,0,8,3],
 "struct_application_state.html#a22f64b1f1de4f2922601c2875b229e96":[20,0,8,4],
 "struct_application_state.html#a2482abb51142ebd78a6f2899a1ea8c50":[20,0,8,9],
 "struct_application_state.html#a25eadd680496805b9e78767321fc8aa9":[20,0,8,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "struct_plane_surface_zone.html#a10f379f94e2c4d00dc15ae21e98602fd":[20,0,118,5],
 "struct_plane_surface_zone.html#a2a5269c28e5e24f19884e3ec9851c397":[20,0,118,3],
 "struct_plane_surface_zone.html#a4cdad0122861291fc9b2bea89265ddc6":[20,0,118,4],
-"struct_plane_surface_zone.html#a6c8a6d899e4a2e3c10a262c0f6daf16b":[20,0,118,0],
-"struct_plane_surface_zone.html#a8e3be6cfeaf6c4d1266adf4c5dea4a15":[20,0,118,6],
-"struct_plane_surface_zone.html#ab1ba27a8215b6ff810869b3e832c88df":[20,0,118,2]
+"struct_plane_surface_zone.html#a6c8a6d899e4a2e3c10a262c0f6daf16b":[20,0,118,0]
 };

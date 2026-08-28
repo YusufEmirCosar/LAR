@@ -1,6 +1,6 @@
 <map id="src/infrastructure/session/lar_session_reader.cpp" name="src/infrastructure/session/lar_session_reader.cpp">
 <area shape="rect" id="Node000001" title=" " alt="" coords="512,5,652,61"/>
-<area shape="rect" id="Node000002" href="$lar__session__reader_8h.html" title="Bounded parser with sparse, paged random access for .lar session files." alt="" coords="336,198,482,238"/>
+<area shape="rect" id="Node000002" href="$lar__session__reader_8h.html" title="Bounded parser with resident and sparse random access for .lar files." alt="" coords="336,198,482,238"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="553,60,503,111,435,188,431,184,499,107,549,63"/>
 <area shape="rect" id="Node000005" href="$session__limits_8h.html" title="Shared resource and duration bounds for the LAR1 session format." alt="" coords="5,464,138,504"/>
 <area shape="poly" id="edge32_Node000001_Node000005" title=" " alt="" coords="510,46,384,70,240,107,175,130,122,156,87,185,77,201,74,217,74,308,74,448,69,448,69,308,69,216,72,199,83,182,119,152,173,125,238,102,383,65,514,43"/>

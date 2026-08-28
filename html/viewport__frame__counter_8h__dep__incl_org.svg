@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="lar__viewport_8h.html" target="_top" xlink:title="Host widget that switches pages and distributes scene/camera state.">
+<g id="a_Node000002"><a xlink:href="lar__viewport_8h.html" target="_top" xlink:title="Host widget that switches pages and presents state only on the active page.">
 <polygon fill="white" stroke="#666666" points="186,-97 85.25,-97 85.25,-66.5 186,-66.5 186,-97"/>
 <text xml:space="preserve" text-anchor="start" x="93.25" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/viewer/viewport</text>
 <text xml:space="preserve" text-anchor="middle" x="135.62" y="-72.25" font-family="Helvetica,sans-Serif" font-size="10.00">/lar_viewport.h</text>

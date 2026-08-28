@@ -1,5 +1,5 @@
 <map id="src/infrastructure/session/lar_session_reader.h" name="src/infrastructure/session/lar_session_reader.h">
-<area shape="rect" id="Node000001" title="Bounded parser with sparse, paged random access for .lar session files." alt="" coords="663,5,803,61"/>
+<area shape="rect" id="Node000001" title="Bounded parser with resident and sparse random access for .lar files." alt="" coords="663,5,803,61"/>
 <area shape="rect" id="Node000002" href="$session__reader_8h.html" title="Random&#45;access session playback reader contract." alt="" coords="385,109,550,150"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="660,61,538,106,536,101,664,58"/>
 <area shape="rect" id="Node000016" href="$packet__mapping_8h.html" title="Immutable mapping between packet byte ranges and domain state fields." alt="" coords="578,116,752,142"/>

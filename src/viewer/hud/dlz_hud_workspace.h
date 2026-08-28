@@ -14,10 +14,17 @@
 #include <QWidget>
 
 class QTimer;
+class QHideEvent;
+class QShowEvent;
 
 namespace dlz::presentation {
 
-/** @brief Hosted HUD page containing the DLZ canvas and its control binding. */
+/**
+ * @brief Hosted HUD page containing the DLZ canvas and its control binding.
+ *
+ * The temporal presentation timer runs only while the page is visible. Hidden
+ * pages retain their most recent inputs without issuing redundant paint work.
+ */
 class HudWorkspace final : public QWidget {
     Q_OBJECT
 
@@ -47,6 +54,10 @@ class HudWorkspace final : public QWidget {
   signals:
     void frameRendered();
     void diagnosticRaised(const QString &message);
+
+  protected:
+    void showEvent(QShowEvent *event) override;
+    void hideEvent(QHideEvent *event) override;
 
   private slots:
     void rebuildFromControls();

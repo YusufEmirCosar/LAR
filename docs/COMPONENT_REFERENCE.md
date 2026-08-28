@@ -140,7 +140,7 @@ be discarded.
 | `LarSessionWriter` | `IRecordingTransaction` | Streams LAR1 bytes to temporary storage and creates stable prefix snapshots |
 | `FileSessionSnapshot` | `ISessionSnapshot` | Retains temporary-file lifetime and writes exactly a captured byte prefix |
 | `QtSessionPersistence` | `ISessionPersistence` | Uses `QSaveFile` commit semantics |
-| `LarSessionReader` | `ISessionReader` | Validates every header/mapping/record, stores timestamp-and-offset checkpoints per 4,096 records, searches one bounded location page, and decodes lazily without a product count cap |
+| `LarSessionReader` | `ISessionReader` | Validates every header/mapping/record; uses a bounded immutable source snapshot and complete index when they fit, with checkpoint/page and file-backed fallbacks; decodes lazily without a product count cap |
 | `QtRecordingClock` | `IRecordingClock` | Uses process-wide `steady_clock` nanoseconds |
 | `QtPlaybackClock` | `IPlaybackClock` | Supplies fixed-rate ticks with a precise `QTimer` |
 
@@ -151,9 +151,8 @@ be discarded.
 | `ThreadedApplicationRuntime` | UI/caller thread plus three owned `QThread`s | Constructs workers, assigns affinity, relays typed commands/results, owns shutdown/join |
 | `NetworkRuntimeWorker` | Network thread | Owns mapping repository, UDP adapter, decoder, capture, metrics, recording batch buffering |
 | `RecordingRuntimeWorker` | Session thread | Owns transaction, clock, recording service, pipeline coordinator |
-| `PlaybackRuntimeWorker` | Session thread | Owns reader, clock, playback service, throttle, playback metrics |
+| `PlaybackRuntimeWorker` | Session thread | Owns reader, clock, playback service, and metrics; forwards changed state and position on the originating replay tick |
 | `PersistenceRuntimeWorker` | Persistence thread | Atomically saves immutable snapshots |
-| `PlaybackPublicationThrottle` | Session thread | Coalesces high-rate frames/positions before queued UI delivery |
 | `PlaybackMetrics` | Session thread | Counts processed records and rate independently from online metrics |
 
 ## Presentation shell
@@ -198,7 +197,7 @@ colors, and embedded GLSL respectively.
 | --- | --- | --- |
 | `ILarViewportPage` | `widget`, `events`, `setSceneState`, camera methods | Common Grid/Earth page contract |
 | `IEarthLarViewportPage` | Earth-specific camera/map operations | Narrow extension for Mercator/Sphere pages |
-| `LarViewport` | Content mode, LAR view mode, scene state, camera delegation | Host that switches Grid/Earth/Plane/DLZ content without application branches |
+| `LarViewport` | Content mode, LAR view mode, scene state, camera delegation | Retains the latest scene, updates only the active Grid/Earth/Plane/DLZ page, and synchronizes a destination page before switching to it |
 | `ViewportControls` | Render/select view and camera modes | Emits user camera/content commands |
 | `ViewportCameraController` | Tracking mode, rotation policy, free center | Projection-neutral camera state owner |
 | `GridCameraTransform` | Screen/world conversions and pan/zoom | Pure local-grid camera math |
@@ -265,7 +264,7 @@ spherical Earth or a translated aircraft model.
 | Component | Important operations | Responsibility |
 | --- | --- | --- |
 | `ControlPanel` | Input mode, slider inputs, readouts, status | Exclusive UDP/replay vs calculation-test input UI |
-| `HudWorkspace` | `setInputMode`, `setExternalInputs`, `clearExternalInputs` | Joins controls, `ScenarioAdapter`, solver output, and temporal presentation |
+| `HudWorkspace` | `setInputMode`, `setExternalInputs`, `clearExternalInputs` | Joins controls, `ScenarioAdapter`, solver output, and temporal presentation; its 16 ms animation timer runs only while visible |
 | `PresentationController` | `reset`, `update`, `clear`, state/readout getters | Range filtering, directional scale changes, shoot-cue timing |
 | `RangeScaleController` | `reset`, `update`, `scaleMaximumNm` | Hysteretic selection among fixed scale steps |
 | `HudView` | Frame/diagnostic setters | Owns paint-ready values and delegates to renderer |

@@ -11,6 +11,7 @@
 #include <QSlider>
 #include <QStackedWidget>
 #include <QStringList>
+#include <QTimer>
 #include <QtTest>
 
 #include <memory>
@@ -197,22 +198,34 @@ void DlzViewTests::hostSwitchesContentWithoutChangingLarProjection() {
     host.show();
     QCoreApplication::processEvents();
     QCOMPARE(host.contentMode(), ViewportContentMode::Lar);
+    auto *hud =
+        host.findChild<dlz::presentation::HudWorkspace *>(QStringLiteral("dlzHudWorkspace"));
+    QVERIFY(hud);
+    auto *hudTimer = hud->findChild<QTimer *>(QString{}, Qt::FindDirectChildrenOnly);
+    QVERIFY(hudTimer);
+    QVERIFY(!hudTimer->isActive());
+    host.setDlzInputs({12.0, 45.0, 22000.0}, true, QStringLiteral("cached frame"));
+    QCOMPARE(hud->scenarioInputs().rangeNm, 20.0);
     host.setViewMode(LarViewMode::Grid);
     host.setContentMode(ViewportContentMode::Hud);
     QCOMPARE(host.contentMode(), ViewportContentMode::Hud);
-    auto *hud = host.findChild<QWidget *>(QStringLiteral("dlzHudWorkspace"));
-    QVERIFY(hud);
     QVERIFY(hud->isVisible());
+    QVERIFY(hudTimer->isActive());
+    QCOMPARE(hud->scenarioInputs().rangeNm, 12.0);
     auto *rail = host.findChild<QWidget *>(QStringLiteral("viewportControlRail"));
     QVERIFY(!rail || !rail->isVisible());
     auto *hudButton = host.findChild<QPushButton *>(QStringLiteral("viewportHudContentButton"));
     QVERIFY(hudButton);
     host.setContentMode(ViewportContentMode::Lar);
+    QVERIFY(!hudTimer->isActive());
+    host.setDlzInputs({60.0, 0.0, 30000.0}, true, QStringLiteral("new cached frame"));
+    QCOMPARE(hud->scenarioInputs().rangeNm, 12.0);
     QSignalSpy contentSpy(&host, &LarViewport::contentModeChanged);
     QTest::mouseClick(hudButton, Qt::LeftButton);
     QCOMPARE(contentSpy.count(), 1);
     QCOMPARE(host.contentMode(), ViewportContentMode::Hud);
     QVERIFY(hudButton->isChecked());
+    QCOMPARE(hud->scenarioInputs().rangeNm, 60.0);
     host.setContentMode(ViewportContentMode::Lar);
     QCOMPARE(host.contentMode(), ViewportContentMode::Lar);
     QCOMPARE(host.viewMode(), LarViewMode::Grid);

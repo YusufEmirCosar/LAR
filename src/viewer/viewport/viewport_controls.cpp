@@ -246,6 +246,8 @@ void ViewportControls::setTurnWithPlane(bool enabled) {
 }
 
 void ViewportControls::setTurnWithPlaneAvailability(bool yawAvailable) {
+    if (m_yawAvailable == yawAvailable)
+        return;
     m_yawAvailable = yawAvailable;
     if (!m_yawAvailable) {
         setTurnWithPlane(false);
@@ -290,7 +292,9 @@ void ViewportControls::setNavigationReadout(const Plane &plane, const Target &ta
     const bool hasIz = has(StateField::IzPos0) && has(StateField::IzPos1);
     const bool hasIr = has(StateField::IrPos0) && has(StateField::IrPos1);
     if (!has(StateField::Location0) || !has(StateField::Location1) || (!hasIz && !hasIr)) {
-        m_navigationReadout->setText(QStringLiteral("Distance —   Direction —"));
+        const QString unavailable = QStringLiteral("Distance —   Direction —");
+        if (m_navigationReadout->text() != unavailable)
+            m_navigationReadout->setText(unavailable);
         return;
     }
     const double latitude = plane.location[0];
@@ -299,7 +303,9 @@ void ViewportControls::setNavigationReadout(const Plane &plane, const Target &ta
     const double targetLongitude = hasIz ? target.iz_pos[1] : target.ir_pos[1];
     if (!std::isfinite(latitude) || !std::isfinite(longitude) || !std::isfinite(targetLatitude) ||
         !std::isfinite(targetLongitude)) {
-        m_navigationReadout->setText(QStringLiteral("Distance —   Direction —"));
+        const QString unavailable = QStringLiteral("Distance —   Direction —");
+        if (m_navigationReadout->text() != unavailable)
+            m_navigationReadout->setText(unavailable);
         return;
     }
     const double deltaLatitude = targetLatitude - latitude;
@@ -315,9 +321,11 @@ void ViewportControls::setNavigationReadout(const Plane &plane, const Target &ta
                    std::cos(latitude) * std::sin(targetLatitude) -
                        std::sin(latitude) * std::cos(targetLatitude) * std::cos(deltaLongitude));
     double bearingDegrees = std::fmod(qRadiansToDegrees(bearing) + 360.0, 360.0);
-    m_navigationReadout->setText(
+    const QString readout =
         QStringLiteral("Distance %1   Direction %2°")
             .arg(distance >= 1000.0 ? QStringLiteral("%1 km").arg(distance / 1000.0, 0, 'f', 1)
                                     : QStringLiteral("%1 m").arg(distance, 0, 'f', 0))
-            .arg(bearingDegrees, 0, 'f', 0));
+            .arg(bearingDegrees, 0, 'f', 0);
+    if (m_navigationReadout->text() != readout)
+        m_navigationReadout->setText(readout);
 }

@@ -1,5 +1,5 @@
 <map id="LarSessionReader" name="LarSessionReader">
-<area shape="rect" id="Node000001" title="Validates a session once, checkpoints it sparsely, and decodes on demand." alt="" coords="216,102,344,128"/>
+<area shape="rect" id="Node000001" title="Validates a session once, indexes it, and decodes selected records on demand." alt="" coords="216,102,344,128"/>
 <area shape="rect" id="Node000002" href="$class_i_session_reader.html" title="Loads, indexes, and decodes records without playback policy." alt="" coords="5,5,120,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,35,254,100,250,103,104,40"/>
 <area shape="rect" id="Node000003" href="$class_packet_mapping.html" title="Validated packet schema that decodes and encodes Plane/Target values." alt="" coords="144,5,256,31"/>

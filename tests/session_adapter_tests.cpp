@@ -7,7 +7,7 @@ class SessionAdapterTests final : public QObject {
     void initTestCase();
     void persistenceFailurePreservesExistingDestination();
     void sessionAdaptersRoundTripAndClearPartialFailures();
-    void sparseIndexCrossesPageBoundaries();
+    void residentIndexCrossesFormerPageBoundaries();
 };
 
 void SessionAdapterTests::initTestCase() {
@@ -106,8 +106,10 @@ void SessionAdapterTests::sessionAdaptersRoundTripAndClearPartialFailures() {
     QFile truncated(finalPath);
     QVERIFY(truncated.open(QIODevice::WriteOnly | QIODevice::Truncate));
     truncated.close();
-    QVERIFY(!reader.recordAt(0, &item, &error));
-    QVERIFY(error.contains(QStringLiteral("changed"), Qt::CaseInsensitive));
+    // A normal file-backed load is an immutable in-memory snapshot. Playback
+    // therefore neither reopens nor repeatedly seeks the original path.
+    QVERIFY2(reader.recordAt(0, &item, &error), qPrintable(error));
+    QCOMPARE(item.state.target.time, 1.0);
 
     const QString limitPath = directory.filePath(QStringLiteral("duration-limit.lar"));
     LarSessionWriter limitWriter;
@@ -143,7 +145,7 @@ void SessionAdapterTests::sessionAdaptersRoundTripAndClearPartialFailures() {
     QVERIFY(error.contains(QStringLiteral("365-day limit"), Qt::CaseInsensitive));
 }
 
-void SessionAdapterTests::sparseIndexCrossesPageBoundaries() {
+void SessionAdapterTests::residentIndexCrossesFormerPageBoundaries() {
     constexpr qint64 RecordCount = 4097;
     QTemporaryDir directory;
     QVERIFY(directory.isValid());
@@ -172,6 +174,15 @@ void SessionAdapterTests::sparseIndexCrossesPageBoundaries() {
     LarSessionReader reader;
     QVERIFY2(reader.loadFile(path, &error), qPrintable(error));
     QCOMPARE(reader.recordCount(), RecordCount);
+
+    QFile replaced(path);
+    QVERIFY(replaced.open(QIODevice::WriteOnly | QIODevice::Truncate));
+    QCOMPARE(replaced.write(QByteArrayLiteral("source replaced after load")), qint64(26));
+    replaced.close();
+
+    // Alternate across former 4,096-record page boundaries. Every lookup must
+    // use the resident source/index accepted at load time rather than rebuilding
+    // a page from the now-replaced file.
     for (const qint64 index : {qint64(4096), qint64(0), qint64(4095), RecordCount - 1}) {
         SessionStateItem item;
         QVERIFY2(reader.recordAt(index, &item, &error), qPrintable(error));

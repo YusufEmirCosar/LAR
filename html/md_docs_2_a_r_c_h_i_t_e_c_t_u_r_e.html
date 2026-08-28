@@ -311,7 +311,7 @@ flowchart LR
     RT --&gt; FW[&quot;PersistenceRuntimeWorker\npersistence thread&quot;]
     NW --&gt;|&quot;validated CapturedPacket batches&quot;| RW
     RW --&gt;|&quot;immutable SessionSnapshot&quot;| FW
-    PW --&gt;|&quot;coalesced StateEvent&quot;| RT
+    PW --&gt;|&quot;60 Hz sampled StateEvent&quot;| RT
     NW --&gt;|&quot;coalesced StateEvent&quot;| RT
     RT --&gt;|&quot;epoch-tagged events&quot;| UI</pre>
 </div>

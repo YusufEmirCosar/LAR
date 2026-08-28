@@ -111,6 +111,8 @@ void setPlaneZoneIndicator(QLabel *indicator, PlaneZoneStatus status) {
         border = QStringLiteral("#e0a3ad");
         break;
     }
+    if (indicator->property("zoneStatus").toString() == text)
+        return;
     indicator->setText(text);
     indicator->setToolTip(QStringLiteral("Plane area: %1").arg(text));
     indicator->setStyleSheet(
@@ -296,10 +298,14 @@ void ValuesPanel::render(const ApplicationViewModel &viewModel) {
         const bool available = viewModel.hasState() && id < viewModel.availableFields().size() &&
                                viewModel.availableFields().testBit(id);
         if (!available) {
-            label->setText(QStringLiteral("N/A"));
+            if (label->text() != QStringLiteral("N/A"))
+                label->setText(QStringLiteral("N/A"));
             continue;
         }
         const auto value = StateField::tryValue(viewModel.decodedState(), id);
-        label->setText(value ? StateValueFormatter::format(id, *value) : QStringLiteral("N/A"));
+        const QString text =
+            value ? StateValueFormatter::format(id, *value) : QStringLiteral("N/A");
+        if (label->text() != text)
+            label->setText(text);
     }
 }

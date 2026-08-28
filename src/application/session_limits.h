@@ -29,6 +29,16 @@ inline constexpr quint32 MaximumMappingSize = 16U * 1024U * 1024U;
 /** Maximum accepted payload size for one packet record, in bytes. */
 inline constexpr quint32 MaximumPacketSize = 16U * 1024U * 1024U;
 
+/**
+ * Largest file-backed session copied into an immutable in-memory snapshot.
+ *
+ * Larger sessions remain stream-backed, so accepting a valid recording never
+ * requires allocating memory proportional to an arbitrarily large file.
+ */
+inline constexpr qint64 MaximumResidentSourceBytes = 512LL * 1024LL * 1024LL;
+/** Maximum memory committed to the constant-time per-record playback index. */
+inline constexpr qint64 MaximumResidentRecordIndexBytes = 128LL * 1024LL * 1024LL;
+
 // LAR1 keeps an unsigned 64-bit field on disk, but the supported application
 // domain is intentionally smaller so clocks, formatting, and UI ratios remain
 // exact and bounded on every supported platform.

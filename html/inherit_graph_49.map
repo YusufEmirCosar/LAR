@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="Node000000" href="$class_i_mapping_repository.html" title="Creates PacketMapping values from files or JSON bytes." alt="" coords="5,5,143,31"/>
 <area shape="rect" id="Node000001" href="$class_json_mapping_repository.html" title="Parses mapping JSON and constructs validated PacketMapping values." alt="" coords="191,5,352,31"/>
-<area shape="poly" id="edge66_Node000000_Node000001" title=" " alt="" coords="158,16,193,18,188,18,158,21"/>
+<area shape="poly" id="edge65_Node000000_Node000001" title=" " alt="" coords="158,16,193,18,188,18,158,21"/>
 </map>

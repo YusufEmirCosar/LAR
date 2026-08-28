@@ -14,10 +14,10 @@
 
 #include <functional>
 #include <memory>
+#include <optional>
 
 class IPlaybackClock;
 class PlaybackMetrics;
-class PlaybackPublicationThrottle;
 class PlaybackService;
 
 /**
@@ -60,11 +60,16 @@ class PlaybackRuntimeWorker final : public QObject {
     void runtimeError(const RuntimeFailure &failure);
 
   private:
+    void clearDeferredPublication() noexcept;
+    void flushDeferredPublication();
+
     std::unique_ptr<ISessionReader> m_reader;
     PlaybackClockFactory m_clockFactory;
     IPlaybackClock *m_clock = nullptr;
     PlaybackService *m_playback = nullptr;
-    PlaybackPublicationThrottle *m_publication = nullptr;
     PlaybackMetrics *m_metrics = nullptr;
+    std::optional<DecodedState> m_deferredState;
+    std::optional<SessionTimestamp> m_deferredPosition;
     quint64 m_stateGeneration = 0;
+    bool m_publicationDeferred = false;
 };

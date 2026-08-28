@@ -1,3 +1,4 @@
+#include "application/ports/playback_clock.h"
 #include "infrastructure/runtime/network_runtime_worker.h"
 #include "infrastructure/runtime/persistence_runtime_worker.h"
 #include "infrastructure/runtime/playback_runtime_worker.h"
@@ -11,6 +12,38 @@
 #include <QTemporaryDir>
 #include <QtTest>
 
+namespace {
+
+class ManualRuntimePlaybackClock final : public IPlaybackClock {
+  public:
+    explicit ManualRuntimePlaybackClock(QObject *parent = nullptr) : IPlaybackClock(parent) {}
+
+    void start(int framesPerSecond) override {
+        m_framesPerSecond = framesPerSecond;
+        m_active = true;
+    }
+    void stop() override {
+        m_active = false;
+    }
+    bool isActive() const override {
+        return m_active;
+    }
+    void advance(int count) {
+        for (int frame = 0; frame < count; ++frame)
+            emit tick();
+    }
+
+    int framesPerSecond() const noexcept {
+        return m_framesPerSecond;
+    }
+
+  private:
+    int m_framesPerSecond = 0;
+    bool m_active = false;
+};
+
+} // namespace
+
 class RuntimeContractTests final : public QObject {
     Q_OBJECT
 
@@ -19,6 +52,7 @@ class RuntimeContractTests final : public QObject {
     void threadedRuntimeContract();
     void threadedOverlappingSaveRequestsKeepTheirIds();
     void threadedShutdownDestroysWorkersSynchronously();
+    void playbackWorkerPublishesEveryPresentationTick();
     void directMappingReplacementCompletesWhileListening();
     void directFailedFinalSaveLeavesRecordingPaused();
 
@@ -285,6 +319,48 @@ void RuntimeContractTests::threadedShutdownDestroysWorkersSynchronously() {
         QVERIFY(playback.isNull());
         QVERIFY(persistence.isNull());
     }
+}
+
+void RuntimeContractTests::playbackWorkerPublishesEveryPresentationTick() {
+    QTemporaryDir directory;
+    QVERIFY(directory.isValid());
+    const QByteArray mappingJson =
+        QByteArrayLiteral(R"([{"name":"time","index":0,"offset":0,"size":8}])");
+    PacketMapping mapping;
+    QString error;
+    QVERIFY2(JsonMappingRepository().loadJson(mappingJson, &mapping, &error), qPrintable(error));
+
+    LarSessionWriter writer;
+    QVERIFY2(writer.begin(mappingJson, &error), qPrintable(error));
+    Plane plane{};
+    Target target{};
+    for (int index = 0; index < 12; ++index) {
+        target.time = double(index);
+        QVERIFY2(writer.append(SessionTimestamp::clampedMilliseconds(qint64(index) * 10),
+                               mapping.encode(plane, target), &error),
+                 qPrintable(error));
+    }
+    SessionSnapshot snapshot;
+    QVERIFY2(writer.createSnapshot(&snapshot, &error), qPrintable(error));
+    const QString path = directory.filePath(QStringLiteral("presentation.lar"));
+    QVERIFY2(QtSessionPersistence().save(snapshot, path, &error), qPrintable(error));
+
+    ManualRuntimePlaybackClock *clock = nullptr;
+    PlaybackRuntimeWorker worker({}, [&clock](QObject *parent) -> IPlaybackClock * {
+        clock = new ManualRuntimePlaybackClock(parent);
+        return clock;
+    });
+    QSignalSpy states(&worker, &PlaybackRuntimeWorker::stateReady);
+    worker.initialize();
+    QVERIFY(clock);
+    worker.loadSession(path, 9, RuntimeRequestId{1});
+    QCOMPARE(states.size(), 1);
+
+    worker.play(RuntimeRequestId{2});
+    QCOMPARE(clock->framesPerSecond(), PlaybackService::ReplayFramesPerSecond);
+    clock->advance(3);
+    QCOMPARE(states.size(), 4);
+    worker.shutdown();
 }
 
 void RuntimeContractTests::directMappingReplacementCompletesWhileListening() {

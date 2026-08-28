@@ -1,20 +1,21 @@
 <map id="LarViewport::setTurnWithPlane" name="LarViewport::setTurnWithPlane">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,193,175,234"/>
-<area shape="rect" id="Node000002" href="$class_lar_viewport.html#a807c3e87a98fe3f06bf1f0a6c33b15eb" title=" " alt="" coords="223,95,420,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,191,222,146,243,140,238,143,224,151,131,195"/>
-<area shape="rect" id="Node000005" href="$class_viewport_camera_controller.html#af04356f113a618aa04cf3648c4a20ae3" title=" " alt="" coords="234,160,408,201"/>
-<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="174,199,221,194,216,196,176,204"/>
-<area shape="rect" id="Node000008" href="$class_viewport_camera_controller.html#a5744eb53de3954e143c70855ccd65793" title=" " alt="" coords="234,225,408,266"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="175,223,221,231,216,232,175,228"/>
-<area shape="rect" id="Node000009" href="$class_lar_viewport.html#a2064c54b453d342479cfca19188b5365" title=" " alt="" coords="231,291,412,331"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="132,232,224,275,243,285,238,285,222,280,130,237"/>
-<area shape="rect" id="Node000003" href="$class_i_lar_viewport_page.html#a4a83609a08e6e23898c3e592421a11b5" title=" " alt="" coords="468,29,664,70"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="399,92,475,73,470,76,401,97"/>
-<area shape="rect" id="Node000004" href="$class_viewport_camera_controller.html#a1ae2d70894db28fff6474920cdbd7d65" title=" " alt="" coords="479,95,653,135"/>
-<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="420,112,466,114,461,116,421,118"/>
-<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="522,28,520,19,527,10,543,5,566,3,591,5,608,14,603,14,590,10,566,8,544,10,530,15,525,21,527,30"/>
-<area shape="rect" id="Node000006" href="$class_viewport_camera_controller.html#a7eb6ee5ba8b24367e895638c6c98c63f" title=" " alt="" coords="479,160,653,201"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="409,178,466,180,461,181,409,183"/>
-<area shape="rect" id="Node000007" href="$class_viewport_camera_controller.html#abc947546a2318609e939ba25c027f8e8" title=" " alt="" coords="712,160,887,201"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="653,178,700,180,694,181,654,183"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,154,175,194"/>
+<area shape="rect" id="Node000002" href="$class_lar_viewport.html#a2856d0ecb8bcee63d92b425f9977a733" title=" " alt="" coords="225,55,400,96"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,151,222,106,242,100,237,103,224,111,132,156"/>
+<area shape="rect" id="Node000006" href="$class_viewport_camera_controller.html#af04356f113a618aa04cf3648c4a20ae3" title=" " alt="" coords="226,120,400,161"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="174,159,213,155,208,157,176,164"/>
+<area shape="rect" id="Node000009" href="$class_viewport_camera_controller.html#a5744eb53de3954e143c70855ccd65793" title=" " alt="" coords="226,186,400,226"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="175,184,213,191,208,192,176,189"/>
+<area shape="rect" id="Node000010" href="$class_lar_viewport.html#a2064c54b453d342479cfca19188b5365" title=" " alt="" coords="223,251,403,292"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="132,192,224,236,242,245,237,245,222,241,131,198"/>
+<area shape="rect" id="Node000003" href="$class_lar_viewport.html#ad944123ddb792fff3c069a101edc8667" title=" " alt="" coords="451,5,651,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="399,52,482,34,477,36,401,57"/>
+<area shape="rect" id="Node000005" href="$class_viewport_camera_controller.html#a1ae2d70894db28fff6474920cdbd7d65" title=" " alt="" coords="464,55,638,96"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="400,73,451,75,446,76,401,78"/>
+<area shape="rect" id="Node000004" href="$class_lar_viewport.html#a87f5ac3cf9e88e1603eb618760909944" title=" " alt="" coords="705,5,868,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="651,16,692,18,686,19,652,21"/>
+<area shape="rect" id="Node000007" href="$class_viewport_camera_controller.html#a7eb6ee5ba8b24367e895638c6c98c63f" title=" " alt="" coords="464,120,638,161"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="400,138,451,140,446,141,401,143"/>
+<area shape="rect" id="Node000008" href="$class_viewport_camera_controller.html#abc947546a2318609e939ba25c027f8e8" title=" " alt="" coords="699,120,874,161"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="638,138,686,140,681,141,639,143"/>
 </map>

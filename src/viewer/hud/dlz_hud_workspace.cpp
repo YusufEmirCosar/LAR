@@ -1,6 +1,8 @@
 
 #include "viewer/hud/dlz_hud_workspace.h"
 
+#include <QHideEvent>
+#include <QShowEvent>
 #include <QTimer>
 #include <QVBoxLayout>
 
@@ -43,7 +45,17 @@ HudWorkspace::HudWorkspace(ControlPanel *controlPanel, QWidget *parent)
     m_lastTickNanoseconds = m_clock.nsecsElapsed();
     m_controller.reset();
     rebuild(true);
+}
+
+void HudWorkspace::showEvent(QShowEvent *event) {
+    QWidget::showEvent(event);
+    m_lastTickNanoseconds = m_clock.nsecsElapsed();
     m_timer->start();
+}
+
+void HudWorkspace::hideEvent(QHideEvent *event) {
+    m_timer->stop();
+    QWidget::hideEvent(event);
 }
 
 void HudWorkspace::setInputMode(ControlPanel::InputMode mode) {

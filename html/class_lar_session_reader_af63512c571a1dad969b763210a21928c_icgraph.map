@@ -1,5 +1,5 @@
 <map id="LarSessionReader::close" name="LarSessionReader::close">
-<area shape="rect" id="Node000001" title="Releases the source, sparse index, decoded mapping, and cached record page." alt="" coords="426,56,593,82"/>
+<area shape="rect" id="Node000001" title="Releases every source, index, decoded mapping, and cached record page." alt="" coords="426,56,593,82"/>
 <area shape="rect" id="Node000002" href="$class_lar_session_reader.html#a17c27548dcf16d0c51de9c380ecca260" title=" " alt="" coords="190,5,378,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="432,52,344,34,344,29,437,52"/>
 <area shape="rect" id="Node000003" href="$class_lar_session_reader.html#a8078f378133001adee69d237a860e570" title=" " alt="" coords="5,48,142,89"/>

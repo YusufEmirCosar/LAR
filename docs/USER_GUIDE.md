@@ -169,7 +169,12 @@ Playback controls provide:
 Playback presents at 60 ticks per second. Each tick advances the exact
 millisecond cursor and selects the applicable stored record with a binary
 search. It does not decode every record between two presentation ticks, so
-high-rate recordings remain responsive at high replay rates.
+high-rate recordings remain responsive at high replay rates. Ordinary files up
+to 512 MiB are replayed from an immutable RAM snapshot, and a complete record
+index is retained within a separate 128 MiB budget. Very large sessions remain
+supported through the file-backed and sparse-page fallbacks. A changed state is
+published on its originating replay tick, and only the currently visible
+viewport page performs the live scene update.
 
 The **Burst** control is intentionally disabled. It is a placeholder for future
 whole-file analysis and currently dispatches no operation.

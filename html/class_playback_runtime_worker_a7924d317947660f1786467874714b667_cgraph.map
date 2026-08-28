@@ -1,21 +1,21 @@
 <map id="PlaybackRuntimeWorker::shutdown" name="PlaybackRuntimeWorker::shutdown">
-<area shape="rect" id="Node000001" title="Stops publication and metrics and closes the loaded session." alt="" coords="5,136,171,177"/>
-<area shape="rect" id="Node000002" href="$class_playback_service.html#a43fa0623a8507f5354bf5537f6619668" title=" " alt="" coords="219,95,424,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,137,245,123,240,125,172,142"/>
-<area shape="rect" id="Node000009" href="$class_playback_metrics.html#a4b373b7c7a485fbf6e4e41fbf6ca409e" title="Shuts down metrics and stops the rate timer." alt="" coords="230,144,412,170"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="171,154,217,156,212,158,172,159"/>
-<area shape="rect" id="Node000010" href="$class_playback_publication_throttle.html#a0192d4f6c9cd2f963f990a6b3e635457" title=" " alt="" coords="230,194,413,234"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="171,175,224,189,218,190,171,180"/>
-<area shape="rect" id="Node000003" href="$class_i_session_reader.html#ac3309b61387f2bd803b08a3c9e64b475" title="Releases the current source and returns the reader to its empty state." alt="" coords="482,5,635,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="350,92,471,41,497,35,492,37,473,46,352,97"/>
-<area shape="rect" id="Node000004" href="$class_playback_service.html#a5e54c6eb7adf0f7fbdfbd5f403ec5d7d" title=" " alt="" coords="474,55,642,96"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="421,91,461,88,456,90,422,97"/>
-<area shape="rect" id="Node000006" href="$class_playback_service.html#a0d810aa9ebe8492aea8b82c6e429c5d6" title=" " alt="" coords="472,120,644,161"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="417,118,459,126,454,127,417,124"/>
-<area shape="rect" id="Node000008" href="$class_i_playback_clock.html#a997a42bd4efe05e9d2bcbee7550e35cb" title="Stops future ticks." alt="" coords="485,185,631,211"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="398,118,425,129,440,139,450,150,459,160,473,171,488,180,483,179,471,175,456,164,446,154,437,143,423,134,398,124"/>
-<area shape="rect" id="Node000005" href="$class_playback_service.html#a87e882d8178053a7315b5b54b461fa27" title=" " alt="" coords="692,63,873,88"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="642,73,680,75,674,76,643,78"/>
-<area shape="rect" id="Node000007" href="$class_playback_service.html#a77bbc3e3d72ff59d00b75a0d13816491" title=" " alt="" coords="696,128,869,154"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="644,138,683,141,678,141,645,143"/>
+<area shape="rect" id="Node000001" title="Stops publication and metrics and closes the loaded session." alt="" coords="5,88,171,129"/>
+<area shape="rect" id="Node000002" href="$class_playback_runtime_worker.html#a84809a485c7d694cbefda87229026858" title=" " alt="" coords="236,31,407,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,86,223,75,219,77,172,91"/>
+<area shape="rect" id="Node000003" href="$class_playback_service.html#a43fa0623a8507f5354bf5537f6619668" title=" " alt="" coords="219,96,424,122"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,106,206,108,200,110,172,111"/>
+<area shape="rect" id="Node000010" href="$class_playback_metrics.html#a4b373b7c7a485fbf6e4e41fbf6ca409e" title="Shuts down metrics and stops the rate timer." alt="" coords="230,145,412,171"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="171,124,245,141,240,142,171,129"/>
+<area shape="rect" id="Node000004" href="$class_i_session_reader.html#ac3309b61387f2bd803b08a3c9e64b475" title="Releases the current source and returns the reader to its empty state." alt="" coords="482,5,635,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="393,93,423,81,437,72,446,62,456,52,471,41,484,38,489,36,473,46,459,56,450,66,440,76,425,86,395,98"/>
+<area shape="rect" id="Node000005" href="$class_playback_service.html#a5e54c6eb7adf0f7fbdfbd5f403ec5d7d" title=" " alt="" coords="474,55,642,96"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="417,93,461,89,456,90,418,98"/>
+<area shape="rect" id="Node000007" href="$class_playback_service.html#a0d810aa9ebe8492aea8b82c6e429c5d6" title=" " alt="" coords="472,120,644,161"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="421,120,459,127,454,127,421,125"/>
+<area shape="rect" id="Node000009" href="$class_i_playback_clock.html#a997a42bd4efe05e9d2bcbee7550e35cb" title="Stops future ticks." alt="" coords="485,185,631,211"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="397,120,425,130,440,140,450,151,459,161,473,171,489,180,484,179,471,175,456,165,446,154,437,145,423,135,397,125"/>
+<area shape="rect" id="Node000006" href="$class_playback_service.html#a87e882d8178053a7315b5b54b461fa27" title=" " alt="" coords="692,63,873,88"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="642,73,680,75,674,76,643,78"/>
+<area shape="rect" id="Node000008" href="$class_playback_service.html#a77bbc3e3d72ff59d00b75a0d13816491" title=" " alt="" coords="696,128,869,154"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="644,138,683,141,678,141,645,143"/>
 </map>

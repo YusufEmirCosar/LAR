@@ -445,10 +445,15 @@ The maintained DLZ UDP scenarios use the dedicated three-field mappings:
 
 Normal replay samples the session at 60 frames per second. Each sample advances
 the exact cursor by `(1 / 60) * rate` seconds and displays the latest entry
-strictly before that cursor. Selection uses a two-level sparse timestamp index:
-an in-memory checkpoint search chooses one 4,096-record page, followed by an
-in-memory search inside that cached page. Stored entries between presentation
-samples are not decoded in sequence.
+strictly before that cursor. For ordinary files, up to 512 MiB of validated
+session data becomes an immutable in-memory snapshot, and a complete
+record-location index is retained within a separate 128 MiB budget. Selection
+then uses a direct binary search without repeated file seeks. If the index
+budget is exceeded, the reader falls back to an in-memory checkpoint search
+and one cached 4,096-record page; sources over the snapshot budget remain
+file-backed. Stored entries between presentation samples are not decoded in
+sequence. Changed states and positions are delivered on the same 60 Hz tick,
+and only the visible viewport page processes the update.
 
 The separate **Burst** panel is reserved for future whole-file statistics. Its
 wide lightning-icon button is currently disabled and does not affect replay or

@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Shared viewport presentation and tracking mode enumerations." alt="" coords="552,5,713,31"/>
 <area shape="rect" id="Node000002" href="$earth__lar__view_8h.html" title="Mercator/sphere LAR page combining map, zones, and marker overlays." alt="" coords="433,256,568,297"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="561,37,512,57,456,84,404,121,382,144,364,169,357,188,364,207,378,224,395,237,436,260,430,260,392,242,374,227,360,210,352,188,359,166,378,140,401,117,453,79,510,52,566,35"/>
-<area shape="rect" id="Node000008" href="$lar__viewport_8h.html" title="Host widget that switches pages and distributes scene/camera state." alt="" coords="607,256,741,297"/>
+<area shape="rect" id="Node000008" href="$lar__viewport_8h.html" title="Host widget that switches pages and presents state only on the active page." alt="" coords="607,256,741,297"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="613,41,602,61,594,80,590,99,594,119,607,158,625,196,662,257,657,255,620,198,602,160,589,120,585,99,589,78,597,59,609,45"/>
 <area shape="rect" id="Node000009" href="$viewport__camera__controller_8h.html" title="Shared tracking policy independent of any viewport renderer." alt="" coords="603,79,798,120"/>
 <area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="653,40,686,79,681,78,652,45"/>
