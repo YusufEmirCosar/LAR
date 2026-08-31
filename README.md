@@ -123,90 +123,87 @@ On macOS:
 open build-release/lar-viewer.app
 ```
 
-### Windows setup
+### Windows setup: compile and launch
 
-Windows builds require the Visual Studio 2022 x64 MSVC toolchain and a matching
-Qt `msvc2022_64` kit. Do not use a MinGW, Android, WebAssembly, or ARM64 Qt kit
-with the x64 Visual Studio preset.
+Run all commands below from the repository root in **Developer PowerShell for
+VS 2022**. The Windows preset builds 64-bit Release binaries with the Visual
+Studio 2022 generator; Ninja is not required.
 
-Git and CMake can be installed from PowerShell with Windows Package Manager:
+#### 1. Install the prerequisites
 
-```powershell
-winget install --id Git.Git -e
-winget install --id Kitware.CMake -e
-```
+- Windows 10 or 11 x64.
+- Visual Studio 2022 or Visual Studio 2022 Build Tools with **Desktop
+  development with C++**, MSVC v143, and a Windows 10 or 11 SDK.
+- CMake 3.24 or newer and Git. They can be installed with Windows Package
+  Manager:
 
-Close and reopen PowerShell or Windows Terminal after installation, then
-verify that the updated `PATH` is visible:
+  ```powershell
+  winget install --id Git.Git -e
+  winget install --id Kitware.CMake -e
+  ```
+
+- Qt 6.10.3 or newer, installed through the Qt Online Installer or Maintenance
+  Tool with **MSVC 2022 64-bit** selected. Do not use a MinGW, LLVM-MinGW,
+  Android, WebAssembly, ARM64, or otherwise compiler-incompatible Qt kit.
+
+Close and reopen the terminal after installing command-line tools, then check
+the toolchain and Qt package. These examples use the minimum supported Qt
+version; change `$qtRoot` once if a newer compatible version is installed.
 
 ```powershell
 git --version
 cmake --version
+
+$qtRoot = "C:\Qt\6.10.3\msvc2022_64"
+Test-Path "$qtRoot\lib\cmake\Qt6\Qt6Config.cmake"
 ```
 
-Install Visual Studio 2022 or Visual Studio 2022 Build Tools with the
-**Desktop development with C++** workload, MSVC v143, and a Windows 10 or 11
-SDK. A Developer PowerShell or Native Tools command prompt for VS 2022 is
-recommended. Ninja is not required by the Windows presets.
-
-Install Qt through the Qt Online Installer or Maintenance Tool and select
-**MSVC 2022 64-bit**. A typical minimum-version installation is:
-
-```text
-C:\Qt\6.10.3\msvc2022_64
-```
-
-Verify the kit's CMake package directly:
-
-```powershell
-Test-Path "C:\Qt\6.10.3\msvc2022_64\lib\cmake\Qt6\Qt6Config.cmake"
-```
-
-`True` confirms that the selected kit exists. If its location is unknown, list
-the installed Qt 6 package files:
+The final command must print `True`. If the Qt location is unknown, find the
+installed packages with:
 
 ```powershell
 Get-ChildItem C:\Qt -Recurse -Filter Qt6Config.cmake -ErrorAction SilentlyContinue
 ```
 
-The presence of a version directory alone does not prove that its
-`msvc2022_64` component is installed.
+The presence of `C:\Qt\6.10.3` alone does not prove that its `msvc2022_64` kit
+is installed.
 
-### Windows release build
+#### 2. Configure and compile the Release build
 
-`Qt6_DIR` tells CMake where to find the Qt package. Some build-time helpers are
-also linked against Qt, so the matching Qt `bin` directory must be available on
-the current process `PATH` before the build runs. `Qt6_DIR` does not update
-`PATH` by itself.
-
-Using the minimum supported Qt version:
+Two independent Qt settings are required. `Qt6_DIR` lets CMake find the Qt
+CMake package, while the kit's `bin` directory on `PATH` lets Windows start Qt
+helpers and uninstalled project executables. Setting only one is insufficient.
 
 ```powershell
-$env:Path = "C:\Qt\6.10.3\msvc2022_64\bin;$env:Path"
+$qtRoot = "C:\Qt\6.10.3\msvc2022_64"
+$env:Path = "$qtRoot\bin;$env:Path"
 
 cmake --preset windows-release `
-  -DQt6_DIR=C:/Qt/6.10.3/msvc2022_64/lib/cmake/Qt6
+  "-DQt6_DIR=$qtRoot/lib/cmake/Qt6"
 
 cmake --build --preset windows-release --parallel
 ```
 
-The preset writes the Visual Studio build tree to `build-windows-release` and
-builds the `Release` configuration. If another compatible Qt version is
-installed, use that same version in both paths. For example:
+The preset creates `build-windows-release` and builds its `Release`
+configuration. The primary outputs are:
 
-```powershell
-$env:Path = "C:\Qt\6.11.2\msvc2022_64\bin;$env:Path"
-
-cmake --preset windows-release `
-  -DQt6_DIR=C:/Qt/6.11.2/msvc2022_64/lib/cmake/Qt6
+```text
+build-windows-release\Release\lar-viewer.exe
+build-windows-release\Release\lar-test-sender.exe
 ```
 
-### Windows packaging and deployment
+#### 3. Launch the viewer
 
-Install the successful release build into a deployable directory. Qt's Windows
-deployment script requires an **absolute** installation prefix; a bare relative
-`--prefix build-windows-package` can produce an invalid relative `qt.conf`
-deployment path.
+For a quick development launch, use the same PowerShell session in which the
+Qt `bin` directory was added to `PATH`:
+
+```powershell
+& .\build-windows-release\Release\lar-viewer.exe
+```
+
+For a self-contained application directory, install and deploy the build. The
+installation prefix must be absolute because Qt's deployment script writes
+runtime paths and runs `windeployqt` during this step:
 
 ```powershell
 $packageDir = Join-Path $PWD.Path "build-windows-package"
@@ -215,79 +212,264 @@ cmake --install build-windows-release `
   --config Release `
   --prefix "$packageDir"
 
-.\build-windows-package\bin\lar-viewer.exe
+& "$packageDir\bin\lar-viewer.exe"
 ```
 
-The install step copies the application and deploys its required Qt runtime
-DLLs and plugins. To deliberately recreate only that package directory:
+The installed package contains the viewer, test sender, compiled map, Plane
+model and cubemaps, supplied JSON mappings, and required Qt DLLs and plugins.
+It can be launched without adding the development Qt kit to `PATH`. Large DTED
+datasets remain external by design.
+
+#### 4. Verify Online mode with the test sender
+
+In the viewer, select **Online**, load `maps\full-state-dlz.json`, keep port
+`45454`, and start the listener. In a second PowerShell opened at the repository
+root, make the Qt runtime available and verify the sender before starting a
+long run:
 
 ```powershell
-Remove-Item -Recurse -Force build-windows-package -ErrorAction SilentlyContinue
+$qtRoot = "C:\Qt\6.10.3\msvc2022_64"
+$env:Path = "$qtRoot\bin;$env:Path"
 
-$packageDir = Join-Path $PWD.Path "build-windows-package"
+& .\build-windows-release\Release\lar-test-sender.exe --version
+& .\build-windows-release\Release\lar-test-sender.exe --list-scenarios
 
-cmake --install build-windows-release `
-  --config Release `
-  --prefix "$packageDir"
+& .\build-windows-release\Release\lar-test-sender.exe `
+  --map .\maps\full-state-dlz.json `
+  --scenario straight-line `
+  --host 127.0.0.1 `
+  --port 45454 `
+  --count 1000 `
+  --interval 10
 ```
 
-The complete Windows release workflow is therefore:
+The sender intentionally prints no per-packet progress. It prints a summary
+after the requested packet count has been sent. The installed sender can also
+be used; its installed mappings are under
+`build-windows-package\share\lar-area-display\maps`.
+
+#### 5. Build and run the strict Windows tests
+
+The production `windows-release` preset disables tests and tool-based quality
+targets. Use `ci-msvc` for a warnings-as-errors test build:
 
 ```powershell
-$env:Path = "C:\Qt\6.10.3\msvc2022_64\bin;$env:Path"
-
-cmake --preset windows-release `
-  -DQt6_DIR=C:/Qt/6.10.3/msvc2022_64/lib/cmake/Qt6
-
-cmake --build --preset windows-release --parallel
-
-$packageDir = Join-Path $PWD.Path "build-windows-package"
-cmake --install build-windows-release `
-  --config Release `
-  --prefix "$packageDir"
-
-.\build-windows-package\bin\lar-viewer.exe
-```
-
-### Windows strict test build
-
-The `windows-release` preset intentionally disables tests and tool-based
-quality targets. Use `ci-msvc` for a strict warnings-as-errors test build:
-
-```powershell
-$env:Path = "C:\Qt\6.10.3\msvc2022_64\bin;$env:Path"
+$qtRoot = "C:\Qt\6.10.3\msvc2022_64"
+$env:Path = "$qtRoot\bin;$env:Path"
 
 cmake --preset ci-msvc `
-  -DQt6_DIR=C:/Qt/6.10.3/msvc2022_64/lib/cmake/Qt6
+  "-DQt6_DIR=$qtRoot/lib/cmake/Qt6"
 
 cmake --build --preset ci-msvc --parallel
-ctest --preset ci-msvc
+ctest --preset ci-msvc --output-on-failure
 ```
 
 ### Windows troubleshooting
 
-If CMake cannot find `Qt6Config.cmake`, verify the exact MSVC kit path with
-`Test-Path` or `Get-ChildItem`, then pass its `lib/cmake/Qt6` directory through
-`Qt6_DIR`. Do not point the preset at `mingw_64`, `llvm-mingw_64`,
-`msvc2022_arm64`, or another target-incompatible kit.
-
-An MSBuild custom step that exits with `-1073741515` could not load a required
-runtime DLL. Restore the selected kit's `bin` directory to the current
-PowerShell `PATH`, then rerun the build:
+Start with these checks in the same PowerShell that will configure, build, or
+run the uninstalled programs:
 
 ```powershell
-$env:Path = "C:\Qt\6.10.3\msvc2022_64\bin;$env:Path"
+$qtRoot = "C:\Qt\6.10.3\msvc2022_64"
+$env:Path = "$qtRoot\bin;$env:Path"
+
+Test-Path "$qtRoot\lib\cmake\Qt6\Qt6Config.cmake"
+where.exe cmake
+where.exe Qt6Core.dll
+& "$qtRoot\bin\windeployqt.exe" --version
+```
+
+All paths must refer to one compatible Qt version and one architecture. The
+`PATH` assignment affects only the current PowerShell and child processes, so
+repeat it after opening a new terminal.
+
+#### CMake cannot find Qt or selects a stale Qt installation
+
+Pass the directory containing `Qt6Config.cmake` through `Qt6_DIR`; do not pass
+the Qt root or its `bin` directory. If the build tree cached a removed or
+different Qt installation, reconfigure it from maintained source with a fresh
+CMake cache:
+
+```powershell
+$qtRoot = "C:\Qt\6.10.3\msvc2022_64"
+$env:Path = "$qtRoot\bin;$env:Path"
+
+cmake --fresh --preset windows-release `
+  "-DQt6_DIR=$qtRoot/lib/cmake/Qt6"
+
 cmake --build --preset windows-release --parallel
 ```
 
-Use `cmake --build --preset windows-release --verbose` to inspect the exact
-failing command when needed.
+Do not mix `msvc2022_64` with a MinGW build, an ARM64 kit, or DLLs from another
+Qt version.
 
-An unresolved native OpenGL symbol such as `__imp_glViewport` means the final
-link is missing the portable native OpenGL dependency. The maintained build
-uses `find_package(OpenGL REQUIRED)` and publicly links `OpenGL::GL` from the
-static presentation library so the dependency reaches the executable. Do not
-replace it with a hard-coded Windows-only `opengl32` link.
+#### An executable closes immediately or the sender prints nothing
+
+An uninstalled `.exe` needs Qt runtime DLLs before its `main()` function can
+run. If Windows cannot load `Qt6Core.dll` or another dependency, the process
+can terminate before the program has an opportunity to print its own error.
+This is the likely cause when `lar-test-sender.exe --version` produces nothing.
+
+```powershell
+$qtRoot = "C:\Qt\6.10.3\msvc2022_64"
+$env:Path = "$qtRoot\bin;$env:Path"
+
+$sender = ".\build-windows-release\Release\lar-test-sender.exe"
+& $sender --version
+$LASTEXITCODE
+```
+
+Successful output is `1.0.0` with exit code `0`. Use the deployed
+`build-windows-package\bin` executables when the machine should not depend on a
+developer Qt installation. If a deployed executable reports a platform-plugin
+problem, expose Qt's plugin search diagnostics temporarily:
+
+```powershell
+$env:QT_DEBUG_PLUGINS = "1"
+& .\build-windows-package\bin\lar-viewer.exe
+Remove-Item Env:\QT_DEBUG_PLUGINS
+```
+
+An MSBuild custom step that exits with `-1073741515` has the same general
+meaning: Windows could not load a required runtime DLL for a build-time helper.
+
+#### `windeployqt.exe failed: 1` during `cmake --install`
+
+The failure originates in Qt's generated deployment step, after compilation.
+Check all of the following:
+
+1. Close any viewer or sender running from `build-windows-package`; Windows may
+   lock files that the install step needs to replace.
+2. Put the matching Qt `bin` directory on `PATH` in the current PowerShell.
+3. Confirm that `windeployqt.exe --version` starts successfully.
+4. Use an absolute installation prefix and run the install verbosely.
+5. If a previous deployment stopped halfway through, recreate only the package
+   directory and retry.
+
+```powershell
+$qtRoot = "C:\Qt\6.10.3\msvc2022_64"
+$env:Path = "$qtRoot\bin;$env:Path"
+$packageDir = Join-Path $PWD.Path "build-windows-package"
+
+& "$qtRoot\bin\windeployqt.exe" --version
+Remove-Item -Recurse -Force "$packageDir" -ErrorAction SilentlyContinue
+
+cmake --install build-windows-release `
+  --config Release `
+  --prefix "$packageDir" `
+  --verbose
+```
+
+If this still fails, run the fresh configure and build commands from the
+previous section. Repair the selected Qt kit if its own `windeployqt --version`
+cannot run.
+
+#### PowerShell splits or corrupts a pasted sender command
+
+PowerShell's continuation character is a backtick, and it must be the final
+character on its line. A trailing ordinary or non-breaking space cancels the
+continuation. Text copied through HTML or rich text may also contain strings
+such as `&#x20;`, `\--map`, typographic dashes, or invisible spaces. None of
+those belong in the command.
+
+When diagnosing command parsing, use a single physical line:
+
+```powershell
+& .\build-windows-release\Release\lar-test-sender.exe --map .\maps\full-state-dlz.json --scenario straight-line --host 127.0.0.1 --port 45454 --count 100000 --interval 2
+```
+
+Check `$LASTEXITCODE` immediately if the prompt returns. Exit code `0` is
+success, `2` means invalid command-line input or mapping, and `1` means a
+runtime send/bind failure. Also verify relative paths from the current
+directory with `Test-Path .\maps\full-state-dlz.json`.
+
+#### A 2 ms sender starts near 500 packets/s and settles near 64 packets/s
+
+`--interval 2` requests 500 timer callbacks per second. A stable rate close to
+64 is the signature of the default 15.625 ms Windows timer quantum
+(`1000 / 15.625 = 64`). The sender currently transmits one datagram for each
+`QTimer` timeout. `Qt::PreciseTimer` requests higher accuracy, but Qt documents
+that late timers emit only one timeout even when multiple periods expired; it
+does not replay every missed 2 ms callback. Windows 11 may also stop
+guaranteeing high timer resolution after a process becomes minimized,
+occluded, or otherwise treated as background. See Qt's
+[timer accuracy documentation](https://doc.qt.io/qt-6/qtimer.html#accuracy-and-timer-resolution)
+and Microsoft's
+[`timeBeginPeriod` remarks](https://learn.microsoft.com/en-us/windows/win32/api/timeapi/nf-timeapi-timebeginperiod).
+
+Measure the sender itself to separate sender scheduling from receiver or UI
+behavior:
+
+```powershell
+Measure-Command { & .\build-windows-release\Release\lar-test-sender.exe --map .\maps\full-state-dlz.json --scenario straight-line --host 127.0.0.1 --port 45454 --count 2000 --interval 2 }
+```
+
+A true 500 packets/s run takes about four seconds. A much longer run confirms
+that Windows timer delivery slowed the sender. As a diagnostic, keep the
+terminal visible and check whether Windows Efficiency mode or another power
+policy is being applied to the sender. Do not interpret this exact 64 Hz
+plateau as UDP bandwidth exhaustion.
+
+#### Packet rate, viewport updates, and FPS do not match
+
+These values measure different stages:
+
+- **Received Packages/s** counts accepted UDP datagrams.
+- Online visualization publishes only the newest decoded state on a 16 ms
+  timer, intentionally limiting meaningful scene updates to about 60 per
+  second even if hundreds of packets arrive.
+- Offline playback samples session time at 60 Hz. Raising playback speed moves
+  farther through simulated time per sample; it is not intended to raise the
+  presentation rate above 60 Hz.
+- FPS measures actual paint/swap completion and may be lower because of GPU,
+  driver, VSync, power, or viewport complexity without implying packet loss.
+
+Therefore 500 received packets/s with roughly 60 state updates is normal. If
+the same `.lar` file still advances at approximately five packets/s on Windows,
+verify that the newly compiled or installed executable is the one actually
+being launched rather than an older package directory.
+
+#### DTED reports that a valid Windows tile resolves outside its root
+
+The selected root must be the directory above the longitude folders, for
+example:
+
+```text
+D:\Terrain\DTED0\
+  e029\
+    n41.dt0
+```
+
+DTED0 is not copied into the installed package. Set its root before starting
+the viewer, or place it at `bin\assets\DTED0` beside the packaged executable:
+
+```powershell
+$env:LAR_DTED0_ROOT = "D:\Terrain\DTED0"
+& .\build-windows-package\bin\lar-viewer.exe
+```
+
+For an uploaded DT1/DT2 dataset, select the equivalent top-level directory,
+not one individual `eDDD` directory or tile. Current source normalizes native
+Windows separators and drive-letter casing before performing canonical path
+containment. If a genuinely contained `e029\n41.dt0` is rejected by an older
+executable, rebuild and reinstall the current source.
+
+#### Build or link diagnostics
+
+| Symptom | Cause and action |
+| --- | --- |
+| Visual Studio generator or compiler is unavailable | Install the **Desktop development with C++** workload and run from Developer PowerShell for VS 2022. |
+| `Qt6Config.cmake` is missing | Install the Qt **MSVC 2022 64-bit** component and point `Qt6_DIR` at its `lib/cmake/Qt6` directory. |
+| Custom command exits with `-1073741515` | Add the matching Qt `bin` directory to this PowerShell's `PATH`; a helper could not load a runtime DLL. |
+| Linker reports `__imp_glViewport` or another native OpenGL symbol | Reconfigure with the maintained CMake files. The presentation static library must publicly link CMake's portable `OpenGL::GL` target. |
+| Build tree refers to another Qt version or generator | Use `cmake --fresh --preset windows-release` with the intended `Qt6_DIR`, then rebuild. |
+
+Use the following command to expose the exact failing compiler, linker, or
+custom command:
+
+```powershell
+cmake --build --preset windows-release --verbose
+```
 
 ### Debug build
 
