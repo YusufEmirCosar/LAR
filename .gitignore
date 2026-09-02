@@ -5,3 +5,4 @@
 *.user
 *.autosave
 .vscode
+/test_lar_files
