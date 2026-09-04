@@ -6,6 +6,8 @@
 #include "viewer/workflows/recording_workflow_controller.h"
 
 #include <QButtonGroup>
+#include <QDir>
+#include <QFileInfo>
 #include <QFormLayout>
 #include <QGroupBox>
 #include <QHBoxLayout>
@@ -19,6 +21,15 @@
 #include <QVBoxLayout>
 
 namespace {
+void setActiveAppearance(QPushButton *button, bool active) {
+    if (button->property("active").toBool() == active)
+        return;
+    button->setProperty("active", active);
+    button->style()->unpolish(button);
+    button->style()->polish(button);
+    button->update();
+}
+
 QIcon folderIcon() {
     return QIcon(QStringLiteral(":/icons/folder.png"));
 }
@@ -51,13 +62,22 @@ OnlinePanel::OnlinePanel(ApplicationFacade &application, OnlineWorkflowControlle
     auto *mappingGroup = new QGroupBox(QStringLiteral("Packet Mapping"));
     auto *mappingLayout = new QVBoxLayout(mappingGroup);
     m_mappingLabel = new QLabel(QStringLiteral("No mapping loaded"));
+    m_mappingLabel->setObjectName(QStringLiteral("mappingFileNameLabel"));
     m_mappingLabel->setWordWrap(true);
-    m_mappingLabel->setStyleSheet(QStringLiteral("color: #65706a;"));
+    m_mappingLabel->setTextFormat(Qt::PlainText);
+    m_mappingLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
+    m_mappingLabel->setStyleSheet(QStringLiteral("color: #34443d; font-weight: 600;"));
+    m_mappingDetails = new QLabel(QStringLiteral("Select a JSON mapping to enable the listener"));
+    m_mappingDetails->setObjectName(QStringLiteral("mappingDetailsLabel"));
+    m_mappingDetails->setWordWrap(true);
+    m_mappingDetails->setTextFormat(Qt::PlainText);
+    m_mappingDetails->setStyleSheet(QStringLiteral("color: #65706a;"));
     auto *mappingButton = new QPushButton(folderIcon(), QStringLiteral("Select JSON Mapping"));
     mappingButton->setIconSize(QSize(18, 18));
     connect(mappingButton, &QPushButton::clicked, &m_onlineWorkflow,
             &OnlineWorkflowController::requestMapping);
     mappingLayout->addWidget(m_mappingLabel);
+    mappingLayout->addWidget(m_mappingDetails);
     mappingLayout->addWidget(mappingButton);
     layout->addWidget(mappingGroup);
 
@@ -93,6 +113,7 @@ OnlinePanel::OnlinePanel(ApplicationFacade &application, OnlineWorkflowControlle
 
     m_listener = new QPushButton(style()->standardIcon(QStyle::SP_MediaPlay),
                                  QStringLiteral("Start Listener"));
+    m_listener->setObjectName(QStringLiteral("onlineListenerButton"));
     m_listener->setCheckable(true);
     m_listener->setEnabled(false);
     connect(m_listener, &QPushButton::toggled, this, [this](bool enabled) {
@@ -163,9 +184,18 @@ OnlinePanel::OnlinePanel(ApplicationFacade &application, OnlineWorkflowControlle
     layout->addStretch();
 
     connect(&m_application, &ApplicationFacade::mappingLoaded, this,
-            [this](const QString &, int fields, int minimumSize) {
-                m_mappingLabel->setText(
-                    QStringLiteral("%1 fields, packet >= %2 bytes").arg(fields).arg(minimumSize));
+            [this](const QString &path, int fields, int minimumSize) {
+                const QFileInfo mappingInfo(path);
+                const QString fileName =
+                    mappingInfo.fileName().isEmpty() ? path : mappingInfo.fileName();
+                m_mappingLabel->setText(fileName);
+                m_mappingLabel->setToolTip(
+                    QDir::toNativeSeparators(mappingInfo.absoluteFilePath()));
+                m_mappingDetails->setText(
+                    QStringLiteral("%1 mapped field%2 · Minimum UDP packet: %3 bytes")
+                        .arg(fields)
+                        .arg(fields == 1 ? QString() : QStringLiteral("s"))
+                        .arg(minimumSize));
                 m_listener->setEnabled(true);
             });
     connect(&m_application, &ApplicationFacade::onlineStateChanged, this,
@@ -219,6 +249,7 @@ void OnlinePanel::renderPolicy(const IpAccessPolicy &activePolicy, const QString
 }
 
 void OnlinePanel::renderRecording(bool recording) {
+    setActiveAppearance(m_recordPause, recording);
     m_recordPause->setIcon(recording ? pauseIcon() : playIcon());
     m_recordPause->setAccessibleName(recording ? QStringLiteral("Pause recording")
                                                : QStringLiteral("Continue recording"));

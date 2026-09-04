@@ -250,6 +250,16 @@ ControlPanel::ControlPanel(QWidget *parent) : QWidget(parent) {
             background-color: #ffffff;
             color: #18251f;
         }
+        QWidget#dlzControlPanel QPushButton:checked {
+            background-color: #dfece6;
+            border-color: #357461;
+            color: #154b3a;
+            font-weight: 600;
+        }
+        QWidget#dlzControlPanel QPushButton:checked:hover {
+            background-color: #cfe4da;
+            border-color: #27634f;
+        }
     )"));
 }
 

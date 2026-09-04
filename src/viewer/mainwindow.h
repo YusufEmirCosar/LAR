@@ -8,6 +8,7 @@
 #include "application/application_facade.h"
 
 #include <QMainWindow>
+#include <QString>
 #include <QVector>
 
 #include <memory>
@@ -30,6 +31,7 @@ class OfflinePanel;
 class OnlinePanel;
 class IViewerFileDialog;
 class OnlineWorkflowController;
+class HelpWindow;
 
 namespace dlz::presentation {
 class ControlPanel;
@@ -66,6 +68,7 @@ class MainWindow : public QMainWindow {
     void showDiagnostic(const QString &message);
     void updateCameraControls();
     void chooseLarPath();
+    void openHelp();
     void initialize(IRecordingFileDialog &recordingDialog);
 
     ApplicationFacade &m_app;
@@ -82,4 +85,7 @@ class MainWindow : public QMainWindow {
     QStackedWidget *m_modeStack = nullptr;
     QPushButton *m_onlineButton = nullptr;
     QPushButton *m_offlineButton = nullptr;
+    QPushButton *m_helpButton = nullptr;
+    HelpWindow *m_helpWindow = nullptr;
+    QString m_helpContextTopic;
 };

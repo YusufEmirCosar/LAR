@@ -134,6 +134,23 @@ PlaneViewWorkspace::PlaneViewWorkspace(
             color: #154b3a;
             font-weight: 600;
         }
+        QFrame#planeDisplayPanel QPushButton:checked:hover {
+            background: #cfe4da;
+            border-color: #27634f;
+        }
+        QFrame#planeDisplayPanel QPushButton:checked:pressed {
+            background: #bddaca;
+            border-color: #195b46;
+        }
+        QFrame#planeDisplayPanel QPushButton:checked:disabled {
+            background: #e7efeb;
+            border-color: #9aafa5;
+            color: #617269;
+        }
+        QGroupBox#planeUploadPanel QPushButton:focus,
+        QFrame#planeDisplayPanel QPushButton:focus {
+            border-color: #19745d;
+        }
         QPushButton#planeUploadModelButton, QPushButton#planeTerrainButton {
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;

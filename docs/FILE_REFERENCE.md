@@ -49,7 +49,7 @@ implementation files are listed explicitly.
 | `assets/cubemaps/*_{rt,lf,up,dn,ft,bk}.png` | Naturally ordered six-face cubemap sets |
 | `assets/DTED0/{e|w}DDD/{n|s}DD.dt0` | Lazily addressed WGS84 Level-0 terrain cells; excluded from default staging/install |
 | User-selected `{e|w}DDD/{n|s}DD.dt1` / `.dt2` | Session-only Level-1/Level-2 terrain trees accessed in place and never staged |
-| `assets/ui/icons/icons.qrc` | Stable `:/icons` and `:/styles` Qt resource aliases |
+| `assets/ui/icons/icons.qrc` | Stable `:/icons`, `:/styles`, and bundled `:/help` Qt resource aliases |
 | `assets/ui/icons/folder.png` | Open/select action icon |
 | `assets/ui/icons/lightning.png` | Burst analysis placeholder icon |
 | `assets/ui/icons/navigator.png` | North/navigation overlay image |
@@ -172,6 +172,8 @@ implementation files are listed explicitly.
 
 | Path | Purpose |
 | --- | --- |
+| `src/viewer/help/help_window.{h,cpp}` | Searchable non-modal browser for bundled operator and reference documentation |
+| `src/viewer/help/help_context.{h,cpp}` | Maps focused controls and active modes to stable contextual-help topics |
 | `src/viewer/dialogs/viewer_file_dialog.h` | Mapping/policy/session selection port |
 | `src/viewer/dialogs/qt_viewer_file_dialog.{h,cpp}` | Native Qt selection adapter |
 | `src/viewer/dialogs/recording_file_dialog.h` | Save/reset/discard decision port |

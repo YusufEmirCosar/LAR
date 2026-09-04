@@ -22,6 +22,15 @@
 #include <cmath>
 
 namespace {
+void setActiveAppearance(QPushButton *button, bool active) {
+    if (button->property("active").toBool() == active)
+        return;
+    button->setProperty("active", active);
+    button->style()->unpolish(button);
+    button->style()->polish(button);
+    button->update();
+}
+
 QIcon folderIcon() {
     return QIcon(QStringLiteral(":/icons/folder.png"));
 }
@@ -74,6 +83,8 @@ OfflinePanel::OfflinePanel(ApplicationFacade &application, QWidget *parent)
     m_playPause = new QPushButton(style()->standardIcon(QStyle::SP_MediaPlay), QString());
     m_stop = new QPushButton(style()->standardIcon(QStyle::SP_MediaStop), QString());
     m_repeat = new QPushButton(resetIcon(), QString());
+    m_playPause->setObjectName(QStringLiteral("playbackPlayPauseButton"));
+    m_stop->setObjectName(QStringLiteral("playbackStopButton"));
     m_repeat->setObjectName(QStringLiteral("repeatPlaybackButton"));
     m_repeat->setCheckable(true);
     m_repeat->setAccessibleName(QStringLiteral("Repeat playback"));
@@ -148,6 +159,7 @@ void OfflinePanel::sessionLoaded(const QString &path, qint64 recordCount) {
 
 void OfflinePanel::renderMode(ApplicationMode mode) {
     m_playing = mode == ApplicationMode::Playing;
+    setActiveAppearance(m_playPause, m_playing);
     m_playPause->setIcon(
         style()->standardIcon(m_playing ? QStyle::SP_MediaPause : QStyle::SP_MediaPlay));
     m_playPause->setToolTip(m_playing ? QStringLiteral("Pause") : QStringLiteral("Play"));

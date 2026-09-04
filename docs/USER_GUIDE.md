@@ -56,9 +56,18 @@ The application keeps the operational controls visible:
 - The right column shows Current Values, Plane Telemetry, or DLZ controls,
   according to the selected content.
 - The status bar reports mapping, runtime, asset, and rendering diagnostics.
+- The **?** button beside **LAR PACKET MONITOR**, or **F1**, opens searchable
+  help without stopping capture, recording, or replay. **Help for current
+  screen** jumps directly to the relevant Online, Offline, LAR, Plane, or DLZ
+  instructions.
 
 The side columns are fixed. They cannot float, detach, close, or cover the
 central visualization.
+
+Selected mode and toggle buttons retain a pale-green background after the
+pointer leaves them. A muted version remains visible when a selected control is
+temporarily disabled, so the current workflow, policy, view, and overlay state
+can still be identified.
 
 ## Online capture
 
@@ -75,6 +84,11 @@ Select **Online**, then **Select JSON Mapping**. The supplied mappings are:
 A mapping defines byte offsets; the datagram contains no field names or
 self-description. Sender and receiver must use the same mapping. The listener
 button remains disabled until a mapping has loaded successfully.
+
+After a successful selection, the Packet Mapping panel shows the mapping's
+filename, mapped-field count, and minimum UDP packet size. Hover the filename
+to see its full path. Cancelling or selecting an invalid replacement preserves
+the last successfully loaded mapping and its displayed filename.
 
 ### 2. Select the sender policy
 
@@ -203,7 +217,9 @@ to reduce close-zoom jitter.
 ### Camera controls
 
 - **Follow plane** centers the aircraft.
-- **Turn with plane** rotates viewport-up with the aircraft only in plane-follow.
+- Selecting **Plane** follows the aircraft north-up. Clicking the already
+  selected **Plane** camera button toggles whether viewport-up turns with the
+  aircraft; the stronger selected tint identifies heading-follow.
 - **Follow target** centers the IZ position and remains north-up.
 - **Free movement** retains the current center as new packets arrive.
 - Dragging a followed view changes it to Free movement.
@@ -219,6 +235,15 @@ is shown as `N/A`; it is never inferred from zero-initialized storage.
 Plane keeps the aircraft model at the scene origin and applies current
 heading/yaw, pitch, and roll. It is an attitude and relative-environment view,
 not a translational flight simulator.
+
+A Plane-only mapping is supported; target and DLZ fields are not required to
+draw the aircraft. The three `euler` components independently control yaw,
+pitch, and roll. Missing attitude components use a neutral zero rotation and
+produce the **ATTITUDE DATA INCOMPLETE** warning until all three are mapped.
+Aircraft latitude and longitude are required together only for geographic
+anchoring, terrain, and relative target/LAR placement. Altitude controls the
+aircraft-to-ground distance. Velocity values appear in telemetry but do not
+move or rotate the model.
 
 Mouse controls:
 

@@ -160,6 +160,8 @@ be discarded.
 | Component | Public surface | Responsibility |
 | --- | --- | --- |
 | `MainWindow` | Constructor, close lifecycle, render/update slots | Composes panels, workflows, viewport, status diagnostics; contains no transport/session IO |
+| `HelpWindow` | `showTopic`, current-topic resolver | Non-modal navigation, filtering, history, and rendering for resource-embedded operator documentation |
+| `lar::help::currentTopic` | Focused widgets, viewport state, active mode | Selects the most relevant stable help topic without coupling the help browser to `MainWindow` internals |
 | `OnlineWorkflowController` | `requestMapping`, `requestWhitelist`, `requestAllowAll` | Owns mapping/policy dialogs; Allow all is the default and the last successfully applied policy is exposed to the panel |
 | `RecordingWorkflowController` | `requestSnapshot`, `requestFinalSave`, `requestReset`, `prepareToClose` | Converts user choices into facade commands |
 | `IViewerFileDialog` / `QtViewerFileDialog` | Mapping, whitelist, session selections | Selection-only presentation port and Qt adapter |

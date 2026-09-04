@@ -9,6 +9,7 @@
 #include <QPushButton>
 #include <QSlider>
 #include <QTimer>
+#include <QWidget>
 #include <QtMath>
 
 int main(int argc, char **argv) {
@@ -28,10 +29,13 @@ int main(int argc, char **argv) {
     const QString outputPath = QString::fromLocal8Bit(argv[1]);
     QString presetName;
     bool offline = false;
+    bool help = false;
     for (int index = 2; index < argc; ++index) {
         const QString option = QString::fromLocal8Bit(argv[index]).trimmed().toLower();
         if (option == QStringLiteral("offline")) {
             offline = true;
+        } else if (option == QStringLiteral("help")) {
+            help = true;
         } else if (!option.isEmpty()) {
             presetName = option;
         }
@@ -128,7 +132,23 @@ int main(int argc, char **argv) {
                 }
             }
         }
-        const bool saved = configurationValid && window.grab().save(outputPath);
+        QWidget *captureTarget = &window;
+        if (help) {
+            auto *button = window.findChild<QPushButton *>(QStringLiteral("applicationHelpButton"));
+            if (button == nullptr) {
+                configurationValid = false;
+            } else {
+                button->click();
+                application.processEvents();
+                captureTarget =
+                    window.findChild<QWidget *>(QStringLiteral("applicationHelpWindow"));
+                if (captureTarget == nullptr) {
+                    configurationValid = false;
+                }
+            }
+        }
+        const bool saved = configurationValid && captureTarget != nullptr &&
+                           captureTarget->grab().save(outputPath);
         application.exit(saved ? 0 : 3);
     });
 

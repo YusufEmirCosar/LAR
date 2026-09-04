@@ -13,4 +13,13 @@
   <qresource prefix="/styles">
     <file alias="mainwindow.qss">../styles/mainwindow.qss</file>
   </qresource>
+  <qresource prefix="/help">
+    <file alias="USER_GUIDE.md">../../../docs/USER_GUIDE.md</file>
+    <file alias="PROTOCOL_UNITS.md">../../../docs/PROTOCOL_UNITS.md</file>
+    <file alias="DLZ_MODEL.md">../../../docs/DLZ_MODEL.md</file>
+    <file alias="TERRAIN_AND_ASSETS.md">../../../docs/TERRAIN_AND_ASSETS.md</file>
+    <file alias="THREAT_MODEL.md">../../../docs/THREAT_MODEL.md</file>
+    <file alias="DEVELOPER_GUIDE.md">../../../docs/DEVELOPER_GUIDE.md</file>
+    <file alias="TEST_SENDER.md">../../../src/testsender/README.md</file>
+  </qresource>
 </RCC>

@@ -36,6 +36,7 @@ class OnlinePanel final : public QWidget {
     OnlineWorkflowController &m_onlineWorkflow;
     RecordingWorkflowController &m_recordingWorkflow;
     QLabel *m_mappingLabel = nullptr;
+    QLabel *m_mappingDetails = nullptr;
     QSpinBox *m_port = nullptr;
     QPushButton *m_listener = nullptr;
     QPushButton *m_allowAll = nullptr;

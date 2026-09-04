@@ -11,6 +11,7 @@
 #include "infrastructure/timing/qt_playback_clock.h"
 #include "infrastructure/timing/qt_recording_clock.h"
 #include "viewer/dialogs/recording_file_dialog.h"
+#include "viewer/help/help_window.h"
 #include "viewer/lar_geodesic_geometry.h"
 #include "viewer/playback_timeline_mapper.h"
 #include "viewer/playbacktimeformatter.h"
@@ -21,6 +22,7 @@
 #include <QComboBox>
 #include <QCoreApplication>
 #include <QDockWidget>
+#include <QFile>
 #include <QFrame>
 #include <QGroupBox>
 #include <QIcon>
@@ -28,13 +30,17 @@
 #include <QLabel>
 #include <QLayout>
 #include <QLineEdit>
+#include <QListWidget>
 #include <QPushButton>
 #include <QScrollArea>
 #include <QScrollBar>
 #include <QSet>
+#include <QShortcut>
+#include <QSignalBlocker>
 #include <QSizePolicy>
 #include <QStackedWidget>
 #include <QTemporaryDir>
+#include <QTextBrowser>
 #include <QToolButton>
 #include <QWheelEvent>
 #include <QtTest>
@@ -116,6 +122,9 @@ class ViewerTests : public QObject {
     void gridCameraIsNorthUpUnlessTurningWithPlane();
     void geodesicCirclePreservesSurfaceRadius();
     void modeButtonsSwitchPages();
+    void selectedButtonsRenderPersistentBackgrounds();
+    void mappingPresentationShowsSuccessfulFilename();
+    void helpOpensSearchableBundledGuide();
     void onlinePolicyButtonsDefaultToAllowAll();
     void sessionSavingControlsStartPaused();
     void recordingDialogCancellationIsNoOp();
@@ -145,6 +154,12 @@ void ViewerTests::iconsAreBundled() {
     QVERIFY(!QIcon(QStringLiteral(":/icons/pause.png")).isNull());
     QVERIFY(!QIcon(QStringLiteral(":/icons/trash.png")).isNull());
     QVERIFY(!QIcon(QStringLiteral(":/icons/lightning.png")).isNull());
+    QFile userGuide(QStringLiteral(":/help/USER_GUIDE.md"));
+    QFile protocolGuide(QStringLiteral(":/help/PROTOCOL_UNITS.md"));
+    QVERIFY(userGuide.open(QIODevice::ReadOnly));
+    QVERIFY(protocolGuide.open(QIODevice::ReadOnly));
+    QVERIFY(userGuide.size() > 0);
+    QVERIFY(protocolGuide.size() > 0);
 }
 
 void ViewerTests::centralLarViewportIsVisible() {
@@ -504,6 +519,198 @@ void ViewerTests::modeButtonsSwitchPages() {
     QCOMPARE(stack->currentIndex(), 0);
 }
 
+void ViewerTests::selectedButtonsRenderPersistentBackgrounds() {
+    const auto interiorColor = [](QPushButton *button) {
+        const QImage image = button->grab().toImage();
+        return image.pixelColor(qMin(6, image.width() - 1), image.height() / 2);
+    };
+    const auto visiblyDifferent = [](const QColor &left, const QColor &right) {
+        return qAbs(left.red() - right.red()) + qAbs(left.green() - right.green()) +
+                   qAbs(left.blue() - right.blue()) >=
+               12;
+    };
+
+    ViewerTestContext context;
+    MainWindow window(context.facade);
+    window.show();
+    QCoreApplication::processEvents();
+
+    auto *online = window.findChild<QPushButton *>(QStringLiteral("onlineMode"));
+    auto *offline = window.findChild<QPushButton *>(QStringLiteral("offlineMode"));
+    auto *allowAll = window.findChild<QPushButton *>(QStringLiteral("ipAllowAllButton"));
+    auto *whitelist = window.findChild<QPushButton *>(QStringLiteral("ipWhitelistButton"));
+    auto *listener = window.findChild<QPushButton *>(QStringLiteral("onlineListenerButton"));
+    auto *record = window.findChild<QPushButton *>(QStringLiteral("recordPauseButton"));
+    auto *lar = window.findChild<QPushButton *>(QStringLiteral("viewportLarContentButton"));
+    auto *plane = window.findChild<QPushButton *>(QStringLiteral("viewportPlaneContentButton"));
+    auto *grid = window.findChild<QPushButton *>(QStringLiteral("viewportGridButton"));
+    auto *mercator = window.findChild<QPushButton *>(QStringLiteral("viewportMercatorButton"));
+    auto *followPlane = window.findChild<QPushButton *>(QStringLiteral("viewportPlaneButton"));
+    auto *followTarget = window.findChild<QPushButton *>(QStringLiteral("viewportTargetButton"));
+    for (QPushButton *button : {online, offline, allowAll, whitelist, listener, record, lar, plane,
+                                grid, mercator, followPlane, followTarget}) {
+        QVERIFY(button);
+    }
+    QVERIFY(visiblyDifferent(interiorColor(online), interiorColor(offline)));
+    QVERIFY(visiblyDifferent(interiorColor(allowAll), interiorColor(whitelist)));
+    QVERIFY(visiblyDifferent(interiorColor(lar), interiorColor(plane)));
+    QVERIFY(visiblyDifferent(interiorColor(grid), interiorColor(mercator)));
+    QVERIFY(visiblyDifferent(interiorColor(followPlane), interiorColor(followTarget)));
+    allowAll->setEnabled(false);
+    whitelist->setEnabled(false);
+    QCoreApplication::processEvents();
+    QVERIFY(visiblyDifferent(interiorColor(allowAll), interiorColor(whitelist)));
+
+    listener->setEnabled(true);
+    const QColor listenerOff = interiorColor(listener);
+    {
+        const QSignalBlocker blocker(listener);
+        listener->setChecked(true);
+    }
+    QCoreApplication::processEvents();
+    QVERIFY(visiblyDifferent(listenerOff, interiorColor(listener)));
+
+    const QColor recordingOff = interiorColor(record);
+    emit context.runtime.recordingStateChanged({true, false, 0, {}});
+    QCoreApplication::processEvents();
+    QVERIFY(record->property("active").toBool());
+    QVERIFY(visiblyDifferent(recordingOff, interiorColor(record)));
+    emit context.runtime.recordingStateChanged({false, false, 0, {}});
+    QVERIFY(!record->property("active").toBool());
+
+    offline->click();
+    QCoreApplication::processEvents();
+    QVERIFY(visiblyDifferent(interiorColor(online), interiorColor(offline)));
+    QCOMPARE(offline->isChecked(), true);
+    online->click();
+
+    plane->click();
+    QCoreApplication::processEvents();
+    auto *terrain = window.findChild<QPushButton *>(QStringLiteral("planeTerrainButton"));
+    auto *surface = window.findChild<QPushButton *>(QStringLiteral("planeSurfaceButton"));
+    QVERIFY(terrain);
+    QVERIFY(surface);
+    const QColor surfaceOff = interiorColor(surface);
+    surface->click();
+    QCoreApplication::processEvents();
+    QVERIFY(visiblyDifferent(surfaceOff, interiorColor(surface)));
+
+    auto *hud = window.findChild<QPushButton *>(QStringLiteral("viewportHudContentButton"));
+    QVERIFY(hud);
+    hud->click();
+    QCoreApplication::processEvents();
+    auto *udp = window.findChild<QPushButton *>(QStringLiteral("dlzUdpReplayButton"));
+    auto *calculation = window.findChild<QPushButton *>(QStringLiteral("dlzSliderTestButton"));
+    QVERIFY(udp);
+    QVERIFY(calculation);
+    QVERIFY(visiblyDifferent(interiorColor(udp), interiorColor(calculation)));
+    calculation->click();
+    QCoreApplication::processEvents();
+    QVERIFY(calculation->isChecked());
+    QVERIFY(visiblyDifferent(interiorColor(udp), interiorColor(calculation)));
+}
+
+void ViewerTests::mappingPresentationShowsSuccessfulFilename() {
+    ViewerTestContext context;
+    MainWindow window(context.facade);
+    auto *name = window.findChild<QLabel *>(QStringLiteral("mappingFileNameLabel"));
+    auto *details = window.findChild<QLabel *>(QStringLiteral("mappingDetailsLabel"));
+    QVERIFY(name);
+    QVERIFY(details);
+    QCOMPARE(name->text(), QStringLiteral("No mapping loaded"));
+
+    QTemporaryDir directory;
+    QVERIFY(directory.isValid());
+    const QString path = directory.filePath(QStringLiteral("plane mapping ü.json"));
+    QFile mapping(path);
+    QVERIFY(mapping.open(QIODevice::WriteOnly));
+    const QByteArray mappingJson =
+        QByteArrayLiteral(R"([{"name":"euler","index":0,"offset":0,"size":8}])");
+    QCOMPARE(mapping.write(mappingJson), qint64(mappingJson.size()));
+    mapping.close();
+    QVERIFY(context.facade.loadMapping(path));
+    QCOMPARE(name->text(), QStringLiteral("plane mapping ü.json"));
+    QCOMPARE(name->textFormat(), Qt::PlainText);
+    QVERIFY(name->toolTip().contains(QStringLiteral("plane mapping ü.json")));
+    QCOMPARE(details->text(), QStringLiteral("1 mapped field · Minimum UDP packet: 8 bytes"));
+
+    const QString invalidPath = directory.filePath(QStringLiteral("replacement.json"));
+    QFile invalid(invalidPath);
+    QVERIFY(invalid.open(QIODevice::WriteOnly));
+    QCOMPARE(invalid.write(QByteArrayLiteral("not json")), qint64(8));
+    invalid.close();
+    QVERIFY(context.facade.loadMapping(invalidPath));
+    QCOMPARE(name->text(), QStringLiteral("plane mapping ü.json"));
+    QCOMPARE(details->text(), QStringLiteral("1 mapped field · Minimum UDP packet: 8 bytes"));
+}
+
+void ViewerTests::helpOpensSearchableBundledGuide() {
+    ViewerTestContext context;
+    MainWindow window(context.facade);
+    window.show();
+    QCoreApplication::processEvents();
+    auto *helpButton = window.findChild<QPushButton *>(QStringLiteral("applicationHelpButton"));
+    auto *helpShortcut = window.findChild<QShortcut *>(QStringLiteral("applicationHelpShortcut"));
+    QVERIFY(helpButton);
+    QVERIFY(helpShortcut);
+    QCOMPARE(helpButton->text(), QStringLiteral("?"));
+    QCOMPARE(helpButton->accessibleName(), QStringLiteral("Open application help"));
+
+    helpButton->click();
+    QCoreApplication::processEvents();
+    auto *help = window.findChild<HelpWindow *>(QStringLiteral("applicationHelpWindow"));
+    QVERIFY(help);
+    QVERIFY(help->isVisible());
+    QCOMPARE(window.findChildren<HelpWindow *>().size(), 1);
+    QCOMPARE(help->currentTopicId(), QStringLiteral("what-the-application-does"));
+    auto *topics = help->findChild<QListWidget *>(QStringLiteral("helpTopicList"));
+    auto *search = help->findChild<QLineEdit *>(QStringLiteral("helpSearchInput"));
+    auto *browser = help->findChild<QTextBrowser *>(QStringLiteral("helpContentBrowser"));
+    auto *currentScreen = help->findChild<QPushButton *>(QStringLiteral("helpCurrentScreenButton"));
+    QVERIFY(topics);
+    QVERIFY(search);
+    QVERIFY(browser);
+    QVERIFY(currentScreen);
+    QVERIFY(topics->count() >= 15);
+    QVERIFY(browser->toPlainText().contains(QStringLiteral("receives UDP datagrams")));
+    help->showTopic(QStringLiteral("plane-view"));
+    QVERIFY(browser->toPlainText().contains(QStringLiteral("Plane-only mapping")));
+    help->showTopic(QStringLiteral("protocol-mapping-entry"));
+    QVERIFY(browser->toPlainText().contains(QStringLiteral("Little-endian")));
+
+    search->setText(QStringLiteral("DTED"));
+    QCoreApplication::processEvents();
+    int visibleTopics = 0;
+    for (int row = 0; row < topics->count(); ++row) {
+        visibleTopics += topics->item(row)->isHidden() ? 0 : 1;
+    }
+    QVERIFY(visibleTopics > 0);
+    QVERIFY(visibleTopics < topics->count());
+    search->clear();
+
+    help->hide();
+    QVERIFY(QMetaObject::invokeMethod(helpShortcut, "activated", Qt::DirectConnection));
+    QCoreApplication::processEvents();
+    QVERIFY(help->isVisible());
+    QCOMPARE(window.findChildren<HelpWindow *>().size(), 1);
+
+    help->hide();
+    window.activateWindow();
+    auto *plane = window.findChild<QPushButton *>(QStringLiteral("viewportPlaneContentButton"));
+    QVERIFY(plane);
+    plane->click();
+    helpButton->click();
+    QCoreApplication::processEvents();
+    currentScreen->click();
+    QCOMPARE(help->currentTopicId(), QStringLiteral("plane-view"));
+
+    auto *offline = window.findChild<QPushButton *>(QStringLiteral("offlineMode"));
+    QVERIFY(offline);
+    offline->click();
+    currentScreen->click();
+    QCOMPARE(help->currentTopicId(), QStringLiteral("offline-replay"));
+}
+
 void ViewerTests::onlinePolicyButtonsDefaultToAllowAll() {
     ViewerTestContext context;
     MainWindow window(context.facade);
@@ -617,12 +824,14 @@ void ViewerTests::offlineReplayRepeatAndBurstPlaceholderAreUsable() {
     auto *burstPanel = window.findChild<QGroupBox *>(QStringLiteral("burstPanel"));
     auto *burst = window.findChild<QPushButton *>(QStringLiteral("burstPlaybackButton"));
     auto *repeat = window.findChild<QPushButton *>(QStringLiteral("repeatPlaybackButton"));
+    auto *playPause = window.findChild<QPushButton *>(QStringLiteral("playbackPlayPauseButton"));
     auto *rate = window.findChild<QLineEdit *>(QStringLiteral("playbackRateInput"));
     auto *unit = window.findChild<QLabel *>(QStringLiteral("playbackRateUnit"));
     QVERIFY(playbackPanel);
     QVERIFY(burstPanel);
     QVERIFY(burst);
     QVERIFY(repeat);
+    QVERIFY(playPause);
     QVERIFY(rate);
     QVERIFY(unit);
     QCOMPARE(burstPanel->title(), QStringLiteral("Burst"));
@@ -673,6 +882,11 @@ void ViewerTests::offlineReplayRepeatAndBurstPlaceholderAreUsable() {
     QVERIFY2(context.facade.loadSession(path), qPrintable(context.viewModel.lastError()));
     QVERIFY(repeat->isEnabled());
     QVERIFY(!burst->isEnabled());
+
+    playPause->click();
+    QVERIFY(playPause->property("active").toBool());
+    playPause->click();
+    QVERIFY(!playPause->property("active").toBool());
 
     repeat->click();
     QVERIFY(repeat->isChecked());

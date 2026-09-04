@@ -1,5 +1,9 @@
 # 4. Presentation Widgets Target
 qt_add_library(lar-presentation-widgets STATIC
+    src/viewer/help/help_context.h
+    src/viewer/help/help_context.cpp
+    src/viewer/help/help_window.h
+    src/viewer/help/help_window.cpp
     src/viewer/dialogs/recording_file_dialog.h
     src/viewer/dialogs/qt_recording_file_dialog.h
     src/viewer/dialogs/qt_recording_file_dialog.cpp

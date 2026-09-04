@@ -67,6 +67,20 @@ and verification information lives in the [documentation hub](docs/README.md).
 - The DLZ view shall remain clearly identified as a deterministic fictional
   teaching model.
 
+### Operator guidance and selection state
+
+- The application shall provide searchable, resource-embedded help for Online,
+  Offline, recording, replay, LAR, Plane, DLZ, protocol units, assets, and
+  troubleshooting. Opening help shall not interrupt an active workflow.
+- The Help control and the standard help shortcut shall reuse one non-modal
+  window and provide context navigation for the current workflow or content.
+- After a JSON mapping loads successfully, the Online panel shall display its
+  filename, mapped-field count, minimum UDP packet size, and full-path tooltip.
+  Cancellation or failure shall preserve the last successful presentation.
+- Exclusive modes and persistent toggles shall retain a selected background.
+  Application-driven recording and playback controls shall visibly indicate
+  their active state, including a distinguishable muted state when disabled.
+
 ### Map, terrain, and Plane assets
 
 - The Natural Earth source shall be compiled at build time into one bounded,

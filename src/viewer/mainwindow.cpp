@@ -4,6 +4,8 @@
 #include "domain/statefield.h"
 #include "viewer/dialogs/qt_recording_file_dialog.h"
 #include "viewer/dialogs/qt_viewer_file_dialog.h"
+#include "viewer/help/help_context.h"
+#include "viewer/help/help_window.h"
 #include "viewer/hud/dlz_control_panel.h"
 #include "viewer/hud/dlz_hud_workspace.h"
 #include "viewer/map/packaged_map_asset_source.h"
@@ -19,15 +21,18 @@
 #include "viewer/workflows/online_workflow_controller.h"
 #include "viewer/workflows/recording_workflow_controller.h"
 
+#include <QApplication>
 #include <QButtonGroup>
 #include <QCloseEvent>
 #include <QCoreApplication>
 #include <QFile>
 #include <QFrame>
 #include <QHBoxLayout>
+#include <QKeySequence>
 #include <QLabel>
 #include <QPushButton>
 #include <QScrollArea>
+#include <QShortcut>
 #include <QStackedWidget>
 #include <QStatusBar>
 #include <QVBoxLayout>
@@ -112,8 +117,20 @@ void MainWindow::initialize(IRecordingFileDialog &recordingDialog) {
             &ViewportControls::setTurnWithPlane);
     connect(m_viewport, &LarViewport::diagnosticRaised, this, &MainWindow::showDiagnostic);
 
-    connect(m_viewport, &LarViewport::contentModeChanged, this,
-            [this](ViewportContentMode mode) { m_valuesPanel->setContentMode(mode); });
+    connect(m_viewport, &LarViewport::contentModeChanged, this, [this](ViewportContentMode mode) {
+        m_valuesPanel->setContentMode(mode);
+        switch (mode) {
+        case ViewportContentMode::Lar:
+            m_helpContextTopic = QStringLiteral("lar-views");
+            break;
+        case ViewportContentMode::Plane:
+            m_helpContextTopic = QStringLiteral("plane-view");
+            break;
+        case ViewportContentMode::Hud:
+            m_helpContextTopic = QStringLiteral("dlz-view");
+            break;
+        }
+    });
     centralLayout->addWidget(m_valuesPanel);
 
     setCentralWidget(central);
@@ -138,10 +155,28 @@ QWidget *MainWindow::buildSidebar() {
     layout->setContentsMargins(16, 16, 16, 14);
     layout->setSpacing(12);
 
+    auto *brandRow = new QHBoxLayout;
+    brandRow->setContentsMargins(0, 0, 0, 0);
+    brandRow->setSpacing(8);
+    constexpr int HelpButtonWidth = 28;
+    brandRow->addSpacing(HelpButtonWidth);
     auto *brand = new QLabel(QStringLiteral("LAR PACKET MONITOR"));
     brand->setObjectName(QStringLiteral("brand"));
     brand->setAlignment(Qt::AlignCenter);
-    layout->addWidget(brand);
+    brandRow->addWidget(brand, 1);
+    m_helpButton = new QPushButton(QStringLiteral("?"));
+    m_helpButton->setObjectName(QStringLiteral("applicationHelpButton"));
+    m_helpButton->setAccessibleName(QStringLiteral("Open application help"));
+    m_helpButton->setToolTip(QStringLiteral("Help (F1)"));
+    m_helpButton->setFixedSize(HelpButtonWidth, HelpButtonWidth);
+    connect(m_helpButton, &QPushButton::clicked, this, &MainWindow::openHelp);
+    brandRow->addWidget(m_helpButton);
+    layout->addLayout(brandRow);
+
+    auto *helpShortcut = new QShortcut(QKeySequence::HelpContents, this);
+    helpShortcut->setObjectName(QStringLiteral("applicationHelpShortcut"));
+    helpShortcut->setContext(Qt::WindowShortcut);
+    connect(helpShortcut, &QShortcut::activated, this, &MainWindow::openHelp);
 
     auto *modeRow = new QHBoxLayout;
     modeRow->setSpacing(0);
@@ -244,10 +279,12 @@ void MainWindow::switchMode(int modeIndex) {
     m_modeStack->setCurrentIndex(modeIndex);
     if (modeIndex == OnlineMode) {
         m_onlineButton->setChecked(true);
+        m_helpContextTopic = QStringLiteral("online-capture");
         m_app.closeSession();
         statusBar()->showMessage(QStringLiteral("Online mode"));
     } else {
         m_offlineButton->setChecked(true);
+        m_helpContextTopic = QStringLiteral("offline-replay");
         m_app.closeSession();
         statusBar()->showMessage(QStringLiteral("Offline mode: select a .lar file"));
     }
@@ -262,6 +299,21 @@ void MainWindow::chooseLarPath() {
     if (path.isEmpty())
         return;
     m_app.loadSession(path);
+}
+
+void MainWindow::openHelp() {
+    if (QApplication::focusWidget() != m_helpButton) {
+        m_helpContextTopic = lar::help::currentTopic(
+            QApplication::focusWidget(), m_onlinePanel, m_offlinePanel, m_viewport,
+            m_modeStack != nullptr && m_modeStack->currentIndex() == OfflineMode);
+    }
+    if (m_helpWindow == nullptr) {
+        m_helpWindow = new HelpWindow(this);
+        m_helpWindow->setCurrentTopicResolver([this] { return m_helpContextTopic; });
+    }
+    m_helpWindow->show();
+    m_helpWindow->raise();
+    m_helpWindow->activateWindow();
 }
 
 void MainWindow::updateCameraControls() {

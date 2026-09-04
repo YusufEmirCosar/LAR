@@ -57,6 +57,12 @@ ViewportContentSwitch::ViewportContentSwitch(QWidget *parent) : QWidget(parent) 
             color: #154b3a;
             font-weight: 600;
         }
+        QWidget#viewportContentSwitch QPushButton:checked:hover {
+            background: #b9dccb;
+        }
+        QWidget#viewportContentSwitch QPushButton:checked:pressed {
+            background: #a9d2bf;
+        }
         QWidget#viewportContentSwitch QPushButton:focus {
             outline: 2px solid #357461;
             outline-offset: -2px;
